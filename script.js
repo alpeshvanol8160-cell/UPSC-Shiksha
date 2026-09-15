@@ -127,3 +127,58 @@ cards.forEach(function(card) {
   observer.observe(card);
 
 });
+// ================================
+// UPSC SYLLABUS TABS
+// ================================
+
+const syllabusTabs =
+  document.querySelectorAll(".syllabus-tab");
+
+const syllabusContents =
+  document.querySelectorAll(".syllabus-content");
+
+
+syllabusTabs.forEach(function(tab) {
+
+  tab.addEventListener("click", function() {
+
+    const target =
+      tab.getAttribute("data-tab");
+
+
+    // Remove active from all tabs
+
+    syllabusTabs.forEach(function(item) {
+
+      item.classList.remove("active");
+
+    });
+
+
+    // Hide all syllabus sections
+
+    syllabusContents.forEach(function(content) {
+
+      content.classList.remove("active");
+
+    });
+
+
+    // Activate clicked tab
+
+    tab.classList.add("active");
+
+
+    const selectedContent =
+      document.getElementById(target);
+
+
+    if (selectedContent) {
+
+      selectedContent.classList.add("active");
+
+    }
+
+  });
+
+});
