@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Indian History | UPSC Shiksha</title>
+
+  <meta name="description"
+        content="Indian History study material for UPSC - Ancient, Medieval, Modern India, Art and Culture and Indian National Movement.">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      color: #172033;
+      line-height: 1.7;
+    }
+
+    /* HEADER */
+    header {
+      background: #111827;
+      color: white;
+      padding: 15px 18px;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .logo {
+      font-size: 21px;
+      font-weight: bold;
+      white-space: nowrap;
+    }
+
+    .logo b {
+      color: #f59e0b;
+    }
+
+    .back-btn {
+      color: white;
+      text-decoration: none;
+      background: #2563eb;
+      padding: 8px 13px;
+      border-radius: 8px;
+      font-size: 14px;
+      font-weight: bold;
+    }
+
+    /* HERO */
+    .hero {
+      background: linear-gradient(135deg, #431407, #9a3412);
+      color: white;
+      text-align: center;
+      padding: 55px 18px;
+    }
+
+    .hero .icon {
+      font-size: 48px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+    }
+
+    .hero h1 span {
+      color: #fbbf24;
+    }
+
+    .hero p {
+      max-width: 760px;
+      margin: auto;
+      color: #ffedd5;
+      font-size: 16px;
+    }
+
+    /* CONTENT */
+    .container {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 16px;
+    }
+
+    .intro,
+    .quick-nav,
+    .topic {
+      background: white;
+      border-radius: 14px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+    }
+
+    .intro {
+      padding: 22px;
+      margin-bottom: 25px;
+    }
+
+    .intro h2 {
+      color: #9a3412;
+      margin-bottom: 8px;
+    }
+
+    /* QUICK NAV */
+    .quick-nav {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .quick-nav h2 {
+      margin-bottom: 14px;
+    }
+
+    .nav-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+    }
+
+    .nav-grid a {
+      text-decoration: none;
+      background: #fff7ed;
+      color: #c2410c;
+      padding: 10px;
+      border-radius: 8px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    /* TOPICS */
+    .topic {
+      padding: 24px;
+      margin-bottom: 22px;
+      scroll-margin-top: 80px;
+    }
+
+    .topic h2 {
+      color: #9a3412;
+      font-size: 23px;
+      margin-bottom: 14px;
+      border-bottom: 2px solid #e5e7eb;
+      padding-bottom: 9px;
+    }
+
+    .topic h3 {
+      color: #374151;
+      margin-top: 18px;
+      margin-bottom: 8px;
+      font-size: 18px;
+    }
+
+    .topic ul {
+      padding-left: 22px;
+    }
+
+    .topic li {
+      margin-bottom: 6px;
+    }
+
+    .highlight {
+      background: #fff7ed;
+      border-left: 4px solid #f59e0b;
+      padding: 13px 15px;
+      margin-top: 15px;
+      border-radius: 7px;
+    }
+
+    .study-box {
+      background: #ecfdf5;
+      border-left: 4px solid #10b981;
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 15px;
+    }
+
+    .study-box strong {
+      color: #047857;
+    }
+
+    /* TIMELINE */
+    .timeline {
+      border-left: 3px solid #f59e0b;
+      padding-left: 18px;
+      margin-top: 15px;
+    }
+
+    .timeline-item {
+      margin-bottom: 18px;
+    }
+
+    .timeline-item strong {
+      color: #9a3412;
+    }
+
+    /* TABLE */
+    .table-wrapper {
+      overflow-x: auto;
+      margin-top: 12px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 520px;
+    }
+
+    th,
+    td {
+      border: 1px solid #d1d5db;
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #fff7ed;
+      color: #9a3412;
+    }
+
+    /* BUTTONS */
+    .bottom-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+      margin: 35px 0;
+    }
+
+    .btn {
+      text-decoration: none;
+      padding: 12px 18px;
+      border-radius: 9px;
+      font-weight: bold;
+      display: inline-block;
+    }
+
+    .btn-primary {
+      background: #ea580c;
+      color: white;
+    }
+
+    .btn-dark {
+      background: #111827;
+      color: white;
+    }
+
+    /* FOOTER */
+    footer {
+      background: #111827;
+      color: #d1d5db;
+      text-align: center;
+      padding: 28px 16px;
+    }
+
+    footer .footer-logo {
+      color: white;
+      font-size: 20px;
+      font-weight: bold;
+      margin-bottom: 8px;
+    }
+
+    footer b {
+      color: #f59e0b;
+    }
+
+    footer p {
+      font-size: 14px;
+    }
+
+    /* MOBILE */
+    @media (max-width: 600px) {
+
+      .logo {
+        font-size: 17px;
+      }
+
+      .back-btn {
+        font-size: 12px;
+        padding: 7px 10px;
+      }
+
+      .hero {
+        padding: 40px 15px;
+      }
+
+      .hero .icon {
+        font-size: 40px;
+      }
+
+      .hero h1 {
+        font-size: 29px;
+      }
+
+      .hero p {
+        font-size: 14px;
+      }
+
+      .container {
+        padding: 25px 12px;
+      }
+
+      .intro,
+      .quick-nav,
+      .topic {
+        padding: 18px;
+      }
+
+      .topic h2 {
+        font-size: 20px;
+      }
+
+      .topic h3 {
+        font-size: 17px;
+      }
+
+      .nav-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .topic li {
+        font-size: 14px;
+      }
+
+      .bottom-buttons {
+        flex-direction: column;
+      }
+
+      .btn {
+        width: 100%;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- HEADER -->
+  <header>
+
+    <div class="header-inner">
+
+      <div class="logo">
+        🇮🇳 UPSC <b>Shiksha</b>
+      </div>
+
+      <a href="index.html" class="back-btn">
+        ← Home
+      </a>
+
+    </div>
+
+  </header>
+
+
+  <!-- HERO -->
+  <section class="hero">
+
+    <div class="icon">📜</div>
+
+    <h1>
+      Indian <span>History</span>
+    </h1>
+
+    <p>
+      Complete History study material for UPSC Civil
+      Services Examination.
+    </p>
+
+  </section>
+
+
+  <main class="container">
+
+    <!-- INTRO -->
+    <section class="intro">
+
+      <h2>📚 Indian History for UPSC</h2>
+
+      <p>
+        Indian History is an important part of UPSC
+        preparation. Study Ancient India, Medieval India,
+        Modern India, Art & Culture and the Indian National
+        Movement with a clear chronological understanding.
+      </p>
+
+      <div class="highlight">
+        <strong>🎯 Preparation Tip:</strong>
+        Focus on chronology, causes and consequences,
+        important personalities, movements, cultural
+        developments and previous year questions.
+      </div>
+
+    </section>
+
+
+    <!-- QUICK NAVIGATION -->
+    <section class="quick-nav">
+
+      <h2>🧭 History Topics</h2>
+
+      <div class="nav-grid">
+
+        <a href="#ancient">
+          🏺 Ancient India
+        </a>
+
+        <a href="#medieval">
+          🏰 Medieval India
+        </a>
+
+        <a href="#modern">
+          🇬🇧 Modern India
+        </a>
+
+        <a href="#freedom">
+          🇮🇳 National Movement
+        </a>
+
+        <a href="#culture">
+          🎨 Art & Culture
+        </a>
+
+        <a href="#timeline">
+          ⏳ Important Timeline
+        </a>
+
+        <a href="#personalities">
+          👤 Important Personalities
+        </a>
+
+        <a href="#preparation">
+          🎯 Preparation Strategy
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <!-- ANCIENT -->
+    <section class="topic" id="ancient">
+
+      <h2>🏺 1. Ancient India</h2>
+
+      <p>
+        Ancient Indian history covers the development of
+        early human settlements, civilizations, kingdoms,
+        religions and cultural traditions.
+      </p>
+
+      <h3>Prehistoric India</h3>
+
+      <ul>
+        <li>Palaeolithic Age</li>
+        <li>Mesolithic Age</li>
+        <li>Neolithic Age</li>
+        <li>Chalcolithic Cultures</li>
+      </ul>
+
+      <h3>Indus Valley Civilization</h3>
+
+      <ul>
+        <li>Major Sites</li>
+        <li>Town Planning</li>
+        <li>Drainage System</li>
+        <li>Trade and Economy</li>
+        <li>Religion and Beliefs</li>
+        <li>Art and Architecture</li>
+        <li>Decline of the Civilization</li>
+      </ul>
+
+      <h3>Vedic Period</h3>
+
+      <ul>
+        <li>Early Vedic Period</li>
+        <li>Later Vedic Period</li>
+        <li>Political Institutions</li>
+        <li>Social Structure</li>
+        <li>Economy</li>
+        <li>Religion</li>
+      </ul>
+
+      <h3>Major Kingdoms & Empires</h3>
+
+      <ul>
+        <li>Mahajanapadas</li>
+        <li>Magadha</li>
+        <li>Mauryan Empire</li>
+        <li>Post-Mauryan Period</li>
+        <li>Gupta Empire</li>
+        <li>Post-Gupta Period</li>
+      </ul>
+
+      <div class="study-box">
+        <strong>UPSC Focus:</strong>
+        Indus Valley Civilization, Buddhism, Jainism,
+        Mauryan administration and Gupta culture.
+      </div>
+
+    </section>
+
+
+    <!-- RELIGIONS -->
+    <section class="topic">
+
+      <h2>☸️ 2. Buddhism & Jainism</h2>
+
+      <h3>Buddhism</h3>
+
+      <ul>
+        <li>Life of Gautama Buddha</li>
+        <li>Four Noble Truths</li>
+        <li>Eightfold Path</li>
+        <li>Buddhist Councils</li>
+        <li>Major Buddhist Schools</li>
+        <li>Spread of Buddhism</li>
+      </ul>
+
+      <h3>Jainism</h3>
+
+      <ul>
+        <li>Life and teachings of Mahavira</li>
+        <li>Three Jewels</li>
+        <li>Five Great Vows</li>
+        <li>Jain Councils</li>
+        <li>Spread of Jainism</li>
+      </ul>
+
+    </section>
+
+
+    <!-- MEDIEVAL -->
+    <section class="topic" id="medieval">
+
+      <h2>🏰 3. Medieval India</h2>
+
+      <h3>Early Medieval India</h3>
+
+      <ul>
+        <li>Regional Kingdoms</li>
+        <li>Cholas</li>
+        <li>Palas</li>
+        <li>Pratiharas</li>
+        <li>Rajput Kingdoms</li>
+      </ul>
+
+      <h3>Delhi Sultanate</h3>
+
+      <ul>
+        <li>Slave Dynasty</li>
+        <li>Khilji Dynasty</li>
+        <li>Tughlaq Dynasty</li>
+        <li>Sayyid Dynasty</li>
+        <li>Lodi Dynasty</li>
+        <li>Administration</li>
+        <li>Architecture</li>
+      </ul>
+
+      <h3>Mughal Empire</h3>
+
+      <ul>
+        <li>Babur</li>
+        <li>Humayun</li>
+        <li>Akbar</li>
+        <li>Jahangir</li>
+        <li>Shah Jahan</li>
+        <li>Aurangzeb</li>
+        <li>Mughal Administration</li>
+        <li>Mansabdari System</li>
+        <li>Mughal Art and Architecture</li>
+      </ul>
+
+      <h3>Bhakti & Sufi Movements</h3>
+
+      <ul>
+        <li>Bhakti Tradition</li>
+        <li>Important Saints</li>
+        <li>Sufi Orders</li>
+        <li>Social and Cultural Impact</li>
+      </ul>
+
+    </section>
+
+
+    <!-- MODERN -->
+    <section class="topic" id="modern">
+
+      <h2>🇬🇧 4. Modern India</h2>
+
+      <p>
+        Modern Indian history mainly covers the expansion
+        of European influence, British rule, economic and
+        administrative changes and the growth of nationalism.
+      </p>
+
+      <h3>European Powers in India</h3>
+
+      <ul>
+        <li>Portuguese</li>
+        <li>Dutch</li>
+        <li>English</li>
+        <li>French</li>
+      </ul>
+
+      <h3>British Expansion</h3>
+
+      <ul>
+        <li>Carnatic Wars</li>
+        <li>Battle of Plassey</li>
+        <li>Battle of Buxar</li>
+        <li>Subsidiary Alliance</li>
+        <li>Doctrine of Lapse</li>
+        <li>Anglo-Mysore Wars</li>
+        <li>Anglo-Maratha Wars</li>
+        <li>Anglo-Sikh Wars</li>
+      </ul>
+
+      <h3>British Administration</h3>
+
+      <ul>
+        <li>Regulating Act, 1773</li>
+        <li>Pitt's India Act, 1784</li>
+        <li>Charter Acts</li>
+        <li>Government of India Acts</li>
+        <li>Indian Councils Acts</li>
+        <li>Administrative Reforms</li>
+      </ul>
+
+      <h3>Economic Impact</h3>
+
+      <ul>
+        <li>Drain of Wealth</li>
+        <li>Land Revenue Systems</li>
+        <li>Commercialization of Agriculture</li>
+        <li>Deindustrialization</li>
+        <li>Railways and Communication</li>
+      </ul>
+
+    </section>
+
+
+    <!-- 1857 -->
+    <section class="topic">
+
+      <h2>🔥 5. Revolt of 1857</h2>
+
+      <h3>Causes</h3>
+
+      <ul>
+        <li>Political Causes</li>
+        <li>Economic Causes</li>
+        <li>Social and Religious Causes</li>
+        <li>Military Causes</li>
+      </ul>
+
+      <h3>Important Centres</h3>
+
+      <ul>
+        <li>Delhi</li>
+        <li>Kanpur</li>
+        <li>Lucknow</li>
+        <li>Jhansi</li>
+        <li>Bihar</li>
+      </ul>
+
+      <h3>Consequences</h3>
+
+      <ul>
+        <li>End of East India Company rule</li>
+        <li>Beginning of direct Crown rule</li>
+        <li>Changes in Army organisation</li>
+        <li>Changes in British policy towards Indian rulers</li>
+      </ul>
+
+    </section>
+
+
+    <!-- NATIONAL MOVEMENT -->
+    <section class="topic" id="freedom">
+
+      <h2>🇮🇳 6. Indian National Movement</h2>
+
+      <h3>Formation of Indian National Congress</h3>
+
+      <ul>
+        <li>Foundation of INC</li>
+        <li>Moderate Phase</li>
+        <li>Extremist Phase</li>
+        <li>Surat Split</li>
+      </ul>
+
+      <h3>Gandhian Era</h3>
+
+      <ul>
+        <li>Champaran Satyagraha</li>
+        <li>Kheda Satyagraha</li>
+        <li>Ahmedabad Mill Strike</li>
+        <li>Non-Cooperation Movement</li>
+        <li>Civil Disobedience Movement</li>
+        <li>Quit India Movement</li>
+      </ul>
+
+      <h3>Other Important Developments</h3>
+
+      <ul>
+        <li>Swadeshi Movement</li>
+        <li>Home Rule Movement</li>
+        <li>Revolutionary Movement</li>
+        <li>Simon Commission</li>
+        <li>Round Table Conferences</li>
+        <li>Government of India Act, 1935</li>
+        <li>Cabinet Mission</li>
+        <li>Mountbatten Plan</li>
+        <li>Indian Independence Act, 1947</li>
+      </ul>
+
+      <div class="study-box">
+        <strong>UPSC Focus:</strong>
+        Always study every major movement through its
+        causes, programme, leaders, spread, participation
+        and consequences.
+      </div>
+
+    </section>
+
+
+    <!-- ART & CULTURE -->
+    <section class="topic" id="culture">
+
+      <h2>🎨 7. Art & Culture</h2>
+
+      <h3>Architecture</h3>
+
+      <ul>
+        <li>Stupa Architecture</li>
+        <li>Cave Architecture</li>
+        <li>Temple Architecture</li>
+        <li>Nagara Style</li>
+        <li>Dravida Style</li>
+        <li>Vesara Style</li>
+        <li>Indo-Islamic Architecture</li>
+      </ul>
+
+      <h3>Painting</h3>
+
+      <ul>
+        <li>Prehistoric Paintings</li>
+        <li>Ajanta Paintings</li>
+        <li>Mughal Paintings</li>
+        <li>Rajput Paintings</li>
+        <li>Folk and Tribal Art</li>
+      </ul>
+
+      <h3>Performing Arts</h3>
+
+      <ul>
+        <li>Classical Dance</li>
+        <li>Folk Dance</li>
+        <li>Indian Classical Music</li>
+        <li>Folk Music</li>
+        <li>Theatre Traditions</li>
+      </ul>
+
+      <h3>Literature</h3>
+
+      <ul>
+        <li>Ancient Literature</li>
+        <li>Buddhist and Jain Literature</li>
+        <li>Sangam Literature</li>
+        <li>Medieval Literature</li>
+        <li>Modern Indian Literature</li>
+      </ul>
+
+    </section>
+
+
+    <!-- TIMELINE -->
+    <section class="topic" id="timeline">
+
+      <h2>⏳ 8. Important Historical Timeline</h2>
+
+      <div class="timeline">
+
+        <div class="timeline-item">
+          <strong>c. 2500–1900 BCE</strong>
+          <br>
+          Mature phase of the Indus Valley Civilization.
+        </div>
+
+        <div class="timeline-item">
+          <strong>c. 1500 BCE onwards</strong>
+          <br>
+          Vedic period begins, according to conventional
+          historical chronology.
+        </div>
+
+        <div class="timeline-item">
+          <strong>6th century BCE</strong>
+          <br>
+          Rise of Buddhism and Jainism.
+        </div>
+
+        <div class="timeline-item">
+          <strong>c. 322 BCE</strong>
+          <br>
+          Rise of the Mauryan Empire.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1206 CE</strong>
+          <br>
+          Beginning of the Delhi Sultanate.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1526 CE</strong>
+          <br>
+          First Battle of Panipat and establishment of
+          Mughal rule.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1757 CE</strong>
+          <br>
+          Battle of Plassey.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1857 CE</strong>
+          <br>
+          Revolt of 1857.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1885 CE</strong>
+          <br>
+          Formation of the Indian National Congress.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1942 CE</strong>
+          <br>
+          Quit India Movement.
+        </div>
+
+        <div class="timeline-item">
+          <strong>1947 CE</strong>
+          <br>
+          India became independent.
+        </div>
+
+      </div>
+
+    </section>
+
+
+    <!-- PERSONALITIES -->
+    <section class="topic" id="personalities">
+
+      <h2>👤 9. Important Personalities</h2>
+
+      <div class="table-wrapper">
+
+        <table>
+
+          <tr>
+            <th>Personality</th>
+            <th>Associated Area</th>
+          </tr>
+
+          <tr>
+            <td>Gautama Buddha</td>
+            <td>Buddhism</td>
+          </tr>
+
+          <tr>
+            <td>Mahavira</td>
+            <td>Jainism</td>
+          </tr>
+
+          <tr>
+            <td>Ashoka</td>
+            <td>Mauryan Empire</td>
+          </tr>
+
+          <tr>
+            <td>Akbar</td>
+            <td>Mughal Empire</td>
+          </tr>
+
+          <tr>
+            <td>Raja Ram Mohan Roy</td>
+            <td>Social Reform</td>
+          </tr>
+
+          <tr>
+            <td>Swami Dayanand Saraswati</td>
+            <td>Social & Religious Reform</td>
+          </tr>
+
+          <tr>
+            <td>Dadabhai Naoroji</td>
+            <td>Economic Nationalism</td>
+          </tr>
+
+          <tr>
+            <td>Mahatma Gandhi</td>
+            <td>Indian National Movement</td>
+          </tr>
+
+          <tr>
+            <td>Subhas Chandra Bose</td>
+            <td>Indian National Movement</td>
+          </tr>
+
+          <tr>
+            <td>Bhagat Singh</td>
+            <td>Revolutionary Movement</td>
+          </tr>
+
+        </table>
+
+      </div>
+
+    </section>
+
+
+    <!-- PREPARATION -->
+    <section class="topic" id="preparation">
+
+      <h2>🎯 10. How to Prepare History</h2>
+
+      <h3>Step 1 — Build the Timeline</h3>
+
+      <p>
+        First understand the chronology of major events,
+        kingdoms, movements and important developments.
+      </p>
+
+      <h3>Step 2 — Connect Causes & Consequences</h3>
+
+      <p>
+        Do not simply memorize events. Understand why an
+        event happened and what happened afterwards.
+      </p>
+
+      <h3>Step 3 — Make Short Notes</h3>
+
+      <p>
+        Prepare concise notes for important dates,
+        personalities, movements, acts and cultural topics.
+      </p>
+
+      <h3>Step 4 — Solve PYQs</h3>
+
+      <p>
+        Practice previous year questions to understand
+        UPSC's question pattern and improve revision.
+      </p>
+
+      <div class="highlight">
+        <strong>📌 Remember:</strong>
+        History preparation becomes easier when you combine
+        chronology + concepts + maps + revision + PYQs.
+      </div>
+
+    </section>
+
+
+    <!-- BOTTOM BUTTONS -->
+    <div class="bottom-buttons">
+
+      <a href="index.html" class="btn btn-primary">
+        🏠 Back to Home
+      </a>
+
+      <a href="polity.html" class="btn btn-dark">
+        🏛️ Polity
+      </a>
+
+      <a href="prelims.html" class="btn btn-dark">
+        📚 Prelims Syllabus
+      </a>
+
+      <a href="mains.html" class="btn btn-dark">
+        ✍️ Mains Syllabus
+      </a>
+
+    </div>
+
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer>
+
+    <div class="footer-logo">
+      🇮🇳 UPSC <b>Shiksha</b>
+    </div>
+
+    <p>
+      Free UPSC Preparation Platform
+    </p>
+
+    <p>
+      © 2026 UPSC Shiksha. All Rights Reserved.
+    </p>
+
+  </footer>
+
+</body>
+</html>
