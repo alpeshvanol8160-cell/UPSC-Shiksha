@@ -8,11 +8,414 @@
   <meta name="description" content="UPSC Shiksha - Free UPSC study material, syllabus, PYQs, mock tests and study timetable.">
 
   <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* HOME PAGE */
+
+    .home-section {
+      max-width: 1100px;
+      margin: auto;
+      padding: 45px 16px;
+    }
+
+    .hero {
+      padding: 70px 20px;
+      text-align: center;
+      background: linear-gradient(135deg, #fff3cd, #ffffff);
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 8px 15px;
+      border-radius: 20px;
+      background: #333;
+      color: white;
+      font-size: 14px;
+      margin-bottom: 18px;
+    }
+
+    .hero h1 {
+      font-size: 44px;
+      line-height: 1.2;
+      margin: 10px 0;
+    }
+
+    .hero h1 span {
+      color: #d35400;
+    }
+
+    .hero p {
+      max-width: 700px;
+      margin: 18px auto;
+      line-height: 1.7;
+      font-size: 17px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 25px;
+    }
+
+    .btn {
+      display: inline-block;
+      padding: 13px 20px;
+      border-radius: 11px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .primary {
+      background: #333;
+      color: white;
+    }
+
+    .secondary {
+      background: white;
+      color: #333;
+      border: 1px solid #333;
+    }
+
+    .stats {
+      max-width: 1100px;
+      margin: auto;
+      padding: 25px 16px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 15px;
+    }
+
+    .stat-card {
+      text-align: center;
+      padding: 20px;
+      border-radius: 15px;
+      background: #f7f7f7;
+    }
+
+    .stat-card h2 {
+      margin: 0;
+      font-size: 27px;
+    }
+
+    .stat-card p {
+      margin-bottom: 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-title span {
+      font-size: 13px;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+
+    .section-title h2 {
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    .section-title p {
+      line-height: 1.6;
+    }
+
+    .feature-grid,
+    .subject-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px;
+    }
+
+    .feature-card,
+    .subject-card {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+      border: 1px solid #eee;
+    }
+
+    .feature-card .icon {
+      font-size: 30px;
+    }
+
+    .feature-card h3,
+    .subject-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .feature-card p,
+    .subject-card p {
+      line-height: 1.6;
+    }
+
+    .feature-card a {
+      text-decoration: none;
+      font-weight: bold;
+      color: #333;
+    }
+
+    .subject-card span {
+      font-size: 30px;
+    }
+
+    .study-btn,
+    .pdf-btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 9px 14px;
+      border-radius: 9px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .syllabus-tabs {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 25px;
+    }
+
+    .syllabus-tab {
+      border: none;
+      padding: 11px 17px;
+      border-radius: 10px;
+      background: #eee;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .syllabus-tab.active {
+      background: #333;
+      color: white;
+    }
+
+    .syllabus-content {
+      display: none;
+    }
+
+    .syllabus-content.active {
+      display: block;
+    }
+
+    .syllabus-card {
+      background: #fff;
+      padding: 23px;
+      margin-bottom: 16px;
+      border-radius: 15px;
+      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
+    }
+
+    .syllabus-card li {
+      margin-bottom: 8px;
+      line-height: 1.5;
+    }
+
+    .test-box {
+      max-width: 850px;
+      margin: auto;
+      padding: 25px;
+      border-radius: 18px;
+      background: #f5f5f5;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .test-icon {
+      font-size: 35px;
+    }
+
+    .test-btn,
+    .premium-btn {
+      padding: 12px 18px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .premium {
+      max-width: 1100px;
+      margin: 30px auto;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #222, #444);
+      color: white;
+      text-align: center;
+    }
+
+    .premium-content {
+      padding: 45px 20px;
+    }
+
+    .premium-badge {
+      display: inline-block;
+      padding: 7px 13px;
+      border-radius: 20px;
+      background: #f1c40f;
+      color: #222;
+      font-weight: bold;
+    }
+
+    .premium h2 {
+      font-size: 30px;
+    }
+
+    .premium p {
+      max-width: 600px;
+      margin: auto auto 20px;
+      line-height: 1.7;
+    }
+
+    .premium-btn {
+      background: white;
+      color: #222;
+    }
+
+    .contact form {
+      max-width: 650px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .contact input,
+    .contact textarea {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      font-size: 15px;
+    }
+
+    .contact textarea {
+      min-height: 130px;
+      resize: vertical;
+    }
+
+    .contact button {
+      padding: 13px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    #topBtn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      display: none;
+      padding: 11px 14px;
+      border: none;
+      border-radius: 50%;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 18px;
+      z-index: 999;
+    }
+
+    /* DARK MODE */
+
+    body.dark-home {
+      background: #121212;
+      color: #eee;
+    }
+
+    body.dark-home .hero {
+      background: linear-gradient(135deg, #292929, #181818);
+    }
+
+    body.dark-home .stat-card,
+    body.dark-home .feature-card,
+    body.dark-home .subject-card,
+    body.dark-home .syllabus-card,
+    body.dark-home .test-box {
+      background: #1e1e1e;
+      color: #eee;
+      border-color: #333;
+    }
+
+    body.dark-home .secondary,
+    body.dark-home .syllabus-tab {
+      background: #292929;
+      color: #eee;
+      border-color: #555;
+    }
+
+    body.dark-home .feature-card a {
+      color: #eee;
+    }
+
+    @media (max-width: 800px) {
+
+      .feature-grid,
+      .subject-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .stats {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+    }
+
+    @media (max-width: 600px) {
+
+      .hero {
+        padding: 50px 15px;
+      }
+
+      .hero h1 {
+        font-size: 34px;
+      }
+
+      .hero p {
+        font-size: 15px;
+      }
+
+      .feature-grid,
+      .subject-grid,
+      .stats {
+        grid-template-columns: 1fr;
+      }
+
+      .section-title h2 {
+        font-size: 26px;
+      }
+
+      .test-box {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .home-section {
+        padding: 35px 12px;
+      }
+
+    }
+  </style>
 </head>
 
 <body>
 
   <!-- HEADER -->
+
   <header class="header">
 
     <div class="logo">
@@ -25,6 +428,7 @@
     <nav id="navMenu">
       <a href="#home">Home</a>
       <a href="#features">Features</a>
+      <a href="#syllabus">Syllabus</a>
       <a href="#free">Free Material</a>
       <a href="#tests">Tests</a>
       <a href="#premium">Premium</a>
@@ -35,6 +439,7 @@
 
 
   <!-- HERO -->
+
   <section class="hero" id="home">
 
     <div class="hero-content">
@@ -55,6 +460,7 @@
       </p>
 
       <div class="hero-buttons">
+
         <a href="#free" class="btn primary">
           📚 Start Studying
         </a>
@@ -62,6 +468,7 @@
         <a href="#tests" class="btn secondary">
           📝 Take Free Test
         </a>
+
       </div>
 
     </div>
@@ -70,6 +477,7 @@
 
 
   <!-- STATS -->
+
   <section class="stats">
 
     <div class="stat-card">
@@ -96,92 +504,153 @@
 
 
   <!-- FEATURES -->
-  <section class="section" id="features">
+
+  <section class="home-section" id="features">
 
     <div class="section-title">
+
       <span>WHY UPSC SHIKSHA?</span>
+
       <h2>Everything You Need</h2>
+
       <p>
         Build your UPSC preparation with organized
         resources and regular practice.
       </p>
+
     </div>
 
     <div class="feature-grid">
 
       <div class="feature-card">
+
         <div class="icon">📚</div>
+
         <h3>Complete Syllabus</h3>
+
         <p>
           Prelims and Mains syllabus organized
           subject-wise.
         </p>
-        <a href="#">Explore →</a>
+
+        <a href="prelims.html">
+          Explore →
+        </a>
+
       </div>
 
+
       <div class="feature-card">
+
         <div class="icon">📄</div>
+
         <h3>PYQ Collection</h3>
+
         <p>
           Practice previous year questions
           topic-wise and year-wise.
         </p>
-        <a href="pyq.html">Practice →</a>
+
+        <a href="pyq.html">
+          Practice →
+        </a>
+
       </div>
 
+
       <div class="feature-card">
+
         <div class="icon">📝</div>
+
         <h3>Mock Tests</h3>
+
         <p>
           Test your preparation with timed
           practice tests.
         </p>
-        <a href="#tests">Take Test →</a>
+
+        <a href="#tests">
+          Take Test →
+        </a>
+
       </div>
 
+
       <div class="feature-card">
+
         <div class="icon">📥</div>
+
         <h3>PDF Resources</h3>
+
         <p>
           Read online and download useful
           study resources.
         </p>
-        <a href="#">View PDFs →</a>
+
+        <a href="prelims.html">
+          View Resources →
+        </a>
+
       </div>
 
+
       <div class="feature-card">
+
         <div class="icon">⏰</div>
+
         <h3>Study Timetable</h3>
+
         <p>
-          Follow a practical 5-hour daily
-          UPSC study schedule.
+          Follow a practical daily UPSC
+          study schedule.
         </p>
-        <a href="#">View Plan →</a>
+
+        <a href="#free">
+          View Plan →
+        </a>
+
       </div>
 
+
       <div class="feature-card">
+
         <div class="icon">📊</div>
+
         <h3>Progress Tracking</h3>
+
         <p>
           Track your tests, scores and
           preparation progress.
         </p>
-        <a href="#">Coming Soon</a>
+
+        <a href="#">
+          Coming Soon
+        </a>
+
       </div>
 
     </div>
 
   </section>
-    <!-- UPSC SYLLABUS -->
-  <section class="section syllabus-section" id="syllabus">
+
+
+  <!-- SYLLABUS -->
+
+  <section class="home-section" id="syllabus">
 
     <div class="section-title">
+
       <span>UPSC CSE SYLLABUS</span>
+
       <h2>Complete UPSC Syllabus</h2>
+
       <p>
-        Prelims, CSAT and Mains syllabus — organized for easy preparation.
+        Prelims, CSAT and Mains syllabus —
+        organized for easy preparation.
       </p>
+
     </div>
+
 
     <div class="syllabus-tabs">
 
@@ -205,6 +674,7 @@
     <div class="syllabus-content active" id="prelims">
 
       <div class="syllabus-card">
+
         <h3>📚 General Studies Paper-I</h3>
 
         <ul>
@@ -218,8 +688,9 @@
         </ul>
 
         <a href="prelims.html" class="pdf-btn">
-  📚 View Full Prelims Syllabus
+          📚 View Full Prelims Syllabus
         </a>
+
       </div>
 
     </div>
@@ -244,7 +715,7 @@
         </ul>
 
         <a href="csat.html" class="pdf-btn">
-  🧠 View Full CSAT Syllabus
+          🧠 View Full CSAT Syllabus
         </a>
 
       </div>
@@ -261,7 +732,8 @@
         <h3>✍️ Mains – Essay</h3>
 
         <p>
-          Candidates may be required to write essays on multiple topics.
+          Candidates may be required to write essays
+          on multiple topics.
         </p>
 
       </div>
@@ -330,8 +802,10 @@
         </p>
 
       </div>
+
+
       <a href="mains.html" class="pdf-btn">
-  ✍️ View Full Mains Syllabus
+        ✍️ View Full Mains Syllabus
       </a>
 
     </div>
@@ -340,58 +814,123 @@
 
 
   <!-- FREE MATERIAL -->
-  <section class="section free-section" id="free">
+
+  <section class="home-section" id="free">
 
     <div class="section-title">
+
       <span>FREE RESOURCES</span>
+
       <h2>Free Study Material</h2>
+
       <p>
         Start your preparation without spending money.
       </p>
+
     </div>
+
 
     <div class="subject-grid">
 
       <div class="subject-card">
-  <span>🏛️</span>
-  <h3>Polity</h3>
-  <p>Constitution, Parliament, Judiciary & more</p>
-  <a href="polity.html" class="study-btn">Study Free</a>
+
+        <span>🏛️</span>
+
+        <h3>Polity</h3>
+
+        <p>
+          Constitution, Parliament, Judiciary & more
+        </p>
+
+        <a href="polity.html" class="study-btn">
+          Study Free
+        </a>
+
       </div>
 
-      <div class="subject-card">
-  <span>📜</span>
-  <h3>History</h3>
-  <p>Ancient, Medieval & Modern India</p>
-  <a href="history.html" class="study-btn">Study Free</a>
-      </div>
 
       <div class="subject-card">
-  <span>🌍</span>
-  <h3>Geography</h3>
-  <p>Indian & World Geography</p>
-  <a href="geography.html" class="study-btn">Study Free</a>
+
+        <span>📜</span>
+
+        <h3>History</h3>
+
+        <p>
+          Ancient, Medieval & Modern India
+        </p>
+
+        <a href="history.html" class="study-btn">
+          Study Free
+        </a>
+
       </div>
 
+
       <div class="subject-card">
+
+        <span>🌍</span>
+
+        <h3>Geography</h3>
+
+        <p>
+          Indian & World Geography
+        </p>
+
+        <a href="geography.html" class="study-btn">
+          Study Free
+        </a>
+
+      </div>
+
+
+      <div class="subject-card">
+
         <span>💰</span>
+
         <h3>Economy</h3>
-        <p>Indian Economy & basic concepts</p>
-        <a href="economy.html" class="study-btn">Study Free</a>
+
+        <p>
+          Indian Economy & basic concepts
+        </p>
+
+        <a href="economy.html" class="study-btn">
+          Study Free
+        </a>
+
       </div>
 
+
       <div class="subject-card">
+
         <span>🌱</span>
+
         <h3>Environment</h3>
-        <p>Ecology, biodiversity & climate</p>
-        <a href="environment.html" class="study-btn">Study Free</a>
+
+        <p>
+          Ecology, biodiversity & climate
+        </p>
+
+        <a href="environment.html" class="study-btn">
+          Study Free
+        </a>
+
       </div>
 
+
       <div class="subject-card">
+
         <span>🔬</span>
+
         <h3>Science & Tech</h3>
-        <p>Science, Space & Technology</p>
-        <a href="science.html" class="study-btn">Study Free</a>
+
+        <p>
+          Science, Space & Technology
+        </p>
+
+        <a href="science.html" class="study-btn">
+          Study Free
+        </a>
+
       </div>
 
     </div>
@@ -400,19 +939,26 @@
 
 
   <!-- TESTS -->
-  <section class="section tests-section" id="tests">
+
+  <section class="home-section" id="tests">
 
     <div class="section-title">
+
       <span>TEST YOURSELF</span>
+
       <h2>Free Mock Tests</h2>
+
       <p>
         Practice regularly and improve your score.
       </p>
+
     </div>
+
 
     <div class="test-box">
 
       <div>
+
         <span class="test-icon">📝</span>
 
         <h3>UPSC General Studies Test</h3>
@@ -421,6 +967,7 @@
           Questions: 25 &nbsp; | &nbsp;
           Time: 20 Minutes
         </p>
+
       </div>
 
       <button class="test-btn" id="testBtn">
@@ -433,13 +980,19 @@
 
 
   <!-- PREMIUM -->
-  <section class="section premium" id="premium">
+
+  <section class="home-section premium" id="premium">
 
     <div class="premium-content">
 
-      <span class="premium-badge">💎 PREMIUM</span>
+      <span class="premium-badge">
+        💎 PREMIUM
+      </span>
 
-      <h2>Take Your Preparation<br>To The Next Level</h2>
+      <h2>
+        Take Your Preparation<br>
+        To The Next Level
+      </h2>
 
       <p>
         Advanced test series, detailed explanations,
@@ -456,15 +1009,21 @@
 
 
   <!-- CONTACT -->
-  <section class="section contact" id="contact">
+
+  <section class="home-section contact" id="contact">
 
     <div class="section-title">
+
       <span>GET IN TOUCH</span>
+
       <h2>Contact UPSC Shiksha</h2>
+
       <p>
         Have a question or suggestion? Contact us.
       </p>
+
     </div>
+
 
     <form id="contactForm">
 
@@ -495,6 +1054,7 @@
 
 
   <!-- FOOTER -->
+
   <footer>
 
     <div class="footer-logo">
@@ -506,10 +1066,13 @@
     </p>
 
     <div class="footer-links">
+
       <a href="#home">Home</a>
+      <a href="#syllabus">Syllabus</a>
       <a href="#free">Study Material</a>
       <a href="#tests">Tests</a>
       <a href="#premium">Premium</a>
+
     </div>
 
     <p class="copyright">
@@ -520,9 +1083,146 @@
 
 
   <!-- BACK TO TOP -->
+
   <button id="topBtn">↑</button>
 
+
+  <!-- SCRIPT -->
+
   <script src="script.js"></script>
+
+  <script>
+
+    /* SYLLABUS TABS */
+
+    const syllabusTabs =
+      document.querySelectorAll(".syllabus-tab");
+
+    const syllabusContents =
+      document.querySelectorAll(".syllabus-content");
+
+
+    syllabusTabs.forEach(function(tab) {
+
+      tab.addEventListener("click", function() {
+
+        const target =
+          this.getAttribute("data-tab");
+
+
+        syllabusTabs.forEach(function(item) {
+          item.classList.remove("active");
+        });
+
+
+        syllabusContents.forEach(function(content) {
+          content.classList.remove("active");
+        });
+
+
+        this.classList.add("active");
+
+        document
+          .getElementById(target)
+          .classList.add("active");
+
+      });
+
+    });
+
+
+    /* BACK TO TOP */
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 300) {
+
+        topBtn.style.display = "block";
+
+      } else {
+
+        topBtn.style.display = "none";
+
+      }
+
+    });
+
+
+    topBtn.addEventListener("click", function() {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+
+    /* CONTACT FORM */
+
+    const contactForm =
+      document.getElementById("contactForm");
+
+
+    if (contactForm) {
+
+      contactForm.addEventListener("submit", function(e) {
+
+        e.preventDefault();
+
+        alert(
+          "Thank you! Your message has been received."
+        );
+
+        contactForm.reset();
+
+      });
+
+    }
+
+
+    /* TEST BUTTON */
+
+    const testBtn =
+      document.getElementById("testBtn");
+
+
+    if (testBtn) {
+
+      testBtn.addEventListener("click", function() {
+
+        alert(
+          "Free Mock Test will be available soon!"
+        );
+
+      });
+
+    }
+
+
+    /* PREMIUM BUTTON */
+
+    const premiumBtn =
+      document.querySelector(".premium-btn");
+
+
+    if (premiumBtn) {
+
+      premiumBtn.addEventListener("click", function() {
+
+        alert(
+          "Premium features will be available soon!"
+        );
+
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
