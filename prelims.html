@@ -23,9 +23,10 @@
       background: #f5f7fb;
       color: #202124;
       line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
     }
 
-    /* Header */
+    /* HEADER */
     header {
       background: linear-gradient(135deg, #14213d, #1d4e89);
       color: white;
@@ -43,7 +44,7 @@
       opacity: 0.95;
     }
 
-    /* Navigation */
+    /* NAVIGATION */
     nav {
       background: white;
       padding: 12px;
@@ -59,7 +60,7 @@
       color: #1d4e89;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px 8px;
+      margin: 5px 7px;
       font-size: 14px;
     }
 
@@ -67,13 +68,113 @@
       color: #e63946;
     }
 
-    /* Main */
+    /* HERO */
+    .hero {
+      width: 92%;
+      max-width: 1000px;
+      margin: 25px auto 20px;
+      background: linear-gradient(135deg, #14213d, #1d4e89);
+      color: white;
+      padding: 28px 22px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 15px;
+    }
+
+    .tags {
+      margin-top: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 4px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    /* CONTAINER */
     .container {
       width: 92%;
       max-width: 1000px;
       margin: 25px auto;
     }
 
+    /* SEARCH */
+    .search-box {
+      background: white;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+      margin-bottom: 20px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px 15px;
+      border: 2px solid #d9e1ec;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: #1d4e89;
+    }
+
+    /* DARK MODE BUTTON */
+    .dark-btn {
+      display: block;
+      margin: 12px auto 22px;
+      border: none;
+      background: #14213d;
+      color: white;
+      padding: 11px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    /* QUICK NAVIGATION */
+    .quick-nav {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    }
+
+    .quick-nav h3 {
+      color: #14213d;
+      margin-bottom: 12px;
+    }
+
+    .quick-nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #1d4e89;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* INTRO */
     .intro {
       background: white;
       padding: 22px;
@@ -87,7 +188,7 @@
       margin-bottom: 10px;
     }
 
-    /* Paper headings */
+    /* PAPER */
     .paper {
       background: linear-gradient(135deg, #14213d, #1d4e89);
       color: white;
@@ -105,7 +206,7 @@
       margin-top: 5px;
     }
 
-    /* Syllabus cards */
+    /* TOPICS */
     .topic {
       background: white;
       border-radius: 14px;
@@ -135,7 +236,7 @@
       margin: 5px 0;
     }
 
-    /* CSAT table */
+    /* CSAT TABLE */
     .table-wrapper {
       overflow-x: auto;
       background: white;
@@ -165,7 +266,7 @@
       background: #f7f9fc;
     }
 
-    /* Important box */
+    /* IMPORTANT */
     .important {
       background: #fff8e1;
       border-left: 5px solid #f4b400;
@@ -179,7 +280,26 @@
       margin-bottom: 6px;
     }
 
-    /* Button */
+    /* BOTTOM NAV */
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 30px 0;
+    }
+
+    .bottom-nav a {
+      background: #1d4e89;
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 22px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
+    /* TOP BUTTON */
     .top-btn {
       display: block;
       width: fit-content;
@@ -192,11 +312,7 @@
       font-weight: bold;
     }
 
-    .top-btn:hover {
-      background: #14213d;
-    }
-
-    /* Footer */
+    /* FOOTER */
     footer {
       background: #14213d;
       color: white;
@@ -214,7 +330,56 @@
       opacity: 0.85;
     }
 
-    /* Mobile */
+    /* DARK MODE */
+    body.dark {
+      background: #121212;
+      color: #eeeeee;
+    }
+
+    body.dark nav,
+    body.dark .intro,
+    body.dark .topic,
+    body.dark .search-box,
+    body.dark .quick-nav,
+    body.dark .table-wrapper {
+      background: #1e1e1e;
+      color: #eeeeee;
+    }
+
+    body.dark .intro h2,
+    body.dark .quick-nav h3,
+    body.dark .topic h3 {
+      color: #90caf9;
+    }
+
+    body.dark .topic p {
+      color: #dddddd;
+    }
+
+    body.dark .search-box input {
+      background: #2b2b2b;
+      color: white;
+      border-color: #555;
+    }
+
+    body.dark tr:nth-child(even) {
+      background: #292929;
+    }
+
+    body.dark td {
+      border-color: #444;
+    }
+
+    body.dark nav a {
+      color: #90caf9;
+    }
+
+    body.dark .important {
+      background: #332b16;
+      color: #eeeeee;
+    }
+
+    /* MOBILE */
     @media (max-width: 600px) {
       header {
         padding: 28px 15px;
@@ -237,12 +402,23 @@
         margin: 4px 5px;
       }
 
+      .hero {
+        width: 94%;
+        padding: 23px 16px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
       .container {
         width: 94%;
       }
 
       .intro,
-      .topic {
+      .topic,
+      .search-box,
+      .quick-nav {
         padding: 17px;
       }
 
@@ -277,17 +453,63 @@
   <!-- NAVIGATION -->
   <nav>
     <a href="index.html">🏠 Home</a>
-    <a href="#gs1">📚 GS Paper I</a>
-    <a href="#csat">🧠 CSAT</a>
-    <a href="#important">⚠️ Important</a>
+    <a href="prelims.html">📚 Prelims</a>
+    <a href="mains.html">📝 Mains</a>
+    <a href="pyq.html">📄 PYQs</a>
+    <a href="polity.html">⚖️ Polity</a>
+    <a href="economy.html">💰 Economy</a>
   </nav>
 
-  <!-- MAIN CONTENT -->
+  <!-- HERO -->
+  <section class="hero">
+    <h2>📚 UPSC Prelims Syllabus</h2>
+    <p>Complete Civil Services Preliminary Examination Syllabus</p>
+
+    <div class="tags">
+      <span class="tag">PRELIMS</span>
+      <span class="tag">GS PAPER I</span>
+      <span class="tag">CSAT PAPER II</span>
+      <span class="tag">2026</span>
+    </div>
+  </section>
+
   <main class="container">
+
+    <!-- DARK MODE -->
+    <button class="dark-btn" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
+
+    <!-- SEARCH -->
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Search Prelims Topics..."
+        onkeyup="searchTopics()"
+      >
+    </div>
+
+    <!-- QUICK NAVIGATION -->
+    <section class="quick-nav">
+      <h3>⚡ Quick Navigation</h3>
+
+      <a href="#gs1">📚 GS Paper I</a>
+      <a href="#current">📰 Current Affairs</a>
+      <a href="#history">🏛️ History</a>
+      <a href="#geography">🌍 Geography</a>
+      <a href="#polity">⚖️ Polity</a>
+      <a href="#economy">💰 Economy</a>
+      <a href="#environment">🌱 Environment</a>
+      <a href="#science">🔬 Science</a>
+      <a href="#csat">🧠 CSAT</a>
+      <a href="#important">⚠️ Important</a>
+    </section>
 
     <!-- INTRO -->
     <section class="intro">
       <h2>UPSC Civil Services Preliminary Examination</h2>
+
       <p>
         The Civil Services Preliminary Examination is the first stage of the
         UPSC Civil Services Examination. It consists of two objective-type
@@ -303,9 +525,10 @@
         <p>Objective Type • General Studies</p>
       </div>
 
-      <!-- 1 -->
-      <article class="topic">
+      <!-- CURRENT -->
+      <article class="topic" id="current">
         <h3>1. 📰 Current Events of National and International Importance</h3>
+
         <p>
           Current affairs of national and international importance, including
           major events, government policies, important developments and issues
@@ -313,9 +536,10 @@
         </p>
       </article>
 
-      <!-- 2 -->
-      <article class="topic">
+      <!-- HISTORY -->
+      <article class="topic" id="history">
         <h3>2. 🏛️ History of India and Indian National Movement</h3>
+
         <p>
           History of India with emphasis on the broad aspects of Indian
           national movement and the freedom struggle.
@@ -330,9 +554,10 @@
         </ul>
       </article>
 
-      <!-- 3 -->
-      <article class="topic">
+      <!-- GEOGRAPHY -->
+      <article class="topic" id="geography">
         <h3>3. 🌍 Indian and World Geography</h3>
+
         <p>
           Physical, social and economic geography of India and the world.
         </p>
@@ -348,9 +573,10 @@
         </ul>
       </article>
 
-      <!-- 4 -->
-      <article class="topic">
+      <!-- POLITY -->
+      <article class="topic" id="polity">
         <h3>4. ⚖️ Indian Polity and Governance</h3>
+
         <p>
           Constitution, political system, Panchayati Raj, public policy,
           rights issues and other aspects of governance.
@@ -371,9 +597,10 @@
         </ul>
       </article>
 
-      <!-- 5 -->
-      <article class="topic">
+      <!-- ECONOMY -->
+      <article class="topic" id="economy">
         <h3>5. 💰 Economic and Social Development</h3>
+
         <p>
           Sustainable development, poverty, inclusion, demographics,
           social sector initiatives and other economic and social issues.
@@ -391,9 +618,10 @@
         </ul>
       </article>
 
-      <!-- 6 -->
-      <article class="topic">
+      <!-- ENVIRONMENT -->
+      <article class="topic" id="environment">
         <h3>6. 🌱 Environmental Ecology, Biodiversity and Climate Change</h3>
+
         <p>
           General issues on environmental ecology, biodiversity and climate
           change that do not require subject specialisation.
@@ -411,9 +639,10 @@
         </ul>
       </article>
 
-      <!-- 7 -->
-      <article class="topic">
+      <!-- SCIENCE -->
+      <article class="topic" id="science">
         <h3>7. 🔬 General Science</h3>
+
         <p>
           General understanding of science and technology and their
           applications in everyday life and society.
@@ -450,6 +679,7 @@
       </div>
 
       <div class="table-wrapper">
+
         <table>
           <thead>
             <tr>
@@ -459,6 +689,7 @@
           </thead>
 
           <tbody>
+
             <tr>
               <td>1</td>
               <td>Comprehension</td>
@@ -507,14 +738,17 @@
                 skills (Class X level)
               </td>
             </tr>
+
           </tbody>
         </table>
+
       </div>
 
     </section>
 
     <!-- IMPORTANT -->
     <section id="important" class="important">
+
       <h3>⚠️ Important Note</h3>
 
       <p>
@@ -523,8 +757,20 @@
         examination notification for the syllabus applicable to their
         examination year.
       </p>
+
     </section>
 
+    <!-- BOTTOM NAV -->
+    <div class="bottom-nav">
+      <a href="index.html">🏠 Home</a>
+      <a href="mains.html">📝 Mains</a>
+      <a href="pyq.html">📄 PYQs</a>
+      <a href="polity.html">⚖️ Polity</a>
+      <a href="geography.html">🌍 Geography</a>
+      <a href="economy.html">💰 Economy</a>
+    </div>
+
+    <!-- TOP -->
     <a href="#top" class="top-btn">⬆️ Back to Top</a>
 
   </main>
@@ -535,6 +781,62 @@
     <p>Free UPSC Preparation • Study Smart • Achieve Your Goal</p>
     <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
   </footer>
+
+  <script>
+
+    /* SEARCH */
+    function searchTopics() {
+
+      const input =
+        document.getElementById("searchInput").value.toLowerCase();
+
+      const topics =
+        document.querySelectorAll(".topic");
+
+      topics.forEach(function(topic) {
+
+        const text =
+          topic.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          topic.style.display = "";
+        } else {
+          topic.style.display = "none";
+        }
+
+      });
+    }
+
+    /* DARK MODE */
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem("prelimsDarkMode", "enabled");
+
+      } else {
+
+        localStorage.setItem("prelimsDarkMode", "disabled");
+
+      }
+    }
+
+    /* LOAD DARK MODE */
+    window.onload = function() {
+
+      if (
+        localStorage.getItem("prelimsDarkMode") === "enabled"
+      ) {
+
+        document.body.classList.add("dark");
+
+      }
+
+    };
+
+  </script>
 
 </body>
 </html>
