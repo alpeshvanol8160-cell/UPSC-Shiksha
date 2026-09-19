@@ -23,6 +23,7 @@
       background: #f5f7fb;
       color: #202124;
       line-height: 1.7;
+      transition: background 0.3s, color 0.3s;
     }
 
     header {
@@ -56,7 +57,7 @@
       color: #1d4e89;
       text-decoration: none;
       font-weight: bold;
-      margin: 5px 8px;
+      margin: 5px 7px;
       font-size: 14px;
     }
 
@@ -64,10 +65,105 @@
       color: #e63946;
     }
 
+    .hero {
+      width: 92%;
+      max-width: 1000px;
+      margin: 25px auto 20px;
+      background: linear-gradient(135deg, #14213d, #1d4e89);
+      color: white;
+      padding: 28px 22px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.12);
+    }
+
+    .hero h2 {
+      font-size: 28px;
+      margin-bottom: 8px;
+    }
+
+    .hero p {
+      font-size: 15px;
+    }
+
+    .tags {
+      margin-top: 15px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 6px 12px;
+      margin: 4px;
+      border-radius: 20px;
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      font-size: 12px;
+      font-weight: bold;
+    }
+
     .container {
       width: 92%;
       max-width: 1000px;
       margin: 25px auto;
+    }
+
+    .search-box {
+      background: white;
+      padding: 18px;
+      border-radius: 14px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+      margin-bottom: 15px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 13px 15px;
+      border: 2px solid #d9e1ec;
+      border-radius: 10px;
+      font-size: 15px;
+      outline: none;
+    }
+
+    .search-box input:focus {
+      border-color: #1d4e89;
+    }
+
+    .dark-btn {
+      display: block;
+      margin: 12px auto 22px;
+      border: none;
+      background: #14213d;
+      color: white;
+      padding: 11px 20px;
+      border-radius: 25px;
+      font-weight: bold;
+      cursor: pointer;
+      font-size: 14px;
+    }
+
+    .quick-nav {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      margin-bottom: 25px;
+      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    }
+
+    .quick-nav h3 {
+      color: #14213d;
+      margin-bottom: 12px;
+    }
+
+    .quick-nav a {
+      display: inline-block;
+      text-decoration: none;
+      color: white;
+      background: #1d4e89;
+      padding: 8px 12px;
+      border-radius: 20px;
+      margin: 4px;
+      font-size: 13px;
+      font-weight: bold;
     }
 
     .intro {
@@ -155,6 +251,24 @@
       margin-bottom: 7px;
     }
 
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin: 30px 0;
+    }
+
+    .bottom-nav a {
+      background: #1d4e89;
+      color: white;
+      text-decoration: none;
+      padding: 10px 14px;
+      border-radius: 22px;
+      font-size: 13px;
+      font-weight: bold;
+    }
+
     .back-btn {
       display: block;
       width: fit-content;
@@ -184,6 +298,52 @@
       opacity: 0.85;
     }
 
+    /* DARK MODE */
+
+    body.dark {
+      background: #121212;
+      color: #eeeeee;
+    }
+
+    body.dark nav,
+    body.dark .intro,
+    body.dark .topic,
+    body.dark .info,
+    body.dark .search-box,
+    body.dark .quick-nav {
+      background: #1e1e1e;
+      color: #eeeeee;
+    }
+
+    body.dark .intro h2,
+    body.dark .quick-nav h3,
+    body.dark .topic h3 {
+      color: #90caf9;
+    }
+
+    body.dark .topic p {
+      color: #dddddd;
+    }
+
+    body.dark .search-box input {
+      background: #2b2b2b;
+      color: white;
+      border-color: #555;
+    }
+
+    body.dark nav a {
+      color: #90caf9;
+    }
+
+    body.dark .info {
+      background: #172b3d;
+    }
+
+    body.dark .important {
+      background: #332b16;
+      color: #eeeeee;
+    }
+
     @media (max-width: 600px) {
 
       header {
@@ -207,6 +367,15 @@
         margin: 4px 5px;
       }
 
+      .hero {
+        width: 94%;
+        padding: 23px 16px;
+      }
+
+      .hero h2 {
+        font-size: 23px;
+      }
+
       .container {
         width: 94%;
       }
@@ -214,7 +383,9 @@
       .intro,
       .topic,
       .info,
-      .important {
+      .important,
+      .search-box,
+      .quick-nav {
         padding: 17px;
       }
 
@@ -240,24 +411,64 @@
 
 <body id="top">
 
-  <!-- HEADER -->
   <header>
     <h1>🇮🇳 UPSC SHIKSHA</h1>
     <p>Complete UPSC Preparation • Free Study Material</p>
   </header>
 
-  <!-- NAVIGATION -->
   <nav>
     <a href="index.html">🏠 Home</a>
     <a href="prelims.html">📚 Prelims</a>
     <a href="csat.html">🧠 CSAT</a>
+    <a href="pyq.html">📄 PYQs</a>
     <a href="#mains">✍️ Mains</a>
   </nav>
 
+  <section class="hero">
+    <h2>📝 UPSC Mains Syllabus</h2>
+    <p>Complete Civil Services Main Examination Syllabus</p>
+
+    <div class="tags">
+      <span class="tag">MAINS</span>
+      <span class="tag">ESSAY</span>
+      <span class="tag">GENERAL STUDIES</span>
+      <span class="tag">OPTIONAL</span>
+    </div>
+  </section>
+
   <main class="container">
 
-    <!-- INTRO -->
-    <section class="intro">
+    <button class="dark-btn" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔎 Search Mains Topics..."
+        onkeyup="searchTopics()"
+      >
+    </div>
+
+    <section class="quick-nav">
+
+      <h3>⚡ Quick Navigation</h3>
+
+      <a href="#mains">📋 Mains Structure</a>
+      <a href="#qualifying">🗣️ Qualifying</a>
+      <a href="#essay">📝 Essay</a>
+      <a href="#gs1">📚 GS-I</a>
+      <a href="#gs2">🏛️ GS-II</a>
+      <a href="#gs3">💰 GS-III</a>
+      <a href="#gs4">⚖️ GS-IV</a>
+      <a href="#optional">🎓 Optional</a>
+      <a href="#important">⚠️ Important</a>
+
+    </section>
+
+    <section class="intro" id="mains">
+
       <h2>UPSC Civil Services Main Examination</h2>
 
       <p>
@@ -266,15 +477,18 @@
         to assess a candidate's intellectual abilities, understanding,
         analytical skills and ability to express ideas clearly.
       </p>
+
     </section>
 
-    <!-- EXAM STRUCTURE -->
     <div class="paper">
+
       <h2>📋 Mains Examination Structure</h2>
       <p>Written Examination • Descriptive Papers</p>
+
     </div>
 
     <section class="info">
+
       <h3>📌 Mains Papers</h3>
 
       <ul>
@@ -288,16 +502,20 @@
         <li>Paper VI – Optional Subject Paper I</li>
         <li>Paper VII – Optional Subject Paper II</li>
       </ul>
+
     </section>
 
-
     <!-- QUALIFYING -->
-    <div class="paper">
+
+    <div class="paper" id="qualifying">
+
       <h2>🗣️ QUALIFYING PAPERS</h2>
       <p>Paper A and Paper B</p>
+
     </div>
 
     <article class="topic">
+
       <h3>1. 🇮🇳 Paper A – Indian Language</h3>
 
       <p>
@@ -314,9 +532,11 @@
         <li>Translation from English to the Indian language</li>
         <li>Translation from the Indian language to English</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>2. 🇬🇧 Paper B – English</h3>
 
       <p>
@@ -329,16 +549,20 @@
         <li>Usage and Vocabulary</li>
         <li>Short Essay</li>
       </ul>
+
     </article>
 
-
     <!-- ESSAY -->
-    <div class="paper">
+
+    <div class="paper" id="essay">
+
       <h2>📝 PAPER I – ESSAY</h2>
       <p>Essay Paper</p>
+
     </div>
 
     <article class="topic">
+
       <h3>Essay</h3>
 
       <p>
@@ -357,16 +581,20 @@
         <li>International Relations</li>
         <li>Current Affairs</li>
       </ul>
+
     </article>
 
-
     <!-- GS 1 -->
-    <div class="paper">
+
+    <div class="paper" id="gs1">
+
       <h2>📚 PAPER II – GENERAL STUDIES I</h2>
       <p>Indian Heritage, Culture, History, Geography and Society</p>
+
     </div>
 
     <article class="topic">
+
       <h3>1. Indian Heritage & Culture</h3>
 
       <ul>
@@ -375,9 +603,11 @@
         <li>Architecture</li>
         <li>Culture and Traditions</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>2. Modern Indian History</h3>
 
       <ul>
@@ -386,9 +616,11 @@
         <li>Important personalities</li>
         <li>Post-independence consolidation</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>3. World History</h3>
 
       <ul>
@@ -398,9 +630,11 @@
         <li>Colonization and Decolonization</li>
         <li>Political philosophies</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>4. Indian Society</h3>
 
       <ul>
@@ -411,9 +645,11 @@
         <li>Urbanization</li>
         <li>Social Empowerment</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>5. Geography</h3>
 
       <ul>
@@ -424,16 +660,20 @@
         <li>Changes in water bodies and ice-caps</li>
         <li>Important geographical features</li>
       </ul>
+
     </article>
 
-
     <!-- GS 2 -->
-    <div class="paper">
+
+    <div class="paper" id="gs2">
+
       <h2>🏛️ PAPER III – GENERAL STUDIES II</h2>
       <p>Governance, Constitution, Polity, Social Justice and International Relations</p>
+
     </div>
 
     <article class="topic">
+
       <h3>1. Indian Constitution & Polity</h3>
 
       <ul>
@@ -444,9 +684,11 @@
         <li>Executive and Judiciary</li>
         <li>Constitutional bodies</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>2. Governance</h3>
 
       <ul>
@@ -456,9 +698,11 @@
         <li>Citizen Charters</li>
         <li>Role of civil services</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>3. Social Justice</h3>
 
       <ul>
@@ -468,9 +712,11 @@
         <li>Poverty and hunger</li>
         <li>Vulnerable sections</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>4. International Relations</h3>
 
       <ul>
@@ -480,16 +726,20 @@
         <li>Global groupings</li>
         <li>International issues</li>
       </ul>
+
     </article>
 
-
     <!-- GS 3 -->
-    <div class="paper">
+
+    <div class="paper" id="gs3">
+
       <h2>💰 PAPER IV – GENERAL STUDIES III</h2>
       <p>Technology, Economy, Environment, Security and Disaster Management</p>
+
     </div>
 
     <article class="topic">
+
       <h3>1. Indian Economy</h3>
 
       <ul>
@@ -500,9 +750,11 @@
         <li>Food processing</li>
         <li>Infrastructure</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>2. Science & Technology</h3>
 
       <ul>
@@ -512,9 +764,11 @@
         <li>Information technology</li>
         <li>Robotics and AI</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>3. Environment & Biodiversity</h3>
 
       <ul>
@@ -524,9 +778,11 @@
         <li>Climate change</li>
         <li>Environmental impact assessment</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>4. Internal Security</h3>
 
       <ul>
@@ -537,16 +793,20 @@
         <li>Organized crime</li>
         <li>Disaster management</li>
       </ul>
+
     </article>
 
-
     <!-- GS 4 -->
-    <div class="paper">
+
+    <div class="paper" id="gs4">
+
       <h2>⚖️ PAPER V – GENERAL STUDIES IV</h2>
       <p>Ethics, Integrity and Aptitude</p>
+
     </div>
 
     <article class="topic">
+
       <h3>1. Ethics & Human Interface</h3>
 
       <ul>
@@ -556,9 +816,11 @@
         <li>Human values</li>
         <li>Role of family and society</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>2. Attitude</h3>
 
       <ul>
@@ -567,9 +829,11 @@
         <li>Moral and political attitudes</li>
         <li>Social influence and persuasion</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>3. Emotional Intelligence</h3>
 
       <ul>
@@ -577,9 +841,11 @@
         <li>Application in administration</li>
         <li>Understanding emotions</li>
       </ul>
+
     </article>
 
     <article class="topic">
+
       <h3>4. Integrity & Aptitude</h3>
 
       <ul>
@@ -590,16 +856,20 @@
         <li>Code of ethics</li>
         <li>Case studies</li>
       </ul>
+
     </article>
 
-
     <!-- OPTIONAL -->
-    <div class="paper">
+
+    <div class="paper" id="optional">
+
       <h2>🎓 PAPER VI & VII – OPTIONAL SUBJECT</h2>
       <p>Optional Subject Paper I and Paper II</p>
+
     </div>
 
     <article class="topic">
+
       <h3>Optional Subject</h3>
 
       <p>
@@ -612,11 +882,13 @@
         <li>Optional Paper II</li>
         <li>Each paper covers the prescribed optional syllabus</li>
       </ul>
+
     </article>
 
+    <!-- IMPORTANT -->
 
-    <!-- FINAL NOTE -->
-    <section class="important">
+    <section class="important" id="important">
+
       <h3>⚠️ Important Note</h3>
 
       <p>
@@ -625,11 +897,21 @@
         official UPSC examination notification for the syllabus and rules
         applicable to their examination year.
       </p>
+
     </section>
 
-    <a href="index.html" class="back-btn">
-      🏠 Back to UPSC Shiksha
-    </a>
+    <!-- BOTTOM NAV -->
+
+    <div class="bottom-nav">
+
+      <a href="index.html">🏠 Home</a>
+      <a href="prelims.html">📚 Prelims</a>
+      <a href="csat.html">🧠 CSAT</a>
+      <a href="pyq.html">📄 PYQs</a>
+      <a href="polity.html">⚖️ Polity</a>
+      <a href="economy.html">💰 Economy</a>
+
+    </div>
 
     <a href="#top" class="back-btn">
       ⬆️ Back to Top
@@ -638,10 +920,79 @@
   </main>
 
   <footer>
+
     <h3>🇮🇳 UPSC SHIKSHA</h3>
-    <p>Free UPSC Preparation • Study Smart • Achieve Your Goal</p>
-    <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
+
+    <p>
+      Free UPSC Preparation • Study Smart • Achieve Your Goal
+    </p>
+
+    <p>
+      © 2026 UPSC Shiksha. All Rights Reserved.
+    </p>
+
   </footer>
+
+  <script>
+
+    function searchTopics() {
+
+      const input =
+        document.getElementById("searchInput").value.toLowerCase();
+
+      const topics =
+        document.querySelectorAll(".topic");
+
+      topics.forEach(function(topic) {
+
+        const text =
+          topic.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          topic.style.display = "";
+        } else {
+          topic.style.display = "none";
+        }
+
+      });
+
+    }
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+
+        localStorage.setItem(
+          "mainsDarkMode",
+          "enabled"
+        );
+
+      } else {
+
+        localStorage.setItem(
+          "mainsDarkMode",
+          "disabled"
+        );
+
+      }
+
+    }
+
+    window.onload = function() {
+
+      if (
+        localStorage.getItem("mainsDarkMode") === "enabled"
+      ) {
+
+        document.body.classList.add("dark");
+
+      }
+
+    };
+
+  </script>
 
 </body>
 </html>
