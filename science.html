@@ -1,338 +1,998 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UPSC Shiksha | Science & Technology</title>
-  <meta name="description" content="Free UPSC Science and Technology study material for Civil Services Examination.">
+<title>Science & Technology | UPSC Shiksha</title>
 
-  <link rel="stylesheet" href="style.css">
+<meta name="description"
+content="Free UPSC Science and Technology study material covering Biology, Biotechnology, Space, AI, IT, Cyber Security, Nuclear Technology and Emerging Technologies.">
 
-  <style>
-    .subject-page {
-      max-width: 1000px;
-      margin: auto;
-      padding: 30px 18px;
-    }
+<style>
 
-    .subject-header {
-      text-align: center;
-      padding: 35px 20px;
-      border-radius: 18px;
-      margin-bottom: 25px;
-      background: linear-gradient(135deg, #e3f2fd, #ffffff);
-    }
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    .subject-header h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    .subject-header p {
-      line-height: 1.6;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.7;
+  transition:0.3s;
+}
 
-    .topic-card {
-      background: #fff;
-      padding: 22px;
-      margin-bottom: 18px;
-      border-radius: 15px;
-      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    }
+/* DARK MODE */
 
-    .topic-card h2 {
-      margin-top: 0;
-      font-size: 22px;
-    }
+body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
 
-    .topic-card ul {
-      padding-left: 22px;
-      line-height: 1.8;
-    }
+body.dark .intro,
+body.dark .quick-nav,
+body.dark .topic-card,
+body.dark .study-note{
+  background:#1e293b;
+  color:#e5e7eb;
+}
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      background: #333;
-      color: white;
-    }
+body.dark .nav-grid a{
+  background:#172554;
+  color:#bfdbfe;
+}
 
-    .study-note {
-      padding: 20px;
-      border-radius: 15px;
-      background: #f5f5f5;
-      line-height: 1.7;
-    }
+body.dark .search-box input{
+  background:#1e293b;
+  color:white;
+  border-color:#475569;
+}
 
-    @media (max-width: 600px) {
-      .subject-header h1 {
-        font-size: 27px;
-      }
+/* HEADER */
 
-      .topic-card h2 {
-        font-size: 20px;
-      }
+header{
+  background:#111827;
+  color:white;
+  padding:14px 18px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
 
-      .subject-page {
-        padding: 20px 12px;
-      }
-    }
-  </style>
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:bold;
+  white-space:nowrap;
+}
+
+.logo b{
+  color:#22c55e;
+}
+
+.header-buttons{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
+
+.back-btn,
+.dark-btn{
+  color:white;
+  border:0;
+  text-decoration:none;
+  background:#2563eb;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.dark-btn{
+  background:#374151;
+}
+
+/* HERO */
+
+.hero{
+  background:linear-gradient(135deg,#1e3a8a,#2563eb);
+  color:white;
+  text-align:center;
+  padding:55px 18px;
+}
+
+.hero .icon{
+  font-size:48px;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
+
+.hero h1 span{
+  color:#facc15;
+}
+
+.hero p{
+  max-width:760px;
+  margin:auto;
+  color:#dbeafe;
+  font-size:16px;
+}
+
+/* TAGS */
+
+.tags{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
+
+.tag{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
+
+.prelims{
+  background:#facc15;
+  color:#111827;
+}
+
+.mains{
+  background:#38bdf8;
+  color:#082f49;
+}
+
+/* CONTAINER */
+
+.subject-page{
+  max-width:1050px;
+  margin:auto;
+  padding:35px 16px;
+}
+
+/* SEARCH */
+
+.search-box{
+  margin-bottom:25px;
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  border:2px solid #d1d5db;
+  border-radius:10px;
+  font-size:16px;
+  outline:none;
+}
+
+.search-box input:focus{
+  border-color:#2563eb;
+}
+
+/* INTRO */
+
+.intro,
+.quick-nav,
+.topic-card,
+.study-note{
+  background:white;
+  border-radius:14px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
+
+.intro{
+  padding:22px;
+  margin-bottom:25px;
+}
+
+.intro h2{
+  color:#2563eb;
+  margin-bottom:8px;
+}
+
+.highlight{
+  background:#eff6ff;
+  border-left:4px solid #2563eb;
+  padding:13px 15px;
+  margin-top:15px;
+  border-radius:7px;
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+  padding:20px;
+  margin-bottom:30px;
+}
+
+.quick-nav h2{
+  margin-bottom:14px;
+}
+
+.nav-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.nav-grid a{
+  text-decoration:none;
+  background:#eff6ff;
+  color:#1d4ed8;
+  padding:10px;
+  border-radius:8px;
+  font-weight:bold;
+  text-align:center;
+  font-size:14px;
+}
+
+/* TOPICS */
+
+.topic-card{
+  padding:24px;
+  margin-bottom:22px;
+  scroll-margin-top:80px;
+}
+
+.topic-card h2{
+  color:#2563eb;
+  font-size:23px;
+  margin-bottom:14px;
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:9px;
+}
+
+.topic-card ul{
+  padding-left:22px;
+}
+
+.topic-card li{
+  margin-bottom:6px;
+}
+
+.study-note{
+  padding:22px;
+  margin-top:25px;
+}
+
+.study-note h2{
+  color:#2563eb;
+  margin-bottom:10px;
+}
+
+/* BOTTOM BUTTONS */
+
+.bottom-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:35px 0;
+}
+
+.btn{
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:9px;
+  font-weight:bold;
+  display:inline-block;
+}
+
+.btn-primary{
+  background:#2563eb;
+  color:white;
+}
+
+.btn-dark{
+  background:#111827;
+  color:white;
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:#2563eb;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+  z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:28px 16px;
+}
+
+.footer-logo{
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.footer-logo b{
+  color:#22c55e;
+}
+
+footer p{
+  font-size:14px;
+}
+
+/* MOBILE */
+
+@media(max-width:600px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .header-buttons{
+    gap:5px;
+  }
+
+  .back-btn,
+  .dark-btn{
+    font-size:11px;
+    padding:7px 9px;
+  }
+
+  .hero{
+    padding:40px 15px;
+  }
+
+  .hero .icon{
+    font-size:40px;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .subject-page{
+    padding:25px 12px;
+  }
+
+  .intro,
+  .quick-nav,
+  .topic-card,
+  .study-note{
+    padding:18px;
+  }
+
+  .topic-card h2{
+    font-size:20px;
+  }
+
+  .nav-grid{
+    grid-template-columns:1fr;
+  }
+
+  .topic-card li{
+    font-size:14px;
+  }
+
+  .bottom-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+
+</style>
 </head>
 
 <body>
 
-  <header class="header">
+<!-- HEADER -->
 
-    <div class="logo">
-      <span>🇮🇳</span>
-      UPSC <b>Shiksha</b>
-    </div>
+<header>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+<div class="header-inner">
 
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="prelims.html">Prelims</a>
-      <a href="csat.html">CSAT</a>
-      <a href="mains.html">Mains</a>
-    </nav>
+<div class="logo">
+🇮🇳 UPSC <b>Shiksha</b>
+</div>
 
-  </header>
+<div class="header-buttons">
 
-  <main class="subject-page">
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙 Dark
+</button>
 
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
+<a href="index.html" class="back-btn">
+← Home
+</a>
 
-    <section class="subject-header">
+</div>
 
-      <h1>🔬 Science & Technology</h1>
+</div>
 
-      <p>
-        Complete basic Science and Technology study material
-        for UPSC Civil Services Examination.
-      </p>
+</header>
 
-    </section>
 
-    <section class="topic-card">
+<!-- HERO -->
 
-      <h2>🧬 1. Biology & Biotechnology</h2>
+<section class="hero">
 
-      <ul>
-        <li>Cell and Cell Biology</li>
-        <li>DNA and RNA</li>
-        <li>Genetics</li>
-        <li>Genetic Engineering</li>
-        <li>Biotechnology</li>
-        <li>Stem Cells</li>
-        <li>Vaccines</li>
-      </ul>
+<div class="icon">🔬</div>
 
-    </section>
+<h1>
+<span>Science & Technology</span>
+</h1>
 
-    <section class="topic-card">
+<p>
+Complete Science and Technology study material
+for UPSC Civil Services Examination.
+</p>
 
-      <h2>🦠 2. Diseases & Health Technology</h2>
+<div class="tags">
 
-      <ul>
-        <li>Communicable Diseases</li>
-        <li>Non-Communicable Diseases</li>
-        <li>Viruses and Bacteria</li>
-        <li>Antibiotics</li>
-        <li>Vaccination</li>
-        <li>Diagnostic Technologies</li>
-      </ul>
+<span class="tag prelims">
+PRELIMS
+</span>
 
-    </section>
+<span class="tag mains">
+MAINS
+</span>
 
-    <section class="topic-card">
+</div>
 
-      <h2>🚀 3. Space Technology</h2>
+</section>
 
-      <ul>
-        <li>Satellites</li>
-        <li>Launch Vehicles</li>
-        <li>Space Missions</li>
-        <li>Remote Sensing</li>
-        <li>Navigation Technology</li>
-        <li>Human Spaceflight</li>
-        <li>Space Exploration</li>
-      </ul>
 
-    </section>
+<main class="subject-page">
 
-    <section class="topic-card">
 
-      <h2>🤖 4. Artificial Intelligence</h2>
+<!-- SEARCH -->
 
-      <ul>
-        <li>Artificial Intelligence</li>
-        <li>Machine Learning</li>
-        <li>Deep Learning</li>
-        <li>Generative AI</li>
-        <li>AI Applications</li>
-        <li>AI Ethics and Governance</li>
-      </ul>
+<div class="search-box">
 
-    </section>
+<input
+type="text"
+id="searchInput"
+placeholder="🔎 Search Science & Technology topic..."
+onkeyup="searchTopics()"
+>
 
-    <section class="topic-card">
+</div>
 
-      <h2>💻 5. Information Technology</h2>
 
-      <ul>
-        <li>Internet Technology</li>
-        <li>Cloud Computing</li>
-        <li>Big Data</li>
-        <li>Internet of Things</li>
-        <li>Digital Technology</li>
-        <li>Cyber Technology</li>
-      </ul>
+<!-- INTRO -->
 
-    </section>
+<section class="intro">
 
-    <section class="topic-card">
+<h2>📚 Science & Technology for UPSC</h2>
 
-      <h2>🔐 6. Cyber Security</h2>
+<p>
+Science & Technology is an important part of UPSC
+preparation. Focus on basic concepts, applications,
+Indian initiatives and current developments.
+</p>
 
-      <ul>
-        <li>Cyber Attacks</li>
-        <li>Cyber Crime</li>
-        <li>Data Security</li>
-        <li>Encryption</li>
-        <li>Digital Identity</li>
-        <li>Cyber Security Institutions</li>
-      </ul>
+<div class="highlight">
 
-    </section>
+<strong>🎯 Preparation Tip:</strong>
 
-    <section class="topic-card">
+Connect scientific concepts with current affairs,
+government programmes and real-world applications.
 
-      <h2>⚛️ 7. Nuclear Technology</h2>
+</div>
 
-      <ul>
-        <li>Nuclear Energy</li>
-        <li>Nuclear Fission</li>
-        <li>Nuclear Fusion</li>
-        <li>Nuclear Reactors</li>
-        <li>Radioactivity</li>
-        <li>Nuclear Safety</li>
-      </ul>
+</section>
 
-    </section>
 
-    <section class="topic-card">
+<!-- QUICK NAV -->
 
-      <h2>🛰️ 8. Communication Technology</h2>
+<section class="quick-nav">
 
-      <ul>
-        <li>Telecommunication</li>
-        <li>5G Technology</li>
-        <li>6G Technology</li>
-        <li>Optical Fibre</li>
-        <li>Satellite Communication</li>
-        <li>Digital Communication</li>
-      </ul>
+<h2>🧭 Science & Technology Topics</h2>
 
-    </section>
+<div class="nav-grid">
 
-    <section class="topic-card">
+<a href="#biology">🧬 Biology</a>
 
-      <h2>🔋 9. Emerging Technologies</h2>
+<a href="#diseases">🦠 Diseases</a>
 
-      <ul>
-        <li>Quantum Technology</li>
-        <li>Nanotechnology</li>
-        <li>Robotics</li>
-        <li>3D Printing</li>
-        <li>Advanced Materials</li>
-        <li>Semiconductor Technology</li>
-      </ul>
+<a href="#space">🚀 Space</a>
 
-    </section>
+<a href="#ai">🤖 Artificial Intelligence</a>
 
-    <section class="topic-card">
+<a href="#it">💻 Information Technology</a>
 
-      <h2>🌱 10. Green Technology</h2>
+<a href="#cyber">🔐 Cyber Security</a>
 
-      <ul>
-        <li>Clean Energy</li>
-        <li>Electric Vehicles</li>
-        <li>Green Hydrogen</li>
-        <li>Energy Storage</li>
-        <li>Carbon Capture</li>
-        <li>Sustainable Technology</li>
-      </ul>
+<a href="#nuclear">⚛️ Nuclear Technology</a>
 
-    </section>
+<a href="#communication">🛰️ Communication</a>
 
-    <section class="topic-card">
+<a href="#emerging">🔋 Emerging Technologies</a>
 
-      <h2>🔬 11. Scientific Research</h2>
+<a href="#green">🌱 Green Technology</a>
 
-      <ul>
-        <li>Scientific Institutions in India</li>
-        <li>Research & Development</li>
-        <li>Innovation</li>
-        <li>Scientific Discoveries</li>
-        <li>Technology Transfer</li>
-      </ul>
+<a href="#research">🔬 Scientific Research</a>
 
-    </section>
+<a href="#india-science">🇮🇳 Science in India</a>
 
-    <section class="topic-card">
+</div>
 
-      <h2>🇮🇳 12. Science & Technology in India</h2>
+</section>
 
-      <ul>
-        <li>Government Science Programs</li>
-        <li>National Research Institutions</li>
-        <li>Space Programme</li>
-        <li>Defence Technology</li>
-        <li>Digital India</li>
-        <li>Science & Innovation Policies</li>
-      </ul>
 
-    </section>
+<!-- 1 -->
 
-    <section class="study-note">
+<section class="topic-card" id="biology">
 
-      <h2>🎯 UPSC Preparation Tip</h2>
+<h2>🧬 1. Biology & Biotechnology</h2>
 
-      <p>
-        Science & Technology preparation should focus on
-        basic concepts, important applications, Indian
-        government initiatives and current developments.
-      </p>
+<ul>
 
-    </section>
+<li>Cell and Cell Biology</li>
+<li>DNA and RNA</li>
+<li>Genetics</li>
+<li>Genetic Engineering</li>
+<li>Biotechnology</li>
+<li>Stem Cells</li>
+<li>Vaccines</li>
 
-  </main>
+</ul>
 
-  <footer>
+</section>
 
-    <div class="footer-logo">
-      🇮🇳 UPSC <b>Shiksha</b>
-    </div>
 
-    <p>
-      Your Complete UPSC Preparation Platform
-    </p>
+<!-- 2 -->
 
-    <p class="copyright">
-      © 2026 UPSC Shiksha. All Rights Reserved.
-    </p>
+<section class="topic-card" id="diseases">
 
-  </footer>
+<h2>🦠 2. Diseases & Health Technology</h2>
 
-  <script src="script.js"></script>
+<ul>
+
+<li>Communicable Diseases</li>
+<li>Non-Communicable Diseases</li>
+<li>Viruses and Bacteria</li>
+<li>Antibiotics</li>
+<li>Vaccination</li>
+<li>Diagnostic Technologies</li>
+
+</ul>
+
+</section>
+
+
+<!-- 3 -->
+
+<section class="topic-card" id="space">
+
+<h2>🚀 3. Space Technology</h2>
+
+<ul>
+
+<li>Satellites</li>
+<li>Launch Vehicles</li>
+<li>Space Missions</li>
+<li>Remote Sensing</li>
+<li>Navigation Technology</li>
+<li>Human Spaceflight</li>
+<li>Space Exploration</li>
+
+</ul>
+
+</section>
+
+
+<!-- 4 -->
+
+<section class="topic-card" id="ai">
+
+<h2>🤖 4. Artificial Intelligence</h2>
+
+<ul>
+
+<li>Artificial Intelligence</li>
+<li>Machine Learning</li>
+<li>Deep Learning</li>
+<li>Generative AI</li>
+<li>AI Applications</li>
+<li>AI Ethics and Governance</li>
+
+</ul>
+
+</section>
+
+
+<!-- 5 -->
+
+<section class="topic-card" id="it">
+
+<h2>💻 5. Information Technology</h2>
+
+<ul>
+
+<li>Internet Technology</li>
+<li>Cloud Computing</li>
+<li>Big Data</li>
+<li>Internet of Things</li>
+<li>Digital Technology</li>
+<li>Cyber Technology</li>
+
+</ul>
+
+</section>
+
+
+<!-- 6 -->
+
+<section class="topic-card" id="cyber">
+
+<h2>🔐 6. Cyber Security</h2>
+
+<ul>
+
+<li>Cyber Attacks</li>
+<li>Cyber Crime</li>
+<li>Data Security</li>
+<li>Encryption</li>
+<li>Digital Identity</li>
+<li>Cyber Security Institutions</li>
+
+</ul>
+
+</section>
+
+
+<!-- 7 -->
+
+<section class="topic-card" id="nuclear">
+
+<h2>⚛️ 7. Nuclear Technology</h2>
+
+<ul>
+
+<li>Nuclear Energy</li>
+<li>Nuclear Fission</li>
+<li>Nuclear Fusion</li>
+<li>Nuclear Reactors</li>
+<li>Radioactivity</li>
+<li>Nuclear Safety</li>
+
+</ul>
+
+</section>
+
+
+<!-- 8 -->
+
+<section class="topic-card" id="communication">
+
+<h2>🛰️ 8. Communication Technology</h2>
+
+<ul>
+
+<li>Telecommunication</li>
+<li>5G Technology</li>
+<li>6G Technology</li>
+<li>Optical Fibre</li>
+<li>Satellite Communication</li>
+<li>Digital Communication</li>
+
+</ul>
+
+</section>
+
+
+<!-- 9 -->
+
+<section class="topic-card" id="emerging">
+
+<h2>🔋 9. Emerging Technologies</h2>
+
+<ul>
+
+<li>Quantum Technology</li>
+<li>Nanotechnology</li>
+<li>Robotics</li>
+<li>3D Printing</li>
+<li>Advanced Materials</li>
+<li>Semiconductor Technology</li>
+
+</ul>
+
+</section>
+
+
+<!-- 10 -->
+
+<section class="topic-card" id="green">
+
+<h2>🌱 10. Green Technology</h2>
+
+<ul>
+
+<li>Clean Energy</li>
+<li>Electric Vehicles</li>
+<li>Green Hydrogen</li>
+<li>Energy Storage</li>
+<li>Carbon Capture</li>
+<li>Sustainable Technology</li>
+
+</ul>
+
+</section>
+
+
+<!-- 11 -->
+
+<section class="topic-card" id="research">
+
+<h2>🔬 11. Scientific Research</h2>
+
+<ul>
+
+<li>Scientific Institutions in India</li>
+<li>Research & Development</li>
+<li>Innovation</li>
+<li>Scientific Discoveries</li>
+<li>Technology Transfer</li>
+
+</ul>
+
+</section>
+
+
+<!-- 12 -->
+
+<section class="topic-card" id="india-science">
+
+<h2>🇮🇳 12. Science & Technology in India</h2>
+
+<ul>
+
+<li>Government Science Programs</li>
+<li>National Research Institutions</li>
+<li>Space Programme</li>
+<li>Defence Technology</li>
+<li>Digital India</li>
+<li>Science & Innovation Policies</li>
+
+</ul>
+
+</section>
+
+
+<!-- PREPARATION -->
+
+<section class="study-note">
+
+<h2>🎯 UPSC Preparation Strategy</h2>
+
+<p>
+Science & Technology preparation should focus on
+basic concepts, important applications, Indian
+government initiatives and current developments.
+</p>
+
+<div class="highlight">
+
+<strong>📚 Best Approach:</strong>
+
+Basic Concepts + Current Affairs + Government
+Initiatives + Applications + PYQs + Revision.
+
+</div>
+
+</section>
+
+
+<!-- BUTTONS -->
+
+<div class="bottom-buttons">
+
+<a href="index.html" class="btn btn-primary">
+🏠 Home
+</a>
+
+<a href="prelims.html" class="btn btn-dark">
+📚 Prelims
+</a>
+
+<a href="mains.html" class="btn btn-dark">
+✍️ Mains
+</a>
+
+<a href="pyq.html" class="btn btn-dark">
+📝 PYQs
+</a>
+
+<a href="polity.html" class="btn btn-dark">
+🏛️ Polity
+</a>
+
+<a href="geography.html" class="btn btn-dark">
+🌍 Geography
+</a>
+
+</div>
+
+</main>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn" onclick="goTop()">
+↑
+</button>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="footer-logo">
+🇮🇳 UPSC <b>Shiksha</b>
+</div>
+
+<p>
+Free UPSC Preparation Platform
+</p>
+
+<p>
+© 2026 UPSC Shiksha. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* DARK MODE */
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem(
+"scienceDarkMode",
+"on"
+);
+
+}else{
+
+localStorage.setItem(
+"scienceDarkMode",
+"off"
+);
+
+}
+
+}
+
+
+/* LOAD DARK MODE */
+
+if(
+localStorage.getItem("scienceDarkMode")
+==="on"
+){
+
+document.body.classList.add("dark");
+
+}
+
+
+/* SEARCH */
+
+function searchTopics(){
+
+let input =
+document
+.getElementById("searchInput")
+.value
+.toLowerCase()
+.trim();
+
+let topics =
+document.querySelectorAll(".topic-card");
+
+topics.forEach(function(topic){
+
+let text =
+topic.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+topic.style.display="";
+
+}else{
+
+topic.style.display="none";
+
+}
+
+});
+
+}
+
+
+/* BACK TO TOP */
+
+window.onscroll=function(){
+
+let button =
+document.getElementById("topBtn");
+
+if(
+document.documentElement.scrollTop > 300
+){
+
+button.style.display="block";
+
+}else{
+
+button.style.display="none";
+
+}
+
+};
+
+
+function goTop(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
 
 </body>
 </html>
