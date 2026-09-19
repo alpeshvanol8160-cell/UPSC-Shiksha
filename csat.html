@@ -7,425 +7,670 @@
   <title>UPSC CSAT Syllabus | UPSC Shiksha</title>
   <meta name="description" content="Complete UPSC CSAT Paper-II syllabus with comprehension, reasoning, numeracy, data interpretation and problem solving.">
 
+  <link rel="stylesheet" href="style.css">
+
   <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #202124;
-      line-height: 1.7;
-    }
-
-    header {
-      background: linear-gradient(135deg, #14213d, #1d4e89);
-      color: white;
-      text-align: center;
-      padding: 35px 18px;
-    }
-
-    header h1 {
-      font-size: 32px;
-      margin-bottom: 8px;
-    }
-
-    header p {
-      font-size: 15px;
-    }
-
-    nav {
-      background: white;
-      padding: 12px;
-      text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-
-    nav a {
-      display: inline-block;
-      color: #1d4e89;
-      text-decoration: none;
-      font-weight: bold;
-      margin: 5px 8px;
-      font-size: 14px;
-    }
-
-    .container {
-      width: 92%;
+    .csat-page {
       max-width: 1000px;
-      margin: 25px auto;
+      margin: auto;
+      padding: 25px 15px 40px;
     }
 
-    .intro,
-    .topic,
-    .info-card {
-      background: white;
-      border-radius: 14px;
-      padding: 20px;
-      margin: 15px 0;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.07);
+    .csat-header {
+      text-align: center;
+      padding: 38px 20px;
+      border-radius: 20px;
+      margin-bottom: 22px;
+      background: linear-gradient(135deg, #e3f2fd, #ffffff);
     }
 
-    .intro h2 {
-      color: #14213d;
+    .csat-header h1 {
+      font-size: 32px;
       margin-bottom: 10px;
+    }
+
+    .csat-header p {
+      line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      background: #333;
+      color: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 10px 17px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: #333;
+      color: white;
+    }
+
+    .dark-toggle {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    .search-box {
+      margin: 20px 0;
+    }
+
+    .search-box input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .quick-nav {
+      background: #f5f5f5;
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .quick-nav h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-links a {
+      text-decoration: none;
+      padding: 8px 11px;
+      border-radius: 8px;
+      background: white;
+      color: #222;
+      border: 1px solid #ddd;
+      font-size: 14px;
     }
 
     .paper {
       background: linear-gradient(135deg, #14213d, #1d4e89);
       color: white;
-      padding: 20px;
-      border-radius: 14px;
-      margin: 25px 0 15px;
+      padding: 22px;
+      border-radius: 15px;
+      margin-bottom: 18px;
     }
 
     .paper h2 {
-      font-size: 21px;
+      margin: 0 0 5px;
+      font-size: 22px;
     }
 
     .paper p {
+      margin: 0;
       font-size: 14px;
-      margin-top: 5px;
     }
 
     .topic {
+      background: #fff;
+      padding: 22px;
+      margin-bottom: 18px;
+      border-radius: 15px;
       border-left: 5px solid #2878c8;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.08);
     }
 
     .topic h3 {
       color: #14213d;
-      font-size: 18px;
+      font-size: 20px;
+      margin-top: 0;
       margin-bottom: 8px;
     }
 
     .topic p {
       color: #444;
-      font-size: 15px;
+      line-height: 1.7;
     }
 
     .topic ul {
       padding-left: 22px;
+      line-height: 1.8;
       margin-top: 10px;
     }
 
     .topic li {
-      margin: 5px 0;
+      margin-bottom: 3px;
     }
 
     .info-card {
       background: #eaf4ff;
       border-left: 5px solid #2878c8;
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 18px;
+      line-height: 1.7;
     }
 
     .info-card h3 {
+      margin-top: 0;
       color: #14548a;
-      margin-bottom: 8px;
     }
 
-    .back-btn {
-      display: block;
-      width: fit-content;
-      margin: 25px auto;
-      background: #1d4e89;
-      color: white;
+    .bottom-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .bottom-nav a {
+      padding: 11px 15px;
+      border-radius: 10px;
       text-decoration: none;
-      padding: 11px 20px;
-      border-radius: 25px;
-      font-weight: bold;
-    }
-
-    footer {
-      background: #14213d;
+      background: #333;
       color: white;
-      text-align: center;
-      padding: 25px 15px;
-      margin-top: 35px;
+      font-size: 14px;
     }
 
-    footer h3 {
-      margin-bottom: 5px;
+    #topBtn {
+      display: none;
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 50%;
+      background: #222;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 999;
     }
 
-    footer p {
-      font-size: 13px;
-      opacity: 0.85;
+    .dark-mode {
+      background: #121212 !important;
+      color: #eee !important;
+    }
+
+    .dark-mode .csat-header {
+      background: linear-gradient(135deg, #292929, #171717);
+    }
+
+    .dark-mode .topic {
+      background: #1e1e1e;
+      color: #eee;
+    }
+
+    .dark-mode .topic h3 {
+      color: #fff;
+    }
+
+    .dark-mode .topic p {
+      color: #ddd;
+    }
+
+    .dark-mode .quick-nav {
+      background: #202020;
+    }
+
+    .dark-mode .quick-links a {
+      background: #2b2b2b;
+      color: #eee;
+      border-color: #444;
+    }
+
+    .dark-mode .info-card {
+      background: #202020;
+      color: #eee;
+    }
+
+    .dark-mode .info-card h3 {
+      color: #fff;
+    }
+
+    .dark-mode .search-box input {
+      background: #222;
+      color: white;
+      border-color: #555;
     }
 
     @media (max-width: 600px) {
-      header {
-        padding: 28px 15px;
+
+      .csat-page {
+        padding: 20px 12px 35px;
       }
 
-      header h1 {
-        font-size: 25px;
+      .csat-header {
+        padding: 30px 15px;
       }
 
-      header p {
-        font-size: 13px;
+      .csat-header h1 {
+        font-size: 27px;
       }
 
-      nav {
-        padding: 9px 5px;
-      }
-
-      nav a {
-        font-size: 12px;
-        margin: 4px 5px;
-      }
-
-      .container {
-        width: 94%;
-      }
-
-      .intro,
-      .topic,
-      .info-card {
-        padding: 17px;
-      }
-
-      .paper {
-        padding: 17px;
-      }
-
-      .paper h2 {
-        font-size: 18px;
+      .topic {
+        padding: 18px;
       }
 
       .topic h3 {
-        font-size: 16px;
+        font-size: 18px;
       }
 
       .topic p,
       .topic li {
         font-size: 14px;
       }
+
+      .quick-links a {
+        font-size: 13px;
+      }
+
+      .paper h2 {
+        font-size: 19px;
+      }
     }
   </style>
 </head>
 
-<body id="top">
+<body>
 
-  <header>
-    <h1>🇮🇳 UPSC SHIKSHA</h1>
-    <p>Complete UPSC Preparation • Free Study Material</p>
+  <header class="header">
+
+    <div class="logo">
+      <span>🇮🇳</span>
+      UPSC <b>Shiksha</b>
+    </div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="prelims.html">Prelims</a>
+      <a href="csat.html">CSAT</a>
+      <a href="mains.html">Mains</a>
+    </nav>
+
   </header>
 
-  <nav>
-    <a href="index.html">🏠 Home</a>
-    <a href="prelims.html">📚 Prelims</a>
-    <a href="#syllabus">🧠 CSAT</a>
-  </nav>
+  <main class="csat-page">
 
-  <main class="container">
+    <a href="index.html" class="back-btn">
+      ← Back to Home
+    </a>
 
-    <section class="intro">
-      <h2>UPSC CSAT Syllabus</h2>
+    <section class="csat-header">
+
+      <h1>🧠 UPSC CSAT</h1>
+
       <p>
-        General Studies Paper-II, commonly known as CSAT, is the second
-        paper of the UPSC Civil Services Preliminary Examination.
+        Complete General Studies Paper-II syllabus
+        for UPSC Civil Services Preliminary Examination.
       </p>
+
+      <div class="tags">
+        <span class="tag">PRELIMS</span>
+        <span class="tag">CSAT</span>
+        <span class="tag">QUALIFYING PAPER</span>
+      </div>
+
     </section>
 
-    <section id="syllabus">
+    <button class="dark-toggle" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
 
-      <div class="paper">
-        <h2>🧠 GENERAL STUDIES PAPER – II (CSAT)</h2>
-        <p>Qualifying Paper • Objective Type</p>
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search CSAT topics..."
+        onkeyup="searchTopics()"
+      >
+
+    </div>
+
+    <section class="quick-nav">
+
+      <h2>📚 Quick Navigation</h2>
+
+      <div class="quick-links">
+
+        <a href="#comprehension">Comprehension</a>
+        <a href="#communication">Communication</a>
+        <a href="#reasoning">Reasoning</a>
+        <a href="#decision">Decision Making</a>
+        <a href="#mental">Mental Ability</a>
+        <a href="#numeracy">Numeracy</a>
+        <a href="#data">Data Interpretation</a>
+        <a href="#english">English Comprehension</a>
+
       </div>
 
-      <div class="info-card">
-        <h3>📌 Important</h3>
-        <p>
-          CSAT is a qualifying paper. Candidates must secure the minimum
-          qualifying marks prescribed by UPSC.
-        </p>
-      </div>
+    </section>
 
-      <!-- 1 -->
-      <article class="topic">
-        <h3>1. 📖 Comprehension</h3>
-        <p>
-          Questions based on passages to test the candidate's ability to
-          understand, interpret and analyse written information.
-        </p>
+    <section class="paper">
 
-        <ul>
-          <li>Reading comprehension</li>
-          <li>Main idea of a passage</li>
-          <li>Inference-based questions</li>
-          <li>Conclusion-based questions</li>
-          <li>Meaning and interpretation</li>
-        </ul>
-      </article>
+      <h2>🧠 GENERAL STUDIES PAPER – II (CSAT)</h2>
 
-      <!-- 2 -->
-      <article class="topic">
-        <h3>2. 🗣️ Interpersonal Skills & Communication Skills</h3>
-        <p>
-          Questions relating to interpersonal skills and communication
-          skills.
-        </p>
-
-        <ul>
-          <li>Communication ability</li>
-          <li>Understanding information</li>
-          <li>Interpersonal interaction</li>
-          <li>Effective communication</li>
-        </ul>
-      </article>
-
-      <!-- 3 -->
-      <article class="topic">
-        <h3>3. 🧩 Logical Reasoning & Analytical Ability</h3>
-        <p>
-          Questions designed to test logical thinking and analytical
-          ability.
-        </p>
-
-        <ul>
-          <li>Logical reasoning</li>
-          <li>Statements and conclusions</li>
-          <li>Statements and assumptions</li>
-          <li>Arguments</li>
-          <li>Relationships</li>
-          <li>Series and patterns</li>
-          <li>Coding and decoding</li>
-          <li>Analytical puzzles</li>
-        </ul>
-      </article>
-
-      <!-- 4 -->
-      <article class="topic">
-        <h3>4. 🎯 Decision Making & Problem Solving</h3>
-        <p>
-          Questions relating to decision-making and problem-solving
-          abilities.
-        </p>
-
-        <ul>
-          <li>Situation-based questions</li>
-          <li>Decision making</li>
-          <li>Problem solving</li>
-          <li>Practical reasoning</li>
-          <li>Choosing the most appropriate solution</li>
-        </ul>
-      </article>
-
-      <!-- 5 -->
-      <article class="topic">
-        <h3>5. 🧠 General Mental Ability</h3>
-        <p>
-          Questions testing general mental ability and basic reasoning
-          skills.
-        </p>
-
-        <ul>
-          <li>Basic reasoning</li>
-          <li>Number patterns</li>
-          <li>Logical sequences</li>
-          <li>Analytical thinking</li>
-          <li>Problem-solving ability</li>
-        </ul>
-      </article>
-
-      <!-- 6 -->
-      <article class="topic">
-        <h3>6. 🔢 Basic Numeracy</h3>
-        <p>
-          Basic numeracy and data interpretation of Class X level.
-        </p>
-
-        <ul>
-          <li>Number system</li>
-          <li>Percentage</li>
-          <li>Ratio and proportion</li>
-          <li>Average</li>
-          <li>Profit and loss</li>
-          <li>Simple and compound interest</li>
-          <li>Time and work</li>
-          <li>Time, speed and distance</li>
-          <li>Mensuration</li>
-          <li>Basic algebra</li>
-          <li>Basic geometry</li>
-        </ul>
-      </article>
-
-      <!-- 7 -->
-      <article class="topic">
-        <h3>7. 📊 Data Interpretation</h3>
-        <p>
-          Data interpretation involving charts, graphs, tables and
-          numerical information at approximately Class X level.
-        </p>
-
-        <ul>
-          <li>Tables</li>
-          <li>Bar graphs</li>
-          <li>Line graphs</li>
-          <li>Pie charts</li>
-          <li>Data comparison</li>
-          <li>Percentage-based data</li>
-          <li>Ratio-based data</li>
-        </ul>
-      </article>
-
-      <!-- 8 -->
-      <article class="topic">
-        <h3>8. 🇬🇧 English Language Comprehension Skills</h3>
-        <p>
-          Questions relating to English Language Comprehension skills at
-          approximately Class X level.
-        </p>
-
-        <ul>
-          <li>Understanding English passages</li>
-          <li>Meaning of words in context</li>
-          <li>Understanding sentences</li>
-          <li>Comprehension-based questions</li>
-        </ul>
-      </article>
+      <p>Qualifying Paper • Objective Type</p>
 
     </section>
 
     <div class="info-card">
+
+      <h3>📌 Important</h3>
+
+      <p>
+        CSAT is a qualifying paper. Candidates must secure
+        the minimum qualifying marks prescribed by UPSC.
+      </p>
+
+    </div>
+
+    <article class="topic" id="comprehension">
+
+      <h3>1. 📖 Comprehension</h3>
+
+      <p>
+        Questions based on passages to test the candidate's ability
+        to understand, interpret and analyse written information.
+      </p>
+
+      <ul>
+        <li>Reading comprehension</li>
+        <li>Main idea of a passage</li>
+        <li>Inference-based questions</li>
+        <li>Conclusion-based questions</li>
+        <li>Meaning and interpretation</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="communication">
+
+      <h3>2. 🗣️ Interpersonal Skills & Communication Skills</h3>
+
+      <p>
+        Questions relating to interpersonal skills and communication
+        skills.
+      </p>
+
+      <ul>
+        <li>Communication ability</li>
+        <li>Understanding information</li>
+        <li>Interpersonal interaction</li>
+        <li>Effective communication</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="reasoning">
+
+      <h3>3. 🧩 Logical Reasoning & Analytical Ability</h3>
+
+      <p>
+        Questions designed to test logical thinking and analytical
+        ability.
+      </p>
+
+      <ul>
+        <li>Logical reasoning</li>
+        <li>Statements and conclusions</li>
+        <li>Statements and assumptions</li>
+        <li>Arguments</li>
+        <li>Relationships</li>
+        <li>Series and patterns</li>
+        <li>Coding and decoding</li>
+        <li>Analytical puzzles</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="decision">
+
+      <h3>4. 🎯 Decision Making & Problem Solving</h3>
+
+      <p>
+        Questions relating to decision-making and problem-solving
+        abilities.
+      </p>
+
+      <ul>
+        <li>Situation-based questions</li>
+        <li>Decision making</li>
+        <li>Problem solving</li>
+        <li>Practical reasoning</li>
+        <li>Choosing the most appropriate solution</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="mental">
+
+      <h3>5. 🧠 General Mental Ability</h3>
+
+      <p>
+        Questions testing general mental ability and basic reasoning
+        skills.
+      </p>
+
+      <ul>
+        <li>Basic reasoning</li>
+        <li>Number patterns</li>
+        <li>Logical sequences</li>
+        <li>Analytical thinking</li>
+        <li>Problem-solving ability</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="numeracy">
+
+      <h3>6. 🔢 Basic Numeracy</h3>
+
+      <p>
+        Basic numeracy and data interpretation of Class X level.
+      </p>
+
+      <ul>
+        <li>Number system</li>
+        <li>Percentage</li>
+        <li>Ratio and proportion</li>
+        <li>Average</li>
+        <li>Profit and loss</li>
+        <li>Simple and compound interest</li>
+        <li>Time and work</li>
+        <li>Time, speed and distance</li>
+        <li>Mensuration</li>
+        <li>Basic algebra</li>
+        <li>Basic geometry</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="data">
+
+      <h3>7. 📊 Data Interpretation</h3>
+
+      <p>
+        Data interpretation involving charts, graphs, tables and
+        numerical information at approximately Class X level.
+      </p>
+
+      <ul>
+        <li>Tables</li>
+        <li>Bar graphs</li>
+        <li>Line graphs</li>
+        <li>Pie charts</li>
+        <li>Data comparison</li>
+        <li>Percentage-based data</li>
+        <li>Ratio-based data</li>
+      </ul>
+
+    </article>
+
+    <article class="topic" id="english">
+
+      <h3>8. 🇬🇧 English Language Comprehension Skills</h3>
+
+      <p>
+        Questions relating to English Language Comprehension skills
+        at approximately Class X level.
+      </p>
+
+      <ul>
+        <li>Understanding English passages</li>
+        <li>Meaning of words in context</li>
+        <li>Understanding sentences</li>
+        <li>Comprehension-based questions</li>
+      </ul>
+
+    </article>
+
+    <div class="info-card">
+
       <h3>💡 Preparation Tip</h3>
+
       <p>
         Practice CSAT regularly. Focus on comprehension, reasoning,
-        mathematics and data interpretation. Solve previous year questions
-        to understand the actual level and pattern.
+        mathematics and data interpretation. Solve previous year
+        questions to understand the actual level and pattern.
       </p>
+
     </div>
 
     <div class="info-card">
+
       <h3>⚠️ Official Syllabus Note</h3>
+
       <p>
         This page is designed as a study-reference resource for UPSC
         aspirants. Always check the latest official UPSC examination
         notification for the syllabus applicable to your examination year.
       </p>
+
     </div>
 
-    <a href="index.html" class="back-btn">🏠 Back to UPSC Shiksha</a>
+    <div class="bottom-nav">
 
-    <a href="#top" class="back-btn">⬆️ Back to Top</a>
+      <a href="index.html">🏠 Home</a>
+      <a href="prelims.html">📝 Prelims</a>
+      <a href="mains.html">📖 Mains</a>
+      <a href="pyq.html">📚 PYQs</a>
+      <a href="polity.html">🏛️ Polity</a>
+      <a href="economy.html">💰 Economy</a>
+
+    </div>
 
   </main>
 
+  <button id="topBtn" onclick="goTop()">↑</button>
+
   <footer>
-    <h3>🇮🇳 UPSC SHIKSHA</h3>
-    <p>Free UPSC Preparation • Study Smart • Achieve Your Goal</p>
-    <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
+
+    <div class="footer-logo">
+      🇮🇳 UPSC <b>Shiksha</b>
+    </div>
+
+    <p>
+      Your Complete UPSC Preparation Platform
+    </p>
+
+    <p class="copyright">
+      © 2026 UPSC Shiksha. All Rights Reserved.
+    </p>
+
   </footer>
+
+  <script src="script.js"></script>
+
+  <script>
+
+    function searchTopics() {
+
+      const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+      const topics =
+        document.querySelectorAll(".topic");
+
+      topics.forEach(topic => {
+
+        const text =
+          topic.innerText.toLowerCase();
+
+        topic.style.display =
+          text.includes(input) ? "block" : "none";
+
+      });
+
+    }
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark-mode");
+
+      const isDark =
+        document.body.classList.contains("dark-mode");
+
+      localStorage.setItem(
+        "csatDarkMode",
+        isDark ? "on" : "off"
+      );
+
+    }
+
+    if (localStorage.getItem("csatDarkMode") === "on") {
+      document.body.classList.add("dark-mode");
+    }
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+
+    });
+
+    function goTop() {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
