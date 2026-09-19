@@ -1,3 +1,7 @@
+/* =========================================
+   UPSC SHIKSHA - GLOBAL STYLE
+========================================= */
+
 * {
   margin: 0;
   padding: 0;
@@ -15,8 +19,16 @@ body {
   line-height: 1.6;
 }
 
+button,
+input,
+textarea {
+  font-family: inherit;
+}
 
-/* HEADER */
+
+/* =========================================
+   HEADER
+========================================= */
 
 .header {
   position: sticky;
@@ -29,15 +41,16 @@ body {
 
   padding: 16px 7%;
 
-  background: rgba(255,255,255,0.95);
+  background: rgba(255, 255, 255, 0.96);
   backdrop-filter: blur(10px);
 
-  box-shadow: 0 2px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
 }
 
 .logo {
   font-size: 23px;
   font-weight: 800;
+  white-space: nowrap;
 }
 
 .logo b {
@@ -46,6 +59,7 @@ body {
 
 nav {
   display: flex;
+  align-items: center;
   gap: 24px;
 }
 
@@ -62,14 +76,19 @@ nav a:hover {
 
 .menu-btn {
   display: none;
+
   border: none;
   background: none;
+
   font-size: 27px;
+
   cursor: pointer;
 }
 
 
-/* HERO */
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
   min-height: 620px;
@@ -105,7 +124,7 @@ nav a:hover {
 
   font-weight: 700;
 
-  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
 }
 
 .hero h1 {
@@ -134,6 +153,11 @@ nav a:hover {
   gap: 15px;
   flex-wrap: wrap;
 }
+
+
+/* =========================================
+   BUTTONS
+========================================= */
 
 .btn {
   display: inline-block;
@@ -164,7 +188,9 @@ nav a:hover {
 }
 
 
-/* STATS */
+/* =========================================
+   STATS
+========================================= */
 
 .stats {
   max-width: 1100px;
@@ -174,10 +200,11 @@ nav a:hover {
   padding: 0 20px;
 
   display: grid;
-  grid-template-columns: repeat(4,1fr);
+  grid-template-columns: repeat(4, 1fr);
   gap: 18px;
 
   position: relative;
+  z-index: 2;
 }
 
 .stat-card {
@@ -189,7 +216,7 @@ nav a:hover {
 
   border-radius: 15px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .stat-card h2 {
@@ -198,7 +225,9 @@ nav a:hover {
 }
 
 
-/* SECTIONS */
+/* =========================================
+   SECTIONS
+========================================= */
 
 .section {
   max-width: 1150px;
@@ -229,12 +258,14 @@ nav a:hover {
 }
 
 
-/* FEATURES */
+/* =========================================
+   FEATURES
+========================================= */
 
 .feature-grid {
   display: grid;
 
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 20px;
 }
@@ -253,7 +284,8 @@ nav a:hover {
 
 .feature-card:hover {
   transform: translateY(-8px);
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .icon {
@@ -277,11 +309,12 @@ nav a:hover {
 }
 
 
-/* FREE MATERIAL */
+/* =========================================
+   FREE MATERIAL
+========================================= */
 
 .free-section {
   max-width: none;
-
   background: #fff;
 }
 
@@ -290,7 +323,7 @@ nav a:hover {
   margin: auto;
 
   display: grid;
-  grid-template-columns: repeat(3,1fr);
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 20px;
 }
@@ -336,7 +369,9 @@ nav a:hover {
 }
 
 
-/* TEST */
+/* =========================================
+   TEST
+========================================= */
 
 .tests-section {
   background: #f7f9fc;
@@ -351,13 +386,14 @@ nav a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
+
   gap: 20px;
 
   background: white;
 
   border-radius: 18px;
 
-  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
 }
 
 .test-icon {
@@ -380,15 +416,23 @@ nav a:hover {
   font-weight: 700;
 
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.test-btn:hover {
+  transform: translateY(-3px);
 }
 
 
-/* PREMIUM */
+/* =========================================
+   PREMIUM
+========================================= */
 
 .premium {
   max-width: none;
 
-  background: linear-gradient(135deg,#172033,#293750);
+  background: linear-gradient(135deg, #172033, #293750);
 
   color: white;
 
@@ -407,7 +451,7 @@ nav a:hover {
 
   border-radius: 20px;
 
-  background: rgba(255,255,255,0.12);
+  background: rgba(255, 255, 255, 0.12);
 }
 
 .premium h2 {
@@ -433,10 +477,18 @@ nav a:hover {
   font-weight: 700;
 
   cursor: pointer;
+
+  transition: 0.3s;
+}
+
+.premium-btn:hover {
+  transform: translateY(-3px);
 }
 
 
-/* CONTACT */
+/* =========================================
+   CONTACT
+========================================= */
 
 .contact {
   max-width: 700px;
@@ -458,6 +510,13 @@ nav a:hover {
   border-radius: 9px;
 
   font-size: 16px;
+
+  outline: none;
+}
+
+#contactForm input:focus,
+#contactForm textarea:focus {
+  border-color: #e85d04;
 }
 
 #contactForm textarea {
@@ -480,7 +539,9 @@ nav a:hover {
 }
 
 
-/* FOOTER */
+/* =========================================
+   FOOTER
+========================================= */
 
 footer {
   padding: 45px 20px;
@@ -509,7 +570,9 @@ footer p {
 
   display: flex;
   justify-content: center;
+
   gap: 20px;
+
   flex-wrap: wrap;
 }
 
@@ -518,12 +581,18 @@ footer p {
   text-decoration: none;
 }
 
+.footer-links a:hover {
+  color: #e85d04;
+}
+
 .copyright {
   font-size: 14px;
 }
 
 
-/* TOP BUTTON */
+/* =========================================
+   BACK TO TOP
+========================================= */
 
 #topBtn {
   position: fixed;
@@ -545,109 +614,18 @@ footer p {
   cursor: pointer;
 
   display: none;
+
+  z-index: 999;
+}
+
+#topBtn:hover {
+  transform: translateY(-3px);
 }
 
 
-/* ANIMATION */
-
-@keyframes heroIn {
-
-  from {
-    opacity: 0;
-    transform: translateY(30px);
-  }
-
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-}
-
-
-/* MOBILE */
-
-@media (max-width: 800px) {
-
-  .menu-btn {
-    display: block;
-  }
-
-  nav {
-    display: none;
-
-    position: absolute;
-
-    top: 65px;
-    left: 0;
-
-    width: 100%;
-
-    padding: 20px;
-
-    background: white;
-
-    flex-direction: column;
-
-    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-  }
-
-  nav.active {
-    display: flex;
-  }
-
-  .stats {
-    grid-template-columns: repeat(2,1fr);
-  }
-
-  .feature-grid,
-  .subject-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .test-box {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .section-title h2 {
-    font-size: 32px;
-  }
-
-}
-
-@media (max-width: 450px) {
-
-  .header {
-    padding: 14px 5%;
-  }
-
-  .hero {
-    min-height: 570px;
-    padding: 60px 20px;
-  }
-
-  .hero h1 {
-    font-size: 45px;
-  }
-
-  .hero p {
-    font-size: 16px;
-  }
-
-  .stats {
-    grid-template-columns: 1fr 1fr;
-    margin-bottom: 30px;
-  }
-
-  .stat-card {
-    padding: 18px 10px;
-  }
-
-}
-/* ================================
-   UPSC SYLLABUS - DAY 2
-================================ */
+/* =========================================
+   SYLLABUS
+========================================= */
 
 .syllabus-section {
   background: #f7f9fc;
@@ -655,11 +633,14 @@ footer p {
 
 .syllabus-tabs {
   max-width: 700px;
+
   margin: 0 auto 35px;
 
   display: flex;
   justify-content: center;
+
   gap: 12px;
+
   flex-wrap: wrap;
 }
 
@@ -691,11 +672,9 @@ footer p {
   border-color: #e85d04;
 }
 
-
-/* SYLLABUS CONTENT */
-
 .syllabus-content {
   max-width: 900px;
+
   margin: auto;
 
   display: none;
@@ -707,20 +686,18 @@ footer p {
   animation: syllabusIn 0.5s ease;
 }
 
-
-/* SYLLABUS CARD */
-
 .syllabus-card {
   background: white;
 
   margin-bottom: 20px;
+
   padding: 28px;
 
   border-radius: 18px;
 
   border: 1px solid #edf0f5;
 
-  box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
 
   transition: 0.3s;
 }
@@ -728,7 +705,7 @@ footer p {
 .syllabus-card:hover {
   transform: translateY(-5px);
 
-  box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
 }
 
 .syllabus-card h3 {
@@ -747,9 +724,6 @@ footer p {
   color: #4b5563;
 }
 
-
-/* IMPORTANT HIGHLIGHT */
-
 .syllabus-card li::marker {
   color: #e85d04;
 }
@@ -757,9 +731,6 @@ footer p {
 .syllabus-card li:hover {
   color: #e85d04;
 }
-
-
-/* PDF BUTTON */
 
 .pdf-btn {
   margin-top: 20px;
@@ -785,7 +756,23 @@ footer p {
 }
 
 
-/* ANIMATION */
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes heroIn {
+
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+
+}
 
 @keyframes syllabusIn {
 
@@ -802,16 +789,155 @@ footer p {
 }
 
 
-/* MOBILE */
+/* =========================================
+   TABLET
+========================================= */
 
-@media (max-width: 600px) {
+@media (max-width: 900px) {
+
+  .feature-grid,
+  .subject-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 800px) {
+
+  .header {
+    padding: 14px 5%;
+  }
+
+  .menu-btn {
+    display: block;
+  }
+
+  nav {
+    display: none;
+
+    position: absolute;
+
+    top: 100%;
+
+    left: 0;
+
+    width: 100%;
+
+    padding: 20px;
+
+    background: white;
+
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 16px;
+
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+
+  nav.active {
+    display: flex;
+  }
+
+  .hero {
+    min-height: 570px;
+
+    padding: 60px 20px;
+  }
+
+  .hero h1 {
+    font-size: 48px;
+  }
+
+  .hero p {
+    font-size: 16px;
+  }
+
+  .stats {
+    grid-template-columns: repeat(2, 1fr);
+
+    margin-bottom: 30px;
+  }
+
+  .feature-grid,
+  .subject-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .test-box {
+    flex-direction: column;
+
+    text-align: center;
+  }
+
+  .section {
+    padding: 60px 20px;
+  }
+
+  .section-title h2 {
+    font-size: 32px;
+  }
+
+  .premium h2 {
+    font-size: 32px;
+  }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 450px) {
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .hero-buttons .btn {
+    width: 100%;
+  }
+
+  .stats {
+    grid-template-columns: 1fr 1fr;
+
+    padding: 0 12px;
+  }
+
+  .stat-card {
+    padding: 18px 10px;
+  }
+
+  .stat-card h2 {
+    font-size: 25px;
+  }
 
   .syllabus-tabs {
     gap: 8px;
   }
 
   .syllabus-tab {
-    padding: 10px 16px;
+    padding: 10px 15px;
     font-size: 14px;
   }
 
@@ -821,6 +947,11 @@ footer p {
 
   .syllabus-card h3 {
     font-size: 19px;
+  }
+
+  #topBtn {
+    right: 15px;
+    bottom: 15px;
   }
 
 }
