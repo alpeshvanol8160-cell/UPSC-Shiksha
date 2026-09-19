@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -25,13 +25,14 @@
       background: #f5f7fb;
       color: #172033;
       line-height: 1.7;
+      transition: 0.3s;
     }
 
     /* HEADER */
     header {
       background: #111827;
       color: white;
-      padding: 15px 18px;
+      padding: 14px 16px;
       position: sticky;
       top: 0;
       z-index: 1000;
@@ -44,7 +45,7 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .logo {
@@ -57,14 +58,27 @@
       color: #f59e0b;
     }
 
-    .back-btn {
+    .header-actions {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+
+    .home-btn,
+    .dark-btn {
       color: white;
+      border: none;
       text-decoration: none;
       background: #2563eb;
-      padding: 8px 13px;
+      padding: 8px 12px;
       border-radius: 8px;
-      font-size: 14px;
+      font-size: 13px;
       font-weight: bold;
+      cursor: pointer;
+    }
+
+    .dark-btn {
+      background: #374151;
     }
 
     /* HERO */
@@ -72,12 +86,12 @@
       background: linear-gradient(135deg, #431407, #9a3412);
       color: white;
       text-align: center;
-      padding: 55px 18px;
+      padding: 52px 18px;
     }
 
     .hero .icon {
       font-size: 48px;
-      margin-bottom: 10px;
+      margin-bottom: 8px;
     }
 
     .hero h1 {
@@ -96,11 +110,35 @@
       font-size: 16px;
     }
 
-    /* CONTENT */
+    /* SEARCH */
+    .search-box {
+      max-width: 700px;
+      margin: -22px auto 28px;
+      position: relative;
+      z-index: 10;
+      padding: 0 15px;
+    }
+
+    .search-box input {
+      width: 100%;
+      padding: 15px 18px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 15px;
+      outline: none;
+      background: white;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.12);
+    }
+
+    .search-box input:focus {
+      border-color: #ea580c;
+    }
+
+    /* CONTAINER */
     .container {
       max-width: 1050px;
       margin: auto;
-      padding: 35px 16px;
+      padding: 5px 16px 35px;
     }
 
     .intro,
@@ -109,6 +147,7 @@
       background: white;
       border-radius: 14px;
       box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+      transition: 0.3s;
     }
 
     .intro {
@@ -119,6 +158,23 @@
     .intro h2 {
       color: #9a3412;
       margin-bottom: 8px;
+    }
+
+    /* TAGS */
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px;
+      margin-top: 14px;
+    }
+
+    .tag {
+      background: #fff7ed;
+      color: #c2410c;
+      padding: 5px 9px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: bold;
     }
 
     /* QUICK NAV */
@@ -141,18 +197,24 @@
       text-decoration: none;
       background: #fff7ed;
       color: #c2410c;
-      padding: 10px;
+      padding: 11px;
       border-radius: 8px;
       font-weight: bold;
       text-align: center;
       font-size: 14px;
+      transition: 0.2s;
+    }
+
+    .nav-grid a:hover {
+      transform: translateY(-2px);
+      background: #ffedd5;
     }
 
     /* TOPICS */
     .topic {
       padding: 24px;
       margin-bottom: 22px;
-      scroll-margin-top: 80px;
+      scroll-margin-top: 85px;
     }
 
     .topic h2 {
@@ -264,6 +326,24 @@
       color: white;
     }
 
+    /* BACK TO TOP */
+    #topBtn {
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: #ea580c;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+      display: none;
+      z-index: 999;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
     /* FOOTER */
     footer {
       background: #111827;
@@ -285,18 +365,85 @@
 
     footer p {
       font-size: 14px;
+      margin-bottom: 4px;
+    }
+
+    /* DARK MODE */
+    body.dark {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    body.dark .intro,
+    body.dark .quick-nav,
+    body.dark .topic {
+      background: #1e293b;
+      color: #e5e7eb;
+    }
+
+    body.dark .topic h3 {
+      color: #cbd5e1;
+    }
+
+    body.dark .topic h2,
+    body.dark .intro h2 {
+      color: #fb923c;
+    }
+
+    body.dark .topic h2 {
+      border-color: #475569;
+    }
+
+    body.dark .nav-grid a {
+      background: #3b2518;
+      color: #fdba74;
+    }
+
+    body.dark .highlight {
+      background: #3b2518;
+      color: #f3f4f6;
+    }
+
+    body.dark .study-box {
+      background: #12352b;
+    }
+
+    body.dark th {
+      background: #3b2518;
+      color: #fdba74;
+    }
+
+    body.dark td,
+    body.dark th {
+      border-color: #475569;
+    }
+
+    body.dark .search-box input {
+      background: #1e293b;
+      color: white;
+      border-color: #475569;
+    }
+
+    body.dark .tag {
+      background: #3b2518;
+      color: #fdba74;
     }
 
     /* MOBILE */
     @media (max-width: 600px) {
 
+      .header-inner {
+        gap: 5px;
+      }
+
       .logo {
         font-size: 17px;
       }
 
-      .back-btn {
-        font-size: 12px;
-        padding: 7px 10px;
+      .home-btn,
+      .dark-btn {
+        font-size: 11px;
+        padding: 7px 9px;
       }
 
       .hero {
@@ -316,7 +463,7 @@
       }
 
       .container {
-        padding: 25px 12px;
+        padding: 5px 12px 25px;
       }
 
       .intro,
@@ -337,7 +484,9 @@
         grid-template-columns: 1fr;
       }
 
-      .topic li {
+      .topic li,
+      .topic p,
+      .intro p {
         font-size: 14px;
       }
 
@@ -349,6 +498,11 @@
         width: 100%;
         text-align: center;
       }
+
+      #topBtn {
+        right: 14px;
+        bottom: 14px;
+      }
     }
   </style>
 </head>
@@ -357,19 +511,23 @@
 
   <!-- HEADER -->
   <header>
-
     <div class="header-inner">
 
       <div class="logo">
         🇮🇳 UPSC <b>Shiksha</b>
       </div>
 
-      <a href="index.html" class="back-btn">
-        ← Home
-      </a>
+      <div class="header-actions">
+        <button class="dark-btn" onclick="toggleDarkMode()">
+          🌙
+        </button>
+
+        <a href="index.html" class="home-btn">
+          ← Home
+        </a>
+      </div>
 
     </div>
-
   </header>
 
 
@@ -383,11 +541,21 @@
     </h1>
 
     <p>
-      Complete History study material for UPSC Civil
-      Services Examination.
+      Complete History study material for UPSC Civil Services Examination.
     </p>
 
   </section>
+
+
+  <!-- SEARCH -->
+  <div class="search-box">
+    <input
+      type="text"
+      id="historySearch"
+      placeholder="🔎 Search History topics..."
+      onkeyup="searchHistory()"
+    >
+  </div>
 
 
   <main class="container">
@@ -398,17 +566,25 @@
       <h2>📚 Indian History for UPSC</h2>
 
       <p>
-        Indian History is an important part of UPSC
-        preparation. Study Ancient India, Medieval India,
-        Modern India, Art & Culture and the Indian National
-        Movement with a clear chronological understanding.
+        Indian History is an important part of UPSC preparation.
+        Study Ancient India, Medieval India, Modern India, Art & Culture
+        and the Indian National Movement with a clear chronological understanding.
       </p>
+
+      <div class="tags">
+        <span class="tag">PRELIMS</span>
+        <span class="tag">MAINS</span>
+        <span class="tag">ANCIENT INDIA</span>
+        <span class="tag">MEDIEVAL INDIA</span>
+        <span class="tag">MODERN INDIA</span>
+        <span class="tag">ART & CULTURE</span>
+      </div>
 
       <div class="highlight">
         <strong>🎯 Preparation Tip:</strong>
         Focus on chronology, causes and consequences,
-        important personalities, movements, cultural
-        developments and previous year questions.
+        important personalities, movements, cultural developments
+        and previous year questions.
       </div>
 
     </section>
@@ -421,37 +597,25 @@
 
       <div class="nav-grid">
 
-        <a href="#ancient">
-          🏺 Ancient India
-        </a>
+        <a href="#ancient">🏺 Ancient India</a>
 
-        <a href="#medieval">
-          🏰 Medieval India
-        </a>
+        <a href="#religion">☸️ Buddhism & Jainism</a>
 
-        <a href="#modern">
-          🇬🇧 Modern India
-        </a>
+        <a href="#medieval">🏰 Medieval India</a>
 
-        <a href="#freedom">
-          🇮🇳 National Movement
-        </a>
+        <a href="#modern">🇬🇧 Modern India</a>
 
-        <a href="#culture">
-          🎨 Art & Culture
-        </a>
+        <a href="#revolt">🔥 Revolt of 1857</a>
 
-        <a href="#timeline">
-          ⏳ Important Timeline
-        </a>
+        <a href="#freedom">🇮🇳 National Movement</a>
 
-        <a href="#personalities">
-          👤 Important Personalities
-        </a>
+        <a href="#culture">🎨 Art & Culture</a>
 
-        <a href="#preparation">
-          🎯 Preparation Strategy
-        </a>
+        <a href="#timeline">⏳ Timeline</a>
+
+        <a href="#personalities">👤 Personalities</a>
+
+        <a href="#preparation">🎯 Preparation</a>
 
       </div>
 
@@ -459,14 +623,13 @@
 
 
     <!-- ANCIENT -->
-    <section class="topic" id="ancient">
+    <section class="topic searchable" id="ancient">
 
       <h2>🏺 1. Ancient India</h2>
 
       <p>
-        Ancient Indian history covers the development of
-        early human settlements, civilizations, kingdoms,
-        religions and cultural traditions.
+        Ancient Indian history covers the development of early human
+        settlements, civilizations, kingdoms, religions and cultural traditions.
       </p>
 
       <h3>Prehistoric India</h3>
@@ -522,7 +685,7 @@
 
 
     <!-- RELIGIONS -->
-    <section class="topic">
+    <section class="topic searchable" id="religion">
 
       <h2>☸️ 2. Buddhism & Jainism</h2>
 
@@ -551,7 +714,7 @@
 
 
     <!-- MEDIEVAL -->
-    <section class="topic" id="medieval">
+    <section class="topic searchable" id="medieval">
 
       <h2>🏰 3. Medieval India</h2>
 
@@ -604,14 +767,14 @@
 
 
     <!-- MODERN -->
-    <section class="topic" id="modern">
+    <section class="topic searchable" id="modern">
 
       <h2>🇬🇧 4. Modern India</h2>
 
       <p>
-        Modern Indian history mainly covers the expansion
-        of European influence, British rule, economic and
-        administrative changes and the growth of nationalism.
+        Modern Indian history mainly covers the expansion of European
+        influence, British rule, economic and administrative changes
+        and the growth of nationalism.
       </p>
 
       <h3>European Powers in India</h3>
@@ -661,7 +824,7 @@
 
 
     <!-- 1857 -->
-    <section class="topic">
+    <section class="topic searchable" id="revolt">
 
       <h2>🔥 5. Revolt of 1857</h2>
 
@@ -697,7 +860,7 @@
 
 
     <!-- NATIONAL MOVEMENT -->
-    <section class="topic" id="freedom">
+    <section class="topic searchable" id="freedom">
 
       <h2>🇮🇳 6. Indian National Movement</h2>
 
@@ -737,16 +900,15 @@
 
       <div class="study-box">
         <strong>UPSC Focus:</strong>
-        Always study every major movement through its
-        causes, programme, leaders, spread, participation
-        and consequences.
+        Study every major movement through its causes,
+        programme, leaders, spread, participation and consequences.
       </div>
 
     </section>
 
 
     <!-- ART & CULTURE -->
-    <section class="topic" id="culture">
+    <section class="topic searchable" id="culture">
 
       <h2>🎨 7. Art & Culture</h2>
 
@@ -796,77 +958,64 @@
 
 
     <!-- TIMELINE -->
-    <section class="topic" id="timeline">
+    <section class="topic searchable" id="timeline">
 
       <h2>⏳ 8. Important Historical Timeline</h2>
 
       <div class="timeline">
 
         <div class="timeline-item">
-          <strong>c. 2500–1900 BCE</strong>
-          <br>
+          <strong>c. 2500–1900 BCE</strong><br>
           Mature phase of the Indus Valley Civilization.
         </div>
 
         <div class="timeline-item">
-          <strong>c. 1500 BCE onwards</strong>
-          <br>
-          Vedic period begins, according to conventional
-          historical chronology.
+          <strong>c. 1500 BCE onwards</strong><br>
+          Vedic period begins, according to conventional historical chronology.
         </div>
 
         <div class="timeline-item">
-          <strong>6th century BCE</strong>
-          <br>
+          <strong>6th century BCE</strong><br>
           Rise of Buddhism and Jainism.
         </div>
 
         <div class="timeline-item">
-          <strong>c. 322 BCE</strong>
-          <br>
+          <strong>c. 322 BCE</strong><br>
           Rise of the Mauryan Empire.
         </div>
 
         <div class="timeline-item">
-          <strong>1206 CE</strong>
-          <br>
+          <strong>1206 CE</strong><br>
           Beginning of the Delhi Sultanate.
         </div>
 
         <div class="timeline-item">
-          <strong>1526 CE</strong>
-          <br>
-          First Battle of Panipat and establishment of
-          Mughal rule.
+          <strong>1526 CE</strong><br>
+          First Battle of Panipat and establishment of Mughal rule.
         </div>
 
         <div class="timeline-item">
-          <strong>1757 CE</strong>
-          <br>
+          <strong>1757 CE</strong><br>
           Battle of Plassey.
         </div>
 
         <div class="timeline-item">
-          <strong>1857 CE</strong>
-          <br>
+          <strong>1857 CE</strong><br>
           Revolt of 1857.
         </div>
 
         <div class="timeline-item">
-          <strong>1885 CE</strong>
-          <br>
+          <strong>1885 CE</strong><br>
           Formation of the Indian National Congress.
         </div>
 
         <div class="timeline-item">
-          <strong>1942 CE</strong>
-          <br>
+          <strong>1942 CE</strong><br>
           Quit India Movement.
         </div>
 
         <div class="timeline-item">
-          <strong>1947 CE</strong>
-          <br>
+          <strong>1947 CE</strong><br>
           India became independent.
         </div>
 
@@ -876,7 +1025,7 @@
 
 
     <!-- PERSONALITIES -->
-    <section class="topic" id="personalities">
+    <section class="topic searchable" id="personalities">
 
       <h2>👤 9. Important Personalities</h2>
 
@@ -947,7 +1096,7 @@
 
 
     <!-- PREPARATION -->
-    <section class="topic" id="preparation">
+    <section class="topic searchable" id="preparation">
 
       <h2>🎯 10. How to Prepare History</h2>
 
@@ -961,8 +1110,8 @@
       <h3>Step 2 — Connect Causes & Consequences</h3>
 
       <p>
-        Do not simply memorize events. Understand why an
-        event happened and what happened afterwards.
+        Do not simply memorize events. Understand why an event
+        happened and what happened afterwards.
       </p>
 
       <h3>Step 3 — Make Short Notes</h3>
@@ -975,8 +1124,8 @@
       <h3>Step 4 — Solve PYQs</h3>
 
       <p>
-        Practice previous year questions to understand
-        UPSC's question pattern and improve revision.
+        Practice previous year questions to understand UPSC's
+        question pattern and improve revision.
       </p>
 
       <div class="highlight">
@@ -1003,6 +1152,10 @@
         📚 Prelims Syllabus
       </a>
 
+      <a href="pyq.html" class="btn btn-dark">
+        📝 PYQs
+      </a>
+
       <a href="mains.html" class="btn btn-dark">
         ✍️ Mains Syllabus
       </a>
@@ -1012,6 +1165,10 @@
   </main>
 
 
+  <!-- BACK TO TOP -->
+  <button id="topBtn" onclick="goTop()">↑</button>
+
+
   <!-- FOOTER -->
   <footer>
 
@@ -1019,15 +1176,82 @@
       🇮🇳 UPSC <b>Shiksha</b>
     </div>
 
-    <p>
-      Free UPSC Preparation Platform
-    </p>
+    <p>Free UPSC Preparation Platform</p>
 
-    <p>
-      © 2026 UPSC Shiksha. All Rights Reserved.
-    </p>
+    <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
 
   </footer>
+
+
+  <script>
+
+    /* DARK MODE */
+    function toggleDarkMode() {
+      document.body.classList.toggle("dark");
+
+      if (document.body.classList.contains("dark")) {
+        localStorage.setItem("historyDarkMode", "on");
+      } else {
+        localStorage.setItem("historyDarkMode", "off");
+      }
+    }
+
+    if (localStorage.getItem("historyDarkMode") === "on") {
+      document.body.classList.add("dark");
+    }
+
+
+    /* SEARCH */
+    function searchHistory() {
+
+      const input =
+        document.getElementById("historySearch")
+        .value
+        .toLowerCase()
+        .trim();
+
+      const topics =
+        document.querySelectorAll(".searchable");
+
+      topics.forEach(function(topic) {
+
+        const text =
+          topic.innerText.toLowerCase();
+
+        if (text.includes(input)) {
+          topic.style.display = "";
+        } else {
+          topic.style.display = "none";
+        }
+
+      });
+
+    }
+
+
+    /* BACK TO TOP */
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 400) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+
+    });
+
+
+    function goTop() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+    }
+
+  </script>
 
 </body>
 </html>
