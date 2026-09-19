@@ -1,958 +1,1162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Geography | UPSC Shiksha</title>
+<title>Geography | UPSC Shiksha</title>
 
-  <meta name="description"
-        content="Complete Geography study material for UPSC - Physical Geography, Indian Geography, World Geography, Climate, Resources and Environment.">
+<meta name="description"
+content="Complete Geography study material for UPSC - Physical Geography, Indian Geography, World Geography, Climate, Resources and Environment.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.7;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.7;
+  transition:0.3s;
+}
 
-    /* HEADER */
-    header {
-      background: #111827;
-      color: white;
-      padding: 15px 18px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-    }
+/* DARK MODE */
+body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
 
-    .header-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
+body.dark .intro,
+body.dark .quick-nav,
+body.dark .topic{
+  background:#1e293b;
+  color:#e5e7eb;
+}
 
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
+body.dark .topic h3{
+  color:#cbd5e1;
+}
 
-    .logo b {
-      color: #22c55e;
-    }
+body.dark .nav-grid a{
+  background:#064e3b;
+  color:#d1fae5;
+}
 
-    .back-btn {
-      color: white;
-      text-decoration: none;
-      background: #2563eb;
-      padding: 8px 13px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+body.dark th{
+  background:#064e3b;
+  color:#d1fae5;
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #064e3b, #047857);
-      color: white;
-      text-align: center;
-      padding: 55px 18px;
-    }
+body.dark td,
+body.dark th{
+  border-color:#475569;
+}
 
-    .hero .icon {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+body.dark .study-box{
+  background:#064e3b;
+}
 
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+body.dark .highlight{
+  background:#422006;
+  border-color:#facc15;
+}
 
-    .hero h1 span {
-      color: #facc15;
-    }
+/* HEADER */
+header{
+  background:#111827;
+  color:white;
+  padding:14px 18px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,0.15);
+}
 
-    .hero p {
-      max-width: 760px;
-      margin: auto;
-      color: #d1fae5;
-      font-size: 16px;
-    }
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
 
-    /* CONTENT */
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 35px 16px;
-    }
+.logo{
+  font-size:21px;
+  font-weight:bold;
+  white-space:nowrap;
+}
 
-    .intro,
-    .quick-nav,
-    .topic {
-      background: white;
-      border-radius: 14px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
+.logo b{
+  color:#22c55e;
+}
 
-    .intro {
-      padding: 22px;
-      margin-bottom: 25px;
-    }
+.header-buttons{
+  display:flex;
+  gap:8px;
+  align-items:center;
+}
 
-    .intro h2 {
-      color: #047857;
-      margin-bottom: 8px;
-    }
+.back-btn,
+.dark-btn{
+  color:white;
+  border:0;
+  text-decoration:none;
+  background:#2563eb;
+  padding:8px 12px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    /* QUICK NAV */
-    .quick-nav {
-      padding: 20px;
-      margin-bottom: 30px;
-    }
+.dark-btn{
+  background:#374151;
+}
 
-    .quick-nav h2 {
-      margin-bottom: 14px;
-    }
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#064e3b,#047857);
+  color:white;
+  text-align:center;
+  padding:55px 18px;
+}
 
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
+.hero .icon{
+  font-size:48px;
+  margin-bottom:10px;
+}
 
-    .nav-grid a {
-      text-decoration: none;
-      background: #ecfdf5;
-      color: #047857;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-align: center;
-      font-size: 14px;
-    }
+.hero h1{
+  font-size:38px;
+  margin-bottom:10px;
+}
 
-    .nav-grid a:hover {
-      background: #d1fae5;
-    }
+.hero h1 span{
+  color:#facc15;
+}
 
-    /* TOPICS */
-    .topic {
-      padding: 24px;
-      margin-bottom: 22px;
-      scroll-margin-top: 80px;
-    }
+.hero p{
+  max-width:760px;
+  margin:auto;
+  color:#d1fae5;
+  font-size:16px;
+}
 
-    .topic h2 {
-      color: #047857;
-      font-size: 23px;
-      margin-bottom: 14px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 9px;
-    }
+/* TAGS */
+.tags{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+}
 
-    .topic h3 {
-      color: #374151;
-      margin-top: 18px;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
+.tag{
+  padding:6px 12px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+}
 
-    .topic ul {
-      padding-left: 22px;
-    }
+.prelims{
+  background:#facc15;
+  color:#111827;
+}
 
-    .topic li {
-      margin-bottom: 6px;
-    }
+.mains{
+  background:#38bdf8;
+  color:#082f49;
+}
 
-    .highlight {
-      background: #fefce8;
-      border-left: 4px solid #eab308;
-      padding: 13px 15px;
-      margin-top: 15px;
-      border-radius: 7px;
-    }
+/* CONTAINER */
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:35px 16px;
+}
 
-    .study-box {
-      background: #ecfdf5;
-      border-left: 4px solid #10b981;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
+.intro,
+.quick-nav,
+.topic{
+  background:white;
+  border-radius:14px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.06);
+}
 
-    .study-box strong {
-      color: #047857;
-    }
+/* SEARCH */
+.search-box{
+  margin-bottom:25px;
+}
 
-    /* TABLE */
-    .table-wrapper {
-      overflow-x: auto;
-      margin-top: 12px;
-    }
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  border:2px solid #d1d5db;
+  border-radius:10px;
+  font-size:16px;
+  outline:none;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 520px;
-    }
+.search-box input:focus{
+  border-color:#059669;
+}
 
-    th,
-    td {
-      border: 1px solid #d1d5db;
-      padding: 10px;
-      text-align: left;
-    }
+body.dark .search-box input{
+  background:#1e293b;
+  color:white;
+  border-color:#475569;
+}
 
-    th {
-      background: #ecfdf5;
-      color: #047857;
-    }
+/* INTRO */
+.intro{
+  padding:22px;
+  margin-bottom:25px;
+}
 
-    /* BOTTOM BUTTONS */
-    .bottom-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 35px 0;
-    }
+.intro h2{
+  color:#047857;
+  margin-bottom:8px;
+}
 
-    .btn {
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 9px;
-      font-weight: bold;
-      display: inline-block;
-    }
+/* QUICK NAV */
+.quick-nav{
+  padding:20px;
+  margin-bottom:30px;
+}
 
-    .btn-primary {
-      background: #059669;
-      color: white;
-    }
+.quick-nav h2{
+  margin-bottom:14px;
+}
 
-    .btn-dark {
-      background: #111827;
-      color: white;
-    }
+.nav-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 28px 16px;
-    }
+.nav-grid a{
+  text-decoration:none;
+  background:#ecfdf5;
+  color:#047857;
+  padding:10px;
+  border-radius:8px;
+  font-weight:bold;
+  text-align:center;
+  font-size:14px;
+}
 
-    footer .footer-logo {
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+/* TOPICS */
+.topic{
+  padding:24px;
+  margin-bottom:22px;
+  scroll-margin-top:80px;
+}
 
-    footer b {
-      color: #22c55e;
-    }
+.topic h2{
+  color:#047857;
+  font-size:23px;
+  margin-bottom:14px;
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:9px;
+}
 
-    footer p {
-      font-size: 14px;
-    }
+.topic h3{
+  color:#374151;
+  margin-top:18px;
+  margin-bottom:8px;
+  font-size:18px;
+}
 
-    /* MOBILE */
-    @media (max-width: 600px) {
+.topic ul{
+  padding-left:22px;
+}
 
-      .logo {
-        font-size: 17px;
-      }
+.topic li{
+  margin-bottom:6px;
+}
 
-      .back-btn {
-        font-size: 12px;
-        padding: 7px 10px;
-      }
+.highlight{
+  background:#fefce8;
+  border-left:4px solid #eab308;
+  padding:13px 15px;
+  margin-top:15px;
+  border-radius:7px;
+}
 
-      .hero {
-        padding: 40px 15px;
-      }
+.study-box{
+  background:#ecfdf5;
+  border-left:4px solid #10b981;
+  padding:15px;
+  border-radius:8px;
+  margin-top:15px;
+}
 
-      .hero .icon {
-        font-size: 40px;
-      }
+.study-box strong{
+  color:#047857;
+}
 
-      .hero h1 {
-        font-size: 29px;
-      }
+/* TABLE */
+.table-wrapper{
+  overflow-x:auto;
+  margin-top:12px;
+}
 
-      .hero p {
-        font-size: 14px;
-      }
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:520px;
+}
 
-      .container {
-        padding: 25px 12px;
-      }
+th,
+td{
+  border:1px solid #d1d5db;
+  padding:10px;
+  text-align:left;
+}
 
-      .intro,
-      .quick-nav,
-      .topic {
-        padding: 18px;
-      }
+th{
+  background:#ecfdf5;
+  color:#047857;
+}
 
-      .topic h2 {
-        font-size: 20px;
-      }
+/* BOTTOM BUTTONS */
+.bottom-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  justify-content:center;
+  margin:35px 0;
+}
 
-      .topic h3 {
-        font-size: 17px;
-      }
+.btn{
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:9px;
+  font-weight:bold;
+  display:inline-block;
+}
 
-      .nav-grid {
-        grid-template-columns: 1fr;
-      }
+.btn-primary{
+  background:#059669;
+  color:white;
+}
 
-      .topic li {
-        font-size: 14px;
-      }
+.btn-dark{
+  background:#111827;
+  color:white;
+}
 
-      .bottom-buttons {
-        flex-direction: column;
-      }
+/* BACK TO TOP */
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:#059669;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+  z-index:999;
+}
 
-      .btn {
-        width: 100%;
-        text-align: center;
-      }
-    }
-  </style>
+/* FOOTER */
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:28px 16px;
+}
+
+footer .footer-logo{
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+footer b{
+  color:#22c55e;
+}
+
+footer p{
+  font-size:14px;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .logo{
+    font-size:17px;
+  }
+
+  .header-buttons{
+    gap:5px;
+  }
+
+  .back-btn,
+  .dark-btn{
+    font-size:11px;
+    padding:7px 9px;
+  }
+
+  .hero{
+    padding:40px 15px;
+  }
+
+  .hero .icon{
+    font-size:40px;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .container{
+    padding:25px 12px;
+  }
+
+  .intro,
+  .quick-nav,
+  .topic{
+    padding:18px;
+  }
+
+  .topic h2{
+    font-size:20px;
+  }
+
+  .topic h3{
+    font-size:17px;
+  }
+
+  .nav-grid{
+    grid-template-columns:1fr;
+  }
+
+  .topic li{
+    font-size:14px;
+  }
+
+  .bottom-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
 
-    <div class="header-inner">
+    <div class="logo">
+      🇮🇳 UPSC <b>Shiksha</b>
+    </div>
 
-      <div class="logo">
-        🇮🇳 UPSC <b>Shiksha</b>
-      </div>
+    <div class="header-buttons">
+      <button class="dark-btn" onclick="toggleDarkMode()">
+        🌙 Dark
+      </button>
 
       <a href="index.html" class="back-btn">
         ← Home
       </a>
-
     </div>
 
-  </header>
+  </div>
+</header>
 
 
-  <!-- HERO -->
-  <section class="hero">
+<!-- HERO -->
+<section class="hero">
 
-    <div class="icon">🌍</div>
+  <div class="icon">🌍</div>
 
-    <h1>
-      <span>Geography</span> for UPSC
-    </h1>
+  <h1>
+    <span>Geography</span> for UPSC
+  </h1>
 
-    <p>
-      Complete Geography study material covering
-      Physical, Indian and World Geography.
-    </p>
+  <p>
+    Complete Geography study material covering
+    Physical, Indian and World Geography.
+  </p>
 
-  </section>
+  <div class="tags">
+    <span class="tag prelims">PRELIMS</span>
+    <span class="tag mains">MAINS</span>
+  </div>
 
+</section>
 
-  <main class="container">
 
-    <!-- INTRO -->
-    <section class="intro">
+<main class="container">
 
-      <h2>📚 Geography for UPSC</h2>
+<!-- SEARCH -->
+<div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔎 Search Geography topic..."
+    onkeyup="searchTopics()"
+  >
+</div>
 
-      <p>
-        Geography is an important part of UPSC preparation.
-        It connects physical processes, human activities,
-        resources, climate, agriculture, industries and
-        regional development.
-      </p>
 
-      <div class="highlight">
-        <strong>🎯 Preparation Tip:</strong>
-        Study Geography with maps, diagrams, concepts,
-        current affairs and UPSC Previous Year Questions.
-      </div>
+<!-- INTRO -->
+<section class="intro">
 
-    </section>
+  <h2>📚 Geography for UPSC</h2>
 
+  <p>
+    Geography is an important part of UPSC preparation.
+    It connects physical processes, human activities,
+    resources, climate, agriculture, industries and
+    regional development.
+  </p>
 
-    <!-- QUICK NAV -->
-    <section class="quick-nav">
+  <div class="highlight">
+    <strong>🎯 Preparation Tip:</strong>
+    Study Geography with maps, diagrams, concepts,
+    current affairs and UPSC Previous Year Questions.
+  </div>
 
-      <h2>🧭 Geography Topics</h2>
+</section>
 
-      <div class="nav-grid">
 
-        <a href="#physical">
-          🌋 Physical Geography
-        </a>
+<!-- QUICK NAV -->
+<section class="quick-nav">
 
-        <a href="#geomorphology">
-          🏔️ Geomorphology
-        </a>
+  <h2>🧭 Geography Topics</h2>
 
-        <a href="#climate">
-          ☁️ Climate
-        </a>
+  <div class="nav-grid">
 
-        <a href="#oceans">
-          🌊 Oceans
-        </a>
+    <a href="#physical">🌋 Physical Geography</a>
+    <a href="#geomorphology">🏔️ Geomorphology</a>
+    <a href="#climate">☁️ Climate</a>
+    <a href="#oceans">🌊 Oceans</a>
+    <a href="#india">🇮🇳 Indian Geography</a>
+    <a href="#rivers">🏞️ Rivers & Drainage</a>
+    <a href="#resources">⛏️ Resources</a>
+    <a href="#agriculture">🌾 Agriculture</a>
+    <a href="#industries">🏭 Industries</a>
+    <a href="#world">🌎 World Geography</a>
 
-        <a href="#india">
-          🇮🇳 Indian Geography
-        </a>
+  </div>
 
-        <a href="#rivers">
-          🏞️ Rivers & Drainage
-        </a>
+</section>
 
-        <a href="#resources">
-          ⛏️ Resources
-        </a>
 
-        <a href="#agriculture">
-          🌾 Agriculture
-        </a>
+<!-- PHYSICAL -->
+<section class="topic" id="physical">
 
-        <a href="#industries">
-          🏭 Industries
-        </a>
+<h2>🌋 1. Physical Geography</h2>
 
-        <a href="#world">
-          🌎 World Geography
-        </a>
+<p>
+Physical Geography deals with the natural
+features and processes of the Earth.
+</p>
 
-      </div>
+<h3>Major Areas</h3>
 
-    </section>
+<ul>
+<li>Earth's Interior</li>
+<li>Rocks and Minerals</li>
+<li>Plate Tectonics</li>
+<li>Earthquakes</li>
+<li>Volcanoes</li>
+<li>Mountains</li>
+<li>Plateaus</li>
+<li>Plains</li>
+<li>Weathering and Erosion</li>
+<li>Natural Hazards</li>
+</ul>
+
+<div class="study-box">
+<strong>UPSC Focus:</strong>
+Understand the relationship between plate
+movements, earthquakes, volcanoes and mountain
+formation.
+</div>
+
+</section>
+
+
+<!-- GEOMORPHOLOGY -->
+<section class="topic" id="geomorphology">
+
+<h2>🏔️ 2. Geomorphology</h2>
+
+<h3>Important Processes</h3>
+
+<ul>
+<li>Weathering</li>
+<li>Erosion</li>
+<li>Transportation</li>
+<li>Deposition</li>
+<li>River Processes</li>
+<li>Glacial Processes</li>
+<li>Wind Action</li>
+<li>Coastal Processes</li>
+<li>Karst Topography</li>
+</ul>
+
+<h3>Landforms</h3>
+
+<ul>
+<li>Valleys</li>
+<li>Waterfalls</li>
+<li>Meanders</li>
+<li>Ox-bow Lakes</li>
+<li>Deltas</li>
+<li>Sand Dunes</li>
+<li>Glacial Valleys</li>
+<li>Beaches and Cliffs</li>
+</ul>
+
+</section>
+
+
+<!-- CLIMATE -->
+<section class="topic" id="climate">
+
+<h2>☁️ 3. Climate & Atmosphere</h2>
+
+<h3>Atmosphere</h3>
+
+<ul>
+<li>Structure of Atmosphere</li>
+<li>Temperature</li>
+<li>Pressure Belts</li>
+<li>Winds</li>
+<li>Humidity</li>
+<li>Clouds</li>
+<li>Rainfall</li>
+</ul>
+
+<h3>Important Climate Systems</h3>
+
+<ul>
+<li>Jet Streams</li>
+<li>Western Disturbances</li>
+<li>El Niño</li>
+<li>La Niña</li>
+<li>Indian Monsoon</li>
+<li>Monsoon Mechanism</li>
+<li>Cyclones</li>
+</ul>
+
+<div class="highlight">
+<strong>📌 UPSC Focus:</strong>
+Understand how ocean temperatures, atmospheric
+circulation and pressure systems influence the
+Indian monsoon.
+</div>
+
+</section>
+
+
+<!-- OCEANS -->
+<section class="topic" id="oceans">
+
+<h2>🌊 4. Oceanography</h2>
+
+<ul>
+<li>Ocean Floor</li>
+<li>Ocean Temperature</li>
+<li>Ocean Salinity</li>
+<li>Ocean Currents</li>
+<li>Waves</li>
+<li>Tides</li>
+<li>Coral Reefs</li>
+<li>Marine Resources</li>
+<li>El Niño and La Niña</li>
+</ul>
+
+</section>
+
+
+<!-- INDIA -->
+<section class="topic" id="india">
+
+<h2>🇮🇳 5. Indian Geography</h2>
+
+<h3>Physiographic Divisions</h3>
+
+<ul>
+<li>Himalayan Mountains</li>
+<li>Northern Plains</li>
+<li>Peninsular Plateau</li>
+<li>Indian Desert</li>
+<li>Coastal Plains</li>
+<li>Islands</li>
+</ul>
+
+<h3>Important Features</h3>
+
+<ul>
+<li>Himalayan Ranges</li>
+<li>Deccan Plateau</li>
+<li>Western Ghats</li>
+<li>Eastern Ghats</li>
+<li>Coastal Regions</li>
+<li>Indian Islands</li>
+</ul>
+
+<div class="study-box">
+<strong>🗺️ Map Practice:</strong>
+Regularly locate major mountains, rivers,
+passes, plateaus, states, ports and mineral belts
+on an India map.
+</div>
+
+</section>
+
+
+<!-- RIVERS -->
+<section class="topic" id="rivers">
+
+<h2>🏞️ 6. Rivers & Drainage System</h2>
+
+<h3>Himalayan Rivers</h3>
+
+<ul>
+<li>Indus River System</li>
+<li>Ganga River System</li>
+<li>Brahmaputra River System</li>
+</ul>
+
+<h3>Peninsular Rivers</h3>
+
+<ul>
+<li>Mahanadi</li>
+<li>Godavari</li>
+<li>Krishna</li>
+<li>Kaveri</li>
+<li>Narmada</li>
+<li>Tapi</li>
+</ul>
+
+<h3>Important Topics</h3>
+
+<ul>
+<li>River Basins</li>
+<li>Interlinking of Rivers</li>
+<li>Floods</li>
+<li>Droughts</li>
+<li>Water Management</li>
+</ul>
+
+</section>
+
+
+<!-- RESOURCES -->
+<section class="topic" id="resources">
+
+<h2>⛏️ 7. Natural Resources</h2>
+
+<h3>Mineral Resources</h3>
+
+<ul>
+<li>Coal</li>
+<li>Iron Ore</li>
+<li>Bauxite</li>
+<li>Manganese</li>
+<li>Mica</li>
+<li>Petroleum</li>
+<li>Natural Gas</li>
+</ul>
+
+<h3>Energy Resources</h3>
+
+<ul>
+<li>Coal-based Energy</li>
+<li>Hydropower</li>
+<li>Nuclear Energy</li>
+<li>Solar Energy</li>
+<li>Wind Energy</li>
+<li>Bioenergy</li>
+</ul>
+
+</section>
+
+
+<!-- AGRICULTURE -->
+<section class="topic" id="agriculture">
+
+<h2>🌾 8. Indian Agriculture</h2>
+
+<h3>Major Crops</h3>
+
+<ul>
+<li>Rice</li>
+<li>Wheat</li>
+<li>Maize</li>
+<li>Millets</li>
+<li>Pulses</li>
+<li>Sugarcane</li>
+<li>Cotton</li>
+<li>Tea</li>
+<li>Coffee</li>
+<li>Jute</li>
+</ul>
+
+<h3>Important Topics</h3>
+
+<ul>
+<li>Kharif Crops</li>
+<li>Rabi Crops</li>
+<li>Zaid Crops</li>
+<li>Irrigation</li>
+<li>Soil Types</li>
+<li>Green Revolution</li>
+<li>Agricultural Marketing</li>
+<li>Food Security</li>
+</ul>
+
+</section>
+
+
+<!-- INDUSTRIES -->
+<section class="topic" id="industries">
+
+<h2>🏭 9. Industries & Transport</h2>
+
+<h3>Major Industries</h3>
+
+<ul>
+<li>Iron and Steel</li>
+<li>Cotton Textile</li>
+<li>Jute</li>
+<li>Cement</li>
+<li>Petrochemical</li>
+<li>Automobile</li>
+<li>Information Technology</li>
+</ul>
+
+<h3>Transport</h3>
+
+<ul>
+<li>Roadways</li>
+<li>Railways</li>
+<li>Waterways</li>
+<li>Airways</li>
+<li>Pipelines</li>
+<li>Major Ports</li>
+</ul>
 
+</section>
+
+
+<!-- WORLD -->
+<section class="topic" id="world">
+
+<h2>🌎 10. World Geography</h2>
+
+<h3>Important Physical Features</h3>
+
+<ul>
+<li>Major Mountain Ranges</li>
+<li>Major Plateaus</li>
+<li>Major Plains</li>
+<li>Major Deserts</li>
+<li>Important Rivers</li>
+<li>Major Lakes</li>
+<li>Important Seas and Oceans</li>
+</ul>
+
+<h3>Important Regions</h3>
+
+<ul>
+<li>Asia</li>
+<li>Europe</li>
+<li>Africa</li>
+<li>North America</li>
+<li>South America</li>
+<li>Australia</li>
+<li>Antarctica</li>
+</ul>
 
-    <!-- PHYSICAL -->
-    <section class="topic" id="physical">
+<div class="study-box">
+<strong>🌍 Map Practice:</strong>
+Practice locating important straits, channels,
+seas, mountain ranges, rivers, deserts and
+important geographical regions.
+</div>
 
-      <h2>🌋 1. Physical Geography</h2>
+</section>
 
-      <p>
-        Physical Geography deals with the natural
-        features and processes of the Earth.
-      </p>
-
-      <h3>Major Areas</h3>
-
-      <ul>
-        <li>Earth's Interior</li>
-        <li>Rocks and Minerals</li>
-        <li>Plate Tectonics</li>
-        <li>Earthquakes</li>
-        <li>Volcanoes</li>
-        <li>Mountains</li>
-        <li>Plateaus</li>
-        <li>Plains</li>
-        <li>Weathering and Erosion</li>
-        <li>Natural Hazards</li>
-      </ul>
-
-      <div class="study-box">
-        <strong>UPSC Focus:</strong>
-        Understand the relationship between plate
-        movements, earthquakes, volcanoes and mountain
-        formation.
-      </div>
-
-    </section>
-
-
-    <!-- GEOMORPHOLOGY -->
-    <section class="topic" id="geomorphology">
-
-      <h2>🏔️ 2. Geomorphology</h2>
-
-      <h3>Important Processes</h3>
-
-      <ul>
-        <li>Weathering</li>
-        <li>Erosion</li>
-        <li>Transportation</li>
-        <li>Deposition</li>
-        <li>River Processes</li>
-        <li>Glacial Processes</li>
-        <li>Wind Action</li>
-        <li>Coastal Processes</li>
-        <li>Karst Topography</li>
-      </ul>
-
-      <h3>Landforms</h3>
-
-      <ul>
-        <li>Valleys</li>
-        <li>Waterfalls</li>
-        <li>Meanders</li>
-        <li>Ox-bow Lakes</li>
-        <li>Deltas</li>
-        <li>Sand Dunes</li>
-        <li>Glacial Valleys</li>
-        <li>Beaches and Cliffs</li>
-      </ul>
-
-    </section>
-
-
-    <!-- CLIMATE -->
-    <section class="topic" id="climate">
-
-      <h2>☁️ 3. Climate & Atmosphere</h2>
-
-      <h3>Atmosphere</h3>
-
-      <ul>
-        <li>Structure of Atmosphere</li>
-        <li>Temperature</li>
-        <li>Pressure Belts</li>
-        <li>Winds</li>
-        <li>Humidity</li>
-        <li>Clouds</li>
-        <li>Rainfall</li>
-      </ul>
-
-      <h3>Important Climate Systems</h3>
-
-      <ul>
-        <li>Jet Streams</li>
-        <li>Western Disturbances</li>
-        <li>El Niño</li>
-        <li>La Niña</li>
-        <li>Indian Monsoon</li>
-        <li>Monsoon Mechanism</li>
-        <li>Cyclones</li>
-      </ul>
-
-      <div class="highlight">
-        <strong>📌 UPSC Focus:</strong>
-        Understand how ocean temperatures, atmospheric
-        circulation and pressure systems influence the
-        Indian monsoon.
-      </div>
-
-    </section>
-
-
-    <!-- OCEANS -->
-    <section class="topic" id="oceans">
-
-      <h2>🌊 4. Oceanography</h2>
-
-      <ul>
-        <li>Ocean Floor</li>
-        <li>Ocean Temperature</li>
-        <li>Ocean Salinity</li>
-        <li>Ocean Currents</li>
-        <li>Waves</li>
-        <li>Tides</li>
-        <li>Coral Reefs</li>
-        <li>Marine Resources</li>
-        <li>El Niño and La Niña</li>
-      </ul>
-
-    </section>
-
-
-    <!-- INDIA -->
-    <section class="topic" id="india">
-
-      <h2>🇮🇳 5. Indian Geography</h2>
-
-      <h3>Physiographic Divisions</h3>
-
-      <ul>
-        <li>Himalayan Mountains</li>
-        <li>Northern Plains</li>
-        <li>Peninsular Plateau</li>
-        <li>Indian Desert</li>
-        <li>Coastal Plains</li>
-        <li>Islands</li>
-      </ul>
-
-      <h3>Important Features</h3>
-
-      <ul>
-        <li>Himalayan Ranges</li>
-        <li>Deccan Plateau</li>
-        <li>Western Ghats</li>
-        <li>Eastern Ghats</li>
-        <li>Coastal Regions</li>
-        <li>Indian Islands</li>
-      </ul>
-
-      <div class="study-box">
-        <strong>🗺️ Map Practice:</strong>
-        Regularly locate major mountains, rivers,
-        passes, plateaus, states, ports and mineral belts
-        on an India map.
-      </div>
-
-    </section>
-
-
-    <!-- RIVERS -->
-    <section class="topic" id="rivers">
-
-      <h2>🏞️ 6. Rivers & Drainage System</h2>
-
-      <h3>Himalayan Rivers</h3>
-
-      <ul>
-        <li>Indus River System</li>
-        <li>Ganga River System</li>
-        <li>Brahmaputra River System</li>
-      </ul>
-
-      <h3>Peninsular Rivers</h3>
-
-      <ul>
-        <li>Mahanadi</li>
-        <li>Godavari</li>
-        <li>Krishna</li>
-        <li>Kaveri</li>
-        <li>Narmada</li>
-        <li>Tapi</li>
-      </ul>
-
-      <h3>Important Topics</h3>
-
-      <ul>
-        <li>River Basins</li>
-        <li>Interlinking of Rivers</li>
-        <li>Floods</li>
-        <li>Droughts</li>
-        <li>Water Management</li>
-      </ul>
-
-    </section>
-
-
-    <!-- RESOURCES -->
-    <section class="topic" id="resources">
-
-      <h2>⛏️ 7. Natural Resources</h2>
-
-      <h3>Mineral Resources</h3>
-
-      <ul>
-        <li>Coal</li>
-        <li>Iron Ore</li>
-        <li>Bauxite</li>
-        <li>Manganese</li>
-        <li>Mica</li>
-        <li>Petroleum</li>
-        <li>Natural Gas</li>
-      </ul>
-
-      <h3>Energy Resources</h3>
-
-      <ul>
-        <li>Coal-based Energy</li>
-        <li>Hydropower</li>
-        <li>Nuclear Energy</li>
-        <li>Solar Energy</li>
-        <li>Wind Energy</li>
-        <li>Bioenergy</li>
-      </ul>
-
-    </section>
-
-
-    <!-- AGRICULTURE -->
-    <section class="topic" id="agriculture">
-
-      <h2>🌾 8. Indian Agriculture</h2>
-
-      <h3>Major Crops</h3>
-
-      <ul>
-        <li>Rice</li>
-        <li>Wheat</li>
-        <li>Maize</li>
-        <li>Millets</li>
-        <li>Pulses</li>
-        <li>Sugarcane</li>
-        <li>Cotton</li>
-        <li>Tea</li>
-        <li>Coffee</li>
-        <li>Jute</li>
-      </ul>
-
-      <h3>Important Topics</h3>
-
-      <ul>
-        <li>Kharif Crops</li>
-        <li>Rabi Crops</li>
-        <li>Zaid Crops</li>
-        <li>Irrigation</li>
-        <li>Soil Types</li>
-        <li>Green Revolution</li>
-        <li>Agricultural Marketing</li>
-        <li>Food Security</li>
-      </ul>
-
-    </section>
-
-
-    <!-- INDUSTRIES -->
-    <section class="topic" id="industries">
-
-      <h2>🏭 9. Industries & Transport</h2>
-
-      <h3>Major Industries</h3>
-
-      <ul>
-        <li>Iron and Steel</li>
-        <li>Cotton Textile</li>
-        <li>Jute</li>
-        <li>Cement</li>
-        <li>Petrochemical</li>
-        <li>Automobile</li>
-        <li>Information Technology</li>
-      </ul>
-
-      <h3>Transport</h3>
-
-      <ul>
-        <li>Roadways</li>
-        <li>Railways</li>
-        <li>Waterways</li>
-        <li>Airways</li>
-        <li>Pipelines</li>
-        <li>Major Ports</li>
-      </ul>
-
-    </section>
-
-
-    <!-- WORLD -->
-    <section class="topic" id="world">
-
-      <h2>🌎 10. World Geography</h2>
-
-      <h3>Important Physical Features</h3>
-
-      <ul>
-        <li>Major Mountain Ranges</li>
-        <li>Major Plateaus</li>
-        <li>Major Plains</li>
-        <li>Major Deserts</li>
-        <li>Important Rivers</li>
-        <li>Major Lakes</li>
-        <li>Important Seas and Oceans</li>
-      </ul>
-
-      <h3>Important Regions</h3>
-
-      <ul>
-        <li>Asia</li>
-        <li>Europe</li>
-        <li>Africa</li>
-        <li>North America</li>
-        <li>South America</li>
-        <li>Australia</li>
-        <li>Antarctica</li>
-      </ul>
-
-      <div class="study-box">
-        <strong>🌍 Map Practice:</strong>
-        Practice locating important straits, channels,
-        seas, mountain ranges, rivers, deserts and
-        important geographical regions.
-      </div>
-
-    </section>
-
-
-    <!-- SOILS -->
-    <section class="topic">
-
-      <h2>🌱 11. Indian Soils</h2>
-
-      <div class="table-wrapper">
-
-        <table>
-
-          <tr>
-            <th>Soil</th>
-            <th>Major Features</th>
-          </tr>
-
-          <tr>
-            <td>Alluvial Soil</td>
-            <td>Extensive in northern plains and river valleys</td>
-          </tr>
-
-          <tr>
-            <td>Black Soil</td>
-            <td>Associated particularly with the Deccan region</td>
-          </tr>
 
-          <tr>
-            <td>Red Soil</td>
-            <td>Common in parts of peninsular India</td>
-          </tr>
+<!-- SOILS -->
+<section class="topic">
+
+<h2>🌱 11. Indian Soils</h2>
 
-          <tr>
-            <td>Laterite Soil</td>
-            <td>Develops under high rainfall and leaching conditions</td>
-          </tr>
+<div class="table-wrapper">
 
-          <tr>
-            <td>Desert Soil</td>
-            <td>Found mainly in arid and semi-arid regions</td>
-          </tr>
+<table>
 
-          <tr>
-            <td>Mountain Soil</td>
-            <td>Occurs in Himalayan and other mountainous areas</td>
-          </tr>
+<tr>
+<th>Soil</th>
+<th>Major Features</th>
+</tr>
 
-        </table>
+<tr>
+<td>Alluvial Soil</td>
+<td>Extensive in northern plains and river valleys</td>
+</tr>
 
-      </div>
+<tr>
+<td>Black Soil</td>
+<td>Associated particularly with the Deccan region</td>
+</tr>
 
-    </section>
+<tr>
+<td>Red Soil</td>
+<td>Common in parts of peninsular India</td>
+</tr>
 
+<tr>
+<td>Laterite Soil</td>
+<td>Develops under high rainfall and leaching conditions</td>
+</tr>
 
-    <!-- DISASTERS -->
-    <section class="topic">
+<tr>
+<td>Desert Soil</td>
+<td>Found mainly in arid and semi-arid regions</td>
+</tr>
 
-      <h2>🚨 12. Geography & Natural Disasters</h2>
+<tr>
+<td>Mountain Soil</td>
+<td>Occurs in Himalayan and other mountainous areas</td>
+</tr>
 
-      <ul>
-        <li>Earthquakes</li>
-        <li>Floods</li>
-        <li>Droughts</li>
-        <li>Cyclones</li>
-        <li>Landslides</li>
-        <li>Tsunamis</li>
-        <li>Cloudbursts</li>
-        <li>Heat Waves</li>
-      </ul>
+</table>
 
-      <div class="highlight">
-        <strong>📌 UPSC Approach:</strong>
-        Study disasters through causes, vulnerable
-        regions, impacts, preparedness, mitigation and
-        disaster-management institutions.
-      </div>
+</div>
 
-    </section>
+</section>
 
 
-    <!-- PREPARATION -->
-    <section class="topic">
+<!-- DISASTERS -->
+<section class="topic">
 
-      <h2>🎯 13. How to Prepare Geography</h2>
+<h2>🚨 12. Geography & Natural Disasters</h2>
 
-      <h3>Step 1 — Understand Concepts</h3>
+<ul>
+<li>Earthquakes</li>
+<li>Floods</li>
+<li>Droughts</li>
+<li>Cyclones</li>
+<li>Landslides</li>
+<li>Tsunamis</li>
+<li>Cloudbursts</li>
+<li>Heat Waves</li>
+</ul>
 
-      <p>
-        Learn basic physical and human geography before
-        moving to advanced topics.
-      </p>
+<div class="highlight">
+<strong>📌 UPSC Approach:</strong>
+Study disasters through causes, vulnerable
+regions, impacts, preparedness, mitigation and
+disaster-management institutions.
+</div>
 
-      <h3>Step 2 — Practice Maps</h3>
+</section>
 
-      <p>
-        Regularly practice India and World maps.
-      </p>
 
-      <h3>Step 3 — Connect Current Affairs</h3>
+<!-- PREPARATION -->
+<section class="topic">
 
-      <p>
-        Connect geographical concepts with climate events,
-        disasters, resources, agriculture and international
-        developments.
-      </p>
+<h2>🎯 13. How to Prepare Geography</h2>
 
-      <h3>Step 4 — Solve PYQs</h3>
+<h3>Step 1 — Understand Concepts</h3>
 
-      <p>
-        Practice UPSC previous year questions and identify
-        repeatedly tested concepts.
-      </p>
+<p>
+Learn basic physical and human geography before
+moving to advanced topics.
+</p>
 
-      <div class="highlight">
-        <strong>📚 Best Approach:</strong>
-        Concepts + Maps + Current Affairs + PYQs +
-        Regular Revision.
-      </div>
+<h3>Step 2 — Practice Maps</h3>
 
-    </section>
+<p>
+Regularly practice India and World maps.
+</p>
 
+<h3>Step 3 — Connect Current Affairs</h3>
 
-    <!-- BUTTONS -->
-    <div class="bottom-buttons">
+<p>
+Connect geographical concepts with climate events,
+disasters, resources, agriculture and international
+developments.
+</p>
 
-      <a href="index.html" class="btn btn-primary">
-        🏠 Back to Home
-      </a>
+<h3>Step 4 — Solve PYQs</h3>
 
-      <a href="polity.html" class="btn btn-dark">
-        🏛️ Polity
-      </a>
+<p>
+Practice UPSC previous year questions and identify
+repeatedly tested concepts.
+</p>
 
-      <a href="history.html" class="btn btn-dark">
-        📜 History
-      </a>
+<div class="highlight">
+<strong>📚 Best Approach:</strong>
+Concepts + Maps + Current Affairs + PYQs +
+Regular Revision.
+</div>
 
-      <a href="prelims.html" class="btn btn-dark">
-        📚 Prelims Syllabus
-      </a>
+</section>
 
-    </div>
 
-  </main>
+<!-- BUTTONS -->
+<div class="bottom-buttons">
 
+<a href="index.html" class="btn btn-primary">
+🏠 Home
+</a>
 
-  <!-- FOOTER -->
-  <footer>
+<a href="polity.html" class="btn btn-dark">
+🏛️ Polity
+</a>
 
-    <div class="footer-logo">
-      🇮🇳 UPSC <b>Shiksha</b>
-    </div>
+<a href="history.html" class="btn btn-dark">
+📜 History
+</a>
 
-    <p>
-      Free UPSC Preparation Platform
-    </p>
+<a href="prelims.html" class="btn btn-dark">
+📚 Prelims
+</a>
 
-    <p>
-      © 2026 UPSC Shiksha. All Rights Reserved.
-    </p>
+<a href="mains.html" class="btn btn-dark">
+✍️ Mains
+</a>
 
-  </footer>
+<a href="pyq.html" class="btn btn-dark">
+📝 PYQs
+</a>
+
+</div>
+
+</main>
+
+
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="goTop()">↑</button>
+
+
+<!-- FOOTER -->
+<footer>
+
+<div class="footer-logo">
+🇮🇳 UPSC <b>Shiksha</b>
+</div>
+
+<p>
+Free UPSC Preparation Platform
+</p>
+
+<p>
+© 2026 UPSC Shiksha. All Rights Reserved.
+</p>
+
+</footer>
+
+
+<script>
+
+/* DARK MODE */
+function toggleDarkMode(){
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("geographyDarkMode","on");
+  }else{
+    localStorage.setItem("geographyDarkMode","off");
+  }
+
+}
+
+
+/* LOAD DARK MODE */
+if(localStorage.getItem("geographyDarkMode")==="on"){
+  document.body.classList.add("dark");
+}
+
+
+/* SEARCH */
+function searchTopics(){
+
+  let input =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
+
+  let topics =
+    document.querySelectorAll(".topic");
+
+  topics.forEach(function(topic){
+
+    let text =
+      topic.innerText.toLowerCase();
+
+    if(text.includes(input)){
+      topic.style.display="";
+    }else{
+      topic.style.display="none";
+    }
+
+  });
+
+}
+
+
+/* BACK TO TOP */
+window.onscroll=function(){
+
+  let button =
+    document.getElementById("topBtn");
+
+  if(document.documentElement.scrollTop > 300){
+    button.style.display="block";
+  }else{
+    button.style.display="none";
+  }
+
+};
+
+
+function goTop(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+</script>
 
 </body>
 </html>
