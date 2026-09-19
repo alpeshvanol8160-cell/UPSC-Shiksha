@@ -1,132 +1,171 @@
-// ================================
-// UPSC SHIKSHA - DAY 1
-// ================================
+// =====================================
+// UPSC SHIKSHA - COMMON SCRIPT
+// =====================================
 
 
+// ================================
 // MOBILE MENU
+// ================================
 
 const menuBtn = document.getElementById("menuBtn");
 const navMenu = document.getElementById("navMenu");
 
-menuBtn.addEventListener("click", function () {
+if (menuBtn && navMenu) {
 
-  navMenu.classList.toggle("active");
+  menuBtn.addEventListener("click", function () {
 
-});
-
-
-// CLOSE MENU AFTER CLICK
-
-const navLinks = document.querySelectorAll("#navMenu a");
-
-navLinks.forEach(function(link) {
-
-  link.addEventListener("click", function() {
-
-    navMenu.classList.remove("active");
+    navMenu.classList.toggle("active");
 
   });
 
-});
+
+  // CLOSE MENU AFTER CLICK
+
+  const navLinks = navMenu.querySelectorAll("a");
+
+  navLinks.forEach(function(link) {
+
+    link.addEventListener("click", function() {
+
+      navMenu.classList.remove("active");
+
+    });
+
+  });
+
+}
 
 
+// ================================
 // FREE TEST BUTTON
+// ================================
 
 const testBtn = document.getElementById("testBtn");
 
-testBtn.addEventListener("click", function() {
+if (testBtn) {
 
-  alert(
-    "🚀 Free Test System Coming Soon!\n\n" +
-    "Day 2-3 में हम real UPSC MCQ test system बनाएँगे."
-  );
+  testBtn.addEventListener("click", function() {
 
-});
+    alert(
+      "🚀 Free Test System Coming Soon!\n\n" +
+      "हम जल्द ही Real UPSC MCQ Test System बनाएँगे."
+    );
+
+  });
+
+}
 
 
+// ================================
 // CONTACT FORM
+// ================================
 
 const contactForm = document.getElementById("contactForm");
 
-contactForm.addEventListener("submit", function(event) {
+if (contactForm) {
 
-  event.preventDefault();
+  contactForm.addEventListener("submit", function(event) {
 
-  alert(
-    "✅ Thank you!\n\n" +
-    "Your message has been received."
-  );
+    event.preventDefault();
 
-  contactForm.reset();
+    alert(
+      "✅ Thank you!\n\n" +
+      "Your message has been received."
+    );
 
-});
+    contactForm.reset();
+
+  });
+
+}
 
 
+// ================================
 // BACK TO TOP
+// ================================
 
 const topBtn = document.getElementById("topBtn");
 
-window.addEventListener("scroll", function() {
+if (topBtn) {
 
-  if (window.scrollY > 400) {
+  // Initially hidden
 
-    topBtn.style.display = "block";
-
-  } else {
-
-    topBtn.style.display = "none";
-
-  }
-
-});
+  topBtn.style.display = "none";
 
 
-topBtn.addEventListener("click", function() {
+  window.addEventListener("scroll", function() {
 
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
+    if (window.scrollY > 400) {
+
+      topBtn.style.display = "block";
+
+    } else {
+
+      topBtn.style.display = "none";
+
+    }
+
   });
 
-});
+
+  topBtn.addEventListener("click", function() {
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  });
+
+}
 
 
+// ================================
 // SIMPLE SCROLL REVEAL
+// ================================
 
 const cards = document.querySelectorAll(
   ".feature-card, .subject-card, .stat-card, .test-box"
 );
 
-const observer = new IntersectionObserver(
-  function(entries) {
+if (cards.length > 0 && "IntersectionObserver" in window) {
 
-    entries.forEach(function(entry) {
+  const observer = new IntersectionObserver(
+    function(entries) {
 
-      if (entry.isIntersecting) {
+      entries.forEach(function(entry) {
 
-        entry.target.style.opacity = "1";
-        entry.target.style.transform = "translateY(0)";
+        if (entry.isIntersecting) {
 
-      }
+          entry.target.style.opacity = "1";
+          entry.target.style.transform = "translateY(0)";
 
-    });
+          observer.unobserve(entry.target);
 
-  },
-  {
-    threshold: 0.15
-  }
-);
+        }
+
+      });
+
+    },
+    {
+      threshold: 0.15
+    }
+  );
 
 
-cards.forEach(function(card) {
+  cards.forEach(function(card) {
 
-  card.style.opacity = "0";
-  card.style.transform = "translateY(25px)";
-  card.style.transition = "0.6s ease";
+    card.style.opacity = "0";
+    card.style.transform = "translateY(25px)";
+    card.style.transition = "0.6s ease";
 
-  observer.observe(card);
+    observer.observe(card);
 
-});
+  });
+
+}
+
+
 // ================================
 // UPSC SYLLABUS TABS
 // ================================
@@ -138,47 +177,58 @@ const syllabusContents =
   document.querySelectorAll(".syllabus-content");
 
 
-syllabusTabs.forEach(function(tab) {
+if (syllabusTabs.length > 0) {
 
-  tab.addEventListener("click", function() {
+  syllabusTabs.forEach(function(tab) {
 
-    const target =
-      tab.getAttribute("data-tab");
+    tab.addEventListener("click", function() {
+
+      const target =
+        tab.getAttribute("data-tab");
 
 
-    // Remove active from all tabs
+      // Remove active from all tabs
 
-    syllabusTabs.forEach(function(item) {
+      syllabusTabs.forEach(function(item) {
 
-      item.classList.remove("active");
+        item.classList.remove("active");
+
+      });
+
+
+      // Hide all syllabus sections
+
+      syllabusContents.forEach(function(content) {
+
+        content.classList.remove("active");
+
+      });
+
+
+      // Activate clicked tab
+
+      tab.classList.add("active");
+
+
+      // Show selected section
+
+      const selectedContent =
+        document.getElementById(target);
+
+
+      if (selectedContent) {
+
+        selectedContent.classList.add("active");
+
+      }
 
     });
-
-
-    // Hide all syllabus sections
-
-    syllabusContents.forEach(function(content) {
-
-      content.classList.remove("active");
-
-    });
-
-
-    // Activate clicked tab
-
-    tab.classList.add("active");
-
-
-    const selectedContent =
-      document.getElementById(target);
-
-
-    if (selectedContent) {
-
-      selectedContent.classList.add("active");
-
-    }
 
   });
 
-});
+}
+
+
+// ================================
+// END
+// ================================
