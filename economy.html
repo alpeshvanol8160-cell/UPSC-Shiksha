@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UPSC Shiksha | Indian Economy</title>
-  <meta name="description" content="UPSC Indian Economy study material for Civil Services preparation.">
+  <title>Indian Economy | UPSC Shiksha</title>
+  <meta name="description" content="Complete Indian Economy study material for UPSC Civil Services Examination.">
 
   <link rel="stylesheet" href="style.css">
 
@@ -13,14 +13,14 @@
     .subject-page {
       max-width: 1000px;
       margin: auto;
-      padding: 30px 18px;
+      padding: 25px 15px 40px;
     }
 
     .subject-header {
       text-align: center;
-      padding: 35px 20px;
-      border-radius: 18px;
-      margin-bottom: 25px;
+      padding: 38px 20px;
+      border-radius: 20px;
+      margin-bottom: 22px;
       background: linear-gradient(135deg, #fff3e0, #ffffff);
     }
 
@@ -31,6 +31,75 @@
 
     .subject-header p {
       line-height: 1.6;
+      margin-bottom: 18px;
+    }
+
+    .tags {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .tag {
+      padding: 7px 13px;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: bold;
+      background: #333;
+      color: white;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 18px;
+      padding: 10px 17px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: #333;
+      color: white;
+    }
+
+    .search-box {
+      margin: 20px 0;
+    }
+
+    .search-box input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .quick-nav {
+      background: #f5f5f5;
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .quick-nav h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .quick-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .quick-links a {
+      text-decoration: none;
+      padding: 8px 11px;
+      border-radius: 8px;
+      background: white;
+      color: #222;
+      border: 1px solid #ddd;
+      font-size: 14px;
     }
 
     .topic-card {
@@ -51,34 +120,114 @@
       line-height: 1.8;
     }
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      background: #333;
-      color: white;
+    .topic-card li {
+      margin-bottom: 3px;
     }
 
     .study-note {
-      padding: 20px;
+      padding: 22px;
       border-radius: 15px;
       background: #f5f5f5;
       line-height: 1.7;
     }
 
+    .bottom-nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 28px;
+    }
+
+    .bottom-nav a {
+      padding: 11px 15px;
+      border-radius: 10px;
+      text-decoration: none;
+      background: #333;
+      color: white;
+      font-size: 14px;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      border: none;
+      padding: 12px 14px;
+      border-radius: 50%;
+      background: #222;
+      color: white;
+      font-size: 18px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .dark-mode {
+      background: #121212 !important;
+      color: #eee !important;
+    }
+
+    .dark-mode .subject-header {
+      background: linear-gradient(135deg, #292929, #171717);
+    }
+
+    .dark-mode .topic-card {
+      background: #1e1e1e;
+      color: #eee;
+    }
+
+    .dark-mode .quick-nav,
+    .dark-mode .study-note {
+      background: #202020;
+    }
+
+    .dark-mode .quick-links a {
+      background: #2b2b2b;
+      color: #eee;
+      border-color: #444;
+    }
+
+    .dark-mode .search-box input {
+      background: #222;
+      color: white;
+      border-color: #555;
+    }
+
+    .dark-toggle {
+      display: block;
+      margin: 15px auto;
+      padding: 10px 16px;
+      border: none;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
     @media (max-width: 600px) {
+      .subject-page {
+        padding: 20px 12px 35px;
+      }
+
+      .subject-header {
+        padding: 30px 15px;
+      }
+
       .subject-header h1 {
         font-size: 27px;
+      }
+
+      .topic-card {
+        padding: 18px;
       }
 
       .topic-card h2 {
         font-size: 20px;
       }
 
-      .subject-page {
-        padding: 20px 12px;
+      .quick-links a {
+        font-size: 13px;
       }
     }
   </style>
@@ -115,13 +264,53 @@
       <h1>💰 Indian Economy</h1>
 
       <p>
-        Complete basic Indian Economy study material
+        Complete Indian Economy study material
         for UPSC Civil Services Examination.
       </p>
 
+      <div class="tags">
+        <span class="tag">PRELIMS</span>
+        <span class="tag">MAINS</span>
+        <span class="tag">CURRENT AFFAIRS</span>
+      </div>
+
     </section>
 
-    <section class="topic-card">
+    <button class="dark-toggle" onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
+
+    <div class="search-box">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search Economy topics..."
+        onkeyup="searchTopics()"
+      >
+    </div>
+
+    <section class="quick-nav">
+
+      <h2>📚 Quick Navigation</h2>
+
+      <div class="quick-links">
+        <a href="#basic">Basic Concepts</a>
+        <a href="#banking">Banking</a>
+        <a href="#money">Money & Inflation</a>
+        <a href="#fiscal">Fiscal Policy</a>
+        <a href="#tax">Taxation</a>
+        <a href="#agriculture">Agriculture</a>
+        <a href="#industry">Industry</a>
+        <a href="#external">External Sector</a>
+        <a href="#growth">Growth</a>
+        <a href="#institutions">Institutions</a>
+        <a href="#digital">Digital Economy</a>
+        <a href="#documents">Documents</a>
+      </div>
+
+    </section>
+
+    <section class="topic-card" id="basic">
 
       <h2>📊 1. Basic Concepts of Economy</h2>
 
@@ -136,7 +325,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="banking">
 
       <h2>🏦 2. Banking System</h2>
 
@@ -151,7 +340,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="money">
 
       <h2>💵 3. Money & Inflation</h2>
 
@@ -167,7 +356,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="fiscal">
 
       <h2>🏛️ 4. Fiscal Policy & Government</h2>
 
@@ -183,7 +372,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="tax">
 
       <h2>🧾 5. Taxation</h2>
 
@@ -198,7 +387,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="agriculture">
 
       <h2>🌾 6. Agriculture & Economy</h2>
 
@@ -213,7 +402,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="industry">
 
       <h2>🏭 7. Industry & Infrastructure</h2>
 
@@ -228,7 +417,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="external">
 
       <h2>🌍 8. External Sector</h2>
 
@@ -243,7 +432,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="growth">
 
       <h2>📈 9. Economic Growth & Development</h2>
 
@@ -259,7 +448,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="institutions">
 
       <h2>🏦 10. Financial Institutions</h2>
 
@@ -274,7 +463,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="digital">
 
       <h2>💻 11. Digital Economy</h2>
 
@@ -288,7 +477,7 @@
 
     </section>
 
-    <section class="topic-card">
+    <section class="topic-card" id="documents">
 
       <h2>📚 12. Important Economic Documents</h2>
 
@@ -314,7 +503,20 @@
 
     </section>
 
+    <div class="bottom-nav">
+
+      <a href="index.html">🏠 Home</a>
+      <a href="prelims.html">📝 Prelims</a>
+      <a href="mains.html">📖 Mains</a>
+      <a href="pyq.html">📚 PYQs</a>
+      <a href="polity.html">🏛️ Polity</a>
+      <a href="geography.html">🌍 Geography</a>
+
+    </div>
+
   </main>
+
+  <button id="topBtn" onclick="goTop()">↑</button>
 
   <footer>
 
@@ -333,6 +535,72 @@
   </footer>
 
   <script src="script.js"></script>
+
+  <script>
+
+    function searchTopics() {
+
+      const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+      const cards =
+        document.querySelectorAll(".topic-card");
+
+      cards.forEach(card => {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        card.style.display =
+          text.includes(input) ? "block" : "none";
+
+      });
+
+    }
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark-mode");
+
+      const isDark =
+        document.body.classList.contains("dark-mode");
+
+      localStorage.setItem(
+        "economyDarkMode",
+        isDark ? "on" : "off"
+      );
+
+    }
+
+    if (localStorage.getItem("economyDarkMode") === "on") {
+      document.body.classList.add("dark-mode");
+    }
+
+    const topBtn =
+      document.getElementById("topBtn");
+
+    window.addEventListener("scroll", function() {
+
+      if (window.scrollY > 300) {
+        topBtn.style.display = "block";
+      } else {
+        topBtn.style.display = "none";
+      }
+
+    });
+
+    function goTop() {
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    }
+
+  </script>
 
 </body>
 </html>
