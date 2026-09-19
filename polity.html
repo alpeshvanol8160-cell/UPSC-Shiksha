@@ -1,1010 +1,1182 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Indian Polity | UPSC Shiksha</title>
+<title>Indian Polity | UPSC Shiksha</title>
 
-  <meta name="description"
-        content="Indian Polity study material for UPSC Civil Services Examination - Constitution, Parliament, Judiciary, Fundamental Rights, Governance and more.">
+<meta name="description"
+content="Indian Polity study material for UPSC Civil Services Examination - Constitution, Fundamental Rights, Parliament, Judiciary, Federalism and Governance.">
 
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
+<style>
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
 
-    html {
-      scroll-behavior: smooth;
-    }
+html{
+  scroll-behavior:smooth;
+}
 
-    body {
-      font-family: Arial, Helvetica, sans-serif;
-      background: #f5f7fb;
-      color: #172033;
-      line-height: 1.7;
-    }
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.7;
+  transition:.3s;
+}
 
-    /* HEADER */
-    header {
-      background: #111827;
-      color: white;
-      padding: 15px 18px;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-      box-shadow: 0 3px 15px rgba(0,0,0,0.15);
-    }
+/* HEADER */
+header{
+  background:#111827;
+  color:white;
+  padding:14px 16px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 15px rgba(0,0,0,.2);
+}
 
-    .header-inner {
-      max-width: 1100px;
-      margin: auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-    }
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:8px;
+}
 
-    .logo {
-      font-size: 21px;
-      font-weight: bold;
-      white-space: nowrap;
-    }
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
 
-    .logo b {
-      color: #f59e0b;
-    }
+.logo b{
+  color:#f59e0b;
+}
 
-    .back-btn {
-      color: white;
-      text-decoration: none;
-      background: #2563eb;
-      padding: 8px 13px;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-    }
+.header-buttons{
+  display:flex;
+  gap:7px;
+}
 
-    .back-btn:hover {
-      background: #1d4ed8;
-    }
+.header-btn{
+  border:0;
+  text-decoration:none;
+  background:#2563eb;
+  color:white;
+  padding:8px 11px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:bold;
+  cursor:pointer;
+}
 
-    /* HERO */
-    .hero {
-      background: linear-gradient(135deg, #172554, #1e3a8a);
-      color: white;
-      text-align: center;
-      padding: 55px 18px;
-    }
+/* HERO */
+.hero{
+  background:linear-gradient(135deg,#172554,#1e40af);
+  color:white;
+  text-align:center;
+  padding:50px 16px;
+}
 
-    .hero .icon {
-      font-size: 48px;
-      margin-bottom: 10px;
-    }
+.hero-icon{
+  font-size:48px;
+}
 
-    .hero h1 {
-      font-size: 38px;
-      margin-bottom: 10px;
-    }
+.hero h1{
+  font-size:38px;
+  margin:5px 0 8px;
+}
 
-    .hero h1 span {
-      color: #fbbf24;
-    }
+.hero h1 span{
+  color:#fbbf24;
+}
 
-    .hero p {
-      max-width: 750px;
-      margin: auto;
-      color: #dbeafe;
-      font-size: 16px;
-    }
+.hero p{
+  max-width:750px;
+  margin:auto;
+  color:#dbeafe;
+}
 
-    /* CONTENT */
-    .container {
-      max-width: 1050px;
-      margin: auto;
-      padding: 35px 16px;
-    }
+/* CONTAINER */
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:30px 15px;
+}
 
-    .intro {
-      background: white;
-      padding: 22px;
-      border-radius: 14px;
-      margin-bottom: 25px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
+/* SEARCH */
+.search-box{
+  background:white;
+  padding:18px;
+  border-radius:14px;
+  margin-bottom:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
 
-    .intro h2 {
-      color: #1e3a8a;
-      margin-bottom: 8px;
-    }
+.search-box h2{
+  color:#1e3a8a;
+  margin-bottom:10px;
+}
 
-    /* QUICK NAV */
-    .quick-nav {
-      background: white;
-      padding: 20px;
-      border-radius: 14px;
-      margin-bottom: 30px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-    }
+#topicSearch{
+  width:100%;
+  padding:13px;
+  border:2px solid #dbeafe;
+  border-radius:9px;
+  font-size:15px;
+  outline:none;
+}
 
-    .quick-nav h2 {
-      margin-bottom: 14px;
-      color: #111827;
-    }
+#topicSearch:focus{
+  border-color:#2563eb;
+}
 
-    .nav-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 10px;
-    }
+/* INTRO */
+.intro{
+  background:white;
+  padding:22px;
+  border-radius:14px;
+  margin-bottom:25px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
 
-    .nav-grid a {
-      text-decoration: none;
-      background: #eff6ff;
-      color: #1d4ed8;
-      padding: 10px;
-      border-radius: 8px;
-      font-weight: bold;
-      text-align: center;
-      font-size: 14px;
-    }
+.intro h2{
+  color:#1e3a8a;
+  margin-bottom:8px;
+}
 
-    .nav-grid a:hover {
-      background: #dbeafe;
-    }
+/* QUICK NAV */
+.quick-nav{
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  margin-bottom:28px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
 
-    /* TOPIC CARDS */
-    .topic {
-      background: white;
-      margin-bottom: 22px;
-      padding: 24px;
-      border-radius: 14px;
-      box-shadow: 0 5px 20px rgba(0,0,0,0.06);
-      scroll-margin-top: 80px;
-    }
+.quick-nav h2{
+  margin-bottom:14px;
+}
 
-    .topic h2 {
-      color: #1e3a8a;
-      font-size: 23px;
-      margin-bottom: 14px;
-      border-bottom: 2px solid #e5e7eb;
-      padding-bottom: 9px;
-    }
+.nav-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
 
-    .topic h3 {
-      color: #374151;
-      margin-top: 18px;
-      margin-bottom: 8px;
-      font-size: 18px;
-    }
+.nav-grid a{
+  text-decoration:none;
+  background:#eff6ff;
+  color:#1d4ed8;
+  padding:11px;
+  border-radius:8px;
+  text-align:center;
+  font-weight:bold;
+  font-size:14px;
+}
 
-    .topic ul {
-      padding-left: 22px;
-    }
+.nav-grid a:hover{
+  background:#dbeafe;
+}
 
-    .topic li {
-      margin-bottom: 6px;
-    }
+/* TOPIC */
+.topic{
+  background:white;
+  margin-bottom:22px;
+  padding:23px;
+  border-radius:14px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+  scroll-margin-top:80px;
+}
 
-    .highlight {
-      background: #fff7ed;
-      border-left: 4px solid #f59e0b;
-      padding: 13px 15px;
-      margin-top: 15px;
-      border-radius: 7px;
-    }
+.topic h2{
+  color:#1e3a8a;
+  font-size:23px;
+  border-bottom:2px solid #e5e7eb;
+  padding-bottom:8px;
+  margin-bottom:13px;
+}
 
-    /* STUDY BOX */
-    .study-box {
-      background: #ecfdf5;
-      border-left: 4px solid #10b981;
-      padding: 15px;
-      border-radius: 8px;
-      margin-top: 15px;
-    }
+.topic h3{
+  color:#374151;
+  margin-top:18px;
+  margin-bottom:7px;
+}
 
-    .study-box strong {
-      color: #047857;
-    }
+.topic ul{
+  padding-left:22px;
+}
 
-    /* TABLE */
-    .table-wrapper {
-      overflow-x: auto;
-      margin-top: 12px;
-    }
+.topic li{
+  margin-bottom:5px;
+}
 
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      min-width: 500px;
-    }
+/* HIGHLIGHT */
+.highlight{
+  background:#fff7ed;
+  border-left:4px solid #f59e0b;
+  padding:13px 15px;
+  margin-top:15px;
+  border-radius:7px;
+}
 
-    th,
-    td {
-      border: 1px solid #d1d5db;
-      padding: 10px;
-      text-align: left;
-    }
+.study-box{
+  background:#ecfdf5;
+  border-left:4px solid #10b981;
+  padding:14px;
+  margin-top:15px;
+  border-radius:8px;
+}
 
-    th {
-      background: #eff6ff;
-      color: #1e3a8a;
-    }
+.study-box strong{
+  color:#047857;
+}
 
-    /* BUTTONS */
-    .bottom-buttons {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 12px;
-      justify-content: center;
-      margin: 35px 0;
-    }
+/* TABLE */
+.table-wrapper{
+  overflow-x:auto;
+  margin-top:12px;
+}
 
-    .btn {
-      text-decoration: none;
-      padding: 12px 18px;
-      border-radius: 9px;
-      font-weight: bold;
-      display: inline-block;
-    }
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:500px;
+}
 
-    .btn-primary {
-      background: #2563eb;
-      color: white;
-    }
+th,td{
+  border:1px solid #d1d5db;
+  padding:10px;
+  text-align:left;
+}
 
-    .btn-dark {
-      background: #111827;
-      color: white;
-    }
+th{
+  background:#eff6ff;
+  color:#1e3a8a;
+}
 
-    /* FOOTER */
-    footer {
-      background: #111827;
-      color: #d1d5db;
-      text-align: center;
-      padding: 28px 16px;
-      margin-top: 20px;
-    }
+/* TOPIC TAG */
+.tag{
+  display:inline-block;
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:4px 9px;
+  border-radius:20px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
 
-    footer .footer-logo {
-      color: white;
-      font-size: 20px;
-      font-weight: bold;
-      margin-bottom: 8px;
-    }
+/* BUTTONS */
+.bottom-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  justify-content:center;
+  margin:35px 0;
+}
 
-    footer b {
-      color: #f59e0b;
-    }
+.btn{
+  text-decoration:none;
+  padding:12px 18px;
+  border-radius:9px;
+  font-weight:bold;
+  display:inline-block;
+}
 
-    footer p {
-      font-size: 14px;
-    }
+.btn-primary{
+  background:#2563eb;
+  color:white;
+}
 
-    /* MOBILE */
-    @media (max-width: 600px) {
+.btn-dark{
+  background:#111827;
+  color:white;
+}
 
-      .logo {
-        font-size: 17px;
-      }
+/* BACK TO TOP */
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:45px;
+  height:45px;
+  border:0;
+  border-radius:50%;
+  background:#2563eb;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  display:none;
+  z-index:999;
+}
 
-      .back-btn {
-        font-size: 12px;
-        padding: 7px 10px;
-      }
+/* FOOTER */
+footer{
+  background:#111827;
+  color:#d1d5db;
+  text-align:center;
+  padding:28px 15px;
+}
 
-      .hero {
-        padding: 40px 15px;
-      }
+.footer-logo{
+  color:white;
+  font-size:20px;
+  font-weight:bold;
+}
 
-      .hero .icon {
-        font-size: 40px;
-      }
+.footer-logo b{
+  color:#f59e0b;
+}
 
-      .hero h1 {
-        font-size: 29px;
-      }
+footer p{
+  font-size:14px;
+  margin-top:5px;
+}
 
-      .hero p {
-        font-size: 14px;
-      }
+/* DARK MODE */
+body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
 
-      .container {
-        padding: 25px 12px;
-      }
+body.dark .intro,
+body.dark .quick-nav,
+body.dark .topic,
+body.dark .search-box{
+  background:#1e293b;
+  color:#e5e7eb;
+}
 
-      .intro,
-      .quick-nav,
-      .topic {
-        padding: 18px;
-      }
+body.dark .topic h2,
+body.dark .intro h2,
+body.dark .quick-nav h2{
+  color:#93c5fd;
+}
 
-      .topic h2 {
-        font-size: 20px;
-      }
+body.dark .topic h3{
+  color:#cbd5e1;
+}
 
-      .topic h3 {
-        font-size: 17px;
-      }
+body.dark .nav-grid a{
+  background:#172554;
+  color:#93c5fd;
+}
 
-      .nav-grid {
-        grid-template-columns: 1fr;
-      }
+body.dark .study-box{
+  background:#052e24;
+}
 
-      .topic li {
-        font-size: 14px;
-      }
+body.dark .highlight{
+  background:#422006;
+}
 
-      .bottom-buttons {
-        flex-direction: column;
-      }
+body.dark th{
+  background:#172554;
+  color:#93c5fd;
+}
 
-      .btn {
-        text-align: center;
-        width: 100%;
-      }
-    }
-  </style>
+body.dark #topicSearch{
+  background:#0f172a;
+  color:white;
+  border-color:#475569;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+  .logo{
+    font-size:16px;
+  }
+
+  .header-btn{
+    font-size:11px;
+    padding:7px 8px;
+  }
+
+  .hero{
+    padding:38px 14px;
+  }
+
+  .hero-icon{
+    font-size:40px;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .container{
+    padding:22px 11px;
+  }
+
+  .intro,
+  .quick-nav,
+  .topic,
+  .search-box{
+    padding:17px;
+  }
+
+  .topic h2{
+    font-size:20px;
+  }
+
+  .topic h3{
+    font-size:17px;
+  }
+
+  .topic li{
+    font-size:14px;
+  }
+
+  .nav-grid{
+    grid-template-columns:1fr;
+  }
+
+  .bottom-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    text-align:center;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <div class="header-inner">
-
-      <div class="logo">
-        🇮🇳 UPSC <b>Shiksha</b>
-      </div>
-
-      <a href="index.html" class="back-btn">
-        ← Home
-      </a>
-
-    </div>
-  </header>
-
-
-  <!-- HERO -->
-  <section class="hero">
-
-    <div class="icon">🏛️</div>
-
-    <h1>
-      Indian <span>Polity</span>
-    </h1>
-
-    <p>
-      Complete Indian Polity study material for UPSC
-      Civil Services Examination.
-    </p>
-
-  </section>
-
-
-  <!-- MAIN CONTENT -->
-  <main class="container">
-
-    <!-- INTRO -->
-    <section class="intro">
-
-      <h2>📚 Indian Polity for UPSC</h2>
-
-      <p>
-        Indian Polity is an important subject for both
-        UPSC Prelims and Mains. This page covers the
-        Constitution, Fundamental Rights, Parliament,
-        President, Judiciary, Constitutional Bodies,
-        Governance and other important topics.
-      </p>
-
-      <div class="highlight">
-        <strong>🎯 Preparation Tip:</strong>
-        Understand concepts first, then revise important
-        Articles, Constitutional provisions and landmark
-        developments regularly.
-      </div>
-
-    </section>
-
-
-    <!-- QUICK NAVIGATION -->
-    <section class="quick-nav">
-
-      <h2>🧭 Topics</h2>
-
-      <div class="nav-grid">
-
-        <a href="#constitution">
-          Constitution
-        </a>
-
-        <a href="#rights">
-          Fundamental Rights
-        </a>
-
-        <a href="#duties">
-          Fundamental Duties
-        </a>
-
-        <a href="#president">
-          President & Vice-President
-        </a>
-
-        <a href="#parliament">
-          Parliament
-        </a>
-
-        <a href="#judiciary">
-          Judiciary
-        </a>
-
-        <a href="#federalism">
-          Federalism
-        </a>
-
-        <a href="#bodies">
-          Constitutional Bodies
-        </a>
-
-        <a href="#governance">
-          Governance
-        </a>
-
-        <a href="#local">
-          Local Government
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONSTITUTION -->
-    <section class="topic" id="constitution">
-
-      <h2>🇮🇳 1. Indian Constitution</h2>
-
-      <p>
-        The Constitution of India is the supreme legal
-        framework of the country. It defines the powers
-        and responsibilities of institutions and protects
-        citizens' rights.
-      </p>
-
-      <h3>Important Areas</h3>
-
-      <ul>
-        <li>Historical Background</li>
-        <li>Making of the Constitution</li>
-        <li>Constituent Assembly</li>
-        <li>Salient Features</li>
-        <li>Preamble</li>
-        <li>Parts and Schedules</li>
-        <li>Amendment of the Constitution</li>
-        <li>Basic Structure Doctrine</li>
-      </ul>
-
-      <div class="study-box">
-        <strong>UPSC Focus:</strong>
-        Preamble, Constitutional features, important
-        amendments and Basic Structure Doctrine.
-      </div>
-
-    </section>
-
-
-    <!-- FUNDAMENTAL RIGHTS -->
-    <section class="topic" id="rights">
-
-      <h2>⚖️ 2. Fundamental Rights</h2>
-
-      <p>
-        Fundamental Rights are constitutional rights
-        guaranteed to individuals under Part III of
-        the Constitution.
-      </p>
-
-      <h3>Major Rights</h3>
-
-      <ul>
-        <li>Right to Equality</li>
-        <li>Right to Freedom</li>
-        <li>Right against Exploitation</li>
-        <li>Right to Freedom of Religion</li>
-        <li>Cultural and Educational Rights</li>
-        <li>Right to Constitutional Remedies</li>
-      </ul>
-
-      <h3>Important Concepts</h3>
-
-      <ul>
-        <li>Writs</li>
-        <li>Judicial Review</li>
-        <li>Reasonable Restrictions</li>
-        <li>Article 32</li>
-        <li>Article 226</li>
-      </ul>
-
-    </section>
-
-
-    <!-- FUNDAMENTAL DUTIES -->
-    <section class="topic" id="duties">
-
-      <h2>🫡 3. Fundamental Duties</h2>
-
-      <p>
-        Fundamental Duties are contained in Article 51A
-        under Part IVA of the Constitution.
-      </p>
-
-      <h3>Important Points</h3>
-
-      <ul>
-        <li>Respect the Constitution and national symbols</li>
-        <li>Protect the sovereignty and integrity of India</li>
-        <li>Promote harmony</li>
-        <li>Protect the environment</li>
-        <li>Develop scientific temper</li>
-        <li>Safeguard public property</li>
-        <li>Provide educational opportunities to children as specified by the Constitution</li>
-      </ul>
-
-    </section>
-
-
-    <!-- PRESIDENT -->
-    <section class="topic" id="president">
-
-      <h2>🇮🇳 4. President & Vice-President</h2>
-
-      <h3>President of India</h3>
-
-      <ul>
-        <li>Election of President</li>
-        <li>Qualifications</li>
-        <li>Term of Office</li>
-        <li>Impeachment</li>
-        <li>Executive Powers</li>
-        <li>Legislative Powers</li>
-        <li>Financial Powers</li>
-        <li>Emergency Powers</li>
-        <li>Ordinance-making Power</li>
-      </ul>
-
-      <h3>Vice-President</h3>
-
-      <ul>
-        <li>Election</li>
-        <li>Qualifications</li>
-        <li>Term</li>
-        <li>Removal</li>
-        <li>Role as Chairman of Rajya Sabha</li>
-      </ul>
-
-    </section>
-
-
-    <!-- PRIME MINISTER -->
-    <section class="topic">
-
-      <h2>👤 5. Prime Minister & Council of Ministers</h2>
-
-      <ul>
-        <li>Appointment of Prime Minister</li>
-        <li>Council of Ministers</li>
-        <li>Cabinet</li>
-        <li>Collective Responsibility</li>
-        <li>Individual Responsibility</li>
-        <li>Cabinet Committees</li>
-        <li>Role of Prime Minister</li>
-      </ul>
-
-    </section>
-
-
-    <!-- PARLIAMENT -->
-    <section class="topic" id="parliament">
-
-      <h2>🏛️ 6. Parliament</h2>
-
-      <p>
-        Parliament is the principal legislative institution
-        at the Union level.
-      </p>
-
-      <h3>Major Topics</h3>
-
-      <ul>
-        <li>Lok Sabha</li>
-        <li>Rajya Sabha</li>
-        <li>Composition of Parliament</li>
-        <li>Qualifications of Members</li>
-        <li>Disqualifications</li>
-        <li>Parliamentary Sessions</li>
-        <li>Question Hour</li>
-        <li>Zero Hour</li>
-        <li>Parliamentary Committees</li>
-        <li>Legislative Procedure</li>
-        <li>Money Bill</li>
-        <li>Finance Bill</li>
-        <li>Budget</li>
-        <li>Anti-Defection Law</li>
-      </ul>
-
-      <div class="study-box">
-        <strong>UPSC Focus:</strong>
-        Understand the difference between Money Bill,
-        Financial Bill and Ordinary Bill.
-      </div>
-
-    </section>
-
-
-    <!-- JUDICIARY -->
-    <section class="topic" id="judiciary">
-
-      <h2>⚖️ 7. Supreme Court & Judiciary</h2>
-
-      <h3>Supreme Court</h3>
-
-      <ul>
-        <li>Composition</li>
-        <li>Appointment of Judges</li>
-        <li>Qualifications</li>
-        <li>Jurisdiction</li>
-        <li>Original Jurisdiction</li>
-        <li>Appellate Jurisdiction</li>
-        <li>Advisory Jurisdiction</li>
-        <li>Writ Jurisdiction</li>
-        <li>Judicial Review</li>
-        <li>Public Interest Litigation</li>
-      </ul>
-
-      <h3>High Courts</h3>
-
-      <ul>
-        <li>Composition</li>
-        <li>Appointment</li>
-        <li>Jurisdiction</li>
-        <li>Writ Powers</li>
-      </ul>
-
-    </section>
-
-
-    <!-- FEDERALISM -->
-    <section class="topic" id="federalism">
-
-      <h2>🤝 8. Federalism & Centre-State Relations</h2>
-
-      <ul>
-        <li>Federal Features of India</li>
-        <li>Unitary Features</li>
-        <li>Legislative Relations</li>
-        <li>Administrative Relations</li>
-        <li>Financial Relations</li>
-        <li>Inter-State Relations</li>
-        <li>Inter-State Council</li>
-        <li>Finance Commission</li>
-        <li>GST Council</li>
-        <li>Cooperative Federalism</li>
-      </ul>
-
-    </section>
-
-
-    <!-- GOVERNOR -->
-    <section class="topic">
-
-      <h2>🏢 9. Governor & State Government</h2>
-
-      <h3>Governor</h3>
-
-      <ul>
-        <li>Appointment</li>
-        <li>Qualifications</li>
-        <li>Term</li>
-        <li>Powers</li>
-        <li>Discretionary Powers</li>
-      </ul>
-
-      <h3>State Legislature</h3>
-
-      <ul>
-        <li>Legislative Assembly</li>
-        <li>Legislative Council</li>
-        <li>State Bills</li>
-        <li>State Budget</li>
-      </ul>
-
-    </section>
-
-
-    <!-- CONSTITUTIONAL BODIES -->
-    <section class="topic" id="bodies">
-
-      <h2>📋 10. Constitutional Bodies</h2>
-
-      <ul>
-        <li>Election Commission of India</li>
-        <li>Union Public Service Commission</li>
-        <li>Finance Commission</li>
-        <li>Comptroller and Auditor General</li>
-        <li>Attorney General of India</li>
-        <li>National Commission for Scheduled Castes</li>
-        <li>National Commission for Scheduled Tribes</li>
-        <li>GST Council</li>
-      </ul>
-
-      <div class="table-wrapper">
-
-        <table>
-
-          <tr>
-            <th>Body</th>
-            <th>Major Function</th>
-          </tr>
-
-          <tr>
-            <td>Election Commission</td>
-            <td>Conduct of elections</td>
-          </tr>
-
-          <tr>
-            <td>UPSC</td>
-            <td>Recruitment to specified public services</td>
-          </tr>
-
-          <tr>
-            <td>Finance Commission</td>
-            <td>Centre-State financial distribution</td>
-          </tr>
-
-          <tr>
-            <td>CAG</td>
-            <td>Audit of public finances</td>
-          </tr>
-
-        </table>
-
-      </div>
-
-    </section>
-
-
-    <!-- LOCAL GOVERNMENT -->
-    <section class="topic" id="local">
-
-      <h2>🏘️ 11. Local Government</h2>
-
-      <h3>Panchayati Raj</h3>
-
-      <ul>
-        <li>73rd Constitutional Amendment</li>
-        <li>Gram Sabha</li>
-        <li>Gram Panchayat</li>
-        <li>Panchayat Samiti</li>
-        <li>Zila Parishad</li>
-        <li>Reservation</li>
-        <li>State Election Commission</li>
-        <li>State Finance Commission</li>
-      </ul>
-
-      <h3>Urban Local Government</h3>
-
-      <ul>
-        <li>74th Constitutional Amendment</li>
-        <li>Municipal Corporation</li>
-        <li>Municipality</li>
-        <li>Nagar Panchayat</li>
-        <li>Municipal Elections</li>
-      </ul>
-
-    </section>
-
-
-    <!-- GOVERNANCE -->
-    <section class="topic" id="governance">
-
-      <h2>🌐 12. Governance</h2>
-
-      <ul>
-        <li>Good Governance</li>
-        <li>Transparency</li>
-        <li>Accountability</li>
-        <li>Right to Information</li>
-        <li>Citizen Charter</li>
-        <li>E-Governance</li>
-        <li>Social Audit</li>
-        <li>Role of Civil Services</li>
-        <li>Non-Governmental Organisations</li>
-        <li>Self Help Groups</li>
-      </ul>
-
-    </section>
-
-
-    <!-- EMERGENCY -->
-    <section class="topic">
-
-      <h2>🚨 13. Emergency Provisions</h2>
-
-      <ul>
-        <li>National Emergency</li>
-        <li>President's Rule</li>
-        <li>Financial Emergency</li>
-        <li>Effects of Emergency</li>
-        <li>Constitutional Safeguards</li>
-      </ul>
-
-    </section>
-
-
-    <!-- IMPORTANT ARTICLES -->
-    <section class="topic">
-
-      <h2>📌 14. Important Constitutional Articles</h2>
-
-      <div class="table-wrapper">
-
-        <table>
-
-          <tr>
-            <th>Article</th>
-            <th>Subject</th>
-          </tr>
-
-          <tr>
-            <td>14</td>
-            <td>Equality before law</td>
-          </tr>
-
-          <tr>
-            <td>19</td>
-            <td>Freedom-related rights</td>
-          </tr>
-
-          <tr>
-            <td>21</td>
-            <td>Protection of life and personal liberty</td>
-          </tr>
-
-          <tr>
-            <td>32</td>
-            <td>Constitutional remedies</td>
-          </tr>
-
-          <tr>
-            <td>51A</td>
-            <td>Fundamental Duties</td>
-          </tr>
-
-          <tr>
-            <td>72</td>
-            <td>President's pardoning power</td>
-          </tr>
-
-          <tr>
-            <td>123</td>
-            <td>President's ordinance-making power</td>
-          </tr>
-
-          <tr>
-            <td>143</td>
-            <td>Advisory jurisdiction of Supreme Court</td>
-          </tr>
-
-          <tr>
-            <td>280</td>
-            <td>Finance Commission</td>
-          </tr>
-
-          <tr>
-            <td>324</td>
-            <td>Election Commission</td>
-          </tr>
-
-          <tr>
-            <td>356</td>
-            <td>President's Rule</td>
-          </tr>
-
-          <tr>
-            <td>368</td>
-            <td>Constitutional Amendment</td>
-          </tr>
-
-        </table>
-
-      </div>
-
-    </section>
-
-
-    <!-- PREPARATION -->
-    <section class="topic">
-
-      <h2>🎯 How to Prepare Indian Polity</h2>
-
-      <h3>Step 1 — Understand</h3>
-
-      <p>
-        First understand the basic concepts of the
-        Constitution and political institutions.
-      </p>
-
-      <h3>Step 2 — Revise</h3>
-
-      <p>
-        Regularly revise important Articles, amendments,
-        constitutional bodies and important concepts.
-      </p>
-
-      <h3>Step 3 — Practice</h3>
-
-      <p>
-        Solve UPSC Previous Year Questions and practice
-        topic-wise MCQs.
-      </p>
-
-      <h3>Step 4 — Current Affairs</h3>
-
-      <p>
-        Connect constitutional and governance concepts
-        with current developments.
-      </p>
-
-      <div class="highlight">
-        <strong>📖 Recommended approach:</strong>
-        Use a standard Indian Polity reference book along
-        with the Constitution, UPSC syllabus and previous
-        year questions.
-      </div>
-
-    </section>
-
-
-    <!-- BUTTONS -->
-    <div class="bottom-buttons">
-
-      <a href="index.html" class="btn btn-primary">
-        🏠 Back to Home
-      </a>
-
-      <a href="prelims.html" class="btn btn-dark">
-        📚 Prelims Syllabus
-      </a>
-
-      <a href="mains.html" class="btn btn-dark">
-        ✍️ Mains Syllabus
-      </a>
-
-    </div>
-
-  </main>
-
-
-  <!-- FOOTER -->
-  <footer>
-
-    <div class="footer-logo">
+<!-- HEADER -->
+<header>
+  <div class="header-inner">
+
+    <div class="logo">
       🇮🇳 UPSC <b>Shiksha</b>
     </div>
 
-    <p>
-      Free UPSC Preparation Platform
-    </p>
+    <div class="header-buttons">
+      <a href="index.html" class="header-btn">← Home</a>
 
-    <p>
-      © 2026 UPSC Shiksha. All Rights Reserved.
-    </p>
+      <button class="header-btn" onclick="toggleDarkMode()">
+        🌙
+      </button>
+    </div>
 
-  </footer>
+  </div>
+</header>
+
+
+<!-- HERO -->
+<section class="hero">
+
+  <div class="hero-icon">🏛️</div>
+
+  <h1>
+    Indian <span>Polity</span>
+  </h1>
+
+  <p>
+    Complete Indian Polity study material for
+    UPSC Civil Services Examination.
+  </p>
+
+</section>
+
+
+<main class="container">
+
+<!-- SEARCH -->
+<section class="search-box">
+
+  <h2>🔎 Search Polity Topics</h2>
+
+  <input
+    type="text"
+    id="topicSearch"
+    placeholder="Search Constitution, Parliament, Judiciary..."
+    onkeyup="searchTopics()"
+  >
+
+</section>
+
+
+<!-- INTRO -->
+<section class="intro">
+
+  <h2>📚 Indian Polity for UPSC</h2>
+
+  <p>
+    Indian Polity is an important area for UPSC Prelims
+    and Mains. Study the Constitution, Fundamental Rights,
+    Parliament, Executive, Judiciary, Federalism,
+    Constitutional Bodies and Governance systematically.
+  </p>
+
+  <div class="highlight">
+    <strong>🎯 UPSC Tip:</strong>
+    Understand the concept first, then revise Articles,
+    Constitutional provisions, important amendments and
+    previous year questions.
+  </div>
+
+</section>
+
+
+<!-- QUICK NAV -->
+<section class="quick-nav">
+
+  <h2>🧭 Polity Topics</h2>
+
+  <div class="nav-grid">
+
+    <a href="#constitution">🇮🇳 Constitution</a>
+    <a href="#rights">⚖️ Fundamental Rights</a>
+    <a href="#duties">🫡 Fundamental Duties</a>
+    <a href="#executive">👤 Executive</a>
+    <a href="#parliament">🏛️ Parliament</a>
+    <a href="#judiciary">⚖️ Judiciary</a>
+    <a href="#federalism">🤝 Federalism</a>
+    <a href="#state">🏢 State Government</a>
+    <a href="#bodies">📋 Constitutional Bodies</a>
+    <a href="#local">🏘️ Local Government</a>
+    <a href="#governance">🌐 Governance</a>
+    <a href="#emergency">🚨 Emergency</a>
+
+  </div>
+
+</section>
+
+
+<!-- CONSTITUTION -->
+<section class="topic" id="constitution">
+
+  <span class="tag">PRELIMS + MAINS</span>
+
+  <h2>🇮🇳 1. Indian Constitution</h2>
+
+  <p>
+    The Constitution of India provides the framework for
+    governance, institutions, powers and rights in India.
+  </p>
+
+  <h3>Important Areas</h3>
+
+  <ul>
+    <li>Historical Background</li>
+    <li>Constituent Assembly</li>
+    <li>Making of the Constitution</li>
+    <li>Salient Features</li>
+    <li>Preamble</li>
+    <li>Parts and Schedules</li>
+    <li>Constitutional Amendments</li>
+    <li>Basic Structure Doctrine</li>
+  </ul>
+
+  <div class="study-box">
+    <strong>📌 Focus:</strong>
+    Preamble, Parts, Schedules, Amendments and
+    Basic Structure Doctrine.
+  </div>
+
+</section>
+
+
+<!-- RIGHTS -->
+<section class="topic" id="rights">
+
+  <span class="tag">HIGH IMPORTANCE</span>
+
+  <h2>⚖️ 2. Fundamental Rights</h2>
+
+  <p>
+    Fundamental Rights are contained in Part III of the
+    Constitution.
+  </p>
+
+  <h3>Major Rights</h3>
+
+  <ul>
+    <li>Right to Equality</li>
+    <li>Right to Freedom</li>
+    <li>Right against Exploitation</li>
+    <li>Right to Freedom of Religion</li>
+    <li>Cultural and Educational Rights</li>
+    <li>Right to Constitutional Remedies</li>
+  </ul>
+
+  <h3>Important Concepts</h3>
+
+  <ul>
+    <li>Writs</li>
+    <li>Reasonable Restrictions</li>
+    <li>Article 32</li>
+    <li>Article 226</li>
+    <li>Judicial Review</li>
+  </ul>
+
+</section>
+
+
+<!-- DUTIES -->
+<section class="topic" id="duties">
+
+  <span class="tag">PRELIMS</span>
+
+  <h2>🫡 3. Fundamental Duties</h2>
+
+  <p>
+    Fundamental Duties are contained in Article 51A
+    under Part IVA.
+  </p>
+
+  <ul>
+    <li>Respect the Constitution and national symbols</li>
+    <li>Protect sovereignty and integrity of India</li>
+    <li>Promote harmony</li>
+    <li>Protect the environment</li>
+    <li>Develop scientific temper</li>
+    <li>Safeguard public property</li>
+    <li>Provide educational opportunities to children as specified by the Constitution</li>
+  </ul>
+
+</section>
+
+
+<!-- EXECUTIVE -->
+<section class="topic" id="executive">
+
+  <span class="tag">PRELIMS + MAINS</span>
+
+  <h2>👤 4. Union Executive</h2>
+
+  <h3>President</h3>
+
+  <ul>
+    <li>Election</li>
+    <li>Qualifications</li>
+    <li>Term of Office</li>
+    <li>Impeachment</li>
+    <li>Executive Powers</li>
+    <li>Legislative Powers</li>
+    <li>Financial Powers</li>
+    <li>Emergency Powers</li>
+    <li>Ordinance-making Power</li>
+  </ul>
+
+  <h3>Vice-President</h3>
+
+  <ul>
+    <li>Election</li>
+    <li>Qualifications</li>
+    <li>Term</li>
+    <li>Removal</li>
+    <li>Chairman of Rajya Sabha</li>
+  </ul>
+
+  <h3>Prime Minister & Council of Ministers</h3>
+
+  <ul>
+    <li>Appointment of Prime Minister</li>
+    <li>Council of Ministers</li>
+    <li>Cabinet</li>
+    <li>Collective Responsibility</li>
+    <li>Cabinet Committees</li>
+  </ul>
+
+</section>
+
+
+<!-- PARLIAMENT -->
+<section class="topic" id="parliament">
+
+  <span class="tag">VERY IMPORTANT</span>
+
+  <h2>🏛️ 5. Parliament</h2>
+
+  <ul>
+    <li>Lok Sabha</li>
+    <li>Rajya Sabha</li>
+    <li>Composition</li>
+    <li>Qualifications of Members</li>
+    <li>Disqualifications</li>
+    <li>Parliamentary Sessions</li>
+    <li>Question Hour</li>
+    <li>Zero Hour</li>
+    <li>Parliamentary Committees</li>
+    <li>Legislative Procedure</li>
+    <li>Money Bill</li>
+    <li>Financial Bill</li>
+    <li>Budget</li>
+    <li>Anti-Defection Law</li>
+  </ul>
+
+  <div class="study-box">
+    <strong>🎯 UPSC Focus:</strong>
+    Money Bill vs Financial Bill vs Ordinary Bill.
+  </div>
+
+</section>
+
+
+<!-- JUDICIARY -->
+<section class="topic" id="judiciary">
+
+  <span class="tag">HIGH IMPORTANCE</span>
+
+  <h2>⚖️ 6. Supreme Court & Judiciary</h2>
+
+  <h3>Supreme Court</h3>
+
+  <ul>
+    <li>Composition</li>
+    <li>Appointment of Judges</li>
+    <li>Qualifications</li>
+    <li>Original Jurisdiction</li>
+    <li>Appellate Jurisdiction</li>
+    <li>Advisory Jurisdiction</li>
+    <li>Writ Jurisdiction</li>
+    <li>Judicial Review</li>
+    <li>Public Interest Litigation</li>
+  </ul>
+
+  <h3>High Courts</h3>
+
+  <ul>
+    <li>Composition</li>
+    <li>Appointment</li>
+    <li>Jurisdiction</li>
+    <li>Writ Powers</li>
+  </ul>
+
+</section>
+
+
+<!-- FEDERALISM -->
+<section class="topic" id="federalism">
+
+  <span class="tag">MAINS + PRELIMS</span>
+
+  <h2>🤝 7. Federalism & Centre-State Relations</h2>
+
+  <ul>
+    <li>Federal Features</li>
+    <li>Unitary Features</li>
+    <li>Legislative Relations</li>
+    <li>Administrative Relations</li>
+    <li>Financial Relations</li>
+    <li>Inter-State Relations</li>
+    <li>Inter-State Council</li>
+    <li>Finance Commission</li>
+    <li>GST Council</li>
+    <li>Cooperative Federalism</li>
+  </ul>
+
+</section>
+
+
+<!-- STATE -->
+<section class="topic" id="state">
+
+  <span class="tag">PRELIMS + MAINS</span>
+
+  <h2>🏢 8. State Government</h2>
+
+  <h3>Governor</h3>
+
+  <ul>
+    <li>Appointment</li>
+    <li>Qualifications</li>
+    <li>Term</li>
+    <li>Powers</li>
+    <li>Discretionary Powers</li>
+  </ul>
+
+  <h3>State Legislature</h3>
+
+  <ul>
+    <li>Legislative Assembly</li>
+    <li>Legislative Council</li>
+    <li>State Bills</li>
+    <li>State Budget</li>
+  </ul>
+
+</section>
+
+
+<!-- BODIES -->
+<section class="topic" id="bodies">
+
+  <span class="tag">PRELIMS</span>
+
+  <h2>📋 9. Constitutional Bodies</h2>
+
+  <ul>
+    <li>Election Commission of India</li>
+    <li>Union Public Service Commission</li>
+    <li>Finance Commission</li>
+    <li>Comptroller and Auditor General</li>
+    <li>Attorney General of India</li>
+    <li>National Commission for Scheduled Castes</li>
+    <li>National Commission for Scheduled Tribes</li>
+    <li>GST Council</li>
+  </ul>
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <tr>
+        <th>Body</th>
+        <th>Major Function</th>
+      </tr>
+
+      <tr>
+        <td>Election Commission</td>
+        <td>Election-related constitutional functions</td>
+      </tr>
+
+      <tr>
+        <td>UPSC</td>
+        <td>Functions relating to recruitment and specified services</td>
+      </tr>
+
+      <tr>
+        <td>Finance Commission</td>
+        <td>Recommendations on distribution of certain financial resources</td>
+      </tr>
+
+      <tr>
+        <td>CAG</td>
+        <td>Audit of public accounts as provided by law</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- LOCAL GOVERNMENT -->
+<section class="topic" id="local">
+
+  <span class="tag">PRELIMS</span>
+
+  <h2>🏘️ 10. Local Government</h2>
+
+  <h3>Panchayati Raj</h3>
+
+  <ul>
+    <li>73rd Constitutional Amendment</li>
+    <li>Gram Sabha</li>
+    <li>Gram Panchayat</li>
+    <li>Panchayat Samiti</li>
+    <li>Zila Parishad</li>
+    <li>Reservation</li>
+    <li>State Election Commission</li>
+    <li>State Finance Commission</li>
+  </ul>
+
+  <h3>Urban Local Government</h3>
+
+  <ul>
+    <li>74th Constitutional Amendment</li>
+    <li>Municipal Corporation</li>
+    <li>Municipality</li>
+    <li>Nagar Panchayat</li>
+  </ul>
+
+</section>
+
+
+<!-- GOVERNANCE -->
+<section class="topic" id="governance">
+
+  <span class="tag">MAINS</span>
+
+  <h2>🌐 11. Governance</h2>
+
+  <ul>
+    <li>Good Governance</li>
+    <li>Transparency</li>
+    <li>Accountability</li>
+    <li>Right to Information</li>
+    <li>Citizen Charter</li>
+    <li>E-Governance</li>
+    <li>Social Audit</li>
+    <li>Role of Civil Services</li>
+    <li>Non-Governmental Organisations</li>
+    <li>Self Help Groups</li>
+  </ul>
+
+</section>
+
+
+<!-- EMERGENCY -->
+<section class="topic" id="emergency">
+
+  <span class="tag">PRELIMS</span>
+
+  <h2>🚨 12. Emergency Provisions</h2>
+
+  <ul>
+    <li>National Emergency</li>
+    <li>President's Rule</li>
+    <li>Financial Emergency</li>
+    <li>Effects of Emergency</li>
+    <li>Constitutional Safeguards</li>
+  </ul>
+
+</section>
+
+
+<!-- ARTICLES -->
+<section class="topic">
+
+  <span class="tag">QUICK REVISION</span>
+
+  <h2>📌 Important Constitutional Articles</h2>
+
+  <div class="table-wrapper">
+
+    <table>
+
+      <tr>
+        <th>Article</th>
+        <th>Subject</th>
+      </tr>
+
+      <tr>
+        <td>14</td>
+        <td>Equality before law</td>
+      </tr>
+
+      <tr>
+        <td>19</td>
+        <td>Freedoms specified in Article 19</td>
+      </tr>
+
+      <tr>
+        <td>21</td>
+        <td>Protection of life and personal liberty</td>
+      </tr>
+
+      <tr>
+        <td>32</td>
+        <td>Constitutional remedies</td>
+      </tr>
+
+      <tr>
+        <td>51A</td>
+        <td>Fundamental Duties</td>
+      </tr>
+
+      <tr>
+        <td>72</td>
+        <td>President's pardoning power</td>
+      </tr>
+
+      <tr>
+        <td>123</td>
+        <td>President's ordinance-making power</td>
+      </tr>
+
+      <tr>
+        <td>143</td>
+        <td>Advisory jurisdiction of Supreme Court</td>
+      </tr>
+
+      <tr>
+        <td>280</td>
+        <td>Finance Commission</td>
+      </tr>
+
+      <tr>
+        <td>324</td>
+        <td>Election Commission</td>
+      </tr>
+
+      <tr>
+        <td>356</td>
+        <td>President's Rule</td>
+      </tr>
+
+      <tr>
+        <td>368</td>
+        <td>Constitutional Amendment</td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- PREPARATION -->
+<section class="topic">
+
+  <span class="tag">STUDY PLAN</span>
+
+  <h2>🎯 How to Prepare Indian Polity</h2>
+
+  <h3>Step 1 — Understand</h3>
+
+  <p>
+    Understand the Constitution and the functioning of
+    major political institutions.
+  </p>
+
+  <h3>Step 2 — Revise</h3>
+
+  <p>
+    Revise Articles, amendments, constitutional bodies
+    and important concepts regularly.
+  </p>
+
+  <h3>Step 3 — Practice</h3>
+
+  <p>
+    Solve UPSC Previous Year Questions and topic-wise MCQs.
+  </p>
+
+  <h3>Step 4 — Current Affairs</h3>
+
+  <p>
+    Connect static Polity concepts with relevant
+    current developments.
+  </p>
+
+  <div class="highlight">
+    <strong>📖 Remember:</strong>
+    Static Polity + Current Affairs + PYQs + Revision
+    should be studied together.
+  </div>
+
+</section>
+
+
+<!-- BOTTOM BUTTONS -->
+<div class="bottom-buttons">
+
+  <a href="index.html" class="btn btn-primary">
+    🏠 Home
+  </a>
+
+  <a href="prelims.html" class="btn btn-dark">
+    📚 Prelims
+  </a>
+
+  <a href="mains.html" class="btn btn-dark">
+    ✍️ Mains
+  </a>
+
+  <a href="pyq.html" class="btn btn-dark">
+    📝 PYQs
+  </a>
+
+</div>
+
+</main>
+
+
+<!-- BACK TO TOP -->
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+
+<!-- FOOTER -->
+<footer>
+
+  <div class="footer-logo">
+    🇮🇳 UPSC <b>Shiksha</b>
+  </div>
+
+  <p>Free UPSC Preparation Platform</p>
+
+  <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
+
+</footer>
+
+
+<script>
+
+/* DARK MODE */
+function toggleDarkMode(){
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("polityDarkMode","on");
+  }else{
+    localStorage.setItem("polityDarkMode","off");
+  }
+
+}
+
+
+/* LOAD DARK MODE */
+if(localStorage.getItem("polityDarkMode") === "on"){
+  document.body.classList.add("dark");
+}
+
+
+/* SEARCH TOPICS */
+function searchTopics(){
+
+  let input =
+    document.getElementById("topicSearch").value.toLowerCase();
+
+  let topics =
+    document.querySelectorAll(".topic");
+
+  topics.forEach(function(topic){
+
+    let text = topic.innerText.toLowerCase();
+
+    if(text.includes(input)){
+      topic.style.display = "";
+    }else{
+      topic.style.display = "none";
+    }
+
+  });
+
+}
+
+
+/* BACK TO TOP */
+window.onscroll = function(){
+
+  let btn = document.getElementById("topBtn");
+
+  if(document.documentElement.scrollTop > 400){
+    btn.style.display = "block";
+  }else{
+    btn.style.display = "none";
+  }
+
+};
+
+
+function topFunction(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+</script>
 
 </body>
 </html>
