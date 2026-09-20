@@ -1,810 +1,494 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UPSC Shiksha | Previous Year Questions</title>
+<title>UPSC PYQ | UPSC Shiksha</title>
+<meta name="description" content="UPSC Previous Year Questions - Prelims, CSAT and Mains PYQs">
 
-  <meta
-    name="description"
-    content="UPSC Previous Year Questions organized by Prelims, CSAT and Mains."
-  >
+<link rel="stylesheet" href="style.css">
 
-  <link rel="stylesheet" href="style.css">
+<style>
+.pyq-hero {
+  text-align: center;
+  padding: 70px 20px 45px;
+}
 
-  <style>
-    .pyq-page {
-      max-width: 1100px;
-      margin: auto;
-      padding: 25px 16px 50px;
-    }
+.pyq-hero h1 {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
 
-    .pyq-header {
-      text-align: center;
-      padding: 40px 20px;
-      margin-bottom: 25px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #fff3cd, #ffffff);
-      box-shadow: 0 5px 18px rgba(0,0,0,0.06);
-    }
+.pyq-hero p {
+  font-size: 18px;
+  opacity: .85;
+}
 
-    .pyq-header h1 {
-      font-size: 32px;
-      margin-bottom: 12px;
-    }
+.tag-box {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 20px;
+}
 
-    .pyq-header p {
-      line-height: 1.7;
-      margin-bottom: 18px;
-    }
+.tag {
+  padding: 8px 15px;
+  border-radius: 20px;
+  background: #eef2ff;
+  color: #333;
+  font-weight: 600;
+}
 
-    .tags {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 8px;
-    }
+.pyq-container {
+  max-width: 1000px;
+  margin: auto;
+  padding: 20px;
+}
 
-    .tag {
-      padding: 7px 13px;
-      border-radius: 20px;
-      background: #333;
-      color: white;
-      font-size: 13px;
-      font-weight: bold;
-    }
+.search-box {
+  margin: 20px 0 30px;
+}
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 18px;
-      padding: 10px 17px;
-      border-radius: 10px;
-      text-decoration: none;
-      background: #333;
-      color: white;
-    }
+.search-box input {
+  width: 100%;
+  padding: 15px;
+  border-radius: 12px;
+  border: 1px solid #ccc;
+  font-size: 16px;
+  box-sizing: border-box;
+}
 
-    .controls {
-      display: flex;
-      gap: 12px;
-      margin-bottom: 25px;
-      flex-wrap: wrap;
-    }
+.quick-nav {
+  background: #f5f7fa;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 30px;
+}
 
-    #searchPYQ {
-      flex: 1;
-      min-width: 220px;
-      padding: 13px 15px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 15px;
-      box-sizing: border-box;
-    }
+.quick-nav h2 {
+  margin-top: 0;
+}
 
-    #darkBtn {
-      padding: 13px 17px;
-      border: none;
-      border-radius: 12px;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.quick-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
 
-    .quick-nav {
-      background: #f5f5f5;
-      padding: 20px;
-      border-radius: 16px;
-      margin-bottom: 28px;
-    }
+.quick-links a {
+  text-decoration: none;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #222;
+  color: white;
+}
 
-    .quick-nav h2 {
-      margin-top: 0;
-      font-size: 20px;
-    }
+.pyq-card {
+  background: white;
+  padding: 25px;
+  margin: 20px 0;
+  border-radius: 18px;
+  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+}
 
-    .quick-links {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-    }
+.pyq-card h2 {
+  margin-top: 0;
+}
 
-    .quick-links a {
-      text-decoration: none;
-      padding: 9px 13px;
-      border-radius: 9px;
-      background: white;
-      color: #222;
-      border: 1px solid #ddd;
-      font-size: 14px;
-    }
+.pyq-card p {
+  line-height: 1.6;
+}
 
-    .pyq-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+.pyq-btn {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 12px 18px;
+  background: #111;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+  font-weight: 600;
+}
 
-    .pyq-card {
-      background: #fff;
-      padding: 23px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      border: 1px solid #eee;
-    }
+.bottom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin: 40px 0;
+}
 
-    .pyq-card h2 {
-      margin-top: 0;
-      font-size: 21px;
-    }
+.bottom-nav a {
+  padding: 10px 14px;
+  background: #222;
+  color: white;
+  text-decoration: none;
+  border-radius: 10px;
+}
 
-    .pyq-card p {
-      line-height: 1.7;
-    }
+#backTop {
+  position: fixed;
+  right: 18px;
+  bottom: 20px;
+  display: none;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 50%;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+}
 
-    .pyq-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 16px;
-      border-radius: 10px;
-      text-decoration: none;
-      background: #333;
-      color: white;
-    }
+/* Dark Mode */
+body.dark-mode {
+  background: #111;
+  color: #eee;
+}
 
-    .pyq-btn:hover {
-      opacity: 0.85;
-    }
+body.dark-mode .pyq-card,
+body.dark-mode .quick-nav {
+  background: #1d1d1d;
+}
 
-    .note {
-      margin-top: 28px;
-      padding: 22px;
-      border-radius: 16px;
-      background: #f5f5f5;
-      line-height: 1.7;
-    }
+body.dark-mode .search-box input {
+  background: #222;
+  color: white;
+  border-color: #555;
+}
 
-    .bottom-nav {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-top: 35px;
-    }
+body.dark-mode .tag {
+  background: #333;
+  color: white;
+}
 
-    .bottom-nav a {
-      text-decoration: none;
-      padding: 10px 15px;
-      border-radius: 10px;
-      background: #333;
-      color: white;
-      font-size: 14px;
-    }
+@media (max-width: 600px) {
+  .pyq-hero h1 {
+    font-size: 30px;
+  }
 
-    #topBtn {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      display: none;
-      width: 45px;
-      height: 45px;
-      border: none;
-      border-radius: 50%;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-size: 18px;
-      z-index: 999;
-    }
+  .pyq-hero p {
+    font-size: 16px;
+  }
 
-    /* DARK MODE */
+  .pyq-card {
+    padding: 20px;
+  }
 
-    body.dark-pyq {
-      background: #121212;
-      color: #eee;
-    }
-
-    body.dark-pyq .pyq-header {
-      background: linear-gradient(135deg, #292929, #181818);
-    }
-
-    body.dark-pyq .pyq-card,
-    body.dark-pyq .quick-nav,
-    body.dark-pyq .note {
-      background: #1e1e1e;
-      color: #eee;
-      border-color: #333;
-    }
-
-    body.dark-pyq .quick-links a {
-      background: #292929;
-      color: #eee;
-      border-color: #444;
-    }
-
-    body.dark-pyq #searchPYQ {
-      background: #222;
-      color: white;
-      border-color: #555;
-    }
-
-    /* MOBILE */
-
-    @media (max-width: 600px) {
-
-      .pyq-page {
-        padding: 20px 12px 40px;
-      }
-
-      .pyq-header {
-        padding: 30px 15px;
-      }
-
-      .pyq-header h1 {
-        font-size: 27px;
-      }
-
-      .pyq-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .controls {
-        flex-direction: column;
-      }
-
-      #searchPYQ {
-        width: 100%;
-      }
-
-      #darkBtn {
-        width: 100%;
-      }
-
-      .quick-links {
-        flex-direction: column;
-      }
-
-      .quick-links a {
-        text-align: center;
-      }
-
-      .bottom-nav {
-        flex-direction: column;
-      }
-
-      .bottom-nav a {
-        text-align: center;
-      }
-    }
-  </style>
+  .quick-links a,
+  .bottom-nav a {
+    font-size: 14px;
+  }
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
-  <header class="header">
-
-    <div class="logo">
-      <span>🇮🇳</span>
-      UPSC <b>Shiksha</b>
-    </div>
-
-    <button class="menu-btn" id="menuBtn">
-      ☰
-    </button>
-
-    <nav id="navMenu">
-
-      <a href="index.html">Home</a>
-
-      <a href="prelims.html">Prelims</a>
-
-      <a href="csat.html">CSAT</a>
-
-      <a href="mains.html">Mains</a>
-
-    </nav>
-
-  </header>
-
-
-  <!-- MAIN -->
-
-  <main class="pyq-page">
-
-    <a href="index.html" class="back-btn">
-      ← Back to Home
-    </a>
-
-
-    <!-- HERO -->
-
-    <section class="pyq-header">
-
-      <h1>
-        📄 UPSC Previous Year Questions
-      </h1>
-
-      <p>
-        Practice UPSC Previous Year Questions
-        subject-wise and examination-wise.
-      </p>
-
-      <div class="tags">
-
-        <span class="tag">
-          PRELIMS
-        </span>
-
-        <span class="tag">
-          CSAT
-        </span>
-
-        <span class="tag">
-          MAINS
-        </span>
-
-        <span class="tag">
-          PYQs
-        </span>
-
-      </div>
-
-    </section>
-
-
-    <!-- CONTROLS -->
-
-    <div class="controls">
-
-      <input
-        type="text"
-        id="searchPYQ"
-        placeholder="🔍 Search PYQ topics..."
-      >
-
-      <button id="darkBtn">
-        🌙 Dark Mode
-      </button>
-
-    </div>
-
-
-    <!-- QUICK NAVIGATION -->
-
-    <section class="quick-nav">
-
-      <h2>
-        ⚡ Quick Navigation
-      </h2>
-
-      <div class="quick-links">
-
-        <a href="#prelims">
-          Prelims
-        </a>
-
-        <a href="#csat">
-          CSAT
-        </a>
-
-        <a href="#gs1">
-          Mains GS-I
-        </a>
-
-        <a href="#gs2">
-          Mains GS-II
-        </a>
-
-        <a href="#gs3">
-          Mains GS-III
-        </a>
-
-        <a href="#gs4">
-          Mains GS-IV
-        </a>
-
-        <a href="#howto">
-          How to Use PYQs
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- PYQ CARDS -->
-
-    <section class="pyq-grid">
-
-
-      <!-- PRELIMS -->
-
-      <div class="pyq-card" id="prelims">
-
-        <h2>
-          🟠 Prelims GS Paper-I
-        </h2>
-
-        <p>
-          Previous year General Studies questions
-          for UPSC Prelims covering history, geography,
-          polity, economy, environment and science.
-        </p>
-
-        <a
-          href="prelims-pyq.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-
-      <!-- CSAT -->
-
-      <div class="pyq-card" id="csat">
-
-        <h2>
-          🔵 CSAT
-        </h2>
-
-        <p>
-          Previous year CSAT questions covering
-          aptitude, reasoning, mathematics,
-          data interpretation and comprehension.
-        </p>
-
-        <a
-          href="csat-pyq.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-
-      <!-- MAINS GS-I -->
-
-      <div class="pyq-card" id="gs1">
-
-        <h2>
-          ✍️ Mains GS-I
-        </h2>
-
-        <p>
-          History, culture, society and geography
-          related Mains questions.
-        </p>
-
-        <a
-          href="mains-gs1-pyq.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-
-      <!-- MAINS GS-II -->
-
-      <div class="pyq-card" id="gs2">
-
-        <h2>
-          🏛️ Mains GS-II
-        </h2>
-
-        <p>
-          Constitution, governance, polity,
-          social justice and international relations.
-        </p>
-
-        <a
-          href="mains.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-
-      <!-- MAINS GS-III -->
-
-      <div class="pyq-card" id="gs3">
-
-        <h2>
-          💰 Mains GS-III
-        </h2>
-
-        <p>
-          Economy, science & technology,
-          environment and security.
-        </p>
-
-        <a
-          href="mains.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-
-      <!-- MAINS GS-IV -->
-
-      <div class="pyq-card" id="gs4">
-
-        <h2>
-          ⚖️ Mains GS-IV
-        </h2>
-
-        <p>
-          Ethics, integrity, aptitude and
-          case studies.
-        </p>
-
-        <a
-          href="mains.html"
-          class="pyq-btn"
-        >
-          View Questions →
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- NOTE -->
-
-    <section class="note" id="howto">
-
-      <h2>
-        🎯 How to Use PYQs
-      </h2>
-
-      <p>
-        Solve previous year questions after completing
-        each topic. Analyse the question pattern,
-        important themes and recurring concepts.
-      </p>
-
-      <p>
-        Regular PYQ practice can help you understand
-        the UPSC examination pattern and improve
-        revision and answer-writing practice.
-      </p>
-
-    </section>
-
-
-    <!-- BOTTOM NAV -->
-
-    <div class="bottom-nav">
-
-      <a href="index.html">
-        🏠 Home
-      </a>
-
-      <a href="prelims.html">
-        📚 Prelims
-      </a>
-
-      <a href="csat.html">
-        🧠 CSAT
-      </a>
-
-      <a href="mains.html">
-        📝 Mains
-      </a>
-
-      <a href="prelims-pyq.html">
-        📄 Prelims PYQ
-      </a>
-
-      <a href="csat-pyq.html">
-        🧠 CSAT PYQ
-      </a>
-
-      <a href="mains-gs1-pyq.html">
-        ✍️ GS-I PYQ
-      </a>
-
-      <a href="polity.html">
-        🏛️ Polity
-      </a>
-
-      <a href="economy.html">
-        💰 Economy
-      </a>
-
-    </div>
-
-  </main>
-
-
-  <!-- BACK TO TOP -->
-
-  <button id="topBtn">
-    ↑
+<header>
+  <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="prelims.html">Prelims</a>
+    <a href="csat.html">CSAT</a>
+    <a href="mains.html">Mains</a>
+    <a href="pyq.html">PYQs</a>
+  </nav>
+</header>
+
+<main>
+
+<section class="pyq-hero">
+  <h1>📚 UPSC Previous Year Questions</h1>
+
+  <p>
+    Prelims, CSAT and Mains Previous Year Questions
+  </p>
+
+  <div class="tag-box">
+    <span class="tag">PRELIMS</span>
+    <span class="tag">CSAT</span>
+    <span class="tag">MAINS</span>
+    <span class="tag">PYQ</span>
+  </div>
+</section>
+
+
+<section class="pyq-container">
+
+<div style="text-align:center; margin-bottom:20px;">
+  <button id="darkModeBtn" class="pyq-btn">
+    🌙 Dark Mode
   </button>
+</div>
 
 
-  <!-- FOOTER -->
+<div class="search-box">
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="🔍 Search PYQ..."
+  >
+</div>
 
-  <footer>
 
-    <div class="footer-logo">
-      🇮🇳 UPSC <b>Shiksha</b>
-    </div>
+<div class="quick-nav">
 
-    <p>
-      Your Complete UPSC Preparation Platform
-    </p>
+<h2>⚡ Quick Navigation</h2>
 
-    <p class="copyright">
-      © 2026 UPSC Shiksha. All Rights Reserved.
-    </p>
+<div class="quick-links">
+  <a href="#prelims">Prelims GS-I</a>
+  <a href="#csat">CSAT</a>
+  <a href="#gs1">Mains GS-I</a>
+  <a href="#gs2">Mains GS-II</a>
+  <a href="#gs3">Mains GS-III</a>
+  <a href="#gs4">Mains GS-IV</a>
+</div>
 
-  </footer>
+</div>
 
 
-  <!-- SCRIPT -->
+<!-- PRELIMS -->
 
-  <script src="script.js"></script>
+<div class="pyq-card" id="prelims">
 
-  <script>
+<h2>🟢 UPSC Prelims GS-I</h2>
 
-    /* SEARCH */
+<p>
+Previous Year Questions for UPSC Civil Services Preliminary
+General Studies Paper-I.
+</p>
 
-    const searchPYQ =
-      document.getElementById("searchPYQ");
+<a
+href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/prelims-pyq.html"
+class="pyq-btn">
+View Questions →
+</a>
 
-    const pyqCards =
-      document.querySelectorAll(".pyq-card");
+</div>
 
 
-    searchPYQ.addEventListener(
-      "input",
-      function () {
+<!-- CSAT -->
 
-        const searchText =
-          this.value.toLowerCase().trim();
+<div class="pyq-card" id="csat">
 
+<h2>🔵 UPSC CSAT</h2>
 
-        pyqCards.forEach(
-          function (card) {
+<p>
+Previous Year Questions for CSAT Paper-II including
+Comprehension, Reasoning, Mathematics and Data Interpretation.
+</p>
 
-            const text =
-              card.innerText.toLowerCase();
+<a
+href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/csat-pyq.html"
+class="pyq-btn">
+View Questions →
+</a>
 
+</div>
 
-            if (text.includes(searchText)) {
 
-              card.style.display = "";
+<!-- GS-I -->
 
-            } else {
+<div class="pyq-card" id="gs1">
 
-              card.style.display = "none";
+<h2>🟠 Mains GS-I</h2>
 
-            }
+<p>
+Indian Heritage, Culture, History, Geography and Society
+Previous Year Questions.
+</p>
 
-          }
-        );
+<a
+href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/mains-gs1-pyq.html"
+class="pyq-btn">
+View Questions →
+</a>
 
-      }
-    );
+</div>
 
 
-    /* DARK MODE */
+<!-- GS-II -->
 
-    const darkBtn =
-      document.getElementById("darkBtn");
+<div class="pyq-card" id="gs2">
 
+<h2>🔴 Mains GS-II</h2>
 
-    if (
-      localStorage.getItem("pyqDarkMode")
-      === "on"
-    ) {
+<p>
+Indian Constitution, Polity, Governance, Social Justice
+and International Relations Previous Year Questions.
+</p>
 
-      document.body.classList.add(
-        "dark-pyq"
-      );
+<a
+href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/mains-gs2-pyq.html"
+class="pyq-btn">
+View Questions →
+</a>
 
-      darkBtn.innerText =
-        "☀️ Light Mode";
+</div>
 
-    }
 
+<!-- GS-III -->
 
-    darkBtn.addEventListener(
-      "click",
-      function () {
+<div class="pyq-card" id="gs3">
 
-        document.body.classList.toggle(
-          "dark-pyq"
-        );
+<h2>🟣 Mains GS-III</h2>
 
+<p>
+Economy, Agriculture, Science & Technology,
+Environment, Security and Disaster Management.
+</p>
 
-        if (
-          document.body.classList.contains(
-            "dark-pyq"
-          )
-        ) {
+<a
+href="mains.html"
+class="pyq-btn">
+View Questions →
+</a>
 
-          localStorage.setItem(
-            "pyqDarkMode",
-            "on"
-          );
+</div>
 
-          darkBtn.innerText =
-            "☀️ Light Mode";
 
-        } else {
+<!-- GS-IV -->
 
-          localStorage.setItem(
-            "pyqDarkMode",
-            "off"
-          );
+<div class="pyq-card" id="gs4">
 
-          darkBtn.innerText =
-            "🌙 Dark Mode";
+<h2>🟡 Mains GS-IV</h2>
 
-        }
+<p>
+Ethics, Integrity and Aptitude Previous Year Questions.
+</p>
 
-      }
-    );
+<a
+href="mains.html"
+class="pyq-btn">
+View Questions →
+</a>
 
+</div>
 
-    /* BACK TO TOP */
 
-    const topBtn =
-      document.getElementById("topBtn");
+<div class="pyq-card">
 
+<h2>📌 How to Use PYQs?</h2>
 
-    window.addEventListener(
-      "scroll",
-      function () {
+<p>
+1. First understand the syllabus.</p>
 
-        if (window.scrollY > 300) {
+<p>
+2. Solve Previous Year Questions topic-wise.</p>
 
-          topBtn.style.display =
-            "block";
+<p>
+3. Identify repeated concepts.</p>
 
-        } else {
+<p>
+4. Revise mistakes regularly.</p>
 
-          topBtn.style.display =
-            "none";
+<p>
+5. Practice questions within the exam time limit.</p>
 
-        }
+</div>
 
-      }
-    );
 
+<div class="bottom-nav">
 
-    topBtn.addEventListener(
-      "click",
-      function () {
+<a href="index.html">🏠 Home</a>
 
-        window.scrollTo({
+<a href="prelims.html">📚 Prelims</a>
 
-          top: 0,
+<a href="csat.html">🧠 CSAT</a>
 
-          behavior: "smooth"
+<a href="mains.html">📝 Mains</a>
 
-        });
+<a href="prelims-pyq.html">📗 Prelims PYQ</a>
 
-      }
-    );
+<a href="csat-pyq.html">📘 CSAT PYQ</a>
 
-  </script>
+<a href="mains-gs1-pyq.html">📕 GS-I PYQ</a>
+
+<a href="mains-gs2-pyq.html">📙 GS-II PYQ</a>
+
+</div>
+
+</section>
+
+</main>
+
+
+<button id="backTop">↑</button>
+
+
+<footer>
+  <p>© 2026 UPSC Shiksha | Free UPSC Preparation</p>
+</footer>
+
+
+<script>
+
+const searchInput = document.getElementById("searchInput");
+const cards = document.querySelectorAll(".pyq-card");
+
+searchInput.addEventListener("input", function () {
+
+  const value = this.value.toLowerCase();
+
+  cards.forEach(card => {
+
+    const text = card.innerText.toLowerCase();
+
+    card.style.display =
+      text.includes(value) ? "block" : "none";
+
+  });
+
+});
+
+
+const darkModeBtn =
+document.getElementById("darkModeBtn");
+
+if (localStorage.getItem("pyqDarkMode") === "true") {
+  document.body.classList.add("dark-mode");
+}
+
+darkModeBtn.addEventListener("click", function () {
+
+  document.body.classList.toggle("dark-mode");
+
+  localStorage.setItem(
+    "pyqDarkMode",
+    document.body.classList.contains("dark-mode")
+  );
+
+});
+
+
+const backTop =
+document.getElementById("backTop");
+
+window.addEventListener("scroll", function () {
+
+  if (window.scrollY > 300) {
+    backTop.style.display = "block";
+  } else {
+    backTop.style.display = "none";
+  }
+
+});
+
+
+backTop.addEventListener("click", function () {
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+});
+
+</script>
 
 </body>
 </html>
