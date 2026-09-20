@@ -1,0 +1,676 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UPSC Shiksha | CSAT PYQ</title>
+
+  <meta
+    name="description"
+    content="UPSC CSAT Previous Year Question Papers and official resources."
+  >
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .pyq-page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 25px 16px 50px;
+    }
+
+    .back-btn {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 10px 17px;
+      border-radius: 10px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+    }
+
+    .pyq-header {
+      text-align: center;
+      padding: 35px 20px;
+      margin-bottom: 25px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #e8f5e9, #ffffff);
+      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+    }
+
+    .pyq-header h1 {
+      font-size: 32px;
+      margin: 0 0 10px;
+    }
+
+    .pyq-header p {
+      line-height: 1.7;
+      margin: 0;
+    }
+
+    .tags {
+      margin-top: 18px;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 7px 12px;
+      margin: 4px;
+      border-radius: 20px;
+      background: #333;
+      color: white;
+      font-size: 13px;
+    }
+
+    .search-box {
+      margin: 25px 0;
+    }
+
+    .search-box input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 14px 16px;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    .quick-nav {
+      background: #f5f5f5;
+      padding: 18px;
+      border-radius: 15px;
+      margin-bottom: 25px;
+    }
+
+    .quick-nav h2 {
+      margin-top: 0;
+      font-size: 20px;
+    }
+
+    .quick-nav a {
+      display: inline-block;
+      margin: 5px;
+      padding: 8px 12px;
+      border-radius: 8px;
+      background: white;
+      color: #333;
+      text-decoration: none;
+      border: 1px solid #ddd;
+    }
+
+    .year-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+
+    .year-card {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+    }
+
+    .year-card h2 {
+      margin-top: 0;
+    }
+
+    .year-card p {
+      line-height: 1.7;
+    }
+
+    .paper-type {
+      display: inline-block;
+      padding: 6px 10px;
+      margin: 3px 0;
+      border-radius: 7px;
+      background: #eee;
+      font-size: 13px;
+    }
+
+    .pyq-btn {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 11px 15px;
+      border-radius: 9px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+    }
+
+    .pyq-btn:hover {
+      opacity: 0.85;
+    }
+
+    .note {
+      margin-top: 28px;
+      padding: 22px;
+      border-radius: 16px;
+      background: #f5f5f5;
+      line-height: 1.7;
+    }
+
+    .note h2 {
+      margin-top: 0;
+    }
+
+    .bottom-nav {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 30px;
+    }
+
+    .bottom-nav a {
+      padding: 9px 13px;
+      border-radius: 9px;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    #topBtn {
+      display: none;
+      position: fixed;
+      right: 18px;
+      bottom: 18px;
+      border: none;
+      border-radius: 50%;
+      width: 45px;
+      height: 45px;
+      background: #333;
+      color: white;
+      font-size: 20px;
+      cursor: pointer;
+    }
+
+    .dark-toggle {
+      text-align: center;
+      margin: 15px 0;
+    }
+
+    .dark-toggle button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 9px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+    }
+
+    body.dark-mode {
+      background: #121212;
+      color: #eee;
+    }
+
+    body.dark-mode .pyq-header {
+      background: linear-gradient(135deg, #252525, #181818);
+    }
+
+    body.dark-mode .year-card,
+    body.dark-mode .quick-nav,
+    body.dark-mode .note {
+      background: #1e1e1e;
+      color: #eee;
+    }
+
+    body.dark-mode .quick-nav a {
+      background: #292929;
+      color: #eee;
+      border-color: #444;
+    }
+
+    body.dark-mode .paper-type {
+      background: #333;
+      color: #eee;
+    }
+
+    body.dark-mode .search-box input {
+      background: #222;
+      color: white;
+      border-color: #555;
+    }
+
+    @media (max-width: 700px) {
+      .year-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .pyq-header h1 {
+        font-size: 26px;
+      }
+
+      .pyq-page {
+        padding: 20px 12px 40px;
+      }
+
+      .year-card {
+        padding: 18px;
+      }
+
+      .quick-nav a {
+        display: block;
+        margin: 7px 0;
+      }
+
+      .bottom-nav {
+        flex-direction: column;
+      }
+
+      .bottom-nav a {
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="logo">
+      <span>🇮🇳</span>
+      UPSC <b>Shiksha</b>
+    </div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="prelims.html">Prelims</a>
+      <a href="csat.html">CSAT</a>
+      <a href="mains.html">Mains</a>
+    </nav>
+
+  </header>
+
+
+  <main class="pyq-page">
+
+    <a href="pyq.html" class="back-btn">
+      ← Back to PYQ
+    </a>
+
+
+    <section class="pyq-header">
+
+      <h1>🧠 UPSC CSAT PYQ</h1>
+
+      <p>
+        Civil Services Preliminary Examination
+        CSAT Paper-II Previous Year Question Papers.
+      </p>
+
+      <div class="tags">
+        <span class="tag">PRELIMS</span>
+        <span class="tag">CSAT</span>
+        <span class="tag">PAPER-II</span>
+        <span class="tag">PYQ</span>
+      </div>
+
+    </section>
+
+
+    <div class="dark-toggle">
+
+      <button onclick="toggleDarkMode()">
+        🌙 Dark Mode
+      </button>
+
+    </div>
+
+
+    <div class="search-box">
+
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="🔍 Search CSAT PYQ Year..."
+        onkeyup="searchPYQ()"
+      >
+
+    </div>
+
+
+    <section class="quick-nav">
+
+      <h2>⚡ Quick Navigation</h2>
+
+      <a href="#year2026">2026</a>
+      <a href="#year2025">2025</a>
+      <a href="#year2024">2024</a>
+      <a href="#year2023">2023</a>
+      <a href="#year2022">2022</a>
+      <a href="#year2021">2021</a>
+      <a href="#year2020">2020</a>
+
+    </section>
+
+
+    <section class="year-grid">
+
+
+      <div class="year-card" id="year2026">
+
+        <h2>📅 CSAT 2026</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2026.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2025">
+
+        <h2>📅 CSAT 2025</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2025.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2024">
+
+        <h2>📅 CSAT 2024</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2024.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2023">
+
+        <h2>📅 CSAT 2023</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2023.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2022">
+
+        <h2>📅 CSAT 2022</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2022.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2021">
+
+        <h2>📅 CSAT 2021</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2021.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+
+      <div class="year-card" id="year2020">
+
+        <h2>📅 CSAT 2020</h2>
+
+        <span class="paper-type">
+          General Studies Paper-II
+        </span>
+
+        <p>
+          UPSC Civil Services Preliminary Examination
+          CSAT question paper for 2020.
+        </p>
+
+        <a
+          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+          target="_blank"
+          rel="noopener"
+          class="pyq-btn"
+        >
+          📄 Open Official Paper →
+        </a>
+
+      </div>
+
+    </section>
+
+
+    <section class="note">
+
+      <h2>🎯 CSAT PYQ Strategy</h2>
+
+      <p>
+        पहले question को खुद solve करो। उसके बाद
+        answer check करो और जिस topic में गलती हुई,
+        उस topic को दोबारा revise करो।
+      </p>
+
+      <p>
+        CSAT में Comprehension, Logical Reasoning,
+        Basic Numeracy और Data Interpretation जैसे
+        topics पर विशेष ध्यान दें।
+      </p>
+
+      <p>
+        Official question papers को reference के रूप में
+        इस्तेमाल करें।
+      </p>
+
+    </section>
+
+
+    <div class="bottom-nav">
+
+      <a href="index.html">🏠 Home</a>
+
+      <a href="prelims.html">📚 Prelims</a>
+
+      <a href="csat.html">🧠 CSAT</a>
+
+      <a href="mains.html">📝 Mains</a>
+
+      <a href="pyq.html">📄 PYQ</a>
+
+      <a href="prelims-pyq.html">📄 Prelims PYQ</a>
+
+      <a href="polity.html">🏛️ Polity</a>
+
+      <a href="economy.html">💰 Economy</a>
+
+    </div>
+
+  </main>
+
+
+  <button id="topBtn" onclick="window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })">
+    ↑
+  </button>
+
+
+  <footer>
+
+    <div class="footer-logo">
+      🇮🇳 UPSC <b>Shiksha</b>
+    </div>
+
+    <p>
+      Your Complete UPSC Preparation Platform
+    </p>
+
+    <p class="copyright">
+      © 2026 UPSC Shiksha. All Rights Reserved.
+    </p>
+
+  </footer>
+
+
+  <script src="script.js"></script>
+
+  <script>
+
+    function toggleDarkMode() {
+
+      document.body.classList.toggle("dark-mode");
+
+      localStorage.setItem(
+        "csatPyqDarkMode",
+        document.body.classList.contains("dark-mode")
+          ? "on"
+          : "off"
+      );
+
+    }
+
+
+    if (
+      localStorage.getItem("csatPyqDarkMode") === "on"
+    ) {
+
+      document.body.classList.add("dark-mode");
+
+    }
+
+
+    function searchPYQ() {
+
+      const input =
+        document.getElementById("searchInput")
+        .value
+        .toLowerCase();
+
+      const cards =
+        document.querySelectorAll(".year-card");
+
+      cards.forEach(function(card) {
+
+        const text =
+          card.innerText.toLowerCase();
+
+        card.style.display =
+          text.includes(input) ? "" : "none";
+
+      });
+
+    }
+
+
+    window.addEventListener("scroll", function() {
+
+      const btn =
+        document.getElementById("topBtn");
+
+      if (window.scrollY > 300) {
+
+        btn.style.display = "block";
+
+      } else {
+
+        btn.style.display = "none";
+
+      }
+
+    });
+
+  </script>
+
+</body>
+</html>
