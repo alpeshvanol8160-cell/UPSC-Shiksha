@@ -5,7 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <title>UPSC Shiksha | Previous Year Questions</title>
-  <meta name="description" content="UPSC Previous Year Questions organized by Prelims, CSAT and Mains.">
+
+  <meta
+    name="description"
+    content="UPSC Previous Year Questions organized by Prelims, CSAT and Mains."
+  >
 
   <link rel="stylesheet" href="style.css">
 
@@ -75,6 +79,7 @@
       border: 1px solid #ccc;
       border-radius: 12px;
       font-size: 15px;
+      box-sizing: border-box;
     }
 
     #darkBtn {
@@ -148,6 +153,10 @@
       color: white;
     }
 
+    .pyq-btn:hover {
+      opacity: 0.85;
+    }
+
     .note {
       margin-top: 28px;
       padding: 22px;
@@ -178,14 +187,18 @@
       right: 18px;
       bottom: 18px;
       display: none;
-      padding: 11px 14px;
+      width: 45px;
+      height: 45px;
       border: none;
       border-radius: 50%;
       background: #333;
       color: white;
       cursor: pointer;
       font-size: 18px;
+      z-index: 999;
     }
+
+    /* DARK MODE */
 
     body.dark-pyq {
       background: #121212;
@@ -216,7 +229,10 @@
       border-color: #555;
     }
 
+    /* MOBILE */
+
     @media (max-width: 600px) {
+
       .pyq-page {
         padding: 20px 12px 40px;
       }
@@ -238,13 +254,35 @@
       }
 
       #searchPYQ {
-        width: auto;
+        width: 100%;
+      }
+
+      #darkBtn {
+        width: 100%;
+      }
+
+      .quick-links {
+        flex-direction: column;
+      }
+
+      .quick-links a {
+        text-align: center;
+      }
+
+      .bottom-nav {
+        flex-direction: column;
+      }
+
+      .bottom-nav a {
+        text-align: center;
       }
     }
   </style>
 </head>
 
 <body>
+
+  <!-- HEADER -->
 
   <header class="header">
 
@@ -253,16 +291,26 @@
       UPSC <b>Shiksha</b>
     </div>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
+    <button class="menu-btn" id="menuBtn">
+      ☰
+    </button>
 
     <nav id="navMenu">
+
       <a href="index.html">Home</a>
+
       <a href="prelims.html">Prelims</a>
+
       <a href="csat.html">CSAT</a>
+
       <a href="mains.html">Mains</a>
+
     </nav>
 
   </header>
+
+
+  <!-- MAIN -->
 
   <main class="pyq-page">
 
@@ -270,9 +318,14 @@
       ← Back to Home
     </a>
 
+
+    <!-- HERO -->
+
     <section class="pyq-header">
 
-      <h1>📄 UPSC Previous Year Questions</h1>
+      <h1>
+        📄 UPSC Previous Year Questions
+      </h1>
 
       <p>
         Practice UPSC Previous Year Questions
@@ -280,13 +333,29 @@
       </p>
 
       <div class="tags">
-        <span class="tag">PRELIMS</span>
-        <span class="tag">CSAT</span>
-        <span class="tag">MAINS</span>
-        <span class="tag">PYQs</span>
+
+        <span class="tag">
+          PRELIMS
+        </span>
+
+        <span class="tag">
+          CSAT
+        </span>
+
+        <span class="tag">
+          MAINS
+        </span>
+
+        <span class="tag">
+          PYQs
+        </span>
+
       </div>
 
     </section>
+
+
+    <!-- CONTROLS -->
 
     <div class="controls">
 
@@ -302,27 +371,62 @@
 
     </div>
 
+
+    <!-- QUICK NAVIGATION -->
+
     <section class="quick-nav">
 
-      <h2>⚡ Quick Navigation</h2>
+      <h2>
+        ⚡ Quick Navigation
+      </h2>
 
       <div class="quick-links">
-        <a href="#prelims">Prelims</a>
-        <a href="#csat">CSAT</a>
-        <a href="#gs1">Mains GS-I</a>
-        <a href="#gs2">Mains GS-II</a>
-        <a href="#gs3">Mains GS-III</a>
-        <a href="#gs4">Mains GS-IV</a>
-        <a href="#howto">How to Use PYQs</a>
+
+        <a href="#prelims">
+          Prelims
+        </a>
+
+        <a href="#csat">
+          CSAT
+        </a>
+
+        <a href="#gs1">
+          Mains GS-I
+        </a>
+
+        <a href="#gs2">
+          Mains GS-II
+        </a>
+
+        <a href="#gs3">
+          Mains GS-III
+        </a>
+
+        <a href="#gs4">
+          Mains GS-IV
+        </a>
+
+        <a href="#howto">
+          How to Use PYQs
+        </a>
+
       </div>
 
     </section>
 
+
+    <!-- PYQ CARDS -->
+
     <section class="pyq-grid">
+
+
+      <!-- PRELIMS -->
 
       <div class="pyq-card" id="prelims">
 
-        <h2>🟠 Prelims GS Paper-I</h2>
+        <h2>
+          🟠 Prelims GS Paper-I
+        </h2>
 
         <p>
           Previous year General Studies questions
@@ -330,15 +434,23 @@
           polity, economy, environment and science.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="prelims-pyq.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
       </div>
 
+
+      <!-- CSAT -->
+
       <div class="pyq-card" id="csat">
 
-        <h2>🔵 CSAT</h2>
+        <h2>
+          🔵 CSAT
+        </h2>
 
         <p>
           Previous year CSAT questions covering
@@ -346,67 +458,102 @@
           data interpretation and comprehension.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="csat-pyq.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
       </div>
 
+
+      <!-- MAINS GS-I -->
+
       <div class="pyq-card" id="gs1">
 
-        <h2>✍️ Mains GS-I</h2>
+        <h2>
+          ✍️ Mains GS-I
+        </h2>
 
         <p>
           History, culture, society and geography
           related Mains questions.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="mains.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
       </div>
 
+
+      <!-- MAINS GS-II -->
+
       <div class="pyq-card" id="gs2">
 
-        <h2>🏛️ Mains GS-II</h2>
+        <h2>
+          🏛️ Mains GS-II
+        </h2>
 
         <p>
           Constitution, governance, polity,
           social justice and international relations.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="mains.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
       </div>
 
+
+      <!-- MAINS GS-III -->
+
       <div class="pyq-card" id="gs3">
 
-        <h2>💰 Mains GS-III</h2>
+        <h2>
+          💰 Mains GS-III
+        </h2>
 
         <p>
           Economy, science & technology,
           environment and security.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="mains.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
       </div>
 
+
+      <!-- MAINS GS-IV -->
+
       <div class="pyq-card" id="gs4">
 
-        <h2>⚖️ Mains GS-IV</h2>
+        <h2>
+          ⚖️ Mains GS-IV
+        </h2>
 
         <p>
           Ethics, integrity, aptitude and
           case studies.
         </p>
 
-        <a href="#" class="pyq-btn">
+        <a
+          href="mains.html"
+          class="pyq-btn"
+        >
           View Questions →
         </a>
 
@@ -414,9 +561,14 @@
 
     </section>
 
+
+    <!-- NOTE -->
+
     <section class="note" id="howto">
 
-      <h2>🎯 How to Use PYQs</h2>
+      <h2>
+        🎯 How to Use PYQs
+      </h2>
 
       <p>
         Solve previous year questions after completing
@@ -432,21 +584,56 @@
 
     </section>
 
+
+    <!-- BOTTOM NAV -->
+
     <div class="bottom-nav">
 
-      <a href="index.html">🏠 Home</a>
-      <a href="prelims.html">📚 Prelims</a>
-      <a href="csat.html">🧠 CSAT</a>
-      <a href="mains.html">📝 Mains</a>
-      <a href="polity.html">🏛️ Polity</a>
-      <a href="economy.html">💰 Economy</a>
-      <a href="history.html">📜 History</a>
+      <a href="index.html">
+        🏠 Home
+      </a>
+
+      <a href="prelims.html">
+        📚 Prelims
+      </a>
+
+      <a href="csat.html">
+        🧠 CSAT
+      </a>
+
+      <a href="mains.html">
+        📝 Mains
+      </a>
+
+      <a href="prelims-pyq.html">
+        📄 Prelims PYQ
+      </a>
+
+      <a href="csat-pyq.html">
+        🧠 CSAT PYQ
+      </a>
+
+      <a href="polity.html">
+        🏛️ Polity
+      </a>
+
+      <a href="economy.html">
+        💰 Economy
+      </a>
 
     </div>
 
   </main>
 
-  <button id="topBtn">↑</button>
+
+  <!-- BACK TO TOP -->
+
+  <button id="topBtn">
+    ↑
+  </button>
+
+
+  <!-- FOOTER -->
 
   <footer>
 
@@ -464,83 +651,154 @@
 
   </footer>
 
+
+  <!-- SCRIPT -->
+
   <script src="script.js"></script>
 
   <script>
 
-    // Search PYQ Topics
-    const searchPYQ = document.getElementById("searchPYQ");
-    const pyqCards = document.querySelectorAll(".pyq-card");
+    /* SEARCH */
 
-    searchPYQ.addEventListener("input", function () {
+    const searchPYQ =
+      document.getElementById("searchPYQ");
 
-      const searchText = this.value.toLowerCase();
-
-      pyqCards.forEach(function(card) {
-
-        const text = card.innerText.toLowerCase();
-
-        if (text.includes(searchText)) {
-          card.style.display = "";
-        } else {
-          card.style.display = "none";
-        }
-
-      });
-
-    });
+    const pyqCards =
+      document.querySelectorAll(".pyq-card");
 
 
-    // Dark Mode
-    const darkBtn = document.getElementById("darkBtn");
+    searchPYQ.addEventListener(
+      "input",
+      function () {
 
-    if (localStorage.getItem("pyqDarkMode") === "on") {
+        const searchText =
+          this.value.toLowerCase().trim();
 
-      document.body.classList.add("dark-pyq");
-      darkBtn.innerText = "☀️ Light Mode";
+
+        pyqCards.forEach(
+          function (card) {
+
+            const text =
+              card.innerText.toLowerCase();
+
+
+            if (text.includes(searchText)) {
+
+              card.style.display = "";
+
+            } else {
+
+              card.style.display = "none";
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+
+    /* DARK MODE */
+
+    const darkBtn =
+      document.getElementById("darkBtn");
+
+
+    if (
+      localStorage.getItem("pyqDarkMode")
+      === "on"
+    ) {
+
+      document.body.classList.add(
+        "dark-pyq"
+      );
+
+      darkBtn.innerText =
+        "☀️ Light Mode";
 
     }
 
-    darkBtn.addEventListener("click", function () {
 
-      document.body.classList.toggle("dark-pyq");
+    darkBtn.addEventListener(
+      "click",
+      function () {
 
-      if (document.body.classList.contains("dark-pyq")) {
+        document.body.classList.toggle(
+          "dark-pyq"
+        );
 
-        localStorage.setItem("pyqDarkMode", "on");
-        darkBtn.innerText = "☀️ Light Mode";
 
-      } else {
+        if (
+          document.body.classList.contains(
+            "dark-pyq"
+          )
+        ) {
 
-        localStorage.setItem("pyqDarkMode", "off");
-        darkBtn.innerText = "🌙 Dark Mode";
+          localStorage.setItem(
+            "pyqDarkMode",
+            "on"
+          );
+
+          darkBtn.innerText =
+            "☀️ Light Mode";
+
+        } else {
+
+          localStorage.setItem(
+            "pyqDarkMode",
+            "off"
+          );
+
+          darkBtn.innerText =
+            "🌙 Dark Mode";
+
+        }
 
       }
+    );
 
-    });
+
+    /* BACK TO TOP */
+
+    const topBtn =
+      document.getElementById("topBtn");
 
 
-    // Back To Top
-    const topBtn = document.getElementById("topBtn");
+    window.addEventListener(
+      "scroll",
+      function () {
 
-    window.addEventListener("scroll", function () {
+        if (window.scrollY > 300) {
 
-      if (window.scrollY > 300) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
+          topBtn.style.display =
+            "block";
+
+        } else {
+
+          topBtn.style.display =
+            "none";
+
+        }
+
       }
+    );
 
-    });
 
-    topBtn.addEventListener("click", function () {
+    topBtn.addEventListener(
+      "click",
+      function () {
 
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
+        window.scrollTo({
 
-    });
+          top: 0,
+
+          behavior: "smooth"
+
+        });
+
+      }
+    );
 
   </script>
 
