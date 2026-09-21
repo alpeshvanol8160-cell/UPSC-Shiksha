@@ -770,6 +770,58 @@ function submitTest() {
 
   document.getElementById("score").textContent =
     correct + " / " + questions.length;
+  const reviewBox = document.getElementById("answerReview");
+
+let reviewHTML = "<h3>📚 Answer Review</h3>";
+
+questions.forEach((question, index) => {
+
+  const userAnswer = userAnswers[index];
+
+  reviewHTML += `
+    <div style="
+      text-align:left;
+      padding:15px;
+      margin:12px 0;
+      border-radius:12px;
+      background:#f8fafc;
+      border:1px solid #e2e8f0;
+    ">
+
+      <b>Q${index + 1}. ${question.q}</b>
+
+      <p>
+        Your Answer:
+        <strong>
+          ${
+            userAnswer === null
+              ? "Not Attempted"
+              : question.options[userAnswer]
+          }
+        </strong>
+      </p>
+
+      <p>
+        Correct Answer:
+        <strong style="color:#16a34a;">
+          ${question.options[question.answer]}
+        </strong>
+      </p>
+
+      ${
+        userAnswer === question.answer
+          ? '<span style="color:#16a34a;font-weight:bold;">✅ Correct</span>'
+          : userAnswer === null
+            ? '<span style="color:#ca8a04;font-weight:bold;">⚪ Not Attempted</span>'
+            : '<span style="color:#dc2626;font-weight:bold;">❌ Incorrect</span>'
+      }
+
+    </div>
+  `;
+
+});
+
+reviewBox.innerHTML = reviewHTML;
 
   window.scrollTo({
     top: 0,
