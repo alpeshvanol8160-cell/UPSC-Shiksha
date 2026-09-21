@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UPSC Shiksha | Progress Tracking</title>
+  <meta name="description" content="Track your UPSC mock test progress, scores and performance.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .progress-page {
+      max-width: 1000px;
+      margin: auto;
+      padding: 35px 15px;
+    }
+
+    .progress-hero {
+      text-align: center;
+      padding: 45px 20px;
+      border-radius: 20px;
+      background: linear-gradient(135deg, #fff3cd, #ffffff);
+      margin-bottom: 25px;
+    }
+
+    .progress-hero h1 {
+      font-size: 36px;
+      margin: 10px 0;
+    }
+
+    .progress-hero p {
+      line-height: 1.6;
+    }
+
+    .progress-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .progress-card {
+      background: white;
+      padding: 22px;
+      border-radius: 16px;
+      text-align: center;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+    }
+
+    .progress-card .icon {
+      font-size: 30px;
+    }
+
+    .progress-card h2 {
+      font-size: 30px;
+      margin: 8px 0;
+    }
+
+    .progress-card p {
+      margin: 0;
+      color: #555;
+    }
+
+    .progress-box {
+      background: white;
+      padding: 25px;
+      border-radius: 18px;
+      border: 1px solid #eee;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.07);
+      margin-bottom: 20px;
+    }
+
+    .progress-bar {
+      width: 100%;
+      height: 20px;
+      background: #e5e7eb;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 15px 0;
+    }
+
+    .progress-fill {
+      height: 100%;
+      width: 0%;
+      background: #16a34a;
+      transition: width 0.5s;
+    }
+
+    .progress-buttons {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 20px;
+    }
+
+    .progress-btn {
+      display: inline-block;
+      padding: 12px 18px;
+      border-radius: 10px;
+      border: none;
+      background: #333;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .reset-btn {
+      background: #dc2626;
+    }
+
+    .home-btn {
+      background: #2563eb;
+    }
+
+    body.dark-progress {
+      background: #121212;
+      color: #eee;
+    }
+
+    body.dark-progress .progress-hero {
+      background: linear-gradient(135deg, #292929, #181818);
+    }
+
+    body.dark-progress .progress-card,
+    body.dark-progress .progress-box {
+      background: #1e1e1e;
+      color: #eee;
+      border-color: #333;
+    }
+
+    body.dark-progress .progress-card p {
+      color: #ccc;
+    }
+
+    body.dark-progress .progress-bar {
+      background: #374151;
+    }
+
+    @media (max-width: 700px) {
+      .progress-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .progress-hero h1 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 500px) {
+      .progress-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .progress-page {
+        padding: 25px 12px;
+      }
+
+      .progress-hero {
+        padding: 35px 15px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <header class="header">
+
+    <div class="logo">
+      <span>🇮🇳</span>
+      UPSC <b>Shiksha</b>
+    </div>
+
+    <button class="menu-btn" id="menuBtn">☰</button>
+
+    <nav id="navMenu">
+      <a href="index.html">Home</a>
+      <a href="prelims.html">Prelims</a>
+      <a href="mains.html">Mains</a>
+      <a href="pyq.html">PYQs</a>
+    </nav>
+
+  </header>
+
+
+  <main class="progress-page">
+
+    <section class="progress-hero">
+
+      <div style="font-size:45px;">📊</div>
+
+      <h1>Progress Tracking</h1>
+
+      <p>
+        Track your UPSC mock test performance
+        and monitor your preparation progress.
+      </p>
+
+    </section>
+
+
+    <section class="progress-grid">
+
+      <div class="progress-card">
+        <div class="icon">📝</div>
+        <h2 id="testsAttempted">0</h2>
+        <p>Tests Attempted</p>
+      </div>
+
+      <div class="progress-card">
+        <div class="icon">🎯</div>
+        <h2 id="totalQuestions">0</h2>
+        <p>Questions Attempted</p>
+      </div>
+
+      <div class="progress-card">
+        <div class="icon">✅</div>
+        <h2 id="correctAnswers">0</h2>
+        <p>Correct Answers</p>
+      </div>
+
+      <div class="progress-card">
+        <div class="icon">❌</div>
+        <h2 id="incorrectAnswers">0</h2>
+        <p>Incorrect Answers</p>
+      </div>
+
+      <div class="progress-card">
+        <div class="icon">📈</div>
+        <h2 id="averageScore">0%</h2>
+        <p>Average Score</p>
+      </div>
+
+      <div class="progress-card">
+        <div class="icon">🏆</div>
+        <h2 id="bestScore">0%</h2>
+        <p>Best Score</p>
+      </div>
+
+    </section>
+
+
+    <section class="progress-box">
+
+      <h2>📈 Overall Progress</h2>
+
+      <div class="progress-bar">
+        <div class="progress-fill" id="progressFill"></div>
+      </div>
+
+      <h3 id="progressText">
+        0% Complete
+      </h3>
+
+      <p>
+        Complete more mock tests to improve your
+        UPSC preparation record.
+      </p>
+
+    </section>
+
+
+    <section class="progress-box">
+
+      <h2>🚀 Start Practicing</h2>
+
+      <p>
+        Take the UPSC General Studies Mock Test
+        and your result can be tracked here.
+      </p>
+
+      <div class="progress-buttons">
+
+        <a href="test.html" class="progress-btn">
+          📝 Take Mock Test
+        </a>
+
+        <a href="index.html" class="progress-btn home-btn">
+          🏠 Back to Home
+        </a>
+
+        <button class="progress-btn reset-btn" id="resetProgress">
+          🔄 Reset Progress
+        </button>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+  <script src="script.js"></script>
+
+  <script>
+
+    function loadProgress() {
+
+      const data =
+        JSON.parse(
+          localStorage.getItem("upscProgress")
+        ) || {
+          tests: 0,
+          questions: 0,
+          correct: 0,
+          incorrect: 0,
+          scores: []
+        };
+
+
+      document.getElementById("testsAttempted").textContent =
+        data.tests;
+
+      document.getElementById("totalQuestions").textContent =
+        data.questions;
+
+      document.getElementById("correctAnswers").textContent =
+        data.correct;
+
+      document.getElementById("incorrectAnswers").textContent =
+        data.incorrect;
+
+
+      let average = 0;
+      let best = 0;
+
+      if (data.scores.length > 0) {
+
+        average =
+          Math.round(
+            data.scores.reduce(
+              (a, b) => a + b,
+              0
+            ) / data.scores.length
+          );
+
+        best =
+          Math.max(...data.scores);
+
+      }
+
+
+      document.getElementById("averageScore").textContent =
+        average + "%";
+
+      document.getElementById("bestScore").textContent =
+        best + "%";
+
+
+      document.getElementById("progressFill").style.width =
+        average + "%";
+
+      document.getElementById("progressText").textContent =
+        average + "% Complete";
+
+    }
+
+
+    document
+      .getElementById("resetProgress")
+      .addEventListener("click", function() {
+
+        const confirmReset =
+          confirm(
+            "क्या आप अपना पूरा progress reset करना चाहते हैं?"
+          );
+
+        if (!confirmReset) return;
+
+        localStorage.removeItem("upscProgress");
+
+        loadProgress();
+
+        alert("Progress successfully reset.");
+
+      });
+
+
+    loadProgress();
+
+  </script>
+
+</body>
+</html>
