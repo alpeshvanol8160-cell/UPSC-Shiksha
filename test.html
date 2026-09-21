@@ -1,0 +1,833 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UPSC Shiksha | Free Mock Test</title>
+  <meta name="description" content="UPSC Shiksha Free General Studies Practice Test">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .test-page {
+      max-width: 900px;
+      margin: auto;
+      padding: 25px 15px 60px;
+    }
+
+    .test-header {
+      background: linear-gradient(135deg, #172554, #2563eb);
+      color: white;
+      padding: 30px 20px;
+      border-radius: 18px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .test-header h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .test-header p {
+      margin: 0;
+    }
+
+    .test-info {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin: 15px 0;
+      flex-wrap: wrap;
+    }
+
+    .info-card {
+      flex: 1;
+      min-width: 120px;
+      background: #f1f5f9;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      font-weight: bold;
+    }
+
+    .timer {
+      color: #dc2626;
+      font-size: 22px;
+    }
+
+    .progress-box {
+      background: #e5e7eb;
+      height: 10px;
+      border-radius: 20px;
+      overflow: hidden;
+      margin: 20px 0;
+    }
+
+    .progress {
+      height: 100%;
+      width: 4%;
+      background: #2563eb;
+      transition: width 0.3s;
+    }
+
+    .question-card {
+      background: white;
+      padding: 25px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      margin-top: 20px;
+    }
+
+    .question-number {
+      color: #2563eb;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .question-text {
+      font-size: 20px;
+      font-weight: 700;
+      line-height: 1.5;
+      margin-bottom: 20px;
+    }
+
+    .option {
+      display: block;
+      padding: 14px;
+      margin: 10px 0;
+      border: 2px solid #e5e7eb;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .option:hover {
+      border-color: #2563eb;
+      background: #eff6ff;
+    }
+
+    .option input {
+      margin-right: 10px;
+    }
+
+    .test-buttons {
+      display: flex;
+      justify-content: space-between;
+      gap: 10px;
+      margin-top: 25px;
+    }
+
+    .test-buttons button,
+    .result button {
+      border: none;
+      padding: 13px 22px;
+      border-radius: 10px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .test-buttons button:disabled {
+      background: #94a3b8;
+      cursor: not-allowed;
+    }
+
+    .submit-btn {
+      background: #16a34a !important;
+    }
+
+    .result {
+      display: none;
+      background: white;
+      padding: 30px 20px;
+      border-radius: 16px;
+      text-align: center;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+    }
+
+    .result h2 {
+      color: #2563eb;
+    }
+
+    .score {
+      font-size: 42px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    .result-details {
+      font-size: 18px;
+      line-height: 1.8;
+    }
+
+    .home-btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 22px;
+      background: #172554;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    body.dark-mode-test {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode-test .question-card,
+    body.dark-mode-test .result {
+      background: #1e293b;
+      color: #e5e7eb;
+    }
+
+    body.dark-mode-test .info-card {
+      background: #334155;
+    }
+
+    body.dark-mode-test .option {
+      border-color: #475569;
+    }
+
+    body.dark-mode-test .option:hover {
+      background: #334155;
+    }
+
+    .dark-btn {
+      display: block;
+      margin: 0 auto 15px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .test-header h1 {
+        font-size: 24px;
+      }
+
+      .question-card {
+        padding: 18px;
+      }
+
+      .question-text {
+        font-size: 18px;
+      }
+
+      .test-buttons button {
+        padding: 11px 14px;
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="test-page">
+
+    <button class="dark-btn" id="darkBtn">🌙 Dark Mode</button>
+
+    <div class="test-header">
+      <h1>📝 UPSC General Studies Mock Test</h1>
+      <p>UPSC Shiksha – Practice Test</p>
+    </div>
+
+    <div class="test-info">
+      <div class="info-card">
+        Questions<br>
+        <span>25</span>
+      </div>
+
+      <div class="info-card">
+        Time<br>
+        <span class="timer" id="timer">20:00</span>
+      </div>
+
+      <div class="info-card">
+        Question<br>
+        <span id="questionCounter">1 / 25</span>
+      </div>
+    </div>
+
+    <div class="progress-box">
+      <div class="progress" id="progress"></div>
+    </div>
+
+    <div class="question-card" id="quizBox">
+
+      <div class="question-number" id="questionNumber">
+        Question 1
+      </div>
+
+      <div class="question-text" id="questionText"></div>
+
+      <div id="options"></div>
+
+      <div class="test-buttons">
+        <button id="prevBtn" onclick="previousQuestion()">
+          ← Previous
+        </button>
+
+        <button id="nextBtn" onclick="nextQuestion()">
+          Next →
+        </button>
+
+        <button class="submit-btn" id="submitBtn" onclick="submitTest()" style="display:none;">
+          Submit Test
+        </button>
+      </div>
+
+    </div>
+
+    <div class="result" id="resultBox">
+
+      <h2>🎉 Test Completed!</h2>
+
+      <div class="score" id="score"></div>
+
+      <div class="result-details">
+        <div>✅ Correct: <b id="correct"></b></div>
+        <div>❌ Incorrect: <b id="incorrect"></b></div>
+        <div>⚪ Unattempted: <b id="unattempted"></b></div>
+        <div>📊 Percentage: <b id="percentage"></b></div>
+      </div>
+
+      <button onclick="location.reload()">
+        🔄 Retry Test
+      </button>
+
+      <br>
+
+      <a href="index.html" class="home-btn">
+        🏠 Back to Home
+      </a>
+
+    </div>
+
+  </div>
+
+<script>
+
+const questions = [
+
+  {
+    q: "भारत के संविधान का संरक्षक किसे माना जाता है?",
+    options: [
+      "राष्ट्रपति",
+      "संसद",
+      "सर्वोच्च न्यायालय",
+      "प्रधानमंत्री"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारतीय संविधान में मौलिक अधिकार किस भाग में दिए गए हैं?",
+    options: [
+      "भाग I",
+      "भाग II",
+      "भाग III",
+      "भाग IV"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारत में पंचायती राज व्यवस्था को संवैधानिक दर्जा किस संशोधन से मिला?",
+    options: [
+      "42वां संशोधन",
+      "73वां संशोधन",
+      "74वां संशोधन",
+      "86वां संशोधन"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारतीय राष्ट्रीय कांग्रेस की स्थापना किस वर्ष हुई थी?",
+    options: [
+      "1885",
+      "1887",
+      "1890",
+      "1905"
+    ],
+    answer: 0
+  },
+
+  {
+    q: "भारत छोड़ो आंदोलन किस वर्ष शुरू हुआ था?",
+    options: [
+      "1930",
+      "1935",
+      "1942",
+      "1947"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "सिंधु घाटी सभ्यता का प्रमुख बंदरगाह कौन सा था?",
+    options: [
+      "हड़प्पा",
+      "मोहनजोदड़ो",
+      "लोथल",
+      "कालीबंगा"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारत की सबसे लंबी नदी कौन सी है?",
+    options: [
+      "यमुना",
+      "गंगा",
+      "गोदावरी",
+      "नर्मदा"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारत में मानसून मुख्य रूप से किस महासागर से नमी प्राप्त करता है?",
+    options: [
+      "प्रशांत महासागर",
+      "अटलांटिक महासागर",
+      "हिंद महासागर",
+      "आर्कटिक महासागर"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "काली मिट्टी किस फसल के लिए विशेष रूप से उपयुक्त मानी जाती है?",
+    options: [
+      "चाय",
+      "कपास",
+      "गेहूं",
+      "जूट"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारत का सबसे बड़ा पठार कौन सा है?",
+    options: [
+      "मालवा पठार",
+      "दक्कन का पठार",
+      "छोटानागपुर पठार",
+      "मेघालय पठार"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारतीय रिजर्व बैंक की स्थापना किस वर्ष हुई थी?",
+    options: [
+      "1930",
+      "1935",
+      "1947",
+      "1950"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारत में GST कब लागू किया गया?",
+    options: [
+      "2014",
+      "2015",
+      "2016",
+      "2017"
+    ],
+    answer: 3
+  },
+
+  {
+    q: "GDP का पूर्ण रूप क्या है?",
+    options: [
+      "Gross Domestic Product",
+      "General Domestic Price",
+      "Gross Development Product",
+      "General Development Price"
+    ],
+    answer: 0
+  },
+
+  {
+    q: "मुद्रास्फीति का अर्थ क्या है?",
+    options: [
+      "कीमतों में सामान्य वृद्धि",
+      "उत्पादन में कमी",
+      "बेरोजगारी में कमी",
+      "निर्यात में वृद्धि"
+    ],
+    answer: 0
+  },
+
+  {
+    q: "प्रकाश संश्लेषण में पौधे मुख्य रूप से किस गैस का उपयोग करते हैं?",
+    options: [
+      "ऑक्सीजन",
+      "नाइट्रोजन",
+      "कार्बन डाइऑक्साइड",
+      "हाइड्रोजन"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "मानव शरीर में रक्त को पंप करने वाला अंग कौन सा है?",
+    options: [
+      "फेफड़ा",
+      "हृदय",
+      "यकृत",
+      "गुर्दा"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "विटामिन C की कमी से कौन सा रोग होता है?",
+    options: [
+      "रिकेट्स",
+      "स्कर्वी",
+      "बेरी-बेरी",
+      "रातांधता"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "ओजोन परत मुख्य रूप से किस मंडल में पाई जाती है?",
+    options: [
+      "क्षोभमंडल",
+      "समतापमंडल",
+      "मध्यमंडल",
+      "बहिर्मंडल"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "ग्रीनहाउस प्रभाव में प्रमुख भूमिका निभाने वाली गैसों में से एक कौन सी है?",
+    options: [
+      "कार्बन डाइऑक्साइड",
+      "हीलियम",
+      "नियॉन",
+      "आर्गन"
+    ],
+    answer: 0
+  },
+
+  {
+    q: "प्रोजेक्ट टाइगर भारत में किस वर्ष शुरू किया गया था?",
+    options: [
+      "1965",
+      "1973",
+      "1980",
+      "1990"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "भारत का राष्ट्रीय पशु कौन सा है?",
+    options: [
+      "सिंह",
+      "हाथी",
+      "बाघ",
+      "हिरण"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारत में जनगणना सामान्यतः कितने वर्षों के अंतराल पर होती है?",
+    options: [
+      "5 वर्ष",
+      "8 वर्ष",
+      "10 वर्ष",
+      "15 वर्ष"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारतीय संविधान का अनुच्छेद 21 किससे संबंधित है?",
+    options: [
+      "समानता का अधिकार",
+      "जीवन और व्यक्तिगत स्वतंत्रता",
+      "धार्मिक स्वतंत्रता",
+      "शिक्षा का अधिकार"
+    ],
+    answer: 1
+  },
+
+  {
+    q: "लोकसभा का सामान्य कार्यकाल कितने वर्ष का होता है?",
+    options: [
+      "3 वर्ष",
+      "4 वर्ष",
+      "5 वर्ष",
+      "6 वर्ष"
+    ],
+    answer: 2
+  },
+
+  {
+    q: "भारत में सर्वोच्च नागरिक सम्मान कौन सा है?",
+    options: [
+      "पद्म श्री",
+      "पद्म भूषण",
+      "पद्म विभूषण",
+      "भारत रत्न"
+    ],
+    answer: 3
+  }
+
+];
+
+let currentQuestion = 0;
+let userAnswers = new Array(questions.length).fill(null);
+
+let timeLeft = 20 * 60;
+let timerInterval;
+
+function loadQuestion() {
+
+  const question = questions[currentQuestion];
+
+  document.getElementById("questionNumber").textContent =
+    "Question " + (currentQuestion + 1);
+
+  document.getElementById("questionCounter").textContent =
+    (currentQuestion + 1) + " / " + questions.length;
+
+  document.getElementById("questionText").textContent =
+    question.q;
+
+  const optionsBox = document.getElementById("options");
+  optionsBox.innerHTML = "";
+
+  question.options.forEach((option, index) => {
+
+    const label = document.createElement("label");
+    label.className = "option";
+
+    label.innerHTML =
+      '<input type="radio" name="answer" value="' + index + '">' +
+      option;
+
+    optionsBox.appendChild(label);
+
+  });
+
+  if (userAnswers[currentQuestion] !== null) {
+
+    const selected =
+      document.querySelector(
+        'input[name="answer"][value="' +
+        userAnswers[currentQuestion] +
+        '"]'
+      );
+
+    if (selected) {
+      selected.checked = true;
+    }
+
+  }
+
+  document.getElementById("prevBtn").disabled =
+    currentQuestion === 0;
+
+  document.getElementById("nextBtn").style.display =
+    currentQuestion === questions.length - 1
+      ? "none"
+      : "inline-block";
+
+  document.getElementById("submitBtn").style.display =
+    currentQuestion === questions.length - 1
+      ? "inline-block"
+      : "none";
+
+  const progress =
+    ((currentQuestion + 1) / questions.length) * 100;
+
+  document.getElementById("progress").style.width =
+    progress + "%";
+}
+
+
+function saveAnswer() {
+
+  const selected =
+    document.querySelector('input[name="answer"]:checked');
+
+  if (selected) {
+    userAnswers[currentQuestion] =
+      Number(selected.value);
+  }
+
+}
+
+
+function nextQuestion() {
+
+  saveAnswer();
+
+  if (currentQuestion < questions.length - 1) {
+
+    currentQuestion++;
+
+    loadQuestion();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+function previousQuestion() {
+
+  saveAnswer();
+
+  if (currentQuestion > 0) {
+
+    currentQuestion--;
+
+    loadQuestion();
+
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth"
+    });
+
+  }
+
+}
+
+
+function submitTest() {
+
+  saveAnswer();
+
+  clearInterval(timerInterval);
+
+  let correct = 0;
+  let incorrect = 0;
+  let unattempted = 0;
+
+  questions.forEach((question, index) => {
+
+    if (userAnswers[index] === null) {
+
+      unattempted++;
+
+    } else if (userAnswers[index] === question.answer) {
+
+      correct++;
+
+    } else {
+
+      incorrect++;
+
+    }
+
+  });
+
+  const percentage =
+    ((correct / questions.length) * 100).toFixed(2);
+
+  document.getElementById("quizBox").style.display = "none";
+
+  document.querySelector(".test-info").style.display = "none";
+
+  document.querySelector(".progress-box").style.display = "none";
+
+  document.getElementById("resultBox").style.display = "block";
+
+  document.getElementById("correct").textContent = correct;
+
+  document.getElementById("incorrect").textContent = incorrect;
+
+  document.getElementById("unattempted").textContent = unattempted;
+
+  document.getElementById("percentage").textContent =
+    percentage + "%";
+
+  document.getElementById("score").textContent =
+    correct + " / " + questions.length;
+
+  window.scrollTo({
+    top: 0,
+    behavior: "smooth"
+  });
+
+}
+
+
+function updateTimer() {
+
+  const minutes =
+    Math.floor(timeLeft / 60);
+
+  const seconds =
+    timeLeft % 60;
+
+  document.getElementById("timer").textContent =
+    String(minutes).padStart(2, "0") +
+    ":" +
+    String(seconds).padStart(2, "0");
+
+  if (timeLeft <= 0) {
+
+    clearInterval(timerInterval);
+
+    alert("⏰ Time is over! Your test will be submitted automatically.");
+
+    submitTest();
+
+    return;
+  }
+
+  timeLeft--;
+
+}
+
+
+document.getElementById("darkBtn")
+.addEventListener("click", function() {
+
+  document.body.classList.toggle("dark-mode-test");
+
+  this.textContent =
+    document.body.classList.contains("dark-mode-test")
+      ? "☀️ Light Mode"
+      : "🌙 Dark Mode";
+
+});
+
+
+loadQuestion();
+
+updateTimer();
+
+timerInterval =
+  setInterval(updateTimer, 1000);
+
+</script>
+
+</body>
+</html>
