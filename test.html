@@ -651,6 +651,7 @@ function nextQuestion() {
     currentQuestion++;
 
     loadQuestion();
+    updateQuestionNav();
 
     window.scrollTo({
       top: 0,
@@ -671,6 +672,7 @@ function previousQuestion() {
     currentQuestion--;
 
     loadQuestion();
+    updateQuestionNav();
 
     window.scrollTo({
       top: 0,
@@ -838,8 +840,72 @@ document.getElementById("darkBtn")
 
 });
 
+function createQuestionNav() {
+
+  const nav = document.getElementById("questionNav");
+
+  nav.innerHTML = "";
+
+  questions.forEach((question, index) => {
+
+    const button = document.createElement("button");
+
+    button.textContent = index + 1;
+
+    button.id = "navBtn" + index;
+
+    button.addEventListener("click", function() {
+
+      saveAnswer();
+
+      currentQuestion = index;
+
+      loadQuestion();
+
+      updateQuestionNav();
+
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+
+    });
+
+    nav.appendChild(button);
+
+  });
+
+}
+
+
+function updateQuestionNav() {
+
+  questions.forEach((question, index) => {
+
+    const button =
+      document.getElementById("navBtn" + index);
+
+    if (!button) return;
+
+    button.classList.remove("current");
+    button.classList.remove("answered");
+
+    if (index === currentQuestion) {
+      button.classList.add("current");
+    }
+
+    if (userAnswers[index] !== null) {
+      button.classList.add("answered");
+    }
+
+  });
+
+}
+createQuestionNav();
 
 loadQuestion();
+
+updateQuestionNav();
 
 updateTimer();
 
