@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>UPSC Shiksha | Study Timetable</title>
+  <meta name="description" content="UPSC Shiksha 5 hour daily study timetable for UPSC preparation.">
+
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    .timetable-page {
+      max-width: 1000px;
+      margin: auto;
+      padding: 25px 15px 60px;
+    }
+
+    .time-hero {
+      background: linear-gradient(135deg, #172554, #2563eb);
+      color: white;
+      padding: 35px 20px;
+      border-radius: 18px;
+      text-align: center;
+      margin-bottom: 25px;
+    }
+
+    .time-hero h1 {
+      margin: 0 0 10px;
+      font-size: 30px;
+    }
+
+    .time-hero p {
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    .dark-btn {
+      display: block;
+      margin: 0 auto 15px;
+      padding: 10px 18px;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+
+    .schedule-card {
+      background: white;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .schedule-card h2 {
+      margin: 0;
+      padding: 18px;
+      background: #eff6ff;
+      color: #172554;
+    }
+
+    .table-wrapper {
+      overflow-x: auto;
+    }
+
+    .study-table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 650px;
+    }
+
+    .study-table th,
+    .study-table td {
+      padding: 15px;
+      border-bottom: 1px solid #e5e7eb;
+      text-align: left;
+    }
+
+    .study-table th {
+      background: #172554;
+      color: white;
+    }
+
+    .study-table tr:last-child td {
+      border-bottom: none;
+    }
+
+    .time {
+      font-weight: bold;
+      color: #2563eb;
+      white-space: nowrap;
+    }
+
+    .subject {
+      font-weight: bold;
+    }
+
+    .tips-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-bottom: 25px;
+    }
+
+    .tip-card {
+      background: white;
+      padding: 20px;
+      border-radius: 14px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.06);
+    }
+
+    .tip-card h3 {
+      margin-top: 0;
+    }
+
+    .weekly-card {
+      background: white;
+      padding: 20px;
+      border-radius: 16px;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+      margin-bottom: 25px;
+    }
+
+    .weekly-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+
+    .day {
+      padding: 15px;
+      border-radius: 10px;
+      background: #f8fafc;
+      border-left: 5px solid #2563eb;
+    }
+
+    .day strong {
+      display: block;
+      margin-bottom: 5px;
+    }
+
+    .home-btn {
+      display: inline-block;
+      padding: 12px 22px;
+      background: #172554;
+      color: white;
+      text-decoration: none;
+      border-radius: 10px;
+      font-weight: bold;
+    }
+
+    body.dark-timetable {
+      background: #0f172a;
+      color: #e5e7eb;
+    }
+
+    body.dark-timetable .schedule-card,
+    body.dark-timetable .tip-card,
+    body.dark-timetable .weekly-card {
+      background: #1e293b;
+      color: #e5e7eb;
+    }
+
+    body.dark-timetable .schedule-card h2 {
+      background: #334155;
+      color: white;
+    }
+
+    body.dark-timetable .study-table th {
+      background: #334155;
+    }
+
+    body.dark-timetable .study-table td {
+      border-color: #475569;
+    }
+
+    body.dark-timetable .day {
+      background: #334155;
+    }
+
+    @media (max-width: 700px) {
+      .time-hero h1 {
+        font-size: 25px;
+      }
+
+      .tips-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .weekly-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .schedule-card h2 {
+        font-size: 20px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="timetable-page">
+
+    <button class="dark-btn" id="darkBtn">
+      🌙 Dark Mode
+    </button>
+
+    <div class="time-hero">
+      <h1>📅 UPSC Study Timetable</h1>
+      <p>
+        5 Hours Daily Study Plan
+      </p>
+      <p>
+        Consistent Study • Revision • PYQs • Mock Tests
+      </p>
+    </div>
+
+    <div class="schedule-card">
+
+      <h2>⏰ Daily 5-Hour Study Plan</h2>
+
+      <div class="table-wrapper">
+
+        <table class="study-table">
+
+          <thead>
+            <tr>
+              <th>Time</th>
+              <th>Activity</th>
+              <th>Focus</th>
+            </tr>
+          </thead>
+
+          <tbody>
+
+            <tr>
+              <td class="time">1 Hour</td>
+              <td class="subject">📚 Core Subject</td>
+              <td>Polity / History / Geography / Economy</td>
+            </tr>
+
+            <tr>
+              <td class="time">1 Hour</td>
+              <td class="subject">📖 NCERT & Basic Concepts</td>
+              <td>Concept building and notes</td>
+            </tr>
+
+            <tr>
+              <td class="time">1 Hour</td>
+              <td class="subject">🌍 GS / Current Affairs</td>
+              <td>Current events + important issues</td>
+            </tr>
+
+            <tr>
+              <td class="time">1 Hour</td>
+              <td class="subject">📝 PYQ Practice</td>
+              <td>Previous Year Questions</td>
+            </tr>
+
+            <tr>
+              <td class="time">1 Hour</td>
+              <td class="subject">🔄 Revision / Test</td>
+              <td>Revision + MCQs + Mock Test</td>
+            </tr>
+
+          </tbody>
+
+        </table>
+
+      </div>
+    </div>
+
+
+    <div class="tips-grid">
+
+      <div class="tip-card">
+        <h3>📚 Morning</h3>
+        <p>
+          Difficult subjects और नए concepts पढ़ें।
+        </p>
+      </div>
+
+      <div class="tip-card">
+        <h3>📝 Practice</h3>
+        <p>
+          रोज़ PYQs और MCQs solve करें।
+        </p>
+      </div>
+
+      <div class="tip-card">
+        <h3>🔄 Revision</h3>
+        <p>
+          दिन के अंत में पढ़े हुए topics revise करें।
+        </p>
+      </div>
+
+    </div>
+
+
+    <div class="weekly-card">
+
+      <h2>📅 Weekly Subject Plan</h2>
+
+      <div class="weekly-grid">
+
+        <div class="day">
+          <strong>Monday</strong>
+          Polity + Current Affairs
+        </div>
+
+        <div class="day">
+          <strong>Tuesday</strong>
+          History + PYQs
+        </div>
+
+        <div class="day">
+          <strong>Wednesday</strong>
+          Geography + Maps
+        </div>
+
+        <div class="day">
+          <strong>Thursday</strong>
+          Economy + Current Affairs
+        </div>
+
+        <div class="day">
+          <strong>Friday</strong>
+          Environment + Science
+        </div>
+
+        <div class="day">
+          <strong>Saturday</strong>
+          CSAT + PYQs
+        </div>
+
+        <div class="day">
+          <strong>Sunday</strong>
+          Full Revision + Mock Test
+        </div>
+
+      </div>
+
+    </div>
+
+
+    <div class="weekly-card">
+
+      <h2>🎯 Important Rules</h2>
+
+      <ul>
+        <li>हर दिन कम से कम 5 घंटे नियमित पढ़ाई करें।</li>
+        <li>पढ़ाई के दौरान मोबाइल distractions कम रखें।</li>
+        <li>हर सप्ताह एक full revision करें।</li>
+        <li>PYQs को केवल याद नहीं, बल्कि समझकर solve करें।</li>
+        <li>Mock Test के बाद गलत questions को दोबारा पढ़ें।</li>
+      </ul>
+
+    </div>
+
+
+    <a href="index.html" class="home-btn">
+      🏠 Back to Home
+    </a>
+
+  </div>
+
+
+  <script>
+
+    const darkBtn =
+      document.getElementById("darkBtn");
+
+    darkBtn.addEventListener("click", function() {
+
+      document.body.classList.toggle("dark-timetable");
+
+      this.textContent =
+        document.body.classList.contains("dark-timetable")
+          ? "☀️ Light Mode"
+          : "🌙 Dark Mode";
+
+    });
+
+  </script>
+
+</body>
+</html>
