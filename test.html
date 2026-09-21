@@ -226,6 +226,47 @@
         font-size: 14px;
       }
     }
+    .question-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 15px 0;
+  padding: 15px;
+  background: #f1f5f9;
+  border-radius: 12px;
+}
+
+.question-nav button {
+  width: 42px;
+  height: 42px;
+  border: none;
+  border-radius: 8px;
+  background: white;
+  color: #334155;
+  font-weight: bold;
+  cursor: pointer;
+  border: 1px solid #cbd5e1;
+}
+
+.question-nav button.current {
+  background: #2563eb;
+  color: white;
+}
+
+.question-nav button.answered {
+  background: #16a34a;
+  color: white;
+}
+
+body.dark-mode-test .question-nav {
+  background: #1e293b;
+}
+
+body.dark-mode-test .question-nav button {
+  background: #334155;
+  color: white;
+  border-color: #475569;
+}
   </style>
 </head>
 
