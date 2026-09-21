@@ -744,6 +744,24 @@ function submitTest() {
 
   document.getElementById("score").textContent =
     correct + " / " + questions.length;
+  const performanceMessage =
+  document.getElementById("performanceMessage");
+
+const percentageNumber = Number(percentage);
+
+if (percentageNumber >= 80) {
+  performanceMessage.textContent =
+    "🏆 Excellent! आपकी तैयारी बहुत अच्छी चल रही है।";
+} else if (percentageNumber >= 60) {
+  performanceMessage.textContent =
+    "👏 Good! थोड़ी और practice से आपका score बेहतर हो सकता है।";
+} else if (percentageNumber >= 40) {
+  performanceMessage.textContent =
+    "📚 Keep Practicing! इन topics को दोबारा revise करें।";
+} else {
+  performanceMessage.textContent =
+    "💪 शुरुआत अच्छी है! Basics को revise करके फिर से test दें।";
+}
   const reviewBox = document.getElementById("answerReview");
 
 let reviewHTML = "<h3>📚 Answer Review</h3>";
