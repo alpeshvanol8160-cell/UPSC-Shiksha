@@ -32,7 +32,7 @@
 
     .pyq-header {
       text-align: center;
-      padding: 35px 20px;
+      padding: 38px 20px;
       margin-bottom: 25px;
       border-radius: 20px;
       background: linear-gradient(135deg, #fff3e0, #ffffff);
@@ -61,6 +61,21 @@
       background: #333;
       color: white;
       font-size: 13px;
+    }
+
+    .dark-toggle {
+      text-align: center;
+      margin: 15px 0 20px;
+    }
+
+    .dark-toggle button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 9px;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      font-size: 14px;
     }
 
     .search-box {
@@ -191,23 +206,8 @@
       color: white;
       font-size: 20px;
       cursor: pointer;
+      z-index: 999;
     }
-
-    .dark-toggle {
-      text-align: center;
-      margin: 15px 0;
-    }
-
-    .dark-toggle button {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 9px;
-      background: #333;
-      color: white;
-      cursor: pointer;
-    }
-
-    /* DARK MODE */
 
     body.dark-mode {
       background: #121212;
@@ -242,6 +242,10 @@
       border-color: #555;
     }
 
+    body.dark-mode .search-box input::placeholder {
+      color: #bbb;
+    }
+
     @media (max-width: 700px) {
 
       .year-grid {
@@ -263,6 +267,7 @@
       .quick-nav a {
         display: block;
         margin: 7px 0;
+        text-align: center;
       }
 
       .bottom-nav {
@@ -278,489 +283,453 @@
 
 <body>
 
-  <!-- HEADER -->
+<header class="header">
 
-  <header class="header">
+  <div class="logo">
+    <span>🇮🇳</span>
+    UPSC <b>Shiksha</b>
+  </div>
 
-    <div class="logo">
-      <span>🇮🇳</span>
-      UPSC <b>Shiksha</b>
+  <button class="menu-btn" id="menuBtn">☰</button>
+
+  <nav id="navMenu">
+    <a href="index.html">Home</a>
+    <a href="prelims.html">Prelims</a>
+    <a href="csat.html">CSAT</a>
+    <a href="mains.html">Mains</a>
+  </nav>
+
+</header>
+
+
+<main class="pyq-page">
+
+  <a
+    href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/pyq.html"
+    class="back-btn"
+  >
+    ← Back to PYQ
+  </a>
+
+
+  <section class="pyq-header">
+
+    <h1>📄 UPSC Prelims PYQ</h1>
+
+    <p>
+      Civil Services Preliminary Examination
+      Previous Year Question Papers
+    </p>
+
+    <div class="tags">
+      <span class="tag">PRELIMS</span>
+      <span class="tag">GS PAPER-I</span>
+      <span class="tag">CSAT</span>
+      <span class="tag">PYQ</span>
     </div>
 
-    <button class="menu-btn" id="menuBtn">☰</button>
-
-    <nav id="navMenu">
-      <a href="index.html">Home</a>
-      <a href="prelims.html">Prelims</a>
-      <a href="csat.html">CSAT</a>
-      <a href="mains.html">Mains</a>
-    </nav>
-
-  </header>
+  </section>
 
 
-  <!-- MAIN -->
+  <div class="dark-toggle">
 
-  <main class="pyq-page">
+    <button onclick="toggleDarkMode()">
+      🌙 Dark Mode
+    </button>
 
-    <a href="pyq.html" class="back-btn">
-      ← Back to PYQ
-    </a>
+  </div>
 
 
-    <!-- HERO -->
+  <div class="search-box">
 
-    <section class="pyq-header">
+    <input
+      type="text"
+      id="searchInput"
+      placeholder="🔍 Search PYQ Year or Paper..."
+      onkeyup="searchPYQ()"
+    >
 
-      <h1>📄 UPSC Prelims PYQ</h1>
+  </div>
+
+
+  <section class="quick-nav">
+
+    <h2>⚡ Quick Navigation</h2>
+
+    <a href="#year2026">2026</a>
+    <a href="#year2025">2025</a>
+    <a href="#year2024">2024</a>
+    <a href="#year2023">2023</a>
+    <a href="#year2022">2022</a>
+    <a href="#year2021">2021</a>
+    <a href="#year2020">2020</a>
+
+  </section>
+
+
+  <section class="year-grid">
+
+
+    <!-- 2026 -->
+
+    <div class="year-card" id="year2026">
+
+      <h2>📅 UPSC Prelims 2026</h2>
+
+      <span class="paper-type">
+        GS Paper-I
+      </span>
+
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
 
       <p>
         Civil Services Preliminary Examination
-        Previous Year Question Papers
+        2026 question papers.
       </p>
 
-      <div class="tags">
-        <span class="tag">PRELIMS</span>
-        <span class="tag">GS PAPER-I</span>
-        <span class="tag">CSAT</span>
-        <span class="tag">PYQ</span>
-      </div>
-
-    </section>
-
-
-    <!-- DARK MODE -->
-
-    <div class="dark-toggle">
-      <button onclick="toggleDarkMode()">
-        🌙 Dark Mode
-      </button>
-    </div>
-
-
-    <!-- SEARCH -->
-
-    <div class="search-box">
-
-      <input
-        type="text"
-        id="searchInput"
-        placeholder="🔍 Search PYQ Year or Paper..."
-        onkeyup="searchPYQ()"
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
       >
+        📄 Open Official UPSC Papers →
+      </a>
 
     </div>
 
 
-    <!-- QUICK NAVIGATION -->
+    <!-- 2025 -->
 
-    <section class="quick-nav">
+    <div class="year-card" id="year2025">
 
-      <h2>⚡ Quick Navigation</h2>
+      <h2>📅 UPSC Prelims 2025</h2>
 
-      <a href="#year2026">2026</a>
-      <a href="#year2025">2025</a>
-      <a href="#year2024">2024</a>
-      <a href="#year2023">2023</a>
-      <a href="#year2022">2022</a>
-      <a href="#year2021">2021</a>
-      <a href="#year2020">2020</a>
+      <span class="paper-type">
+        GS Paper-I
+      </span>
 
-    </section>
-
-
-    <!-- YEAR PAPERS -->
-
-    <section class="year-grid">
-
-
-      <!-- 2026 -->
-
-      <div class="year-card" id="year2026">
-
-        <h2>📅 UPSC Prelims 2026</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2026 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2025 -->
-
-      <div class="year-card" id="year2025">
-
-        <h2>📅 UPSC Prelims 2025</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2025 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2024 -->
-
-      <div class="year-card" id="year2024">
-
-        <h2>📅 UPSC Prelims 2024</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2024 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2023 -->
-
-      <div class="year-card" id="year2023">
-
-        <h2>📅 UPSC Prelims 2023</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2023 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2022 -->
-
-      <div class="year-card" id="year2022">
-
-        <h2>📅 UPSC Prelims 2022</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2022 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2021 -->
-
-      <div class="year-card" id="year2021">
-
-        <h2>📅 UPSC Prelims 2021</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2021 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-
-      <!-- 2020 -->
-
-      <div class="year-card" id="year2020">
-
-        <h2>📅 UPSC Prelims 2020</h2>
-
-        <span class="paper-type">
-          GS Paper-I
-        </span>
-
-        <span class="paper-type">
-          CSAT Paper-II
-        </span>
-
-        <p>
-          Civil Services Preliminary Examination
-          2020 question papers.
-        </p>
-
-        <a
-          href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-          target="_blank"
-          rel="noopener"
-          class="pyq-btn"
-        >
-          📄 Open Official Papers →
-        </a>
-
-      </div>
-
-    </section>
-
-
-    <!-- STRATEGY -->
-
-    <section class="note">
-
-      <h2>🎯 PYQ Strategy</h2>
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
 
       <p>
-        पहले प्रश्न को खुद solve करो। उसके बाद answer और
-        explanation check करो। फिर उस question से जुड़े
-        topic को revise करो।
+        Civil Services Preliminary Examination
+        2025 question papers.
       </p>
+
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
+
+    </div>
+
+
+    <!-- 2024 -->
+
+    <div class="year-card" id="year2024">
+
+      <h2>📅 UPSC Prelims 2024</h2>
+
+      <span class="paper-type">
+        GS Paper-I
+      </span>
+
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
 
       <p>
-        UPSC के official Previous Question Papers को
-        reference के रूप में इस्तेमाल किया गया है।
+        Civil Services Preliminary Examination
+        2024 question papers.
       </p>
 
-    </section>
-
-
-    <!-- BOTTOM NAV -->
-
-    <div class="bottom-nav">
-
-      <a href="index.html">🏠 Home</a>
-
-      <a href="prelims.html">📚 Prelims</a>
-
-      <a href="csat.html">🧠 CSAT</a>
-
-      <a href="mains.html">📝 Mains</a>
-
-      <a href="pyq.html">📄 PYQ</a>
-
-      <a href="polity.html">🏛️ Polity</a>
-
-      <a href="economy.html">💰 Economy</a>
-
-      <a href="history.html">📜 History</a>
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
 
     </div>
 
-  </main>
 
+    <!-- 2023 -->
 
-  <!-- BACK TO TOP -->
+    <div class="year-card" id="year2023">
 
-  <button id="topBtn" onclick="window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })">
-    ↑
-  </button>
+      <h2>📅 UPSC Prelims 2023</h2>
 
+      <span class="paper-type">
+        GS Paper-I
+      </span>
 
-  <!-- FOOTER -->
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
 
-  <footer>
+      <p>
+        Civil Services Preliminary Examination
+        2023 question papers.
+      </p>
 
-    <div class="footer-logo">
-      🇮🇳 UPSC <b>Shiksha</b>
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
+
     </div>
+
+
+    <!-- 2022 -->
+
+    <div class="year-card" id="year2022">
+
+      <h2>📅 UPSC Prelims 2022</h2>
+
+      <span class="paper-type">
+        GS Paper-I
+      </span>
+
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
+
+      <p>
+        Civil Services Preliminary Examination
+        2022 question papers.
+      </p>
+
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
+
+    </div>
+
+
+    <!-- 2021 -->
+
+    <div class="year-card" id="year2021">
+
+      <h2>📅 UPSC Prelims 2021</h2>
+
+      <span class="paper-type">
+        GS Paper-I
+      </span>
+
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
+
+      <p>
+        Civil Services Preliminary Examination
+        2021 question papers.
+      </p>
+
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
+
+    </div>
+
+
+    <!-- 2020 -->
+
+    <div class="year-card" id="year2020">
+
+      <h2>📅 UPSC Prelims 2020</h2>
+
+      <span class="paper-type">
+        GS Paper-I
+      </span>
+
+      <span class="paper-type">
+        CSAT Paper-II
+      </span>
+
+      <p>
+        Civil Services Preliminary Examination
+        2020 question papers.
+      </p>
+
+      <a
+        href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+        target="_blank"
+        rel="noopener noreferrer"
+        class="pyq-btn"
+      >
+        📄 Open Official UPSC Papers →
+      </a>
+
+    </div>
+
+  </section>
+
+
+  <section class="note">
+
+    <h2>🎯 PYQ Strategy</h2>
 
     <p>
-      Your Complete UPSC Preparation Platform
+      पहले प्रश्न को खुद solve करो। उसके बाद answer और
+      explanation check करो। फिर उस question से जुड़े
+      topic को revise करो।
     </p>
 
-    <p class="copyright">
-      © 2026 UPSC Shiksha. All Rights Reserved.
+    <p>
+      Question papers के लिए official UPSC Previous
+      Question Papers page का उपयोग किया गया है।
     </p>
 
-  </footer>
+  </section>
 
 
-  <!-- SCRIPT -->
+  <div class="bottom-nav">
 
-  <script src="script.js"></script>
+    <a href="index.html">🏠 Home</a>
 
-  <script>
+    <a href="prelims.html">📚 Prelims</a>
 
-    /* DARK MODE */
+    <a href="csat.html">🧠 CSAT</a>
 
-    function toggleDarkMode() {
+    <a href="mains.html">📝 Mains</a>
 
-      document.body.classList.toggle("dark-mode");
+    <a href="pyq.html">📄 PYQ</a>
 
-      if (document.body.classList.contains("dark-mode")) {
+    <a href="polity.html">🏛️ Polity</a>
 
-        localStorage.setItem(
-          "prelimsPyqDarkMode",
-          "on"
-        );
+    <a href="economy.html">💰 Economy</a>
 
-      } else {
+    <a href="history.html">📜 History</a>
 
-        localStorage.setItem(
-          "prelimsPyqDarkMode",
-          "off"
-        );
+  </div>
 
-      }
-
-    }
+</main>
 
 
-    /* LOAD DARK MODE */
-
-    if (
-      localStorage.getItem("prelimsPyqDarkMode") === "on"
-    ) {
-
-      document.body.classList.add("dark-mode");
-
-    }
-
-
-    /* SEARCH */
-
-    function searchPYQ() {
-
-      const input =
-        document.getElementById("searchInput")
-        .value
-        .toLowerCase();
-
-      const cards =
-        document.querySelectorAll(".year-card");
-
-      cards.forEach(function(card) {
-
-        const text =
-          card.innerText.toLowerCase();
-
-        if (text.includes(input)) {
-
-          card.style.display = "";
-
-        } else {
-
-          card.style.display = "none";
-
-        }
-
-      });
-
-    }
+<button
+  id="topBtn"
+  onclick="window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  })"
+>
+  ↑
+</button>
 
 
-    /* BACK TO TOP */
+<footer>
 
-    window.addEventListener("scroll", function() {
+  <div class="footer-logo">
+    🇮🇳 UPSC <b>Shiksha</b>
+  </div>
 
-      const btn =
-        document.getElementById("topBtn");
+  <p>
+    Your Complete UPSC Preparation Platform
+  </p>
 
-      if (window.scrollY > 300) {
+  <p class="copyright">
+    © 2026 UPSC Shiksha. All Rights Reserved.
+  </p>
 
-        btn.style.display = "block";
+</footer>
 
-      } else {
 
-        btn.style.display = "none";
+<script src="script.js"></script>
 
-      }
+<script>
+
+  /* DARK MODE */
+
+  function toggleDarkMode() {
+
+    document.body.classList.toggle("dark-mode");
+
+    localStorage.setItem(
+      "prelimsPyqDarkMode",
+      document.body.classList.contains("dark-mode")
+        ? "on"
+        : "off"
+    );
+
+  }
+
+
+  /* LOAD DARK MODE */
+
+  if (
+    localStorage.getItem("prelimsPyqDarkMode") === "on"
+  ) {
+
+    document.body.classList.add("dark-mode");
+
+  }
+
+
+  /* SEARCH */
+
+  function searchPYQ() {
+
+    const input =
+      document.getElementById("searchInput")
+      .value
+      .toLowerCase()
+      .trim();
+
+    const cards =
+      document.querySelectorAll(".year-card");
+
+    cards.forEach(function(card) {
+
+      const text =
+        card.innerText.toLowerCase();
+
+      card.style.display =
+        text.includes(input) ? "" : "none";
 
     });
 
-  </script>
+  }
+
+
+  /* BACK TO TOP */
+
+  window.addEventListener("scroll", function() {
+
+    const btn =
+      document.getElementById("topBtn");
+
+    btn.style.display =
+      window.scrollY > 300
+        ? "block"
+        : "none";
+
+  });
+
+</script>
 
 </body>
 </html>
