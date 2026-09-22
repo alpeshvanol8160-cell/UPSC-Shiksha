@@ -748,6 +748,35 @@ function submitTest() {
   document.getElementById("performanceMessage");
 
 const percentageNumber = Number(percentage);
+  /* SAVE TEST PROGRESS */
+
+let progressData =
+  JSON.parse(
+    localStorage.getItem("upscProgress")
+  ) || {
+    tests: 0,
+    questions: 0,
+    correct: 0,
+    incorrect: 0,
+    scores: []
+  };
+
+progressData.tests += 1;
+
+progressData.questions += questions.length;
+
+progressData.correct += correct;
+
+progressData.incorrect += incorrect;
+
+progressData.scores.push(
+  percentageNumber
+);
+
+localStorage.setItem(
+  "upscProgress",
+  JSON.stringify(progressData)
+);
 
 if (percentageNumber >= 80) {
   performanceMessage.textContent =
