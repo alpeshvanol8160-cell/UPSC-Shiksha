@@ -1,0 +1,976 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UPSC Shiksha | Current Affairs</title>
+
+<meta name="description"
+content="UPSC Shiksha Current Affairs - Daily and monthly UPSC current affairs for Prelims and Mains preparation.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+  margin:0;
+  font-family:Arial, sans-serif;
+  background:#f5f7fb;
+  color:#222;
+  transition:0.3s;
+}
+
+body.dark{
+  background:#111827;
+  color:#f3f4f6;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#111827;
+  color:white;
+  padding:14px 18px;
+  box-shadow:0 3px 12px rgba(0,0,0,.2);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:15px;
+}
+
+.logo{
+  font-size:22px;
+  font-weight:bold;
+}
+
+nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+nav a{
+  color:white;
+  text-decoration:none;
+  padding:8px 11px;
+  border-radius:7px;
+  font-size:14px;
+}
+
+nav a:hover{
+  background:#374151;
+}
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:20px;
+}
+
+.hero{
+  background:linear-gradient(135deg,#1d4ed8,#7c3aed);
+  color:white;
+  padding:35px 22px;
+  border-radius:18px;
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.hero h1{
+  margin:0 0 10px;
+  font-size:32px;
+}
+
+.hero p{
+  margin:8px 0 18px;
+}
+
+.tags{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+}
+
+.tag{
+  background:rgba(255,255,255,.18);
+  padding:7px 12px;
+  border-radius:20px;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.controls{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:20px;
+}
+
+.search{
+  flex:1;
+  min-width:220px;
+  padding:13px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.dark-btn{
+  padding:13px 16px;
+  border:0;
+  border-radius:10px;
+  background:#111827;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+body.dark .dark-btn{
+  background:#f3f4f6;
+  color:#111827;
+}
+
+.quick-nav{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-bottom:25px;
+}
+
+.quick-nav a{
+  text-decoration:none;
+  background:#e0e7ff;
+  color:#3730a3;
+  padding:8px 12px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+body.dark .quick-nav a{
+  background:#312e81;
+  color:#e0e7ff;
+}
+
+.section-title{
+  margin-top:30px;
+  margin-bottom:15px;
+}
+
+.section-title h2{
+  margin-bottom:5px;
+}
+
+.section-title p{
+  color:#6b7280;
+}
+
+body.dark .section-title p{
+  color:#9ca3af;
+}
+
+.news-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.news-card{
+  background:white;
+  border-radius:15px;
+  padding:20px;
+  box-shadow:0 5px 18px rgba(0,0,0,.08);
+  border-left:5px solid #2563eb;
+  transition:.2s;
+}
+
+body.dark .news-card{
+  background:#1f2937;
+  box-shadow:none;
+}
+
+.news-card:hover{
+  transform:translateY(-3px);
+}
+
+.category{
+  display:inline-block;
+  background:#dbeafe;
+  color:#1d4ed8;
+  padding:5px 9px;
+  border-radius:7px;
+  font-size:12px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+body.dark .category{
+  background:#1e3a8a;
+  color:#bfdbfe;
+}
+
+.news-card h3{
+  margin:7px 0;
+  font-size:19px;
+}
+
+.news-card p{
+  line-height:1.6;
+  color:#4b5563;
+}
+
+body.dark .news-card p{
+  color:#d1d5db;
+}
+
+.date{
+  font-size:13px;
+  color:#6b7280;
+}
+
+.read-btn{
+  display:inline-block;
+  margin-top:10px;
+  text-decoration:none;
+  background:#2563eb;
+  color:white;
+  padding:9px 13px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:14px;
+}
+
+.month-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.month-card{
+  background:white;
+  padding:20px;
+  border-radius:14px;
+  box-shadow:0 5px 15px rgba(0,0,0,.07);
+  text-align:center;
+}
+
+body.dark .month-card{
+  background:#1f2937;
+}
+
+.month-card h3{
+  margin-top:0;
+}
+
+.month-card a{
+  display:inline-block;
+  margin-top:8px;
+  text-decoration:none;
+  color:#2563eb;
+  font-weight:bold;
+}
+
+.info-box{
+  margin-top:30px;
+  background:#eff6ff;
+  border-left:5px solid #2563eb;
+  padding:18px;
+  border-radius:10px;
+  line-height:1.6;
+}
+
+body.dark .info-box{
+  background:#172554;
+  color:#dbeafe;
+}
+
+.bottom-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:35px 0 20px;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  background:#111827;
+  color:white;
+  padding:10px 13px;
+  border-radius:8px;
+  font-size:14px;
+}
+
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:20px;
+  border:0;
+  background:#2563eb;
+  color:white;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  cursor:pointer;
+  display:none;
+  font-size:18px;
+}
+
+footer{
+  text-align:center;
+  background:#111827;
+  color:#d1d5db;
+  padding:25px 15px;
+  margin-top:30px;
+}
+
+@media(max-width:750px){
+  .header-inner{
+    flex-direction:column;
+  }
+
+  nav{
+    justify-content:center;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .news-grid{
+    grid-template-columns:1fr;
+  }
+
+  .month-grid{
+    grid-template-columns:1fr;
+  }
+
+  .container{
+    padding:14px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="prelims.html">Prelims</a>
+      <a href="mains.html">Mains</a>
+      <a href="pyq.html">PYQ</a>
+      <a href="test.html">Test</a>
+    </nav>
+
+  </div>
+</header>
+
+<main class="container">
+
+<section class="hero">
+  <h1>📰 UPSC Current Affairs</h1>
+
+  <p>
+    Daily & Monthly Current Affairs for UPSC Prelims and Mains
+  </p>
+
+  <div class="tags">
+    <span class="tag">DAILY</span>
+    <span class="tag">MONTHLY</span>
+    <span class="tag">PRELIMS</span>
+    <span class="tag">MAINS</span>
+    <span class="tag">2026</span>
+  </div>
+</section>
+
+
+<div class="controls">
+
+  <input
+    type="text"
+    id="searchBox"
+    class="search"
+    placeholder="🔎 Search Current Affairs..."
+  >
+
+  <button
+    class="dark-btn"
+    onclick="toggleDark()">
+    🌙 Dark Mode
+  </button>
+
+</div>
+
+
+<div class="quick-nav">
+
+  <a href="#daily">Daily</a>
+  <a href="#polity">Polity</a>
+  <a href="#economy">Economy</a>
+  <a href="#international">International</a>
+  <a href="#environment">Environment</a>
+  <a href="#science">Science</a>
+  <a href="#monthly">Monthly</a>
+
+</div>
+
+
+<section id="daily">
+
+<div class="section-title">
+  <h2>🔥 Important Current Affairs</h2>
+  <p>September 2026 – UPSC oriented topics</p>
+</div>
+
+
+<div class="news-grid" id="newsGrid">
+
+
+<div class="news-card">
+
+<span class="category">POLITY</span>
+
+<h3>Uniform Civil Code – Constitutional Debate</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Study the constitutional provisions, fundamental rights,
+directive principles and important judicial developments
+related to the Uniform Civil Code.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+Official Source →
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="category">ECONOMY</span>
+
+<h3>India's Economic & Financial Developments</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Focus on monetary policy, digital payments, financial
+inclusion, banking reforms, inflation and important
+economic indicators.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+UPSC Source →
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="category">ENVIRONMENT</span>
+
+<h3>Black Carbon & Himalayan Ecosystem</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Understand black carbon, its sources, climate impact,
+snow and glacier effects and relevance to Himalayan
+environmental studies.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+Study Topic →
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="category">SCIENCE & TECHNOLOGY</span>
+
+<h3>Quantum Computing Developments</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Revise quantum computing, qubits, quantum advantage,
+applications and India's growing role in quantum
+technology.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+Study Topic →
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="category">INTERNATIONAL RELATIONS</span>
+
+<h3>India & Global Strategic Relations</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Revise India's relations with major powers, international
+organisations, strategic partnerships and important
+global developments.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+UPSC Source →
+</a>
+
+</div>
+
+
+<div class="news-card">
+
+<span class="category">DEFENCE</span>
+
+<h3>India's Defence & Military Exercises</h3>
+
+<div class="date">
+September 2026
+</div>
+
+<p>
+Important defence exercises, military cooperation,
+indigenous defence production and strategic security
+developments are relevant for UPSC.
+</p>
+
+<a
+href="https://www.upsc.gov.in/"
+target="_blank"
+class="read-btn">
+Official Source →
+</a>
+
+</div>
+
+
+</div>
+</section>
+
+
+<section id="polity">
+
+<div class="section-title">
+  <h2>🏛️ Polity & Governance</h2>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+<span class="category">POLITY</span>
+<h3>Constitutional Institutions</h3>
+<p>
+Revise Parliament, Supreme Court, Election Commission,
+CAG, UPSC and other constitutional bodies along with
+recent developments.
+</p>
+</div>
+
+<div class="news-card">
+<span class="category">GOVERNANCE</span>
+<h3>Government Schemes</h3>
+<p>
+For every important scheme, study its objective,
+ministry, beneficiaries, funding pattern and implementation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="economy">
+
+<div class="section-title">
+  <h2>💰 Economy</h2>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+<span class="category">ECONOMY</span>
+<h3>RBI & Monetary Policy</h3>
+<p>
+Study repo rate, reverse repo, inflation, liquidity,
+monetary policy tools and RBI functions.
+</p>
+</div>
+
+<div class="news-card">
+<span class="category">ECONOMY</span>
+<h3>Digital Economy</h3>
+<p>
+Important areas include UPI, digital payments, financial
+inclusion, fintech and digital public infrastructure.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="international">
+
+<div class="section-title">
+  <h2>🌍 International Relations</h2>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+<span class="category">IR</span>
+<h3>India & Neighbourhood</h3>
+<p>
+Track India's relations with neighbouring countries,
+connectivity projects, trade and strategic cooperation.
+</p>
+</div>
+
+<div class="news-card">
+<span class="category">IR</span>
+<h3>International Organisations</h3>
+<p>
+Revise UN, IMF, World Bank, WTO, WHO, G20, BRICS,
+QUAD and other important organisations.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="environment">
+
+<div class="section-title">
+  <h2>🌱 Environment</h2>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+<span class="category">ENVIRONMENT</span>
+<h3>Climate Change</h3>
+<p>
+Study greenhouse gases, carbon emissions, climate
+agreements, adaptation and mitigation.
+</p>
+</div>
+
+<div class="news-card">
+<span class="category">BIODIVERSITY</span>
+<h3>Species & Protected Areas</h3>
+<p>
+Important species, national parks, wildlife sanctuaries,
+Ramsar sites and biodiversity conservation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="science">
+
+<div class="section-title">
+  <h2>🔬 Science & Technology</h2>
+</div>
+
+<div class="news-grid">
+
+<div class="news-card">
+<span class="category">SPACE</span>
+<h3>Space Technology</h3>
+<p>
+Revise satellites, launch vehicles, space missions,
+ISRO programmes and important space discoveries.
+</p>
+</div>
+
+<div class="news-card">
+<span class="category">TECHNOLOGY</span>
+<h3>Artificial Intelligence</h3>
+<p>
+Study AI, machine learning, generative AI, ethics,
+applications and challenges.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<section id="monthly">
+
+<div class="section-title">
+  <h2>📅 Monthly Current Affairs</h2>
+  <p>Monthly revision section</p>
+</div>
+
+<div class="month-grid">
+
+<div class="month-card">
+  <h3>January 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>February 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>March 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>April 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>May 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>June 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>July 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>August 2026</h3>
+  <p>Monthly Current Affairs</p>
+  <a href="#">Open →</a>
+</div>
+
+<div class="month-card">
+  <h3>September 2026</h3>
+  <p>Current Month</p>
+  <a href="#daily">View Topics →</a>
+</div>
+
+</div>
+
+</section>
+
+
+<div class="info-box">
+
+<strong>📌 UPSC Current Affairs Strategy</strong>
+
+<br><br>
+
+Current Affairs को केवल याद करने के बजाय उसे
+UPSC syllabus से connect करके पढ़ें।
+
+<br><br>
+
+<strong>Prelims:</strong>
+Facts, reports, organisations, schemes, places,
+species and important terms.
+
+<br>
+
+<strong>Mains:</strong>
+Background, causes, impact, challenges,
+government measures and way forward.
+
+<br><br>
+
+<strong>Source:</strong>
+Important official information के लिए UPSC की
+official website और संबंधित government sources को
+प्राथमिकता दें।
+
+</div>
+
+
+<div class="bottom-nav">
+
+<a href="index.html">🏠 Home</a>
+<a href="prelims.html">📚 Prelims</a>
+<a href="mains.html">📝 Mains</a>
+<a href="pyq.html">📄 PYQ</a>
+<a href="test.html">📝 Test</a>
+<a href="timetable.html">📅 Timetable</a>
+<a href="progress.html">📊 Progress</a>
+
+</div>
+
+</main>
+
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+
+<footer>
+
+<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+
+<p>
+Free UPSC Preparation • Syllabus • PYQs • Tests • Current Affairs
+</p>
+
+<p>© 2026 UPSC Shiksha</p>
+
+</footer>
+
+
+<script>
+
+/* DARK MODE */
+
+function toggleDark(){
+
+  document.body.classList.toggle("dark");
+
+  localStorage.setItem(
+    "currentAffairsDarkMode",
+    document.body.classList.contains("dark")
+  );
+
+}
+
+if(
+  localStorage.getItem("currentAffairsDarkMode")
+  === "true"
+){
+
+  document.body.classList.add("dark");
+
+}
+
+
+/* SEARCH */
+
+const searchBox =
+document.getElementById("searchBox");
+
+searchBox.addEventListener("input", function(){
+
+  const search =
+  this.value.toLowerCase();
+
+  const cards =
+  document.querySelectorAll(".news-card");
+
+  cards.forEach(function(card){
+
+    const text =
+    card.innerText.toLowerCase();
+
+    if(text.includes(search)){
+      card.style.display = "";
+    }else{
+      card.style.display = "none";
+    }
+
+  });
+
+});
+
+
+/* TOP BUTTON */
+
+window.onscroll = function(){
+
+  const btn =
+  document.getElementById("topBtn");
+
+  if(
+    document.body.scrollTop > 300 ||
+    document.documentElement.scrollTop > 300
+  ){
+
+    btn.style.display = "block";
+
+  }else{
+
+    btn.style.display = "none";
+
+  }
+
+};
+
+
+function topFunction(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+</script>
+
+</body>
+</html>
