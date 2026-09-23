@@ -15528,23 +15528,24 @@ function searchTopics(){
 let input =
 document.getElementById("searchBox")
 .value
-.toLowerCase();
+.toLowerCase()
+.trim();
 
-let topics =
-document.querySelectorAll(".topic");
+let items =
+document.querySelectorAll(".topic, .current-card");
 
-topics.forEach(function(topic){
+items.forEach(function(item){
 
 let text =
-topic.innerText.toLowerCase();
+item.innerText.toLowerCase();
 
 if(text.includes(input)){
 
-topic.style.display="block";
+item.style.display="block";
 
 }else{
 
-topic.style.display="none";
+item.style.display="none";
 
 }
 
