@@ -1080,6 +1080,7 @@ const quizQuestions = [
 
 ];
 
+let filteredQuestions = [...quizQuestions];
 let currentQuestion = 0;
 let score = 0;
 let answered = false;
@@ -1109,7 +1110,7 @@ const quizSubject =
 function loadQuestion() {
 
   const question =
-    quizQuestions[currentQuestion];
+    filteredQuestions[currentQuestion];
 
   questionText.textContent =
     question.question;
@@ -1118,7 +1119,7 @@ function loadQuestion() {
     "Question " +
     (currentQuestion + 1) +
     " / " +
-    quizQuestions.length;
+    filteredQuestions.length;
 
   quizScore.textContent =
     "Score: " + score;
@@ -1164,7 +1165,7 @@ function checkAnswer(selected, selectedButton) {
   answered = true;
 
   const question =
-    quizQuestions[currentQuestion];
+    filteredQuestions[currentQuestion];
 
   const buttons =
     document.querySelectorAll(".option-btn");
@@ -1215,7 +1216,7 @@ document
   .addEventListener("click", function() {
 
     if (currentQuestion <
-        quizQuestions.length - 1) {
+        filteredQuestions.length - 1) {
 
       currentQuestion++;
 
@@ -1228,7 +1229,7 @@ document
         "Your Score: " +
         score +
         " / " +
-        quizQuestions.length
+        filteredQuestions.length
       );
 
     }
@@ -1256,7 +1257,7 @@ function filterQuiz() {
   const selectedSubject =
     quizSubject.value;
 
-  const filtered =
+  filteredQuestions =
     quizQuestions.filter(function(question) {
 
       const yearMatch =
@@ -1271,7 +1272,10 @@ function filterQuiz() {
 
     });
 
-  if (filtered.length === 0) {
+  currentQuestion = 0;
+  score = 0;
+
+  if (filteredQuestions.length === 0) {
 
     questionText.textContent =
       "No questions found for this filter.";
@@ -1283,16 +1287,12 @@ function filterQuiz() {
     questionNumber.textContent =
       "No Questions";
 
+    quizScore.textContent =
+      "Score: 0";
+
     return;
 
   }
-
-  currentQuestion = 0;
-
-  score = 0;
-
-  quizScore.textContent =
-    "Score: 0";
 
   loadQuestion();
 
