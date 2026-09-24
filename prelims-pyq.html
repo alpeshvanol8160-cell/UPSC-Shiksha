@@ -1040,6 +1040,279 @@ body.dark-mode .answer-box {
     });
 
   }
+  /* =========================
+   PYQ QUIZ ENGINE
+========================= */
+
+const quizQuestions = [
+
+  {
+    year: "2025",
+    subject: "polity",
+    question:
+      "PYQ Demo Question — Which part of the Constitution deals with Fundamental Rights?",
+    options: [
+      "Part I",
+      "Part II",
+      "Part III",
+      "Part IV"
+    ],
+    answer: 2,
+    explanation:
+      "Part III of the Constitution of India deals with Fundamental Rights."
+  },
+
+  {
+    year: "2024",
+    subject: "history",
+    question:
+      "PYQ Demo Question — The term 'Sangam' is associated with which field?",
+    options: [
+      "Ancient Tamil literature",
+      "Mughal administration",
+      "Buddhist councils",
+      "Vedic sacrifices"
+    ],
+    answer: 0,
+    explanation:
+      "Sangam literature refers to ancient Tamil literary traditions."
+  }
+
+];
+
+let currentQuestion = 0;
+let score = 0;
+let answered = false;
+
+const questionText =
+  document.getElementById("questionText");
+
+const optionsBox =
+  document.getElementById("optionsBox");
+
+const answerBox =
+  document.getElementById("answerBox");
+
+const questionNumber =
+  document.getElementById("questionNumber");
+
+const quizScore =
+  document.getElementById("quizScore");
+
+const quizYear =
+  document.getElementById("quizYear");
+
+const quizSubject =
+  document.getElementById("quizSubject");
+
+
+function loadQuestion() {
+
+  const question =
+    quizQuestions[currentQuestion];
+
+  questionText.textContent =
+    question.question;
+
+  questionNumber.textContent =
+    "Question " +
+    (currentQuestion + 1) +
+    " / " +
+    quizQuestions.length;
+
+  quizScore.textContent =
+    "Score: " + score;
+
+  answerBox.style.display = "none";
+  answerBox.innerHTML = "";
+
+  answered = false;
+
+  optionsBox.innerHTML = "";
+
+  question.options.forEach(function(option, index) {
+
+    const button =
+      document.createElement("button");
+
+    button.className = "option-btn";
+
+    button.textContent =
+      String.fromCharCode(65 + index) +
+      ". " +
+      option;
+
+    button.addEventListener("click", function() {
+
+      checkAnswer(index, button);
+
+    });
+
+    optionsBox.appendChild(button);
+
+  });
+
+}
+
+
+function checkAnswer(selected, selectedButton) {
+
+  if (answered) {
+    return;
+  }
+
+  answered = true;
+
+  const question =
+    quizQuestions[currentQuestion];
+
+  const buttons =
+    document.querySelectorAll(".option-btn");
+
+  buttons.forEach(function(button, index) {
+
+    button.disabled = true;
+
+    if (index === question.answer) {
+      button.classList.add("correct");
+    }
+
+  });
+
+  if (selected === question.answer) {
+
+    score++;
+
+    selectedButton.classList.add("correct");
+
+    answerBox.innerHTML =
+      "✅ <strong>Correct!</strong><br><br>" +
+      question.explanation;
+
+  } else {
+
+    selectedButton.classList.add("wrong");
+
+    answerBox.innerHTML =
+      "❌ <strong>Incorrect.</strong><br><br>" +
+      "Correct Answer: " +
+      String.fromCharCode(65 + question.answer) +
+      "<br><br>" +
+      question.explanation;
+
+  }
+
+  answerBox.style.display = "block";
+
+  quizScore.textContent =
+    "Score: " + score;
+
+}
+
+
+document
+  .getElementById("nextQuestion")
+  .addEventListener("click", function() {
+
+    if (currentQuestion <
+        quizQuestions.length - 1) {
+
+      currentQuestion++;
+
+      loadQuestion();
+
+    } else {
+
+      alert(
+        "🎉 Test Complete!\n\n" +
+        "Your Score: " +
+        score +
+        " / " +
+        quizQuestions.length
+      );
+
+    }
+
+  });
+
+
+document
+  .getElementById("restartQuiz")
+  .addEventListener("click", function() {
+
+    currentQuestion = 0;
+    score = 0;
+
+    loadQuestion();
+
+  });
+
+
+function filterQuiz() {
+
+  const selectedYear =
+    quizYear.value;
+
+  const selectedSubject =
+    quizSubject.value;
+
+  const filtered =
+    quizQuestions.filter(function(question) {
+
+      const yearMatch =
+        selectedYear === "all" ||
+        question.year === selectedYear;
+
+      const subjectMatch =
+        selectedSubject === "all" ||
+        question.subject === selectedSubject;
+
+      return yearMatch && subjectMatch;
+
+    });
+
+  if (filtered.length === 0) {
+
+    questionText.textContent =
+      "No questions found for this filter.";
+
+    optionsBox.innerHTML = "";
+
+    answerBox.style.display = "none";
+
+    questionNumber.textContent =
+      "No Questions";
+
+    return;
+
+  }
+
+  currentQuestion = 0;
+
+  score = 0;
+
+  quizScore.textContent =
+    "Score: 0";
+
+  loadQuestion();
+
+}
+
+
+quizYear.addEventListener(
+  "change",
+  filterQuiz
+);
+
+quizSubject.addEventListener(
+  "change",
+  filterQuiz
+);
+
+
+/* START QUIZ */
+
+loadQuestion();
 
 
   /* BACK TO TOP */
