@@ -278,6 +278,150 @@
         text-align: center;
       }
     }
+    /* =========================
+   REAL PYQ QUIZ
+========================= */
+
+.quiz-box {
+  margin: 30px 0;
+  padding: 25px;
+  border-radius: 20px;
+  background: #f7f7f7;
+  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+}
+
+.quiz-box h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.quiz-subtitle {
+  text-align: center;
+  opacity: .75;
+}
+
+.quiz-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.quiz-filters select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  background: white;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  margin: 15px 0;
+  font-weight: bold;
+}
+
+.question-card {
+  background: white;
+  padding: 22px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+
+.question-card h3 {
+  line-height: 1.6;
+}
+
+.option-btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 14px;
+  text-align: left;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background: white;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.option-btn:hover {
+  background: #f0f0f0;
+}
+
+.option-btn.correct {
+  background: #d9f7df;
+  border-color: #299447;
+}
+
+.option-btn.wrong {
+  background: #ffdede;
+  border-color: #d33;
+}
+
+.answer-box {
+  display: none;
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 10px;
+  background: #eef6ff;
+  line-height: 1.6;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.quiz-actions button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+body.dark-mode .quiz-box,
+body.dark-mode .question-card {
+  background: #1e1e1e;
+}
+
+body.dark-mode .quiz-filters select,
+body.dark-mode .option-btn {
+  background: #292929;
+  color: white;
+  border-color: #555;
+}
+
+body.dark-mode .answer-box {
+  background: #26384a;
+}
+
+@media (max-width: 600px) {
+
+  .quiz-box {
+    padding: 18px;
+  }
+
+  .quiz-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-info {
+    font-size: 14px;
+  }
+
+  .quiz-actions {
+    flex-direction: column;
+  }
+
+}
   </style>
 </head>
 
@@ -350,6 +494,97 @@
     >
 
   </div>
+  <!-- REAL PYQ QUIZ ENGINE -->
+
+<section class="quiz-box" id="pyqQuiz">
+
+  <h2>📝 Prelims PYQ Practice</h2>
+
+  <p class="quiz-subtitle">
+    Practice UPSC Prelims Previous Year Questions
+  </p>
+
+  <div class="quiz-filters">
+
+    <select id="quizYear">
+      <option value="all">📅 All Years</option>
+      <option value="2026">2026</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+    </select>
+
+    <select id="quizSubject">
+      <option value="all">📚 All Subjects</option>
+      <option value="polity">Polity</option>
+      <option value="history">History</option>
+      <option value="geography">Geography</option>
+      <option value="economy">Economy</option>
+      <option value="environment">Environment</option>
+      <option value="science">Science & Technology</option>
+    </select>
+
+  </div>
+
+  <div class="quiz-info">
+
+    <span id="questionNumber">
+      Question 1
+    </span>
+
+    <span id="quizScore">
+      Score: 0
+    </span>
+
+  </div>
+
+  <div class="question-card">
+
+    <h3 id="questionText">
+      PYQ question will appear here.
+    </h3>
+
+    <div id="optionsBox">
+
+      <button class="option-btn">
+        Option A
+      </button>
+
+      <button class="option-btn">
+        Option B
+      </button>
+
+      <button class="option-btn">
+        Option C
+      </button>
+
+      <button class="option-btn">
+        Option D
+      </button>
+
+    </div>
+
+    <div id="answerBox" class="answer-box">
+    </div>
+
+  </div>
+
+  <div class="quiz-actions">
+
+    <button id="nextQuestion">
+      ➡️ Next Question
+    </button>
+
+    <button id="restartQuiz">
+      🔄 Restart
+    </button>
+
+  </div>
+
+</section>
 
 
   <section class="quick-nav">
