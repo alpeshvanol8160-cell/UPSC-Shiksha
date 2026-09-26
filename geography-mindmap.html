@@ -1,0 +1,1824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Geography Mind Map | UPSC Shiksha</title>
+
+<meta name="description"
+content="UPSC Geography Interactive Mind Map and Detailed Notes - Physical Geography, Indian Geography, Climate, Drainage, Agriculture, Resources, Disasters and Human Geography.">
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.6;
+    transition:.3s;
+}
+
+body.dark{
+    background:#101522;
+    color:#f1f5f9;
+}
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:linear-gradient(135deg,#0b5ed7,#173b8f);
+    color:white;
+    padding:14px 16px;
+    box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+
+.header-inner{
+    max-width:1200px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    font-size:21px;
+    font-weight:bold;
+}
+
+.header-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.header-btn{
+    border:none;
+    padding:9px 13px;
+    border-radius:20px;
+    cursor:pointer;
+    background:white;
+    color:#123b82;
+    font-weight:bold;
+}
+
+.hero{
+    padding:55px 16px;
+    text-align:center;
+    color:white;
+    background:
+    radial-gradient(circle at top right,#36d1dc55,transparent 35%),
+    linear-gradient(135deg,#173b8f,#087f8c);
+}
+
+.hero h1{
+    font-size:34px;
+    margin-bottom:10px;
+}
+
+.hero p{
+    max-width:800px;
+    margin:auto;
+    font-size:17px;
+}
+
+.container{
+    max-width:1200px;
+    margin:auto;
+    padding:25px 15px;
+}
+
+.search-box{
+    background:white;
+    padding:15px;
+    border-radius:16px;
+    box-shadow:0 4px 15px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.dark .search-box{
+    background:#182235;
+}
+
+.search-box input{
+    width:100%;
+    padding:13px;
+    border:2px solid #dbe3ef;
+    border-radius:10px;
+    font-size:16px;
+    outline:none;
+}
+
+.dark .search-box input{
+    background:#101522;
+    color:white;
+    border-color:#39465c;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    margin:35px 0 18px;
+    padding:14px 18px;
+    border-radius:14px;
+    color:white;
+    font-size:24px;
+    box-shadow:0 5px 15px rgba(0,0,0,.12);
+}
+
+.blue{background:linear-gradient(135deg,#0878d1,#1456a0);}
+.green{background:linear-gradient(135deg,#11998e,#168b45);}
+.yellow{background:linear-gradient(135deg,#e5a500,#d97900);}
+.orange{background:linear-gradient(135deg,#f97316,#c2410c);}
+.purple{background:linear-gradient(135deg,#7c3aed,#5b21b6);}
+.red{background:linear-gradient(135deg,#dc2626,#991b1b);}
+
+/* MIND MAP */
+
+.mindmap{
+    position:relative;
+    background:white;
+    min-height:650px;
+    border-radius:24px;
+    padding:35px 15px;
+    overflow:hidden;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+}
+
+.dark .mindmap{
+    background:#182235;
+}
+
+.center-node{
+    width:190px;
+    height:190px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#ff512f,#dd2476);
+    color:white;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    font-size:20px;
+    font-weight:bold;
+    margin:30px auto;
+    box-shadow:0 12px 30px rgba(221,36,118,.35);
+    animation:pulse 3s infinite;
+}
+
+.nodes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+    max-width:1000px;
+    margin:auto;
+}
+
+.node{
+    border:none;
+    padding:17px 10px;
+    border-radius:16px;
+    color:white;
+    font-weight:bold;
+    cursor:pointer;
+    min-height:72px;
+    transition:.3s;
+    box-shadow:0 5px 12px rgba(0,0,0,.12);
+}
+
+.node:hover{
+    transform:translateY(-6px) scale(1.02);
+}
+
+.n1{background:#1976d2;}
+.n2{background:#16a34a;}
+.n3{background:#d97706;}
+.n4{background:#7c3aed;}
+.n5{background:#0891b2;}
+.n6{background:#dc2626;}
+.n7{background:#9333ea;}
+.n8{background:#15803d;}
+.n9{background:#ea580c;}
+.n10{background:#2563eb;}
+.n11{background:#be123c;}
+.n12{background:#475569;}
+
+.node-info{
+    margin:25px auto 0;
+    max-width:900px;
+    background:#eef6ff;
+    border-left:6px solid #1677d2;
+    padding:18px;
+    border-radius:12px;
+    display:none;
+}
+
+.dark .node-info{
+    background:#202c40;
+}
+
+.node-info h3{
+    margin-bottom:7px;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:20px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    transition:.3s;
+    border-top:6px solid #1976d2;
+}
+
+.dark .card{
+    background:#182235;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:10px;
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.dark .table-wrap{
+    background:#182235;
+}
+
+table{
+    width:100%;
+    border-collapse:collapse;
+    min-width:650px;
+}
+
+th,td{
+    padding:13px;
+    border:1px solid #d9e1eb;
+    text-align:left;
+}
+
+th{
+    background:#eaf3ff;
+    color:#104d91;
+}
+
+.dark th{
+    background:#263650;
+    color:#fff;
+}
+
+.dark td{
+    border-color:#39465c;
+}
+
+tr:nth-child(even){
+    background:#fafcff;
+}
+
+.dark tr:nth-child(even){
+    background:#1c293d;
+}
+
+/* UPSC BOXES */
+
+.upsc-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:18px;
+}
+
+.upsc-box{
+    padding:20px;
+    border-radius:16px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.prelims{
+    background:#e8f5e9;
+    border-left:7px solid #16a34a;
+}
+
+.mains{
+    background:#fff3e0;
+    border-left:7px solid #f97316;
+}
+
+.dark .prelims,
+.dark .mains{
+    color:#172033;
+}
+
+/* REVISION */
+
+.revision{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:14px;
+}
+
+.revision-card{
+    padding:18px;
+    border-radius:16px;
+    color:white;
+    min-height:130px;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+
+.r1{background:#2563eb;}
+.r2{background:#16a34a;}
+.r3{background:#d97706;}
+.r4{background:#7c3aed;}
+.r5{background:#0891b2;}
+.r6{background:#dc2626;}
+.r7{background:#9333ea;}
+.r8{background:#475569;}
+
+/* MAP */
+
+.map-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.map-card{
+    background:white;
+    border-radius:16px;
+    padding:18px;
+    border-left:6px solid #2563eb;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.dark .map-card{
+    background:#182235;
+}
+
+.map-card strong{
+    color:#d62828;
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-bottom:20px;
+}
+
+.quick-nav a{
+    text-decoration:none;
+    padding:9px 13px;
+    border-radius:20px;
+    background:#e7f0ff;
+    color:#1254a0;
+    font-weight:bold;
+}
+
+.dark .quick-nav a{
+    background:#263650;
+    color:#fff;
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+    position:fixed;
+    right:18px;
+    bottom:20px;
+    width:45px;
+    height:45px;
+    border:none;
+    border-radius:50%;
+    background:#1456a0;
+    color:white;
+    font-size:20px;
+    cursor:pointer;
+    display:none;
+    z-index:999;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:40px;
+    padding:30px 15px;
+    background:#101827;
+    color:white;
+    text-align:center;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.04);}
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card,.map-card,.revision-card,.upsc-box{
+    animation:fadeUp .7s ease both;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .nodes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .upsc-grid{
+        grid-template-columns:1fr;
+    }
+
+    .revision{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .map-grid{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(max-width:520px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .logo{
+        font-size:19px;
+    }
+
+    .hero{
+        padding:40px 14px;
+    }
+
+    .hero h1{
+        font-size:25px;
+    }
+
+    .center-node{
+        width:155px;
+        height:155px;
+        font-size:17px;
+    }
+
+    .nodes{
+        grid-template-columns:1fr 1fr;
+        gap:9px;
+    }
+
+    .node{
+        font-size:13px;
+        padding:12px 7px;
+        min-height:65px;
+    }
+
+    .section-title{
+        font-size:20px;
+    }
+
+    .revision{
+        grid-template-columns:1fr;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+    *{
+        animation:none !important;
+        transition:none !important;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<div class="header-inner">
+
+<div class="logo">🌍 UPSC Shiksha</div>
+
+<div class="header-buttons">
+<a href="index.html">
+<button class="header-btn">🏠 Home</button>
+</a>
+
+<button class="header-btn" onclick="toggleDarkMode()">
+🌙 Dark
+</button>
+</div>
+
+</div>
+</header>
+
+
+<section class="hero">
+
+<h1>🌍 Geography Interactive Mind Map</h1>
+
+<p>
+UPSC GS-I Geography — Mind Maps, Detailed Notes,
+Tables, Prelims Focus, Mains Points and Map-Based Revision
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="topicSearch"
+placeholder="🔍 Search Geography topic..."
+onkeyup="searchTopics()">
+
+</div>
+
+
+<div class="quick-nav">
+
+<a href="#mindmap">🧠 Mind Map</a>
+<a href="#physical">🌋 Physical</a>
+<a href="#india">🇮🇳 India</a>
+<a href="#climate">🌦️ Climate</a>
+<a href="#drainage">🌊 Drainage</a>
+<a href="#agriculture">🌾 Agriculture</a>
+<a href="#resources">⛏️ Resources</a>
+<a href="#vegetation">🌳 Vegetation</a>
+<a href="#disaster">⚠️ Disasters</a>
+<a href="#human">👥 Human Geography</a>
+<a href="#revision">⚡ Revision</a>
+
+</div>
+
+
+<!-- MIND MAP -->
+
+<section id="mindmap">
+
+<div class="section-title blue">
+🧠 Geography Master Mind Map
+</div>
+
+<div class="mindmap">
+
+<div class="center-node">
+🌍<br>
+INDIAN<br>
+GEOGRAPHY<br>
+UPSC GS-I
+</div>
+
+<div class="nodes">
+
+<button class="node n1" onclick="showNode('physical')">
+🌋 Physical Geography
+</button>
+
+<button class="node n2" onclick="showNode('india')">
+🇮🇳 Indian Physiography
+</button>
+
+<button class="node n3" onclick="showNode('climate')">
+🌦️ Climate & Monsoon
+</button>
+
+<button class="node n4" onclick="showNode('drainage')">
+🌊 Drainage
+</button>
+
+<button class="node n5" onclick="showNode('soil')">
+🌱 Soils
+</button>
+
+<button class="node n6" onclick="showNode('agriculture')">
+🌾 Agriculture
+</button>
+
+<button class="node n7" onclick="showNode('resources')">
+⛏️ Minerals & Energy
+</button>
+
+<button class="node n8" onclick="showNode('industry')">
+🏭 Industries
+</button>
+
+<button class="node n9" onclick="showNode('vegetation')">
+🌳 Vegetation & Wildlife
+</button>
+
+<button class="node n10" onclick="showNode('disaster')">
+⚠️ Natural Disasters
+</button>
+
+<button class="node n11" onclick="showNode('human')">
+👥 Human Geography
+</button>
+
+<button class="node n12" onclick="showNode('mapping')">
+🗺️ Mapping
+</button>
+
+</div>
+
+<div id="nodeInfo" class="node-info">
+<h3>Tap any topic</h3>
+<p>
+Select a mind-map topic to see its UPSC-focused summary.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PHYSICAL GEOGRAPHY -->
+
+<section id="physical">
+
+<div class="section-title blue">
+🌋 Physical Geography
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌍 Earth Structure</h3>
+<p>
+Crust → Mantle → Core.
+Study seismic waves, Earth's interior,
+continental drift and plate tectonics.
+</p>
+</div>
+
+<div class="card">
+<h3>🪨 Rocks</h3>
+<p>
+Igneous, sedimentary and metamorphic rocks.
+Understand rock cycle and economic importance.
+</p>
+</div>
+
+<div class="card">
+<h3>🏔️ Landforms</h3>
+<p>
+Mountains, plateaus, plains, valleys,
+folds, faults, erosion and deposition.
+</p>
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Aspect</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Geomorphology</td>
+<td>Study of landforms and processes shaping Earth's surface.</td>
+</tr>
+
+<tr>
+<td>Weathering</td>
+<td>Physical, chemical and biological breakdown of rocks.</td>
+</tr>
+
+<tr>
+<td>Erosion</td>
+<td>Removal and transportation of material by agents such as water, wind and ice.</td>
+</tr>
+
+<tr>
+<td>Plate Tectonics</td>
+<td>Movement and interaction of lithospheric plates.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- INDIA -->
+
+<section id="india">
+
+<div class="section-title green">
+🇮🇳 Indian Physiography
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏔️ Himalayas</h3>
+<p>
+Young fold mountains with major ranges:
+Himadri, Himachal and Shiwalik.
+</p>
+</div>
+
+<div class="card">
+<h3>🌾 Northern Plains</h3>
+<p>
+Formed mainly by alluvial deposits of
+Indus, Ganga and Brahmaputra systems.
+</p>
+</div>
+
+<div class="card">
+<h3>⛰️ Peninsular Plateau</h3>
+<p>
+Ancient stable landmass containing major
+mineral resources.
+</p>
+</div>
+
+<div class="card">
+<h3>🏜️ Indian Desert</h3>
+<p>
+Arid region dominated by low rainfall,
+sand dunes and seasonal drainage.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Coastal Plains</h3>
+<p>
+Western and Eastern Coastal Plains have
+distinct widths, rivers and coastal features.
+</p>
+</div>
+
+<div class="card">
+<h3>🏝️ Islands</h3>
+<p>
+Andaman & Nicobar and Lakshadweep have
+different geological and ecological characteristics.
+</p>
+</div>
+
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+<h3>🟢 Prelims Focus</h3>
+<p>
+Physiographic divisions, mountain passes,
+plateaus, coastal features, islands and important locations.
+</p>
+</div>
+
+<div class="upsc-box mains">
+<h3>🟠 Mains Focus</h3>
+<p>
+Explain how physiography influences climate,
+drainage, agriculture, settlement and economic activity.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CLIMATE -->
+
+<section id="climate">
+
+<div class="section-title yellow">
+🌦️ Climate & Indian Monsoon
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Aspect</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Climate Controls</td>
+<td>Latitude, altitude, pressure and wind systems, distance from sea and relief.</td>
+</tr>
+
+<tr>
+<td>Monsoon</td>
+<td>Seasonal reversal of winds with major importance for Indian rainfall.</td>
+</tr>
+
+<tr>
+<td>Southwest Monsoon</td>
+<td>Main rainy season; Arabian Sea and Bay of Bengal branches are important.</td>
+</tr>
+
+<tr>
+<td>Western Disturbances</td>
+<td>Important weather systems affecting winter precipitation, especially northwestern India.</td>
+</tr>
+
+<tr>
+<td>El Niño</td>
+<td>Pacific Ocean-atmosphere phenomenon that can influence global and Indian climate variability.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>☀️ Hot Weather Season</h3>
+<p>
+High temperatures, local winds and
+pre-monsoon thunderstorms in several regions.
+</p>
+</div>
+
+<div class="card">
+<h3>🌧️ Advancing Monsoon</h3>
+<p>
+Seasonal onset and spread of monsoon rainfall
+across India.
+</p>
+</div>
+
+<div class="card">
+<h3>🍂 Retreating Monsoon</h3>
+<p>
+Withdrawal phase with important rainfall
+over parts of southeastern India.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DRAINAGE -->
+
+<section id="drainage">
+
+<div class="section-title blue">
+🌊 Drainage System
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏔️ Himalayan Rivers</h3>
+<p>
+Generally perennial because they receive
+water from rainfall and snow/glacier sources.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Indus System</h3>
+<p>
+Includes the Indus and important tributaries
+such as Jhelum, Chenab, Ravi, Beas and Sutlej.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Ganga System</h3>
+<p>
+Major river system of northern India with
+numerous tributaries and extensive alluvial plains.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Brahmaputra</h3>
+<p>
+Flows through a major part of the Himalayan
+and northeastern drainage region.
+</p>
+</div>
+
+<div class="card">
+<h3>🏞️ Peninsular Rivers</h3>
+<p>
+Many rivers have more seasonal flow and
+are associated with the older Peninsular landscape.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Lakes</h3>
+<p>
+Study natural and artificial lakes,
+their locations and economic/ecological importance.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- SOILS -->
+
+<section id="soil">
+
+<div class="section-title green">
+🌱 Indian Soils
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Soil</th>
+<th>Major Features</th>
+<th>Important Areas</th>
+</tr>
+
+<tr>
+<td>Alluvial</td>
+<td>Depositional soil; important for agriculture.</td>
+<td>Northern Plains and river valleys</td>
+</tr>
+
+<tr>
+<td>Black</td>
+<td>Clay-rich; known for moisture retention.</td>
+<td>Deccan region</td>
+</tr>
+
+<tr>
+<td>Red & Yellow</td>
+<td>Developed over crystalline rocks in many areas.</td>
+<td>Peninsular India</td>
+</tr>
+
+<tr>
+<td>Laterite</td>
+<td>Strongly weathered under high rainfall and temperature conditions.</td>
+<td>Parts of Western Ghats and other tropical regions</td>
+</tr>
+
+<tr>
+<td>Arid</td>
+<td>Low moisture and often sandy; salinity may occur locally.</td>
+<td>Arid and semi-arid regions</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- AGRICULTURE -->
+
+<section id="agriculture">
+
+<div class="section-title green">
+🌾 Agriculture
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌧️ Kharif</h3>
+<p>
+Crops generally associated with the monsoon season,
+including rice, maize and cotton.
+</p>
+</div>
+
+<div class="card">
+<h3>❄️ Rabi</h3>
+<p>
+Winter-season crops such as wheat, gram and mustard.
+</p>
+</div>
+
+<div class="card">
+<h3>☀️ Zaid</h3>
+<p>
+Short season between major agricultural seasons;
+watermelon and some vegetables are examples.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Irrigation</h3>
+<p>
+Canals, wells, tube wells and other irrigation
+methods support agriculture in different regions.
+</p>
+</div>
+
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+<h3>🟢 Prelims</h3>
+<p>
+Crop-season matching, crop conditions,
+irrigation projects and agricultural regions.
+</p>
+</div>
+
+<div class="upsc-box mains">
+<h3>🟠 Mains</h3>
+<p>
+Agricultural productivity, water stress,
+climate change, diversification and sustainable farming.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- RESOURCES -->
+
+<section id="resources">
+
+<div class="section-title yellow">
+⛏️ Minerals & Energy Resources
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>⛏️ Coal</h3>
+<p>
+Important fossil fuel used for power generation
+and several industrial activities.
+</p>
+</div>
+
+<div class="card">
+<h3>⛓️ Iron Ore</h3>
+<p>
+Major metallic mineral supporting the iron and steel industry.
+</p>
+</div>
+
+<div class="card">
+<h3>🛢️ Petroleum</h3>
+<p>
+Important conventional energy resource with
+major onshore and offshore production regions.
+</p>
+</div>
+
+<div class="card">
+<h3>☀️ Solar Energy</h3>
+<p>
+Important renewable energy source with high potential
+in several parts of India.
+</p>
+</div>
+
+<div class="card">
+<h3>💨 Wind Energy</h3>
+<p>
+Strong potential in suitable coastal and
+high-wind regions.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Hydropower</h3>
+<p>
+Uses flowing water for electricity generation;
+important in mountainous and river-rich areas.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INDUSTRY -->
+
+<section id="industry">
+
+<div class="section-title orange">
+🏭 Industries
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Industry</th>
+<th>Key Factors</th>
+</tr>
+
+<tr>
+<td>Iron & Steel</td>
+<td>Raw materials, energy, transport, water and markets.</td>
+</tr>
+
+<tr>
+<td>Cotton Textile</td>
+<td>Raw material, labour, markets, power and transport.</td>
+</tr>
+
+<tr>
+<td>Cement</td>
+<td>Limestone availability, energy, transport and market.</td>
+</tr>
+
+<tr>
+<td>IT Industry</td>
+<td>Skilled workforce, connectivity, infrastructure and urban ecosystem.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- VEGETATION -->
+
+<section id="vegetation">
+
+<div class="section-title green">
+🌳 Natural Vegetation & Wildlife
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌴 Tropical Evergreen</h3>
+<p>
+Dense forests associated with high temperature
+and high rainfall conditions.
+</p>
+</div>
+
+<div class="card">
+<h3>🌳 Tropical Deciduous</h3>
+<p>
+Seasonal shedding of leaves; widely distributed
+in parts of India.
+</p>
+</div>
+
+<div class="card">
+<h3>🌵 Thorn Forests</h3>
+<p>
+Adapted to low rainfall and dry conditions.
+</p>
+</div>
+
+<div class="card">
+<h3>🏔️ Montane Forests</h3>
+<p>
+Vegetation changes with altitude in mountainous areas.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Mangroves</h3>
+<p>
+Salt-tolerant vegetation found especially
+in tidal and deltaic environments.
+</p>
+</div>
+
+<div class="card">
+<h3>🐅 Wildlife</h3>
+<p>
+National parks, wildlife sanctuaries and
+biosphere reserves support biodiversity conservation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DISASTERS -->
+
+<section id="disaster">
+
+<div class="section-title orange">
+⚠️ Natural Disasters
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌎 Earthquake</h3>
+<p>
+Sudden release of energy within Earth's crust.
+Focus on seismic zones and preparedness.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Flood</h3>
+<p>
+May result from intense rainfall, river overflow,
+storm surges and inadequate drainage.
+</p>
+</div>
+
+<div class="card">
+<h3>🌪️ Cyclone</h3>
+<p>
+Strong atmospheric systems that can bring
+high winds, heavy rainfall and storm surge.
+</p>
+</div>
+
+<div class="card">
+<h3>🏔️ Landslide</h3>
+<p>
+Slope failure influenced by rainfall, geology,
+slope conditions and human activity.
+</p>
+</div>
+
+<div class="card">
+<h3>☀️ Drought</h3>
+<p>
+Prolonged water deficiency affecting agriculture,
+water supply and ecosystems.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Tsunami</h3>
+<p>
+Large sea waves commonly associated with
+major undersea disturbances.
+</p>
+</div>
+
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+<h3>🟢 Prelims</h3>
+<p>
+Causes, vulnerable regions, terminology,
+hazard characteristics and disaster locations.
+</p>
+</div>
+
+<div class="upsc-box mains">
+<h3>🟠 Mains</h3>
+<p>
+Preparedness, mitigation, early warning,
+resilient infrastructure and community participation.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HUMAN GEOGRAPHY -->
+
+<section id="human">
+
+<div class="section-title purple">
+👥 Human Geography
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>👨‍👩‍👧 Population</h3>
+<p>
+Distribution, density, growth, demographic structure
+and population-resource relationship.
+</p>
+</div>
+
+<div class="card">
+<h3>🚶 Migration</h3>
+<p>
+Movement of people due to economic,
+social, environmental and other factors.
+</p>
+</div>
+
+<div class="card">
+<h3>🏙️ Urbanisation</h3>
+<p>
+Growth of towns and cities and associated
+infrastructure and governance challenges.
+</p>
+</div>
+
+<div class="card">
+<h3>🏘️ Settlements</h3>
+<p>
+Rural and urban settlements vary according
+to physical and socio-economic conditions.
+</p>
+</div>
+
+<div class="card">
+<h3>💼 Economic Geography</h3>
+<p>
+Agriculture, industry, transport, trade,
+services and spatial distribution of activities.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 Globalisation</h3>
+<p>
+Increasing integration of economies,
+markets, technology and production networks.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MAP -->
+
+<section id="mapping">
+
+<div class="section-title blue">
+🗺️ Map-Based UPSC Revision
+</div>
+
+<div class="map-grid">
+
+<div class="map-card">
+<h3>🏔️ Mountains</h3>
+<p>
+Himalayas, Aravalli, Western Ghats,
+Eastern Ghats, Nilgiris and major passes.
+</p>
+</div>
+
+<div class="map-card">
+<h3>🌊 Rivers</h3>
+<p>
+Indus, Ganga, Brahmaputra,
+Narmada, Tapi, Godavari, Krishna and Kaveri.
+</p>
+</div>
+
+<div class="map-card">
+<h3>⚓ Ports</h3>
+<p>
+Learn major ports along the western
+and eastern coasts and their regional setting.
+</p>
+</div>
+
+<div class="map-card">
+<h3>⛏️ Minerals</h3>
+<p>
+Important coal, iron ore, petroleum,
+natural gas and mineral belts.
+</p>
+</div>
+
+<div class="map-card">
+<h3>🏞️ National Parks</h3>
+<p>
+Practice state-location matching of
+important national parks and protected areas.
+</p>
+</div>
+
+<div class="map-card">
+<h3>🚧 Passes</h3>
+<p>
+Revise strategically important Himalayan
+and northeastern mountain passes.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UPSC NOTES -->
+
+<section>
+
+<div class="section-title red">
+🎯 UPSC Prelims + Mains Strategy
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+
+<h3>🟢 Prelims</h3>
+
+<ul>
+<li>Maps and locations</li>
+<li>Rivers and tributaries</li>
+<li>Mountains and passes</li>
+<li>Soil-crop relationships</li>
+<li>Climate phenomena</li>
+<li>Mineral distribution</li>
+<li>National parks and biodiversity</li>
+<li>Disaster-prone regions</li>
+</ul>
+
+</div>
+
+<div class="upsc-box mains">
+
+<h3>🟠 Mains GS-I</h3>
+
+<ul>
+<li>Physiography and regional development</li>
+<li>Monsoon and climate variability</li>
+<li>Water resources</li>
+<li>Agriculture and climate change</li>
+<li>Resource distribution</li>
+<li>Urbanisation</li>
+<li>Disaster vulnerability</li>
+<li>Human-environment interaction</li>
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section id="revision">
+
+<div class="section-title purple">
+⚡ Geography Quick Revision
+</div>
+
+<div class="revision">
+
+<div class="revision-card r1">
+<h3>🌋 Physical</h3>
+<p>Earth → Plates → Rocks → Landforms</p>
+</div>
+
+<div class="revision-card r2">
+<h3>🇮🇳 India</h3>
+<p>Himalayas → Plains → Plateau → Coasts → Islands</p>
+</div>
+
+<div class="revision-card r3">
+<h3>🌦️ Climate</h3>
+<p>Controls → Monsoon → Seasons → Rainfall</p>
+</div>
+
+<div class="revision-card r4">
+<h3>🌊 Drainage</h3>
+<p>Himalayan → Peninsular → Lakes</p>
+</div>
+
+<div class="revision-card r5">
+<h3>🌱 Soil</h3>
+<p>Alluvial → Black → Red → Laterite → Arid</p>
+</div>
+
+<div class="revision-card r6">
+<h3>🌾 Agriculture</h3>
+<p>Kharif → Rabi → Zaid → Irrigation</p>
+</div>
+
+<div class="revision-card r7">
+<h3>⛏️ Resources</h3>
+<p>Coal → Iron → Oil → Gas → Solar → Wind</p>
+</div>
+
+<div class="revision-card r8">
+<h3>⚠️ Disasters</h3>
+<p>Earthquake → Flood → Cyclone → Drought → Landslide</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL REVISION -->
+
+<section>
+
+<div class="section-title yellow">
+📌 30-Second Geography Revision
+</div>
+
+<div class="card">
+
+<p>
+<strong>Earth:</strong> Structure → Plates → Rocks → Landforms
+</p>
+
+<p>
+<strong>India:</strong> Himalayas → Northern Plains → Peninsular Plateau → Desert → Coasts → Islands
+</p>
+
+<p>
+<strong>Climate:</strong> Monsoon → Seasons → Rainfall → Regional Variation
+</p>
+
+<p>
+<strong>Drainage:</strong> Himalayan Rivers + Peninsular Rivers
+</p>
+
+<p>
+<strong>Resources:</strong> Minerals + Energy + Agriculture + Water
+</p>
+
+<p>
+<strong>Environment:</strong> Forests + Wildlife + Biodiversity
+</p>
+
+<p>
+<strong>Human Geography:</strong> Population + Migration + Urbanisation + Settlements
+</p>
+
+<p>
+<strong>Disasters:</strong> Hazard → Vulnerability → Risk → Preparedness → Mitigation
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h3>🌍 UPSC Shiksha</h3>
+
+<p>
+Free UPSC Geography Mind Maps & Detailed Notes
+</p>
+
+<p>
+© 2026 UPSC Shiksha
+</p>
+
+</footer>
+
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+
+<script>
+
+/* DARK MODE */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "geographyMindMapDark",
+        document.body.classList.contains("dark")
+    );
+
+}
+
+if(localStorage.getItem("geographyMindMapDark")==="true"){
+    document.body.classList.add("dark");
+}
+
+
+/* MIND MAP DETAILS */
+
+const data = {
+
+physical:{
+title:"🌋 Physical Geography",
+text:"Earth structure, plate tectonics, rocks, geomorphic processes and landforms form the physical geography foundation."
+},
+
+india:{
+title:"🇮🇳 Indian Physiography",
+text:"Study Himalayas, Northern Plains, Peninsular Plateau, Indian Desert, Coastal Plains and Islands."
+},
+
+climate:{
+title:"🌦️ Climate & Monsoon",
+text:"Focus on climatic controls, Indian monsoon, seasons, rainfall distribution, western disturbances and climate variability."
+},
+
+drainage:{
+title:"🌊 Drainage",
+text:"Revise Himalayan and Peninsular drainage systems, major rivers, tributaries, drainage patterns and lakes."
+},
+
+soil:{
+title:"🌱 Soils",
+text:"Focus on major soil groups, their characteristics, distribution, agricultural importance and degradation."
+},
+
+agriculture:{
+title:"🌾 Agriculture",
+text:"Revise cropping seasons, major crops, irrigation, agricultural regions, productivity and sustainability."
+},
+
+resources:{
+title:"⛏️ Minerals & Energy",
+text:"Study coal, iron ore, petroleum, natural gas and renewable energy resources with their regional distribution."
+},
+
+industry:{
+title:"🏭 Industries",
+text:"Understand industrial location factors, major industries, industrial regions and infrastructure."
+},
+
+vegetation:{
+title:"🌳 Vegetation & Wildlife",
+text:"Study forest types, biodiversity, protected areas, wildlife conservation and ecological relationships."
+},
+
+disaster:{
+title:"⚠️ Natural Disasters",
+text:"Revise earthquakes, floods, cyclones, droughts, landslides and tsunamis with preparedness and mitigation."
+},
+
+human:{
+title:"👥 Human Geography",
+text:"Population, migration, settlements, urbanisation and economic activities are key human geography themes."
+},
+
+mapping:{
+title:"🗺️ Mapping",
+text:"Regularly practice locations of mountains, rivers, passes, ports, mineral belts, national parks and important regions."
+}
+
+};
+
+
+function showNode(key){
+
+    const box=document.getElementById("nodeInfo");
+
+    box.innerHTML=
+    "<h3>"+data[key].title+"</h3>"+
+    "<p>"+data[key].text+"</p>";
+
+    box.style.display="block";
+
+    box.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+}
+
+
+/* SEARCH */
+
+function searchTopics(){
+
+    const input=
+    document.getElementById("topicSearch")
+    .value
+    .toLowerCase();
+
+    const sections=
+    document.querySelectorAll(
+        "main section"
+    );
+
+    sections.forEach(section=>{
+
+        const text=
+        section.innerText.toLowerCase();
+
+        if(input===""){
+            section.style.display="";
+        }
+        else if(text.includes(input)){
+            section.style.display="";
+        }
+        else{
+            section.style.display="none";
+        }
+
+    });
+
+}
+
+
+/* TOP BUTTON */
+
+const topBtn=
+document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+    if(
+        document.body.scrollTop>400 ||
+        document.documentElement.scrollTop>400
+    ){
+        topBtn.style.display="block";
+    }
+    else{
+        topBtn.style.display="none";
+    }
+
+};
+
+
+function topFunction(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
