@@ -1,285 +1,113 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>UPSC Shiksha | Prelims PYQ</title>
+<title>UPSC Shiksha | Prelims PYQ</title>
 
-  <meta
-    name="description"
-    content="UPSC Civil Services Preliminary Examination Previous Year Question Papers."
-  >
+<meta
+name="description"
+content="UPSC Civil Services Preliminary Examination Previous Year Question Papers."
+>
 
-  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css">
 
-  <style>
-    .pyq-page {
-      max-width: 1050px;
-      margin: auto;
-      padding: 25px 16px 50px;
-    }
+<style>
 
-    .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
-      padding: 10px 17px;
-      border-radius: 10px;
-      background: #333;
-      color: white;
-      text-decoration: none;
-    }
+/* =========================
+   PAGE
+========================= */
 
-    .pyq-header {
-      text-align: center;
-      padding: 38px 20px;
-      margin-bottom: 25px;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #fff3e0, #ffffff);
-      box-shadow: 0 5px 18px rgba(0,0,0,0.07);
-    }
+.pyq-page {
+  max-width: 1050px;
+  margin: auto;
+  padding: 25px 16px 50px;
+}
 
-    .pyq-header h1 {
-      font-size: 32px;
-      margin: 0 0 10px;
-    }
+.back-btn {
+  display: inline-block;
+  margin-bottom: 20px;
+  padding: 10px 17px;
+  border-radius: 10px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+}
 
-    .pyq-header p {
-      line-height: 1.7;
-      margin: 0;
-    }
+.pyq-header {
+  text-align: center;
+  padding: 38px 20px;
+  margin-bottom: 25px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #fff3e0, #ffffff);
+  box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+}
 
-    .tags {
-      margin-top: 18px;
-    }
+.pyq-header h1 {
+  font-size: 32px;
+  margin: 0 0 10px;
+}
 
-    .tag {
-      display: inline-block;
-      padding: 7px 12px;
-      margin: 4px;
-      border-radius: 20px;
-      background: #333;
-      color: white;
-      font-size: 13px;
-    }
+.pyq-header p {
+  line-height: 1.7;
+  margin: 0;
+}
 
-    .dark-toggle {
-      text-align: center;
-      margin: 15px 0 20px;
-    }
+.tags {
+  margin-top: 18px;
+}
 
-    .dark-toggle button {
-      padding: 10px 15px;
-      border: none;
-      border-radius: 9px;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-size: 14px;
-    }
+.tag {
+  display: inline-block;
+  padding: 7px 12px;
+  margin: 4px;
+  border-radius: 20px;
+  background: #333;
+  color: white;
+  font-size: 13px;
+}
 
-    .search-box {
-      margin: 25px 0;
-    }
+/* =========================
+   DARK MODE BUTTON
+========================= */
 
-    .search-box input {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 14px 16px;
-      border: 1px solid #ccc;
-      border-radius: 12px;
-      font-size: 16px;
-      outline: none;
-    }
+.dark-toggle {
+  text-align: center;
+  margin: 15px 0 20px;
+}
 
-    .quick-nav {
-      background: #f5f5f5;
-      padding: 18px;
-      border-radius: 15px;
-      margin-bottom: 25px;
-    }
+.dark-toggle button {
+  padding: 10px 15px;
+  border: none;
+  border-radius: 9px;
+  background: #333;
+  color: white;
+  cursor: pointer;
+  font-size: 14px;
+}
 
-    .quick-nav h2 {
-      margin-top: 0;
-      font-size: 20px;
-    }
+/* =========================
+   SEARCH
+========================= */
 
-    .quick-nav a {
-      display: inline-block;
-      margin: 5px;
-      padding: 8px 12px;
-      border-radius: 8px;
-      background: white;
-      color: #333;
-      text-decoration: none;
-      border: 1px solid #ddd;
-    }
+.search-box {
+  margin: 25px 0;
+}
 
-    .year-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 18px;
-    }
+.search-box input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 14px 16px;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  font-size: 16px;
+  outline: none;
+}
 
-    .year-card {
-      background: white;
-      padding: 22px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      transition: transform 0.2s ease;
-    }
-
-    .year-card:hover {
-      transform: translateY(-3px);
-    }
-
-    .year-card h2 {
-      margin-top: 0;
-    }
-
-    .year-card p {
-      line-height: 1.7;
-    }
-
-    .paper-type {
-      display: inline-block;
-      padding: 6px 10px;
-      margin: 3px 0;
-      border-radius: 7px;
-      background: #eee;
-      font-size: 13px;
-    }
-
-    .pyq-btn {
-      display: inline-block;
-      margin-top: 12px;
-      padding: 11px 15px;
-      border-radius: 9px;
-      background: #333;
-      color: white;
-      text-decoration: none;
-    }
-
-    .pyq-btn:hover {
-      opacity: 0.85;
-    }
-
-    .note {
-      margin-top: 28px;
-      padding: 22px;
-      border-radius: 16px;
-      background: #f5f5f5;
-      line-height: 1.7;
-    }
-
-    .note h2 {
-      margin-top: 0;
-    }
-
-    .bottom-nav {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      gap: 8px;
-      margin-top: 30px;
-    }
-
-    .bottom-nav a {
-      padding: 9px 13px;
-      border-radius: 9px;
-      background: #333;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    #topBtn {
-      display: none;
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      border: none;
-      border-radius: 50%;
-      width: 45px;
-      height: 45px;
-      background: #333;
-      color: white;
-      font-size: 20px;
-      cursor: pointer;
-      z-index: 999;
-    }
-
-    body.dark-mode {
-      background: #121212;
-      color: #eee;
-    }
-
-    body.dark-mode .pyq-header {
-      background: linear-gradient(135deg, #252525, #181818);
-    }
-
-    body.dark-mode .year-card,
-    body.dark-mode .quick-nav,
-    body.dark-mode .note {
-      background: #1e1e1e;
-      color: #eee;
-    }
-
-    body.dark-mode .quick-nav a {
-      background: #292929;
-      color: #eee;
-      border-color: #444;
-    }
-
-    body.dark-mode .paper-type {
-      background: #333;
-      color: #eee;
-    }
-
-    body.dark-mode .search-box input {
-      background: #222;
-      color: white;
-      border-color: #555;
-    }
-
-    body.dark-mode .search-box input::placeholder {
-      color: #bbb;
-    }
-
-    @media (max-width: 700px) {
-
-      .year-grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pyq-header h1 {
-        font-size: 26px;
-      }
-
-      .pyq-page {
-        padding: 20px 12px 40px;
-      }
-
-      .year-card {
-        padding: 18px;
-      }
-
-      .quick-nav a {
-        display: block;
-        margin: 7px 0;
-        text-align: center;
-      }
-
-      .bottom-nav {
-        flex-direction: column;
-      }
-
-      .bottom-nav a {
-        text-align: center;
-      }
-    }
-    /* =========================
-   REAL PYQ QUIZ
+/* =========================
+   QUIZ
 ========================= */
 
 .quiz-box {
@@ -297,7 +125,7 @@
 
 .quiz-subtitle {
   text-align: center;
-  opacity: .75;
+  opacity: 0.75;
 }
 
 .quiz-filters {
@@ -361,6 +189,10 @@
   border-color: #d33;
 }
 
+.option-btn:disabled {
+  cursor: default;
+}
+
 .answer-box {
   display: none;
   margin-top: 18px;
@@ -387,9 +219,163 @@
   cursor: pointer;
 }
 
+/* =========================
+   QUICK NAV
+========================= */
+
+.quick-nav {
+  background: #f5f5f5;
+  padding: 18px;
+  border-radius: 15px;
+  margin-bottom: 25px;
+}
+
+.quick-nav h2 {
+  margin-top: 0;
+  font-size: 20px;
+}
+
+.quick-nav a {
+  display: inline-block;
+  margin: 5px;
+  padding: 8px 12px;
+  border-radius: 8px;
+  background: white;
+  color: #333;
+  text-decoration: none;
+  border: 1px solid #ddd;
+}
+
+/* =========================
+   YEAR CARDS
+========================= */
+
+.year-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 18px;
+}
+
+.year-card {
+  background: white;
+  padding: 22px;
+  border-radius: 16px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease;
+}
+
+.year-card:hover {
+  transform: translateY(-3px);
+}
+
+.year-card h2 {
+  margin-top: 0;
+}
+
+.year-card p {
+  line-height: 1.7;
+}
+
+.paper-type {
+  display: inline-block;
+  padding: 6px 10px;
+  margin: 3px 0;
+  border-radius: 7px;
+  background: #eee;
+  font-size: 13px;
+}
+
+.pyq-btn {
+  display: inline-block;
+  margin-top: 12px;
+  padding: 11px 15px;
+  border-radius: 9px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+}
+
+.pyq-btn:hover {
+  opacity: 0.85;
+}
+
+/* =========================
+   NOTE
+========================= */
+
+.note {
+  margin-top: 28px;
+  padding: 22px;
+  border-radius: 16px;
+  background: #f5f5f5;
+  line-height: 1.7;
+}
+
+.note h2 {
+  margin-top: 0;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 8px;
+  margin-top: 30px;
+}
+
+.bottom-nav a {
+  padding: 9px 13px;
+  border-radius: 9px;
+  background: #333;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn {
+  display: none;
+  position: fixed;
+  right: 18px;
+  bottom: 18px;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  background: #333;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark-mode {
+  background: #121212;
+  color: #eee;
+}
+
+body.dark-mode .pyq-header {
+  background: linear-gradient(135deg, #252525, #181818);
+}
+
 body.dark-mode .quiz-box,
-body.dark-mode .question-card {
+body.dark-mode .question-card,
+body.dark-mode .year-card,
+body.dark-mode .quick-nav,
+body.dark-mode .note {
   background: #1e1e1e;
+  color: #eee;
 }
 
 body.dark-mode .quiz-filters select,
@@ -399,11 +385,66 @@ body.dark-mode .option-btn {
   border-color: #555;
 }
 
+body.dark-mode .quick-nav a {
+  background: #292929;
+  color: #eee;
+  border-color: #444;
+}
+
+body.dark-mode .paper-type {
+  background: #333;
+  color: #eee;
+}
+
+body.dark-mode .search-box input {
+  background: #222;
+  color: white;
+  border-color: #555;
+}
+
+body.dark-mode .search-box input::placeholder {
+  color: #bbb;
+}
+
 body.dark-mode .answer-box {
   background: #26384a;
 }
 
-@media (max-width: 600px) {
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+  .year-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .pyq-header h1 {
+    font-size: 26px;
+  }
+
+  .pyq-page {
+    padding: 20px 12px 40px;
+  }
+
+  .year-card {
+    padding: 18px;
+  }
+
+  .quick-nav a {
+    display: block;
+    margin: 7px 0;
+    text-align: center;
+  }
+
+  .bottom-nav {
+    flex-direction: column;
+  }
+
+  .bottom-nav a {
+    text-align: center;
+  }
 
   .quiz-box {
     padding: 18px;
@@ -422,8 +463,10 @@ body.dark-mode .answer-box {
   }
 
 }
-  </style>
+
+</style>
 </head>
+
 
 <body>
 
@@ -448,1123 +491,1266 @@ body.dark-mode .answer-box {
 
 <main class="pyq-page">
 
-  <a
-    href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/pyq.html"
-    class="back-btn"
-  >
-    ← Back to PYQ
-  </a>
+<a
+href="https://alpeshvanol8160-cell.github.io/UPSC-Shiksha/pyq.html"
+class="back-btn">
+← Back to PYQ
+</a>
 
 
-  <section class="pyq-header">
+<section class="pyq-header">
 
-    <h1>📄 UPSC Prelims PYQ</h1>
+<h1>📄 UPSC Prelims PYQ</h1>
 
-    <p>
-      Civil Services Preliminary Examination
-      Previous Year Question Papers
-    </p>
+<p>
+Civil Services Preliminary Examination
+Previous Year Question Papers
+</p>
 
-    <div class="tags">
-      <span class="tag">PRELIMS</span>
-      <span class="tag">GS PAPER-I</span>
-      <span class="tag">CSAT</span>
-      <span class="tag">PYQ</span>
-    </div>
+<div class="tags">
 
-  </section>
+<span class="tag">PRELIMS</span>
+<span class="tag">GS PAPER-I</span>
+<span class="tag">CSAT</span>
+<span class="tag">PYQ</span>
 
-
-  <div class="dark-toggle">
-
-    <button onclick="toggleDarkMode()">
-      🌙 Dark Mode
-    </button>
-
-  </div>
-
-
-  <div class="search-box">
-
-    <input
-      type="text"
-      id="searchInput"
-      placeholder="🔍 Search PYQ Year or Paper..."
-      onkeyup="searchPYQ()"
-    >
-
-  </div>
-  <!-- REAL PYQ QUIZ ENGINE -->
-
-<section class="quiz-box" id="pyqQuiz">
-
-  <h2>📝 Prelims PYQ Practice</h2>
-
-  <p class="quiz-subtitle">
-    Practice UPSC Prelims Previous Year Questions
-  </p>
-
-  <div class="quiz-filters">
-
-    <select id="quizYear">
-      <option value="all">📅 All Years</option>
-      <option value="2026">2026</option>
-      <option value="2025">2025</option>
-      <option value="2024">2024</option>
-      <option value="2023">2023</option>
-      <option value="2022">2022</option>
-      <option value="2021">2021</option>
-      <option value="2020">2020</option>
-    </select>
-
-    <select id="quizSubject">
-      <option value="all">📚 All Subjects</option>
-      <option value="polity">Polity</option>
-      <option value="history">History</option>
-      <option value="geography">Geography</option>
-      <option value="economy">Economy</option>
-      <option value="environment">Environment</option>
-      <option value="science">Science & Technology</option>
-    </select>
-
-  </div>
-
-  <div class="quiz-info">
-
-    <span id="questionNumber">
-      Question 1
-    </span>
-
-    <span id="quizScore">
-      Score: 0
-    </span>
-
-  </div>
-
-  <div class="question-card">
-
-    <h3 id="questionText">
-      PYQ question will appear here.
-    </h3>
-
-    <div id="optionsBox">
-
-      <button class="option-btn">
-        Option A
-      </button>
-
-      <button class="option-btn">
-        Option B
-      </button>
-
-      <button class="option-btn">
-        Option C
-      </button>
-
-      <button class="option-btn">
-        Option D
-      </button>
-
-    </div>
-
-    <div id="answerBox" class="answer-box">
-    </div>
-
-  </div>
-
-  <div class="quiz-actions">
-
-    <button id="nextQuestion">
-      ➡️ Next Question
-    </button>
-
-    <button id="restartQuiz">
-      🔄 Restart
-    </button>
-
-  </div>
+</div>
 
 </section>
 
 
-  <section class="quick-nav">
+<div class="dark-toggle">
 
-    <h2>⚡ Quick Navigation</h2>
-
-    <a href="#year2026">2026</a>
-    <a href="#year2025">2025</a>
-    <a href="#year2024">2024</a>
-    <a href="#year2023">2023</a>
-    <a href="#year2022">2022</a>
-    <a href="#year2021">2021</a>
-    <a href="#year2020">2020</a>
-
-  </section>
-
-
-  <section class="year-grid">
-
-
-    <!-- 2026 -->
-
-    <div class="year-card" id="year2026">
-
-      <h2>📅 UPSC Prelims 2026</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2026 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
 
 </div>
 
-    </div>
 
+<div class="search-box">
 
-    <!-- 2025 -->
-
-    <div class="year-card" id="year2025">
-
-      <h2>📅 UPSC Prelims 2025</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2025 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
-
-</div>
-      
-
-    </div>
-
-
-    <!-- 2024 -->
-
-    <div class="year-card" id="year2024">
-
-      <h2>📅 UPSC Prelims 2024</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2024 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
+<input
+type="text"
+id="searchInput"
+placeholder="🔍 Search PYQ Year or Paper..."
+onkeyup="searchPYQ()"
+>
 
 </div>
 
-    </div>
+
+<!-- =========================
+     PYQ QUIZ
+========================= -->
+
+<section class="quiz-box" id="pyqQuiz">
+
+<h2>📝 Prelims PYQ Practice</h2>
+
+<p class="quiz-subtitle">
+Practice UPSC Prelims PYQ-based Questions
+</p>
 
 
-    <!-- 2023 -->
+<div class="quiz-filters">
 
-    <div class="year-card" id="year2023">
+<select id="quizYear">
 
-      <h2>📅 UPSC Prelims 2023</h2>
+<option value="all">📅 All Years</option>
+<option value="2026">2026</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
 
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2023 question papers.
-      </p>
-
-<div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
-
-</div>
-
-    </div>
+</select>
 
 
-    <!-- 2022 -->
+<select id="quizSubject">
 
-    <div class="year-card" id="year2022">
+<option value="all">📚 All Subjects</option>
+<option value="polity">Polity</option>
+<option value="history">History</option>
+<option value="geography">Geography</option>
+<option value="economy">Economy</option>
+<option value="environment">Environment</option>
+<option value="science">Science & Technology</option>
 
-      <h2>📅 UPSC Prelims 2022</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2022 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
+</select>
 
 </div>
 
-    </div>
 
+<div class="quiz-info">
 
-    <!-- 2021 -->
+<span id="questionNumber">
+Question 1
+</span>
 
-    <div class="year-card" id="year2021">
-
-      <h2>📅 UPSC Prelims 2021</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2021 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- 2020 -->
-
-    <div class="year-card" id="year2020">
-
-      <h2>📅 UPSC Prelims 2020</h2>
-
-      <span class="paper-type">
-        GS Paper-I
-      </span>
-
-      <span class="paper-type">
-        CSAT Paper-II
-      </span>
-
-      <p>
-        Civil Services Preliminary Examination
-        2020 question papers.
-      </p>
-
-      <div style="display:flex; gap:10px; flex-wrap:wrap; margin-top:12px;">
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    📘 GS Paper-I →
-  </a>
-
-  <a
-    href="https://www.upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    rel="noopener noreferrer"
-    class="pyq-btn"
-  >
-    🧠 CSAT Paper-II →
-  </a>
+<span id="quizScore">
+Score: 0
+</span>
 
 </div>
 
-    </div>
 
-  </section>
+<div class="question-card">
 
-
-  <section class="note">
-
-    <h2>🎯 PYQ Strategy</h2>
-
-    <p>
-      पहले प्रश्न को खुद solve करो। उसके बाद answer और
-      explanation check करो। फिर उस question से जुड़े
-      topic को revise करो।
-    </p>
-
-    <p>
-      Question papers के लिए official UPSC Previous
-      Question Papers page का उपयोग किया गया है।
-    </p>
-
-  </section>
+<h3 id="questionText">
+PYQ question will appear here.
+</h3>
 
 
-  <div class="bottom-nav">
+<div id="optionsBox">
 
-    <a href="index.html">🏠 Home</a>
+<button class="option-btn">
+Option A
+</button>
 
-    <a href="prelims.html">📚 Prelims</a>
+<button class="option-btn">
+Option B
+</button>
 
-    <a href="csat.html">🧠 CSAT</a>
+<button class="option-btn">
+Option C
+</button>
 
-    <a href="mains.html">📝 Mains</a>
+<button class="option-btn">
+Option D
+</button>
 
-    <a href="pyq.html">📄 PYQ</a>
+</div>
 
-    <a href="polity.html">🏛️ Polity</a>
 
-    <a href="economy.html">💰 Economy</a>
+<div id="answerBox" class="answer-box">
+</div>
 
-    <a href="history.html">📜 History</a>
+</div>
 
-  </div>
+
+<div class="quiz-actions">
+
+<button id="nextQuestion">
+➡️ Next Question
+</button>
+
+<button id="restartQuiz">
+🔄 Restart
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUICK NAV
+========================= -->
+
+<section class="quick-nav">
+
+<h2>⚡ Quick Navigation</h2>
+
+<a href="#year2026">2026</a>
+<a href="#year2025">2025</a>
+<a href="#year2024">2024</a>
+<a href="#year2023">2023</a>
+<a href="#year2022">2022</a>
+<a href="#year2021">2021</a>
+<a href="#year2020">2020</a>
+
+</section>
+
+
+<section class="year-grid">
+
+
+<!-- 2026 -->
+
+<div class="year-card" id="year2026">
+
+<h2>📅 UPSC Prelims 2026</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2026 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2025 -->
+
+<div class="year-card" id="year2025">
+
+<h2>📅 UPSC Prelims 2025</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2025 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2024 -->
+
+<div class="year-card" id="year2024">
+
+<h2>📅 UPSC Prelims 2024</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2024 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2023 -->
+
+<div class="year-card" id="year2023">
+
+<h2>📅 UPSC Prelims 2023</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2023 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2022 -->
+
+<div class="year-card" id="year2022">
+
+<h2>📅 UPSC Prelims 2022</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2022 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2021 -->
+
+<div class="year-card" id="year2021">
+
+<h2>📅 UPSC Prelims 2021</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2021 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+
+<!-- 2020 -->
+
+<div class="year-card" id="year2020">
+
+<h2>📅 UPSC Prelims 2020</h2>
+
+<span class="paper-type">GS Paper-I</span>
+<span class="paper-type">CSAT Paper-II</span>
+
+<p>
+Civil Services Preliminary Examination
+2020 question papers.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+📘 GS Paper-I →
+</a>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+rel="noopener noreferrer"
+class="pyq-btn">
+🧠 CSAT Paper-II →
+</a>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     NOTE
+========================= -->
+
+<section class="note">
+
+<h2>🎯 PYQ Strategy</h2>
+
+<p>
+First solve the question yourself. Then check the
+answer and explanation. Finally revise the topic
+connected with that question.
+</p>
+
+<p>
+Question papers are linked to the official UPSC
+Previous Question Papers page.
+</p>
+
+</section>
+
+
+<!-- =========================
+     BOTTOM NAV
+========================= -->
+
+<div class="bottom-nav">
+
+<a href="index.html">🏠 Home</a>
+<a href="prelims.html">📚 Prelims</a>
+<a href="csat.html">🧠 CSAT</a>
+<a href="mains.html">📝 Mains</a>
+<a href="pyq.html">📄 PYQ</a>
+<a href="polity.html">🏛️ Polity</a>
+<a href="economy.html">💰 Economy</a>
+<a href="history.html">📜 History</a>
+
+</div>
 
 </main>
 
 
-<button
-  id="topBtn"
-  onclick="window.scrollTo({
-    top: 0,
-    behavior: 'smooth'
-  })"
->
-  ↑
-</button>
+<button id="topBtn">↑</button>
 
 
 <footer>
 
-  <div class="footer-logo">
-    🇮🇳 UPSC <b>Shiksha</b>
-  </div>
+<div class="footer-logo">
+🇮🇳 UPSC <b>Shiksha</b>
+</div>
 
-  <p>
-    Your Complete UPSC Preparation Platform
-  </p>
+<p>
+Your Complete UPSC Preparation Platform
+</p>
 
-  <p class="copyright">
-    © 2026 UPSC Shiksha. All Rights Reserved.
-  </p>
+<p class="copyright">
+© 2026 UPSC Shiksha. All Rights Reserved.
+</p>
 
 </footer>
 
 
 <script src="script.js"></script>
 
+
 <script>
 
-  /* DARK MODE */
+/* =========================
+   DARK MODE
+========================= */
 
-  function toggleDarkMode() {
+function toggleDarkMode() {
 
-    document.body.classList.toggle("dark-mode");
+  document.body.classList.toggle("dark-mode");
 
-    localStorage.setItem(
-      "prelimsPyqDarkMode",
-      document.body.classList.contains("dark-mode")
-        ? "on"
-        : "off"
-    );
+  localStorage.setItem(
+    "prelimsPyqDarkMode",
+    document.body.classList.contains("dark-mode")
+      ? "on"
+      : "off"
+  );
 
-  }
-
-
-  /* LOAD DARK MODE */
-
-  if (
-    localStorage.getItem("prelimsPyqDarkMode") === "on"
-  ) {
-
-    document.body.classList.add("dark-mode");
-
-  }
+}
 
 
-  /* SEARCH */
+if (
+  localStorage.getItem("prelimsPyqDarkMode") === "on"
+) {
 
-  function searchPYQ() {
+  document.body.classList.add("dark-mode");
 
-    const input =
-      document.getElementById("searchInput")
-      .value
-      .toLowerCase()
-      .trim();
+}
 
-    const cards =
-      document.querySelectorAll(".year-card");
 
-    cards.forEach(function(card) {
+/* =========================
+   SEARCH
+========================= */
 
-      const text =
-        card.innerText.toLowerCase();
+function searchPYQ() {
 
-      card.style.display =
-        text.includes(input) ? "" : "none";
+  const input =
+    document.getElementById("searchInput")
+    .value
+    .toLowerCase()
+    .trim();
 
-    });
+  const cards =
+    document.querySelectorAll(".year-card");
 
-  }
-  /* =========================
-   PYQ QUIZ ENGINE
+  cards.forEach(function(card) {
+
+    const text =
+      card.innerText.toLowerCase();
+
+    card.style.display =
+      text.includes(input) ? "" : "none";
+
+  });
+
+}
+
+
+/* =========================
+   PYQ QUIZ QUESTIONS
 ========================= */
 
 const quizQuestions = [
 
-  {
-    year: "2025",
-    subject: "economy",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following are classified as Alternative Investment Funds (AIFs)?",
-    options: [
-      "Bonds and Stocks",
-      "Hedge Funds and Venture Capital Funds",
-      "Stocks and Venture Capital Funds",
-      "Hedge Funds and Venture Capital Funds along with all the other instruments"
-    ],
-    answer: 1,
-    explanation:
-      "This is a paraphrased practice question based on the 2025 UPSC Prelims GS Paper-I question related to Alternative Investment Funds. Refer to the official UPSC paper for the exact wording."
-  },
-
-  {
-    year: "2025",
-    subject: "economy",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following activities are sources of income for the Reserve Bank of India (RBI)?",
-    options: [
-      "Buying and selling Government securities",
-      "Buying and selling foreign currency",
-      "Both 1 and 2",
-      "Only pension fund management"
-    ],
-    answer: 2,
-    explanation:
-      "This is a paraphrased practice question based on the 2025 UPSC Prelims GS Paper-I question related to RBI income sources. Refer to the official UPSC paper for the exact wording."
-  } ,//
-    {
-    year: "2025",
-    subject: "history",
-    question:
-      "2025 UPSC Prelims PYQ-based: Consider the following statements about Raja Ram Mohan Roy: He respected traditional Eastern philosophical systems and advocated a rational, scientific approach along with human dignity and social equality. Which of the following is correct?",
-    options: [
-      "Only the first statement is correct",
-      "Only the second statement is correct",
-      "Both statements are correct",
-      "Both statements are incorrect"
-    ],
-    answer: 2,
-explanation:
-  "This is a paraphrased practice question based on the 2025 UPSC Prelims GS Paper-I question related to RBI income sources. Refer to the official UPSC paper for the exact wording."
-},   // ← यही comma लगाना है
+/* ---------- ECONOMY ---------- */
 
 {
-  year: "2025",
-  subject: "history",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following rulers of ancient India is associated with the titles Mattavilasa, Vichitrachitta and Gunabhara?",
-    options: [
-      "Narasimhavarman I",
-      "Mahendravarman I",
-      "Rajendra Chola I",
-      "Harshavardhana"
-    ],
-    answer: 1,
-    explanation:
-      "This is a paraphrased practice question based on the 2025 UPSC Prelims GS Paper-I ancient-history question."
-  },
-    {
-    year: "2025",
-    subject: "geography",
-    question:
-      "2025 UPSC Prelims PYQ-based: Among Bolivia, Brazil, Colombia, Ecuador, Paraguay and Venezuela, through how many countries do the Andes Mountains pass?",
-    options: [
-      "Only two",
-      "Only three",
-      "Only four",
-      "Only five"
-    ],
-    answer: 2,
-    explanation:
-      "The Andes pass through Bolivia, Colombia, Ecuador and Venezuela among the countries listed. Therefore, the correct answer is Only four."
-  },
+year: "2025",
+subject: "economy",
 
-  {
-    year: "2025",
-    subject: "geography",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following are recognized as evidence supporting the phenomenon of continental drift?",
-    options: [
-      "Only the matching ancient rock belts",
-      "Only the matching gold deposits",
-      "The matching rock belts, gold deposits and Gondwana sediment evidence",
-      "Only the Gondwana sediment evidence"
-    ],
-    answer: 2,
-    explanation:
-      "The three lines of evidence described in the original PYQ are used together as evidence supporting continental drift."
-  },
+question:
+"2025 UPSC Prelims PYQ-based: Which of the following are classified as Alternative Investment Funds (AIFs)?",
 
-  {
-    year: "2025",
-    subject: "geography",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which statements about turmeric production in India during 2022–23 are correct?",
-    options: [
-      "Only I and II",
-      "Only II and III",
-      "Only I and III",
-      "I, II and III"
-    ],
-    answer: 3,
-    explanation:
-      "The answer is I, II and III. The 2025 PYQ covered India's global position in turmeric production and export, the number of varieties, and major producing States."
-  },
+options: [
+"Bonds and Stocks",
+"Hedge Funds and Venture Capital Funds",
+"Stocks and Venture Capital Funds",
+"Hedge Funds and Venture Capital Funds along with all the other instruments"
+],
 
-  {
-    year: "2025",
-    subject: "geography",
-    question:
-      "2025 UPSC Prelims PYQ-based: In which regions is atmospheric dust generally more abundant according to the statement tested in the 2025 paper?",
-    options: [
-      "Only equatorial regions",
-      "Only polar regions",
-      "Subtropical and temperate regions",
-      "Only oceanic regions"
-    ],
-    answer: 2,
-    explanation:
-      "The tested statement says atmospheric dust is more abundant in subtropical and temperate regions than in equatorial and polar regions."
-  }
+answer: 1,
 
-  {
-    year: "2025",
-    subject: "geography",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following best describes the relationship between dry winds and atmospheric dust in subtropical and temperate regions?",
-    options: [
-      "Dry winds have no relationship with atmospheric dust",
-      "The statement about dry winds is incorrect in the context tested",
-      "Dry winds completely prevent dust from entering the atmosphere",
-      "Dry winds occur only in polar regions"
-    ],
-    answer: 1,
-    explanation:
-      "In the original statement-based question, the first statement about dust was considered correct, while the proposed explanation involving less dry winds was not correct."
-  },
-    {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which organization enacted the Nature Restoration Law (NRL) to address climate change and biodiversity loss?",
-    options: [
-      "European Union",
-      "World Bank",
-      "OECD",
-      "FAO"
-    ],
-    answer: 0,
-    explanation:
-      "The Nature Restoration Law was enacted by the European Union. It establishes restoration targets for degraded ecosystems."
-  },
+explanation:
+"This is a paraphrased PYQ-based practice question related to Alternative Investment Funds."
+},
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: How many of the following birds are critically endangered species found in India: Great Indian Bustard, Jerdon's Courser, White-bellied Heron and Slender-billed Vulture?",
-    options: [
-      "Only one",
-      "Only two",
-      "Only three",
-      "All four"
-    ],
-    answer: 3,
-    explanation:
-      "All four species listed are classified as Critically Endangered and occur in India."
-  },
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following plant-description pairs are correctly matched: Cassava as a woody shrub, Ginger as a herb with a pseudostem, and Malabar spinach as a herbaceous climber?",
-    options: [
-      "Only one",
-      "Only two",
-      "All three",
-      "None"
-    ],
-    answer: 2,
-    explanation:
-      "Cassava, ginger and Malabar spinach are correctly described in the three pairs."
-  },
+{
+year: "2025",
+subject: "economy",
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following statements about atmospheric oxygen are correct?",
-    options: [
-      "Rain forests produce more oxygen than oceans",
-      "Marine phytoplankton and photosynthetic bacteria produce about half of the world's oxygen",
-      "Well-oxygenated surface water contains several times more oxygen than atmospheric air",
-      "Only statements 1 and 3 are correct"
-    ],
-    answer: 1,
-    explanation:
-      "The statement about marine phytoplankton and photosynthetic bacteria producing about 50% of the world's oxygen is the correct one among these statements."
-  },
+question:
+"2025 UPSC Prelims PYQ-based: Which of the following activities are sources of income for the Reserve Bank of India (RBI)?",
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: The Miyawaki method is primarily associated with which environmental practice?",
-    options: [
-      "Creating dense forests in urban areas",
-      "Artificial cloud formation",
-      "Desalination of seawater",
-      "Deep-sea mining"
-    ],
-    answer: 0,
-    explanation:
-      "The Miyawaki method is a technique for creating dense, fast-growing native forests, including in urban areas."
-  },
+options: [
+"Buying and selling Government securities",
+"Buying and selling foreign currency",
+"Both 1 and 2",
+"Only pension fund management"
+],
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: Which of the following materials contain plastic: cigarette filters, eyeglass lenses and car tyres?",
-    options: [
-      "Only one",
-      "Only two",
-      "All three",
-      "None"
-    ],
-    answer: 2,
-    explanation:
-      "All three can contain plastic or synthetic polymer materials. Cigarette filters commonly use cellulose acetate, while tyres and many lenses contain polymer-based materials."
-  },
+answer: 2,
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: Direct Air Capture technology can be used for which of the following purposes?",
-    options: [
-      "Carbon sequestration",
-      "Providing carbon for synthetic low-carbon fuels",
-      "Certain industrial applications",
-      "All of the above"
-    ],
-    answer: 3,
-    explanation:
-      "Direct Air Capture removes carbon dioxide directly from the atmosphere. The captured CO2 can be stored or used in selected industrial applications and synthetic fuel production."
-  },
+explanation:
+"This is a paraphrased PYQ-based practice question related to sources of RBI income."
+},
 
-  {
-    year: "2025",
-    subject: "environment",
-    question:
-      "2025 UPSC Prelims PYQ-based: What is the main purpose of blue carbon ecosystems such as mangroves, seagrasses and tidal marshes?",
-    options: [
-      "They help capture and store carbon",
-      "They increase desertification",
-      "They reduce ocean salinity",
-      "They eliminate all greenhouse gases"
-    ],
-    answer: 0,
-    explanation:
-      "Blue carbon refers mainly to carbon captured and stored by coastal and marine ecosystems such as mangroves, seagrasses and tidal marshes."
-  }
+
+/* ---------- HISTORY ---------- */
+
+{
+year: "2025",
+subject: "history",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which description best reflects Raja Ram Mohan Roy's approach to social and intellectual reform?",
+
+options: [
+"He supported rational inquiry and social reform",
+"He opposed all forms of modern education",
+"He rejected every Eastern philosophical tradition",
+"He opposed social equality"
+],
+
+answer: 0,
+
+explanation:
+"This is a simplified paraphrased practice question based on the 2025 PYQ theme concerning Raja Ram Mohan Roy."
+},
+
+
+{
+year: "2025",
+subject: "history",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which ancient Indian ruler is associated with the titles Mattavilasa, Vichitrachitta and Gunabhara?",
+
+options: [
+"Narasimhavarman I",
+"Mahendravarman I",
+"Rajendra Chola I",
+"Harshavardhana"
+],
+
+answer: 1,
+
+explanation:
+"The ruler associated with these titles is Mahendravarman I."
+},
+
+
+/* ---------- GEOGRAPHY ---------- */
+
+{
+year: "2025",
+subject: "geography",
+
+question:
+"2025 UPSC Prelims PYQ-based: Among Bolivia, Brazil, Colombia, Ecuador, Paraguay and Venezuela, through how many countries do the Andes Mountains pass?",
+
+options: [
+"Only two",
+"Only three",
+"Only four",
+"Only five"
+],
+
+answer: 2,
+
+explanation:
+"Among the countries listed, the Andes pass through Bolivia, Colombia, Ecuador and Venezuela. Therefore, the answer is Only four."
+},
+
+
+{
+year: "2025",
+subject: "geography",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which of the following are recognized as evidence supporting continental drift?",
+
+options: [
+"Only matching ancient rock belts",
+"Only matching gold deposits",
+"Matching rock belts, mineral evidence and Gondwana sediment evidence",
+"Only Gondwana sediment evidence"
+],
+
+answer: 2,
+
+explanation:
+"Several geological and palaeontological observations together provide evidence supporting continental drift."
+},
+
+
+{
+year: "2025",
+subject: "geography",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which statements about turmeric production in India during 2022–23 are correct?",
+
+options: [
+"Only I and II",
+"Only II and III",
+"Only I and III",
+"I, II and III"
+],
+
+answer: 3,
+
+explanation:
+"This is a paraphrased practice question based on the 2025 PYQ concerning turmeric production, varieties and producing States."
+},
+
+
+{
+year: "2025",
+subject: "geography",
+
+question:
+"2025 UPSC Prelims PYQ-based: In which regions is atmospheric dust generally more abundant according to the statement tested in the 2025 paper?",
+
+options: [
+"Only equatorial regions",
+"Only polar regions",
+"Subtropical and temperate regions",
+"Only oceanic regions"
+],
+
+answer: 2,
+
+explanation:
+"The tested statement identifies subtropical and temperate regions as having greater atmospheric dust compared with equatorial and polar regions."
+},
+
+
+{
+year: "2025",
+subject: "geography",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which statement best describes the relationship between dry winds and atmospheric dust in the context tested in the 2025 paper?",
+
+options: [
+"Dry winds have no relationship with atmospheric dust",
+"The proposed statement about dry winds was not correct",
+"Dry winds completely prevent dust from entering the atmosphere",
+"Dry winds occur only in polar regions"
+],
+
+answer: 1,
+
+explanation:
+"This is a paraphrased practice question based on the statement-based geography question from the 2025 paper."
+},
+
+
+/* ---------- ENVIRONMENT ---------- */
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: The Nature Restoration Law is associated with which organization?",
+
+options: [
+"European Union",
+"World Bank",
+"OECD",
+"FAO"
+],
+
+answer: 0,
+
+explanation:
+"The Nature Restoration Law is associated with the European Union and focuses on restoring degraded ecosystems."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: How many of the following birds are critically endangered species found in India: Great Indian Bustard, Jerdon's Courser, White-bellied Heron and Slender-billed Vulture?",
+
+options: [
+"Only one",
+"Only two",
+"Only three",
+"All four"
+],
+
+answer: 3,
+
+explanation:
+"All four species listed are classified as Critically Endangered and are found in India."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which of the following plant-description pairs are correctly matched: Cassava as a woody shrub, Ginger as a herb with a pseudostem, and Malabar spinach as a herbaceous climber?",
+
+options: [
+"Only one",
+"Only two",
+"All three",
+"None"
+],
+
+answer: 2,
+
+explanation:
+"The three plant descriptions are correctly matched in this paraphrased practice question."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which statement about global oxygen production is correct?",
+
+options: [
+"Rain forests produce all of the world's oxygen",
+"Marine phytoplankton and photosynthetic organisms contribute a major share of global oxygen production",
+"Only deserts produce atmospheric oxygen",
+"Ocean organisms do not contribute to oxygen production"
+],
+
+answer: 1,
+
+explanation:
+"Marine photosynthetic organisms, including phytoplankton, make a major contribution to global oxygen production."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: The Miyawaki method is primarily associated with which environmental practice?",
+
+options: [
+"Creating dense forests using native species",
+"Artificial cloud formation",
+"Desalination of seawater",
+"Deep-sea mining"
+],
+
+answer: 0,
+
+explanation:
+"The Miyawaki method is a forest-creation technique that emphasizes dense planting of native species."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: Which of the following materials can contain plastic or synthetic polymer materials: cigarette filters, eyeglass lenses and car tyres?",
+
+options: [
+"Only one",
+"Only two",
+"All three",
+"None"
+],
+
+answer: 2,
+
+explanation:
+"All three can contain plastic or synthetic polymer materials."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: Direct Air Capture technology can be used for which of the following purposes?",
+
+options: [
+"Carbon sequestration",
+"Providing captured carbon dioxide for selected industrial uses",
+"Providing carbon dioxide for some synthetic fuel processes",
+"All of the above"
+],
+
+answer: 3,
+
+explanation:
+"Direct Air Capture removes carbon dioxide directly from the atmosphere. The captured CO2 can be stored or used in selected applications."
+},
+
+
+{
+year: "2025",
+subject: "environment",
+
+question:
+"2025 UPSC Prelims PYQ-based: What is the main environmental significance of blue carbon ecosystems such as mangroves, seagrasses and tidal marshes?",
+
+options: [
+"They help capture and store carbon",
+"They increase desertification",
+"They eliminate all greenhouse gases",
+"They reduce ocean salinity completely"
+],
+
+answer: 0,
+
+explanation:
+"Blue carbon ecosystems capture and store carbon in coastal and marine environments."
+}
 
 ];
 
+
+/* =========================
+   QUIZ VARIABLES
+========================= */
+
 let filteredQuestions = [...quizQuestions];
+
 let currentQuestion = 0;
+
 let score = 0;
+
 let answered = false;
 
+
+/* =========================
+   QUIZ ELEMENTS
+========================= */
+
 const questionText =
-  document.getElementById("questionText");
+document.getElementById("questionText");
 
 const optionsBox =
-  document.getElementById("optionsBox");
+document.getElementById("optionsBox");
 
 const answerBox =
-  document.getElementById("answerBox");
+document.getElementById("answerBox");
 
 const questionNumber =
-  document.getElementById("questionNumber");
+document.getElementById("questionNumber");
 
 const quizScore =
-  document.getElementById("quizScore");
+document.getElementById("quizScore");
 
 const quizYear =
-  document.getElementById("quizYear");
+document.getElementById("quizYear");
 
 const quizSubject =
-  document.getElementById("quizSubject");
+document.getElementById("quizSubject");
 
+
+/* =========================
+   LOAD QUESTION
+========================= */
 
 function loadQuestion() {
 
-  const question =
-    filteredQuestions[currentQuestion];
+if (!filteredQuestions.length) {
 
-  questionText.textContent =
-    question.question;
+questionText.textContent =
+"No questions found for this filter.";
 
-  questionNumber.textContent =
-    "Question " +
-    (currentQuestion + 1) +
-    " / " +
-    filteredQuestions.length;
+optionsBox.innerHTML = "";
 
-  quizScore.textContent =
-    "Score: " + score;
+answerBox.style.display = "none";
 
-  answerBox.style.display = "none";
-  answerBox.innerHTML = "";
+questionNumber.textContent =
+"No Questions";
 
-  answered = false;
+quizScore.textContent =
+"Score: 0";
 
-  optionsBox.innerHTML = "";
-
-  question.options.forEach(function(option, index) {
-
-    const button =
-      document.createElement("button");
-
-    button.className = "option-btn";
-
-    button.textContent =
-      String.fromCharCode(65 + index) +
-      ". " +
-      option;
-
-    button.addEventListener("click", function() {
-
-      checkAnswer(index, button);
-
-    });
-
-    optionsBox.appendChild(button);
-
-  });
+return;
 
 }
 
 
-function checkAnswer(selected, selectedButton) {
+const question =
+filteredQuestions[currentQuestion];
 
-  if (answered) {
-    return;
-  }
 
-  answered = true;
+questionText.textContent =
+question.question;
 
-  const question =
-    filteredQuestions[currentQuestion];
 
-  const buttons =
-    document.querySelectorAll(".option-btn");
+questionNumber.textContent =
+"Question " +
+(currentQuestion + 1) +
+" / " +
+filteredQuestions.length;
 
-  buttons.forEach(function(button, index) {
 
-    button.disabled = true;
+quizScore.textContent =
+"Score: " + score;
 
-    if (index === question.answer) {
-      button.classList.add("correct");
-    }
 
-  });
+answerBox.style.display = "none";
 
-  if (selected === question.answer) {
+answerBox.innerHTML = "";
 
-    score++;
+answered = false;
 
-    selectedButton.classList.add("correct");
 
-    answerBox.innerHTML =
-      "✅ <strong>Correct!</strong><br><br>" +
-      question.explanation;
+optionsBox.innerHTML = "";
 
-  } else {
 
-    selectedButton.classList.add("wrong");
+question.options.forEach(function(option,index){
 
-    answerBox.innerHTML =
-      "❌ <strong>Incorrect.</strong><br><br>" +
-      "Correct Answer: " +
-      String.fromCharCode(65 + question.answer) +
-      "<br><br>" +
-      question.explanation;
+const button =
+document.createElement("button");
 
-  }
+button.className =
+"option-btn";
 
-  answerBox.style.display = "block";
+button.textContent =
+String.fromCharCode(65 + index) +
+". " +
+option;
 
-  quizScore.textContent =
-    "Score: " + score;
+
+button.addEventListener(
+"click",
+function(){
+
+checkAnswer(index,button);
+
+});
+
+
+optionsBox.appendChild(button);
+
+});
 
 }
 
 
+/* =========================
+   CHECK ANSWER
+========================= */
+
+function checkAnswer(
+selected,
+selectedButton
+){
+
+if(answered){
+return;
+}
+
+answered = true;
+
+
+const question =
+filteredQuestions[currentQuestion];
+
+
+const buttons =
+optionsBox.querySelectorAll(
+".option-btn"
+);
+
+
+buttons.forEach(
+function(button,index){
+
+button.disabled = true;
+
+if(index === question.answer){
+
+button.classList.add(
+"correct"
+);
+
+}
+
+});
+
+
+if(selected === question.answer){
+
+score++;
+
+selectedButton.classList.add(
+"correct"
+);
+
+answerBox.innerHTML =
+"✅ <strong>Correct!</strong><br><br>" +
+question.explanation;
+
+}
+
+else{
+
+selectedButton.classList.add(
+"wrong"
+);
+
+answerBox.innerHTML =
+"❌ <strong>Incorrect.</strong><br><br>" +
+"Correct Answer: " +
+String.fromCharCode(
+65 + question.answer
+) +
+"<br><br>" +
+question.explanation;
+
+}
+
+
+answerBox.style.display =
+"block";
+
+
+quizScore.textContent =
+"Score: " + score;
+
+}
+
+
+/* =========================
+   NEXT QUESTION
+========================= */
+
 document
-  .getElementById("nextQuestion")
-  .addEventListener("click", function() {
+.getElementById("nextQuestion")
+.addEventListener(
+"click",
+function(){
 
-    if (currentQuestion <
-        filteredQuestions.length - 1) {
+if(
+currentQuestion <
+filteredQuestions.length - 1
+){
 
-      currentQuestion++;
+currentQuestion++;
 
-      loadQuestion();
+loadQuestion();
 
-    } else {
+}
 
-      alert(
-        "🎉 Test Complete!\n\n" +
-        "Your Score: " +
-        score +
-        " / " +
-        filteredQuestions.length
-      );
+else{
 
-    }
+alert(
+"🎉 Test Complete!\n\n" +
+"Your Score: " +
+score +
+" / " +
+filteredQuestions.length
+);
 
-  });
+}
 
+});
+
+
+/* =========================
+   RESTART
+========================= */
 
 document
-  .getElementById("restartQuiz")
-  .addEventListener("click", function() {
+.getElementById("restartQuiz")
+.addEventListener(
+"click",
+function(){
 
-    currentQuestion = 0;
-    score = 0;
+currentQuestion = 0;
 
-    loadQuestion();
+score = 0;
 
-  });
+loadQuestion();
+
+});
 
 
-function filterQuiz() {
+/* =========================
+   FILTER QUIZ
+========================= */
 
-  const selectedYear =
-    quizYear.value;
+function filterQuiz(){
 
-  const selectedSubject =
-    quizSubject.value;
+const selectedYear =
+quizYear.value;
 
-  filteredQuestions =
-    quizQuestions.filter(function(question) {
+const selectedSubject =
+quizSubject.value;
 
-      const yearMatch =
-        selectedYear === "all" ||
-        question.year === selectedYear;
 
-      const subjectMatch =
-        selectedSubject === "all" ||
-        question.subject === selectedSubject;
+filteredQuestions =
+quizQuestions.filter(
+function(question){
 
-      return yearMatch && subjectMatch;
+const yearMatch =
+selectedYear === "all" ||
+question.year === selectedYear;
 
-    });
 
-  currentQuestion = 0;
-  score = 0;
+const subjectMatch =
+selectedSubject === "all" ||
+question.subject === selectedSubject;
 
-  if (filteredQuestions.length === 0) {
 
-    questionText.textContent =
-      "No questions found for this filter.";
+return yearMatch &&
+subjectMatch;
 
-    optionsBox.innerHTML = "";
+});
 
-    answerBox.style.display = "none";
 
-    questionNumber.textContent =
-      "No Questions";
+currentQuestion = 0;
 
-    quizScore.textContent =
-      "Score: 0";
+score = 0;
 
-    return;
-
-  }
-
-  loadQuestion();
+loadQuestion();
 
 }
 
 
 quizYear.addEventListener(
-  "change",
-  filterQuiz
+"change",
+filterQuiz
 );
+
 
 quizSubject.addEventListener(
-  "change",
-  filterQuiz
+"change",
+filterQuiz
 );
 
 
-/* START QUIZ */
+/* =========================
+   START QUIZ
+========================= */
 
 loadQuestion();
 
 
-  /* BACK TO TOP */
+/* =========================
+   BACK TO TOP
+========================= */
 
-  window.addEventListener("scroll", function() {
+window.addEventListener(
+"scroll",
+function(){
 
-    const btn =
-      document.getElementById("topBtn");
+const btn =
+document.getElementById("topBtn");
 
-    btn.style.display =
-      window.scrollY > 300
-        ? "block"
-        : "none";
+btn.style.display =
+window.scrollY > 300
+? "block"
+: "none";
 
-  });
+});
+
+
+document
+.getElementById("topBtn")
+.addEventListener(
+"click",
+function(){
+
+window.scrollTo({
+top: 0,
+behavior: "smooth"
+});
+
+});
 
 </script>
 
