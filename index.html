@@ -28,6 +28,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   padding:70px 20px;
   text-align:center;
   background:linear-gradient(135deg,#fff3cd,#ffffff);
+  overflow:hidden;
 }
 
 .badge{
@@ -158,6 +159,8 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   border-radius:16px;
   box-shadow:0 4px 16px rgba(0,0,0,0.08);
   border:1px solid #eee;
+  position:relative;
+  overflow:hidden;
 }
 
 .feature-card .icon{
@@ -182,6 +185,10 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
 
 .subject-card span{
   font-size:30px;
+}
+
+.subject-card a{
+  text-decoration:none;
 }
 
 
@@ -299,10 +306,46 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   background:linear-gradient(135deg,#222,#444);
   color:white;
   text-align:center;
+  position:relative;
+  overflow:hidden;
+  isolation:isolate;
+}
+
+.premium::before{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.08);
+  top:-80px;
+  left:-60px;
+  animation:premiumFloat 5s ease-in-out infinite;
+  z-index:-1;
+}
+
+.premium::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.14),
+    transparent
+  );
+  transform:skewX(-20deg);
+  animation:premiumSweep 5s ease-in-out infinite;
+  pointer-events:none;
 }
 
 .premium-content{
   padding:45px 20px;
+  position:relative;
+  z-index:2;
 }
 
 .premium-badge{
@@ -312,6 +355,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   background:#f1c40f;
   color:#222;
   font-weight:bold;
+  animation:badgePulse 2.2s ease-in-out infinite;
 }
 
 .premium h2{
@@ -438,7 +482,7 @@ body.dark-home .subject-card p{
 
 
 /* =========================
-   HOME ANIMATIONS
+   STEP 1 ANIMATIONS
 ========================= */
 
 .hero-content{
@@ -446,6 +490,7 @@ body.dark-home .subject-card p{
 }
 
 @keyframes heroFadeUp{
+
   from{
     opacity:0;
     transform:translateY(25px);
@@ -455,6 +500,7 @@ body.dark-home .subject-card p{
     opacity:1;
     transform:translateY(0);
   }
+
 }
 
 .stat-card{
@@ -478,6 +524,7 @@ body.dark-home .subject-card p{
 }
 
 @keyframes cardReveal{
+
   from{
     opacity:0;
     transform:translateY(18px);
@@ -487,11 +534,12 @@ body.dark-home .subject-card p{
     opacity:1;
     transform:translateY(0);
   }
+
 }
 
 
 /* =========================
-   CARD HOVER
+   STEP 1 HOVER
 ========================= */
 
 .feature-card,
@@ -517,8 +565,8 @@ body.dark-home .subject-card p{
 }
 
 .premium:hover{
-  transform:translateY(-4px);
-  box-shadow:0 12px 30px rgba(0,0,0,0.20);
+  transform:translateY(-5px);
+  box-shadow:0 15px 35px rgba(0,0,0,0.25);
 }
 
 
@@ -547,7 +595,7 @@ body.dark-home .subject-card p{
 
 
 /* =========================
-   NEW SCROLL REVEAL
+   STEP 2 SCROLL REVEAL
 ========================= */
 
 .scroll-reveal{
@@ -563,17 +611,153 @@ body.dark-home .subject-card p{
   transform:translateY(0);
 }
 
-.scroll-reveal-left{
-  opacity:0;
-  transform:translateX(-35px);
-  transition:
-    opacity 0.7s ease,
-    transform 0.7s ease;
+
+/* =========================
+   STEP 3 ADVANCED EFFECTS
+========================= */
+
+
+/* Premium floating glow */
+
+@keyframes premiumFloat{
+
+  0%,
+  100%{
+    transform:translate3d(0,0,0) scale(1);
+  }
+
+  50%{
+    transform:translate3d(35px,25px,0) scale(1.15);
+  }
+
 }
 
-.scroll-reveal-left.show{
-  opacity:1;
-  transform:translateX(0);
+
+/* Premium light sweep */
+
+@keyframes premiumSweep{
+
+  0%{
+    left:-120%;
+  }
+
+  45%,
+  100%{
+    left:140%;
+  }
+
+}
+
+
+/* Premium badge pulse */
+
+@keyframes badgePulse{
+
+  0%,
+  100%{
+    transform:scale(1);
+  }
+
+  50%{
+    transform:scale(1.06);
+  }
+
+}
+
+
+/* Feature icon floating */
+
+.feature-card .icon,
+.subject-card span{
+  display:inline-block;
+  transition:transform 0.3s ease;
+}
+
+.feature-card:hover .icon{
+  transform:translateY(-4px) scale(1.08);
+}
+
+.subject-card:hover span{
+  transform:translateY(-4px) scale(1.08);
+}
+
+
+/* Advanced card shine */
+
+.feature-card::after,
+.subject-card::after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:-120%;
+  width:70%;
+  height:100%;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    rgba(255,255,255,0.22),
+    transparent
+  );
+  transform:skewX(-20deg);
+  transition:left 0.55s ease;
+  pointer-events:none;
+}
+
+.feature-card:hover::after,
+.subject-card:hover::after{
+  left:140%;
+}
+
+
+/* Stats number pop */
+
+.stat-card h2{
+  transition:
+    transform 0.25s ease;
+}
+
+.stat-card:hover h2{
+  transform:scale(1.08);
+}
+
+
+/* Hero badge subtle floating */
+
+.hero .badge{
+  animation:heroBadgeFloat 3s ease-in-out infinite;
+}
+
+@keyframes heroBadgeFloat{
+
+  0%,
+  100%{
+    transform:translateY(0);
+  }
+
+  50%{
+    transform:translateY(-3px);
+  }
+
+}
+
+
+/* Premium button pulse */
+
+.premium-btn{
+  animation:premiumButtonPulse 3s ease-in-out infinite;
+}
+
+@keyframes premiumButtonPulse{
+
+  0%,
+  100%{
+    box-shadow:0 0 0 rgba(255,255,255,0);
+  }
+
+  50%{
+    box-shadow:0 0 18px rgba(255,255,255,0.22);
+  }
+
 }
 
 
@@ -584,7 +768,12 @@ body.dark-home .subject-card p{
 @media (prefers-reduced-motion:reduce){
 
   .hero-content,
-  .stat-card{
+  .stat-card,
+  .hero .badge,
+  .premium-badge,
+  .premium-btn,
+  .premium::before,
+  .premium::after{
     animation:none;
   }
 
@@ -598,10 +787,8 @@ body.dark-home .subject-card p{
   .pdf-btn,
   .test-btn,
   .premium-btn,
-  .scroll-reveal,
-  .scroll-reveal-left{
+  .scroll-reveal{
     transition:none;
-    animation:none;
     opacity:1;
     transform:none;
   }
@@ -665,6 +852,16 @@ body.dark-home .subject-card p{
 
   .syllabus-tab{
     padding:10px 13px;
+  }
+
+  /* Keep advanced animations subtle on mobile */
+
+  .premium::after{
+    animation-duration:7s;
+  }
+
+  .premium::before{
+    animation-duration:7s;
   }
 
 }
@@ -1026,17 +1223,11 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Current Events of National and International Importance</li>
-
         <li>History of India and Indian National Movement</li>
-
         <li>Indian and World Geography</li>
-
         <li>Indian Polity and Governance</li>
-
         <li>Economic and Social Development</li>
-
         <li>Environment, Ecology, Biodiversity and Climate Change</li>
-
         <li>General Science</li>
 
       </ul>
@@ -1061,17 +1252,11 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Comprehension</li>
-
         <li>Interpersonal Skills including Communication Skills</li>
-
         <li>Logical Reasoning and Analytical Ability</li>
-
         <li>Decision Making and Problem Solving</li>
-
         <li>General Mental Ability</li>
-
         <li>Basic Numeracy</li>
-
         <li>Data Interpretation</li>
 
       </ul>
@@ -1251,160 +1436,67 @@ body.dark-home .subject-card p{
 
   <div class="subject-grid">
 
-
     <div class="subject-card">
-
       <span>🏛️</span>
-
       <h3>Polity</h3>
-
-      <p>
-        Constitution, Parliament, Judiciary & more
-      </p>
-
-      <a href="polity.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Constitution, Parliament, Judiciary & more</p>
+      <a href="polity.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>📜</span>
-
       <h3>History</h3>
-
-      <p>
-        Ancient, Medieval & Modern India
-      </p>
-
-      <a href="history.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Ancient, Medieval & Modern India</p>
+      <a href="history.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>🌍</span>
-
       <h3>Geography</h3>
-
-      <p>
-        Indian & World Geography
-      </p>
-
-      <a href="geography.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Indian & World Geography</p>
+      <a href="geography.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>💰</span>
-
       <h3>Economy</h3>
-
-      <p>
-        Indian Economy & basic concepts
-      </p>
-
-      <a href="economy.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Indian Economy & basic concepts</p>
+      <a href="economy.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>🌱</span>
-
       <h3>Environment</h3>
-
-      <p>
-        Ecology, biodiversity & climate
-      </p>
-
-      <a href="environment.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Ecology, biodiversity & climate</p>
+      <a href="environment.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>🔬</span>
-
       <h3>Science & Technology</h3>
-
-      <p>
-        Science, Space & Technology
-      </p>
-
-      <a href="science.html" class="study-btn">
-        Study Free
-      </a>
-
+      <p>Science, Space & Technology</p>
+      <a href="science.html" class="study-btn">Study Free</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>📰</span>
-
       <h3>Current Affairs</h3>
-
-      <p>
-        Daily and monthly current affairs
-        for UPSC preparation.
-      </p>
-
-      <a href="current-affairs.html" class="study-btn">
-        Read Current Affairs
-      </a>
-
+      <p>Daily and monthly current affairs for UPSC preparation.</p>
+      <a href="current-affairs.html" class="study-btn">Read Current Affairs</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>📚</span>
-
       <h3>PYQs</h3>
-
-      <p>
-        Prelims, CSAT and Mains
-        previous year practice.
-      </p>
-
-      <a href="pyq.html" class="study-btn">
-        Practice PYQs
-      </a>
-
+      <p>Prelims, CSAT and Mains previous year practice.</p>
+      <a href="pyq.html" class="study-btn">Practice PYQs</a>
     </div>
 
-
     <div class="subject-card">
-
       <span>⏰</span>
-
       <h3>Study Timetable</h3>
-
-      <p>
-        Follow a structured daily
-        preparation schedule.
-      </p>
-
-      <a href="timetable.html" class="study-btn">
-        View Timetable
-      </a>
-
+      <p>Follow a structured daily preparation schedule.</p>
+      <a href="timetable.html" class="study-btn">View Timetable</a>
     </div>
 
   </div>
@@ -1590,13 +1682,9 @@ body.dark-home .subject-card p{
   <div class="footer-links">
 
     <a href="#home">Home</a>
-
     <a href="#syllabus">Syllabus</a>
-
     <a href="#free">Study Material</a>
-
     <a href="#tests">Tests</a>
-
     <a href="#premium">Premium</a>
 
   </div>
@@ -1731,7 +1819,7 @@ if(premiumBtn){
 
 
 /* =========================
-   SCROLL REVEAL ANIMATION
+   STEP 2 SCROLL REVEAL
 ========================= */
 
 const revealElements =
@@ -1784,8 +1872,6 @@ if("IntersectionObserver" in window){
   });
 
 }else{
-
-  /* Fallback for older browsers */
 
   revealElements.forEach(function(element){
 
