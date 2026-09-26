@@ -1,0 +1,1841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Environment Mind Map | UPSC Shiksha</title>
+
+<meta name="description"
+content="UPSC Environment and Ecology interactive mind map, detailed notes, biodiversity, climate change, pollution, environmental laws and quick revision.">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f8f5;
+  color:#183b2a;
+  line-height:1.65;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #d7e8dc;
+  padding:12px 16px;
+}
+
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  color:#146c43;
+}
+
+.header-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.header-buttons button,
+.header-buttons a{
+  border:0;
+  text-decoration:none;
+  background:#146c43;
+  color:white;
+  padding:9px 13px;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1200px;
+  margin:22px auto;
+  padding:40px 22px;
+  border-radius:24px;
+  text-align:center;
+  color:white;
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 30%),
+    radial-gradient(circle at 85% 80%,rgba(255,255,255,.18),transparent 30%),
+    linear-gradient(135deg,#0b6b3a,#138a52,#087f8c);
+  box-shadow:0 12px 35px rgba(0,90,50,.18);
+}
+
+.hero h1{
+  font-size:clamp(30px,5vw,52px);
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:800px;
+  margin:auto;
+}
+
+/* SEARCH */
+
+.search-box{
+  max-width:850px;
+  margin:20px auto;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:2px solid #b9dbc5;
+  border-radius:14px;
+  font-size:16px;
+  outline:none;
+  background:white;
+}
+
+.search-box input:focus{
+  border-color:#16804b;
+  box-shadow:0 0 0 4px rgba(22,128,75,.1);
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+  max-width:1200px;
+  margin:20px auto;
+  padding:20px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.quick-nav h2{
+  text-align:center;
+  margin-bottom:15px;
+  color:#126b40;
+}
+
+.nav-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+
+.nav-grid a{
+  text-decoration:none;
+  color:#14532d;
+  background:#e7f7ec;
+  border:2px solid #9ed5af;
+  padding:9px 13px;
+  border-radius:12px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.nav-grid a:hover{
+  transform:translateY(-3px);
+}
+
+/* MIND MAP */
+
+.map-box{
+  max-width:1200px;
+  margin:25px auto;
+  background:white;
+  border-radius:24px;
+  padding:25px;
+  box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+
+.map-box h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#126b40;
+}
+
+.mind-map{
+  min-height:690px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:20px;
+  background:
+    radial-gradient(circle,#e9f8ed 1px,transparent 1px);
+  background-size:22px 22px;
+  border:2px dashed #b5d9c0;
+}
+
+.center-node{
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+  font-size:21px;
+  font-weight:900;
+  color:white;
+  background:linear-gradient(135deg,#087f5b,#0b7285);
+  box-shadow:0 12px 30px rgba(0,90,70,.25);
+  z-index:3;
+}
+
+.node{
+  position:absolute;
+  width:145px;
+  min-height:72px;
+  padding:12px;
+  border-radius:16px;
+  text-align:center;
+  font-weight:800;
+  color:#17351f;
+  cursor:pointer;
+  border:3px solid rgba(255,255,255,.8);
+  box-shadow:0 7px 18px rgba(0,0,0,.13);
+  transition:.25s;
+  z-index:4;
+}
+
+.node:hover{
+  transform:scale(1.06) translateY(-3px);
+}
+
+.n1{top:6%;left:8%;background:#b9e6c5;}
+.n2{top:4%;left:40%;background:#d9f2a7;}
+.n3{top:8%;right:7%;background:#b8e3ef;}
+.n4{top:35%;left:3%;background:#ffe79b;}
+.n5{top:35%;right:3%;background:#ffd0a6;}
+.n6{bottom:7%;left:7%;background:#d8c5f2;}
+.n7{bottom:4%;left:39%;background:#bde8d0;}
+.n8{bottom:7%;right:7%;background:#c7d9ff;}
+.n9{top:59%;left:20%;background:#f7c6c6;}
+.n10{top:59%;right:20%;background:#f2d1b3;}
+.n11{top:22%;left:23%;background:#c9e8c9;}
+.n12{top:22%;right:23%;background:#d8d0f4;}
+
+/* DETAILS */
+
+.topic-section{
+  max-width:1200px;
+  margin:30px auto;
+  background:white;
+  border-radius:22px;
+  padding:26px;
+  box-shadow:0 6px 22px rgba(0,0,0,.07);
+  border-left:9px solid #16804b;
+}
+
+.topic-section h2{
+  color:#126b40;
+  margin-bottom:14px;
+  font-size:29px;
+}
+
+.topic-section h3{
+  margin-top:22px;
+  margin-bottom:10px;
+  color:#14532d;
+}
+
+/* SECTION COLOURS */
+
+.ecology{border-left-color:#16804b;}
+.biodiversity{border-left-color:#6b8e23;}
+.climate{border-left-color:#087f8c;}
+.pollution{border-left-color:#e08b00;}
+.laws{border-left-color:#7048a8;}
+.protected{border-left-color:#238636;}
+.energy{border-left-color:#d6a500;}
+.sustainable{border-left-color:#d65a31;}
+
+/* TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:15px 0;
+}
+
+table{
+  width:100%;
+  min-width:650px;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+th{
+  background:linear-gradient(135deg,#146c43,#087f8c);
+  color:white;
+  padding:13px;
+  text-align:left;
+}
+
+td{
+  padding:12px;
+  border:1px solid #d7e8dc;
+  vertical-align:top;
+}
+
+tr:nth-child(even){
+  background:#f0f9f3;
+}
+
+td:first-child{
+  font-weight:bold;
+  background:#e6f5ea;
+}
+
+/* IMPORTANT BOXES */
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.info-card{
+  padding:18px;
+  border-radius:16px;
+  border:2px solid #cce6d4;
+  background:#f5fff7;
+}
+
+.info-card h3{
+  margin-top:0;
+  color:#146c43;
+}
+
+.prelims{
+  background:#e8f7ec;
+  border-left:6px solid #16804b;
+}
+
+.mains{
+  background:#fff1dc;
+  border-left:6px solid #e08b00;
+}
+
+.important{
+  background:#ffe6e6;
+  border-left:6px solid #d62828;
+}
+
+.tip{
+  background:#e8f2ff;
+  border-left:6px solid #2774c6;
+}
+
+ul{
+  padding-left:22px;
+}
+
+li{
+  margin:5px 0;
+}
+
+/* VISUAL CARDS */
+
+.visual-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.visual-card{
+  padding:22px 12px;
+  text-align:center;
+  border-radius:18px;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.visual-card span{
+  display:block;
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.v1{background:#e4f7e9;}
+.v2{background:#eef8d7;}
+.v3{background:#e0f4f8;}
+.v4{background:#fff0c9;}
+.v5{background:#f0e5ff;}
+.v6{background:#ffe2e2;}
+.v7{background:#dff4ec;}
+.v8{background:#e1ebff;}
+
+/* TIMELINE */
+
+.timeline{
+  border-left:5px solid #e08b00;
+  padding-left:20px;
+  margin-top:15px;
+}
+
+.timeline-item{
+  margin-bottom:18px;
+  padding:15px;
+  border-radius:12px;
+  background:#fff7e6;
+}
+
+/* QUICK REVISION */
+
+.revision-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.revision-card{
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  font-weight:bold;
+  min-height:130px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.r1{background:#dff5e5;}
+.r2{background:#edf6ce;}
+.r3{background:#dff3f8;}
+.r4{background:#fff0c9;}
+.r5{background:#eadfff;}
+.r6{background:#ffe1e1;}
+.r7{background:#dcefe7;}
+.r8{background:#e2eaff;}
+
+/* FOOTER */
+
+footer{
+  margin-top:35px;
+  padding:30px 15px;
+  text-align:center;
+  background:#123c2a;
+  color:white;
+}
+
+footer a{
+  color:#b8f2c8;
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:18px;
+  border:0;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  background:#146c43;
+  color:white;
+  font-size:20px;
+  cursor:pointer;
+  z-index:1000;
+}
+
+/* DARK MODE */
+
+body.dark{
+  background:#101814;
+  color:#e6f4ea;
+}
+
+body.dark header,
+body.dark .quick-nav,
+body.dark .map-box,
+body.dark .topic-section{
+  background:#18241d;
+  color:#e6f4ea;
+  border-color:#31523d;
+}
+
+body.dark .search-box input{
+  background:#17221b;
+  color:white;
+  border-color:#41664d;
+}
+
+body.dark .quick-nav a{
+  background:#20382a;
+  color:#b9f5c9;
+  border-color:#41664d;
+}
+
+body.dark .mind-map{
+  background:#142019;
+  border-color:#41664d;
+}
+
+body.dark .topic-section h2,
+body.dark .topic-section h3,
+body.dark .quick-nav h2,
+body.dark .map-box h2{
+  color:#8ee6a5;
+}
+
+body.dark td{
+  border-color:#385241;
+}
+
+body.dark tr:nth-child(even){
+  background:#1d2d23;
+}
+
+body.dark td:first-child{
+  background:#20382a;
+}
+
+body.dark .info-card{
+  background:#1c2c21;
+  border-color:#3c6048;
+}
+
+body.dark .prelims{
+  background:#193b27;
+}
+
+body.dark .mains{
+  background:#3b2e1b;
+}
+
+body.dark .important{
+  background:#402020;
+}
+
+body.dark .tip{
+  background:#192d43;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .header-inner{
+    flex-direction:column;
+  }
+
+  .hero{
+    margin:12px;
+    padding:30px 16px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .map-box,
+  .topic-section,
+  .quick-nav{
+    margin:15px 10px;
+    padding:18px;
+  }
+
+  .mind-map{
+    min-height:850px;
+  }
+
+  .center-node{
+    width:145px;
+    height:145px;
+    font-size:17px;
+  }
+
+  .node{
+    width:112px;
+    font-size:12px;
+    padding:9px;
+  }
+
+  .n1{top:3%;left:2%;}
+  .n2{top:2%;left:34%;}
+  .n3{top:3%;right:2%;}
+  .n4{top:25%;left:1%;}
+  .n5{top:25%;right:1%;}
+  .n6{bottom:4%;left:2%;}
+  .n7{bottom:2%;left:34%;}
+  .n8{bottom:4%;right:2%;}
+  .n9{top:48%;left:7%;}
+  .n10{top:48%;right:7%;}
+  .n11{top:17%;left:16%;}
+  .n12{top:17%;right:16%;}
+
+  .info-grid,
+  .visual-grid,
+  .revision-grid{
+    grid-template-columns:1fr;
+  }
+
+  .topic-section h2{
+    font-size:24px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    scroll-behavior:auto !important;
+    transition:none !important;
+  }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="header-inner">
+
+    <div class="logo">🌱 UPSC Shiksha</div>
+
+    <div class="header-buttons">
+      <a href="index.html">🏠 Home</a>
+      <button onclick="toggleDark()">🌙 Dark</button>
+    </div>
+
+  </div>
+</header>
+
+
+<section class="hero">
+
+  <h1>🌱 Environment & Ecology</h1>
+
+  <p>
+    UPSC GS-III & Prelims — Interactive Mind Map,
+    Detailed Notes, Important Topics and Quick Revision
+  </p>
+
+</section>
+
+
+<div class="search-box">
+
+  <input
+    type="text"
+    id="topicSearch"
+    placeholder="🔎 Search Environment topic..."
+    onkeyup="searchTopics()"
+  >
+
+</div>
+
+
+<section class="quick-nav">
+
+<h2>⚡ Quick Navigation</h2>
+
+<div class="nav-grid">
+
+<a href="#ecologySection">🌿 Ecology</a>
+<a href="#biodiversitySection">🐾 Biodiversity</a>
+<a href="#climateSection">🌡️ Climate</a>
+<a href="#pollutionSection">🏭 Pollution</a>
+<a href="#protectedSection">🐅 Protected Areas</a>
+<a href="#lawsSection">⚖️ Laws</a>
+<a href="#energySection">☀️ Energy</a>
+<a href="#sustainableSection">♻️ Sustainability</a>
+<a href="#importantSection">🔴 Important</a>
+<a href="#revisionSection">⚡ Revision</a>
+
+</div>
+
+</section>
+
+
+<!-- MIND MAP -->
+
+<section class="map-box">
+
+<h2>🧠 Environment Interactive Mind Map</h2>
+
+<div class="mind-map">
+
+<div class="center-node">
+🌍<br>
+ENVIRONMENT<br>
+& ECOLOGY<br>
+UPSC
+</div>
+
+<div class="node n1" onclick="showTopic('ecology')">
+🌿 Ecology & Ecosystem
+</div>
+
+<div class="node n2" onclick="showTopic('biodiversity')">
+🐾 Biodiversity
+</div>
+
+<div class="node n3" onclick="showTopic('climate')">
+🌡️ Climate Change
+</div>
+
+<div class="node n4" onclick="showTopic('pollution')">
+🏭 Pollution
+</div>
+
+<div class="node n5" onclick="showTopic('protected')">
+🐅 Protected Areas
+</div>
+
+<div class="node n6" onclick="showTopic('laws')">
+⚖️ Environmental Laws
+</div>
+
+<div class="node n7" onclick="showTopic('energy')">
+☀️ Renewable Energy
+</div>
+
+<div class="node n8" onclick="showTopic('sustainable')">
+♻️ Sustainable Development
+</div>
+
+<div class="node n9" onclick="showTopic('cycles')">
+🔄 Biogeochemical Cycles
+</div>
+
+<div class="node n10" onclick="showTopic('foodweb')">
+🔗 Food Chain & Food Web
+</div>
+
+<div class="node n11" onclick="showTopic('conventions')">
+🌍 International Conventions
+</div>
+
+<div class="node n12" onclick="showTopic('eia')">
+🏗️ EIA
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ECOLOGY -->
+
+<section class="topic-section ecology" id="ecologySection">
+
+<h2>🌿 1. Ecology & Ecosystem</h2>
+
+<p>
+Ecology deals with interactions among organisms and between organisms
+and their physical environment.
+</p>
+
+<h3>Aspects / Details</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Aspect</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Ecology</td>
+<td>Study of interactions between organisms and environment.</td>
+</tr>
+
+<tr>
+<td>Ecosystem</td>
+<td>Functional unit consisting of biotic and abiotic components.</td>
+</tr>
+
+<tr>
+<td>Biotic Components</td>
+<td>Plants, animals, microorganisms.</td>
+</tr>
+
+<tr>
+<td>Abiotic Components</td>
+<td>Water, air, soil, temperature, sunlight and minerals.</td>
+</tr>
+
+<tr>
+<td>Producers</td>
+<td>Organisms that produce food, mainly green plants.</td>
+</tr>
+
+<tr>
+<td>Consumers</td>
+<td>Organisms depending directly or indirectly on producers.</td>
+</tr>
+
+<tr>
+<td>Decomposers</td>
+<td>Bacteria and fungi that break down organic matter.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+<h3>🟢 Prelims Focus</h3>
+<ul>
+<li>Food chain</li>
+<li>Ecological pyramid</li>
+<li>Producers and consumers</li>
+<li>Decomposers</li>
+</ul>
+</div>
+
+<div class="info-card mains">
+<h3>🟠 Mains Focus</h3>
+<ul>
+<li>Ecosystem stability</li>
+<li>Human impact</li>
+<li>Conservation</li>
+<li>Climate stress</li>
+</ul>
+</div>
+
+<div class="info-card important">
+<h3>🔴 Important</h3>
+<p>
+Energy flow in an ecosystem is generally unidirectional.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BIODIVERSITY -->
+
+<section class="topic-section biodiversity" id="biodiversitySection">
+
+<h2>🐾 2. Biodiversity</h2>
+
+<p>
+Biodiversity refers to the variety of life at genetic, species and ecosystem levels.
+</p>
+
+<div class="visual-grid">
+
+<div class="visual-card v1">
+<span>🧬</span>
+Genetic Diversity
+</div>
+
+<div class="visual-card v2">
+<span>🐅</span>
+Species Diversity
+</div>
+
+<div class="visual-card v3">
+<span>🌳</span>
+Ecosystem Diversity
+</div>
+
+<div class="visual-card v4">
+<span>🌍</span>
+Global Biodiversity
+</div>
+
+</div>
+
+<h3>Major Threats</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Threat</th>
+<th>Example / Effect</th>
+</tr>
+
+<tr>
+<td>Habitat Loss</td>
+<td>Deforestation, urbanisation and infrastructure development.</td>
+</tr>
+
+<tr>
+<td>Invasive Species</td>
+<td>Non-native species may disturb native ecosystems.</td>
+</tr>
+
+<tr>
+<td>Pollution</td>
+<td>Air, water, soil and plastic pollution.</td>
+</tr>
+
+<tr>
+<td>Climate Change</td>
+<td>Changes habitats, migration and species distribution.</td>
+</tr>
+
+<tr>
+<td>Overexploitation</td>
+<td>Unsustainable hunting, fishing and resource extraction.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-card important">
+
+<h3>🔴 UPSC Important</h3>
+
+<p>
+Study biodiversity together with hotspots, endemic species,
+IUCN categories, protected areas and conservation strategies.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CLIMATE -->
+
+<section class="topic-section climate" id="climateSection">
+
+<h2>🌡️ 3. Climate Change & Global Warming</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>Explanation</th>
+</tr>
+
+<tr>
+<td>Greenhouse Effect</td>
+<td>Atmospheric gases absorb and re-radiate heat.</td>
+</tr>
+
+<tr>
+<td>Global Warming</td>
+<td>Long-term rise in Earth's average temperature.</td>
+</tr>
+
+<tr>
+<td>Climate Change</td>
+<td>Long-term changes in temperature, rainfall and other climate patterns.</td>
+</tr>
+
+<tr>
+<td>Carbon Cycle</td>
+<td>Movement of carbon among atmosphere, organisms, oceans and geological systems.</td>
+</tr>
+
+<tr>
+<td>Mitigation</td>
+<td>Reducing greenhouse-gas emissions or enhancing carbon sinks.</td>
+</tr>
+
+<tr>
+<td>Adaptation</td>
+<td>Adjusting systems and communities to climate impacts.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+<h3>🟢 Prelims</h3>
+<ul>
+<li>Greenhouse gases</li>
+<li>Carbon sinks</li>
+<li>Climate terminology</li>
+<li>International agreements</li>
+</ul>
+</div>
+
+<div class="info-card mains">
+<h3>🟠 Mains</h3>
+<ul>
+<li>Climate justice</li>
+<li>India's challenges</li>
+<li>Adaptation</li>
+<li>Mitigation</li>
+</ul>
+</div>
+
+<div class="info-card tip">
+<h3>💡 Remember</h3>
+<p>
+Mitigation addresses the causes; adaptation addresses the impacts.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- POLLUTION -->
+
+<section class="topic-section pollution" id="pollutionSection">
+
+<h2>🏭 4. Environmental Pollution</h2>
+
+<div class="visual-grid">
+
+<div class="visual-card v6">
+<span>🌫️</span>
+Air Pollution
+</div>
+
+<div class="visual-card v3">
+<span>💧</span>
+Water Pollution
+</div>
+
+<div class="visual-card v4">
+<span>🌱</span>
+Soil Pollution
+</div>
+
+<div class="visual-card v5">
+<span>🔊</span>
+Noise Pollution
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Major Sources</th>
+<th>Key Concerns</th>
+</tr>
+
+<tr>
+<td>Air</td>
+<td>Vehicles, industries, burning</td>
+<td>Particulate matter and respiratory impacts</td>
+</tr>
+
+<tr>
+<td>Water</td>
+<td>Sewage, industry, agriculture</td>
+<td>Eutrophication and water quality</td>
+</tr>
+
+<tr>
+<td>Soil</td>
+<td>Chemicals, waste, pesticides</td>
+<td>Soil degradation and contamination</td>
+</tr>
+
+<tr>
+<td>Plastic</td>
+<td>Single-use plastics and waste</td>
+<td>Persistence and ecosystem impacts</td>
+</tr>
+
+<tr>
+<td>Noise</td>
+<td>Traffic, industries, construction</td>
+<td>Human and wildlife impacts</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- PROTECTED AREAS -->
+
+<section class="topic-section protected" id="protectedSection">
+
+<h2>🐅 5. Protected Areas & Wildlife Conservation</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Category</th>
+<th>Basic Idea</th>
+</tr>
+
+<tr>
+<td>National Park</td>
+<td>Protected area with stronger restrictions on human activities.</td>
+</tr>
+
+<tr>
+<td>Wildlife Sanctuary</td>
+<td>Area established primarily for protection of wildlife and habitat.</td>
+</tr>
+
+<tr>
+<td>Biosphere Reserve</td>
+<td>Large conservation landscape combining biodiversity protection with sustainable-use objectives.</td>
+</tr>
+
+<tr>
+<td>Tiger Reserve</td>
+<td>Landscape designated for tiger conservation.</td>
+</tr>
+
+<tr>
+<td>Ramsar Site</td>
+<td>Wetland recognised under the Ramsar Convention framework.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-card important">
+
+<h3>🔴 UPSC Important</h3>
+
+<p>
+For protected areas, prepare location, ecosystem type,
+important species, special features and associated conservation programmes.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- LAWS -->
+
+<section class="topic-section laws" id="lawsSection">
+
+<h2>⚖️ 6. Environmental Laws & Institutions</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Law / Institution</th>
+<th>UPSC Relevance</th>
+</tr>
+
+<tr>
+<td>Wildlife Protection Framework</td>
+<td>Wildlife and protected-area conservation.</td>
+</tr>
+
+<tr>
+<td>Forest Conservation Framework</td>
+<td>Regulation of diversion of forest land.</td>
+</tr>
+
+<tr>
+<td>Environment Protection Framework</td>
+<td>Broad legal framework for environmental protection.</td>
+</tr>
+
+<tr>
+<td>Biological Diversity Framework</td>
+<td>Conservation and sustainable use of biological resources.</td>
+</tr>
+
+<tr>
+<td>Pollution Control Institutions</td>
+<td>Monitoring and regulation of pollution.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-card prelims">
+
+<h3>🟢 Prelims Focus</h3>
+
+<p>
+Focus on objectives, institutions, protected-area categories,
+environmental clearances and important terminology.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ENERGY -->
+
+<section class="topic-section energy" id="energySection">
+
+<h2>☀️ 7. Renewable Energy & Green Economy</h2>
+
+<div class="visual-grid">
+
+<div class="visual-card v4">
+<span>☀️</span>
+Solar
+</div>
+
+<div class="visual-card v3">
+<span>🌬️</span>
+Wind
+</div>
+
+<div class="visual-card v1">
+<span>💧</span>
+Hydropower
+</div>
+
+<div class="visual-card v2">
+<span>🌾</span>
+Bioenergy
+</div>
+
+</div>
+
+<h3>Important Concepts</h3>
+
+<ul>
+<li>Renewable energy</li>
+<li>Energy efficiency</li>
+<li>Green hydrogen</li>
+<li>Electric mobility</li>
+<li>Carbon markets</li>
+<li>Energy transition</li>
+<li>Low-carbon development</li>
+</ul>
+
+</section>
+
+
+<!-- SUSTAINABLE -->
+
+<section class="topic-section sustainable" id="sustainableSection">
+
+<h2>♻️ 8. Sustainable Development</h2>
+
+<p>
+Sustainable development seeks to balance economic development,
+social needs and environmental protection.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Dimension</th>
+<th>Focus</th>
+</tr>
+
+<tr>
+<td>Economic</td>
+<td>Growth, employment and resource efficiency.</td>
+</tr>
+
+<tr>
+<td>Social</td>
+<td>Equity, health, education and livelihoods.</td>
+</tr>
+
+<tr>
+<td>Environmental</td>
+<td>Conservation, pollution reduction and climate resilience.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="info-card mains">
+
+<h3>🟠 Mains Approach</h3>
+
+<p>
+Environment answers become stronger when economic, social and ecological
+dimensions are connected instead of treating conservation in isolation.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CYCLES -->
+
+<section class="topic-section ecology">
+
+<h2>🔄 9. Biogeochemical Cycles</h2>
+
+<div class="visual-grid">
+
+<div class="visual-card v1">
+<span>💧</span>
+Water Cycle
+</div>
+
+<div class="visual-card v2">
+<span>🌱</span>
+Carbon Cycle
+</div>
+
+<div class="visual-card v3">
+<span>🌬️</span>
+Nitrogen Cycle
+</div>
+
+<div class="visual-card v4">
+<span>🪨</span>
+Phosphorus Cycle
+</div>
+
+</div>
+
+<p style="margin-top:18px;">
+These cycles describe the movement of elements and compounds through
+living organisms and the physical environment.
+</p>
+
+</section>
+
+
+<!-- FOOD WEB -->
+
+<section class="topic-section biodiversity">
+
+<h2>🔗 10. Food Chain, Food Web & Ecological Pyramids</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>Meaning</th>
+</tr>
+
+<tr>
+<td>Food Chain</td>
+<td>Linear transfer of food and energy between organisms.</td>
+</tr>
+
+<tr>
+<td>Food Web</td>
+<td>Interconnected food chains within an ecosystem.</td>
+</tr>
+
+<tr>
+<td>Trophic Level</td>
+<td>Position occupied by an organism in a food chain.</td>
+</tr>
+
+<tr>
+<td>Ecological Pyramid</td>
+<td>Diagrammatic representation of numbers, biomass or energy across trophic levels.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- CONVENTIONS -->
+
+<section class="topic-section climate">
+
+<h2>🌍 11. Major International Environmental Conventions</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Convention / Framework</th>
+<th>Broad Theme</th>
+</tr>
+
+<tr>
+<td>Ramsar Convention</td>
+<td>Wetlands</td>
+</tr>
+
+<tr>
+<td>Convention on Biological Diversity</td>
+<td>Biodiversity conservation and sustainable use</td>
+</tr>
+
+<tr>
+<td>CITES</td>
+<td>International trade in wild species</td>
+</tr>
+
+<tr>
+<td>UNFCCC</td>
+<td>Climate change</td>
+</tr>
+
+<tr>
+<td>Paris Agreement</td>
+<td>International climate action</td>
+</tr>
+
+<tr>
+<td>Montreal Protocol</td>
+<td>Ozone-depleting substances</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- EIA -->
+
+<section class="topic-section laws">
+
+<h2>🏗️ 12. Environmental Impact Assessment</h2>
+
+<p>
+Environmental Impact Assessment is used to assess potential environmental
+effects of proposed projects before decisions are made.
+</p>
+
+<div class="info-grid">
+
+<div class="info-card">
+<h3>1️⃣ Screening</h3>
+<p>Determines whether detailed assessment is required.</p>
+</div>
+
+<div class="info-card">
+<h3>2️⃣ Assessment</h3>
+<p>Studies likely environmental impacts.</p>
+</div>
+
+<div class="info-card">
+<h3>3️⃣ Decision</h3>
+<p>Environmental considerations are incorporated into project decisions.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- IMPORTANT -->
+
+<section class="topic-section important" id="importantSection">
+
+<h2>🔴 Most Important UPSC Environment Topics</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Priority Area</th>
+<th>What to Prepare</th>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ Biodiversity</td>
+<td>Hotspots, species, conservation, protected areas</td>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ Climate Change</td>
+<td>Greenhouse gases, mitigation, adaptation, agreements</td>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ Pollution</td>
+<td>Air, water, plastic, soil and control measures</td>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ Protected Areas</td>
+<td>National Parks, Sanctuaries, Biosphere Reserves, wetlands</td>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ Environmental Laws</td>
+<td>Objectives, institutions and major provisions</td>
+</tr>
+
+<tr>
+<td>⭐⭐⭐ International Conventions</td>
+<td>Theme, objective and major mechanisms</td>
+</tr>
+
+<tr>
+<td>⭐⭐ Energy Transition</td>
+<td>Renewables, green hydrogen, efficiency and low-carbon economy</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- STRATEGY -->
+
+<section class="topic-section">
+
+<h2>🎯 UPSC Environment Preparation Strategy</h2>
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+
+<h3>🟢 Prelims</h3>
+
+<ul>
+<li>Species and habitats</li>
+<li>Protected areas</li>
+<li>Conventions</li>
+<li>Environmental terminology</li>
+<li>Pollution</li>
+<li>Climate concepts</li>
+</ul>
+
+</div>
+
+<div class="info-card mains">
+
+<h3>🟠 Mains</h3>
+
+<ul>
+<li>Climate change</li>
+<li>Biodiversity loss</li>
+<li>Pollution solutions</li>
+<li>Conservation vs development</li>
+<li>Environmental governance</li>
+<li>Sustainable development</li>
+</ul>
+
+</div>
+
+<div class="info-card tip">
+
+<h3>💡 Answer Tip</h3>
+
+<p>
+Use examples + causes + impacts + government measures +
+way forward in Environment Mains answers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="topic-section" id="revisionSection">
+
+<h2>⚡ Environment Quick Revision</h2>
+
+<div class="revision-grid">
+
+<div class="revision-card r1">
+🌿<br>
+Ecology<br>
+Ecosystem
+</div>
+
+<div class="revision-card r2">
+🐾<br>
+Biodiversity<br>
+Conservation
+</div>
+
+<div class="revision-card r3">
+🌡️<br>
+Climate<br>
+Change
+</div>
+
+<div class="revision-card r4">
+🏭<br>
+Pollution<br>
+Control
+</div>
+
+<div class="revision-card r5">
+⚖️<br>
+Environmental<br>
+Laws
+</div>
+
+<div class="revision-card r6">
+🐅<br>
+Protected<br>
+Areas
+</div>
+
+<div class="revision-card r7">
+☀️<br>
+Renewable<br>
+Energy
+</div>
+
+<div class="revision-card r8">
+♻️<br>
+Sustainable<br>
+Development
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>🌱 <strong>UPSC Shiksha</strong></p>
+
+<p>
+Environment & Ecology — Interactive UPSC Notes
+</p>
+
+<p style="margin-top:8px;">
+Study • Revise • Practice • Improve
+</p>
+
+</footer>
+
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+
+<script>
+
+const topics = {
+
+ecology:{
+title:"🌿 Ecology & Ecosystem",
+section:"ecologySection"
+},
+
+biodiversity:{
+title:"🐾 Biodiversity",
+section:"biodiversitySection"
+},
+
+climate:{
+title:"🌡️ Climate Change",
+section:"climateSection"
+},
+
+pollution:{
+title:"🏭 Pollution",
+section:"pollutionSection"
+},
+
+protected:{
+title:"🐅 Protected Areas",
+section:"protectedSection"
+},
+
+laws:{
+title:"⚖️ Environmental Laws",
+section:"lawsSection"
+},
+
+energy:{
+title:"☀️ Renewable Energy",
+section:"energySection"
+},
+
+sustainable:{
+title:"♻️ Sustainable Development",
+section:"sustainableSection"
+},
+
+cycles:{
+title:"🔄 Biogeochemical Cycles",
+section:"revisionSection"
+},
+
+foodweb:{
+title:"🔗 Food Chain & Food Web",
+section:"revisionSection"
+},
+
+conventions:{
+title:"🌍 International Conventions",
+section:"importantSection"
+},
+
+eia:{
+title:"🏗️ Environmental Impact Assessment",
+section:"lawsSection"
+}
+
+};
+
+
+function showTopic(topic){
+
+if(topics[topic]){
+
+document
+.getElementById(topics[topic].section)
+.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+}
+
+
+function searchTopics(){
+
+const input =
+document
+.getElementById("topicSearch")
+.value
+.toLowerCase()
+.trim();
+
+const sections =
+document.querySelectorAll(".topic-section");
+
+sections.forEach(section=>{
+
+const text =
+section.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+section.style.display="block";
+
+}else{
+
+section.style.display="none";
+
+}
+
+});
+
+if(input===""){
+
+sections.forEach(section=>{
+section.style.display="block";
+});
+
+}
+
+}
+
+
+function toggleDark(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"environmentMindMapDark",
+document.body.classList.contains("dark")
+);
+
+}
+
+
+if(
+localStorage.getItem("environmentMindMapDark")==="true"
+){
+
+document.body.classList.add("dark");
+
+}
+
+
+window.onscroll=function(){
+
+const btn=document.getElementById("topBtn");
+
+if(
+document.body.scrollTop>400 ||
+document.documentElement.scrollTop>400
+){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
