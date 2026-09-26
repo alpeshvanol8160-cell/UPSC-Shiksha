@@ -1,474 +1,655 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Mains GS-III PYQ | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Mains GS-III PYQ practice - Economy, Agriculture, Science and Technology, Environment, Disaster Management and Internal Security.">
-
-<link rel="stylesheet" href="style.css">
+content="UPSC Mains GS-III PYQ practice covering Economy, Agriculture, Environment, Science & Technology, Disaster Management, Internal Security and Infrastructure.">
 
 <style>
 
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#222;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+transition:0.3s;
 }
 
 header{
-  background:#111827;
-  color:white;
-  padding:15px 20px;
-  position:sticky;
-  top:0;
-  z-index:1000;
+background:#ffffff;
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
-.nav{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.navbar{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-  font-size:21px;
-  font-weight:bold;
+font-size:22px;
+font-weight:bold;
+color:#d97706;
 }
 
-.nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
 }
 
-.hero{
-  text-align:center;
-  padding:55px 20px;
-  background:linear-gradient(135deg,#172554,#1e40af);
-  color:white;
+nav a,
+nav button{
+text-decoration:none;
+border:none;
+background:#f3f4f6;
+color:#222;
+padding:9px 13px;
+border-radius:8px;
+cursor:pointer;
+font-size:14px;
 }
 
-.hero h1{
-  font-size:32px;
-  margin-bottom:12px;
-}
-
-.hero p{
-  max-width:700px;
-  margin:auto;
-  line-height:1.6;
-}
-
-.tags{
-  margin-top:20px;
-}
-
-.tag{
-  display:inline-block;
-  padding:8px 13px;
-  margin:5px;
-  border-radius:20px;
-  background:white;
-  color:#1e40af;
-  font-size:13px;
-  font-weight:bold;
+nav a:hover,
+nav button:hover{
+background:#d97706;
+color:white;
 }
 
 .container{
-  max-width:1000px;
-  margin:30px auto;
-  padding:0 15px;
+max-width:1100px;
+margin:auto;
+padding:20px;
 }
 
-.tools{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:25px;
+.pyq-hero{
+background:linear-gradient(135deg,#92400e,#f59e0b);
+color:white;
+padding:35px 20px;
+border-radius:18px;
+text-align:center;
+margin-bottom:25px;
 }
 
-#searchBox{
-  flex:1;
-  min-width:220px;
-  padding:13px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:16px;
+.pyq-hero h1{
+font-size:32px;
+margin-bottom:10px;
 }
 
-button{
-  padding:13px 18px;
-  border:0;
-  border-radius:8px;
-  cursor:pointer;
-  background:#111827;
-  color:white;
-  font-weight:bold;
+.pyq-hero p{
+font-size:16px;
 }
 
-/* =========================
-   QUIZ
-========================= */
-
-.quiz-box{
-  background:white;
-  padding:25px;
-  border-radius:14px;
-  margin-bottom:30px;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
+.tag-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin-top:18px;
 }
 
-.quiz-box h2{
-  margin-top:0;
-  color:#1e3a8a;
+.tag{
+background:rgba(255,255,255,0.18);
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
 }
 
-.quiz-subtitle{
-  color:#555;
-  line-height:1.6;
+.controls{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-.quiz-filters{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:20px 0;
+#searchInput{
+flex:1;
+min-width:220px;
+padding:12px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
 }
 
-.quiz-filters select{
-  flex:1;
-  min-width:180px;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:15px;
+#darkModeBtn{
+padding:12px 16px;
+border:none;
+border-radius:10px;
+background:#222;
+color:white;
+cursor:pointer;
 }
-
-.quiz-info{
-  display:flex;
-  justify-content:space-between;
-  background:#eef2ff;
-  padding:12px;
-  border-radius:8px;
-  margin-bottom:15px;
-  font-weight:bold;
-}
-
-.question-card{
-  border:1px solid #ddd;
-  padding:20px;
-  border-radius:12px;
-}
-
-.question-card h3{
-  line-height:1.6;
-  margin-top:0;
-}
-
-.option-btn{
-  display:block;
-  width:100%;
-  text-align:left;
-  margin:10px 0;
-  background:#f3f4f6;
-  color:#111827;
-  border:1px solid #ddd;
-}
-
-.option-btn:hover{
-  background:#e5e7eb;
-}
-
-.option-btn.correct{
-  background:#dcfce7;
-  border:2px solid #16a34a;
-  color:#166534;
-}
-
-.option-btn.wrong{
-  background:#fee2e2;
-  border:2px solid #dc2626;
-  color:#991b1b;
-}
-
-.answer-box{
-  margin-top:15px;
-  padding:15px;
-  border-radius:8px;
-  background:#eff6ff;
-  display:none;
-  line-height:1.6;
-}
-
-.quiz-actions{
-  display:flex;
-  gap:10px;
-  margin-top:20px;
-  flex-wrap:wrap;
-}
-
-.quiz-actions button{
-  background:#1e40af;
-}
-
-/* =========================
-   QUICK NAV
-========================= */
 
 .quick-nav{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:25px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .quick-nav h2{
-  margin-top:0;
+margin-bottom:12px;
+font-size:22px;
 }
 
-.quick-nav a{
-  display:inline-block;
-  margin:5px;
-  padding:9px 13px;
-  background:#e8eefc;
-  color:#1e40af;
-  text-decoration:none;
-  border-radius:7px;
-  font-weight:bold;
+.quick-links{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
 }
 
-/* =========================
-   PYQ CARDS
-========================= */
+.quick-links a{
+text-decoration:none;
+background:#fff7ed;
+color:#9a3412;
+padding:8px 12px;
+border-radius:8px;
+font-size:14px;
+}
+
+.quiz-box{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.quiz-box h2{
+color:#92400e;
+margin-bottom:5px;
+}
+
+.quiz-subtitle{
+color:#666;
+margin-bottom:18px;
+}
+
+.quiz-filters{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.quiz-filters select{
+flex:1;
+min-width:180px;
+padding:11px;
+border:1px solid #ddd;
+border-radius:9px;
+background:white;
+font-size:14px;
+}
+
+.quiz-info{
+display:flex;
+justify-content:space-between;
+gap:10px;
+background:#fff7ed;
+padding:10px 14px;
+border-radius:9px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+.question-card{
+background:#fafafa;
+border:1px solid #e5e7eb;
+padding:20px;
+border-radius:14px;
+}
+
+.question-card h3{
+margin-bottom:15px;
+font-size:19px;
+}
+
+.option-btn{
+display:block;
+width:100%;
+text-align:left;
+padding:12px;
+margin:8px 0;
+border:1px solid #ddd;
+background:white;
+border-radius:9px;
+cursor:pointer;
+font-size:15px;
+transition:0.2s;
+}
+
+.option-btn:hover{
+background:#fff7ed;
+}
+
+.option-btn.correct{
+background:#dcfce7;
+border-color:#16a34a;
+color:#166534;
+}
+
+.option-btn.wrong{
+background:#fee2e2;
+border-color:#dc2626;
+color:#991b1b;
+}
+
+.answer-box{
+margin-top:15px;
+padding:13px;
+background:#fef3c7;
+border-radius:9px;
+display:none;
+}
+
+.quiz-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
+.quiz-actions button{
+padding:11px 18px;
+border:none;
+border-radius:9px;
+cursor:pointer;
+font-weight:bold;
+background:#d97706;
+color:white;
+}
+
+.quiz-actions button:hover{
+background:#92400e;
+}
+
+.case-study{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.case-study h2{
+color:#92400e;
+margin-bottom:12px;
+}
+
+.case-box{
+background:#fff7ed;
+padding:18px;
+border-radius:12px;
+border-left:5px solid #f59e0b;
+margin-top:15px;
+}
+
+.case-box ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+.pyq-section{
+margin-bottom:25px;
+}
+
+.pyq-section h2{
+margin-bottom:15px;
+}
+
+.pyq-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
+}
 
 .pyq-card{
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:14px;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
 }
 
-.pyq-card h2{
-  margin-top:0;
-  color:#1e3a8a;
+.pyq-card h3{
+color:#92400e;
+margin-bottom:8px;
 }
 
 .pyq-card p{
-  line-height:1.6;
+font-size:14px;
+color:#555;
+margin-bottom:12px;
 }
 
-.pyq-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:11px 17px;
-  background:#1e40af;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
+.year-btn{
+display:inline-block;
+text-decoration:none;
+background:#d97706;
+color:white;
+padding:9px 13px;
+border-radius:8px;
+font-size:14px;
 }
 
-/* =========================
-   INFO
-========================= */
-
-.info{
-  background:#fff7ed;
-  border-left:5px solid #f97316;
-  padding:18px;
-  border-radius:8px;
-  margin:25px 0;
-  line-height:1.6;
+.year-btn:hover{
+background:#92400e;
 }
 
-/* =========================
-   BOTTOM NAV
-========================= */
+.info-box{
+background:#eff6ff;
+border-left:5px solid #2563eb;
+padding:18px;
+border-radius:10px;
+margin-bottom:25px;
+}
+
+.strategy{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
+}
+
+.strategy h2{
+color:#92400e;
+margin-bottom:12px;
+}
+
+.strategy ul{
+margin-left:20px;
+}
+
+.major-areas{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
+}
+
+.area-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+margin-top:15px;
+}
+
+.area{
+background:#fff7ed;
+padding:15px;
+border-radius:10px;
+}
 
 .bottom-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-  margin:35px 0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin:30px 0;
 }
 
 .bottom-nav a{
-  text-decoration:none;
-  padding:11px 15px;
-  border-radius:8px;
-  background:#111827;
-  color:white;
+text-decoration:none;
+background:#e5e7eb;
+color:#222;
+padding:9px 12px;
+border-radius:8px;
+font-size:14px;
 }
-
-/* =========================
-   TOP BUTTON
-========================= */
-
-#topBtn{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  display:none;
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  padding:0;
-  font-size:20px;
-}
-
-/* =========================
-   FOOTER
-========================= */
 
 footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:40px;
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
 }
 
-/* =========================
-   DARK MODE
-========================= */
+#backTop{
+position:fixed;
+right:18px;
+bottom:18px;
+display:none;
+border:none;
+background:#d97706;
+color:white;
+padding:12px 15px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+z-index:999;
+}
+
+/* DARK MODE */
 
 body.dark{
-  background:#111827;
-  color:#eee;
+background:#111827;
+color:#f3f4f6;
 }
 
+body.dark header,
 body.dark .quick-nav,
+body.dark .quiz-box,
+body.dark .case-study,
 body.dark .pyq-card,
-body.dark .quiz-box{
-  background:#1f2937;
-  color:#eee;
+body.dark .strategy,
+body.dark .major-areas{
+background:#1f2937;
+color:#f3f4f6;
 }
 
-body.dark .quick-nav a{
-  background:#374151;
-  color:#fff;
-}
-
-body.dark .pyq-card h2,
-body.dark .quiz-box h2{
-  color:#93c5fd;
-}
-
-body.dark .info{
-  background:#292524;
+body.dark .quick-links a{
+background:#374151;
+color:#fbbf24;
 }
 
 body.dark .question-card{
-  border-color:#4b5563;
-}
-
-body.dark .quiz-info{
-  background:#374151;
-}
-
-body.dark .quiz-filters select{
-  background:#374151;
-  color:white;
-  border-color:#6b7280;
+background:#111827;
+border-color:#374151;
 }
 
 body.dark .option-btn{
-  background:#374151;
-  color:white;
-  border-color:#6b7280;
+background:#1f2937;
+color:#f3f4f6;
+border-color:#4b5563;
+}
+
+body.dark .option-btn:hover{
+background:#374151;
+}
+
+body.dark .quiz-filters select,
+body.dark #searchInput{
+background:#1f2937;
+color:white;
+border-color:#4b5563;
+}
+
+body.dark .quiz-info{
+background:#374151;
 }
 
 body.dark .answer-box{
-  background:#1e3a5f;
-  color:white;
+background:#422006;
+color:#fef3c7;
 }
 
-/* =========================
-   MOBILE
-========================= */
+body.dark .area{
+background:#374151;
+}
 
-@media(max-width:600px){
+body.dark .pyq-card p{
+color:#d1d5db;
+}
 
-  .nav{
-    flex-direction:column;
-    gap:10px;
-  }
+body.dark .bottom-nav a{
+background:#374151;
+color:#f3f4f6;
+}
 
-  .nav a{
-    margin:0 6px;
-    font-size:14px;
-  }
+body.dark .info-box{
+background:#1e3a8a;
+border-color:#60a5fa;
+}
 
-  .hero h1{
-    font-size:26px;
-  }
+body.dark .case-box{
+background:#422006;
+}
 
-  .pyq-card{
-    padding:20px;
-  }
+body.dark nav a{
+background:#374151;
+color:#f3f4f6;
+}
 
-  .quiz-box{
-    padding:18px;
-  }
+/* MOBILE */
 
-  .quiz-info{
-    flex-direction:column;
-    gap:8px;
-  }
+@media(max-width:700px){
 
-  .quiz-filters select{
-    width:100%;
-  }
+header{
+padding:12px;
+}
+
+.navbar{
+flex-direction:column;
+align-items:stretch;
+}
+
+.logo{
+text-align:center;
+}
+
+nav{
+justify-content:center;
+}
+
+nav a,
+nav button{
+font-size:13px;
+padding:8px 10px;
+}
+
+.container{
+padding:12px;
+}
+
+.pyq-hero{
+padding:28px 15px;
+}
+
+.pyq-hero h1{
+font-size:25px;
+}
+
+.quiz-box,
+.case-study,
+.strategy,
+.major-areas,
+.quick-nav{
+padding:18px;
+}
+
+.question-card h3{
+font-size:17px;
+}
+
+.quiz-info{
+font-size:13px;
+}
+
+.quiz-actions button{
+width:100%;
+}
+
+.controls{
+flex-direction:column;
+}
+
+#searchInput{
+width:100%;
+}
+
+#darkModeBtn{
+width:100%;
+}
 
 }
 
 </style>
 </head>
 
-
 <body>
 
 <header>
 
-<div class="nav">
+<div class="navbar">
 
 <div class="logo">
 🇮🇳 UPSC Shiksha
 </div>
 
-<div>
+<nav>
 
 <a href="index.html">Home</a>
+
 <a href="mains.html">Mains</a>
+
 <a href="pyq.html">PYQ</a>
 
-</div>
+<a href="mains-gs1-pyq.html">GS-I</a>
+
+<a href="mains-gs2-pyq.html">GS-II</a>
+
+<a href="mains-gs4-pyq.html">GS-IV</a>
+
+<button id="darkModeBtn"
+onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+</nav>
 
 </div>
 
 </header>
 
 
-<section class="hero">
+<main class="container">
+
+<section class="pyq-hero">
 
 <h1>📊 Mains GS-III PYQ</h1>
 
 <p>
-UPSC Civil Services Mains General Studies Paper-III
-Previous Year Questions and Practice
+UPSC Civil Services Mains General Studies Paper III
 </p>
 
-<div class="tags">
+<div class="tag-box">
 
 <span class="tag">MAINS</span>
 <span class="tag">GS-III</span>
@@ -484,42 +665,63 @@ Previous Year Questions and Practice
 </section>
 
 
-<div class="container">
-
-
-<div class="tools">
+<div class="controls">
 
 <input
 type="text"
-id="searchBox"
-placeholder="🔍 Search GS-III PYQ..."
+id="searchInput"
+placeholder="🔎 Search GS-III topics or years..."
 >
-
-<button onclick="toggleDarkMode()">
-🌙 Dark Mode
-</button>
 
 </div>
 
 
-<!-- =========================
-     GS-III PRACTICE QUIZ
-========================= -->
+<section class="quick-nav">
 
-<section class="quiz-box" id="gs3Quiz">
+<h2>⚡ Quick Navigation</h2>
 
-<h2>📝 GS-III Practice Questions</h2>
+<div class="quick-links">
+
+<a href="#quiz">📝 Quiz</a>
+
+<a href="#caseStudy">📚 Case Study</a>
+
+<a href="#year2026">2026</a>
+
+<a href="#year2025">2025</a>
+
+<a href="#year2024">2024</a>
+
+<a href="#year2023">2023</a>
+
+<a href="#year2022">2022</a>
+
+<a href="#year2021">2021</a>
+
+<a href="#year2020">2020</a>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-box" id="quiz">
+
+<h2>📝 GS-III Practice Quiz</h2>
 
 <p class="quiz-subtitle">
-Practice model questions based on important GS-III themes.
+Model/practice questions for UPSC Mains GS-III.
+These are NOT exact UPSC PYQ text.
 </p>
-
 
 <div class="quiz-filters">
 
-<select id="quizYear" onchange="filterQuiz()">
+<select id="quizYear">
 
 <option value="all">All Years</option>
+
 <option value="2025">2025</option>
 <option value="2024">2024</option>
 <option value="2023">2023</option>
@@ -530,16 +732,31 @@ Practice model questions based on important GS-III themes.
 </select>
 
 
-<select id="quizTopic" onchange="filterQuiz()">
+<select id="quizTopic">
 
 <option value="all">All Topics</option>
+
 <option value="Economy">Economy</option>
+
 <option value="Agriculture">Agriculture</option>
+
 <option value="Environment">Environment</option>
-<option value="Science & Technology">Science & Technology</option>
-<option value="Disaster Management">Disaster Management</option>
-<option value="Internal Security">Internal Security</option>
-<option value="Infrastructure">Infrastructure</option>
+
+<option value="Science & Technology">
+Science & Technology
+</option>
+
+<option value="Disaster Management">
+Disaster Management
+</option>
+
+<option value="Internal Security">
+Internal Security
+</option>
+
+<option value="Infrastructure">
+Infrastructure
+</option>
 
 </select>
 
@@ -567,7 +784,9 @@ GS-III question will appear here.
 
 <div id="optionsBox"></div>
 
-<div id="answerBox" class="answer-box"></div>
+<div id="answerBox"
+class="answer-box">
+</div>
 
 </div>
 
@@ -587,179 +806,208 @@ GS-III question will appear here.
 </section>
 
 
-<!-- =========================
-     QUICK NAVIGATION
-========================= -->
+<!-- CASE STUDY -->
 
-<div class="quick-nav">
+<section class="case-study" id="caseStudy">
 
-<h2>⚡ Quick Navigation</h2>
+<h2>📚 GS-III Case Study Practice</h2>
 
-<a href="#2026">2026</a>
-<a href="#2025">2025</a>
-<a href="#2024">2024</a>
-<a href="#2023">2023</a>
-<a href="#2022">2022</a>
-<a href="#2021">2021</a>
-<a href="#2020">2020</a>
+<p>
+Case-study practice helps in applying concepts from economy,
+environment, technology, disaster management and internal security.
+</p>
+
+<div class="case-box">
+
+<strong>Case Study:</strong>
+
+<p>
+A district is facing repeated floods. The administration has limited
+funds and must decide how to balance immediate relief with long-term
+disaster-resilient infrastructure.
+</p>
+
+<ul>
+
+<li>Identify the major stakeholders.</li>
+
+<li>Explain the immediate priorities.</li>
+
+<li>Suggest long-term measures.</li>
+
+<li>Explain how technology can support disaster preparedness.</li>
+
+</ul>
 
 </div>
 
+<div class="case-box">
 
-<div id="pyqList">
+<strong>Suggested Approach:</strong>
+
+<ul>
+
+<li>Identify facts and risks first.</li>
+
+<li>Prioritise protection of life and essential services.</li>
+
+<li>Use transparent and evidence-based planning.</li>
+
+<li>Combine structural and non-structural measures.</li>
+
+<li>Include community participation.</li>
+
+</ul>
+
+</div>
+
+</section>
 
 
-<!-- 2026 -->
+<!-- YEAR PAPERS -->
 
-<div class="pyq-card" id="2026">
+<section class="pyq-section">
 
-<h2>📅 UPSC Mains GS-III PYQ 2026</h2>
+<h2>📄 Official UPSC GS-III Papers</h2>
+
+<div class="pyq-grid">
+
+
+<div class="pyq-card"
+id="year2026">
+
+<h3>📅 GS-III 2026</h3>
 
 <p>
-General Studies Paper-III questions covering
-Economy, Agriculture, Science & Technology,
-Environment, Disaster Management and Internal Security.
+Civil Services Main Examination 2026 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2025 -->
+<div class="pyq-card"
+id="year2025">
 
-<div class="pyq-card" id="2025">
-
-<h2>📅 UPSC Mains GS-III PYQ 2025</h2>
+<h3>📅 GS-III 2025</h3>
 
 <p>
-Previous Year questions covering Economy,
-Agriculture, Technology, Environment and Security.
+Civil Services Main Examination 2025 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2024 -->
+<div class="pyq-card"
+id="year2024">
 
-<div class="pyq-card" id="2024">
-
-<h2>📅 UPSC Mains GS-III PYQ 2024</h2>
+<h3>📅 GS-III 2024</h3>
 
 <p>
-Practice GS-III questions related to Economy,
-Agriculture, Science & Technology,
-Environment and Internal Security.
+Civil Services Main Examination 2024 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2023 -->
+<div class="pyq-card"
+id="year2023">
 
-<div class="pyq-card" id="2023">
-
-<h2>📅 UPSC Mains GS-III PYQ 2023</h2>
+<h3>📅 GS-III 2023</h3>
 
 <p>
-Previous Year questions for economic development,
-agriculture, environment, technology and security.
+Civil Services Main Examination 2023 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2022 -->
+<div class="pyq-card"
+id="year2022">
 
-<div class="pyq-card" id="2022">
-
-<h2>📅 UPSC Mains GS-III PYQ 2022</h2>
+<h3>📅 GS-III 2022</h3>
 
 <p>
-GS-III Previous Year questions for
-answer-writing and topic-wise revision.
+Civil Services Main Examination 2022 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2021 -->
+<div class="pyq-card"
+id="year2021">
 
-<div class="pyq-card" id="2021">
-
-<h2>📅 UPSC Mains GS-III PYQ 2021</h2>
+<h3>📅 GS-III 2021</h3>
 
 <p>
-Practice Economy, Agriculture, Environment,
-Science & Technology and Security questions.
+Civil Services Main Examination 2021 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
 
 
-<!-- 2020 -->
+<div class="pyq-card"
+id="year2020">
 
-<div class="pyq-card" id="2020">
-
-<h2>📅 UPSC Mains GS-III PYQ 2020</h2>
+<h3>📅 GS-III 2020</h3>
 
 <p>
-GS-III Previous Year questions for
-revision and answer-writing practice.
+Civil Services Main Examination 2020 —
+General Studies Paper III.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+Official UPSC Paper
 </a>
 
 </div>
@@ -767,99 +1015,149 @@ Official UPSC Questions →
 
 </div>
 
+</section>
 
-<!-- =========================
-     STRATEGY
-========================= -->
 
-<div class="info">
+<div class="info-box">
 
-<strong>📌 How to use GS-III PYQs:</strong>
+<strong>📌 Important:</strong>
 
-<br><br>
-
-1. Study the GS-III syllabus before solving PYQs.<br>
-
-2. Divide questions into Economy, Agriculture,
-Environment, Science & Technology,
-Disaster Management and Security.<br>
-
-3. Identify repeated themes and concepts.<br>
-
-4. Connect static concepts with relevant current affairs.<br>
-
-5. Practice answer writing within the prescribed time.
+The year buttons above open the official UPSC
+Previous Year Question Papers / Archives pages.
+The quiz on this page contains model practice questions,
+not verbatim reproduction of UPSC papers.
 
 </div>
 
 
-<!-- =========================
-     MAJOR AREAS
-========================= -->
+<!-- STRATEGY -->
 
-<div class="pyq-card">
+<section class="strategy">
 
-<h2>📚 GS-III Major Areas</h2>
+<h2>🎯 GS-III Preparation Strategy</h2>
 
-<p>💰 Indian Economy & Planning</p>
+<ul>
 
-<p>🌾 Agriculture & Food Security</p>
+<li>
+Build strong concepts in Economy, Agriculture,
+Environment, Science & Technology and Security.
+</li>
 
-<p>🔬 Science & Technology</p>
+<li>
+Connect static concepts with current affairs.
+</li>
 
-<p>🌱 Environment & Biodiversity</p>
+<li>
+Use diagrams, flowcharts and examples in Mains answers.
+</li>
 
-<p>🌪️ Disaster Management</p>
+<li>
+Practice previous-year questions regularly.
+</li>
 
-<p>🛡️ Internal Security</p>
+<li>
+For 10-marker questions, focus on concise and structured answers.
+</li>
 
-<p>🏭 Infrastructure & Investment</p>
+<li>
+For 15-marker questions, provide multiple dimensions,
+examples and a balanced conclusion.
+</li>
+
+<li>
+Revise government schemes, institutions and important reports.
+</li>
+
+</ul>
+
+</section>
+
+
+<!-- MAJOR AREAS -->
+
+<section class="major-areas">
+
+<h2>📚 Major GS-III Areas</h2>
+
+<div class="area-grid">
+
+<div class="area">
+<strong>💰 Economy</strong>
+<p>Growth, employment, inflation, banking, fiscal policy.</p>
+</div>
+
+<div class="area">
+<strong>🌾 Agriculture</strong>
+<p>MSP, irrigation, food processing, reforms, technology.</p>
+</div>
+
+<div class="area">
+<strong>🌱 Environment</strong>
+<p>Biodiversity, climate change, pollution, conservation.</p>
+</div>
+
+<div class="area">
+<strong>🔬 Science & Technology</strong>
+<p>Space, biotechnology, AI, digital technology and research.</p>
+</div>
+
+<div class="area">
+<strong>🌊 Disaster Management</strong>
+<p>Preparedness, mitigation, response and resilience.</p>
+</div>
+
+<div class="area">
+<strong>🛡️ Internal Security</strong>
+<p>Cybersecurity, borders, terrorism and organised crime.</p>
+</div>
+
+<div class="area">
+<strong>🏗️ Infrastructure</strong>
+<p>Energy, transport, logistics and digital infrastructure.</p>
+</div>
 
 </div>
 
+</section>
 
-<!-- =========================
-     BOTTOM NAV
-========================= -->
+
+<!-- BOTTOM NAV -->
 
 <div class="bottom-nav">
 
 <a href="index.html">🏠 Home</a>
 
-<a href="prelims.html">📚 Prelims</a>
+<a href="prelims.html">📘 Prelims</a>
 
 <a href="csat.html">🧠 CSAT</a>
 
-<a href="mains.html">📝 Mains</a>
+<a href="mains.html">✍️ Mains</a>
 
-<a href="pyq.html">📖 All PYQs</a>
+<a href="pyq.html">📚 PYQ</a>
 
-<a href="prelims-pyq.html">📄 Prelims PYQ</a>
+<a href="mains-gs1-pyq.html">GS-I</a>
 
-<a href="csat-pyq.html">🧠 CSAT PYQ</a>
+<a href="mains-gs2-pyq.html">GS-II</a>
 
-<a href="mains-gs1-pyq.html">✍️ GS-I PYQ</a>
-
-<a href="mains-gs2-pyq.html">🏛️ GS-II PYQ</a>
+<a href="mains-gs4-pyq.html">GS-IV</a>
 
 </div>
 
-</div>
+</main>
 
 
-<button id="topBtn" onclick="topFunction()">
+<button id="backTop"
+onclick="topFunction()">
 ↑
 </button>
 
 
 <footer>
 
-<p>
-🇮🇳 <strong>UPSC Shiksha</strong>
-</p>
+<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
 
 <p>
-Free UPSC Study Material & PYQ Platform
+Free UPSC Preparation • Syllabus • PYQs • Tests • Current Affairs
 </p>
 
 <p>
@@ -877,357 +1175,699 @@ Free UPSC Study Material & PYQ Platform
 
 const quizQuestions = [
 
+/* ECONOMY */
+
 {
 year:"2025",
+topic:"Economy",
+question:"Which approach can support inclusive economic growth?",
+options:[
+"Improving access to financial services and productive opportunities",
+"Restricting access to formal financial institutions",
+"Reducing investment in human capital",
+"Limiting employment opportunities"
+],
+answer:0,
+explanation:"Inclusive growth seeks wider participation in economic opportunities through access, employment, skills and productive investment."
+},
+
+{
+year:"2024",
 topic:"Economy",
 question:"Why is investment in infrastructure important for economic development?",
 options:[
-"It can improve productive capacity and connectivity",
-"It eliminates the need for human capital",
-"It prevents technological development",
-"It removes all economic inequalities"
+"It can improve productivity and connectivity",
+"It always eliminates inflation",
+"It removes the need for human capital",
+"It guarantees equal income for everyone"
 ],
 answer:0,
-explanation:
-"Infrastructure can support productivity, connectivity, investment and the delivery of economic activities."
-},
-
-{
-year:"2024",
-topic:"Economy",
-question:"What is an important objective of financial inclusion?",
-options:[
-"To restrict access to formal finance",
-"To improve access to useful and affordable financial services",
-"To reduce banking access",
-"To eliminate digital payments"
-],
-answer:1,
-explanation:
-"Financial inclusion seeks to improve access to appropriate and affordable formal financial services."
+explanation:"Infrastructure such as transport, energy and digital networks can reduce transaction costs and improve economic productivity."
 },
 
 {
 year:"2023",
 topic:"Economy",
-question:"Why is human capital important for economic growth?",
+question:"Financial inclusion primarily aims to:",
 options:[
-"It can improve skills and productivity",
-"It reduces the importance of education",
-"It eliminates the need for technology",
-"It prevents labour mobility"
+"Provide wider access to appropriate financial services",
+"Restrict banking services to large firms",
+"Eliminate all forms of taxation",
+"Replace all physical currency immediately"
 ],
 answer:0,
-explanation:
-"Education, skills and health can improve productivity and support long-term economic development."
+explanation:"Financial inclusion focuses on affordable and accessible financial services for individuals and businesses."
+},
+
+{
+year:"2022",
+topic:"Economy",
+question:"Human capital formation contributes to economic growth mainly by:",
+options:[
+"Improving skills, productivity and capabilities",
+"Reducing access to education",
+"Discouraging innovation",
+"Reducing labour productivity"
+],
+answer:0,
+explanation:"Education, health and skill development improve the capabilities and productivity of people."
+},
+
+{
+year:"2021",
+topic:"Economy",
+question:"A major purpose of monetary policy is to influence:",
+options:[
+"Money, credit and financial conditions",
+"Only agricultural land ownership",
+"Only international borders",
+"Only population distribution"
+],
+answer:0,
+explanation:"Monetary policy operates through money, interest rates, liquidity and credit conditions."
+},
+
+{
+year:"2020",
+topic:"Economy",
+question:"Diversification of an economy can help by:",
+options:[
+"Reducing excessive dependence on a limited number of sectors",
+"Eliminating all economic risks",
+"Ending international trade",
+"Preventing technological change"
+],
+answer:0,
+explanation:"Diversification can spread economic activity and reduce vulnerability to shocks concentrated in one sector."
+},
+
+
+/* AGRICULTURE */
+
+{
+year:"2025",
+topic:"Agriculture",
+question:"Crop diversification can contribute to agricultural resilience by:",
+options:[
+"Reducing dependence on a narrow range of crops",
+"Eliminating all weather risks",
+"Ending irrigation requirements",
+"Reducing soil management"
+],
+answer:0,
+explanation:"Diversification can reduce dependence on particular crops and improve resilience when combined with suitable farming practices."
+},
+
+{
+year:"2024",
+topic:"Agriculture",
+question:"Micro-irrigation can help agriculture mainly by:",
+options:[
+"Improving water-use efficiency",
+"Increasing water wastage",
+"Eliminating the need for crops",
+"Preventing all droughts"
+],
+answer:0,
+explanation:"Drip and sprinkler systems can improve the efficiency of water application."
+},
+
+{
+year:"2023",
+topic:"Agriculture",
+question:"Food processing can benefit farmers by:",
+options:[
+"Adding value and potentially reducing post-harvest losses",
+"Eliminating agricultural markets",
+"Stopping agricultural exports",
+"Removing the need for storage"
+],
+answer:0,
+explanation:"Food processing can create value addition, improve shelf life and reduce certain post-harvest losses."
 },
 
 {
 year:"2022",
 topic:"Agriculture",
-question:"Why is diversification of agriculture useful for farmers?",
+question:"Soil health is important because it influences:",
 options:[
-"It can reduce dependence on a single crop or activity",
-"It always eliminates all agricultural risks",
-"It prevents value addition",
-"It reduces market opportunities"
+"Crop productivity and sustainable agricultural production",
+"Only road construction",
+"Only urban transport",
+"Only ocean currents"
 ],
 answer:0,
-explanation:
-"Diversification can spread risk and create additional income opportunities when supported by suitable markets and infrastructure."
+explanation:"Healthy soil supports nutrient availability, water retention and long-term agricultural productivity."
 },
 
 {
 year:"2021",
 topic:"Agriculture",
-question:"What can improve agricultural productivity sustainably?",
+question:"Agricultural technology can help farmers through:",
 options:[
-"Efficient resource use and appropriate technology",
-"Continuous overuse of natural resources",
-"Reducing access to irrigation",
-"Eliminating soil conservation"
+"Better information, productivity and resource management",
+"Eliminating all climate risks",
+"Removing the need for farmers",
+"Preventing all market changes"
 ],
 answer:0,
-explanation:
-"Sustainable productivity can be supported by efficient resource use, improved technology, soil health and appropriate water management."
+explanation:"Technology can improve access to information, precision farming, resource use and market connections."
 },
 
 {
 year:"2020",
 topic:"Agriculture",
-question:"Why is food processing important for agriculture?",
+question:"Sustainable agriculture seeks to balance:",
 options:[
-"It can increase value addition and reduce post-harvest losses",
-"It eliminates the need for farmers",
-"It prevents market access",
-"It reduces the importance of storage"
+"Productivity, environmental sustainability and resource conservation",
+"Only short-term output",
+"Only exports",
+"Only mechanisation"
 ],
 answer:0,
-explanation:
-"Food processing can create value addition, improve shelf life, generate employment and reduce certain post-harvest losses."
+explanation:"Sustainable agriculture aims to maintain productivity while conserving natural resources and reducing environmental damage."
 },
+
+
+/* ENVIRONMENT */
 
 {
 year:"2025",
 topic:"Environment",
-question:"Why is biodiversity important for ecosystems?",
+question:"Climate adaptation refers mainly to:",
 options:[
-"It supports ecosystem functions and resilience",
-"It eliminates natural ecological processes",
-"It prevents nutrient cycling",
-"It reduces ecosystem stability"
+"Adjusting systems and practices to reduce climate-related harm",
+"Stopping all weather events",
+"Eliminating the atmosphere",
+"Ending all economic activity"
 ],
 answer:0,
-explanation:
-"Biodiversity contributes to ecosystem functions, ecological interactions and resilience to environmental changes."
+explanation:"Adaptation involves adjustments that reduce vulnerability to actual or expected climate impacts."
 },
 
 {
 year:"2024",
 topic:"Environment",
-question:"What is an important purpose of sustainable development?",
+question:"Biodiversity conservation is important because biodiversity supports:",
 options:[
-"To balance development needs with environmental considerations",
-"To maximise resource use without limits",
-"To eliminate environmental regulation",
-"To prevent all economic activity"
+"Ecosystem stability and ecological functions",
+"Only tourism",
+"Only industrial production",
+"Only urban expansion"
 ],
 answer:0,
-explanation:
-"Sustainable development seeks to meet development needs while considering environmental limits and the needs of future generations."
+explanation:"Biodiversity contributes to ecosystem functions, resilience and a range of ecological services."
 },
 
 {
 year:"2023",
 topic:"Environment",
-question:"Why is climate adaptation important?",
+question:"Sustainable development attempts to balance:",
 options:[
-"It helps societies manage the impacts of climate-related changes",
-"It prevents all climate variability",
-"It removes the need for disaster planning",
-"It eliminates every environmental risk"
+"Economic, social and environmental objectives",
+"Only economic growth",
+"Only industrialisation",
+"Only conservation without development"
 ],
 answer:0,
-explanation:
-"Adaptation involves adjusting systems and practices to reduce vulnerability to actual or expected climate impacts."
+explanation:"Sustainable development considers development needs while protecting environmental resources and social interests."
+},
+
+{
+year:"2022",
+topic:"Environment",
+question:"Wetlands are important because they can:",
+options:[
+"Support biodiversity and regulate water systems",
+"Only support road construction",
+"Prevent every flood",
+"Eliminate groundwater recharge"
+],
+answer:0,
+explanation:"Wetlands provide habitat and can contribute to water storage, filtration and flood regulation."
+},
+
+{
+year:"2021",
+topic:"Environment",
+question:"Environmental impact assessment is intended to:",
+options:[
+"Identify and assess potential environmental impacts of projects",
+"Guarantee that every project is approved",
+"Eliminate public participation",
+"Replace all environmental laws"
+],
+answer:0,
+explanation:"Environmental assessment helps identify potential impacts and informs decision-making."
+},
+
+{
+year:"2020",
+topic:"Environment",
+question:"Climate mitigation primarily focuses on:",
+options:[
+"Reducing greenhouse-gas emissions or increasing their removal",
+"Only responding after disasters",
+"Only building roads",
+"Only increasing fossil-fuel use"
+],
+answer:0,
+explanation:"Mitigation addresses the causes of climate change by reducing emissions or enhancing removals."
+},
+
+
+/* SCIENCE & TECHNOLOGY */
+
+{
+year:"2025",
+topic:"Science & Technology",
+question:"Artificial Intelligence can improve public services by:",
+options:[
+"Supporting data analysis and decision-making",
+"Automatically eliminating every administrative problem",
+"Removing the need for human oversight in all cases",
+"Guaranteeing zero errors"
+],
+answer:0,
+explanation:"AI can support analysis and service delivery, but responsible deployment requires appropriate human oversight."
+},
+
+{
+year:"2024",
+topic:"Science & Technology",
+question:"Cybersecurity is important because digital systems can face:",
+options:[
+"Unauthorised access, disruption and data theft",
+"Only physical damage",
+"Only natural rainfall",
+"Only agricultural pests"
+],
+answer:0,
+explanation:"Cybersecurity protects systems and data against unauthorised access, disruption and other cyber threats."
+},
+
+{
+year:"2023",
+topic:"Science & Technology",
+question:"Space technology can contribute to development through:",
+options:[
+"Communication, navigation, weather and Earth observation",
+"Only entertainment",
+"Only military applications",
+"Only tourism"
+],
+answer:0,
+explanation:"Satellite systems support communication, navigation, meteorology, remote sensing and disaster management."
 },
 
 {
 year:"2022",
 topic:"Science & Technology",
-question:"Why is scientific research important for national development?",
+question:"Biotechnology can contribute to agriculture through:",
 options:[
-"It can generate knowledge, innovation and technological solutions",
-"It eliminates the need for education",
-"It prevents innovation",
-"It reduces technological capability"
+"Improved crops, diagnostics and biological inputs",
+"Ending all farming",
+"Eliminating biodiversity completely",
+"Preventing scientific research"
 ],
 answer:0,
-explanation:
-"Scientific research can create new knowledge and support innovation, technology development and problem-solving."
+explanation:"Biotechnology can support crop improvement, disease diagnosis and development of biological products."
 },
 
 {
 year:"2021",
 topic:"Science & Technology",
-question:"What is a major benefit of digital technology in public services?",
+question:"Digital public infrastructure can support governance by:",
 options:[
-"It can improve accessibility and efficiency",
-"It always eliminates cybersecurity risks",
-"It prevents citizen interaction",
-"It makes information inaccessible"
+"Enabling accessible and scalable digital services",
+"Eliminating all offline services immediately",
+"Preventing citizens from accessing services",
+"Ending data protection requirements"
 ],
 answer:0,
-explanation:
-"Digital technologies can improve access, speed and efficiency of public services, although implementation and security challenges remain."
+explanation:"Digital infrastructure can improve service delivery, interoperability and access when supported by appropriate safeguards."
 },
 
 {
 year:"2020",
 topic:"Science & Technology",
-question:"Why is cybersecurity important in a digital economy?",
+question:"Scientific research is important for national development because it can:",
 options:[
-"It helps protect digital systems and information",
-"It eliminates all cyber threats permanently",
-"It prevents legitimate internet use",
-"It removes the need for data protection"
+"Generate knowledge, innovation and technological capabilities",
+"Prevent innovation",
+"Eliminate education",
+"Reduce technological capacity"
 ],
 answer:0,
-explanation:
-"Cybersecurity helps protect information, networks, systems and digital services from unauthorised access and disruption."
+explanation:"Research supports new knowledge, innovation, technology development and long-term national capabilities."
 },
+
+
+/* DISASTER MANAGEMENT */
 
 {
 year:"2025",
 topic:"Disaster Management",
-question:"What is an important element of disaster preparedness?",
+question:"The main objective of disaster preparedness is to:",
 options:[
-"Early warning systems and community preparedness",
-"Waiting until after the disaster",
-"Reducing emergency communication",
-"Removing evacuation planning"
+"Reduce vulnerability and improve readiness before a disaster",
+"Wait until a disaster occurs",
+"Ignore early warning systems",
+"Stop all development activity"
 ],
 answer:0,
-explanation:
-"Preparedness includes early warning, planning, training, communication and community-level readiness."
+explanation:"Preparedness includes planning, training, early warning, resources and coordination before disasters."
 },
 
 {
 year:"2024",
 topic:"Disaster Management",
-question:"Why is resilient infrastructure important in disaster management?",
+question:"Disaster-resilient infrastructure is designed to:",
 options:[
-"It can reduce vulnerability and support faster recovery",
-"It guarantees that disasters cannot occur",
-"It removes the need for emergency planning",
-"It prevents all natural hazards"
+"Continue or recover essential functions after hazards",
+"Increase vulnerability",
+"Ignore local risks",
+"Eliminate all natural hazards"
 ],
 answer:0,
-explanation:
-"Resilient infrastructure can reduce damage and help essential services continue or recover more quickly after disasters."
+explanation:"Resilient infrastructure aims to withstand, adapt to and recover from hazards."
+},
+
+{
+year:"2023",
+topic:"Disaster Management",
+question:"Community participation in disaster management can:",
+options:[
+"Improve local preparedness and response",
+"Make early warning unnecessary",
+"Eliminate government responsibility",
+"Prevent all natural hazards"
+],
+answer:0,
+explanation:"Local communities possess knowledge and capabilities that can strengthen preparedness and response."
+},
+
+{
+year:"2022",
+topic:"Disaster Management",
+question:"Early warning systems are useful because they can:",
+options:[
+"Provide timely information for protective action",
+"Prevent every disaster",
+"Replace evacuation planning",
+"Eliminate vulnerability automatically"
+],
+answer:0,
+explanation:"Early warnings allow authorities and communities to take timely protective measures."
+},
+
+{
+year:"2021",
+topic:"Disaster Management",
+question:"Risk reduction should ideally focus on:",
+options:[
+"Reducing exposure and vulnerability before disasters occur",
+"Only post-disaster compensation",
+"Only emergency publicity",
+"Ignoring hazard mapping"
+],
+answer:0,
+explanation:"Disaster risk reduction emphasises prevention, mitigation and preparedness before hazards cause major losses."
+},
+
+{
+year:"2020",
+topic:"Disaster Management",
+question:"A multi-hazard approach means:",
+options:[
+"Planning for different hazards and their possible interactions",
+"Planning for only one type of hazard",
+"Ignoring secondary impacts",
+"Ending all infrastructure development"
+],
+answer:0,
+explanation:"Multi-hazard planning considers different hazards, vulnerabilities and cascading effects."
+},
+
+
+/* INTERNAL SECURITY */
+
+{
+year:"2025",
+topic:"Internal Security",
+question:"Cybersecurity is a national security concern because critical systems may face:",
+options:[
+"Cyberattacks and disruption",
+"Only agricultural diseases",
+"Only road accidents",
+"Only rainfall"
+],
+answer:0,
+explanation:"Critical infrastructure and public systems can be targeted through cyberattacks, making cybersecurity a security concern."
+},
+
+{
+year:"2024",
+topic:"Internal Security",
+question:"Effective border management generally requires:",
+options:[
+"Surveillance, infrastructure, coordination and local cooperation",
+"Only physical walls",
+"Only increased paperwork",
+"No coordination between agencies"
+],
+answer:0,
+explanation:"Border management uses multiple tools including surveillance, infrastructure, intelligence and inter-agency coordination."
 },
 
 {
 year:"2023",
 topic:"Internal Security",
-question:"Why is cybersecurity an important component of internal security?",
+question:"Money laundering can threaten security by:",
 options:[
-"Critical digital systems can face cyber threats",
-"It eliminates the need for physical security",
-"It prevents all forms of crime",
-"It makes critical infrastructure unnecessary"
+"Moving illicit funds through financial and economic channels",
+"Improving financial transparency",
+"Eliminating organised crime",
+"Reducing illegal networks"
 ],
 answer:0,
-explanation:
-"Cyber threats can affect government systems, critical infrastructure, businesses and citizens, making cybersecurity an important security concern."
+explanation:"Money laundering can support organised criminal activities by concealing the origins of illicit funds."
 },
 
 {
 year:"2022",
 topic:"Internal Security",
-question:"Why is border management important for internal security?",
+question:"Countering radicalisation generally requires:",
 options:[
-"It helps address cross-border security challenges",
-"It eliminates the need for diplomacy",
-"It prevents all international movement",
-"It removes the need for surveillance"
+"Prevention, community engagement, education and appropriate law enforcement",
+"Only military action",
+"Only internet shutdowns",
+"Only economic sanctions"
 ],
 answer:0,
-explanation:
-"Effective border management can help address illegal movement, trafficking, smuggling and other cross-border security challenges."
+explanation:"A comprehensive approach can combine prevention, community engagement, education, intelligence and lawful enforcement."
+},
+
+{
+year:"2021",
+topic:"Internal Security",
+question:"Intelligence sharing among agencies can help by:",
+options:[
+"Improving coordination and threat assessment",
+"Preventing all crimes automatically",
+"Eliminating the need for investigation",
+"Reducing information availability"
+],
+answer:0,
+explanation:"Timely and lawful intelligence sharing can improve situational awareness and coordinated responses."
+},
+
+{
+year:"2020",
+topic:"Internal Security",
+question:"Critical infrastructure protection focuses on:",
+options:[
+"Protecting essential systems from disruption and threats",
+"Only protecting private property",
+"Only increasing construction",
+"Ignoring cyber risks"
+],
+answer:0,
+explanation:"Critical infrastructure protection aims to maintain essential services against physical, cyber and other threats."
+},
+
+
+/* INFRASTRUCTURE */
+
+{
+year:"2025",
+topic:"Infrastructure",
+question:"Transport infrastructure can contribute to economic growth by:",
+options:[
+"Improving connectivity and reducing movement costs",
+"Reducing market access",
+"Preventing trade",
+"Eliminating logistics"
+],
+answer:0,
+explanation:"Transport infrastructure can improve connectivity, reduce travel and logistics costs and expand market access."
+},
+
+{
+year:"2024",
+topic:"Infrastructure",
+question:"Energy infrastructure is important because reliable energy supports:",
+options:[
+"Households, industries and essential services",
+"Only tourism",
+"Only agriculture",
+"Only transport"
+],
+answer:0,
+explanation:"Reliable energy is an essential input for households, industries, infrastructure and public services."
+},
+
+{
+year:"2023",
+topic:"Infrastructure",
+question:"Digital infrastructure can support economic development through:",
+options:[
+"Connectivity, digital services and improved information access",
+"Reducing communication",
+"Ending online services",
+"Restricting information"
+],
+answer:0,
+explanation:"Digital connectivity can support commerce, governance, education and access to information."
+},
+
+{
+year:"2022",
+topic:"Infrastructure",
+question:"Logistics efficiency is important because it can:",
+options:[
+"Reduce costs and improve movement of goods",
+"Increase unnecessary delays",
+"Reduce connectivity",
+"Stop supply chains"
+],
+answer:0,
+explanation:"Efficient logistics can reduce transportation and inventory costs and improve supply-chain performance."
 },
 
 {
 year:"2021",
 topic:"Infrastructure",
-question:"Why is reliable energy infrastructure important for economic activity?",
+question:"Public infrastructure investment can have wider economic effects through:",
 options:[
-"It supports households, industries and essential services",
-"It eliminates the need for investment",
-"It prevents industrial development",
-"It reduces productivity"
+"Improved productivity and employment generation",
+"Reducing productive capacity",
+"Eliminating private investment automatically",
+"Stopping urbanisation"
 ],
 answer:0,
-explanation:
-"Reliable energy supply supports production, transportation, households and essential public services."
+explanation:"Infrastructure investment can raise productivity, create employment and support private economic activity."
 },
 
 {
 year:"2020",
 topic:"Infrastructure",
-question:"Why is transport infrastructure important for the economy?",
+question:"Urban infrastructure planning should consider:",
 options:[
-"It improves connectivity and movement of goods and people",
-"It eliminates regional differences automatically",
-"It prevents trade",
-"It reduces market access"
+"Transport, water, sanitation, housing and environmental sustainability",
+"Only roads",
+"Only commercial buildings",
+"Only population growth"
 ],
 answer:0,
-explanation:
-"Transport infrastructure improves connectivity, reduces travel and logistics barriers and can expand access to markets."
+explanation:"Urban infrastructure requires integrated planning across essential services, mobility, housing and environmental needs."
 }
 
 ];
 
 
 /* =========================
-   QUIZ VARIABLES
+   QUIZ ENGINE
 ========================= */
 
-let filteredQuestions=[...quizQuestions];
+let filteredQuestions = [...quizQuestions];
 
-let currentQuestion=0;
+let currentQuestion = 0;
 
-let score=0;
+let score = 0;
 
-let answered=false;
+let answered = false;
 
 
-/* =========================
-   LOAD QUESTION
-========================= */
+const quizYear =
+document.getElementById("quizYear");
+
+const quizTopic =
+document.getElementById("quizTopic");
+
+const questionText =
+document.getElementById("questionText");
+
+const optionsBox =
+document.getElementById("optionsBox");
+
+const answerBox =
+document.getElementById("answerBox");
+
+const questionNumber =
+document.getElementById("questionNumber");
+
+const quizScore =
+document.getElementById("quizScore");
+
 
 function loadQuestion(){
 
-const question=
-filteredQuestions[currentQuestion];
+if(!filteredQuestions.length){
 
-if(!question){
+questionNumber.textContent="Question 0";
 
-document.getElementById("questionText").innerText=
-"🎉 Quiz Completed!";
+quizScore.textContent="Score: 0";
 
-document.getElementById("optionsBox").innerHTML="";
+questionText.textContent=
+"No questions found for this filter.";
 
-document.getElementById("answerBox").style.display="block";
+optionsBox.innerHTML="";
 
-document.getElementById("answerBox").innerHTML=
-"<strong>Your Final Score:</strong> "+
-score+
-" / "+
-filteredQuestions.length+
-"<br><br>"+
-"Review the relevant GS-III topics and practise answer writing.";
-
-document.getElementById("questionNumber").innerText=
-"Completed";
+answerBox.style.display="none";
 
 return;
 
 }
 
+const q=filteredQuestions[currentQuestion];
+
 answered=false;
 
-document.getElementById("questionNumber").innerText=
-"Question "+
-(currentQuestion+1)+
-" / "+
-filteredQuestions.length;
+questionNumber.textContent=
+"Question "+(currentQuestion+1)+
+" / "+filteredQuestions.length;
 
-document.getElementById("quizScore").innerText=
-"Score: "+
-score;
+quizScore.textContent=
+"Score: "+score;
 
-document.getElementById("questionText").innerText=
-question.question;
-
-const optionsBox=
-document.getElementById("optionsBox");
+questionText.textContent=q.question;
 
 optionsBox.innerHTML="";
 
+answerBox.style.display="none";
 
-question.options.forEach(function(option,index){
+answerBox.innerHTML="";
 
-const button=
-document.createElement("button");
+
+q.options.forEach(function(option,index){
+
+const button=document.createElement("button");
 
 button.className="option-btn";
 
-button.innerText=
-String.fromCharCode(65+index)+
-". "+
-option;
+button.textContent=
+String.fromCharCode(65+index)+". "+option;
 
 button.onclick=function(){
 
@@ -1239,115 +1879,73 @@ optionsBox.appendChild(button);
 
 });
 
-
-document.getElementById("answerBox").style.display="none";
-
-document.getElementById("answerBox").innerHTML="";
-
 }
 
 
-/* =========================
-   CHECK ANSWER
-========================= */
-
-function checkAnswer(selected,button){
+function checkAnswer(selected,clickedButton){
 
 if(answered){
-
 return;
-
 }
 
 answered=true;
 
-const question=
-filteredQuestions[currentQuestion];
+const q=filteredQuestions[currentQuestion];
 
 const buttons=
 document.querySelectorAll(".option-btn");
 
-buttons.forEach(function(btn){
+buttons.forEach(function(button,index){
 
-btn.disabled=true;
+button.disabled=true;
 
-});
-
-
-if(selected===question.answer){
+if(index===q.answer){
 
 button.classList.add("correct");
 
+}
+
+});
+
+if(selected===q.answer){
+
 score++;
+
+clickedButton.classList.add("correct");
+
+answerBox.innerHTML=
+"<strong>✅ Correct!</strong><br><br>"+
+q.explanation;
 
 }else{
 
-button.classList.add("wrong");
+clickedButton.classList.add("wrong");
 
-buttons[question.answer].classList.add("correct");
+answerBox.innerHTML=
+"<strong>❌ Incorrect.</strong><br><br>"+
+"<strong>Correct Answer:</strong> "+
+String.fromCharCode(65+q.answer)+
+". "+q.options[q.answer]+
+"<br><br>"+
+q.explanation;
 
 }
-
-
-document.getElementById("quizScore").innerText=
-"Score: "+
-score;
-
-
-const answerBox=
-document.getElementById("answerBox");
 
 answerBox.style.display="block";
 
-answerBox.innerHTML=
-"<strong>Explanation:</strong><br>"+
-question.explanation;
+quizScore.textContent=
+"Score: "+score;
 
 }
 
-
-/* =========================
-   NEXT QUESTION
-========================= */
-
-document.getElementById("nextQuestion")
-.addEventListener("click",function(){
-
-currentQuestion++;
-
-loadQuestion();
-
-});
-
-
-/* =========================
-   RESTART
-========================= */
-
-document.getElementById("restartQuiz")
-.addEventListener("click",function(){
-
-currentQuestion=0;
-
-score=0;
-
-loadQuestion();
-
-});
-
-
-/* =========================
-   FILTER
-========================= */
 
 function filterQuiz(){
 
 const selectedYear=
-document.getElementById("quizYear").value;
+quizYear.value;
 
 const selectedTopic=
-document.getElementById("quizTopic").value;
-
+quizTopic.value;
 
 filteredQuestions=
 quizQuestions.filter(function(q){
@@ -1364,7 +1962,6 @@ return yearMatch && topicMatch;
 
 });
 
-
 currentQuestion=0;
 
 score=0;
@@ -1374,21 +1971,62 @@ loadQuestion();
 }
 
 
-/* =========================
-   INITIAL LOAD
-========================= */
+quizYear.addEventListener(
+"change",
+filterQuiz
+);
+
+quizTopic.addEventListener(
+"change",
+filterQuiz
+);
+
+
+document.getElementById(
+"nextQuestion"
+).addEventListener(
+"click",
+function(){
+
+if(!filteredQuestions.length){
+return;
+}
+
+currentQuestion++;
+
+if(currentQuestion>=filteredQuestions.length){
+
+currentQuestion=0;
+
+}
 
 loadQuestion();
+
+});
+
+
+document.getElementById(
+"restartQuiz"
+).addEventListener(
+"click",
+function(){
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+});
 
 
 /* =========================
    SEARCH
 ========================= */
 
-const searchBox=
-document.getElementById("searchBox");
-
-searchBox.addEventListener(
+document.getElementById(
+"searchInput"
+).addEventListener(
 "input",
 function(){
 
@@ -1430,8 +2068,9 @@ document.body.classList.contains("dark")
 
 
 if(
-localStorage.getItem("mainsGs3PyqDarkMode")
-==="true"
+localStorage.getItem(
+"mainsGs3PyqDarkMode"
+)==="true"
 ){
 
 document.body.classList.add("dark");
@@ -1440,40 +2079,44 @@ document.body.classList.add("dark");
 
 
 /* =========================
-   TOP BUTTON
+   BACK TO TOP
 ========================= */
 
-const topBtn=
-document.getElementById("topBtn");
+const backTop=
+document.getElementById("backTop");
 
-window.addEventListener(
-"scroll",
-function(){
 
-if(window.scrollY>300){
+window.onscroll=function(){
 
-topBtn.style.display="block";
+if(
+document.body.scrollTop>300 ||
+document.documentElement.scrollTop>300
+){
+
+backTop.style.display="block";
 
 }else{
 
-topBtn.style.display="none";
+backTop.style.display="none";
 
 }
 
-});
+};
 
 
 function topFunction(){
 
 window.scrollTo({
-
 top:0,
-
 behavior:"smooth"
-
 });
 
 }
+
+
+/* INITIAL QUESTION */
+
+loadQuestion();
 
 </script>
 
