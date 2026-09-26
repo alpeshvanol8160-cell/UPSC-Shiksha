@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,11 +7,15 @@
 <title>Mains GS-IV PYQ | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitude.">
+content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity, Aptitude, Emotional Intelligence and Case Studies.">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+
+/* =========================
+   GS-IV PAGE
+========================= */
 
 .pyq-hero {
   text-align: center;
@@ -50,6 +54,8 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   padding: 20px;
 }
 
+/* SEARCH */
+
 .search-box {
   margin: 20px 0 30px;
 }
@@ -62,6 +68,8 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   font-size: 16px;
   box-sizing: border-box;
 }
+
+/* QUICK NAV */
 
 .quick-nav {
   background: #f5f7fa;
@@ -88,6 +96,8 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   color: white;
 }
 
+/* CARDS */
+
 .pyq-card {
   background: white;
   padding: 25px;
@@ -104,6 +114,8 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   line-height: 1.6;
 }
 
+/* BUTTON */
+
 .year-btn {
   display: inline-block;
   margin: 8px 6px 0 0;
@@ -113,7 +125,150 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   text-decoration: none;
   border-radius: 10px;
   font-weight: 600;
+  border: none;
+  cursor: pointer;
 }
+
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-box {
+  background: white;
+  padding: 25px;
+  margin: 30px 0;
+  border-radius: 20px;
+  box-shadow: 0 5px 25px rgba(0,0,0,.09);
+}
+
+.quiz-box h2 {
+  margin-top: 0;
+  text-align: center;
+}
+
+.quiz-subtitle {
+  text-align: center;
+  opacity: .75;
+}
+
+.quiz-filters {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin: 20px 0;
+}
+
+.quiz-filters select {
+  width: 100%;
+  padding: 13px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 15px;
+  box-sizing: border-box;
+}
+
+.quiz-info {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  background: #f5f7fa;
+  padding: 12px 15px;
+  border-radius: 10px;
+  margin-bottom: 18px;
+  font-weight: 600;
+}
+
+.question-card {
+  background: #fafafa;
+  padding: 22px;
+  border-radius: 15px;
+  border: 1px solid #eee;
+}
+
+.question-card h3 {
+  line-height: 1.6;
+  margin-top: 0;
+}
+
+.options-box {
+  display: grid;
+  gap: 10px;
+}
+
+.option-btn {
+  width: 100%;
+  text-align: left;
+  padding: 14px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  background: white;
+  cursor: pointer;
+  font-size: 15px;
+  transition: .2s;
+}
+
+.option-btn:hover {
+  transform: translateY(-1px);
+  background: #f0f0f0;
+}
+
+.option-btn.correct {
+  background: #dff6e5;
+  border-color: #28a745;
+  color: #155724;
+  font-weight: 700;
+}
+
+.option-btn.wrong {
+  background: #ffe1e1;
+  border-color: #dc3545;
+  color: #721c24;
+}
+
+.answer-box {
+  display: none;
+  margin-top: 18px;
+  padding: 15px;
+  border-radius: 12px;
+  background: #eef7ff;
+  line-height: 1.6;
+}
+
+.quiz-actions {
+  display: flex;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.quiz-actions button {
+  flex: 1;
+  padding: 13px;
+  border: none;
+  border-radius: 10px;
+  background: #111;
+  color: white;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+}
+
+/* CASE STUDY */
+
+.case-study {
+  background: #fffaf0;
+  border-left: 5px solid #111;
+}
+
+.case-study h3 {
+  margin-top: 0;
+}
+
+.case-points {
+  padding-left: 20px;
+  line-height: 1.7;
+}
+
+/* BOTTOM NAV */
 
 .bottom-nav {
   display: flex;
@@ -131,6 +286,8 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   border-radius: 10px;
 }
 
+/* TOP BUTTON */
+
 #backTop {
   position: fixed;
   right: 18px;
@@ -145,14 +302,26 @@ content="UPSC Mains GS-IV Previous Year Questions - Ethics, Integrity and Aptitu
   font-size: 18px;
 }
 
+/* DARK MODE */
+
 body.dark-mode {
   background: #111;
   color: #eee;
 }
 
 body.dark-mode .pyq-card,
+body.dark-mode .quiz-box,
 body.dark-mode .quick-nav {
   background: #1d1d1d;
+}
+
+body.dark-mode .question-card {
+  background: #222;
+  border-color: #444;
+}
+
+body.dark-mode .quiz-info {
+  background: #292929;
 }
 
 body.dark-mode .search-box input {
@@ -161,10 +330,36 @@ body.dark-mode .search-box input {
   border-color: #555;
 }
 
+body.dark-mode .quiz-filters select {
+  background: #222;
+  color: white;
+  border-color: #555;
+}
+
+body.dark-mode .option-btn {
+  background: #292929;
+  color: white;
+  border-color: #555;
+}
+
+body.dark-mode .option-btn:hover {
+  background: #333;
+}
+
+body.dark-mode .answer-box {
+  background: #173047;
+}
+
 body.dark-mode .tag {
   background: #333;
   color: white;
 }
+
+body.dark-mode .case-study {
+  background: #29251b;
+}
+
+/* MOBILE */
 
 @media (max-width: 600px) {
 
@@ -176,7 +371,8 @@ body.dark-mode .tag {
     font-size: 16px;
   }
 
-  .pyq-card {
+  .pyq-card,
+  .quiz-box {
     padding: 20px;
   }
 
@@ -184,6 +380,19 @@ body.dark-mode .tag {
   .bottom-nav a,
   .year-btn {
     font-size: 14px;
+  }
+
+  .quiz-filters {
+    grid-template-columns: 1fr;
+  }
+
+  .quiz-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .quiz-actions {
+    flex-direction: column;
   }
 
 }
@@ -264,6 +473,8 @@ body.dark-mode .tag {
 
   <div class="quick-links">
 
+    <a href="#quiz">📝 Quiz</a>
+    <a href="#case-study">Case Study</a>
     <a href="#2026">2026</a>
     <a href="#2025">2025</a>
     <a href="#2024">2024</a>
@@ -277,20 +488,157 @@ body.dark-mode .tag {
 </div>
 
 
-<!-- 2026 -->
+<!-- =========================
+     QUIZ
+========================= -->
+
+<section class="quiz-box" id="quiz">
+
+  <h2>📝 GS-IV Ethics Practice Quiz</h2>
+
+  <p class="quiz-subtitle">
+    Practice Ethics, Integrity, Aptitude and Governance concepts.
+  </p>
+
+
+  <div class="quiz-filters">
+
+    <select id="quizYear">
+
+      <option value="all">All Years</option>
+      <option value="2025">2025</option>
+      <option value="2024">2024</option>
+      <option value="2023">2023</option>
+      <option value="2022">2022</option>
+      <option value="2021">2021</option>
+      <option value="2020">2020</option>
+
+    </select>
+
+
+    <select id="quizTopic">
+
+      <option value="all">All Topics</option>
+      <option value="Ethics">Ethics</option>
+      <option value="Integrity">Integrity</option>
+      <option value="Emotional Intelligence">Emotional Intelligence</option>
+      <option value="Probity">Probity</option>
+      <option value="Thinkers">Thinkers</option>
+      <option value="Case Study">Case Study</option>
+
+    </select>
+
+  </div>
+
+
+  <div class="quiz-info">
+
+    <span id="questionNumber">
+      Question 1
+    </span>
+
+    <span id="quizScore">
+      Score: 0
+    </span>
+
+  </div>
+
+
+  <div class="question-card">
+
+    <h3 id="questionText">
+      Question will appear here.
+    </h3>
+
+    <div id="optionsBox" class="options-box"></div>
+
+    <div id="answerBox" class="answer-box"></div>
+
+  </div>
+
+
+  <div class="quiz-actions">
+
+    <button id="nextQuestion">
+      ➡️ Next Question
+    </button>
+
+    <button id="restartQuiz">
+      🔄 Restart
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CASE STUDY
+========================= -->
+
+<div class="pyq-card case-study" id="case-study">
+
+  <h2>📝 Ethics Case Study Practice</h2>
+
+  <h3>Situation</h3>
+
+  <p>
+    You are a district-level public official. A contractor working
+    on an important public project offers you a personal benefit
+    in return for overlooking a minor procedural violation.
+  </p>
+
+  <h3>Questions</h3>
+
+  <ol class="case-points">
+
+    <li>
+      What ethical issues are involved in this situation?
+    </li>
+
+    <li>
+      What options are available to you?
+    </li>
+
+    <li>
+      What would be your preferred course of action and why?
+    </li>
+
+    <li>
+      How would you balance public interest with procedural fairness?
+    </li>
+
+  </ol>
+
+  <h3>Suggested Approach</h3>
+
+  <p>
+    Identify stakeholders, ethical principles, competing values,
+    possible options, consequences and safeguards. Your answer
+    should demonstrate integrity, impartiality, accountability
+    and commitment to public interest.
+  </p>
+
+</div>
+
+
+<!-- =========================
+     2026
+========================= -->
 
 <div class="pyq-card" id="2026">
 
   <h2>📅 UPSC Mains GS-IV 2026</h2>
 
   <p>
-    Ethics, Integrity and Aptitude Previous Year Questions
-    for answer-writing practice.
+    General Studies Paper-IV covering Ethics,
+    Integrity and Aptitude.
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -311,8 +659,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -332,8 +681,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -353,8 +703,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -374,8 +725,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -395,8 +747,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -416,8 +769,9 @@ body.dark-mode .tag {
   </p>
 
   <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
+    href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
     target="_blank"
+    rel="noopener"
     class="year-btn">
     Official UPSC Questions →
   </a>
@@ -425,7 +779,9 @@ body.dark-mode .tag {
 </div>
 
 
-<!-- STRATEGY -->
+<!-- =========================
+     STRATEGY
+========================= -->
 
 <div class="pyq-card">
 
@@ -455,10 +811,17 @@ body.dark-mode .tag {
     the prescribed time.
   </p>
 
+  <p>
+    <strong>6.</strong> Use real-life administrative examples
+    wherever relevant.
+  </p>
+
 </div>
 
 
-<!-- MAJOR AREAS -->
+<!-- =========================
+     MAJOR AREAS
+========================= -->
 
 <div class="pyq-card">
 
@@ -481,6 +844,10 @@ body.dark-mode .tag {
 </div>
 
 
+<!-- =========================
+     BOTTOM NAV
+========================= -->
+
 <div class="bottom-nav">
 
   <a href="index.html">🏠 Home</a>
@@ -492,6 +859,10 @@ body.dark-mode .tag {
   <a href="mains.html">📝 Mains</a>
 
   <a href="pyq.html">📖 All PYQs</a>
+
+  <a href="prelims-pyq.html">📘 Prelims PYQ</a>
+
+  <a href="csat-pyq.html">📗 CSAT PYQ</a>
 
   <a href="mains-gs1-pyq.html">📕 GS-I PYQ</a>
 
@@ -521,8 +892,477 @@ body.dark-mode .tag {
 
 <script>
 
+/* =========================
+   QUIZ DATA
+========================= */
+
+const quizQuestions = [
+
+  {
+    year: "2025",
+    topic: "Ethics",
+    question:
+      "Which principle is most closely associated with ethical decision-making in public administration?",
+    options: [
+      "Personal gain",
+      "Public interest",
+      "Favouritism",
+      "Secrecy in all matters"
+    ],
+    answer: 1,
+    explanation:
+      "Public interest is a central consideration in ethical public administration. Decisions should serve citizens fairly and responsibly."
+  },
+
+  {
+    year: "2024",
+    topic: "Integrity",
+    question:
+      "Integrity in public service primarily means:",
+    options: [
+      "Following rules only when convenient",
+      "Maintaining consistency between values, words and actions",
+      "Avoiding every difficult decision",
+      "Always agreeing with seniors"
+    ],
+    answer: 1,
+    explanation:
+      "Integrity involves consistency between one's ethical values, decisions, words and actions."
+  },
+
+  {
+    year: "2023",
+    topic: "Emotional Intelligence",
+    question:
+      "Which ability is most directly related to emotional intelligence?",
+    options: [
+      "Recognising and managing emotions",
+      "Memorising facts",
+      "Increasing physical strength",
+      "Avoiding communication"
+    ],
+    answer: 0,
+    explanation:
+      "Emotional intelligence includes recognising, understanding and managing one's own emotions and responding appropriately to others."
+  },
+
+  {
+    year: "2022",
+    topic: "Probity",
+    question:
+      "Transparency in governance primarily helps to strengthen:",
+    options: [
+      "Accountability",
+      "Secrecy",
+      "Personal authority",
+      "Administrative delay"
+    ],
+    answer: 0,
+    explanation:
+      "Transparency enables citizens and institutions to understand decisions and therefore supports accountability."
+  },
+
+  {
+    year: "2021",
+    topic: "Ethics",
+    question:
+      "A conflict between personal values and official duty is best addressed by:",
+    options: [
+      "Ignoring the official duty",
+      "Following ethical and lawful procedures",
+      "Seeking personal benefit",
+      "Hiding the conflict"
+    ],
+    answer: 1,
+    explanation:
+      "Public officials should follow lawful and ethical procedures and disclose or manage conflicts appropriately."
+  },
+
+  {
+    year: "2020",
+    topic: "Integrity",
+    question:
+      "Impartiality in public administration means:",
+    options: [
+      "Treating similar cases fairly without improper bias",
+      "Supporting friends and relatives",
+      "Ignoring rules",
+      "Giving preference to powerful people"
+    ],
+    answer: 0,
+    explanation:
+      "Impartiality requires fair and objective treatment without improper personal, political or social bias."
+  },
+
+  {
+    year: "2025",
+    topic: "Probity",
+    question:
+      "Which practice most directly promotes probity in public life?",
+    options: [
+      "Undisclosed conflicts of interest",
+      "Transparent decision-making",
+      "Preferential treatment",
+      "Avoiding accountability"
+    ],
+    answer: 1,
+    explanation:
+      "Transparent and accountable decision-making is an important component of probity in public administration."
+  },
+
+  {
+    year: "2024",
+    topic: "Thinkers",
+    question:
+      "The idea that ethical conduct should consider the consequences of an action is associated with:",
+    options: [
+      "Consequentialist ethics",
+      "Purely procedural thinking",
+      "Administrative secrecy",
+      "Personal preference"
+    ],
+    answer: 0,
+    explanation:
+      "Consequentialist approaches evaluate actions partly by considering their outcomes or consequences."
+  },
+
+  {
+    year: "2023",
+    topic: "Emotional Intelligence",
+    question:
+      "Empathy in administration helps an officer to:",
+    options: [
+      "Understand the perspectives and feelings of others",
+      "Avoid citizens",
+      "Ignore grievances",
+      "Make decisions based only on personal preference"
+    ],
+    answer: 0,
+    explanation:
+      "Empathy helps administrators understand people's perspectives and respond to grievances more appropriately."
+  },
+
+  {
+    year: "2022",
+    topic: "Case Study",
+    question:
+      "When faced with an ethical dilemma, the first useful step is to:",
+    options: [
+      "Identify the stakeholders and ethical issues",
+      "Immediately choose personal benefit",
+      "Ignore the situation",
+      "Hide relevant facts"
+    ],
+    answer: 0,
+    explanation:
+      "Identifying stakeholders, facts and ethical issues helps create a structured approach to resolving an ethical dilemma."
+  },
+
+  {
+    year: "2021",
+    topic: "Thinkers",
+    question:
+      "The concept of duty as a basis for ethical action is associated with:",
+    options: [
+      "Deontological ethics",
+      "Purely economic reasoning",
+      "Administrative convenience",
+      "Personal popularity"
+    ],
+    answer: 0,
+    explanation:
+      "Deontological ethics gives importance to duties, rules and principles when evaluating ethical actions."
+  },
+
+  {
+    year: "2020",
+    topic: "Case Study",
+    question:
+      "In a public-sector ethical dilemma, the most appropriate approach is generally to:",
+    options: [
+      "Consider law, ethics, stakeholders and public interest",
+      "Choose the easiest option",
+      "Choose the option offering personal benefit",
+      "Avoid documenting the decision"
+    ],
+    answer: 0,
+    explanation:
+      "A balanced ethical approach considers legality, ethical principles, stakeholder interests, consequences and public interest."
+  }
+
+];
+
+
+/* =========================
+   QUIZ VARIABLES
+========================= */
+
+let filteredQuestions = [...quizQuestions];
+
+let currentQuestion = 0;
+
+let score = 0;
+
+let answered = false;
+
+
+/* =========================
+   LOAD QUESTION
+========================= */
+
+function loadQuestion() {
+
+  const question = filteredQuestions[currentQuestion];
+
+  if (!question) {
+    document.getElementById("questionText").textContent =
+      "No questions found for this filter.";
+
+    document.getElementById("optionsBox").innerHTML = "";
+
+    document.getElementById("answerBox").style.display = "none";
+
+    document.getElementById("questionNumber").textContent =
+      "Question 0";
+
+    return;
+  }
+
+
+  answered = false;
+
+
+  document.getElementById("questionNumber").textContent =
+    "Question " +
+    (currentQuestion + 1) +
+    " / " +
+    filteredQuestions.length;
+
+
+  document.getElementById("quizScore").textContent =
+    "Score: " + score;
+
+
+  document.getElementById("questionText").textContent =
+    question.question;
+
+
+  const optionsBox =
+    document.getElementById("optionsBox");
+
+  optionsBox.innerHTML = "";
+
+
+  const answerBox =
+    document.getElementById("answerBox");
+
+  answerBox.style.display = "none";
+
+  answerBox.innerHTML = "";
+
+
+  question.options.forEach(function(option, index) {
+
+    const button =
+      document.createElement("button");
+
+    button.className = "option-btn";
+
+    button.textContent =
+      String.fromCharCode(65 + index) +
+      ". " +
+      option;
+
+    button.addEventListener("click", function() {
+
+      checkAnswer(index, button);
+
+    });
+
+    optionsBox.appendChild(button);
+
+  });
+
+}
+
+
+/* =========================
+   CHECK ANSWER
+========================= */
+
+function checkAnswer(selectedIndex, selectedButton) {
+
+  if (answered) {
+    return;
+  }
+
+  answered = true;
+
+
+  const question =
+    filteredQuestions[currentQuestion];
+
+
+  const buttons =
+    document.querySelectorAll(".option-btn");
+
+
+  buttons.forEach(function(button, index) {
+
+    if (index === question.answer) {
+
+      button.classList.add("correct");
+
+    }
+
+  });
+
+
+  if (selectedIndex === question.answer) {
+
+    score++;
+
+  } else {
+
+    selectedButton.classList.add("wrong");
+
+  }
+
+
+  document.getElementById("quizScore").textContent =
+    "Score: " + score;
+
+
+  const answerBox =
+    document.getElementById("answerBox");
+
+
+  answerBox.style.display = "block";
+
+
+  answerBox.innerHTML =
+    "<strong>Correct Answer:</strong> " +
+    String.fromCharCode(65 + question.answer) +
+    ". " +
+    question.options[question.answer] +
+    "<br><br>" +
+    "<strong>Explanation:</strong> " +
+    question.explanation;
+
+}
+
+
+/* =========================
+   NEXT QUESTION
+========================= */
+
+document.getElementById("nextQuestion")
+.addEventListener("click", function() {
+
+  if (currentQuestion <
+      filteredQuestions.length - 1) {
+
+    currentQuestion++;
+
+    loadQuestion();
+
+  } else {
+
+    const answerBox =
+      document.getElementById("answerBox");
+
+    answerBox.style.display = "block";
+
+    answerBox.innerHTML =
+      "<strong>🎉 Quiz Completed!</strong><br><br>" +
+      "Your final score is " +
+      score +
+      " / " +
+      filteredQuestions.length +
+      ".";
+
+  }
+
+});
+
+
+/* =========================
+   FILTER QUIZ
+========================= */
+
+function filterQuiz() {
+
+  const selectedYear =
+    document.getElementById("quizYear").value;
+
+  const selectedTopic =
+    document.getElementById("quizTopic").value;
+
+
+  filteredQuestions =
+    quizQuestions.filter(function(question) {
+
+      const yearMatch =
+        selectedYear === "all" ||
+        question.year === selectedYear;
+
+      const topicMatch =
+        selectedTopic === "all" ||
+        question.topic === selectedTopic;
+
+      return yearMatch && topicMatch;
+
+    });
+
+
+  currentQuestion = 0;
+
+  score = 0;
+
+
+  loadQuestion();
+
+}
+
+
+document.getElementById("quizYear")
+.addEventListener("change", filterQuiz);
+
+
+document.getElementById("quizTopic")
+.addEventListener("change", filterQuiz);
+
+
+/* =========================
+   RESTART
+========================= */
+
+document.getElementById("restartQuiz")
+.addEventListener("click", function() {
+
+  currentQuestion = 0;
+
+  score = 0;
+
+  loadQuestion();
+
+});
+
+
+/* =========================
+   START QUIZ
+========================= */
+
+loadQuestion();
+
+
+/* =========================
+   SEARCH
+========================= */
+
 const searchInput =
 document.getElementById("searchInput");
+
 
 const cards =
 document.querySelectorAll(".pyq-card");
@@ -533,10 +1373,12 @@ searchInput.addEventListener("input", function() {
   const value =
   this.value.toLowerCase();
 
-  cards.forEach(card => {
+
+  cards.forEach(function(card) {
 
     const text =
     card.innerText.toLowerCase();
+
 
     card.style.display =
       text.includes(value) ? "block" : "none";
@@ -545,6 +1387,10 @@ searchInput.addEventListener("input", function() {
 
 });
 
+
+/* =========================
+   DARK MODE
+========================= */
 
 const darkModeBtn =
 document.getElementById("darkModeBtn");
@@ -564,6 +1410,7 @@ darkModeBtn.addEventListener("click", function() {
 
   document.body.classList.toggle("dark-mode");
 
+
   localStorage.setItem(
     "mainsGs4PyqDarkMode",
     document.body.classList.contains("dark-mode")
@@ -571,6 +1418,10 @@ darkModeBtn.addEventListener("click", function() {
 
 });
 
+
+/* =========================
+   BACK TO TOP
+========================= */
 
 const backTop =
 document.getElementById("backTop");
