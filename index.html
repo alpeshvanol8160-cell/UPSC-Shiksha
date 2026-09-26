@@ -84,7 +84,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   border:1px solid #333;
 }
 
-/* STATS */
+/* =========================
+   STATS
+========================= */
 
 .stats{
   max-width:1100px;
@@ -111,7 +113,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   margin-bottom:0;
 }
 
-/* TITLES */
+/* =========================
+   TITLES
+========================= */
 
 .section-title{
   text-align:center;
@@ -133,7 +137,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   line-height:1.6;
 }
 
-/* GRIDS */
+/* =========================
+   GRIDS
+========================= */
 
 .feature-grid,
 .subject-grid{
@@ -175,7 +181,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-size:30px;
 }
 
-/* BUTTONS */
+/* =========================
+   BUTTONS
+========================= */
 
 .study-btn,
 .pdf-btn{
@@ -189,7 +197,22 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-size:14px;
 }
 
-/* SYLLABUS */
+.test-btn,
+.premium-btn{
+  display:inline-block;
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* =========================
+   SYLLABUS
+========================= */
 
 .syllabus-tabs{
   display:flex;
@@ -238,7 +261,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   line-height:1.5;
 }
 
-/* TEST */
+/* =========================
+   TEST
+========================= */
 
 .test-box{
   max-width:850px;
@@ -256,20 +281,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-size:35px;
 }
 
-.test-btn,
-.premium-btn{
-  display:inline-block;
-  padding:12px 18px;
-  border:none;
-  border-radius:10px;
-  background:#333;
-  color:white;
-  cursor:pointer;
-  font-weight:bold;
-  text-decoration:none;
-}
-
-/* PREMIUM */
+/* =========================
+   PREMIUM
+========================= */
 
 .premium{
   max-width:1100px;
@@ -308,7 +322,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   color:#222;
 }
 
-/* CONTACT */
+/* =========================
+   CONTACT
+========================= */
 
 .contact form{
   max-width:650px;
@@ -343,7 +359,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-weight:bold;
 }
 
-/* BACK TO TOP */
+/* =========================
+   BACK TO TOP
+========================= */
 
 #topBtn{
   position:fixed;
@@ -360,7 +378,9 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   z-index:999;
 }
 
-/* DARK MODE */
+/* =========================
+   DARK MODE
+========================= */
 
 body.dark-home{
   background:#121212;
@@ -406,7 +426,139 @@ body.dark-home .subject-card p{
   color:#ddd;
 }
 
-/* MOBILE */
+/* =========================
+   HOME ANIMATIONS
+========================= */
+
+.hero-content{
+  animation:heroFadeUp 0.8s ease-out both;
+}
+
+@keyframes heroFadeUp{
+
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+.stat-card{
+  animation:cardReveal 0.7s ease-out both;
+}
+
+.stat-card:nth-child(1){
+  animation-delay:0.1s;
+}
+
+.stat-card:nth-child(2){
+  animation-delay:0.2s;
+}
+
+.stat-card:nth-child(3){
+  animation-delay:0.3s;
+}
+
+.stat-card:nth-child(4){
+  animation-delay:0.4s;
+}
+
+@keyframes cardReveal{
+
+  from{
+    opacity:0;
+    transform:translateY(18px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+/* Cards */
+
+.feature-card,
+.subject-card,
+.syllabus-card,
+.test-box,
+.premium{
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.feature-card:hover,
+.subject-card:hover{
+  transform:translateY(-6px);
+  box-shadow:0 10px 25px rgba(0,0,0,0.12);
+}
+
+.syllabus-card:hover,
+.test-box:hover{
+  transform:translateY(-4px);
+  box-shadow:0 9px 22px rgba(0,0,0,0.11);
+}
+
+.premium:hover{
+  transform:translateY(-4px);
+  box-shadow:0 12px 30px rgba(0,0,0,0.20);
+}
+
+/* Buttons */
+
+.btn,
+.study-btn,
+.pdf-btn,
+.test-btn,
+.premium-btn{
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.btn:hover,
+.study-btn:hover,
+.pdf-btn:hover,
+.test-btn:hover,
+.premium-btn:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 15px rgba(0,0,0,0.15);
+}
+
+/* Reduced motion support */
+
+@media (prefers-reduced-motion:reduce){
+
+  .hero-content,
+  .stat-card{
+    animation:none;
+  }
+
+  .feature-card,
+  .subject-card,
+  .syllabus-card,
+  .test-box,
+  .premium,
+  .btn,
+  .study-btn,
+  .pdf-btn,
+  .test-btn,
+  .premium-btn{
+    transition:none;
+  }
+
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:800px){
 
@@ -464,8 +616,6 @@ body.dark-home .subject-card p{
 
 }
 
-/* SMALL PHONES */
-
 @media(max-width:380px){
 
   .hero h1{
@@ -515,7 +665,6 @@ body.dark-home .subject-card p{
 
 </header>
 
-
 <!-- =========================
      HERO
 ========================= -->
@@ -555,7 +704,6 @@ body.dark-home .subject-card p{
 
 </section>
 
-
 <!-- =========================
      STATS
 ========================= -->
@@ -584,7 +732,6 @@ body.dark-home .subject-card p{
 
 </section>
 
-
 <!-- =========================
      FEATURES
 ========================= -->
@@ -604,9 +751,7 @@ body.dark-home .subject-card p{
 
   </div>
 
-
   <div class="feature-grid">
-
 
     <div class="feature-card">
 
@@ -625,7 +770,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="feature-card">
 
       <div class="icon">📄</div>
@@ -642,7 +786,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="feature-card">
 
@@ -661,7 +804,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="feature-card">
 
       <div class="icon">📥</div>
@@ -678,7 +820,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="feature-card">
 
@@ -697,7 +838,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="feature-card">
 
       <div class="icon">📊</div>
@@ -714,7 +854,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="feature-card">
 
@@ -733,7 +872,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="feature-card">
 
       <div class="icon">🧠</div>
@@ -750,7 +888,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="feature-card">
 
@@ -773,7 +910,6 @@ body.dark-home .subject-card p{
 
 </section>
 
-
 <!-- =========================
      SYLLABUS
 ========================= -->
@@ -793,7 +929,6 @@ body.dark-home .subject-card p{
 
   </div>
 
-
   <div class="syllabus-tabs">
 
     <button class="syllabus-tab active" data-tab="prelims">
@@ -809,7 +944,6 @@ body.dark-home .subject-card p{
     </button>
 
   </div>
-
 
   <!-- PRELIMS -->
 
@@ -845,7 +979,6 @@ body.dark-home .subject-card p{
 
   </div>
 
-
   <!-- CSAT -->
 
   <div class="syllabus-content" id="csat">
@@ -880,11 +1013,9 @@ body.dark-home .subject-card p{
 
   </div>
 
-
   <!-- MAINS -->
 
   <div class="syllabus-content" id="mains">
-
 
     <div class="syllabus-card">
 
@@ -898,7 +1029,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="syllabus-card">
 
       <h3>🇬🇧 Paper-B — English</h3>
@@ -911,7 +1041,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="syllabus-card">
 
       <h3>✍️ Paper-I — Essay</h3>
@@ -922,7 +1051,6 @@ body.dark-home .subject-card p{
       </p>
 
     </div>
-
 
     <div class="syllabus-card">
 
@@ -943,7 +1071,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="syllabus-card">
 
@@ -969,7 +1096,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="syllabus-card">
 
       <h3>💰 Paper-IV — General Studies-III</h3>
@@ -991,7 +1117,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="syllabus-card">
 
@@ -1017,7 +1142,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="syllabus-card">
 
       <h3>🎓 Paper-VI & VII — Optional Subject</h3>
@@ -1030,7 +1154,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <a href="mains.html" class="pdf-btn">
       ✍️ View Full Mains Syllabus
     </a>
@@ -1038,7 +1161,6 @@ body.dark-home .subject-card p{
   </div>
 
 </section>
-
 
 <!-- =========================
      FREE MATERIAL
@@ -1058,9 +1180,7 @@ body.dark-home .subject-card p{
 
   </div>
 
-
   <div class="subject-grid">
-
 
     <div class="subject-card">
 
@@ -1078,7 +1198,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="subject-card">
 
       <span>📜</span>
@@ -1094,7 +1213,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="subject-card">
 
@@ -1112,7 +1230,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="subject-card">
 
       <span>💰</span>
@@ -1128,7 +1245,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="subject-card">
 
@@ -1146,7 +1262,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="subject-card">
 
       <span>🔬</span>
@@ -1162,7 +1277,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="subject-card">
 
@@ -1181,7 +1295,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <div class="subject-card">
 
       <span>📚</span>
@@ -1198,7 +1311,6 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
-
 
     <div class="subject-card">
 
@@ -1221,7 +1333,6 @@ body.dark-home .subject-card p{
 
 </section>
 
-
 <!-- =========================
      TESTS
 ========================= -->
@@ -1239,7 +1350,6 @@ body.dark-home .subject-card p{
     </p>
 
   </div>
-
 
   <div class="test-box">
 
@@ -1295,7 +1405,6 @@ body.dark-home .subject-card p{
 
     </div>
 
-
     <a href="test.html" class="test-btn">
       Start Test →
     </a>
@@ -1303,7 +1412,6 @@ body.dark-home .subject-card p{
   </div>
 
 </section>
-
 
 <!-- =========================
      PREMIUM
@@ -1335,7 +1443,6 @@ body.dark-home .subject-card p{
 
 </section>
 
-
 <!-- =========================
      CONTACT
 ========================= -->
@@ -1353,7 +1460,6 @@ body.dark-home .subject-card p{
     </p>
 
   </div>
-
 
   <form id="contactForm">
 
@@ -1381,7 +1487,6 @@ body.dark-home .subject-card p{
   </form>
 
 </section>
-
 
 <!-- =========================
      FOOTER
@@ -1417,16 +1522,13 @@ body.dark-home .subject-card p{
 
 </footer>
 
-
 <!-- BACK TO TOP -->
 
 <button id="topBtn">↑</button>
 
-
 <!-- COMMON SCRIPT -->
 
 <script src="script.js"></script>
-
 
 <script>
 
@@ -1440,7 +1542,6 @@ const syllabusTabs =
 const syllabusContents =
   document.querySelectorAll(".syllabus-content");
 
-
 syllabusTabs.forEach(function(tab){
 
   tab.addEventListener("click",function(){
@@ -1448,37 +1549,26 @@ syllabusTabs.forEach(function(tab){
     const target =
       this.getAttribute("data-tab");
 
-
     syllabusTabs.forEach(function(item){
-
       item.classList.remove("active");
-
     });
-
 
     syllabusContents.forEach(function(content){
-
       content.classList.remove("active");
-
     });
 
-
     this.classList.add("active");
-
 
     const targetContent =
       document.getElementById(target);
 
     if(targetContent){
-
       targetContent.classList.add("active");
-
     }
 
   });
 
 });
-
 
 /* =========================
    BACK TO TOP
@@ -1487,21 +1577,15 @@ syllabusTabs.forEach(function(tab){
 const topBtn =
   document.getElementById("topBtn");
 
-
 window.addEventListener("scroll",function(){
 
   if(window.scrollY > 300){
-
     topBtn.style.display="block";
-
   }else{
-
     topBtn.style.display="none";
-
   }
 
 });
-
 
 topBtn.addEventListener("click",function(){
 
@@ -1512,14 +1596,12 @@ topBtn.addEventListener("click",function(){
 
 });
 
-
 /* =========================
    CONTACT FORM
 ========================= */
 
 const contactForm =
   document.getElementById("contactForm");
-
 
 if(contactForm){
 
@@ -1537,14 +1619,12 @@ if(contactForm){
 
 }
 
-
 /* =========================
    PREMIUM BUTTON
 ========================= */
 
 const premiumBtn =
   document.querySelector(".premium-btn");
-
 
 if(premiumBtn){
 
