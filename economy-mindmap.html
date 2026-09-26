@@ -1,0 +1,2063 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Economy Mind Map | UPSC Shiksha</title>
+
+<meta name="description"
+content="UPSC Economy Interactive Mind Map and Detailed Notes - Indian Economy, GDP, Inflation, Banking, Budget, Agriculture, MSP, PDS, External Sector, Industry and Infrastructure.">
+
+<style>
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f7f9fc;
+    color:#172033;
+    line-height:1.65;
+    transition:.3s;
+}
+
+body.dark{
+    background:#101522;
+    color:#f1f5f9;
+}
+
+/* HEADER */
+
+header{
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:linear-gradient(135deg,#063b75,#087f8c);
+    color:white;
+    padding:14px 16px;
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
+
+.header-inner{
+    max-width:1250px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    font-size:22px;
+    font-weight:bold;
+}
+
+.header-buttons{
+    display:flex;
+    gap:8px;
+}
+
+.header-btn{
+    border:0;
+    padding:9px 14px;
+    border-radius:20px;
+    cursor:pointer;
+    background:white;
+    color:#064b7a;
+    font-weight:bold;
+}
+
+/* HERO */
+
+.hero{
+    padding:65px 15px;
+    text-align:center;
+    color:white;
+
+    background:
+    radial-gradient(circle at 10% 20%,#22c55e55,transparent 30%),
+    radial-gradient(circle at 90% 20%,#facc1555,transparent 30%),
+    linear-gradient(135deg,#064e78,#047857);
+}
+
+.hero h1{
+    font-size:38px;
+    margin-bottom:12px;
+}
+
+.hero p{
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+}
+
+/* CONTAINER */
+
+.container{
+    max-width:1250px;
+    margin:auto;
+    padding:28px 15px;
+}
+
+/* SEARCH */
+
+.search-box{
+    background:white;
+    padding:16px;
+    border-radius:18px;
+    box-shadow:0 5px 18px rgba(0,0,0,.08);
+    margin-bottom:25px;
+}
+
+.dark .search-box{
+    background:#182235;
+}
+
+.search-box input{
+    width:100%;
+    padding:14px;
+    border:2px solid #dbe4ef;
+    border-radius:11px;
+    font-size:16px;
+    outline:none;
+}
+
+.dark .search-box input{
+    background:#101522;
+    color:white;
+    border-color:#3c4b63;
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+    display:flex;
+    flex-wrap:wrap;
+    gap:9px;
+    margin-bottom:25px;
+}
+
+.quick-nav a{
+    text-decoration:none;
+    padding:9px 14px;
+    border-radius:22px;
+    background:#e8f2ff;
+    color:#07539b;
+    font-weight:bold;
+}
+
+.dark .quick-nav a{
+    background:#263650;
+    color:white;
+}
+
+/* SECTION TITLE */
+
+.section-title{
+    margin:38px 0 20px;
+    padding:16px 20px;
+    border-radius:16px;
+    color:white;
+    font-size:25px;
+    box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.blue{
+    background:linear-gradient(135deg,#2563eb,#075985);
+}
+
+.green{
+    background:linear-gradient(135deg,#16a34a,#047857);
+}
+
+.yellow{
+    background:linear-gradient(135deg,#eab308,#ca8a04);
+}
+
+.orange{
+    background:linear-gradient(135deg,#f97316,#c2410c);
+}
+
+.purple{
+    background:linear-gradient(135deg,#7c3aed,#5b21b6);
+}
+
+.red{
+    background:linear-gradient(135deg,#dc2626,#991b1b);
+}
+
+/* MIND MAP */
+
+.mindmap{
+    background:white;
+    min-height:720px;
+    padding:35px 15px;
+    border-radius:25px;
+    box-shadow:0 8px 25px rgba(0,0,0,.10);
+    overflow:hidden;
+}
+
+.dark .mindmap{
+    background:#182235;
+}
+
+.center-node{
+    width:210px;
+    height:210px;
+    border-radius:50%;
+    margin:20px auto 35px;
+
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+
+    color:white;
+    font-size:21px;
+    font-weight:bold;
+
+    background:
+    radial-gradient(circle at 30% 25%,#fff5,#ffffff00 35%),
+    linear-gradient(135deg,#16a34a,#065f46);
+
+    box-shadow:0 15px 35px rgba(6,95,70,.35);
+
+    animation:pulse 3s infinite;
+}
+
+.nodes{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+    max-width:1100px;
+    margin:auto;
+}
+
+.node{
+    border:0;
+    color:white;
+    min-height:78px;
+    padding:15px 10px;
+    border-radius:17px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:15px;
+
+    box-shadow:0 6px 15px rgba(0,0,0,.13);
+    transition:.3s;
+}
+
+.node:hover{
+    transform:translateY(-6px) scale(1.02);
+}
+
+.n1{background:#2563eb;}
+.n2{background:#16a34a;}
+.n3{background:#eab308;color:#352600;}
+.n4{background:#f97316;}
+.n5{background:#7c3aed;}
+.n6{background:#dc2626;}
+.n7{background:#0891b2;}
+.n8{background:#9333ea;}
+.n9{background:#15803d;}
+.n10{background:#c2410c;}
+.n11{background:#475569;}
+.n12{background:#be123c;}
+
+.node-info{
+    display:none;
+    max-width:950px;
+    margin:28px auto 0;
+    padding:20px;
+
+    background:#eff6ff;
+    border-left:7px solid #2563eb;
+    border-radius:14px;
+}
+
+.dark .node-info{
+    background:#202c40;
+}
+
+/* CARDS */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.card{
+    background:white;
+    padding:22px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+    border-top:6px solid #2563eb;
+    transition:.3s;
+}
+
+.dark .card{
+    background:#182235;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card h3{
+    margin-bottom:9px;
+}
+
+/* IMPORTANT */
+
+.important{
+    margin-top:18px;
+    padding:17px;
+    border-radius:14px;
+    background:#fff1f2;
+    border-left:7px solid #dc2626;
+}
+
+.important strong{
+    color:#b91c1c;
+}
+
+/* TABLE */
+
+.table-wrap{
+    overflow-x:auto;
+    background:white;
+    border-radius:17px;
+    box-shadow:0 6px 18px rgba(0,0,0,.07);
+}
+
+.dark .table-wrap{
+    background:#182235;
+}
+
+table{
+    width:100%;
+    min-width:700px;
+    border-collapse:collapse;
+}
+
+th,td{
+    padding:14px;
+    border:1px solid #d8e0ea;
+    text-align:left;
+}
+
+th{
+    background:#e9f2ff;
+    color:#07539b;
+    font-size:16px;
+}
+
+.dark th{
+    background:#263650;
+    color:white;
+}
+
+.dark td{
+    border-color:#3b485d;
+}
+
+tr:nth-child(even){
+    background:#fafcff;
+}
+
+.dark tr:nth-child(even){
+    background:#1d293d;
+}
+
+/* UPSC BOX */
+
+.upsc-grid{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:20px;
+    margin-top:20px;
+}
+
+.upsc-box{
+    padding:22px;
+    border-radius:17px;
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.prelims{
+    background:#e9f8ee;
+    border-left:8px solid #16a34a;
+}
+
+.mains{
+    background:#fff4e6;
+    border-left:8px solid #f97316;
+}
+
+.dark .prelims,
+.dark .mains{
+    color:#172033;
+}
+
+/* BIG IMPORTANT TOPICS */
+
+.priority-grid{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.priority{
+    padding:23px;
+    border-radius:18px;
+    color:white;
+    min-height:170px;
+    box-shadow:0 7px 20px rgba(0,0,0,.13);
+    transition:.3s;
+}
+
+.priority:hover{
+    transform:translateY(-6px);
+}
+
+.priority h3{
+    margin-bottom:8px;
+}
+
+.p1{background:linear-gradient(135deg,#dc2626,#991b1b);}
+.p2{background:linear-gradient(135deg,#f97316,#c2410c);}
+.p3{background:linear-gradient(135deg,#eab308,#a16207);}
+.p4{background:linear-gradient(135deg,#2563eb,#1e40af);}
+.p5{background:linear-gradient(135deg,#7c3aed,#5b21b6);}
+.p6{background:linear-gradient(135deg,#16a34a,#166534);}
+
+/* REVISION */
+
+.revision{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.revision-card{
+    padding:20px;
+    border-radius:17px;
+    color:white;
+    min-height:145px;
+    box-shadow:0 6px 18px rgba(0,0,0,.1);
+}
+
+.r1{background:#2563eb;}
+.r2{background:#16a34a;}
+.r3{background:#eab308;color:#352600;}
+.r4{background:#f97316;}
+.r5{background:#7c3aed;}
+.r6{background:#dc2626;}
+.r7{background:#0891b2;}
+.r8{background:#475569;}
+
+/* CHECKLIST */
+
+.checklist{
+    background:white;
+    padding:25px;
+    border-radius:18px;
+    box-shadow:0 6px 18px rgba(0,0,0,.08);
+}
+
+.dark .checklist{
+    background:#182235;
+}
+
+.checklist li{
+    list-style:none;
+    padding:9px 0;
+    border-bottom:1px solid #e2e8f0;
+}
+
+.dark .checklist li{
+    border-color:#39465c;
+}
+
+/* FOOTER */
+
+footer{
+    margin-top:45px;
+    padding:35px 15px;
+    text-align:center;
+    background:#101827;
+    color:white;
+}
+
+/* TOP */
+
+#topBtn{
+    position:fixed;
+    right:18px;
+    bottom:20px;
+
+    width:46px;
+    height:46px;
+
+    border:0;
+    border-radius:50%;
+
+    background:#075985;
+    color:white;
+
+    font-size:21px;
+    cursor:pointer;
+
+    display:none;
+    z-index:999;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+    0%,100%{
+        transform:scale(1);
+    }
+    50%{
+        transform:scale(1.04);
+    }
+}
+
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+.card,
+.priority,
+.upsc-box,
+.revision-card{
+    animation:fadeUp .7s ease both;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    .nodes{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .cards{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .priority-grid{
+        grid-template-columns:1fr 1fr;
+    }
+
+    .revision{
+        grid-template-columns:1fr 1fr;
+    }
+}
+
+@media(max-width:600px){
+
+    .header-inner{
+        flex-direction:column;
+    }
+
+    .hero{
+        padding:45px 14px;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero p{
+        font-size:15px;
+    }
+
+    .center-node{
+        width:165px;
+        height:165px;
+        font-size:17px;
+    }
+
+    .nodes{
+        grid-template-columns:1fr 1fr;
+        gap:9px;
+    }
+
+    .node{
+        font-size:13px;
+        min-height:70px;
+        padding:10px 6px;
+    }
+
+    .cards{
+        grid-template-columns:1fr;
+    }
+
+    .priority-grid{
+        grid-template-columns:1fr;
+    }
+
+    .upsc-grid{
+        grid-template-columns:1fr;
+    }
+
+    .revision{
+        grid-template-columns:1fr;
+    }
+
+    .section-title{
+        font-size:21px;
+    }
+}
+
+@media(prefers-reduced-motion:reduce){
+
+    *{
+        animation:none !important;
+        transition:none !important;
+    }
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+💰 UPSC Shiksha
+</div>
+
+<div class="header-buttons">
+
+<a href="index.html">
+<button class="header-btn">🏠 Home</button>
+</a>
+
+<button class="header-btn" onclick="toggleDarkMode()">
+🌙 Dark
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>💰 Economy Interactive Mind Map</h1>
+
+<p>
+UPSC GS-III Economy — Colourful Mind Maps,
+Detailed Notes, Important Topics, Prelims Focus,
+Mains Points and Quick Revision
+</p>
+
+</section>
+
+
+<main class="container">
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="topicSearch"
+placeholder="🔍 Search Economy topic..."
+onkeyup="searchTopics()">
+
+</div>
+
+
+<div class="quick-nav">
+
+<a href="#mindmap">🧠 Mind Map</a>
+<a href="#basics">📚 Basics</a>
+<a href="#growth">📈 Growth</a>
+<a href="#inflation">🔥 Inflation</a>
+<a href="#banking">🏦 Banking</a>
+<a href="#budget">💰 Budget</a>
+<a href="#agriculture">🌾 Agriculture</a>
+<a href="#food">🍚 PDS</a>
+<a href="#external">🌐 External</a>
+<a href="#industry">🏭 Industry</a>
+<a href="#poverty">👥 Inclusion</a>
+<a href="#infrastructure">🛣️ Infrastructure</a>
+<a href="#important">⭐ Important</a>
+<a href="#revision">⚡ Revision</a>
+
+</div>
+
+
+<!-- MIND MAP -->
+
+<section id="mindmap">
+
+<div class="section-title blue">
+🧠 Economy Master Mind Map
+</div>
+
+<div class="mindmap">
+
+<div class="center-node">
+💰<br>
+INDIAN<br>
+ECONOMY<br>
+UPSC GS-III
+</div>
+
+<div class="nodes">
+
+<button class="node n1" onclick="showNode('basics')">
+📚 Economy Basics
+</button>
+
+<button class="node n2" onclick="showNode('growth')">
+📈 Growth & Development
+</button>
+
+<button class="node n3" onclick="showNode('inflation')">
+🔥 Inflation & Prices
+</button>
+
+<button class="node n4" onclick="showNode('banking')">
+🏦 Banking & RBI
+</button>
+
+<button class="node n5" onclick="showNode('budget')">
+💰 Budget & Fiscal Policy
+</button>
+
+<button class="node n6" onclick="showNode('agriculture')">
+🌾 Agriculture
+</button>
+
+<button class="node n7" onclick="showNode('food')">
+🍚 MSP, PDS & Food Security
+</button>
+
+<button class="node n8" onclick="showNode('external')">
+🌐 External Sector
+</button>
+
+<button class="node n9" onclick="showNode('industry')">
+🏭 Industry & Liberalisation
+</button>
+
+<button class="node n10" onclick="showNode('infrastructure')">
+🛣️ Infrastructure
+</button>
+
+<button class="node n11" onclick="showNode('poverty')">
+👥 Poverty & Inclusion
+</button>
+
+<button class="node n12" onclick="showNode('environment')">
+🌱 Green Economy
+</button>
+
+</div>
+
+<div id="nodeInfo" class="node-info">
+
+<h3>Tap any topic</h3>
+
+<p>
+Select a topic from the Economy Mind Map.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BASICS -->
+
+<section id="basics">
+
+<div class="section-title blue">
+📚 Economy Basics & National Income
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>💵 GDP</h3>
+<p>
+Gross Domestic Product measures the value of final goods
+and services produced within an economy during a specified period.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 GVA</h3>
+<p>
+Gross Value Added measures value generated by producers
+after accounting for intermediate consumption.
+</p>
+</div>
+
+<div class="card">
+<h3>💰 National Income</h3>
+<p>
+Study national income concepts, sectoral contribution,
+per capita income and related indicators.
+</p>
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>What to Understand</th>
+</tr>
+
+<tr>
+<td>GDP</td>
+<td>Production within domestic territory.</td>
+</tr>
+
+<tr>
+<td>GVA</td>
+<td>Value added by economic activities/sectors.</td>
+</tr>
+
+<tr>
+<td>Per Capita Income</td>
+<td>Income measure relative to population.</td>
+</tr>
+
+<tr>
+<td>Real vs Nominal</td>
+<td>Real values adjust for price changes; nominal values use current prices.</td>
+</tr>
+
+<tr>
+<td>Economic Sectors</td>
+<td>Primary, secondary and tertiary activities.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- GROWTH -->
+
+<section id="growth">
+
+<div class="section-title green">
+📈 Economic Growth, Development & Employment
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📈 Economic Growth</h3>
+<p>
+Increase in economic output over time.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Economic Development</h3>
+<p>
+Broader improvement in income, capabilities,
+living standards and opportunities.
+</p>
+</div>
+
+<div class="card">
+<h3>👷 Employment</h3>
+<p>
+Study unemployment, labour force participation,
+job creation and structural transformation.
+</p>
+</div>
+
+</div>
+
+<div class="important">
+<strong>⭐ IMPORTANT:</strong>
+Growth and development are related but not identical.
+UPSC answers should connect growth with inclusion,
+employment, human capital and sustainability.
+</div>
+
+</section>
+
+
+<!-- INFLATION -->
+
+<section id="inflation">
+
+<div class="section-title yellow">
+🔥 Inflation & Monetary Economy
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📈 Inflation</h3>
+<p>
+Persistent increase in the general price level
+reducing purchasing power.
+</p>
+</div>
+
+<div class="card">
+<h3>🏦 Monetary Policy</h3>
+<p>
+Central bank measures affecting liquidity,
+interest rates and monetary conditions.
+</p>
+</div>
+
+<div class="card">
+<h3>💹 Interest Rates</h3>
+<p>
+Interest rates influence borrowing, investment,
+consumption and inflationary conditions.
+</p>
+</div>
+
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Term</th>
+<th>UPSC Understanding</th>
+</tr>
+
+<tr>
+<td>Repo Rate</td>
+<td>Policy rate associated with RBI's lending to banks under the relevant framework.</td>
+</tr>
+
+<tr>
+<td>CRR</td>
+<td>Cash reserve requirement maintained by banks with the RBI.</td>
+</tr>
+
+<tr>
+<td>SLR</td>
+<td>Requirement relating to liquid assets maintained by banks.</td>
+</tr>
+
+<tr>
+<td>Inflation</td>
+<td>General rise in prices over time.</td>
+</tr>
+
+<tr>
+<td>Deflation</td>
+<td>Sustained decline in general price levels.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="important">
+<strong>⭐⭐⭐ VERY IMPORTANT:</strong>
+Inflation + Monetary Policy + RBI are major areas for
+conceptual Prelims questions and analytical Mains answers.
+</div>
+
+</section>
+
+
+<!-- BANKING -->
+
+<section id="banking">
+
+<div class="section-title yellow">
+🏦 Banking & Financial System
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏦 RBI</h3>
+<p>
+India's central bank with important monetary,
+banking and financial-system functions.
+</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Commercial Banks</h3>
+<p>
+Mobilise deposits and provide credit and
+other financial services.
+</p>
+</div>
+
+<div class="card">
+<h3>⚠️ NPAs</h3>
+<p>
+Non-performing assets indicate stressed
+bank credit and require careful analysis.
+</p>
+</div>
+
+<div class="card">
+<h3>📱 Digital Payments</h3>
+<p>
+UPI and digital financial systems have
+expanded payment access and formalisation.
+</p>
+</div>
+
+<div class="card">
+<h3>👥 Financial Inclusion</h3>
+<p>
+Focus on access to banking, credit,
+insurance, pensions and digital finance.
+</p>
+</div>
+
+<div class="card">
+<h3>💳 FinTech</h3>
+<p>
+Technology-driven financial services,
+digital lending and payment innovations.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BUDGET -->
+
+<section id="budget">
+
+<div class="section-title orange">
+💰 Government Budget & Fiscal Policy
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Concept</th>
+<th>Meaning / Focus</th>
+</tr>
+
+<tr>
+<td>Revenue Receipts</td>
+<td>Government receipts that generally do not create liabilities or reduce assets in the same way as capital transactions.</td>
+</tr>
+
+<tr>
+<td>Capital Receipts</td>
+<td>Receipts involving liabilities or reduction of assets.</td>
+</tr>
+
+<tr>
+<td>Fiscal Deficit</td>
+<td>Overall financing requirement arising when total expenditure exceeds relevant non-borrowing receipts.</td>
+</tr>
+
+<tr>
+<td>Revenue Deficit</td>
+<td>Revenue expenditure exceeding revenue receipts.</td>
+</tr>
+
+<tr>
+<td>Public Debt</td>
+<td>Government borrowing and associated liabilities.</td>
+</tr>
+
+<tr>
+<td>Taxation</td>
+<td>Direct and indirect taxes are major sources of government revenue.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="important">
+<strong>⭐⭐⭐ VERY IMPORTANT:</strong>
+Budget + Fiscal Deficit + Taxation + Public Debt
+should be revised together.
+</div>
+
+</section>
+
+
+<!-- AGRICULTURE -->
+
+<section id="agriculture">
+
+<div class="section-title green">
+🌾 Agriculture & Rural Economy
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌾 Cropping Patterns</h3>
+<p>
+Study Kharif, Rabi and Zaid seasons,
+regional crop patterns and diversification.
+</p>
+</div>
+
+<div class="card">
+<h3>💧 Irrigation</h3>
+<p>
+Canals, wells, tube wells, micro-irrigation
+and water-use efficiency.
+</p>
+</div>
+
+<div class="card">
+<h3>🚜 Farm Mechanisation</h3>
+<p>
+Technology, productivity, labour efficiency
+and access to farm machinery.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Sustainable Agriculture</h3>
+<p>
+Soil health, water conservation,
+climate resilience and diversification.
+</p>
+</div>
+
+<div class="card">
+<h3>📱 Agri Technology</h3>
+<p>
+Digital platforms, precision agriculture,
+market information and e-technology.
+</p>
+</div>
+
+<div class="card">
+<h3>🐄 Animal Husbandry</h3>
+<p>
+Livestock, dairy, fisheries and allied
+activities contribute to rural livelihoods.
+</p>
+</div>
+
+</div>
+
+<div class="important">
+<strong>⭐⭐⭐ VERY IMPORTANT:</strong>
+Agriculture questions should be connected with
+water, markets, technology, climate change,
+farm incomes and food security.
+</div>
+
+</section>
+
+
+<!-- FOOD -->
+
+<section id="food">
+
+<div class="section-title green">
+🍚 MSP, Subsidies, PDS & Food Security
+</div>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Topic</th>
+<th>What to Study</th>
+</tr>
+
+<tr>
+<td>MSP</td>
+<td>Minimum Support Price and its role in agricultural price support.</td>
+</tr>
+
+<tr>
+<td>Farm Subsidies</td>
+<td>Direct and indirect subsidies and their economic implications.</td>
+</tr>
+
+<tr>
+<td>PDS</td>
+<td>Public Distribution System and foodgrain distribution.</td>
+</tr>
+
+<tr>
+<td>Buffer Stocks</td>
+<td>Foodgrain stocks maintained for food-security and market-management purposes.</td>
+</tr>
+
+<tr>
+<td>Food Security</td>
+<td>Availability, access, utilisation and stability of food.</td>
+</tr>
+
+<tr>
+<td>Food Processing</td>
+<td>Value addition, supply chains, storage, logistics and market access.</td>
+</tr>
+
+</table>
+
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+<h3>🟢 Prelims</h3>
+<p>
+MSP, PDS, subsidies, foodgrain systems,
+agricultural terminology and institutions.
+</p>
+</div>
+
+<div class="upsc-box mains">
+<h3>🟠 Mains</h3>
+<p>
+Food security, farm income, agricultural markets,
+subsidy reform, storage and supply chains.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXTERNAL -->
+
+<section id="external">
+
+<div class="section-title purple">
+🌐 External Sector
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🌍 Balance of Payments</h3>
+<p>
+Records economic transactions between residents
+of an economy and the rest of the world.
+</p>
+</div>
+
+<div class="card">
+<h3>💱 Exchange Rate</h3>
+<p>
+Price of one currency in terms of another;
+important for trade and capital flows.
+</p>
+</div>
+
+<div class="card">
+<h3>💵 Forex Reserves</h3>
+<p>
+Foreign exchange assets held by the monetary
+authority for external stability and related purposes.
+</p>
+</div>
+
+<div class="card">
+<h3>🏢 FDI</h3>
+<p>
+Foreign Direct Investment involves investment
+with a lasting interest/control dimension.
+</p>
+</div>
+
+<div class="card">
+<h3>📊 FPI</h3>
+<p>
+Foreign Portfolio Investment involves investment
+in financial assets without the same control dimension.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 WTO</h3>
+<p>
+International organisation dealing with
+rules of global trade.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INDUSTRY -->
+
+<section id="industry">
+
+<div class="section-title orange">
+🏭 Industry, Liberalisation & Manufacturing
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏭 Manufacturing</h3>
+<p>
+Industrial production, productivity,
+employment and value chains.
+</p>
+</div>
+
+<div class="card">
+<h3>📉 Liberalisation</h3>
+<p>
+Economic reforms aimed at reducing
+certain controls and increasing market orientation.
+</p>
+</div>
+
+<div class="card">
+<h3>🌐 Globalisation</h3>
+<p>
+Greater integration of production,
+trade, finance and technology.
+</p>
+</div>
+
+<div class="card">
+<h3>🤝 PPP</h3>
+<p>
+Public-Private Partnership models used
+in infrastructure and public service projects.
+</p>
+</div>
+
+<div class="card">
+<h3>📦 MSMEs</h3>
+<p>
+Important for employment, entrepreneurship,
+regional development and supply chains.
+</p>
+</div>
+
+<div class="card">
+<h3>🚢 Logistics</h3>
+<p>
+Transport, warehousing, ports and supply-chain
+efficiency influence industrial competitiveness.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- POVERTY -->
+
+<section id="poverty">
+
+<div class="section-title purple">
+👥 Poverty, Employment & Inclusive Growth
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>📉 Poverty</h3>
+<p>
+Study poverty measurement, multidimensional
+poverty and factors affecting deprivation.
+</p>
+</div>
+
+<div class="card">
+<h3>👷 Unemployment</h3>
+<p>
+Open unemployment, disguised unemployment,
+underemployment and labour-market issues.
+</p>
+</div>
+
+<div class="card">
+<h3>🎓 Human Capital</h3>
+<p>
+Education, health, skills and productivity
+form important components of human capital.
+</p>
+</div>
+
+<div class="card">
+<h3>👥 Inclusive Growth</h3>
+<p>
+Growth that expands economic opportunities
+and access across different sections of society.
+</p>
+</div>
+
+<div class="card">
+<h3>👩 Women & Economy</h3>
+<p>
+Female labour-force participation,
+skills, entrepreneurship and care economy.
+</p>
+</div>
+
+<div class="card">
+<h3>👨‍💻 Skill Development</h3>
+<p>
+Skills improve employability, productivity
+and adaptation to changing labour markets.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- INFRASTRUCTURE -->
+
+<section id="infrastructure">
+
+<div class="section-title blue">
+🛣️ Infrastructure & Investment
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>⚡ Energy</h3>
+<p>
+Electricity generation, transmission,
+renewable energy and energy security.
+</p>
+</div>
+
+<div class="card">
+<h3>🛣️ Roads</h3>
+<p>
+Road connectivity supports mobility,
+trade and regional development.
+</p>
+</div>
+
+<div class="card">
+<h3>🚆 Railways</h3>
+<p>
+Major transport infrastructure supporting
+passenger and freight movement.
+</p>
+</div>
+
+<div class="card">
+<h3>⚓ Ports</h3>
+<p>
+Critical nodes for international trade
+and logistics.
+</p>
+</div>
+
+<div class="card">
+<h3>✈️ Airports</h3>
+<p>
+Air connectivity supports trade,
+tourism, business and regional integration.
+</p>
+</div>
+
+<div class="card">
+<h3>💰 Investment Models</h3>
+<p>
+Understand public investment, private investment
+and PPP models.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GREEN ECONOMY -->
+
+<section id="environment">
+
+<div class="section-title green">
+🌱 Green Economy & Sustainable Development
+</div>
+
+<div class="cards">
+
+<div class="card">
+<h3>☀️ Renewable Energy</h3>
+<p>
+Solar, wind, hydropower and other
+low-carbon energy sources.
+</p>
+</div>
+
+<div class="card">
+<h3>🌱 Sustainable Development</h3>
+<p>
+Balancing economic development,
+social welfare and environmental protection.
+</p>
+</div>
+
+<div class="card">
+<h3>♻️ Circular Economy</h3>
+<p>
+Reduce waste, reuse resources and
+improve resource efficiency.
+</p>
+</div>
+
+<div class="card">
+<h3>💨 Carbon Economy</h3>
+<p>
+Understand emissions, mitigation,
+carbon markets and transition challenges.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MOST IMPORTANT -->
+
+<section id="important">
+
+<div class="section-title red">
+⭐⭐⭐ Most Important UPSC Economy Topics
+</div>
+
+<div class="priority-grid">
+
+<div class="priority p1">
+<h3>⭐⭐⭐ Inflation</h3>
+<p>
+CPI, WPI, causes, effects,
+monetary policy and inflation management.
+</p>
+</div>
+
+<div class="priority p2">
+<h3>⭐⭐⭐ Monetary Policy</h3>
+<p>
+RBI, repo rate, liquidity,
+transmission and policy objectives.
+</p>
+</div>
+
+<div class="priority p3">
+<h3>⭐⭐⭐ Budget</h3>
+<p>
+Fiscal deficit, taxation,
+expenditure, debt and fiscal policy.
+</p>
+</div>
+
+<div class="priority p4">
+<h3>⭐⭐⭐ Banking</h3>
+<p>
+RBI, NPAs, financial inclusion,
+digital banking and regulation.
+</p>
+</div>
+
+<div class="priority p5">
+<h3>⭐⭐⭐ Agriculture</h3>
+<p>
+MSP, subsidies, PDS,
+food security, irrigation and farm income.
+</p>
+</div>
+
+<div class="priority p6">
+<h3>⭐⭐⭐ Inclusive Growth</h3>
+<p>
+Poverty, employment, human capital,
+financial inclusion and inequality.
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- UPSC STRATEGY -->
+
+<section>
+
+<div class="section-title red">
+🎯 Prelims + Mains Strategy
+</div>
+
+<div class="upsc-grid">
+
+<div class="upsc-box prelims">
+
+<h3>🟢 Prelims Focus</h3>
+
+<ul>
+
+<li>Economic terminology</li>
+<li>GDP / GVA</li>
+<li>Inflation</li>
+<li>RBI and monetary policy</li>
+<li>Banking concepts</li>
+<li>Budget terminology</li>
+<li>Taxation</li>
+<li>MSP and subsidies</li>
+<li>PDS and food security</li>
+<li>BOP and exchange rate</li>
+<li>FDI / FPI</li>
+<li>Infrastructure</li>
+
+</ul>
+
+</div>
+
+
+<div class="upsc-box mains">
+
+<h3>🟠 Mains Focus</h3>
+
+<ul>
+
+<li>Inclusive growth</li>
+<li>Employment generation</li>
+<li>Inflation management</li>
+<li>Fiscal consolidation</li>
+<li>Agricultural reforms</li>
+<li>Food security</li>
+<li>Manufacturing growth</li>
+<li>Infrastructure development</li>
+<li>External-sector challenges</li>
+<li>Green economy</li>
+<li>Human capital</li>
+<li>Sustainable development</li>
+
+</ul>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section id="revision">
+
+<div class="section-title yellow">
+⚡ Economy Quick Revision
+</div>
+
+<div class="revision">
+
+<div class="revision-card r1">
+<h3>📚 Basics</h3>
+<p>
+GDP → GVA → Income → Sectors
+</p>
+</div>
+
+<div class="revision-card r2">
+<h3>📈 Growth</h3>
+<p>
+Growth → Development → Employment → Inclusion
+</p>
+</div>
+
+<div class="revision-card r3">
+<h3>🔥 Inflation</h3>
+<p>
+Prices → Inflation → RBI → Monetary Policy
+</p>
+</div>
+
+<div class="revision-card r4">
+<h3>💰 Budget</h3>
+<p>
+Revenue → Expenditure → Deficit → Debt
+</p>
+</div>
+
+<div class="revision-card r5">
+<h3>🌾 Agriculture</h3>
+<p>
+Crops → Irrigation → MSP → Markets
+</p>
+</div>
+
+<div class="revision-card r6">
+<h3>🍚 Food</h3>
+<p>
+PDS → Buffer Stock → Food Security
+</p>
+</div>
+
+<div class="revision-card r7">
+<h3>🌐 External</h3>
+<p>
+BOP → Forex → Exchange Rate → FDI/FPI
+</p>
+</div>
+
+<div class="revision-card r8">
+<h3>🏭 Industry</h3>
+<p>
+Manufacturing → MSME → Infrastructure → PPP
+</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- FINAL CHECKLIST -->
+
+<section>
+
+<div class="section-title blue">
+✅ Economy Revision Checklist
+</div>
+
+<div class="checklist">
+
+<ul>
+
+<li>☐ GDP / GVA / National Income</li>
+<li>☐ Growth vs Development</li>
+<li>☐ Inflation and Price Indices</li>
+<li>☐ RBI and Monetary Policy</li>
+<li>☐ Banking and NPAs</li>
+<li>☐ Union Budget</li>
+<li>☐ Fiscal Deficit and Public Debt</li>
+<li>☐ Taxation and GST</li>
+<li>☐ Agriculture and Cropping Patterns</li>
+<li>☐ MSP and Farm Subsidies</li>
+<li>☐ PDS and Food Security</li>
+<li>☐ Food Processing</li>
+<li>☐ Poverty and Unemployment</li>
+<li>☐ Inclusive Growth</li>
+<li>☐ Balance of Payments</li>
+<li>☐ Exchange Rate and Forex</li>
+<li>☐ FDI / FPI</li>
+<li>☐ WTO and International Trade</li>
+<li>☐ Liberalisation and Industrial Policy</li>
+<li>☐ MSMEs</li>
+<li>☐ Infrastructure</li>
+<li>☐ PPP and Investment Models</li>
+<li>☐ Green Economy</li>
+<li>☐ Sustainable Development</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- FINAL REVISION -->
+
+<section>
+
+<div class="section-title orange">
+📌 30-Second Economy Revision
+</div>
+
+<div class="card">
+
+<p>
+<strong>Economy:</strong>
+Production → Income → Growth → Development
+</p>
+
+<p>
+<strong>Prices:</strong>
+Inflation → RBI → Monetary Policy → Interest Rates
+</p>
+
+<p>
+<strong>Government:</strong>
+Budget → Tax → Expenditure → Deficit → Debt
+</p>
+
+<p>
+<strong>Agriculture:</strong>
+Crops → Irrigation → MSP → Subsidy → PDS → Food Security
+</p>
+
+<p>
+<strong>External:</strong>
+Trade → BOP → Exchange Rate → Forex → FDI/FPI
+</p>
+
+<p>
+<strong>Industry:</strong>
+Manufacturing → MSME → Liberalisation → Infrastructure
+</p>
+
+<p>
+<strong>Society:</strong>
+Poverty → Employment → Skills → Human Capital → Inclusion
+</p>
+
+<p>
+<strong>Future:</strong>
+Green Economy → Renewable Energy → Sustainable Development
+</p>
+
+</div>
+
+</section>
+
+
+</main>
+
+
+<footer>
+
+<h3>💰 UPSC Shiksha</h3>
+
+<p>
+Free UPSC Economy Mind Maps & Detailed Notes
+</p>
+
+<p>
+© 2026 UPSC Shiksha
+</p>
+
+</footer>
+
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
+
+<script>
+
+/* DARK MODE */
+
+function toggleDarkMode(){
+
+    document.body.classList.toggle("dark");
+
+    localStorage.setItem(
+        "economyMindMapDark",
+        document.body.classList.contains("dark")
+    );
+
+}
+
+if(
+    localStorage.getItem("economyMindMapDark")==="true"
+){
+    document.body.classList.add("dark");
+}
+
+
+/* MIND MAP DATA */
+
+const data={
+
+basics:{
+title:"📚 Economy Basics",
+text:"GDP, GVA, national income, per capita income, economic sectors and real versus nominal values form the foundation."
+},
+
+growth:{
+title:"📈 Growth & Development",
+text:"Study economic growth, development, employment, productivity, human capital and inclusive growth."
+},
+
+inflation:{
+title:"🔥 Inflation & Prices",
+text:"Focus on inflation, price indices, causes, effects and monetary-policy responses."
+},
+
+banking:{
+title:"🏦 Banking & RBI",
+text:"Study RBI, commercial banking, monetary policy, liquidity, NPAs, financial inclusion and digital finance."
+},
+
+budget:{
+title:"💰 Budget & Fiscal Policy",
+text:"Revise taxation, government expenditure, fiscal deficit, revenue deficit, public debt and fiscal policy."
+},
+
+agriculture:{
+title:"🌾 Agriculture",
+text:"Study cropping patterns, irrigation, farm technology, agricultural markets, sustainability and rural economy."
+},
+
+food:{
+title:"🍚 MSP, PDS & Food Security",
+text:"Understand MSP, subsidies, PDS, buffer stocks, food security and food processing."
+},
+
+external:{
+title:"🌐 External Sector",
+text:"Study Balance of Payments, exchange rate, forex reserves, FDI, FPI and international trade."
+},
+
+industry:{
+title:"🏭 Industry & Liberalisation",
+text:"Focus on manufacturing, liberalisation, industrial policy, MSMEs, globalisation and PPP."
+},
+
+infrastructure:{
+title:"🛣️ Infrastructure",
+text:"Energy, roads, railways, ports, airports, logistics and investment models are key areas."
+},
+
+poverty:{
+title:"👥 Poverty & Inclusion",
+text:"Study poverty, unemployment, human capital, skills, inequality and inclusive growth."
+},
+
+environment:{
+title:"🌱 Green Economy",
+text:"Connect economy with renewable energy, sustainability, circular economy and climate transition."
+}
+
+};
+
+
+function showNode(key){
+
+    const box=document.getElementById("nodeInfo");
+
+    box.innerHTML=
+    "<h3>"+data[key].title+"</h3>"+
+    "<p>"+data[key].text+"</p>";
+
+    box.style.display="block";
+
+    box.scrollIntoView({
+        behavior:"smooth",
+        block:"center"
+    });
+
+}
+
+
+/* SEARCH */
+
+function searchTopics(){
+
+    const input=
+    document.getElementById("topicSearch")
+    .value
+    .toLowerCase()
+    .trim();
+
+    const sections=
+    document.querySelectorAll("main section");
+
+    sections.forEach(section=>{
+
+        const text=
+        section.innerText.toLowerCase();
+
+        if(input===""){
+            section.style.display="";
+        }
+        else if(text.includes(input)){
+            section.style.display="";
+        }
+        else{
+            section.style.display="none";
+        }
+
+    });
+
+}
+
+
+/* TOP BUTTON */
+
+const topBtn=
+document.getElementById("topBtn");
+
+window.onscroll=function(){
+
+    if(
+        document.body.scrollTop>400 ||
+        document.documentElement.scrollTop>400
+    ){
+
+        topBtn.style.display="block";
+
+    }else{
+
+        topBtn.style.display="none";
+
+    }
+
+};
+
+
+function topFunction(){
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+}
+
+</script>
+
+</body>
+</html>
