@@ -1,1277 +1,1564 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>UPSC Shiksha | Complete UPSC Preparation</title>
-  <meta name="description" content="UPSC Shiksha - Free UPSC study material, syllabus, PYQs, mock tests and study timetable.">
-
-  <link rel="stylesheet" href="style.css">
-
-  <style>
-    /* HOME PAGE */
-
-    .home-section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 45px 16px;
-    }
-
-    .hero {
-      padding: 70px 20px;
-      text-align: center;
-      background: linear-gradient(135deg, #fff3cd, #ffffff);
-    }
-
-    .badge {
-      display: inline-block;
-      padding: 8px 15px;
-      border-radius: 20px;
-      background: #333;
-      color: white;
-      font-size: 14px;
-      margin-bottom: 18px;
-    }
-
-    .hero h1 {
-      font-size: 44px;
-      line-height: 1.2;
-      margin: 10px 0;
-    }
-
-    .hero h1 span {
-      color: #d35400;
-    }
-
-    .hero p {
-      max-width: 700px;
-      margin: 18px auto;
-      line-height: 1.7;
-      font-size: 17px;
-    }
-
-    .hero-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
-      margin-top: 25px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 13px 20px;
-      border-radius: 11px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
-    .primary {
-      background: #333;
-      color: white;
-    }
-
-    .secondary {
-      background: white;
-      color: #333;
-      border: 1px solid #333;
-    }
-
-    .stats {
-      max-width: 1100px;
-      margin: auto;
-      padding: 25px 16px;
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 15px;
-    }
-
-    .stat-card {
-      text-align: center;
-      padding: 20px;
-      border-radius: 15px;
-      background: #f7f7f7;
-    }
-
-    .stat-card h2 {
-      margin: 0;
-      font-size: 27px;
-    }
-
-    .stat-card p {
-      margin-bottom: 0;
-    }
-
-    .section-title {
-      text-align: center;
-      margin-bottom: 30px;
-    }
-
-    .section-title span {
-      font-size: 13px;
-      font-weight: bold;
-      letter-spacing: 1px;
-    }
-
-    .section-title h2 {
-      font-size: 30px;
-      margin: 8px 0;
-    }
-
-    .section-title p {
-      line-height: 1.6;
-    }
-
-    .feature-grid,
-    .subject-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 18px;
-    }
-
-    .feature-card,
-    .subject-card {
-      background: white;
-      padding: 22px;
-      border-radius: 16px;
-      box-shadow: 0 4px 16px rgba(0,0,0,0.08);
-      border: 1px solid #eee;
-    }
-
-    .feature-card .icon {
-      font-size: 30px;
-    }
-
-    .feature-card h3,
-    .subject-card h3 {
-      margin-bottom: 8px;
-    }
-
-    .feature-card p,
-    .subject-card p {
-      line-height: 1.6;
-    }
-
-    .feature-card a {
-      text-decoration: none;
-      font-weight: bold;
-      color: #333;
-    }
-
-    .subject-card span {
-      font-size: 30px;
-    }
-
-    .study-btn,
-    .pdf-btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 9px 14px;
-      border-radius: 9px;
-      background: #333;
-      color: white;
-      text-decoration: none;
-      font-size: 14px;
-    }
-
-    .syllabus-tabs {
-      display: flex;
-      justify-content: center;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin-bottom: 25px;
-    }
-
-    .syllabus-tab {
-      border: none;
-      padding: 11px 17px;
-      border-radius: 10px;
-      background: #eee;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .syllabus-tab.active {
-      background: #333;
-      color: white;
-    }
-
-    .syllabus-content {
-      display: none;
-    }
-
-    .syllabus-content.active {
-      display: block;
-    }
-
-    .syllabus-card {
-      background: #fff;
-      padding: 23px;
-      margin-bottom: 16px;
-      border-radius: 15px;
-      box-shadow: 0 4px 14px rgba(0,0,0,0.07);
-    }
-
-    .syllabus-card li {
-      margin-bottom: 8px;
-      line-height: 1.5;
-    }
-
-    .test-box {
-      max-width: 850px;
-      margin: auto;
-      padding: 25px;
-      border-radius: 18px;
-      background: #f5f5f5;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-    }
-
-    .test-icon {
-      font-size: 35px;
-    }
-
-    .test-btn,
-    .premium-btn {
-      padding: 12px 18px;
-      border: none;
-      border-radius: 10px;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    .premium {
-      max-width: 1100px;
-      margin: 30px auto;
-      border-radius: 20px;
-      background: linear-gradient(135deg, #222, #444);
-      color: white;
-      text-align: center;
-    }
-
-    .premium-content {
-      padding: 45px 20px;
-    }
-
-    .premium-badge {
-      display: inline-block;
-      padding: 7px 13px;
-      border-radius: 20px;
-      background: #f1c40f;
-      color: #222;
-      font-weight: bold;
-    }
-
-    .premium h2 {
-      font-size: 30px;
-    }
-
-    .premium p {
-      max-width: 600px;
-      margin: auto auto 20px;
-      line-height: 1.7;
-    }
-
-    .premium-btn {
-      background: white;
-      color: #222;
-    }
-
-    .contact form {
-      max-width: 650px;
-      margin: auto;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .contact input,
-    .contact textarea {
-      width: 100%;
-      box-sizing: border-box;
-      padding: 13px;
-      border: 1px solid #ccc;
-      border-radius: 10px;
-      font-size: 15px;
-    }
-
-    .contact textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .contact button {
-      padding: 13px;
-      border: none;
-      border-radius: 10px;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    #topBtn {
-      position: fixed;
-      right: 18px;
-      bottom: 18px;
-      display: none;
-      padding: 11px 14px;
-      border: none;
-      border-radius: 50%;
-      background: #333;
-      color: white;
-      cursor: pointer;
-      font-size: 18px;
-      z-index: 999;
-    }
-
-    /* DARK MODE */
-
-    body.dark-home {
-      background: #121212;
-      color: #eee;
-    }
-
-    body.dark-home .hero {
-      background: linear-gradient(135deg, #292929, #181818);
-    }
-
-    body.dark-home .stat-card,
-    body.dark-home .feature-card,
-    body.dark-home .subject-card,
-    body.dark-home .syllabus-card,
-    body.dark-home .test-box {
-      background: #1e1e1e;
-      color: #eee;
-      border-color: #333;
-    }
-
-    body.dark-home .secondary,
-    body.dark-home .syllabus-tab {
-      background: #292929;
-      color: #eee;
-      border-color: #555;
-    }
-
-    body.dark-home .feature-card a {
-      color: #eee;
-    }
-
-    @media (max-width: 800px) {
-
-      .feature-grid,
-      .subject-grid {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .stats {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-    }
-
-    @media (max-width: 600px) {
-
-      .hero {
-        padding: 50px 15px;
-      }
-
-      .hero h1 {
-        font-size: 34px;
-      }
-
-      .hero p {
-        font-size: 15px;
-      }
-
-      .feature-grid,
-      .subject-grid,
-      .stats {
-        grid-template-columns: 1fr;
-      }
-
-      .section-title h2 {
-        font-size: 26px;
-      }
-
-      .test-box {
-        flex-direction: column;
-        text-align: center;
-      }
-
-      .home-section {
-        padding: 35px 12px;
-      }
-
-    }
-  </style>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>UPSC Shiksha | Complete UPSC Preparation</title>
+
+<meta name="description"
+content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock tests, current affairs and study timetable.">
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.home-section{
+  max-width:1100px;
+  margin:auto;
+  padding:45px 16px;
+}
+
+.hero{
+  padding:70px 20px;
+  text-align:center;
+  background:linear-gradient(135deg,#fff3cd,#ffffff);
+}
+
+.badge{
+  display:inline-block;
+  padding:8px 15px;
+  border-radius:20px;
+  background:#333;
+  color:white;
+  font-size:14px;
+  margin-bottom:18px;
+}
+
+.hero h1{
+  font-size:44px;
+  line-height:1.2;
+  margin:10px 0;
+}
+
+.hero h1 span{
+  color:#d35400;
+}
+
+.hero p{
+  max-width:700px;
+  margin:18px auto;
+  line-height:1.7;
+  font-size:17px;
+}
+
+.hero-buttons{
+  display:flex;
+  justify-content:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.btn{
+  display:inline-block;
+  padding:13px 20px;
+  border-radius:11px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+.primary{
+  background:#333;
+  color:white;
+}
+
+.secondary{
+  background:white;
+  color:#333;
+  border:1px solid #333;
+}
+
+/* STATS */
+
+.stats{
+  max-width:1100px;
+  margin:auto;
+  padding:25px 16px;
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.stat-card{
+  text-align:center;
+  padding:20px;
+  border-radius:15px;
+  background:#f7f7f7;
+}
+
+.stat-card h2{
+  margin:0;
+  font-size:27px;
+}
+
+.stat-card p{
+  margin-bottom:0;
+}
+
+/* TITLES */
+
+.section-title{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.section-title span{
+  font-size:13px;
+  font-weight:bold;
+  letter-spacing:1px;
+}
+
+.section-title h2{
+  font-size:30px;
+  margin:8px 0;
+}
+
+.section-title p{
+  line-height:1.6;
+}
+
+/* GRIDS */
+
+.feature-grid,
+.subject-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.feature-card,
+.subject-card{
+  background:white;
+  padding:22px;
+  border-radius:16px;
+  box-shadow:0 4px 16px rgba(0,0,0,0.08);
+  border:1px solid #eee;
+}
+
+.feature-card .icon{
+  font-size:30px;
+}
+
+.feature-card h3,
+.subject-card h3{
+  margin-bottom:8px;
+}
+
+.feature-card p,
+.subject-card p{
+  line-height:1.6;
+}
+
+.feature-card a{
+  text-decoration:none;
+  font-weight:bold;
+  color:#333;
+}
+
+.subject-card span{
+  font-size:30px;
+}
+
+/* BUTTONS */
+
+.study-btn,
+.pdf-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:9px 14px;
+  border-radius:9px;
+  background:#333;
+  color:white;
+  text-decoration:none;
+  font-size:14px;
+}
+
+/* SYLLABUS */
+
+.syllabus-tabs{
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-bottom:25px;
+}
+
+.syllabus-tab{
+  border:none;
+  padding:11px 17px;
+  border-radius:10px;
+  background:#eee;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.syllabus-tab.active{
+  background:#333;
+  color:white;
+}
+
+.syllabus-content{
+  display:none;
+}
+
+.syllabus-content.active{
+  display:block;
+}
+
+.syllabus-card{
+  background:#fff;
+  padding:23px;
+  margin-bottom:16px;
+  border-radius:15px;
+  box-shadow:0 4px 14px rgba(0,0,0,0.07);
+}
+
+.syllabus-card h3{
+  margin-top:0;
+}
+
+.syllabus-card li{
+  margin-bottom:8px;
+  line-height:1.5;
+}
+
+/* TEST */
+
+.test-box{
+  max-width:850px;
+  margin:auto;
+  padding:25px;
+  border-radius:18px;
+  background:#f5f5f5;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.test-icon{
+  font-size:35px;
+}
+
+.test-btn,
+.premium-btn{
+  display:inline-block;
+  padding:12px 18px;
+  border:none;
+  border-radius:10px;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+}
+
+/* PREMIUM */
+
+.premium{
+  max-width:1100px;
+  margin:30px auto;
+  border-radius:20px;
+  background:linear-gradient(135deg,#222,#444);
+  color:white;
+  text-align:center;
+}
+
+.premium-content{
+  padding:45px 20px;
+}
+
+.premium-badge{
+  display:inline-block;
+  padding:7px 13px;
+  border-radius:20px;
+  background:#f1c40f;
+  color:#222;
+  font-weight:bold;
+}
+
+.premium h2{
+  font-size:30px;
+}
+
+.premium p{
+  max-width:600px;
+  margin:auto auto 20px;
+  line-height:1.7;
+}
+
+.premium-btn{
+  background:white;
+  color:#222;
+}
+
+/* CONTACT */
+
+.contact form{
+  max-width:650px;
+  margin:auto;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.contact input,
+.contact textarea{
+  width:100%;
+  box-sizing:border-box;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:10px;
+  font-size:15px;
+}
+
+.contact textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+.contact button{
+  padding:13px;
+  border:none;
+  border-radius:10px;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+/* BACK TO TOP */
+
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:none;
+  padding:11px 14px;
+  border:none;
+  border-radius:50%;
+  background:#333;
+  color:white;
+  cursor:pointer;
+  font-size:18px;
+  z-index:999;
+}
+
+/* DARK MODE */
+
+body.dark-home{
+  background:#121212;
+  color:#eee;
+}
+
+body.dark-home .hero{
+  background:linear-gradient(135deg,#292929,#181818);
+}
+
+body.dark-home .stat-card,
+body.dark-home .feature-card,
+body.dark-home .subject-card,
+body.dark-home .syllabus-card,
+body.dark-home .test-box{
+  background:#1e1e1e;
+  color:#eee;
+  border-color:#333;
+}
+
+body.dark-home .secondary,
+body.dark-home .syllabus-tab{
+  background:#292929;
+  color:#eee;
+  border-color:#555;
+}
+
+body.dark-home .feature-card a{
+  color:#eee;
+}
+
+body.dark-home .contact input,
+body.dark-home .contact textarea{
+  background:#1e1e1e;
+  color:#eee;
+  border-color:#555;
+}
+
+body.dark-home .section-title p,
+body.dark-home .hero p,
+body.dark-home .feature-card p,
+body.dark-home .subject-card p{
+  color:#ddd;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .feature-grid,
+  .subject-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:600px){
+
+  .hero{
+    padding:50px 15px;
+  }
+
+  .hero h1{
+    font-size:34px;
+  }
+
+  .hero p{
+    font-size:15px;
+  }
+
+  .feature-grid,
+  .subject-grid,
+  .stats{
+    grid-template-columns:1fr;
+  }
+
+  .section-title h2{
+    font-size:26px;
+  }
+
+  .test-box{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  .home-section{
+    padding:35px 12px;
+  }
+
+  .syllabus-tabs{
+    gap:7px;
+  }
+
+  .syllabus-tab{
+    padding:10px 13px;
+  }
+
+}
+
+/* SMALL PHONES */
+
+@media(max-width:380px){
+
+  .hero h1{
+    font-size:30px;
+  }
+
+  .hero-buttons{
+    flex-direction:column;
+  }
+
+  .btn{
+    width:100%;
+    box-sizing:border-box;
+  }
+
+}
+
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-
-  <header class="header">
-
-    <div class="logo">
-      <span>🇮🇳</span>
-      UPSC <b>Shiksha</b>
-    </div>
-
-    <button class="menu-btn" id="menuBtn">☰</button>
-
-    <nav id="navMenu">
-      <a href="#home">Home</a>
-      <a href="#features">Features</a>
-      <a href="#syllabus">Syllabus</a>
-      <a href="#free">Free Material</a>
-      <a href="#tests">Tests</a>
-      <a href="#premium">Premium</a>
-      <a href="#contact">Contact</a>
-    </nav>
-
-  </header>
-
-
-  <!-- HERO -->
-
-  <section class="hero" id="home">
-
-    <div class="hero-content">
-
-      <div class="badge">
-        🎯 Your UPSC Preparation Starts Here
-      </div>
-
-      <h1>
-        Prepare Smart.<br>
-        <span>Crack UPSC.</span>
-      </h1>
-
-      <p>
-        Free study material, complete syllabus, PYQs,
-        mock tests, PDFs and a smart study timetable —
-        all in one place.
-      </p>
-
-      <div class="hero-buttons">
-
-        <a href="#free" class="btn primary">
-          📚 Start Studying
-        </a>
-
-        <a href="#tests" class="btn secondary">
-          📝 Take Free Test
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- STATS -->
-
-  <section class="stats">
-
-    <div class="stat-card">
-      <h2>100%</h2>
-      <p>Free Material</p>
-    </div>
-
-    <div class="stat-card">
-      <h2>15+</h2>
-      <p>Subjects</p>
-    </div>
-
-    <div class="stat-card">
-      <h2>1000+</h2>
-      <p>Questions</p>
-    </div>
-
-    <div class="stat-card">
-      <h2>24/7</h2>
-      <p>Learning</p>
-    </div>
-
-  </section>
-
-
-  <!-- FEATURES -->
-
-  <section class="home-section" id="features">
-
-    <div class="section-title">
-
-      <span>WHY UPSC SHIKSHA?</span>
-
-      <h2>Everything You Need</h2>
-
-      <p>
-        Build your UPSC preparation with organized
-        resources and regular practice.
-      </p>
-
-    </div>
-
-    <div class="feature-grid">
-
-      <div class="feature-card">
-
-        <div class="icon">📚</div>
-
-        <h3>Complete Syllabus</h3>
-
-        <p>
-          Prelims and Mains syllabus organized
-          subject-wise.
-        </p>
-
-        <a href="prelims.html">
-          Explore →
-        </a>
-
-      </div>
-
-
-      <div class="feature-card">
-
-        <div class="icon">📄</div>
-
-        <h3>PYQ Collection</h3>
-
-        <p>
-          Practice previous year questions
-          topic-wise and year-wise.
-        </p>
-
-        <a href="pyq.html">
-          Practice →
-        </a>
-
-      </div>
-
-
-      <div class="feature-card">
-
-        <div class="icon">📝</div>
-
-        <h3>Mock Tests</h3>
-
-        <p>
-          Test your preparation with timed
-          practice tests.
-        </p>
-
-        <a href="#tests">
-          Take Test →
-        </a>
-
-      </div>
-
-
-      <div class="feature-card">
-
-        <div class="icon">📥</div>
-
-        <h3>PDF Resources</h3>
-
-        <p>
-          Read online and download useful
-          study resources.
-        </p>
-
-        <a href="prelims.html">
-          View Resources →
-        </a>
-
-      </div>
-
-
-      <div class="feature-card">
-
-        <div class="icon">⏰</div>
-
-        <h3>Study Timetable</h3>
-
-        <p>
-          Follow a practical daily UPSC
-          study schedule.
-        </p>
-
-        <a href="timetable.html">
-  View Plan →
-        </a>
-
-      </div>
-
-
-      <div class="feature-card">
-
-        <div class="icon">📊</div>
-
-        <h3>Progress Tracking</h3>
-
-        <p>
-          Track your tests, scores and
-          preparation progress.
-        </p>
-
-      <a href="progress.html">
-  📊 Track Progress →
-      </a>
-
-      </div>
-      <div class="feature-card">
-  <div class="icon">📰</div>
-
-  <h3>Current Affairs</h3>
-
-  <p>
-    Daily and monthly current affairs for UPSC Prelims and Mains.
-  </p>
-
-  <a href="current-affairs.html">
-    📰 Read Current Affairs →
-  </a>
-</div>
-
-    </div>
-
-  </section>
-
-
-  <!-- SYLLABUS -->
-
-  <section class="home-section" id="syllabus">
-
-    <div class="section-title">
-
-      <span>UPSC CSE SYLLABUS</span>
-
-      <h2>Complete UPSC Syllabus</h2>
-
-      <p>
-        Prelims, CSAT and Mains syllabus —
-        organized for easy preparation.
-      </p>
-
-    </div>
-
-
-    <div class="syllabus-tabs">
-
-      <button class="syllabus-tab active" data-tab="prelims">
-        🟠 Prelims
-      </button>
-
-      <button class="syllabus-tab" data-tab="csat">
-        🔵 CSAT
-      </button>
-
-      <button class="syllabus-tab" data-tab="mains">
-        🟢 Mains
-      </button>
-
-    </div>
-
-
-    <!-- PRELIMS -->
-
-    <div class="syllabus-content active" id="prelims">
-
-      <div class="syllabus-card">
-
-        <h3>📚 General Studies Paper-I</h3>
-
-        <ul>
-          <li>Indian History & Indian National Movement</li>
-          <li>Indian & World Geography</li>
-          <li>Indian Polity & Governance</li>
-          <li>Economic & Social Development</li>
-          <li>Environment, Ecology & Biodiversity</li>
-          <li>General Science</li>
-          <li>Current Affairs</li>
-        </ul>
-
-        <a href="prelims.html" class="pdf-btn">
-          📚 View Full Prelims Syllabus
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- CSAT -->
-
-    <div class="syllabus-content" id="csat">
-
-      <div class="syllabus-card">
-
-        <h3>🧠 CSAT – General Studies Paper-II</h3>
-
-        <ul>
-          <li>Reading Comprehension</li>
-          <li>Interpersonal & Communication Skills</li>
-          <li>Logical Reasoning & Analytical Ability</li>
-          <li>Decision Making & Problem Solving</li>
-          <li>General Mental Ability</li>
-          <li>Basic Numeracy</li>
-          <li>Data Interpretation</li>
-        </ul>
-
-        <a href="csat.html" class="pdf-btn">
-          🧠 View Full CSAT Syllabus
-        </a>
-
-      </div>
-
-    </div>
-
-
-    <!-- MAINS -->
-
-    <div class="syllabus-content" id="mains">
-
-      <div class="syllabus-card">
-
-        <h3>✍️ Mains – Essay</h3>
-
-        <p>
-          Candidates may be required to write essays
-          on multiple topics.
-        </p>
-
-      </div>
-
-
-      <div class="syllabus-card">
-
-        <h3>📖 General Studies-I</h3>
-
-        <ul>
-          <li>Indian Heritage & Culture</li>
-          <li>History & Geography of the World and Society</li>
-        </ul>
-
-      </div>
-
-
-      <div class="syllabus-card">
-
-        <h3>🏛️ General Studies-II</h3>
-
-        <ul>
-          <li>Governance</li>
-          <li>Constitution</li>
-          <li>Polity</li>
-          <li>Social Justice</li>
-          <li>International Relations</li>
-        </ul>
-
-      </div>
-
-
-      <div class="syllabus-card">
-
-        <h3>💰 General Studies-III</h3>
-
-        <ul>
-          <li>Technology</li>
-          <li>Economic Development</li>
-          <li>Biodiversity & Environment</li>
-          <li>Security & Disaster Management</li>
-        </ul>
-
-      </div>
-
-
-      <div class="syllabus-card">
-
-        <h3>⚖️ General Studies-IV</h3>
-
-        <ul>
-          <li>Ethics</li>
-          <li>Integrity</li>
-          <li>Aptitude</li>
-        </ul>
-
-      </div>
-
-
-      <div class="syllabus-card">
-
-        <h3>🎓 Optional Subject</h3>
-
-        <p>
-          One optional subject with Paper-I and Paper-II.
-        </p>
-
-      </div>
-
-
-      <a href="mains.html" class="pdf-btn">
-        ✍️ View Full Mains Syllabus
-      </a>
-
-    </div>
-
-  </section>
-
-
-  <!-- FREE MATERIAL -->
-
-  <section class="home-section" id="free">
-
-    <div class="section-title">
-
-      <span>FREE RESOURCES</span>
-
-      <h2>Free Study Material</h2>
-
-      <p>
-        Start your preparation without spending money.
-      </p>
-
-    </div>
-
-
-    <div class="subject-grid">
-
-      <div class="subject-card">
-
-        <span>🏛️</span>
-
-        <h3>Polity</h3>
-
-        <p>
-          Constitution, Parliament, Judiciary & more
-        </p>
-
-        <a href="polity.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-
-      <div class="subject-card">
-
-        <span>📜</span>
-
-        <h3>History</h3>
-
-        <p>
-          Ancient, Medieval & Modern India
-        </p>
-
-        <a href="history.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-
-      <div class="subject-card">
-
-        <span>🌍</span>
-
-        <h3>Geography</h3>
-
-        <p>
-          Indian & World Geography
-        </p>
-
-        <a href="geography.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-
-      <div class="subject-card">
-
-        <span>💰</span>
-
-        <h3>Economy</h3>
-
-        <p>
-          Indian Economy & basic concepts
-        </p>
-
-        <a href="economy.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-
-      <div class="subject-card">
-
-        <span>🌱</span>
-
-        <h3>Environment</h3>
-
-        <p>
-          Ecology, biodiversity & climate
-        </p>
-
-        <a href="environment.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-
-      <div class="subject-card">
-
-        <span>🔬</span>
-
-        <h3>Science & Tech</h3>
-
-        <p>
-          Science, Space & Technology
-        </p>
-
-        <a href="science.html" class="study-btn">
-          Study Free
-        </a>
-
-      </div>
-
-    </div>
-
-  </section>
-
-
-  <!-- TESTS -->
-
-  <section class="home-section" id="tests">
-
-    <div class="section-title">
-
-      <span>TEST YOURSELF</span>
-
-      <h2>Free Mock Tests</h2>
-
-      <p>
-        Practice regularly and improve your score.
-      </p>
-
-    </div>
-
-
-    <div class="test-box">
-
-  <div>
-    <span class="test-icon">📝</span>
-
-    <h3>UPSC General Studies Mock Test</h3>
-
-    <p>
-      Test your UPSC preparation with our free practice test.
-    </p>
-
-    <div style="
-      display:flex;
-      flex-wrap:wrap;
-      gap:10px;
-      margin-top:15px;
-    ">
-
-      <span style="
-        background:#eff6ff;
-        color:#1d4ed8;
-        padding:8px 12px;
-        border-radius:8px;
-        font-weight:bold;
-      ">
-        📝 25 Questions
-      </span>
-
-      <span style="
-        background:#fef2f2;
-        color:#dc2626;
-        padding:8px 12px;
-        border-radius:8px;
-        font-weight:bold;
-      ">
-        ⏱️ 20 Minutes
-      </span>
-
-      <span style="
-        background:#f0fdf4;
-        color:#15803d;
-        padding:8px 12px;
-        border-radius:8px;
-        font-weight:bold;
-      ">
-        📊 Instant Result
-      </span>
-
-    </div>
+<!-- =========================
+     HEADER
+========================= -->
+
+<header class="header">
+
+  <div class="logo">
+    <span>🇮🇳</span>
+    UPSC <b>Shiksha</b>
   </div>
 
-  <a href="test.html" class="test-btn">
-    Start Test →
-  </a>
+  <button class="menu-btn" id="menuBtn">☰</button>
 
+  <nav id="navMenu">
+
+    <a href="#home">Home</a>
+    <a href="#features">Features</a>
+    <a href="#syllabus">Syllabus</a>
+    <a href="#free">Free Material</a>
+    <a href="#tests">Tests</a>
+    <a href="#premium">Premium</a>
+    <a href="#contact">Contact</a>
+
+  </nav>
+
+</header>
+
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero" id="home">
+
+  <div class="hero-content">
+
+    <div class="badge">
+      🎯 Your UPSC Preparation Starts Here
     </div>
 
-  </section>
-
-
-  <!-- PREMIUM -->
-
-  <section class="home-section premium" id="premium">
-
-    <div class="premium-content">
-
-      <span class="premium-badge">
-        💎 PREMIUM
-      </span>
-
-      <h2>
-        Take Your Preparation<br>
-        To The Next Level
-      </h2>
-
-      <p>
-        Advanced test series, detailed explanations,
-        performance analysis and premium resources.
-      </p>
-
-      <button class="premium-btn">
-        Explore Premium
-      </button>
-
-    </div>
-
-  </section>
-
-
-  <!-- CONTACT -->
-
-  <section class="home-section contact" id="contact">
-
-    <div class="section-title">
-
-      <span>GET IN TOUCH</span>
-
-      <h2>Contact UPSC Shiksha</h2>
-
-      <p>
-        Have a question or suggestion? Contact us.
-      </p>
-
-    </div>
-
-
-    <form id="contactForm">
-
-      <input
-        type="text"
-        placeholder="Your Name"
-        required
-      >
-
-      <input
-        type="email"
-        placeholder="Your Email"
-        required
-      >
-
-      <textarea
-        placeholder="Your Message"
-        required
-      ></textarea>
-
-      <button type="submit">
-        Send Message
-      </button>
-
-    </form>
-
-  </section>
-
-
-  <!-- FOOTER -->
-
-  <footer>
-
-    <div class="footer-logo">
-      🇮🇳 UPSC <b>Shiksha</b>
-    </div>
+    <h1>
+      Prepare Smart.<br>
+      <span>Crack UPSC.</span>
+    </h1>
 
     <p>
-      Your Complete UPSC Preparation Platform
+      Free study material, complete syllabus, PYQs,
+      mock tests, PDFs, current affairs and a smart
+      study timetable — all in one place.
     </p>
 
-    <div class="footer-links">
+    <div class="hero-buttons">
 
-      <a href="#home">Home</a>
-      <a href="#syllabus">Syllabus</a>
-      <a href="#free">Study Material</a>
-      <a href="#tests">Tests</a>
-      <a href="#premium">Premium</a>
+      <a href="#free" class="btn primary">
+        📚 Start Studying
+      </a>
+
+      <a href="#tests" class="btn secondary">
+        📝 Take Free Test
+      </a>
 
     </div>
 
-    <p class="copyright">
-      © 2026 UPSC Shiksha. All Rights Reserved.
+  </div>
+
+</section>
+
+
+<!-- =========================
+     STATS
+========================= -->
+
+<section class="stats">
+
+  <div class="stat-card">
+    <h2>100%</h2>
+    <p>Free Material</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>15+</h2>
+    <p>Subjects</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>1000+</h2>
+    <p>Practice Questions</p>
+  </div>
+
+  <div class="stat-card">
+    <h2>24/7</h2>
+    <p>Learning</p>
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FEATURES
+========================= -->
+
+<section class="home-section" id="features">
+
+  <div class="section-title">
+
+    <span>WHY UPSC SHIKSHA?</span>
+
+    <h2>Everything You Need</h2>
+
+    <p>
+      Build your UPSC preparation with organized
+      resources and regular practice.
     </p>
 
-  </footer>
+  </div>
 
 
-  <!-- BACK TO TOP -->
-
-  <button id="topBtn">↑</button>
+  <div class="feature-grid">
 
 
-  <!-- SCRIPT -->
+    <div class="feature-card">
 
-  <script src="script.js"></script>
+      <div class="icon">📚</div>
 
-  <script>
+      <h3>Complete Syllabus</h3>
 
-    /* SYLLABUS TABS */
+      <p>
+        Prelims and Mains syllabus organized
+        subject-wise.
+      </p>
 
-    const syllabusTabs =
-      document.querySelectorAll(".syllabus-tab");
+      <a href="prelims.html">
+        Explore →
+      </a>
 
-    const syllabusContents =
-      document.querySelectorAll(".syllabus-content");
-
-
-    syllabusTabs.forEach(function(tab) {
-
-      tab.addEventListener("click", function() {
-
-        const target =
-          this.getAttribute("data-tab");
+    </div>
 
 
-        syllabusTabs.forEach(function(item) {
-          item.classList.remove("active");
-        });
+    <div class="feature-card">
+
+      <div class="icon">📄</div>
+
+      <h3>PYQ Collection</h3>
+
+      <p>
+        Practice previous year questions
+        topic-wise and year-wise.
+      </p>
+
+      <a href="pyq.html">
+        Practice →
+      </a>
+
+    </div>
 
 
-        syllabusContents.forEach(function(content) {
-          content.classList.remove("active");
-        });
+    <div class="feature-card">
+
+      <div class="icon">📝</div>
+
+      <h3>Mock Tests</h3>
+
+      <p>
+        Test your preparation with timed
+        practice tests.
+      </p>
+
+      <a href="#tests">
+        Take Test →
+      </a>
+
+    </div>
 
 
-        this.classList.add("active");
+    <div class="feature-card">
 
-        document
-          .getElementById(target)
-          .classList.add("active");
+      <div class="icon">📥</div>
 
-      });
+      <h3>PDF Resources</h3>
+
+      <p>
+        Read online and download useful
+        study resources.
+      </p>
+
+      <a href="prelims.html">
+        View Resources →
+      </a>
+
+    </div>
+
+
+    <div class="feature-card">
+
+      <div class="icon">⏰</div>
+
+      <h3>Study Timetable</h3>
+
+      <p>
+        Follow a practical daily UPSC
+        study schedule.
+      </p>
+
+      <a href="timetable.html">
+        View Plan →
+      </a>
+
+    </div>
+
+
+    <div class="feature-card">
+
+      <div class="icon">📊</div>
+
+      <h3>Progress Tracking</h3>
+
+      <p>
+        Track your tests, scores and
+        preparation progress.
+      </p>
+
+      <a href="progress.html">
+        📊 Track Progress →
+      </a>
+
+    </div>
+
+
+    <div class="feature-card">
+
+      <div class="icon">📰</div>
+
+      <h3>Current Affairs</h3>
+
+      <p>
+        Daily and monthly current affairs
+        for UPSC Prelims and Mains.
+      </p>
+
+      <a href="current-affairs.html">
+        📰 Read Current Affairs →
+      </a>
+
+    </div>
+
+
+    <div class="feature-card">
+
+      <div class="icon">🧠</div>
+
+      <h3>CSAT Practice</h3>
+
+      <p>
+        Practice comprehension, reasoning,
+        numeracy and data interpretation.
+      </p>
+
+      <a href="csat-pyq.html">
+        🧠 Practice CSAT →
+      </a>
+
+    </div>
+
+
+    <div class="feature-card">
+
+      <div class="icon">✍️</div>
+
+      <h3>Mains Practice</h3>
+
+      <p>
+        Practice GS-I, GS-II, GS-III and
+        GS-IV model questions.
+      </p>
+
+      <a href="mains-gs1-pyq.html">
+        ✍️ Practice Mains →
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SYLLABUS
+========================= -->
+
+<section class="home-section" id="syllabus">
+
+  <div class="section-title">
+
+    <span>UPSC CSE SYLLABUS</span>
+
+    <h2>Complete UPSC Syllabus</h2>
+
+    <p>
+      Prelims, CSAT and Mains syllabus —
+      organized for easy preparation.
+    </p>
+
+  </div>
+
+
+  <div class="syllabus-tabs">
+
+    <button class="syllabus-tab active" data-tab="prelims">
+      🟠 Prelims
+    </button>
+
+    <button class="syllabus-tab" data-tab="csat">
+      🔵 CSAT
+    </button>
+
+    <button class="syllabus-tab" data-tab="mains">
+      🟢 Mains
+    </button>
+
+  </div>
+
+
+  <!-- PRELIMS -->
+
+  <div class="syllabus-content active" id="prelims">
+
+    <div class="syllabus-card">
+
+      <h3>📚 General Studies Paper-I</h3>
+
+      <ul>
+
+        <li>Current Events of National and International Importance</li>
+
+        <li>History of India and Indian National Movement</li>
+
+        <li>Indian and World Geography</li>
+
+        <li>Indian Polity and Governance</li>
+
+        <li>Economic and Social Development</li>
+
+        <li>Environment, Ecology, Biodiversity and Climate Change</li>
+
+        <li>General Science</li>
+
+      </ul>
+
+      <a href="prelims.html" class="pdf-btn">
+        📚 View Full Prelims Syllabus
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- CSAT -->
+
+  <div class="syllabus-content" id="csat">
+
+    <div class="syllabus-card">
+
+      <h3>🧠 CSAT – General Studies Paper-II</h3>
+
+      <ul>
+
+        <li>Comprehension</li>
+
+        <li>Interpersonal Skills including Communication Skills</li>
+
+        <li>Logical Reasoning and Analytical Ability</li>
+
+        <li>Decision Making and Problem Solving</li>
+
+        <li>General Mental Ability</li>
+
+        <li>Basic Numeracy</li>
+
+        <li>Data Interpretation</li>
+
+      </ul>
+
+      <a href="csat.html" class="pdf-btn">
+        🧠 View Full CSAT Syllabus
+      </a>
+
+    </div>
+
+  </div>
+
+
+  <!-- MAINS -->
+
+  <div class="syllabus-content" id="mains">
+
+
+    <div class="syllabus-card">
+
+      <h3>🗣️ Paper-A — Indian Language</h3>
+
+      <p>
+        One Indian language selected by the candidate
+        from the languages included in the Eighth Schedule.
+        This is a qualifying paper.
+      </p>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>🇬🇧 Paper-B — English</h3>
+
+      <p>
+        English language paper testing comprehension,
+        précis writing, usage and vocabulary, and short essays.
+        This is a qualifying paper.
+      </p>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>✍️ Paper-I — Essay</h3>
+
+      <p>
+        Candidates may be required to write essays
+        on multiple topics.
+      </p>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>📖 Paper-II — General Studies-I</h3>
+
+      <ul>
+
+        <li>Indian Heritage and Culture</li>
+
+        <li>History and Geography of the World</li>
+
+        <li>Society</li>
+
+      </ul>
+
+      <a href="mains-gs1-pyq.html" class="pdf-btn">
+        📖 GS-I Practice
+      </a>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>🏛️ Paper-III — General Studies-II</h3>
+
+      <ul>
+
+        <li>Governance</li>
+
+        <li>Constitution</li>
+
+        <li>Polity</li>
+
+        <li>Social Justice</li>
+
+        <li>International Relations</li>
+
+      </ul>
+
+      <a href="mains-gs2-pyq.html" class="pdf-btn">
+        🏛️ GS-II Practice
+      </a>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>💰 Paper-IV — General Studies-III</h3>
+
+      <ul>
+
+        <li>Technology</li>
+
+        <li>Economic Development</li>
+
+        <li>Biodiversity and Environment</li>
+
+        <li>Security and Disaster Management</li>
+
+      </ul>
+
+      <a href="mains-gs3-pyq.html" class="pdf-btn">
+        💰 GS-III Practice
+      </a>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>⚖️ Paper-V — General Studies-IV</h3>
+
+      <ul>
+
+        <li>Ethics</li>
+
+        <li>Integrity</li>
+
+        <li>Aptitude</li>
+
+        <li>Emotional Intelligence</li>
+
+        <li>Probity in Governance</li>
+
+      </ul>
+
+      <a href="mains-gs4-pyq.html" class="pdf-btn">
+        ⚖️ GS-IV Practice
+      </a>
+
+    </div>
+
+
+    <div class="syllabus-card">
+
+      <h3>🎓 Paper-VI & VII — Optional Subject</h3>
+
+      <p>
+        One optional subject with two papers.
+        Candidates choose the optional subject
+        according to UPSC rules.
+      </p>
+
+    </div>
+
+
+    <a href="mains.html" class="pdf-btn">
+      ✍️ View Full Mains Syllabus
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     FREE MATERIAL
+========================= -->
+
+<section class="home-section" id="free">
+
+  <div class="section-title">
+
+    <span>FREE RESOURCES</span>
+
+    <h2>Free Study Material</h2>
+
+    <p>
+      Start your preparation without spending money.
+    </p>
+
+  </div>
+
+
+  <div class="subject-grid">
+
+
+    <div class="subject-card">
+
+      <span>🏛️</span>
+
+      <h3>Polity</h3>
+
+      <p>
+        Constitution, Parliament, Judiciary & more
+      </p>
+
+      <a href="polity.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>📜</span>
+
+      <h3>History</h3>
+
+      <p>
+        Ancient, Medieval & Modern India
+      </p>
+
+      <a href="history.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>🌍</span>
+
+      <h3>Geography</h3>
+
+      <p>
+        Indian & World Geography
+      </p>
+
+      <a href="geography.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>💰</span>
+
+      <h3>Economy</h3>
+
+      <p>
+        Indian Economy & basic concepts
+      </p>
+
+      <a href="economy.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>🌱</span>
+
+      <h3>Environment</h3>
+
+      <p>
+        Ecology, biodiversity & climate
+      </p>
+
+      <a href="environment.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>🔬</span>
+
+      <h3>Science & Technology</h3>
+
+      <p>
+        Science, Space & Technology
+      </p>
+
+      <a href="science.html" class="study-btn">
+        Study Free
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>📰</span>
+
+      <h3>Current Affairs</h3>
+
+      <p>
+        Daily and monthly current affairs
+        for UPSC preparation.
+      </p>
+
+      <a href="current-affairs.html" class="study-btn">
+        Read Current Affairs
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>📚</span>
+
+      <h3>PYQs</h3>
+
+      <p>
+        Prelims, CSAT and Mains
+        previous year practice.
+      </p>
+
+      <a href="pyq.html" class="study-btn">
+        Practice PYQs
+      </a>
+
+    </div>
+
+
+    <div class="subject-card">
+
+      <span>⏰</span>
+
+      <h3>Study Timetable</h3>
+
+      <p>
+        Follow a structured daily
+        preparation schedule.
+      </p>
+
+      <a href="timetable.html" class="study-btn">
+        View Timetable
+      </a>
+
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TESTS
+========================= -->
+
+<section class="home-section" id="tests">
+
+  <div class="section-title">
+
+    <span>TEST YOURSELF</span>
+
+    <h2>Free Mock Tests</h2>
+
+    <p>
+      Practice regularly and improve your preparation.
+    </p>
+
+  </div>
+
+
+  <div class="test-box">
+
+    <div>
+
+      <span class="test-icon">📝</span>
+
+      <h3>UPSC General Studies Mock Test</h3>
+
+      <p>
+        Test your UPSC preparation with our
+        free practice test.
+      </p>
+
+      <div style="
+        display:flex;
+        flex-wrap:wrap;
+        gap:10px;
+        margin-top:15px;
+      ">
+
+        <span style="
+          background:#eff6ff;
+          color:#1d4ed8;
+          padding:8px 12px;
+          border-radius:8px;
+          font-weight:bold;
+        ">
+          📝 25 Questions
+        </span>
+
+        <span style="
+          background:#fef2f2;
+          color:#dc2626;
+          padding:8px 12px;
+          border-radius:8px;
+          font-weight:bold;
+        ">
+          ⏱️ 20 Minutes
+        </span>
+
+        <span style="
+          background:#f0fdf4;
+          color:#15803d;
+          padding:8px 12px;
+          border-radius:8px;
+          font-weight:bold;
+        ">
+          📊 Instant Result
+        </span>
+
+      </div>
+
+    </div>
+
+
+    <a href="test.html" class="test-btn">
+      Start Test →
+    </a>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PREMIUM
+========================= -->
+
+<section class="home-section premium" id="premium">
+
+  <div class="premium-content">
+
+    <span class="premium-badge">
+      💎 PREMIUM
+    </span>
+
+    <h2>
+      Take Your Preparation<br>
+      To The Next Level
+    </h2>
+
+    <p>
+      Advanced test series, detailed explanations,
+      performance analysis and premium resources.
+    </p>
+
+    <button class="premium-btn">
+      Explore Premium
+    </button>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     CONTACT
+========================= -->
+
+<section class="home-section contact" id="contact">
+
+  <div class="section-title">
+
+    <span>GET IN TOUCH</span>
+
+    <h2>Contact UPSC Shiksha</h2>
+
+    <p>
+      Have a question or suggestion? Contact us.
+    </p>
+
+  </div>
+
+
+  <form id="contactForm">
+
+    <input
+      type="text"
+      placeholder="Your Name"
+      required
+    >
+
+    <input
+      type="email"
+      placeholder="Your Email"
+      required
+    >
+
+    <textarea
+      placeholder="Your Message"
+      required
+    ></textarea>
+
+    <button type="submit">
+      Send Message
+    </button>
+
+  </form>
+
+</section>
+
+
+<!-- =========================
+     FOOTER
+========================= -->
+
+<footer>
+
+  <div class="footer-logo">
+    🇮🇳 UPSC <b>Shiksha</b>
+  </div>
+
+  <p>
+    Your Complete UPSC Preparation Platform
+  </p>
+
+  <div class="footer-links">
+
+    <a href="#home">Home</a>
+
+    <a href="#syllabus">Syllabus</a>
+
+    <a href="#free">Study Material</a>
+
+    <a href="#tests">Tests</a>
+
+    <a href="#premium">Premium</a>
+
+  </div>
+
+  <p class="copyright">
+    © 2026 UPSC Shiksha. All Rights Reserved.
+  </p>
+
+</footer>
+
+
+<!-- BACK TO TOP -->
+
+<button id="topBtn">↑</button>
+
+
+<!-- COMMON SCRIPT -->
+
+<script src="script.js"></script>
+
+
+<script>
+
+/* =========================
+   SYLLABUS TABS
+========================= */
+
+const syllabusTabs =
+  document.querySelectorAll(".syllabus-tab");
+
+const syllabusContents =
+  document.querySelectorAll(".syllabus-content");
+
+
+syllabusTabs.forEach(function(tab){
+
+  tab.addEventListener("click",function(){
+
+    const target =
+      this.getAttribute("data-tab");
+
+
+    syllabusTabs.forEach(function(item){
+
+      item.classList.remove("active");
 
     });
 
 
-    /* BACK TO TOP */
+    syllabusContents.forEach(function(content){
 
-    const topBtn =
-      document.getElementById("topBtn");
-
-
-    window.addEventListener("scroll", function() {
-
-      if (window.scrollY > 300) {
-
-        topBtn.style.display = "block";
-
-      } else {
-
-        topBtn.style.display = "none";
-
-      }
+      content.classList.remove("active");
 
     });
 
 
-    topBtn.addEventListener("click", function() {
-
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth"
-      });
-
-    });
+    this.classList.add("active");
 
 
-    /* CONTACT FORM */
+    const targetContent =
+      document.getElementById(target);
 
-    const contactForm =
-      document.getElementById("contactForm");
+    if(targetContent){
 
-
-    if (contactForm) {
-
-      contactForm.addEventListener("submit", function(e) {
-
-        e.preventDefault();
-
-        alert(
-          "Thank you! Your message has been received."
-        );
-
-        contactForm.reset();
-
-      });
+      targetContent.classList.add("active");
 
     }
 
+  });
 
-    /* TEST BUTTON */
-
-    const testBtn =
-      document.getElementById("testBtn");
+});
 
 
-    if (testBtn) {
+/* =========================
+   BACK TO TOP
+========================= */
 
-      testBtn.addEventListener("click", function() {
-
-        alert(
-          "Free Mock Test will be available soon!"
-        );
-
-      });
-
-    }
+const topBtn =
+  document.getElementById("topBtn");
 
 
-    /* PREMIUM BUTTON */
+window.addEventListener("scroll",function(){
 
-    const premiumBtn =
-      document.querySelector(".premium-btn");
+  if(window.scrollY > 300){
+
+    topBtn.style.display="block";
+
+  }else{
+
+    topBtn.style.display="none";
+
+  }
+
+});
 
 
-    if (premiumBtn) {
+topBtn.addEventListener("click",function(){
 
-      premiumBtn.addEventListener("click", function() {
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
 
-        alert(
-          "Premium features will be available soon!"
-        );
+});
 
-      });
 
-    }
+/* =========================
+   CONTACT FORM
+========================= */
 
-  </script>
+const contactForm =
+  document.getElementById("contactForm");
+
+
+if(contactForm){
+
+  contactForm.addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    alert(
+      "Thank you! Your message has been received."
+    );
+
+    contactForm.reset();
+
+  });
+
+}
+
+
+/* =========================
+   PREMIUM BUTTON
+========================= */
+
+const premiumBtn =
+  document.querySelector(".premium-btn");
+
+
+if(premiumBtn){
+
+  premiumBtn.addEventListener("click",function(){
+
+    alert(
+      "Premium features will be available soon!"
+    );
+
+  });
+
+}
+
+</script>
 
 </body>
 </html>
