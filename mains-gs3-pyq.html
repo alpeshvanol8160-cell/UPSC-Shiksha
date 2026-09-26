@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,193 +7,427 @@
 <title>Mains GS-III PYQ | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Mains GS-III Previous Year Questions - Economy, Agriculture, Science, Environment, Security and Disaster Management.">
+content="UPSC Mains GS-III PYQ practice - Economy, Agriculture, Science and Technology, Environment, Disaster Management and Internal Security.">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
 
-.pyq-hero {
-  text-align: center;
-  padding: 70px 20px 45px;
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#222;
 }
 
-.pyq-hero h1 {
-  font-size: 38px;
-  margin-bottom: 12px;
+header{
+  background:#111827;
+  color:white;
+  padding:15px 20px;
+  position:sticky;
+  top:0;
+  z-index:1000;
 }
 
-.pyq-hero p {
-  font-size: 18px;
-  opacity: .85;
+.nav{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
 }
 
-.tag-box {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  gap: 10px;
-  margin-top: 20px;
+.logo{
+  font-size:21px;
+  font-weight:bold;
 }
 
-.tag {
-  padding: 8px 15px;
-  border-radius: 20px;
-  background: #eef2ff;
-  color: #333;
-  font-weight: 600;
+.nav a{
+  color:white;
+  text-decoration:none;
+  margin-left:15px;
 }
 
-.container {
-  max-width: 1000px;
-  margin: auto;
-  padding: 20px;
+.hero{
+  text-align:center;
+  padding:55px 20px;
+  background:linear-gradient(135deg,#172554,#1e40af);
+  color:white;
 }
 
-.search-box {
-  margin: 20px 0 30px;
+.hero h1{
+  font-size:32px;
+  margin-bottom:12px;
 }
 
-.search-box input {
-  width: 100%;
-  padding: 15px;
-  border-radius: 12px;
-  border: 1px solid #ccc;
-  font-size: 16px;
-  box-sizing: border-box;
+.hero p{
+  max-width:700px;
+  margin:auto;
+  line-height:1.6;
 }
 
-.quick-nav {
-  background: #f5f7fa;
-  padding: 20px;
-  border-radius: 15px;
-  margin-bottom: 30px;
+.tags{
+  margin-top:20px;
 }
 
-.quick-nav h2 {
-  margin-top: 0;
+.tag{
+  display:inline-block;
+  padding:8px 13px;
+  margin:5px;
+  border-radius:20px;
+  background:white;
+  color:#1e40af;
+  font-size:13px;
+  font-weight:bold;
 }
 
-.quick-links {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
+.container{
+  max-width:1000px;
+  margin:30px auto;
+  padding:0 15px;
 }
 
-.quick-links a {
-  text-decoration: none;
-  padding: 10px 14px;
-  border-radius: 10px;
-  background: #222;
-  color: white;
+.tools{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-bottom:25px;
 }
 
-.pyq-card {
-  background: white;
-  padding: 25px;
-  margin: 20px 0;
-  border-radius: 18px;
-  box-shadow: 0 5px 20px rgba(0,0,0,.08);
+#searchBox{
+  flex:1;
+  min-width:220px;
+  padding:13px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:16px;
 }
 
-.pyq-card h2 {
-  margin-top: 0;
+button{
+  padding:13px 18px;
+  border:0;
+  border-radius:8px;
+  cursor:pointer;
+  background:#111827;
+  color:white;
+  font-weight:bold;
 }
 
-.pyq-card p {
-  line-height: 1.6;
+/* =========================
+   QUIZ
+========================= */
+
+.quiz-box{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  margin-bottom:30px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
 }
 
-.year-btn {
-  display: inline-block;
-  margin: 8px 6px 0 0;
-  padding: 11px 16px;
-  background: #111;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
-  font-weight: 600;
+.quiz-box h2{
+  margin-top:0;
+  color:#1e3a8a;
 }
 
-.official-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 18px;
-  background: #222;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+.quiz-subtitle{
+  color:#555;
+  line-height:1.6;
 }
 
-.bottom-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-  margin: 40px 0;
+.quiz-filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
 }
 
-.bottom-nav a {
-  padding: 10px 14px;
-  background: #222;
-  color: white;
-  text-decoration: none;
-  border-radius: 10px;
+.quiz-filters select{
+  flex:1;
+  min-width:180px;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
 }
 
-#backTop {
-  position: fixed;
-  right: 18px;
-  bottom: 20px;
-  display: none;
-  padding: 12px 15px;
-  border: none;
-  border-radius: 50%;
-  background: #111;
-  color: white;
-  cursor: pointer;
-  font-size: 18px;
+.quiz-info{
+  display:flex;
+  justify-content:space-between;
+  background:#eef2ff;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:15px;
+  font-weight:bold;
 }
 
-body.dark-mode {
-  background: #111;
-  color: #eee;
+.question-card{
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:12px;
 }
 
-body.dark-mode .pyq-card,
-body.dark-mode .quick-nav {
-  background: #1d1d1d;
+.question-card h3{
+  line-height:1.6;
+  margin-top:0;
 }
 
-body.dark-mode .search-box input {
-  background: #222;
-  color: white;
-  border-color: #555;
+.option-btn{
+  display:block;
+  width:100%;
+  text-align:left;
+  margin:10px 0;
+  background:#f3f4f6;
+  color:#111827;
+  border:1px solid #ddd;
 }
 
-body.dark-mode .tag {
-  background: #333;
-  color: white;
+.option-btn:hover{
+  background:#e5e7eb;
 }
 
-@media (max-width: 600px) {
+.option-btn.correct{
+  background:#dcfce7;
+  border:2px solid #16a34a;
+  color:#166534;
+}
 
-  .pyq-hero h1 {
-    font-size: 30px;
+.option-btn.wrong{
+  background:#fee2e2;
+  border:2px solid #dc2626;
+  color:#991b1b;
+}
+
+.answer-box{
+  margin-top:15px;
+  padding:15px;
+  border-radius:8px;
+  background:#eff6ff;
+  display:none;
+  line-height:1.6;
+}
+
+.quiz-actions{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.quiz-actions button{
+  background:#1e40af;
+}
+
+/* =========================
+   QUICK NAV
+========================= */
+
+.quick-nav{
+  background:white;
+  padding:20px;
+  border-radius:12px;
+  margin-bottom:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+}
+
+.quick-nav h2{
+  margin-top:0;
+}
+
+.quick-nav a{
+  display:inline-block;
+  margin:5px;
+  padding:9px 13px;
+  background:#e8eefc;
+  color:#1e40af;
+  text-decoration:none;
+  border-radius:7px;
+  font-weight:bold;
+}
+
+/* =========================
+   PYQ CARDS
+========================= */
+
+.pyq-card{
+  background:white;
+  padding:25px;
+  margin:20px 0;
+  border-radius:14px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.pyq-card h2{
+  margin-top:0;
+  color:#1e3a8a;
+}
+
+.pyq-card p{
+  line-height:1.6;
+}
+
+.pyq-btn{
+  display:inline-block;
+  margin-top:10px;
+  padding:11px 17px;
+  background:#1e40af;
+  color:white;
+  text-decoration:none;
+  border-radius:8px;
+  font-weight:bold;
+}
+
+/* =========================
+   INFO
+========================= */
+
+.info{
+  background:#fff7ed;
+  border-left:5px solid #f97316;
+  padding:18px;
+  border-radius:8px;
+  margin:25px 0;
+  line-height:1.6;
+}
+
+/* =========================
+   BOTTOM NAV
+========================= */
+
+.bottom-nav{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+  margin:35px 0;
+}
+
+.bottom-nav a{
+  text-decoration:none;
+  padding:11px 15px;
+  border-radius:8px;
+  background:#111827;
+  color:white;
+}
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+#topBtn{
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  display:none;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  padding:0;
+  font-size:20px;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+  margin-top:40px;
+}
+
+/* =========================
+   DARK MODE
+========================= */
+
+body.dark{
+  background:#111827;
+  color:#eee;
+}
+
+body.dark .quick-nav,
+body.dark .pyq-card,
+body.dark .quiz-box{
+  background:#1f2937;
+  color:#eee;
+}
+
+body.dark .quick-nav a{
+  background:#374151;
+  color:#fff;
+}
+
+body.dark .pyq-card h2,
+body.dark .quiz-box h2{
+  color:#93c5fd;
+}
+
+body.dark .info{
+  background:#292524;
+}
+
+body.dark .question-card{
+  border-color:#4b5563;
+}
+
+body.dark .quiz-info{
+  background:#374151;
+}
+
+body.dark .quiz-filters select{
+  background:#374151;
+  color:white;
+  border-color:#6b7280;
+}
+
+body.dark .option-btn{
+  background:#374151;
+  color:white;
+  border-color:#6b7280;
+}
+
+body.dark .answer-box{
+  background:#1e3a5f;
+  color:white;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+  .nav{
+    flex-direction:column;
+    gap:10px;
   }
 
-  .pyq-hero p {
-    font-size: 16px;
+  .nav a{
+    margin:0 6px;
+    font-size:14px;
   }
 
-  .pyq-card {
-    padding: 20px;
+  .hero h1{
+    font-size:26px;
   }
 
-  .quick-links a,
-  .bottom-nav a,
-  .year-btn {
-    font-size: 14px;
+  .pyq-card{
+    padding:20px;
+  }
+
+  .quiz-box{
+    padding:18px;
+  }
+
+  .quiz-info{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .quiz-filters select{
+    width:100%;
   }
 
 }
@@ -201,111 +435,199 @@ body.dark-mode .tag {
 </style>
 </head>
 
+
 <body>
 
 <header>
 
-  <div class="logo">
-    🇮🇳 UPSC Shiksha
-  </div>
+<div class="nav">
 
-  <nav>
-    <a href="index.html">Home</a>
-    <a href="prelims.html">Prelims</a>
-    <a href="csat.html">CSAT</a>
-    <a href="mains.html">Mains</a>
-    <a href="pyq.html">PYQs</a>
-  </nav>
+<div class="logo">
+🇮🇳 UPSC Shiksha
+</div>
+
+<div>
+
+<a href="index.html">Home</a>
+<a href="mains.html">Mains</a>
+<a href="pyq.html">PYQ</a>
+
+</div>
+
+</div>
 
 </header>
 
 
-<main>
+<section class="hero">
 
-<section class="pyq-hero">
+<h1>📊 Mains GS-III PYQ</h1>
 
-  <h1>📊 Mains GS-III PYQ</h1>
+<p>
+UPSC Civil Services Mains General Studies Paper-III
+Previous Year Questions and Practice
+</p>
 
-  <p>
-    UPSC Civil Services Mains General Studies Paper-III
-    Previous Year Questions
-  </p>
+<div class="tags">
 
-  <div class="tag-box">
+<span class="tag">MAINS</span>
+<span class="tag">GS-III</span>
+<span class="tag">PYQ</span>
+<span class="tag">ECONOMY</span>
+<span class="tag">AGRICULTURE</span>
+<span class="tag">ENVIRONMENT</span>
+<span class="tag">SCIENCE</span>
+<span class="tag">SECURITY</span>
 
-    <span class="tag">MAINS</span>
-    <span class="tag">GS-III</span>
-    <span class="tag">PYQ</span>
-    <span class="tag">ECONOMY</span>
-    <span class="tag">ENVIRONMENT</span>
-    <span class="tag">SCIENCE</span>
-    <span class="tag">SECURITY</span>
-
-  </div>
+</div>
 
 </section>
 
 
-<section class="container">
+<div class="container">
 
 
-<div style="text-align:center; margin-bottom:20px;">
+<div class="tools">
 
-  <button id="darkModeBtn" class="year-btn">
-    🌙 Dark Mode
-  </button>
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search GS-III PYQ..."
+>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+</div>
+
+
+<!-- =========================
+     GS-III PRACTICE QUIZ
+========================= -->
+
+<section class="quiz-box" id="gs3Quiz">
+
+<h2>📝 GS-III Practice Questions</h2>
+
+<p class="quiz-subtitle">
+Practice model questions based on important GS-III themes.
+</p>
+
+
+<div class="quiz-filters">
+
+<select id="quizYear" onchange="filterQuiz()">
+
+<option value="all">All Years</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+
+</select>
+
+
+<select id="quizTopic" onchange="filterQuiz()">
+
+<option value="all">All Topics</option>
+<option value="Economy">Economy</option>
+<option value="Agriculture">Agriculture</option>
+<option value="Environment">Environment</option>
+<option value="Science & Technology">Science & Technology</option>
+<option value="Disaster Management">Disaster Management</option>
+<option value="Internal Security">Internal Security</option>
+<option value="Infrastructure">Infrastructure</option>
+
+</select>
 
 </div>
 
 
-<div class="search-box">
+<div class="quiz-info">
 
-  <input
-    type="text"
-    id="searchInput"
-    placeholder="🔍 Search GS-III PYQ..."
-  >
+<span id="questionNumber">
+Question 1
+</span>
+
+<span id="quizScore">
+Score: 0
+</span>
 
 </div>
 
+
+<div class="question-card">
+
+<h3 id="questionText">
+GS-III question will appear here.
+</h3>
+
+<div id="optionsBox"></div>
+
+<div id="answerBox" class="answer-box"></div>
+
+</div>
+
+
+<div class="quiz-actions">
+
+<button id="nextQuestion">
+➡️ Next Question
+</button>
+
+<button id="restartQuiz">
+🔄 Restart
+</button>
+
+</div>
+
+</section>
+
+
+<!-- =========================
+     QUICK NAVIGATION
+========================= -->
 
 <div class="quick-nav">
 
-  <h2>⚡ Quick Navigation</h2>
+<h2>⚡ Quick Navigation</h2>
 
-  <div class="quick-links">
-
-    <a href="#2026">2026</a>
-    <a href="#2025">2025</a>
-    <a href="#2024">2024</a>
-    <a href="#2023">2023</a>
-    <a href="#2022">2022</a>
-    <a href="#2021">2021</a>
-    <a href="#2020">2020</a>
-
-  </div>
+<a href="#2026">2026</a>
+<a href="#2025">2025</a>
+<a href="#2024">2024</a>
+<a href="#2023">2023</a>
+<a href="#2022">2022</a>
+<a href="#2021">2021</a>
+<a href="#2020">2020</a>
 
 </div>
+
+
+<div id="pyqList">
 
 
 <!-- 2026 -->
 
 <div class="pyq-card" id="2026">
 
-  <h2>📅 UPSC Mains GS-III 2026</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2026</h2>
 
-  <p>
-    General Studies Paper-III Previous Year Questions —
-    Economy, Agriculture, Science & Technology,
-    Environment, Disaster Management and Internal Security.
-  </p>
+<p>
+General Studies Paper-III questions covering
+Economy, Agriculture, Science & Technology,
+Environment, Disaster Management and Internal Security.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -314,19 +636,20 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2025">
 
-  <h2>📅 UPSC Mains GS-III 2025</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2025</h2>
 
-  <p>
-    Previous Year Questions covering Indian Economy,
-    Agriculture, Technology, Environment and Security.
-  </p>
+<p>
+Previous Year questions covering Economy,
+Agriculture, Technology, Environment and Security.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -335,20 +658,21 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2024">
 
-  <h2>📅 UPSC Mains GS-III 2024</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2024</h2>
 
-  <p>
-    Practice GS-III questions from Economy,
-    Agriculture, Science & Technology,
-    Environment and Internal Security.
-  </p>
+<p>
+Practice GS-III questions related to Economy,
+Agriculture, Science & Technology,
+Environment and Internal Security.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -357,20 +681,20 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2023">
 
-  <h2>📅 UPSC Mains GS-III 2023</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2023</h2>
 
-  <p>
-    Previous Year Questions for GS-III including
-    economic development, agriculture,
-    environment, technology and security.
-  </p>
+<p>
+Previous Year questions for economic development,
+agriculture, environment, technology and security.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -379,19 +703,20 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2022">
 
-  <h2>📅 UPSC Mains GS-III 2022</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2022</h2>
 
-  <p>
-    GS-III Previous Year Questions for answer writing
-    and topic-wise revision.
-  </p>
+<p>
+GS-III Previous Year questions for
+answer-writing and topic-wise revision.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -400,19 +725,20 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2021">
 
-  <h2>📅 UPSC Mains GS-III 2021</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2021</h2>
 
-  <p>
-    Practice Economy, Agriculture, Environment,
-    Science & Technology and Security questions.
-  </p>
+<p>
+Practice Economy, Agriculture, Environment,
+Science & Technology and Security questions.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
@@ -421,197 +747,733 @@ body.dark-mode .tag {
 
 <div class="pyq-card" id="2020">
 
-  <h2>📅 UPSC Mains GS-III 2020</h2>
+<h2>📅 UPSC Mains GS-III PYQ 2020</h2>
 
-  <p>
-    GS-III Previous Year Questions for
-    revision and answer-writing practice.
-  </p>
+<p>
+GS-III Previous Year questions for
+revision and answer-writing practice.
+</p>
 
-  <a
-    href="https://upsc.gov.in/examinations/previous-question-papers"
-    target="_blank"
-    class="year-btn">
-    Official UPSC Questions →
-  </a>
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
 
 </div>
 
 
-<!-- Strategy -->
+</div>
+
+
+<!-- =========================
+     STRATEGY
+========================= -->
+
+<div class="info">
+
+<strong>📌 How to use GS-III PYQs:</strong>
+
+<br><br>
+
+1. Study the GS-III syllabus before solving PYQs.<br>
+
+2. Divide questions into Economy, Agriculture,
+Environment, Science & Technology,
+Disaster Management and Security.<br>
+
+3. Identify repeated themes and concepts.<br>
+
+4. Connect static concepts with relevant current affairs.<br>
+
+5. Practice answer writing within the prescribed time.
+
+</div>
+
+
+<!-- =========================
+     MAJOR AREAS
+========================= -->
 
 <div class="pyq-card">
 
-  <h2>🎯 How to Use GS-III PYQs</h2>
+<h2>📚 GS-III Major Areas</h2>
 
-  <p>
-    <strong>1.</strong> Read the GS-III syllabus before solving PYQs.
-  </p>
+<p>💰 Indian Economy & Planning</p>
 
-  <p>
-    <strong>2.</strong> Divide questions into Economy,
-    Agriculture, Science & Technology, Environment,
-    Disaster Management and Security.
-  </p>
+<p>🌾 Agriculture & Food Security</p>
 
-  <p>
-    <strong>3.</strong> Identify repeated themes and concepts.
-  </p>
+<p>🔬 Science & Technology</p>
 
-  <p>
-    <strong>4.</strong> Practice answer writing within the
-    prescribed time.
-  </p>
+<p>🌱 Environment & Biodiversity</p>
 
-  <p>
-    <strong>5.</strong> Revise important current-affairs
-    connections with static topics.
-  </p>
+<p>🌪️ Disaster Management</p>
+
+<p>🛡️ Internal Security</p>
+
+<p>🏭 Infrastructure & Investment</p>
 
 </div>
 
 
-<div class="pyq-card">
-
-  <h2>📚 GS-III Major Areas</h2>
-
-  <p>💰 Indian Economy & Planning</p>
-  <p>🌾 Agriculture & Food Security</p>
-  <p>🔬 Science & Technology</p>
-  <p>🌱 Environment & Biodiversity</p>
-  <p>🌪️ Disaster Management</p>
-  <p>🛡️ Internal Security</p>
-  <p>🏭 Infrastructure & Investment</p>
-
-</div>
-
+<!-- =========================
+     BOTTOM NAV
+========================= -->
 
 <div class="bottom-nav">
 
-  <a href="index.html">🏠 Home</a>
+<a href="index.html">🏠 Home</a>
 
-  <a href="prelims.html">📚 Prelims</a>
+<a href="prelims.html">📚 Prelims</a>
 
-  <a href="csat.html">🧠 CSAT</a>
+<a href="csat.html">🧠 CSAT</a>
 
-  <a href="mains.html">📝 Mains</a>
+<a href="mains.html">📝 Mains</a>
 
-  <a href="pyq.html">📖 All PYQs</a>
+<a href="pyq.html">📖 All PYQs</a>
 
-  <a href="mains-gs1-pyq.html">📕 GS-I PYQ</a>
+<a href="prelims-pyq.html">📄 Prelims PYQ</a>
 
-  <a href="mains-gs2-pyq.html">📙 GS-II PYQ</a>
+<a href="csat-pyq.html">🧠 CSAT PYQ</a>
+
+<a href="mains-gs1-pyq.html">✍️ GS-I PYQ</a>
+
+<a href="mains-gs2-pyq.html">🏛️ GS-II PYQ</a>
+
+</div>
 
 </div>
 
 
-</section>
-
-</main>
-
-
-<button id="backTop">↑</button>
+<button id="topBtn" onclick="topFunction()">
+↑
+</button>
 
 
 <footer>
 
-  <p>
-    © 2026 UPSC Shiksha | Free UPSC Preparation
-  </p>
+<p>
+🇮🇳 <strong>UPSC Shiksha</strong>
+</p>
+
+<p>
+Free UPSC Study Material & PYQ Platform
+</p>
+
+<p>
+© 2026 UPSC Shiksha
+</p>
 
 </footer>
 
 
 <script>
 
-const searchInput =
-document.getElementById("searchInput");
+/* =========================
+   GS-III QUIZ DATA
+========================= */
 
-const cards =
-document.querySelectorAll(".pyq-card");
+const quizQuestions = [
+
+{
+year:"2025",
+topic:"Economy",
+question:"Why is investment in infrastructure important for economic development?",
+options:[
+"It can improve productive capacity and connectivity",
+"It eliminates the need for human capital",
+"It prevents technological development",
+"It removes all economic inequalities"
+],
+answer:0,
+explanation:
+"Infrastructure can support productivity, connectivity, investment and the delivery of economic activities."
+},
+
+{
+year:"2024",
+topic:"Economy",
+question:"What is an important objective of financial inclusion?",
+options:[
+"To restrict access to formal finance",
+"To improve access to useful and affordable financial services",
+"To reduce banking access",
+"To eliminate digital payments"
+],
+answer:1,
+explanation:
+"Financial inclusion seeks to improve access to appropriate and affordable formal financial services."
+},
+
+{
+year:"2023",
+topic:"Economy",
+question:"Why is human capital important for economic growth?",
+options:[
+"It can improve skills and productivity",
+"It reduces the importance of education",
+"It eliminates the need for technology",
+"It prevents labour mobility"
+],
+answer:0,
+explanation:
+"Education, skills and health can improve productivity and support long-term economic development."
+},
+
+{
+year:"2022",
+topic:"Agriculture",
+question:"Why is diversification of agriculture useful for farmers?",
+options:[
+"It can reduce dependence on a single crop or activity",
+"It always eliminates all agricultural risks",
+"It prevents value addition",
+"It reduces market opportunities"
+],
+answer:0,
+explanation:
+"Diversification can spread risk and create additional income opportunities when supported by suitable markets and infrastructure."
+},
+
+{
+year:"2021",
+topic:"Agriculture",
+question:"What can improve agricultural productivity sustainably?",
+options:[
+"Efficient resource use and appropriate technology",
+"Continuous overuse of natural resources",
+"Reducing access to irrigation",
+"Eliminating soil conservation"
+],
+answer:0,
+explanation:
+"Sustainable productivity can be supported by efficient resource use, improved technology, soil health and appropriate water management."
+},
+
+{
+year:"2020",
+topic:"Agriculture",
+question:"Why is food processing important for agriculture?",
+options:[
+"It can increase value addition and reduce post-harvest losses",
+"It eliminates the need for farmers",
+"It prevents market access",
+"It reduces the importance of storage"
+],
+answer:0,
+explanation:
+"Food processing can create value addition, improve shelf life, generate employment and reduce certain post-harvest losses."
+},
+
+{
+year:"2025",
+topic:"Environment",
+question:"Why is biodiversity important for ecosystems?",
+options:[
+"It supports ecosystem functions and resilience",
+"It eliminates natural ecological processes",
+"It prevents nutrient cycling",
+"It reduces ecosystem stability"
+],
+answer:0,
+explanation:
+"Biodiversity contributes to ecosystem functions, ecological interactions and resilience to environmental changes."
+},
+
+{
+year:"2024",
+topic:"Environment",
+question:"What is an important purpose of sustainable development?",
+options:[
+"To balance development needs with environmental considerations",
+"To maximise resource use without limits",
+"To eliminate environmental regulation",
+"To prevent all economic activity"
+],
+answer:0,
+explanation:
+"Sustainable development seeks to meet development needs while considering environmental limits and the needs of future generations."
+},
+
+{
+year:"2023",
+topic:"Environment",
+question:"Why is climate adaptation important?",
+options:[
+"It helps societies manage the impacts of climate-related changes",
+"It prevents all climate variability",
+"It removes the need for disaster planning",
+"It eliminates every environmental risk"
+],
+answer:0,
+explanation:
+"Adaptation involves adjusting systems and practices to reduce vulnerability to actual or expected climate impacts."
+},
+
+{
+year:"2022",
+topic:"Science & Technology",
+question:"Why is scientific research important for national development?",
+options:[
+"It can generate knowledge, innovation and technological solutions",
+"It eliminates the need for education",
+"It prevents innovation",
+"It reduces technological capability"
+],
+answer:0,
+explanation:
+"Scientific research can create new knowledge and support innovation, technology development and problem-solving."
+},
+
+{
+year:"2021",
+topic:"Science & Technology",
+question:"What is a major benefit of digital technology in public services?",
+options:[
+"It can improve accessibility and efficiency",
+"It always eliminates cybersecurity risks",
+"It prevents citizen interaction",
+"It makes information inaccessible"
+],
+answer:0,
+explanation:
+"Digital technologies can improve access, speed and efficiency of public services, although implementation and security challenges remain."
+},
+
+{
+year:"2020",
+topic:"Science & Technology",
+question:"Why is cybersecurity important in a digital economy?",
+options:[
+"It helps protect digital systems and information",
+"It eliminates all cyber threats permanently",
+"It prevents legitimate internet use",
+"It removes the need for data protection"
+],
+answer:0,
+explanation:
+"Cybersecurity helps protect information, networks, systems and digital services from unauthorised access and disruption."
+},
+
+{
+year:"2025",
+topic:"Disaster Management",
+question:"What is an important element of disaster preparedness?",
+options:[
+"Early warning systems and community preparedness",
+"Waiting until after the disaster",
+"Reducing emergency communication",
+"Removing evacuation planning"
+],
+answer:0,
+explanation:
+"Preparedness includes early warning, planning, training, communication and community-level readiness."
+},
+
+{
+year:"2024",
+topic:"Disaster Management",
+question:"Why is resilient infrastructure important in disaster management?",
+options:[
+"It can reduce vulnerability and support faster recovery",
+"It guarantees that disasters cannot occur",
+"It removes the need for emergency planning",
+"It prevents all natural hazards"
+],
+answer:0,
+explanation:
+"Resilient infrastructure can reduce damage and help essential services continue or recover more quickly after disasters."
+},
+
+{
+year:"2023",
+topic:"Internal Security",
+question:"Why is cybersecurity an important component of internal security?",
+options:[
+"Critical digital systems can face cyber threats",
+"It eliminates the need for physical security",
+"It prevents all forms of crime",
+"It makes critical infrastructure unnecessary"
+],
+answer:0,
+explanation:
+"Cyber threats can affect government systems, critical infrastructure, businesses and citizens, making cybersecurity an important security concern."
+},
+
+{
+year:"2022",
+topic:"Internal Security",
+question:"Why is border management important for internal security?",
+options:[
+"It helps address cross-border security challenges",
+"It eliminates the need for diplomacy",
+"It prevents all international movement",
+"It removes the need for surveillance"
+],
+answer:0,
+explanation:
+"Effective border management can help address illegal movement, trafficking, smuggling and other cross-border security challenges."
+},
+
+{
+year:"2021",
+topic:"Infrastructure",
+question:"Why is reliable energy infrastructure important for economic activity?",
+options:[
+"It supports households, industries and essential services",
+"It eliminates the need for investment",
+"It prevents industrial development",
+"It reduces productivity"
+],
+answer:0,
+explanation:
+"Reliable energy supply supports production, transportation, households and essential public services."
+},
+
+{
+year:"2020",
+topic:"Infrastructure",
+question:"Why is transport infrastructure important for the economy?",
+options:[
+"It improves connectivity and movement of goods and people",
+"It eliminates regional differences automatically",
+"It prevents trade",
+"It reduces market access"
+],
+answer:0,
+explanation:
+"Transport infrastructure improves connectivity, reduces travel and logistics barriers and can expand access to markets."
+}
+
+];
 
 
-searchInput.addEventListener("input", function() {
+/* =========================
+   QUIZ VARIABLES
+========================= */
 
-  const value =
-  this.value.toLowerCase();
+let filteredQuestions=[...quizQuestions];
 
-  cards.forEach(card => {
+let currentQuestion=0;
 
-    const text =
-    card.innerText.toLowerCase();
+let score=0;
 
-    if (text.includes(value)) {
+let answered=false;
 
-      card.style.display = "block";
 
-    } else {
+/* =========================
+   LOAD QUESTION
+========================= */
 
-      card.style.display = "none";
+function loadQuestion(){
 
-    }
+const question=
+filteredQuestions[currentQuestion];
 
-  });
+if(!question){
+
+document.getElementById("questionText").innerText=
+"🎉 Quiz Completed!";
+
+document.getElementById("optionsBox").innerHTML="";
+
+document.getElementById("answerBox").style.display="block";
+
+document.getElementById("answerBox").innerHTML=
+"<strong>Your Final Score:</strong> "+
+score+
+" / "+
+filteredQuestions.length+
+"<br><br>"+
+"Review the relevant GS-III topics and practise answer writing.";
+
+document.getElementById("questionNumber").innerText=
+"Completed";
+
+return;
+
+}
+
+answered=false;
+
+document.getElementById("questionNumber").innerText=
+"Question "+
+(currentQuestion+1)+
+" / "+
+filteredQuestions.length;
+
+document.getElementById("quizScore").innerText=
+"Score: "+
+score;
+
+document.getElementById("questionText").innerText=
+question.question;
+
+const optionsBox=
+document.getElementById("optionsBox");
+
+optionsBox.innerHTML="";
+
+
+question.options.forEach(function(option,index){
+
+const button=
+document.createElement("button");
+
+button.className="option-btn";
+
+button.innerText=
+String.fromCharCode(65+index)+
+". "+
+option;
+
+button.onclick=function(){
+
+checkAnswer(index,button);
+
+};
+
+optionsBox.appendChild(button);
 
 });
 
 
-const darkModeBtn =
-document.getElementById("darkModeBtn");
+document.getElementById("answerBox").style.display="none";
 
-
-if (
-  localStorage.getItem("mainsGs3PyqDarkMode")
-  === "true"
-) {
-
-  document.body.classList.add("dark-mode");
+document.getElementById("answerBox").innerHTML="";
 
 }
 
 
-darkModeBtn.addEventListener("click", function() {
+/* =========================
+   CHECK ANSWER
+========================= */
 
-  document.body.classList.toggle("dark-mode");
+function checkAnswer(selected,button){
 
-  localStorage.setItem(
-    "mainsGs3PyqDarkMode",
-    document.body.classList.contains("dark-mode")
-  );
+if(answered){
 
-});
+return;
 
+}
 
-const backTop =
-document.getElementById("backTop");
+answered=true;
 
+const question=
+filteredQuestions[currentQuestion];
 
-window.addEventListener("scroll", function() {
+const buttons=
+document.querySelectorAll(".option-btn");
 
-  if (window.scrollY > 300) {
+buttons.forEach(function(btn){
 
-    backTop.style.display = "block";
-
-  } else {
-
-    backTop.style.display = "none";
-
-  }
+btn.disabled=true;
 
 });
 
 
-backTop.addEventListener("click", function() {
+if(selected===question.answer){
 
-  window.scrollTo({
+button.classList.add("correct");
 
-    top: 0,
+score++;
 
-    behavior: "smooth"
+}else{
 
-  });
+button.classList.add("wrong");
+
+buttons[question.answer].classList.add("correct");
+
+}
+
+
+document.getElementById("quizScore").innerText=
+"Score: "+
+score;
+
+
+const answerBox=
+document.getElementById("answerBox");
+
+answerBox.style.display="block";
+
+answerBox.innerHTML=
+"<strong>Explanation:</strong><br>"+
+question.explanation;
+
+}
+
+
+/* =========================
+   NEXT QUESTION
+========================= */
+
+document.getElementById("nextQuestion")
+.addEventListener("click",function(){
+
+currentQuestion++;
+
+loadQuestion();
 
 });
+
+
+/* =========================
+   RESTART
+========================= */
+
+document.getElementById("restartQuiz")
+.addEventListener("click",function(){
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+});
+
+
+/* =========================
+   FILTER
+========================= */
+
+function filterQuiz(){
+
+const selectedYear=
+document.getElementById("quizYear").value;
+
+const selectedTopic=
+document.getElementById("quizTopic").value;
+
+
+filteredQuestions=
+quizQuestions.filter(function(q){
+
+const yearMatch=
+selectedYear==="all" ||
+q.year===selectedYear;
+
+const topicMatch=
+selectedTopic==="all" ||
+q.topic===selectedTopic;
+
+return yearMatch && topicMatch;
+
+});
+
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+}
+
+
+/* =========================
+   INITIAL LOAD
+========================= */
+
+loadQuestion();
+
+
+/* =========================
+   SEARCH
+========================= */
+
+const searchBox=
+document.getElementById("searchBox");
+
+searchBox.addEventListener(
+"input",
+function(){
+
+const search=
+this.value.toLowerCase();
+
+const cards=
+document.querySelectorAll(".pyq-card");
+
+cards.forEach(function(card){
+
+const text=
+card.innerText.toLowerCase();
+
+card.style.display=
+text.includes(search)
+? "block"
+: "none";
+
+});
+
+});
+
+
+/* =========================
+   DARK MODE
+========================= */
+
+function toggleDarkMode(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"mainsGs3PyqDarkMode",
+document.body.classList.contains("dark")
+);
+
+}
+
+
+if(
+localStorage.getItem("mainsGs3PyqDarkMode")
+==="true"
+){
+
+document.body.classList.add("dark");
+
+}
+
+
+/* =========================
+   TOP BUTTON
+========================= */
+
+const topBtn=
+document.getElementById("topBtn");
+
+window.addEventListener(
+"scroll",
+function(){
+
+if(window.scrollY>300){
+
+topBtn.style.display="block";
+
+}else{
+
+topBtn.style.display="none";
+
+}
+
+});
+
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
 
 </script>
 
