@@ -1,0 +1,902 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Polity Mind Map | UPSC Shiksha</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  transition:.3s;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#ffffff;
+  padding:14px 16px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  box-shadow:0 2px 12px rgba(0,0,0,.10);
+}
+
+.logo{
+  font-size:20px;
+  font-weight:bold;
+}
+
+.header-buttons{
+  display:flex;
+  gap:8px;
+}
+
+button,
+.home-btn{
+  border:0;
+  border-radius:10px;
+  padding:10px 13px;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+  background:#172033;
+  color:white;
+}
+
+.hero{
+  text-align:center;
+  padding:45px 18px 30px;
+  background:linear-gradient(135deg,#eef4ff,#ffffff);
+}
+
+.hero h1{
+  font-size:32px;
+  margin-bottom:10px;
+}
+
+.hero p{
+  color:#596579;
+  line-height:1.6;
+}
+
+.badge{
+  display:inline-block;
+  margin-bottom:14px;
+  padding:7px 13px;
+  border-radius:20px;
+  background:#e7efff;
+  color:#2454a6;
+  font-size:13px;
+  font-weight:bold;
+}
+
+.container{
+  width:min(1100px,94%);
+  margin:auto;
+}
+
+.search-box{
+  margin:20px auto;
+  max-width:600px;
+}
+
+.search-box input{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #d7dce5;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+.map-area{
+  margin:25px auto;
+  padding:25px 12px 35px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 5px 25px rgba(0,0,0,.08);
+  overflow:hidden;
+}
+
+.map-title{
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.map-title h2{
+  margin-bottom:7px;
+}
+
+.map-title p{
+  color:#687386;
+  font-size:14px;
+}
+
+.map{
+  position:relative;
+  max-width:1000px;
+  margin:auto;
+  min-height:650px;
+}
+
+.center-node{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:170px;
+  height:90px;
+  border-radius:22px;
+  background:#172033;
+  color:white;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  z-index:5;
+  box-shadow:0 12px 30px rgba(0,0,0,.22);
+  animation:centerPulse 3s infinite;
+}
+
+.center-node strong{
+  font-size:20px;
+}
+
+.center-node small{
+  margin-top:5px;
+  opacity:.8;
+}
+
+.node{
+  position:absolute;
+  width:155px;
+  min-height:72px;
+  padding:12px 8px;
+  border-radius:17px;
+  background:#fff;
+  border:2px solid #dfe5ef;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  cursor:pointer;
+  font-weight:bold;
+  box-shadow:0 6px 18px rgba(0,0,0,.08);
+  transition:.3s;
+  z-index:4;
+}
+
+.node:hover{
+  transform:scale(1.06) translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.node span{
+  font-size:23px;
+  display:block;
+  margin-bottom:4px;
+}
+
+.n1{top:4%;left:50%;transform:translateX(-50%);}
+.n2{top:15%;left:5%;}
+.n3{top:15%;right:5%;}
+.n4{top:40%;left:2%;}
+.n5{top:40%;right:2%;}
+.n6{bottom:12%;left:7%;}
+.n7{bottom:12%;right:7%;}
+.n8{bottom:2%;left:50%;transform:translateX(-50%);}
+.n9{top:70%;left:50%;transform:translateX(-50%);}
+.n10{top:4%;left:8%;}
+
+.connector{
+  position:absolute;
+  background:#cbd4e3;
+  height:3px;
+  transform-origin:left center;
+  z-index:1;
+}
+
+.line1{width:190px;left:50%;top:42%;transform:rotate(-90deg);}
+.line2{width:250px;left:43%;top:44%;transform:rotate(-155deg);}
+.line3{width:250px;left:57%;top:44%;transform:rotate(-25deg);}
+.line4{width:260px;left:44%;top:50%;transform:rotate(180deg);}
+.line5{width:260px;left:56%;top:50%;transform:rotate(0deg);}
+.line6{width:230px;left:44%;top:57%;transform:rotate(145deg);}
+.line7{width:230px;left:56%;top:57%;transform:rotate(35deg);}
+.line8{width:190px;left:50%;top:59%;transform:rotate(90deg);}
+.line9{width:160px;left:50%;top:55%;transform:rotate(90deg);}
+.line10{width:270px;left:45%;top:42%;transform:rotate(-135deg);}
+
+.details{
+  display:none;
+  margin:25px auto;
+  padding:22px;
+  max-width:800px;
+  border-radius:18px;
+  background:#f8faff;
+  border-left:5px solid #315bb5;
+  animation:detailsIn .35s ease;
+}
+
+.details.show{
+  display:block;
+}
+
+.details h3{
+  margin-bottom:10px;
+}
+
+.details p{
+  line-height:1.7;
+  color:#4c596c;
+}
+
+.details ul{
+  margin:12px 0 0 20px;
+  line-height:1.8;
+}
+
+.quick{
+  margin:25px auto;
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+}
+
+.quick button{
+  background:white;
+  color:#172033;
+  border:1px solid #dce2ec;
+}
+
+.section{
+  background:white;
+  margin:20px auto;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,.06);
+}
+
+.section h2{
+  margin-bottom:12px;
+}
+
+.section p{
+  color:#596579;
+  line-height:1.7;
+}
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  margin-top:35px;
+  background:#172033;
+  color:white;
+  line-height:1.8;
+}
+
+#topBtn{
+  display:none;
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  z-index:999;
+  border-radius:50%;
+  width:48px;
+  height:48px;
+  padding:0;
+}
+
+/* DARK MODE */
+
+body.dark{
+  background:#101722;
+  color:#f1f5fb;
+}
+
+body.dark header,
+body.dark .map-area,
+body.dark .section{
+  background:#182230;
+  color:#f1f5fb;
+}
+
+body.dark .hero{
+  background:linear-gradient(135deg,#111b2b,#182230);
+}
+
+body.dark .hero p,
+body.dark .map-title p,
+body.dark .section p{
+  color:#b8c2d2;
+}
+
+body.dark .search-box input{
+  background:#111a27;
+  color:white;
+  border-color:#354256;
+}
+
+body.dark .node{
+  background:#202c3c;
+  color:white;
+  border-color:#3b4a61;
+}
+
+body.dark .details{
+  background:#202c3c;
+}
+
+body.dark .details p{
+  color:#c1cad7;
+}
+
+body.dark .quick button{
+  background:#202c3c;
+  color:white;
+  border-color:#3b4a61;
+}
+
+body.dark .badge{
+  background:#263b5c;
+  color:#c9dcff;
+}
+
+/* ANIMATIONS */
+
+@keyframes centerPulse{
+  0%,100%{box-shadow:0 12px 30px rgba(0,0,0,.22);}
+  50%{box-shadow:0 12px 35px rgba(49,91,181,.35);}
+}
+
+@keyframes detailsIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.node{
+  animation:nodeFloat 4s ease-in-out infinite;
+}
+
+@keyframes nodeFloat{
+  0%,100%{margin-top:0;}
+  50%{margin-top:-4px;}
+}
+
+@media(max-width:700px){
+
+  header{
+    padding:11px 12px;
+  }
+
+  .logo{
+    font-size:17px;
+  }
+
+  .header-buttons button,
+  .home-btn{
+    padding:8px 9px;
+    font-size:12px;
+  }
+
+  .hero{
+    padding:32px 14px 22px;
+  }
+
+  .hero h1{
+    font-size:25px;
+  }
+
+  .map-area{
+    padding:18px 8px 25px;
+  }
+
+  .map{
+    min-height:850px;
+  }
+
+  .center-node{
+    width:145px;
+    height:78px;
+  }
+
+  .center-node strong{
+    font-size:17px;
+  }
+
+  .node{
+    width:125px;
+    min-height:67px;
+    font-size:12px;
+    padding:8px 5px;
+  }
+
+  .node span{
+    font-size:19px;
+  }
+
+  .n1{
+    top:2%;
+  }
+
+  .n2{
+    top:15%;
+    left:1%;
+  }
+
+  .n3{
+    top:15%;
+    right:1%;
+  }
+
+  .n4{
+    top:38%;
+    left:0;
+  }
+
+  .n5{
+    top:38%;
+    right:0;
+  }
+
+  .n6{
+    bottom:18%;
+    left:1%;
+  }
+
+  .n7{
+    bottom:18%;
+    right:1%;
+  }
+
+  .n8{
+    bottom:2%;
+  }
+
+  .n9{
+    bottom:9%;
+    top:auto;
+  }
+
+  .n10{
+    top:2%;
+    left:1%;
+  }
+
+  .connector{
+    display:none;
+  }
+
+  .quick{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .section{
+    padding:20px 17px;
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,
+  *::before,
+  *::after{
+    animation:none !important;
+    transition:none !important;
+    scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+  <div class="header-buttons">
+    <a href="index.html" class="home-btn">🏠 Home</a>
+    <button onclick="toggleDark()">🌙</button>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="badge">🧠 UPSC Interactive Mind Map</div>
+
+  <h1>🏛️ Indian Polity Mind Map</h1>
+
+  <p>
+    Explore major Indian Polity topics through an interactive visual map.
+    Tap any topic to view its key areas.
+  </p>
+</section>
+
+<main class="container">
+
+  <div class="search-box">
+    <input
+      type="text"
+      id="searchBox"
+      placeholder="🔍 Search Polity topic..."
+      oninput="searchTopics()"
+    >
+  </div>
+
+  <section class="map-area">
+
+    <div class="map-title">
+      <h2>🧠 Interactive Polity Map</h2>
+      <p>Tap a topic node to explore</p>
+    </div>
+
+    <div class="map" id="mindMap">
+
+      <div class="connector line1"></div>
+      <div class="connector line2"></div>
+      <div class="connector line3"></div>
+      <div class="connector line4"></div>
+      <div class="connector line5"></div>
+      <div class="connector line6"></div>
+      <div class="connector line7"></div>
+      <div class="connector line8"></div>
+      <div class="connector line9"></div>
+      <div class="connector line10"></div>
+
+      <div class="center-node">
+        <strong>🇮🇳 Indian Polity</strong>
+        <small>UPSC GS-II</small>
+      </div>
+
+      <div class="node n1" data-topic="Constitution" onclick="showTopic('constitution')">
+        <div><span>📜</span>Constitution</div>
+      </div>
+
+      <div class="node n2" data-topic="Fundamental Rights" onclick="showTopic('rights')">
+        <div><span>⚖️</span>Fundamental Rights</div>
+      </div>
+
+      <div class="node n3" data-topic="DPSP Duties" onclick="showTopic('dpsp')">
+        <div><span>📋</span>DPSP & Duties</div>
+      </div>
+
+      <div class="node n4" data-topic="Parliament" onclick="showTopic('parliament')">
+        <div><span>🏛️</span>Parliament</div>
+      </div>
+
+      <div class="node n5" data-topic="Executive" onclick="showTopic('executive')">
+        <div><span>🇮🇳</span>Executive</div>
+      </div>
+
+      <div class="node n6" data-topic="Judiciary" onclick="showTopic('judiciary')">
+        <div><span>⚖️</span>Judiciary</div>
+      </div>
+
+      <div class="node n7" data-topic="Federalism" onclick="showTopic('federalism')">
+        <div><span>🔄</span>Federalism</div>
+      </div>
+
+      <div class="node n8" data-topic="Elections" onclick="showTopic('elections')">
+        <div><span>🗳️</span>Elections</div>
+      </div>
+
+      <div class="node n9" data-topic="Constitutional Bodies" onclick="showTopic('bodies')">
+        <div><span>🏢</span>Constitutional Bodies</div>
+      </div>
+
+      <div class="node n10" data-topic="Local Government" onclick="showTopic('local')">
+        <div><span>🏘️</span>Local Government</div>
+      </div>
+
+    </div>
+
+    <div class="details" id="detailsBox">
+      <h3 id="detailsTitle"></h3>
+      <p id="detailsText"></p>
+      <ul id="detailsList"></ul>
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>📌 Quick Topics</h2>
+
+    <div class="quick">
+      <button onclick="showTopic('constitution')">📜 Constitution</button>
+      <button onclick="showTopic('rights')">⚖️ Fundamental Rights</button>
+      <button onclick="showTopic('dpsp')">📋 DPSP & Duties</button>
+      <button onclick="showTopic('parliament')">🏛️ Parliament</button>
+      <button onclick="showTopic('executive')">🇮🇳 Executive</button>
+      <button onclick="showTopic('judiciary')">⚖️ Judiciary</button>
+      <button onclick="showTopic('federalism')">🔄 Federalism</button>
+      <button onclick="showTopic('elections')">🗳️ Elections</button>
+      <button onclick="showTopic('bodies')">🏢 Bodies</button>
+      <button onclick="showTopic('local')">🏘️ Local Government</button>
+    </div>
+
+  </section>
+
+  <section class="section">
+
+    <h2>🎯 UPSC Preparation Use</h2>
+
+    <p>
+      Use this map for quick revision of major Polity areas.
+      The structure is designed around major GS-II themes such as
+      Constitution, Parliament, Executive, Judiciary, Federalism,
+      Governance and Constitutional Bodies.
+    </p>
+
+  </section>
+
+</main>
+
+<button id="topBtn" onclick="topFunction()">⬆️</button>
+
+<footer>
+  <p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+  <p>Free UPSC Preparation • Mind Maps • PYQs • Tests</p>
+  <p>© 2026 UPSC Shiksha</p>
+</footer>
+
+<script>
+
+const topics = {
+
+  constitution:{
+    title:"📜 Indian Constitution",
+    text:"The Constitution provides the basic framework for India's political and legal system.",
+    list:[
+      "Historical background",
+      "Constituent Assembly",
+      "Salient features",
+      "Amendment process",
+      "Basic Structure Doctrine",
+      "Important Articles & Schedules"
+    ]
+  },
+
+  rights:{
+    title:"⚖️ Fundamental Rights",
+    text:"Fundamental Rights protect important individual freedoms and constitutional guarantees.",
+    list:[
+      "Articles 12–35",
+      "Right to Equality",
+      "Right to Freedom",
+      "Right against Exploitation",
+      "Freedom of Religion",
+      "Cultural & Educational Rights",
+      "Constitutional Remedies"
+    ]
+  },
+
+  dpsp:{
+    title:"📋 DPSP & Fundamental Duties",
+    text:"Directive Principles guide the State while Fundamental Duties describe important civic responsibilities.",
+    list:[
+      "Directive Principles of State Policy",
+      "Social and economic justice",
+      "Welfare State",
+      "Fundamental Duties",
+      "Article 51A",
+      "FR vs DPSP"
+    ]
+  },
+
+  parliament:{
+    title:"🏛️ Parliament",
+    text:"Parliament is the central legislative institution of the Union government.",
+    list:[
+      "Lok Sabha",
+      "Rajya Sabha",
+      "President and Parliament",
+      "Legislative procedure",
+      "Parliamentary committees",
+      "Privileges",
+      "Budget and financial control"
+    ]
+  },
+
+  executive:{
+    title:"🇮🇳 Executive",
+    text:"The Union Executive includes the President, Vice-President, Prime Minister and Council of Ministers.",
+    list:[
+      "President",
+      "Vice-President",
+      "Prime Minister",
+      "Council of Ministers",
+      "Cabinet",
+      "Attorney General",
+      "Central Secretariat"
+    ]
+  },
+
+  judiciary:{
+    title:"⚖️ Judiciary",
+    text:"India has an integrated judicial system headed by the Supreme Court.",
+    list:[
+      "Supreme Court",
+      "High Courts",
+      "Judicial Review",
+      "Judicial Activism",
+      "PIL",
+      "Writ Jurisdiction",
+      "Independence of Judiciary"
+    ]
+  },
+
+  federalism:{
+    title:"🔄 Federalism",
+    text:"Indian federalism distributes powers between the Union and States.",
+    list:[
+      "Union-State relations",
+      "Legislative relations",
+      "Administrative relations",
+      "Financial relations",
+      "Inter-State Council",
+      "GST Council",
+      "Cooperative Federalism"
+    ]
+  },
+
+  elections:{
+    title:"🗳️ Elections",
+    text:"Elections are administered through the constitutional framework governing representation and electoral processes.",
+    list:[
+      "Election Commission of India",
+      "Electoral system",
+      "Representation of the People Acts",
+      "Electoral reforms",
+      "Political representation",
+      "Anti-defection provisions"
+    ]
+  },
+
+  bodies:{
+    title:"🏢 Constitutional Bodies",
+    text:"Constitutional bodies derive their authority directly from the Constitution.",
+    list:[
+      "Election Commission",
+      "UPSC",
+      "Finance Commission",
+      "CAG",
+      "Attorney General",
+      "State Public Service Commissions",
+      "GST Council"
+    ]
+  },
+
+  local:{
+    title:"🏘️ Local Government",
+    text:"Local government institutions support democratic decentralisation and grassroots governance.",
+    list:[
+      "73rd Constitutional Amendment",
+      "Panchayati Raj",
+      "Gram Sabha",
+      "74th Constitutional Amendment",
+      "Urban Local Bodies",
+      "State Election Commission",
+      "State Finance Commission"
+    ]
+  }
+
+};
+
+function showTopic(topic){
+
+  const data=topics[topic];
+
+  if(!data) return;
+
+  document.getElementById("detailsTitle").textContent=data.title;
+  document.getElementById("detailsText").textContent=data.text;
+
+  const list=document.getElementById("detailsList");
+
+  list.innerHTML="";
+
+  data.list.forEach(function(item){
+
+    const li=document.createElement("li");
+    li.textContent=item;
+    list.appendChild(li);
+
+  });
+
+  const box=document.getElementById("detailsBox");
+
+  box.classList.add("show");
+
+  setTimeout(function(){
+    box.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+  },50);
+}
+
+function searchTopics(){
+
+  const value=document
+    .getElementById("searchBox")
+    .value
+    .toLowerCase()
+    .trim();
+
+  document.querySelectorAll(".node").forEach(function(node){
+
+    const text=node.dataset.topic.toLowerCase();
+
+    if(text.includes(value) || value===""){
+      node.style.display="flex";
+      node.style.opacity="1";
+    }else{
+      node.style.display="none";
+    }
+
+  });
+}
+
+function toggleDark(){
+
+  document.body.classList.toggle("dark");
+
+  localStorage.setItem(
+    "polityMindMapDark",
+    document.body.classList.contains("dark")
+  );
+}
+
+if(localStorage.getItem("polityMindMapDark")==="true"){
+  document.body.classList.add("dark");
+}
+
+window.onscroll=function(){
+
+  const btn=document.getElementById("topBtn");
+
+  if(
+    document.body.scrollTop>300 ||
+    document.documentElement.scrollTop>300
+  ){
+    btn.style.display="block";
+  }else{
+    btn.style.display="none";
+  }
+
+};
+
+function topFunction(){
+
+  window.scrollTo({
+    top:0,
+    behavior:"smooth"
+  });
+
+}
+
+</script>
+
+</body>
+</html>
