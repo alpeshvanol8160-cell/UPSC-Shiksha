@@ -1,0 +1,2629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Science & Technology Mind Map | UPSC Shiksha</title>
+
+<meta name="description"
+content="UPSC Science and Technology interactive mind map, detailed notes, space technology, biotechnology, AI, defence, nuclear technology and emerging technologies.">
+
+<style>
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.65;
+}
+
+/* HEADER */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid #d9e0eb;
+  padding:12px 16px;
+}
+
+.header-inner{
+  max-width:1200px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  font-size:20px;
+  font-weight:800;
+  color:#3949ab;
+}
+
+.header-buttons{
+  display:flex;
+  gap:8px;
+}
+
+.header-buttons button,
+.header-buttons a{
+  border:0;
+  text-decoration:none;
+  background:#3949ab;
+  color:white;
+  padding:9px 13px;
+  border-radius:10px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+/* HERO */
+
+.hero{
+  max-width:1200px;
+  margin:22px auto;
+  padding:42px 22px;
+  border-radius:25px;
+  text-align:center;
+  color:white;
+
+  background:
+    radial-gradient(circle at 15% 20%,rgba(255,255,255,.25),transparent 30%),
+    radial-gradient(circle at 85% 80%,rgba(255,255,255,.18),transparent 30%),
+    linear-gradient(135deg,#283593,#1565c0,#00838f);
+
+  box-shadow:0 12px 35px rgba(35,55,150,.2);
+}
+
+.hero h1{
+  font-size:clamp(30px,5vw,52px);
+  margin-bottom:10px;
+}
+
+.hero p{
+  font-size:18px;
+  max-width:850px;
+  margin:auto;
+}
+
+/* SEARCH */
+
+.search-box{
+  max-width:850px;
+  margin:20px auto;
+}
+
+.search-box input{
+  width:100%;
+  padding:15px 18px;
+  border:2px solid #c8d2e5;
+  border-radius:14px;
+  font-size:16px;
+  outline:none;
+  background:white;
+}
+
+.search-box input:focus{
+  border-color:#3949ab;
+  box-shadow:0 0 0 4px rgba(57,73,171,.1);
+}
+
+/* QUICK NAV */
+
+.quick-nav{
+  max-width:1200px;
+  margin:20px auto;
+  padding:20px;
+  background:white;
+  border-radius:20px;
+  box-shadow:0 5px 18px rgba(0,0,0,.07);
+}
+
+.quick-nav h2{
+  text-align:center;
+  margin-bottom:15px;
+  color:#303f9f;
+}
+
+.nav-grid{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  gap:10px;
+}
+
+.nav-grid a{
+  text-decoration:none;
+  color:#283593;
+  background:#eef0ff;
+  border:2px solid #c5caf5;
+  padding:9px 13px;
+  border-radius:12px;
+  font-weight:bold;
+  transition:.2s;
+}
+
+.nav-grid a:hover{
+  transform:translateY(-3px);
+}
+
+/* MIND MAP */
+
+.map-box{
+  max-width:1200px;
+  margin:25px auto;
+  background:white;
+  border-radius:24px;
+  padding:25px;
+  box-shadow:0 7px 25px rgba(0,0,0,.08);
+}
+
+.map-box h2{
+  text-align:center;
+  margin-bottom:25px;
+  color:#303f9f;
+}
+
+.mind-map{
+  min-height:700px;
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  overflow:hidden;
+  border-radius:20px;
+
+  background:
+    radial-gradient(circle,#dce3ff 1px,transparent 1px);
+
+  background-size:22px 22px;
+  border:2px dashed #b8c3ed;
+}
+
+.center-node{
+  width:190px;
+  height:190px;
+  border-radius:50%;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:20px;
+
+  font-size:21px;
+  font-weight:900;
+  color:white;
+
+  background:linear-gradient(135deg,#283593,#1565c0,#00838f);
+
+  box-shadow:0 12px 30px rgba(40,53,147,.3);
+
+  z-index:3;
+}
+
+.node{
+  position:absolute;
+  width:150px;
+  min-height:75px;
+  padding:12px;
+
+  border-radius:17px;
+  text-align:center;
+  font-weight:800;
+
+  color:#172033;
+
+  cursor:pointer;
+
+  border:3px solid rgba(255,255,255,.9);
+
+  box-shadow:0 7px 18px rgba(0,0,0,.13);
+
+  transition:.25s;
+
+  z-index:4;
+}
+
+.node:hover{
+  transform:scale(1.06) translateY(-3px);
+}
+
+/* MAP NODE COLORS */
+
+.n1{
+  top:5%;
+  left:7%;
+  background:#c7d7ff;
+}
+
+.n2{
+  top:3%;
+  left:40%;
+  background:#d5f0ff;
+}
+
+.n3{
+  top:6%;
+  right:7%;
+  background:#d9d0ff;
+}
+
+.n4{
+  top:35%;
+  left:2%;
+  background:#ffe0b2;
+}
+
+.n5{
+  top:35%;
+  right:2%;
+  background:#ffcdd2;
+}
+
+.n6{
+  bottom:6%;
+  left:7%;
+  background:#d7f0d8;
+}
+
+.n7{
+  bottom:3%;
+  left:39%;
+  background:#fff1b8;
+}
+
+.n8{
+  bottom:6%;
+  right:7%;
+  background:#c9e7ff;
+}
+
+.n9{
+  top:59%;
+  left:19%;
+  background:#e5d2ff;
+}
+
+.n10{
+  top:59%;
+  right:19%;
+  background:#ffd7c2;
+}
+
+.n11{
+  top:21%;
+  left:22%;
+  background:#ccebd7;
+}
+
+.n12{
+  top:21%;
+  right:22%;
+  background:#d7d9ff;
+}
+
+/* TOPIC SECTION */
+
+.topic-section{
+  max-width:1200px;
+  margin:30px auto;
+  background:white;
+  border-radius:22px;
+  padding:26px;
+
+  box-shadow:0 6px 22px rgba(0,0,0,.07);
+
+  border-left:9px solid #3949ab;
+}
+
+.topic-section h2{
+  color:#303f9f;
+  margin-bottom:14px;
+  font-size:29px;
+}
+
+.topic-section h3{
+  margin-top:22px;
+  margin-bottom:10px;
+  color:#283593;
+}
+
+/* SECTION COLORS */
+
+.space{
+  border-left-color:#3949ab;
+}
+
+.biotech{
+  border-left-color:#8e24aa;
+}
+
+.nuclear{
+  border-left-color:#e53935;
+}
+
+.ai{
+  border-left-color:#00838f;
+}
+
+.cyber{
+  border-left-color:#1565c0;
+}
+
+.defence{
+  border-left-color:#455a64;
+}
+
+.nano{
+  border-left-color:#6a1b9a;
+}
+
+.health{
+  border-left-color:#00897b;
+}
+
+.communication{
+  border-left-color:#f9a825;
+}
+
+.emerging{
+  border-left-color:#ef6c00;
+}
+
+/* TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:15px 0;
+}
+
+table{
+  width:100%;
+  min-width:650px;
+  border-collapse:collapse;
+  overflow:hidden;
+  border-radius:12px;
+}
+
+th{
+  background:linear-gradient(135deg,#3949ab,#1565c0);
+  color:white;
+  padding:13px;
+  text-align:left;
+}
+
+td{
+  padding:12px;
+  border:1px solid #dce2ee;
+  vertical-align:top;
+}
+
+tr:nth-child(even){
+  background:#f4f6ff;
+}
+
+td:first-child{
+  font-weight:bold;
+  background:#edf0ff;
+}
+
+/* INFO GRID */
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.info-card{
+  padding:18px;
+  border-radius:16px;
+  border:2px solid #d8deef;
+  background:#f8f9ff;
+}
+
+.info-card h3{
+  margin-top:0;
+}
+
+.prelims{
+  background:#e8f5e9;
+  border-left:6px solid #2e7d32;
+}
+
+.mains{
+  background:#fff3e0;
+  border-left:6px solid #ef6c00;
+}
+
+.important{
+  background:#ffebee;
+  border-left:6px solid #d32f2f;
+}
+
+.tip{
+  background:#e3f2fd;
+  border-left:6px solid #1976d2;
+}
+
+/* VISUAL CARDS */
+
+.visual-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.visual-card{
+  padding:22px 12px;
+  text-align:center;
+  border-radius:18px;
+  font-size:18px;
+  font-weight:bold;
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.visual-card span{
+  display:block;
+  font-size:38px;
+  margin-bottom:8px;
+}
+
+.v1{background:#e1e7ff;}
+.v2{background:#e8dfff;}
+.v3{background:#dff4f7;}
+.v4{background:#fff0c9;}
+.v5{background:#ffe1e5;}
+.v6{background:#e2f3e6;}
+.v7{background:#e0ecff;}
+.v8{background:#f2e2ff;}
+
+/* IMPORTANT TOPICS */
+
+.priority-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+  margin-top:18px;
+}
+
+.priority-card{
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  font-weight:bold;
+  min-height:130px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+
+  box-shadow:0 5px 15px rgba(0,0,0,.08);
+}
+
+.p1{background:#dfe6ff;}
+.p2{background:#eadfff;}
+.p3{background:#dff5f7;}
+.p4{background:#ffe0e0;}
+.p5{background:#e3f4e6;}
+.p6{background:#fff0c9;}
+.p7{background:#e1ebff;}
+.p8{background:#f4e2ff;}
+
+/* QUICK REVISION */
+
+.revision-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:15px;
+}
+
+.revision-card{
+  padding:20px;
+  border-radius:18px;
+  text-align:center;
+  font-weight:bold;
+  min-height:130px;
+
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+}
+
+.r1{background:#dfe7ff;}
+.r2{background:#eadfff;}
+.r3{background:#dff5f7;}
+.r4{background:#ffe2e2;}
+.r5{background:#e2f3e6;}
+.r6{background:#fff0c9;}
+.r7{background:#e1ebff;}
+.r8{background:#f1e1ff;}
+
+/* FOOTER */
+
+footer{
+  margin-top:35px;
+  padding:30px 15px;
+  text-align:center;
+  background:#172554;
+  color:white;
+}
+
+footer a{
+  color:#b9c7ff;
+}
+
+/* TOP BUTTON */
+
+#topBtn{
+  display:none;
+  position:fixed;
+  bottom:20px;
+  right:18px;
+
+  border:0;
+  width:48px;
+  height:48px;
+
+  border-radius:50%;
+
+  background:#3949ab;
+  color:white;
+
+  font-size:20px;
+
+  cursor:pointer;
+
+  z-index:1000;
+}
+
+/* DARK MODE */
+
+body.dark{
+  background:#10131d;
+  color:#e8ecff;
+}
+
+body.dark header,
+body.dark .quick-nav,
+body.dark .map-box,
+body.dark .topic-section{
+  background:#181d2b;
+  color:#e8ecff;
+  border-color:#343d5a;
+}
+
+body.dark .search-box input{
+  background:#151a27;
+  color:white;
+  border-color:#414c70;
+}
+
+body.dark .quick-nav a{
+  background:#222942;
+  color:#c7d0ff;
+  border-color:#46527a;
+}
+
+body.dark .mind-map{
+  background:#141925;
+  border-color:#46527a;
+}
+
+body.dark .topic-section h2,
+body.dark .topic-section h3,
+body.dark .quick-nav h2,
+body.dark .map-box h2{
+  color:#aebcff;
+}
+
+body.dark td{
+  border-color:#3b4560;
+}
+
+body.dark tr:nth-child(even){
+  background:#202637;
+}
+
+body.dark td:first-child{
+  background:#242b40;
+}
+
+body.dark .info-card{
+  background:#202638;
+  border-color:#414b68;
+}
+
+body.dark .prelims{
+  background:#193324;
+}
+
+body.dark .mains{
+  background:#3a2d1c;
+}
+
+body.dark .important{
+  background:#3d2025;
+}
+
+body.dark .tip{
+  background:#192d43;
+}
+
+/* MOBILE */
+
+@media(max-width:800px){
+
+  .header-inner{
+    flex-direction:column;
+  }
+
+  .hero{
+    margin:12px;
+    padding:30px 16px;
+  }
+
+  .hero h1{
+    font-size:32px;
+  }
+
+  .map-box,
+  .topic-section,
+  .quick-nav{
+    margin:15px 10px;
+    padding:18px;
+  }
+
+  .mind-map{
+    min-height:850px;
+  }
+
+  .center-node{
+    width:145px;
+    height:145px;
+    font-size:17px;
+  }
+
+  .node{
+    width:112px;
+    font-size:12px;
+    padding:9px;
+  }
+
+  .n1{
+    top:3%;
+    left:2%;
+  }
+
+  .n2{
+    top:2%;
+    left:34%;
+  }
+
+  .n3{
+    top:3%;
+    right:2%;
+  }
+
+  .n4{
+    top:25%;
+    left:1%;
+  }
+
+  .n5{
+    top:25%;
+    right:1%;
+  }
+
+  .n6{
+    bottom:4%;
+    left:2%;
+  }
+
+  .n7{
+    bottom:2%;
+    left:34%;
+  }
+
+  .n8{
+    bottom:4%;
+    right:2%;
+  }
+
+  .n9{
+    top:48%;
+    left:7%;
+  }
+
+  .n10{
+    top:48%;
+    right:7%;
+  }
+
+  .n11{
+    top:17%;
+    left:16%;
+  }
+
+  .n12{
+    top:17%;
+    right:16%;
+  }
+
+  .info-grid,
+  .visual-grid,
+  .priority-grid,
+  .revision-grid{
+    grid-template-columns:1fr;
+  }
+
+  .topic-section h2{
+    font-size:24px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *{
+    scroll-behavior:auto !important;
+    transition:none !important;
+  }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<header>
+
+<div class="header-inner">
+
+<div class="logo">
+🔬 UPSC Shiksha
+</div>
+
+<div class="header-buttons">
+
+<a href="index.html">
+🏠 Home
+</a>
+
+<button onclick="toggleDark()">
+🌙 Dark
+</button>
+
+</div>
+
+</div>
+
+</header>
+
+
+<section class="hero">
+
+<h1>
+🔬 Science & Technology
+</h1>
+
+<p>
+UPSC Prelims & GS-III — Interactive Mind Map,
+Detailed Notes, Important Topics and Quick Revision
+</p>
+
+</section>
+
+
+<div class="search-box">
+
+<input
+type="text"
+id="topicSearch"
+placeholder="🔎 Search Science & Technology topic..."
+onkeyup="searchTopics()"
+>
+
+</div>
+
+
+<section class="quick-nav">
+
+<h2>⚡ Quick Navigation</h2>
+
+<div class="nav-grid">
+
+<a href="#spaceSection">🚀 Space</a>
+
+<a href="#biotechSection">🧬 Biotechnology</a>
+
+<a href="#nuclearSection">☢️ Nuclear</a>
+
+<a href="#aiSection">🤖 AI & Robotics</a>
+
+<a href="#cyberSection">💻 Cyber</a>
+
+<a href="#defenceSection">🛡️ Defence</a>
+
+<a href="#nanoSection">🔬 Nano</a>
+
+<a href="#healthSection">💉 Health</a>
+
+<a href="#communicationSection">📡 Communication</a>
+
+<a href="#emergingSection">⚡ Emerging Tech</a>
+
+<a href="#importantSection">🔴 Important</a>
+
+<a href="#revisionSection">⚡ Revision</a>
+
+</div>
+
+</section>
+
+
+<!-- MIND MAP -->
+
+<section class="map-box">
+
+<h2>
+🧠 Science & Technology Interactive Mind Map
+</h2>
+
+<div class="mind-map">
+
+
+<div class="center-node">
+
+🔬<br>
+SCIENCE<br>
+&<br>
+TECHNOLOGY<br>
+UPSC
+
+</div>
+
+
+<div class="node n1"
+onclick="showTopic('space')">
+
+🚀 Space<br>
+Technology
+
+</div>
+
+
+<div class="node n2"
+onclick="showTopic('biotech')">
+
+🧬 Biotechnology
+
+</div>
+
+
+<div class="node n3"
+onclick="showTopic('nuclear')">
+
+☢️ Nuclear<br>
+Technology
+
+</div>
+
+
+<div class="node n4"
+onclick="showTopic('ai')">
+
+🤖 AI &<br>
+Robotics
+
+</div>
+
+
+<div class="node n5"
+onclick="showTopic('cyber')">
+
+💻 IT &<br>
+Cyber Security
+
+</div>
+
+
+<div class="node n6"
+onclick="showTopic('defence')">
+
+🛡️ Defence<br>
+Technology
+
+</div>
+
+
+<div class="node n7"
+onclick="showTopic('nano')">
+
+🔬 Nanotechnology
+
+</div>
+
+
+<div class="node n8"
+onclick="showTopic('health')">
+
+💉 Health &<br>
+Medical Tech
+
+</div>
+
+
+<div class="node n9"
+onclick="showTopic('communication')">
+
+📡 Communication
+
+</div>
+
+
+<div class="node n10"
+onclick="showTopic('emerging')">
+
+⚡ Emerging<br>
+Technologies
+
+</div>
+
+
+<div class="node n11"
+onclick="showTopic('green')">
+
+🌱 Green<br>
+Technology
+
+</div>
+
+
+<div class="node n12"
+onclick="showTopic('important')">
+
+🔴 UPSC<br>
+Important
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- SPACE -->
+
+<section
+class="topic-section space"
+id="spaceSection"
+>
+
+<h2>
+🚀 1. Space Technology
+</h2>
+
+<p>
+Space technology covers satellites, launch systems, remote sensing,
+navigation, communication and space exploration.
+</p>
+
+
+<h3>
+Aspects / Details
+</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Aspect
+</th>
+
+<th>
+Details
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Launch Vehicles
+</td>
+
+<td>
+Systems used to place spacecraft and satellites into orbit.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Satellites
+</td>
+
+<td>
+Used for communication, weather, navigation, Earth observation and science.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Remote Sensing
+</td>
+
+<td>
+Collection of information about Earth's surface using sensors.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Navigation
+</td>
+
+<td>
+Satellite-based positioning and navigation services.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Space Exploration
+</td>
+
+<td>
+Scientific missions to study the Moon, planets and other celestial objects.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+
+<h3>
+🟢 Prelims Focus
+</h3>
+
+<ul>
+
+<li>Satellite types</li>
+
+<li>Orbits</li>
+
+<li>Launch vehicles</li>
+
+<li>Remote sensing</li>
+
+<li>Navigation systems</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card mains">
+
+<h3>
+🟠 Mains Focus
+</h3>
+
+<ul>
+
+<li>Space applications</li>
+
+<li>Disaster management</li>
+
+<li>Agriculture</li>
+
+<li>Communication</li>
+
+<li>Strategic importance</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card important">
+
+<h3>
+🔴 Important
+</h3>
+
+<p>
+Connect space technology with agriculture,
+weather forecasting, communication and disaster management.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BIOTECH -->
+
+<section
+class="topic-section biotech"
+id="biotechSection"
+>
+
+<h2>
+🧬 2. Biotechnology
+</h2>
+
+<p>
+Biotechnology uses biological systems, organisms or components
+for useful applications in medicine, agriculture, industry and environment.
+</p>
+
+
+<div class="visual-grid">
+
+<div class="visual-card v1">
+
+<span>🧬</span>
+
+Genetic Engineering
+
+</div>
+
+
+<div class="visual-card v2">
+
+<span>🧪</span>
+
+Gene Editing
+
+</div>
+
+
+<div class="visual-card v3">
+
+<span>🌾</span>
+
+Agricultural Biotech
+
+</div>
+
+
+<div class="visual-card v4">
+
+<span>💉</span>
+
+Medical Biotech
+
+</div>
+
+</div>
+
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Topic
+</th>
+
+<th>
+UPSC Relevance
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Genetic Engineering
+</td>
+
+<td>
+Modification of genetic material for desired characteristics.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Gene Editing
+</td>
+
+<td>
+Targeted changes to genetic material.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+GM Crops
+</td>
+
+<td>
+Crops developed using genetic modification techniques.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Vaccines
+</td>
+
+<td>
+Biotechnology contributes to vaccine development and production.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Biofuels
+</td>
+
+<td>
+Biological resources can be used to produce energy.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- NUCLEAR -->
+
+<section
+class="topic-section nuclear"
+id="nuclearSection"
+>
+
+<h2>
+☢️ 3. Nuclear Technology
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Concept
+</th>
+
+<th>
+Explanation
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Nuclear Fission
+</td>
+
+<td>
+Splitting of a heavy atomic nucleus and release of energy.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Nuclear Fusion
+</td>
+
+<td>
+Combining light nuclei under suitable conditions to release energy.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Nuclear Power
+</td>
+
+<td>
+Uses nuclear reactions as a source of energy.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Radioisotopes
+</td>
+
+<td>
+Used in medicine, industry and scientific applications.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Nuclear Safety
+</td>
+
+<td>
+Focuses on safe operation, radiation protection and waste management.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="info-card prelims">
+
+<h3>
+🟢 Prelims
+</h3>
+
+<p>
+Understand fission, fusion, radiation,
+reactor basics and peaceful applications of nuclear technology.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- AI -->
+
+<section
+class="topic-section ai"
+id="aiSection"
+>
+
+<h2>
+🤖 4. Artificial Intelligence, Robotics & Automation
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Technology
+</th>
+
+<th>
+Basic Idea
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Artificial Intelligence
+</td>
+
+<td>
+Systems designed to perform tasks involving capabilities associated with human intelligence.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Machine Learning
+</td>
+
+<td>
+Algorithms that learn patterns from data.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Deep Learning
+</td>
+
+<td>
+Machine-learning methods based on multi-layer neural networks.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Robotics
+</td>
+
+<td>
+Design and use of programmable machines capable of performing tasks.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Generative AI
+</td>
+
+<td>
+AI systems capable of generating content such as text, images or code.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+
+<h3>
+🟢 Prelims
+</h3>
+
+<ul>
+
+<li>AI terminology</li>
+
+<li>Machine learning</li>
+
+<li>Robotics</li>
+
+<li>Generative AI</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card mains">
+
+<h3>
+🟠 Mains
+</h3>
+
+<ul>
+
+<li>AI in governance</li>
+
+<li>Employment</li>
+
+<li>Privacy</li>
+
+<li>Ethics</li>
+
+<li>Digital divide</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card tip">
+
+<h3>
+💡 Answer Tip
+</h3>
+
+<p>
+For AI answers, discuss both opportunities
+and risks such as bias, privacy and accountability.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- CYBER -->
+
+<section
+class="topic-section cyber"
+id="cyberSection"
+>
+
+<h2>
+💻 5. IT & Cyber Security
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Topic
+</th>
+
+<th>
+Importance
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Cyber Security
+</td>
+
+<td>
+Protection of systems, networks and data from cyber threats.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Encryption
+</td>
+
+<td>
+Converts information into a protected form to prevent unauthorised access.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Cloud Computing
+</td>
+
+<td>
+Delivery of computing resources over networks.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Blockchain
+</td>
+
+<td>
+Distributed digital ledger technology.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Digital Public Infrastructure
+</td>
+
+<td>
+Technology infrastructure supporting large-scale digital services.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- DEFENCE -->
+
+<section
+class="topic-section defence"
+id="defenceSection"
+>
+
+<h2>
+🛡️ 6. Defence Technology
+</h2>
+
+<div class="visual-grid">
+
+<div class="visual-card v5">
+
+<span>🚀</span>
+
+Missile Technology
+
+</div>
+
+
+<div class="visual-card v6">
+
+<span>🛰️</span>
+
+Surveillance
+
+</div>
+
+
+<div class="visual-card v7">
+
+<span>🤖</span>
+
+Unmanned Systems
+
+</div>
+
+
+<div class="visual-card v8">
+
+<span>🛡️</span>
+
+Defence Systems
+
+</div>
+
+</div>
+
+
+<h3>
+Important Areas
+</h3>
+
+<ul>
+
+<li>Missile systems</li>
+
+<li>Drones and unmanned systems</li>
+
+<li>Electronic warfare</li>
+
+<li>Radar and surveillance</li>
+
+<li>Space-based defence applications</li>
+
+<li>Cyber warfare</li>
+
+</ul>
+
+</section>
+
+
+<!-- NANOTECH -->
+
+<section
+class="topic-section nano"
+id="nanoSection"
+>
+
+<h2>
+🔬 7. Nanotechnology
+</h2>
+
+<p>
+Nanotechnology deals with materials and systems at extremely small scales,
+where materials may show useful properties different from their bulk form.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Field
+</th>
+
+<th>
+Applications
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Medicine
+</td>
+
+<td>
+Drug delivery, diagnostics and medical materials.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Energy
+</td>
+
+<td>
+Advanced materials for batteries and energy technologies.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Agriculture
+</td>
+
+<td>
+Potential applications in inputs, sensing and delivery systems.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Environment
+</td>
+
+<td>
+Water treatment and pollution monitoring technologies.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- HEALTH -->
+
+<section
+class="topic-section health"
+id="healthSection"
+>
+
+<h2>
+💉 8. Health & Medical Technology
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Technology
+</th>
+
+<th>
+Application
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Vaccines
+</td>
+
+<td>
+Prevention of infectious diseases.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Gene Therapy
+</td>
+
+<td>
+Uses genetic material or genetic modification approaches to address disease.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Telemedicine
+</td>
+
+<td>
+Delivery of healthcare services using communication technology.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Medical Imaging
+</td>
+
+<td>
+Tools such as MRI, CT and ultrasound support diagnosis.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Wearable Technology
+</td>
+
+<td>
+Devices used to monitor health-related parameters.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- COMMUNICATION -->
+
+<section
+class="topic-section communication"
+id="communicationSection"
+>
+
+<h2>
+📡 9. Communication Technology
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<h3>
+📱 Mobile Networks
+</h3>
+
+<p>
+Wireless communication networks enable voice,
+data and digital services.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+🛰️ Satellite Communication
+</h3>
+
+<p>
+Satellites support communication over large geographical areas.
+</p>
+
+</div>
+
+
+<div class="info-card">
+
+<h3>
+🌐 Internet
+</h3>
+
+<p>
+Global network infrastructure enables information exchange
+and digital services.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EMERGING -->
+
+<section
+class="topic-section emerging"
+id="emergingSection"
+>
+
+<h2>
+⚡ 10. Emerging Technologies
+</h2>
+
+<div class="priority-grid">
+
+<div class="priority-card p1">
+⚛️ Quantum Technology
+</div>
+
+<div class="priority-card p2">
+🧠 Advanced AI
+</div>
+
+<div class="priority-card p3">
+🧬 Synthetic Biology
+</div>
+
+<div class="priority-card p4">
+🔋 Advanced Batteries
+</div>
+
+<div class="priority-card p5">
+🌱 Green Hydrogen
+</div>
+
+<div class="priority-card p6">
+🛰️ Space Technology
+</div>
+
+<div class="priority-card p7">
+🔬 Advanced Materials
+</div>
+
+<div class="priority-card p8">
+🤖 Robotics
+</div>
+
+</div>
+
+</section>
+
+
+<!-- GREEN -->
+
+<section
+class="topic-section"
+id="greenSection"
+>
+
+<h2>
+🌱 11. Green Technology
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Technology
+</th>
+
+<th>
+Environmental Relevance
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+Solar Energy
+</td>
+
+<td>
+Uses sunlight to generate electricity or heat.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Wind Energy
+</td>
+
+<td>
+Uses wind movement to generate electricity.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Green Hydrogen
+</td>
+
+<td>
+Hydrogen produced using renewable electricity through electrolysis.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Electric Mobility
+</td>
+
+<td>
+Can reduce tailpipe emissions when powered by low-carbon electricity.
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+Energy Storage
+</td>
+
+<td>
+Supports integration of variable renewable energy.
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- IMPORTANT -->
+
+<section
+class="topic-section important"
+id="importantSection"
+>
+
+<h2>
+🔴 Most Important UPSC Science & Technology Topics
+</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+
+<th>
+Priority
+</th>
+
+<th>
+Topic
+</th>
+
+<th>
+Prepare
+</th>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐⭐
+</td>
+
+<td>
+Space
+</td>
+
+<td>
+Satellites, missions, launch systems, applications
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐⭐
+</td>
+
+<td>
+Biotechnology
+</td>
+
+<td>
+Gene editing, GM technology, vaccines, biofuels
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐⭐
+</td>
+
+<td>
+Artificial Intelligence
+</td>
+
+<td>
+AI, ML, robotics, ethics and governance
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐⭐
+</td>
+
+<td>
+Cyber Security
+</td>
+
+<td>
+Cyber threats, encryption, data and digital security
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐⭐
+</td>
+
+<td>
+Nuclear Technology
+</td>
+
+<td>
+Fission, fusion, reactors and applications
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐
+</td>
+
+<td>
+Nanotechnology
+</td>
+
+<td>
+Applications in medicine, energy and environment
+</td>
+
+</tr>
+
+<tr>
+
+<td>
+⭐⭐
+</td>
+
+<td>
+Emerging Technology
+</td>
+
+<td>
+Quantum technology, advanced materials and new technologies
+</td>
+
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- STRATEGY -->
+
+<section class="topic-section">
+
+<h2>
+🎯 UPSC Science & Technology Strategy
+</h2>
+
+<div class="info-grid">
+
+<div class="info-card prelims">
+
+<h3>
+🟢 Prelims
+</h3>
+
+<ul>
+
+<li>Basic concepts</li>
+
+<li>Applications</li>
+
+<li>Recent technologies</li>
+
+<li>Space missions</li>
+
+<li>Biotechnology</li>
+
+<li>AI terminology</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card mains">
+
+<h3>
+🟠 Mains
+</h3>
+
+<ul>
+
+<li>Technology and development</li>
+
+<li>Ethical issues</li>
+
+<li>Technology governance</li>
+
+<li>Security implications</li>
+
+<li>Innovation</li>
+
+<li>Self-reliance</li>
+
+</ul>
+
+</div>
+
+
+<div class="info-card tip">
+
+<h3>
+💡 Answer Formula
+</h3>
+
+<p>
+
+<strong>Technology → Application → Benefits →
+Challenges → Government measures → Way forward</strong>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section
+class="topic-section"
+id="revisionSection"
+>
+
+<h2>
+⚡ Science & Technology Quick Revision
+</h2>
+
+<div class="revision-grid">
+
+<div class="revision-card r1">
+🚀<br>
+Space<br>
+Technology
+</div>
+
+<div class="revision-card r2">
+🧬<br>
+Biotechnology
+</div>
+
+<div class="revision-card r3">
+☢️<br>
+Nuclear<br>
+Technology
+</div>
+
+<div class="revision-card r4">
+🤖<br>
+AI &<br>
+Robotics
+</div>
+
+<div class="revision-card r5">
+💻<br>
+Cyber<br>
+Security
+</div>
+
+<div class="revision-card r6">
+🛡️<br>
+Defence<br>
+Technology
+</div>
+
+<div class="revision-card r7">
+🔬<br>
+Nanotechnology
+</div>
+
+<div class="revision-card r8">
+⚡<br>
+Emerging<br>
+Technology
+</div>
+
+</div>
+
+</section>
+
+
+<footer>
+
+<p>
+🔬 <strong>UPSC Shiksha</strong>
+</p>
+
+<p>
+Science & Technology — Interactive UPSC Notes
+</p>
+
+<p style="margin-top:8px;">
+Study • Revise • Practice • Improve
+</p>
+
+</footer>
+
+
+<button
+id="topBtn"
+onclick="topFunction()"
+>
+↑
+</button>
+
+
+<script>
+
+const topics={
+
+space:{
+section:"spaceSection"
+},
+
+biotech:{
+section:"biotechSection"
+},
+
+nuclear:{
+section:"nuclearSection"
+},
+
+ai:{
+section:"aiSection"
+},
+
+cyber:{
+section:"cyberSection"
+},
+
+defence:{
+section:"defenceSection"
+},
+
+nano:{
+section:"nanoSection"
+},
+
+health:{
+section:"healthSection"
+},
+
+communication:{
+section:"communicationSection"
+},
+
+emerging:{
+section:"emergingSection"
+},
+
+green:{
+section:"greenSection"
+},
+
+important:{
+section:"importantSection"
+}
+
+};
+
+
+function showTopic(topic){
+
+if(topics[topic]){
+
+document
+.getElementById(topics[topic].section)
+.scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+}
+
+
+function searchTopics(){
+
+const input=
+document
+.getElementById("topicSearch")
+.value
+.toLowerCase()
+.trim();
+
+const sections=
+document.querySelectorAll(".topic-section");
+
+sections.forEach(section=>{
+
+const text=
+section.innerText.toLowerCase();
+
+if(text.includes(input)){
+
+section.style.display="block";
+
+}else{
+
+section.style.display="none";
+
+}
+
+});
+
+if(input===""){
+
+sections.forEach(section=>{
+
+section.style.display="block";
+
+});
+
+}
+
+}
+
+
+function toggleDark(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"scienceTechMindMapDark",
+document.body.classList.contains("dark")
+);
+
+}
+
+
+if(
+localStorage.getItem("scienceTechMindMapDark")==="true"
+){
+
+document.body.classList.add("dark");
+
+}
+
+
+window.onscroll=function(){
+
+const btn=
+document.getElementById("topBtn");
+
+if(
+document.body.scrollTop>400 ||
+document.documentElement.scrollTop>400
+){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+
+function topFunction(){
+
+window.scrollTo({
+
+top:0,
+
+behavior:"smooth"
+
+});
+
+}
+
+</script>
+
+</body>
+</html>
