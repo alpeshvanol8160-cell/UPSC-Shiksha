@@ -1,524 +1,736 @@
  <!DOCTYPE html>
 <html lang="en">
-
 <head>
-
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>UPSC Shiksha | CSAT PYQ</title>
 
-<meta
-name="description"
-content="UPSC CSAT Previous Year Questions, PYQ-based practice, comprehension, reasoning and numeracy."
->
-
-<link rel="stylesheet" href="style.css">
+<meta name="description"
+content="UPSC CSAT Previous Year Question Papers, practice quiz, comprehension, reasoning, numeracy and data interpretation.">
 
 <style>
 
-/* =========================
-   PAGE
-========================= */
-
-.pyq-page {
-  max-width: 1050px;
-  margin: auto;
-  padding: 25px 16px 50px;
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
-.back-btn {
-  display: inline-block;
-  margin-bottom: 20px;
-  padding: 10px 17px;
-  border-radius: 10px;
-  background: #333;
-  color: white;
-  text-decoration: none;
+html{
+scroll-behavior:smooth;
 }
 
-.pyq-header {
-  text-align: center;
-  padding: 38px 20px;
-  margin-bottom: 25px;
-  border-radius: 20px;
-  background: linear-gradient(135deg, #e8f5e9, #ffffff);
-  box-shadow: 0 5px 18px rgba(0,0,0,0.07);
+body{
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#20242b;
+line-height:1.6;
+transition:0.3s;
 }
 
-.pyq-header h1 {
-  font-size: 32px;
-  margin: 0 0 10px;
+/* HEADER */
+
+header{
+background:#ffffff;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
-.pyq-header p {
-  line-height: 1.7;
-  margin: 0;
+.navbar{
+max-width:1200px;
+margin:auto;
+padding:14px 20px;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
-.tags {
-  margin-top: 18px;
+.logo{
+font-size:20px;
+font-weight:bold;
+color:#e85d04;
+white-space:nowrap;
 }
 
-.tag {
-  display: inline-block;
-  padding: 7px 12px;
-  margin: 4px;
-  border-radius: 20px;
-  background: #333;
-  color: white;
-  font-size: 13px;
+.logo span{
+color:#222;
 }
 
-
-/* =========================
-   DARK MODE
-========================= */
-
-.dark-toggle {
-  text-align: center;
-  margin: 15px 0 20px;
+.menu-btn{
+display:none;
+font-size:25px;
+background:none;
+border:none;
+cursor:pointer;
 }
 
-.dark-toggle button {
-  padding: 10px 15px;
-  border: none;
-  border-radius: 9px;
-  background: #333;
-  color: white;
-  cursor: pointer;
-  font-size: 14px;
+.nav-menu{
+display:flex;
+gap:18px;
+align-items:center;
 }
 
-body.dark-mode {
-  background: #121212;
-  color: #eee;
+.nav-menu a{
+text-decoration:none;
+color:#333;
+font-size:14px;
+font-weight:500;
 }
 
-body.dark-mode .pyq-header {
-  background: linear-gradient(135deg, #252525, #181818);
+.nav-menu a:hover{
+color:#e85d04;
 }
 
+/* CONTAINER */
 
-/* =========================
-   SEARCH
-========================= */
-
-.search-box {
-  margin: 25px 0;
+.container{
+max-width:1100px;
+margin:auto;
+padding:20px;
 }
 
-.search-box input {
-  width: 100%;
-  box-sizing: border-box;
-  padding: 14px 16px;
-  border: 1px solid #ccc;
-  border-radius: 12px;
-  font-size: 16px;
-  outline: none;
+/* BACK BUTTON */
+
+.back-btn{
+display:inline-block;
+background:#333;
+color:white;
+padding:9px 15px;
+border-radius:7px;
+text-decoration:none;
+font-size:14px;
+margin-bottom:25px;
 }
 
-body.dark-mode .search-box input {
-  background: #222;
-  color: white;
-  border-color: #555;
+.back-btn:hover{
+background:#111;
 }
 
+/* HERO */
 
-/* =========================
-   QUIZ
-========================= */
-
-.quiz-box {
-  margin: 30px 0;
-  padding: 25px;
-  border-radius: 20px;
-  background: #f7f7f7;
-  box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+.hero{
+background:linear-gradient(135deg,#eefaf1,#ffffff);
+padding:35px 20px;
+border-radius:18px;
+text-align:center;
+box-shadow:0 5px 18px rgba(0,0,0,0.07);
+margin-bottom:18px;
 }
 
-.quiz-box h2 {
-  margin-top: 0;
-  text-align: center;
+.hero h1{
+font-size:28px;
+margin-bottom:8px;
 }
 
-.quiz-subtitle {
-  text-align: center;
-  opacity: .75;
+.hero p{
+font-size:15px;
+color:#555;
 }
 
-.quiz-filters {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 12px;
-  margin: 20px 0;
+.tags{
+margin-top:15px;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
 }
 
-.quiz-filters select {
-  width: 100%;
-  padding: 13px;
-  border-radius: 10px;
-  border: 1px solid #ccc;
-  font-size: 15px;
-  background: white;
+.tag{
+background:#333;
+color:white;
+padding:5px 10px;
+border-radius:20px;
+font-size:11px;
 }
 
-.quiz-info {
-  display: flex;
-  justify-content: space-between;
-  margin: 15px 0;
-  font-weight: bold;
+/* DARK BUTTON */
+
+.dark-mode-btn{
+display:block;
+margin:0 auto 20px;
+background:#333;
+color:white;
+border:none;
+padding:10px 15px;
+border-radius:7px;
+cursor:pointer;
 }
 
-.question-card {
-  background: white;
-  padding: 22px;
-  border-radius: 15px;
-  border: 1px solid #eee;
+/* SEARCH */
+
+.search-box{
+width:100%;
+padding:13px 15px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:14px;
+outline:none;
+margin-bottom:20px;
+background:white;
 }
 
-.question-card h3 {
-  line-height: 1.6;
+.search-box:focus{
+border-color:#e85d04;
 }
 
-.option-btn {
-  display: block;
-  width: 100%;
-  margin: 10px 0;
-  padding: 14px;
-  text-align: left;
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  background: white;
-  cursor: pointer;
-  font-size: 15px;
+/* QUIZ */
+
+.quiz-box{
+background:#ffffff;
+padding:25px;
+border-radius:16px;
+box-shadow:0 5px 18px rgba(0,0,0,0.07);
+margin:25px 0;
 }
 
-.option-btn:hover {
-  background: #f0f0f0;
+.quiz-box h2{
+font-size:22px;
+margin-bottom:5px;
 }
 
-.option-btn.correct {
-  background: #d9f7df;
-  border-color: #299447;
+.quiz-subtitle{
+color:#666;
+font-size:14px;
+margin-bottom:20px;
 }
 
-.option-btn.wrong {
-  background: #ffdede;
-  border-color: #d33;
+.quiz-filters{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+margin-bottom:20px;
 }
 
-.option-btn:disabled {
-  cursor: default;
+.quiz-filters select{
+width:100%;
+padding:11px;
+border:1px solid #ddd;
+border-radius:8px;
+font-size:14px;
+background:white;
 }
 
-.answer-box {
-  display: none;
-  margin-top: 18px;
-  padding: 15px;
-  border-radius: 10px;
-  background: #eef6ff;
-  line-height: 1.6;
+.quiz-info{
+display:flex;
+justify-content:space-between;
+align-items:center;
+background:#f3f4f6;
+padding:10px 13px;
+border-radius:8px;
+margin-bottom:15px;
+font-size:14px;
+font-weight:bold;
 }
 
-.quiz-actions {
-  display: flex;
-  gap: 10px;
-  margin-top: 18px;
+.question-card{
+border:1px solid #e4e4e4;
+border-radius:12px;
+padding:20px;
 }
 
-.quiz-actions button {
-  flex: 1;
-  padding: 13px;
-  border: none;
-  border-radius: 10px;
-  background: #333;
-  color: white;
-  font-size: 15px;
-  cursor: pointer;
+.question-card h3{
+font-size:17px;
+margin-bottom:18px;
+line-height:1.5;
 }
 
-body.dark-mode .quiz-box,
-body.dark-mode .question-card {
-  background: #1e1e1e;
-  color: #eee;
+.options-box{
+display:flex;
+flex-direction:column;
+gap:10px;
 }
 
-body.dark-mode .quiz-filters select,
-body.dark-mode .option-btn {
-  background: #292929;
-  color: white;
-  border-color: #555;
+.option-btn{
+width:100%;
+text-align:left;
+padding:12px 14px;
+border:1px solid #ddd;
+background:#fff;
+border-radius:8px;
+cursor:pointer;
+font-size:14px;
+transition:0.2s;
 }
 
-body.dark-mode .answer-box {
-  background: #26384a;
+.option-btn:hover{
+background:#f4f4f4;
 }
 
-
-/* =========================
-   QUICK NAV
-========================= */
-
-.quick-nav {
-  background: #f5f5f5;
-  padding: 18px;
-  border-radius: 15px;
-  margin-bottom: 25px;
+.option-btn.correct{
+background:#d9f7df;
+border-color:#28a745;
+color:#146c2e;
 }
 
-.quick-nav h2 {
-  margin-top: 0;
-  font-size: 20px;
+.option-btn.wrong{
+background:#ffe0e0;
+border-color:#dc3545;
+color:#9b1c1c;
 }
 
-.quick-nav a {
-  display: inline-block;
-  margin: 5px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background: white;
-  color: #333;
-  text-decoration: none;
-  border: 1px solid #ddd;
+.option-btn:disabled{
+cursor:not-allowed;
 }
 
-body.dark-mode .quick-nav {
-  background: #1e1e1e;
+.answer-box{
+display:none;
+margin-top:15px;
+padding:13px;
+border-radius:8px;
+background:#f1f7ff;
+font-size:14px;
 }
 
-body.dark-mode .quick-nav a {
-  background: #292929;
-  color: #eee;
-  border-color: #444;
+.answer-box.show{
+display:block;
 }
 
-
-/* =========================
-   YEAR CARDS
-========================= */
-
-.year-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 18px;
+.quiz-actions{
+display:flex;
+gap:10px;
+margin-top:18px;
 }
 
-.year-card {
-  background: white;
-  padding: 22px;
-  border-radius: 16px;
-  box-shadow: 0 4px 16px rgba(0,0,0,0.08);
+.quiz-actions button{
+flex:1;
+border:none;
+padding:12px;
+border-radius:8px;
+cursor:pointer;
+background:#333;
+color:white;
+font-size:14px;
 }
 
-.year-card h2 {
-  margin-top: 0;
+.quiz-actions button:hover{
+background:#111;
 }
 
-.year-card p {
-  line-height: 1.7;
+/* QUICK NAV */
+
+.quick-nav{
+background:#ffffff;
+padding:20px;
+border-radius:14px;
+margin:25px 0;
+box-shadow:0 3px 12px rgba(0,0,0,0.05);
 }
 
-.paper-type {
-  display: inline-block;
-  padding: 6px 10px;
-  margin: 3px 0;
-  border-radius: 7px;
-  background: #eee;
-  font-size: 13px;
+.quick-nav h2{
+font-size:18px;
+margin-bottom:13px;
 }
 
-.pyq-btn {
-  display: inline-block;
-  margin-top: 12px;
-  padding: 11px 15px;
-  border-radius: 9px;
-  background: #333;
-  color: white;
-  text-decoration: none;
+.quick-links{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
 }
 
-body.dark-mode .year-card {
-  background: #1e1e1e;
-  color: #eee;
+.quick-links a{
+text-decoration:none;
+background:#fff;
+border:1px solid #ddd;
+padding:8px 13px;
+border-radius:7px;
+font-size:13px;
+color:#333;
 }
 
-body.dark-mode .paper-type {
-  background: #333;
-  color: #eee;
+.quick-links a:hover{
+background:#333;
+color:#fff;
 }
 
+/* YEAR GRID */
 
-/* =========================
-   NOTE
-========================= */
-
-.note {
-  margin-top: 28px;
-  padding: 22px;
-  border-radius: 16px;
-  background: #f5f5f5;
-  line-height: 1.7;
+.year-grid{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
 }
 
-.note h2 {
-  margin-top: 0;
+.year-card{
+background:#ffffff;
+padding:20px;
+border-radius:14px;
+box-shadow:0 4px 14px rgba(0,0,0,0.07);
+transition:0.2s;
 }
 
-body.dark-mode .note {
-  background: #1e1e1e;
+.year-card:hover{
+transform:translateY(-2px);
 }
 
-
-/* =========================
-   BOTTOM NAV
-========================= */
-
-.bottom-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 8px;
-  margin-top: 30px;
+.year-card h2{
+font-size:19px;
+margin-bottom:5px;
 }
 
-.bottom-nav a {
-  padding: 9px 13px;
-  border-radius: 9px;
-  background: #333;
-  color: white;
-  text-decoration: none;
-  font-size: 14px;
+.paper-label{
+display:inline-block;
+background:#eeeeee;
+padding:4px 8px;
+border-radius:5px;
+font-size:11px;
+margin:4px 0 8px;
 }
 
-
-/* =========================
-   TOP BUTTON
-========================= */
-
-#topBtn {
-  display: none;
-  position: fixed;
-  right: 18px;
-  bottom: 18px;
-  border: none;
-  border-radius: 50%;
-  width: 45px;
-  height: 45px;
-  background: #333;
-  color: white;
-  font-size: 20px;
-  cursor: pointer;
-  z-index: 999;
+.year-card p{
+font-size:13px;
+margin-bottom:13px;
 }
 
+.paper-btn{
+display:inline-block;
+background:#333;
+color:white;
+text-decoration:none;
+padding:9px 12px;
+border-radius:7px;
+font-size:13px;
+}
 
-/* =========================
-   MOBILE
-========================= */
+.paper-btn:hover{
+background:#111;
+}
 
-@media (max-width: 700px) {
+/* STRATEGY */
 
-  .year-grid {
-    grid-template-columns: 1fr;
-  }
+.strategy{
+background:#ffffff;
+padding:20px;
+border-radius:14px;
+margin-top:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.05);
+}
 
-  .pyq-header h1 {
-    font-size: 26px;
-  }
+.strategy h2{
+font-size:19px;
+margin-bottom:10px;
+}
 
-  .pyq-page {
-    padding: 20px 12px 40px;
-  }
+.strategy p{
+font-size:14px;
+margin-bottom:7px;
+}
 
-  .year-card {
-    padding: 18px;
-  }
+/* BOTTOM NAV */
 
-  .quick-nav a {
-    display: block;
-    margin: 7px 0;
-    text-align: center;
-  }
+.bottom-nav{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
+margin:25px 0;
+}
 
-  .bottom-nav {
-    flex-direction: column;
-  }
+.bottom-nav a{
+background:#333;
+color:white;
+text-decoration:none;
+padding:9px 13px;
+border-radius:7px;
+font-size:13px;
+}
 
-  .bottom-nav a {
-    text-align: center;
-  }
+/* FOOTER */
 
-  .quiz-box {
-    padding: 18px;
-  }
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:25px 15px;
+margin-top:30px;
+}
 
-  .quiz-filters {
-    grid-template-columns: 1fr;
-  }
+footer p{
+font-size:13px;
+margin:4px 0;
+}
 
-  .quiz-info {
-    font-size: 14px;
-  }
+/* TOP BUTTON */
 
-  .quiz-actions {
-    flex-direction: column;
-  }
+#topBtn{
+display:none;
+position:fixed;
+right:18px;
+bottom:20px;
+z-index:999;
+border:none;
+background:#333;
+color:white;
+padding:11px 14px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+}
+
+/* DARK MODE */
+
+body.dark{
+background:#121212;
+color:#eeeeee;
+}
+
+body.dark header{
+background:#1d1d1d;
+}
+
+body.dark .logo span,
+body.dark .nav-menu a{
+color:#eeeeee;
+}
+
+body.dark .hero{
+background:linear-gradient(135deg,#1d3024,#1a1a1a);
+}
+
+body.dark .hero p{
+color:#cccccc;
+}
+
+body.dark .search-box,
+body.dark .quiz-box,
+body.dark .question-card,
+body.dark .quick-nav,
+body.dark .year-card,
+body.dark .strategy{
+background:#1d1d1d;
+color:#eeeeee;
+border-color:#333;
+}
+
+body.dark .search-box{
+color:#fff;
+}
+
+body.dark .quiz-filters select{
+background:#222;
+color:#fff;
+border-color:#444;
+}
+
+body.dark .quiz-info{
+background:#292929;
+}
+
+body.dark .option-btn{
+background:#222;
+color:#eee;
+border-color:#444;
+}
+
+body.dark .option-btn:hover{
+background:#333;
+}
+
+body.dark .option-btn.correct{
+background:#163c22;
+border-color:#28a745;
+}
+
+body.dark .option-btn.wrong{
+background:#4a2020;
+border-color:#dc3545;
+}
+
+body.dark .answer-box{
+background:#202d3d;
+}
+
+body.dark .quick-links a{
+background:#222;
+color:#eee;
+border-color:#444;
+}
+
+body.dark .paper-label{
+background:#333;
+}
+
+body.dark .quiz-subtitle{
+color:#bbb;
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+.navbar{
+padding:12px 15px;
+}
+
+.menu-btn{
+display:block;
+}
+
+.nav-menu{
+display:none;
+position:absolute;
+top:60px;
+left:0;
+right:0;
+background:#fff;
+flex-direction:column;
+padding:15px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+}
+
+.nav-menu.active{
+display:flex;
+}
+
+body.dark .nav-menu{
+background:#1d1d1d;
+}
+
+.container{
+padding:12px;
+}
+
+.hero{
+padding:27px 15px;
+}
+
+.hero h1{
+font-size:23px;
+}
+
+.hero p{
+font-size:13px;
+}
+
+.quiz-box{
+padding:17px;
+}
+
+.quiz-box h2{
+font-size:19px;
+}
+
+.quiz-filters{
+grid-template-columns:1fr;
+}
+
+.question-card{
+padding:15px;
+}
+
+.question-card h3{
+font-size:15px;
+}
+
+.option-btn{
+font-size:13px;
+padding:11px;
+}
+
+.quiz-actions{
+flex-direction:column;
+}
+
+.year-grid{
+grid-template-columns:1fr;
+}
+
+.year-card{
+padding:17px;
+}
+
+.quick-links a{
+font-size:12px;
+}
+
+}
+
+/* SMALL PHONE */
+
+@media(max-width:400px){
+
+.logo{
+font-size:17px;
+}
+
+.hero h1{
+font-size:21px;
+}
+
+.dark-mode-btn{
+font-size:12px;
+}
+
+.quiz-info{
+font-size:12px;
+}
+
+.year-card h2{
+font-size:17px;
+}
 
 }
 
 </style>
 </head>
 
-
 <body>
 
+<!-- HEADER -->
 
-<header class="header">
+<header>
 
-  <div class="logo">
-    <span>🇮🇳</span>
-    UPSC <b>Shiksha</b>
-  </div>
+<div class="navbar">
 
-  <button class="menu-btn" id="menuBtn">
-    ☰
-  </button>
+<div class="logo">
+🇮🇳 UPSC <span>Shiksha</span>
+</div>
 
-  <nav id="navMenu">
+<button class="menu-btn" id="menuBtn">
+☰
+</button>
 
-    <a href="index.html">Home</a>
+<nav class="nav-menu" id="navMenu">
 
-    <a href="prelims.html">Prelims</a>
+<a href="index.html">Home</a>
 
-    <a href="csat.html">CSAT</a>
+<a href="prelims.html">Prelims</a>
 
-    <a href="mains.html">Mains</a>
+<a href="csat.html">CSAT</a>
 
-  </nav>
+<a href="mains.html">Mains</a>
+
+<a href="pyq.html">PYQ</a>
+
+</nav>
+
+</div>
 
 </header>
 
 
-<main class="pyq-page">
+<div class="container">
 
+<!-- BACK -->
 
-<a
-href="pyq.html"
-class="back-btn"
->
+<a href="pyq.html" class="back-btn">
 ← Back to PYQ
 </a>
 
 
-<section class="pyq-header">
+<!-- HERO -->
+
+<section class="hero">
 
 <h1>🧠 UPSC CSAT PYQ</h1>
 
 <p>
-Civil Services Preliminary Examination
-CSAT Paper-II Previous Year Question Papers
-and Practice Questions.
+Civil Services Preliminary Examination CSAT Paper-II
+Previous Year Question Papers & Practice
 </p>
 
 <div class="tags">
@@ -536,37 +748,33 @@ and Practice Questions.
 </section>
 
 
-<div class="dark-toggle">
+<!-- DARK MODE -->
 
-<button onclick="toggleDarkMode()">
+<button class="dark-mode-btn" id="darkModeBtn">
 🌙 Dark Mode
 </button>
 
-</div>
 
-
-<div class="search-box">
+<!-- SEARCH -->
 
 <input
 type="text"
 id="searchInput"
+class="search-box"
 placeholder="🔍 Search CSAT PYQ Year..."
-onkeyup="searchPYQ()"
 >
 
-</div>
 
-
-<!-- =========================
-     CSAT QUIZ ENGINE
-========================= -->
+<!-- ========================= -->
+<!-- CSAT QUIZ ENGINE -->
+<!-- ========================= -->
 
 <section class="quiz-box" id="csatQuiz">
 
-<h2>🧠 CSAT PYQ Practice</h2>
+<h2>📝 CSAT Practice Quiz</h2>
 
 <p class="quiz-subtitle">
-Practice CSAT PYQ-based questions
+Practice CSAT-style questions by year and topic.
 </p>
 
 
@@ -575,7 +783,7 @@ Practice CSAT PYQ-based questions
 <select id="quizYear">
 
 <option value="all">
-📅 All Years
+All Years
 </option>
 
 <option value="2025">
@@ -605,25 +813,25 @@ Practice CSAT PYQ-based questions
 </select>
 
 
-<select id="quizSubject">
+<select id="quizTopic">
 
 <option value="all">
-📚 All Topics
+All Topics
 </option>
 
-<option value="comprehension">
+<option value="Comprehension">
 Reading Comprehension
 </option>
 
-<option value="numeracy">
+<option value="Numeracy">
 Basic Numeracy
 </option>
 
-<option value="reasoning">
+<option value="Reasoning">
 Logical Reasoning
 </option>
 
-<option value="data">
+<option value="Data">
 Data Interpretation
 </option>
 
@@ -651,29 +859,14 @@ Score: 0
 CSAT question will appear here.
 </h3>
 
-
-<div id="optionsBox">
-
-<button class="option-btn">
-Option A
-</button>
-
-<button class="option-btn">
-Option B
-</button>
-
-<button class="option-btn">
-Option C
-</button>
-
-<button class="option-btn">
-Option D
-</button>
-
+<div
+id="optionsBox"
+class="options-box">
 </div>
 
-
-<div id="answerBox" class="answer-box">
+<div
+id="answerBox"
+class="answer-box">
 </div>
 
 </div>
@@ -694,9 +887,7 @@ Option D
 </section>
 
 
-<!-- =========================
-     QUICK NAV
-========================= -->
+<!-- QUICK NAVIGATION -->
 
 <section class="quick-nav">
 
@@ -704,264 +895,306 @@ Option D
 ⚡ Quick Navigation
 </h2>
 
-<a href="#year2025">2025</a>
+<div class="quick-links">
 
-<a href="#year2024">2024</a>
+<a href="#csat2026">
+2026
+</a>
 
-<a href="#year2023">2023</a>
+<a href="#csat2025">
+2025
+</a>
 
-<a href="#year2022">2022</a>
+<a href="#csat2024">
+2024
+</a>
 
-<a href="#year2021">2021</a>
+<a href="#csat2023">
+2023
+</a>
 
-<a href="#year2020">2020</a>
+<a href="#csat2022">
+2022
+</a>
+
+<a href="#csat2021">
+2021
+</a>
+
+<a href="#csat2020">
+2020
+</a>
+
+</div>
 
 </section>
 
 
-<!-- =========================
-     YEAR PAPERS
-========================= -->
+<!-- YEAR PAPERS -->
 
-<section class="year-grid">
+<div class="year-grid">
 
 
 <!-- 2026 -->
 
-<div class="year-card" id="year2026">
+<section
+class="year-card"
+id="csat2026">
 
 <h2>
 📅 CSAT 2026
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2026 CSAT question paper.
+CSAT question paper for 2026.
 </p>
 
 <a
 href="https://www.upsc.gov.in/examinations/Civil%20Services%20%28Preliminary%29%20Examination%2C%202026"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2025 -->
 
-<div class="year-card" id="year2025">
+<section
+class="year-card"
+id="csat2025">
 
 <h2>
 📅 CSAT 2025
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2025 CSAT question paper.
+CSAT question paper for 2025.
 </p>
 
 <a
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2024 -->
 
-<div class="year-card" id="year2024">
+<section
+class="year-card"
+id="csat2024">
 
 <h2>
 📅 CSAT 2024
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2024 CSAT question paper.
+CSAT question paper for 2024.
 </p>
 
 <a
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2023 -->
 
-<div class="year-card" id="year2023">
+<section
+class="year-card"
+id="csat2023">
 
 <h2>
 📅 CSAT 2023
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2023 CSAT question paper.
+CSAT question paper for 2023.
 </p>
 
 <a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2022 -->
 
-<div class="year-card" id="year2022">
+<section
+class="year-card"
+id="csat2022">
 
 <h2>
 📅 CSAT 2022
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2022 CSAT question paper.
+CSAT question paper for 2022.
 </p>
 
 <a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2021 -->
 
-<div class="year-card" id="year2021">
+<section
+class="year-card"
+id="csat2021">
 
 <h2>
 📅 CSAT 2021
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2021 CSAT question paper.
+CSAT question paper for 2021.
 </p>
 
 <a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
 
-</div>
+</section>
 
 
 <!-- 2020 -->
 
-<div class="year-card" id="year2020">
+<section
+class="year-card"
+id="csat2020">
 
 <h2>
 📅 CSAT 2020
 </h2>
 
-<span class="paper-type">
+<span class="paper-label">
 General Studies Paper-II
 </span>
 
 <p>
 UPSC Civil Services Preliminary Examination
-2020 CSAT question paper.
+CSAT question paper for 2020.
 </p>
 
 <a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
 target="_blank"
-rel="noopener noreferrer"
-class="pyq-btn"
->
+rel="noopener"
+class="paper-btn">
+
 📄 Open Official Paper →
+
 </a>
+
+</section>
 
 </div>
 
-</section>
 
+<!-- STRATEGY -->
 
-<!-- =========================
-     NOTE
-========================= -->
-
-<section class="note">
+<section class="strategy">
 
 <h2>
-🎯 CSAT Preparation Strategy
+🎯 CSAT PYQ Strategy
 </h2>
 
 <p>
-Practice questions regularly and identify the
-topics where you make repeated mistakes.
+1️⃣ First try to solve the question yourself.
 </p>
 
 <p>
-Focus on Reading Comprehension, Basic Numeracy,
-Logical Reasoning and Data Interpretation.
+2️⃣ Check the answer only after attempting it.
 </p>
 
 <p>
-Use the official UPSC question papers for the
-original papers and use this quiz for practice.
+3️⃣ Revise the topic where you made a mistake.
+</p>
+
+<p>
+4️⃣ Practice Reading Comprehension, Logical Reasoning,
+Basic Numeracy and Data Interpretation regularly.
+</p>
+
+<p>
+5️⃣ Use the official UPSC question papers as the
+reference source for actual PYQs.
 </p>
 
 </section>
 
 
-<!-- =========================
-     BOTTOM NAV
-========================= -->
+<!-- BOTTOM NAV -->
 
 <div class="bottom-nav">
 
@@ -989,70 +1222,105 @@ original papers and use this quiz for practice.
 📄 Prelims PYQ
 </a>
 
-<a href="polity.html">
-🏛️ Polity
-</a>
-
-<a href="economy.html">
-💰 Economy
-</a>
+</div>
 
 </div>
 
 
-</main>
-
-
-<button id="topBtn">
-↑
-</button>
-
+<!-- FOOTER -->
 
 <footer>
 
-<div class="footer-logo">
-🇮🇳 UPSC <b>Shiksha</b>
-</div>
+<p>
+🇮🇳 <strong>UPSC Shiksha</strong>
+</p>
 
 <p>
 Your Complete UPSC Preparation Platform
 </p>
 
-<p class="copyright">
+<p>
 © 2026 UPSC Shiksha. All Rights Reserved.
 </p>
 
 </footer>
 
 
-<script src="script.js"></script>
+<!-- TOP BUTTON -->
+
+<button
+id="topBtn"
+onclick="topFunction()">
+
+↑
+
+</button>
 
 
 <script>
 
 /* =========================
+   MOBILE MENU
+========================= */
+
+const menuBtn =
+document.getElementById("menuBtn");
+
+const navMenu =
+document.getElementById("navMenu");
+
+menuBtn.addEventListener("click",function(){
+
+navMenu.classList.toggle("active");
+
+});
+
+
+/* =========================
    DARK MODE
 ========================= */
 
-function toggleDarkMode() {
+const darkModeBtn =
+document.getElementById("darkModeBtn");
 
-  document.body.classList.toggle("dark-mode");
+darkModeBtn.addEventListener("click",function(){
 
-  localStorage.setItem(
-    "csatPyqDarkMode",
-    document.body.classList.contains("dark-mode")
-      ? "on"
-      : "off"
-  );
+document.body.classList.toggle("dark");
+
+if(document.body.classList.contains("dark")){
+
+localStorage.setItem(
+"csatDarkMode",
+"true"
+);
+
+darkModeBtn.innerHTML =
+"☀️ Light Mode";
+
+}else{
+
+localStorage.setItem(
+"csatDarkMode",
+"false"
+);
+
+darkModeBtn.innerHTML =
+"🌙 Dark Mode";
 
 }
 
+});
 
-if (
-  localStorage.getItem("csatPyqDarkMode") === "on"
-) {
 
-  document.body.classList.add("dark-mode");
+if(
+localStorage.getItem("csatDarkMode")
+==="true"
+){
+
+document.body.classList.add("dark");
+
+darkModeBtn.innerHTML =
+"☀️ Light Mode";
 
 }
 
@@ -1061,317 +1329,304 @@ if (
    SEARCH
 ========================= */
 
-function searchPYQ() {
+const searchInput =
+document.getElementById("searchInput");
 
-  const input =
-    document
-    .getElementById("searchInput")
-    .value
-    .toLowerCase()
-    .trim();
+searchInput.addEventListener(
+"input",
+function(){
 
+const value =
+this.value.toLowerCase();
 
-  const cards =
-    document.querySelectorAll(".year-card");
+document
+.querySelectorAll(".year-card")
+.forEach(function(card){
 
+const text =
+card.innerText.toLowerCase();
 
-  cards.forEach(function(card) {
+if(text.includes(value)){
 
-    const text =
-      card.innerText.toLowerCase();
+card.style.display="block";
 
-    card.style.display =
-      text.includes(input)
-      ? ""
-      : "none";
+}else{
 
-  });
+card.style.display="none";
 
 }
 
+});
+
+}
+);
+
 
 /* =========================
-   CSAT QUIZ QUESTIONS
+   QUIZ QUESTIONS
 ========================= */
+
+/*
+These are CSAT-style practice
+questions / paraphrased concepts.
+They are NOT presented as exact
+UPSC paper text.
+*/
 
 const quizQuestions = [
 
-/* ===== COMPREHENSION ===== */
-
 {
-year: "2025",
-subject: "comprehension",
-
+year:"2025",
+topic:"Comprehension",
 question:
-"CSAT PYQ-based practice: A passage argues that development should be judged not only by economic growth but also by improvements in people's capabilities. Which idea is most consistent with this view?",
-
-options: [
-"Development is only an increase in national income",
-"Development includes improvement in people's opportunities and capabilities",
-"Development depends only on industrial production",
-"Development has no connection with people's well-being"
+"A passage discusses development in terms of people's opportunities and capabilities. Which idea best represents this approach?",
+options:[
+"Development is only about increasing national income.",
+"Development includes improvement in people's opportunities and capabilities.",
+"Development depends only on industrial production.",
+"Development is measured only by exports."
 ],
-
-answer: 1,
-
+answer:1,
 explanation:
-"The capability-oriented approach considers people's real opportunities and abilities along with economic conditions."
+"The capability approach considers people's real opportunities and abilities, not only economic output."
 },
 
-
 {
-year: "2024",
-subject: "comprehension",
-
+year:"2024",
+topic:"Comprehension",
 question:
-"CSAT PYQ-based practice: If a passage states that technology can solve some problems but may create new social challenges, what is the most reasonable inference?",
-
-options: [
-"Technology is always harmful",
-"Technology is always beneficial",
-"The effects of technology depend on how it is developed and used",
-"Technology has no effect on society"
+"A passage explains that technology can solve problems but may also create new challenges. What is the central idea?",
+options:[
+"Technology always creates only positive results.",
+"Technology should never be used.",
+"The effects of technology depend on how it is developed and used.",
+"Technology has no effect on society."
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
-"The statement presents both benefits and possible challenges, so its impact depends on context and use."
+"The impact of technology depends on its design, application and social context."
 },
 
-
 {
-year: "2023",
-subject: "comprehension",
-
+year:"2023",
+topic:"Comprehension",
 question:
-"CSAT PYQ-based practice: A passage says that increasing information does not automatically lead to better decisions. Which conclusion follows most logically?",
-
-options: [
-"Information is never useful",
-"Good decisions require evaluation and interpretation of information",
-"People should avoid information",
-"Only experts can make decisions"
+"Why does having more information not automatically guarantee better decisions?",
+options:[
+"Information is never useful.",
+"Good decisions require evaluation and interpretation of information.",
+"People should avoid information.",
+"Only numerical information matters."
 ],
-
-answer: 1,
-
+answer:1,
 explanation:
-"More information is useful only when it is properly evaluated and interpreted."
+"Information must be assessed and interpreted before it can support a sound decision."
 },
 
-
-/* ===== NUMERACY ===== */
-
 {
-year: "2025",
-subject: "numeracy",
-
+year:"2025",
+topic:"Numeracy",
 question:
-"A shopkeeper marks an article at ₹800 and gives a discount of 15%. What is the selling price?",
-
-options: [
-"₹640",
+"An item costs ₹800. If a discount of 15% is offered, what is the selling price?",
+options:[
+"₹650",
 "₹680",
 "₹700",
 "₹720"
 ],
-
-answer: 1,
-
+answer:1,
 explanation:
-"15% of ₹800 = ₹120. Therefore, selling price = ₹800 − ₹120 = ₹680."
+"15% of ₹800 = ₹120. Therefore, ₹800 − ₹120 = ₹680."
 },
 
-
 {
-year: "2024",
-subject: "numeracy",
-
+year:"2024",
+topic:"Numeracy",
 question:
-"If a number is increased by 20% and then decreased by 20%, what is the net percentage change?",
-
-options: [
+"A number is increased by 20% and then decreased by 20%. What is the overall change?",
+options:[
 "No change",
 "4% increase",
 "4% decrease",
-"2% decrease"
+"8% decrease"
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
-"Take 100. After a 20% increase it becomes 120. A 20% decrease gives 96. Hence there is a 4% decrease."
+"Take 100 as the original value. It becomes 120 and then 96. Hence there is a 4% decrease."
 },
 
-
 {
-year: "2023",
-subject: "numeracy",
-
+year:"2023",
+topic:"Numeracy",
 question:
-"A train travels 180 km in 3 hours. What is its average speed?",
-
-options: [
+"A vehicle travels 180 km in 3 hours. What is its average speed?",
+options:[
+"45 km/h",
 "50 km/h",
 "60 km/h",
-"70 km/h",
 "90 km/h"
 ],
-
-answer: 1,
-
+answer:2,
 explanation:
-"Average speed = Distance ÷ Time = 180 ÷ 3 = 60 km/h."
+"Average speed = distance ÷ time = 180 ÷ 3 = 60 km/h."
 },
 
-
 {
-year: "2022",
-subject: "numeracy",
-
+year:"2022",
+topic:"Numeracy",
 question:
-"The ratio of two numbers is 3:5 and their sum is 64. What is the smaller number?",
-
-options: [
+"Two numbers are in the ratio 3:5 and their sum is 64. What is the smaller number?",
+options:[
 "18",
+"21",
 "24",
-"30",
-"40"
+"30"
 ],
-
-answer: 1,
-
+answer:2,
 explanation:
 "Total parts = 8. One part = 64 ÷ 8 = 8. Smaller number = 3 × 8 = 24."
 },
 
-
-/* ===== REASONING ===== */
+{
+year:"2021",
+topic:"Numeracy",
+question:
+"If 25% of a number is 50, what is the number?",
+options:[
+"100",
+"150",
+"200",
+"250"
+],
+answer:2,
+explanation:
+"25% = 1/4. Therefore the number is 50 × 4 = 200."
+},
 
 {
-year: "2025",
-subject: "reasoning",
-
+year:"2020",
+topic:"Numeracy",
 question:
-"CSAT PYQ-based practice: If all roses are flowers and some flowers are red, which conclusion is necessarily correct?",
-
-options: [
-"All roses are red",
-"Some roses are red",
-"All roses are flowers",
-"No rose is a flower"
+"If 5 workers complete a task in 12 days at the same rate, how many worker-days are required?",
+options:[
+"50",
+"60",
+"70",
+"80"
 ],
+answer:1,
+explanation:
+"Worker-days = workers × days = 5 × 12 = 60."
+},
 
-answer: 2,
-
+{
+year:"2025",
+topic:"Reasoning",
+question:
+"All roses are flowers. Which statement must be true?",
+options:[
+"All flowers are roses.",
+"Some roses are not flowers.",
+"All roses are flowers.",
+"No flowers are roses."
+],
+answer:2,
 explanation:
 "The first statement directly establishes that every rose belongs to the category of flowers."
 },
 
-
 {
-year: "2024",
-subject: "reasoning",
-
+year:"2024",
+topic:"Reasoning",
 question:
-"Five persons A, B, C, D and E stand in a line. A is before B, B is before C, and D is after C. Which person must be before D?",
-
-options: [
-"A only",
-"B only",
-"C only",
-"A, B and C"
+"A, B, C and D are arranged such that A comes before B, B before C and C before D. Which statement must be true?",
+options:[
+"D comes before A.",
+"B comes after D.",
+"A comes before D.",
+"C comes before A."
 ],
-
-answer: 3,
-
+answer:2,
 explanation:
-"Since A is before B, B is before C, and C is before D, all A, B and C must be before D."
+"From A < B < C < D, A must come before D."
 },
 
-
 {
-year: "2023",
-subject: "reasoning",
-
+year:"2023",
+topic:"Reasoning",
 question:
-"If Monday is coded as 1, Tuesday as 2, Wednesday as 3 and so on, what number represents Sunday?",
-
-options: [
+"If Monday is represented by 1, Tuesday by 2 and so on, what number represents Sunday?",
+options:[
 "5",
 "6",
 "7",
 "8"
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
-"Sunday is the seventh day in this coding sequence, so it is represented by 7."
+"Monday=1, Tuesday=2, Wednesday=3, Thursday=4, Friday=5, Saturday=6, Sunday=7."
 },
 
-
-/* ===== DATA INTERPRETATION ===== */
+{
+year:"2022",
+topic:"Reasoning",
+question:
+"If all books are objects and some objects are expensive, which conclusion is definitely valid?",
+options:[
+"All books are expensive.",
+"No books are expensive.",
+"Books are objects.",
+"All expensive things are books."
+],
+answer:2,
+explanation:
+"The only definite conclusion from the statements is that books belong to the category of objects."
+},
 
 {
-year: "2025",
-subject: "data",
-
+year:"2021",
+topic:"Data",
 question:
-"A school has 200 students. 40% are girls. How many boys are there?",
-
-options: [
+"In a class of 200 students, 40% are girls. How many boys are there?",
+options:[
 "80",
 "100",
 "120",
 "140"
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
-"Girls = 40% of 200 = 80. Therefore boys = 200 − 80 = 120."
+"Girls = 40% of 200 = 80. Boys = 200 − 80 = 120."
 },
 
-
 {
-year: "2024",
-subject: "data",
-
+year:"2024",
+topic:"Data",
 question:
-"A company's production increases from 500 units to 600 units. What is the percentage increase?",
-
-options: [
+"A company's production rises from 500 units to 600 units. What is the percentage increase?",
+options:[
 "10%",
 "15%",
 "20%",
 "25%"
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
-"Increase = 100 units. Percentage increase = 100/500 × 100 = 20%."
+"Increase = 100. Percentage increase = 100/500 × 100 = 20%."
 },
 
-
 {
-year: "2022",
-subject: "data",
-
+year:"2022",
+topic:"Data",
 question:
-"The monthly sales of a shop are ₹20,000, ₹25,000, ₹30,000 and ₹25,000 in four months. What is the average monthly sale?",
-
-options: [
+"Monthly sales for four months are ₹20,000, ₹25,000, ₹30,000 and ₹25,000. What is the average monthly sales?",
+options:[
 "₹22,500",
 "₹24,000",
 "₹25,000",
 "₹27,500"
 ],
-
-answer: 2,
-
+answer:2,
 explanation:
 "Total = ₹1,00,000. Average = ₹1,00,000 ÷ 4 = ₹25,000."
 }
@@ -1394,143 +1649,107 @@ let answered = false;
 
 
 /* =========================
-   ELEMENTS
+   LOAD QUESTION
 ========================= */
 
-const questionText =
+function loadQuestion(){
+
+const question =
+filteredQuestions[currentQuestion];
+
+if(!question){
+
 document.getElementById(
 "questionText"
-);
+).innerText =
+"No questions found.";
+
+document.getElementById(
+"optionsBox"
+).innerHTML="";
+
+return;
+
+}
+
+
+document.getElementById(
+"questionNumber"
+).innerText =
+"Question "
++
+(currentQuestion + 1)
++
+" / "
++
+filteredQuestions.length;
+
+
+document.getElementById(
+"quizScore"
+).innerText =
+"Score: "
++
+score;
+
+
+document.getElementById(
+"questionText"
+).innerText =
+question.question;
+
 
 const optionsBox =
 document.getElementById(
 "optionsBox"
 );
 
-const answerBox =
+optionsBox.innerHTML="";
+
+
 document.getElementById(
 "answerBox"
-);
+).classList.remove("show");
 
-const questionNumber =
+
 document.getElementById(
-"questionNumber"
+"answerBox"
+).innerHTML="";
+
+
+answered=false;
+
+
+question.options.forEach(
+function(option,index){
+
+const button =
+document.createElement("button");
+
+button.className =
+"option-btn";
+
+button.innerText =
+String.fromCharCode(65+index)
++
+". "
++
+option;
+
+button.addEventListener(
+"click",
+function(){
+
+checkAnswer(
+index,
+button
 );
 
-const quizScore =
-document.getElementById(
-"quizScore"
-);
+});
 
-const quizYear =
-document.getElementById(
-"quizYear"
-);
+optionsBox.appendChild(button);
 
-const quizSubject =
-document.getElementById(
-"quizSubject"
-);
-
-
-/* =========================
-   LOAD QUESTION
-========================= */
-
-function loadQuestion() {
-
-  if (!filteredQuestions.length) {
-
-    questionText.textContent =
-    "No questions found for this filter.";
-
-    optionsBox.innerHTML = "";
-
-    answerBox.style.display =
-    "none";
-
-    questionNumber.textContent =
-    "No Questions";
-
-    quizScore.textContent =
-    "Score: 0";
-
-    return;
-
-  }
-
-
-  const question =
-  filteredQuestions[
-    currentQuestion
-  ];
-
-
-  questionText.textContent =
-  question.question;
-
-
-  questionNumber.textContent =
-  "Question " +
-  (currentQuestion + 1) +
-  " / " +
-  filteredQuestions.length;
-
-
-  quizScore.textContent =
-  "Score: " + score;
-
-
-  answerBox.style.display =
-  "none";
-
-  answerBox.innerHTML = "";
-
-  answered = false;
-
-  optionsBox.innerHTML = "";
-
-
-  question.options.forEach(
-    function(option,index){
-
-      const button =
-      document.createElement(
-        "button"
-      );
-
-
-      button.className =
-      "option-btn";
-
-
-      button.textContent =
-      String.fromCharCode(
-        65 + index
-      ) +
-      ". " +
-      option;
-
-
-      button.addEventListener(
-        "click",
-        function(){
-
-          checkAnswer(
-            index,
-            button
-          );
-
-        }
-      );
-
-
-      optionsBox.appendChild(
-        button
-      );
-
-    }
-  );
+});
 
 }
 
@@ -1540,93 +1759,169 @@ function loadQuestion() {
 ========================= */
 
 function checkAnswer(
-selected,
+selectedIndex,
 selectedButton
-) {
+){
 
-  if(answered) {
-    return;
-  }
+if(answered){
+return;
+}
 
+answered=true;
 
-  answered = true;
+const question =
+filteredQuestions[currentQuestion];
 
+const buttons =
+document.querySelectorAll(
+".option-btn"
+);
 
-  const question =
-  filteredQuestions[
-    currentQuestion
-  ];
-
-
-  const buttons =
-  optionsBox.querySelectorAll(
-    ".option-btn"
-  );
-
-
-  buttons.forEach(
-    function(button,index){
-
-      button.disabled = true;
+buttons.forEach(
+function(button){
+button.disabled=true;
+});
 
 
-      if(
-        index === question.answer
-      ){
+if(
+selectedIndex ===
+question.answer
+){
 
-        button.classList.add(
-          "correct"
-        );
+selectedButton.classList.add(
+"correct"
+);
 
-      }
+score++;
 
-    }
-  );
+}else{
 
+selectedButton.classList.add(
+"wrong"
+);
 
-  if(
-    selected === question.answer
-  ){
+buttons[
+question.answer
+].classList.add(
+"correct"
+);
 
-    score++;
-
-
-    selectedButton.classList.add(
-      "correct"
-    );
-
-
-    answerBox.innerHTML =
-    "✅ <strong>Correct!</strong><br><br>" +
-    question.explanation;
-
-  }
-
-  else {
-
-    selectedButton.classList.add(
-      "wrong"
-    );
+}
 
 
-    answerBox.innerHTML =
-    "❌ <strong>Incorrect.</strong><br><br>" +
-    "Correct Answer: " +
-    String.fromCharCode(
-      65 + question.answer
-    ) +
-    "<br><br>" +
-    question.explanation;
-
-  }
+document.getElementById(
+"quizScore"
+).innerText =
+"Score: "
++
+score;
 
 
-  answerBox.style.display =
-  "block";
+const answerBox =
+document.getElementById(
+"answerBox"
+);
+
+answerBox.innerHTML =
+"<strong>Correct Answer:</strong> "
++
+String.fromCharCode(
+65 + question.answer
+)
++
+". "
++
+question.options[
+question.answer
+]
++
+"<br><br>"
++
+"<strong>Explanation:</strong> "
++
+question.explanation;
+
+answerBox.classList.add(
+"show"
+);
+
+}
 
 
-  quizScore.textContent =
-  "Score: " + score;
+/* =========================
+   FILTER QUIZ
+========================= */
+
+function filterQuiz(){
+
+const selectedYear =
+document.getElementById(
+"quizYear"
+).value;
+
+const selectedTopic =
+document.getElementById(
+"quizTopic"
+).value;
+
+
+filteredQuestions =
+quizQuestions.filter(
+function(q){
+
+const yearMatch =
+selectedYear === "all"
+||
+q.year === selectedYear;
+
+const topicMatch =
+selectedTopic === "all"
+||
+q.topic === selectedTopic;
+
+return yearMatch &&
+topicMatch;
+
+});
+
+
+currentQuestion=0;
+
+score=0;
+
+
+if(
+filteredQuestions.length === 0
+){
+
+document.getElementById(
+"questionText"
+).innerText =
+"No questions available for this filter.";
+
+document.getElementById(
+"optionsBox"
+).innerHTML="";
+
+document.getElementById(
+"answerBox"
+).classList.remove("show");
+
+document.getElementById(
+"questionNumber"
+).innerText =
+"No Questions";
+
+document.getElementById(
+"quizScore"
+).innerText =
+"Score: 0";
+
+return;
+
+}
+
+loadQuestion();
 
 }
 
@@ -1635,161 +1930,135 @@ selectedButton
    NEXT QUESTION
 ========================= */
 
-document
-.getElementById(
+document.getElementById(
 "nextQuestion"
-)
-.addEventListener(
+).addEventListener(
 "click",
 function(){
 
-  if(
-    currentQuestion <
-    filteredQuestions.length - 1
-  ){
+if(
+currentQuestion <
+filteredQuestions.length - 1
+){
 
-    currentQuestion++;
-
-    loadQuestion();
-
-  }
-
-  else {
-
-    alert(
-      "🎉 Test Complete!\n\n" +
-      "Your Score: " +
-      score +
-      " / " +
-      filteredQuestions.length
-    );
-
-  }
-
-});
-
-
-/* =========================
-   RESTART
-========================= */
-
-document
-.getElementById(
-"restartQuiz"
-)
-.addEventListener(
-"click",
-function(){
-
-  currentQuestion = 0;
-
-  score = 0;
-
-  loadQuestion();
-
-});
-
-
-/* =========================
-   FILTER
-========================= */
-
-function filterQuiz() {
-
-  const selectedYear =
-  quizYear.value;
-
-
-  const selectedSubject =
-  quizSubject.value;
-
-
-  filteredQuestions =
-  quizQuestions.filter(
-    function(question){
-
-      const yearMatch =
-      selectedYear === "all" ||
-      question.year === selectedYear;
-
-
-      const subjectMatch =
-      selectedSubject === "all" ||
-      question.subject ===
-      selectedSubject;
-
-
-      return (
-        yearMatch &&
-        subjectMatch
-      );
-
-    }
-  );
-
-
-  currentQuestion = 0;
-
-  score = 0;
-
-  loadQuestion();
-
-}
-
-
-quizYear.addEventListener(
-"change",
-filterQuiz
-);
-
-
-quizSubject.addEventListener(
-"change",
-filterQuiz
-);
-
-
-/* =========================
-   START
-========================= */
+currentQuestion++;
 
 loadQuestion();
 
+}else{
+
+document.getElementById(
+"questionText"
+).innerText =
+"🎉 Quiz completed!";
+
+document.getElementById(
+"optionsBox"
+).innerHTML="";
+
+document.getElementById(
+"answerBox"
+).innerHTML =
+"<strong>Final Score:</strong> "
++
+score
++
+" / "
++
+filteredQuestions.length;
+
+document.getElementById(
+"answerBox"
+).classList.add(
+"show"
+);
+
+}
+
+});
+
 
 /* =========================
-   BACK TO TOP
+   RESTART QUIZ
+========================= */
+
+document.getElementById(
+"restartQuiz"
+).addEventListener(
+"click",
+function(){
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+});
+
+
+/* FILTER EVENTS */
+
+document.getElementById(
+"quizYear"
+).addEventListener(
+"change",
+filterQuiz
+);
+
+document.getElementById(
+"quizTopic"
+).addEventListener(
+"change",
+filterQuiz
+);
+
+
+/* =========================
+   TOP BUTTON
 ========================= */
 
 window.addEventListener(
 "scroll",
 function(){
 
-  const btn =
-  document.getElementById(
-    "topBtn"
-  );
+const topBtn =
+document.getElementById(
+"topBtn"
+);
 
+if(
+window.scrollY > 300
+){
 
-  btn.style.display =
-  window.scrollY > 300
-  ? "block"
-  : "none";
+topBtn.style.display =
+"block";
 
-});
+}else{
 
+topBtn.style.display =
+"none";
 
-document
-.getElementById("topBtn")
-.addEventListener(
-"click",
-function(){
-
-  window.scrollTo({
-    top: 0,
-    behavior: "smooth"
-  });
+}
 
 });
+
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+
+/* =========================
+   START QUIZ
+========================= */
+
+loadQuestion();
 
 </script>
 
