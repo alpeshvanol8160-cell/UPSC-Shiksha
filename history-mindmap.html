@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -7,6 +7,11 @@
 <title>History Mind Map | UPSC Shiksha</title>
 
 <style>
+
+/* =====================================================
+   RESET
+===================================================== */
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -19,27 +24,33 @@ html{
 
 body{
   font-family:Arial,sans-serif;
-  background:#f5f7fb;
+  background:#f4f7fb;
   color:#172033;
-  line-height:1.6;
+  line-height:1.65;
   transition:.3s;
 }
+
+
+/* =====================================================
+   HEADER
+===================================================== */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#fff;
+  background:rgba(255,255,255,.96);
+  backdrop-filter:blur(10px);
   padding:13px 15px;
   display:flex;
   justify-content:space-between;
   align-items:center;
-  box-shadow:0 2px 12px rgba(0,0,0,.1);
+  box-shadow:0 3px 15px rgba(0,0,0,.10);
 }
 
 .logo{
   font-size:19px;
-  font-weight:bold;
+  font-weight:800;
 }
 
 .header-buttons{
@@ -57,74 +68,134 @@ button,
   font-weight:bold;
   cursor:pointer;
   text-decoration:none;
+  transition:.25s;
 }
+
+button:hover,
+.home-btn:hover{
+  transform:translateY(-2px);
+}
+
+
+/* =====================================================
+   HERO
+===================================================== */
 
 .hero{
   text-align:center;
-  padding:42px 15px 30px;
-  background:linear-gradient(135deg,#fff4e8,#ffffff);
+  padding:48px 15px 38px;
+
+  background:
+    radial-gradient(circle at top left,#fff0c9 0,#fff0c900 35%),
+    radial-gradient(circle at bottom right,#dcecff 0,#dcecff00 35%),
+    linear-gradient(135deg,#fffaf0,#f4f8ff);
+
+  border-bottom:1px solid #e5eaf1;
 }
 
 .badge{
   display:inline-block;
-  padding:6px 13px;
-  border-radius:20px;
-  background:#fff0dc;
-  color:#9a5712;
+  padding:7px 15px;
+  border-radius:30px;
+  background:#fff0c9;
+  color:#875400;
   font-size:13px;
-  font-weight:bold;
-  margin-bottom:12px;
+  font-weight:800;
+  margin-bottom:13px;
+  border:1px solid #f2d28a;
 }
 
 .hero h1{
-  font-size:31px;
-  margin-bottom:8px;
+  font-size:34px;
+  margin-bottom:10px;
+
+  background:linear-gradient(
+    90deg,
+    #7b3f00,
+    #b32121,
+    #315bb5
+  );
+
+  -webkit-background-clip:text;
+  color:transparent;
 }
 
 .hero p{
   color:#667085;
-  max-width:750px;
+  max-width:800px;
   margin:auto;
+  font-size:15px;
 }
+
+
+/* =====================================================
+   CONTAINER
+===================================================== */
 
 .container{
-  width:min(1100px,94%);
+  width:min(1150px,94%);
   margin:auto;
 }
 
+
+/* =====================================================
+   SEARCH
+===================================================== */
+
 .search{
-  margin:20px auto;
-  max-width:650px;
+  margin:22px auto;
+  max-width:700px;
 }
 
 .search input{
   width:100%;
-  padding:14px 16px;
-  border:1px solid #d8dee8;
-  border-radius:12px;
+  padding:15px 17px;
+  border:2px solid #dfe5ed;
+  border-radius:14px;
   font-size:16px;
   outline:none;
+  background:#fff;
+  transition:.25s;
 }
 
-/* MIND MAP */
+.search input:focus{
+  border-color:#315bb5;
+  box-shadow:0 0 0 4px rgba(49,91,181,.10);
+}
+
+
+/* =====================================================
+   MIND MAP BOX
+===================================================== */
 
 .map-box{
   background:#fff;
-  border-radius:20px;
-  padding:25px 12px 35px;
-  box-shadow:0 5px 25px rgba(0,0,0,.08);
+  border-radius:22px;
+  padding:28px 15px 38px;
+  box-shadow:0 7px 28px rgba(0,0,0,.08);
   margin:25px auto;
+  border:1px solid #e2e7ef;
+  overflow:hidden;
 }
 
 .map-heading{
   text-align:center;
-  margin-bottom:20px;
+  margin-bottom:22px;
+}
+
+.map-heading h2{
+  font-size:25px;
 }
 
 .map-heading p{
   color:#667085;
   font-size:14px;
 }
+
+
+/* =====================================================
+   MIND MAP
+===================================================== */
 
 .map{
   position:relative;
@@ -133,24 +204,41 @@ button,
   margin:auto;
 }
 
+
+/* CENTER */
+
 .center{
   position:absolute;
   left:50%;
   top:50%;
   transform:translate(-50%,-50%);
-  width:175px;
-  height:95px;
-  background:#172033;
+
+  width:190px;
+  height:105px;
+
+  background:linear-gradient(
+    135deg,
+    #8b4513,
+    #b32121
+  );
+
   color:#fff;
-  border-radius:23px;
+
+  border-radius:25px;
+
   display:flex;
   align-items:center;
   justify-content:center;
   flex-direction:column;
   text-align:center;
+
   z-index:5;
-  box-shadow:0 12px 30px rgba(0,0,0,.2);
+
+  box-shadow:0 15px 35px rgba(0,0,0,.22);
+
   animation:pulse 3s infinite;
+
+  border:4px solid #fff;
 }
 
 .center strong{
@@ -158,56 +246,161 @@ button,
 }
 
 .center small{
-  opacity:.8;
+  opacity:.85;
+  margin-top:3px;
 }
+
+
+/* NODES */
 
 .node{
   position:absolute;
-  width:150px;
-  min-height:75px;
+
+  width:160px;
+  min-height:82px;
+
   padding:10px;
+
   background:#fff;
-  border:2px solid #e1e6ef;
-  border-radius:17px;
+
+  border:3px solid #dfe5ed;
+
+  border-radius:18px;
+
   display:flex;
   align-items:center;
   justify-content:center;
+
   text-align:center;
-  font-weight:bold;
+
+  font-weight:800;
+
   cursor:pointer;
+
   z-index:4;
-  box-shadow:0 5px 16px rgba(0,0,0,.08);
+
+  box-shadow:0 7px 18px rgba(0,0,0,.09);
+
   transition:.3s;
+
   animation:float 4s ease-in-out infinite;
 }
 
 .node:hover{
-  transform:scale(1.06) translateY(-4px);
-  box-shadow:0 12px 25px rgba(0,0,0,.15);
+  transform:scale(1.07) translateY(-5px);
+  box-shadow:0 15px 30px rgba(0,0,0,.16);
 }
 
 .node span{
   display:block;
-  font-size:24px;
+  font-size:26px;
+  margin-bottom:3px;
 }
 
-.n1{top:3%;left:50%;transform:translateX(-50%);}
-.n2{top:17%;left:3%;}
-.n3{top:17%;right:3%;}
-.n4{top:42%;left:0;}
-.n5{top:42%;right:0;}
-.n6{bottom:13%;left:5%;}
-.n7{bottom:13%;right:5%;}
-.n8{bottom:2%;left:50%;transform:translateX(-50%);}
+
+/* NODE COLOURS */
+
+.n1{
+  top:3%;
+  left:50%;
+  transform:translateX(-50%);
+
+  border-color:#b8792c;
+  background:#fff7ed;
+  color:#7a420e;
+}
+
+.n2{
+  top:17%;
+  left:3%;
+
+  border-color:#b58b55;
+  background:#fffaf0;
+  color:#694a20;
+}
+
+.n3{
+  top:17%;
+  right:3%;
+
+  border-color:#7967b8;
+  background:#f6f2ff;
+  color:#513d91;
+}
+
+.n4{
+  top:42%;
+  left:0;
+
+  border-color:#7450a8;
+  background:#f8f3ff;
+  color:#51347e;
+}
+
+.n5{
+  top:42%;
+  right:0;
+
+  border-color:#c74646;
+  background:#fff1f1;
+  color:#9c2020;
+}
+
+.n6{
+  bottom:13%;
+  left:5%;
+
+  border-color:#e38b32;
+  background:#fff6e8;
+  color:#9a570f;
+}
+
+.n7{
+  bottom:13%;
+  right:5%;
+
+  border-color:#3978b8;
+  background:#eef7ff;
+  color:#225783;
+}
+
+.n8{
+  bottom:2%;
+  left:50%;
+  transform:translateX(-50%);
+
+  border-color:#4f9a62;
+  background:#effaf1;
+  color:#28703a;
+}
+
+
+/* =====================================================
+   DETAILS
+===================================================== */
 
 .details{
   display:none;
-  background:#fff9ef;
-  border-left:5px solid #d77b16;
-  padding:22px;
-  border-radius:15px;
-  max-width:850px;
-  margin:25px auto 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fffaf0,
+      #fff3dd
+    );
+
+  border-left:6px solid #b66a16;
+
+  padding:23px;
+
+  border-radius:16px;
+
+  max-width:900px;
+
+  margin:27px auto 0;
+
+  box-shadow:0 7px 20px rgba(0,0,0,.07);
+
   animation:slideIn .3s ease;
 }
 
@@ -217,6 +410,7 @@ button,
 
 .details h3{
   margin-bottom:8px;
+  color:#7c420d;
 }
 
 .details p{
@@ -227,18 +421,50 @@ button,
   margin:10px 0 0 20px;
 }
 
-/* SECTIONS */
+.details li{
+  margin:5px 0;
+}
+
+
+/* =====================================================
+   SECTION CARDS
+===================================================== */
 
 .section{
   background:#fff;
-  padding:25px;
-  border-radius:18px;
-  margin:22px auto;
-  box-shadow:0 4px 18px rgba(0,0,0,.06);
+
+  padding:28px;
+
+  border-radius:20px;
+
+  margin:24px auto;
+
+  box-shadow:0 5px 20px rgba(0,0,0,.07);
+
+  border:1px solid #e3e8ef;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.section::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+  bottom:0;
+
+  width:7px;
+
+  background:#315bb5;
 }
 
 .section h2{
   margin-bottom:8px;
+  font-size:25px;
 }
 
 .section-intro{
@@ -246,93 +472,486 @@ button,
   margin-bottom:18px;
 }
 
-/* VISUAL NOTE */
+
+/* SECTION COLOURS */
+
+#ancientSection::before{
+  background:#a86525;
+}
+
+#ancientSection h2{
+  color:#82460f;
+}
+
+#medievalSection::before{
+  background:#7650a8;
+}
+
+#medievalSection h2{
+  color:#573580;
+}
+
+#modernSection::before{
+  background:#c74646;
+}
+
+#modernSection h2{
+  color:#9e2525;
+}
+
+#freedomSection::before{
+  background:#e58a28;
+}
+
+#freedomSection h2{
+  color:#a65b0c;
+}
+
+#cultureSection::before{
+  background:#3978b8;
+}
+
+#cultureSection h2{
+  color:#245d8f;
+}
+
+#postSection::before{
+  background:#4d9b61;
+}
+
+#postSection h2{
+  color:#2e743e;
+}
+
+
+/* =====================================================
+   VISUAL CARDS
+===================================================== */
 
 .visual-card{
-  background:linear-gradient(135deg,#fff4df,#f7e8d2);
-  border-radius:18px;
+
+  border-radius:20px;
+
   min-height:190px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
+  flex-direction:column;
+
   text-align:center;
+
   padding:25px;
-  margin:15px 0 20px;
+
+  margin:16px 0 22px;
+
   font-size:60px;
+
+  border:2px solid transparent;
+
+  box-shadow:
+    inset 0 0 25px rgba(255,255,255,.5),
+    0 5px 15px rgba(0,0,0,.05);
 }
 
 .visual-card div{
   font-size:16px;
-  font-weight:bold;
+  font-weight:800;
   margin-top:10px;
 }
 
-/* TABLE */
+
+/* VISUAL CARD COLOURS */
+
+#ancientSection .visual-card{
+  background:linear-gradient(
+    135deg,
+    #fff0d5,
+    #f6d9ad
+  );
+
+  border-color:#e1b477;
+}
+
+#medievalSection .visual-card{
+  background:linear-gradient(
+    135deg,
+    #f0e8ff,
+    #ddd0f5
+  );
+
+  border-color:#b9a2dc;
+}
+
+#modernSection .visual-card{
+  background:linear-gradient(
+    135deg,
+    #ffe4e4,
+    #ffd0d0
+  );
+
+  border-color:#e5a2a2;
+}
+
+#cultureSection .visual-card{
+  background:linear-gradient(
+    135deg,
+    #e5f3ff,
+    #cfe7fb
+  );
+
+  border-color:#9fc7e6;
+}
+
+
+/* =====================================================
+   TABLE
+===================================================== */
 
 .table-wrap{
   overflow-x:auto;
+  border-radius:12px;
 }
 
 table{
   width:100%;
-  border-collapse:collapse;
+
+  border-collapse:separate;
+
+  border-spacing:0;
+
   min-width:550px;
+
   margin-top:12px;
+
+  overflow:hidden;
+
+  border:1px solid #d6dce5;
+
+  border-radius:12px;
 }
 
 th,
 td{
-  border:1px solid #cfd5df;
-  padding:12px;
+
+  border-right:1px solid #d6dce5;
+
+  border-bottom:1px solid #d6dce5;
+
+  padding:13px;
+
   text-align:left;
+
   vertical-align:top;
 }
 
-th{
-  background:#f0f3f8;
-  font-weight:bold;
+th:last-child,
+td:last-child{
+  border-right:0;
 }
 
-/* TIMELINE */
+tr:last-child td{
+  border-bottom:0;
+}
+
+th{
+  background:
+    linear-gradient(
+      135deg,
+      #315bb5,
+      #4774c4
+    );
+
+  color:#fff;
+
+  font-weight:800;
+}
+
+td:first-child{
+  font-weight:800;
+  background:#f7f9fc;
+}
+
+tr:nth-child(even) td{
+  background:#fbfcfe;
+}
+
+tr:hover td{
+  background:#f0f6ff;
+}
+
+
+/* =====================================================
+   TIMELINE
+===================================================== */
 
 .timeline{
   display:grid;
-  gap:12px;
+  gap:14px;
+  position:relative;
 }
 
 .event{
-  background:#f7f9fc;
-  border-left:5px solid #315bb5;
-  padding:14px;
-  border-radius:10px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff8ec,
+      #fff
+    );
+
+  border-left:6px solid #e58a28;
+
+  padding:16px 18px;
+
+  border-radius:12px;
+
+  box-shadow:0 4px 12px rgba(0,0,0,.05);
+
+  transition:.25s;
+}
+
+.event:hover{
+  transform:translateX(4px);
+  box-shadow:0 8px 18px rgba(0,0,0,.09);
 }
 
 .event strong{
   display:block;
-  margin-bottom:4px;
+  margin-bottom:5px;
+  color:#9b560c;
 }
 
-/* QUICK REVISION */
+
+/* =====================================================
+   QUICK REVISION
+===================================================== */
 
 .revision-grid{
+
   display:grid;
+
   grid-template-columns:repeat(2,1fr);
-  gap:12px;
+
+  gap:15px;
 }
 
 .revision{
-  padding:15px;
-  border:1px solid #dce2eb;
-  border-radius:12px;
+
+  padding:18px;
+
+  border:2px solid #dce2eb;
+
+  border-radius:15px;
+
   background:#fafbfc;
+
+  transition:.25s;
+
+  position:relative;
+
+  overflow:hidden;
+}
+
+.revision:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 18px rgba(0,0,0,.08);
+}
+
+
+/* REVISION COLOURS */
+
+.revision:nth-child(1){
+  background:#fff5e5;
+  border-color:#e1b477;
+}
+
+.revision:nth-child(2){
+  background:#f5efff;
+  border-color:#b9a2dc;
+}
+
+.revision:nth-child(3){
+  background:#fff0f0;
+  border-color:#e4aaaa;
+}
+
+.revision:nth-child(4){
+  background:#fff5e7;
+  border-color:#e5b66d;
+}
+
+.revision:nth-child(5){
+  background:#edf7ff;
+  border-color:#a7cae5;
+}
+
+.revision:nth-child(6){
+  background:#effaf1;
+  border-color:#a8d2b0;
 }
 
 .revision strong{
   display:block;
-  margin-bottom:5px;
+  margin-bottom:6px;
 }
 
-/* DARK */
+
+/* =====================================================
+   QUICK NAVIGATION
+===================================================== */
+
+.quick-nav{
+
+  display:grid;
+
+  grid-template-columns:repeat(3,1fr);
+
+  gap:12px;
+}
+
+.quick-nav button{
+
+  background:#fff;
+
+  color:#172033;
+
+  border:2px solid #dce2eb;
+
+  padding:13px;
+}
+
+.quick-nav button:nth-child(1){
+  border-color:#d2a66b;
+}
+
+.quick-nav button:nth-child(2){
+  border-color:#a98bce;
+}
+
+.quick-nav button:nth-child(3){
+  border-color:#d98e8e;
+}
+
+.quick-nav button:nth-child(4){
+  border-color:#e1a452;
+}
+
+.quick-nav button:nth-child(5){
+  border-color:#8bb8dc;
+}
+
+.quick-nav button:nth-child(6){
+  border-color:#91c39a;
+}
+
+
+/* =====================================================
+   FOOTER
+===================================================== */
+
+footer{
+
+  margin-top:35px;
+
+  padding:30px 15px;
+
+  text-align:center;
+
+  background:#172033;
+
+  color:#fff;
+}
+
+footer p{
+  margin:5px 0;
+}
+
+footer p:nth-child(2){
+  color:#c5cedb;
+  font-size:14px;
+}
+
+
+/* =====================================================
+   TOP BUTTON
+===================================================== */
+
+#topBtn{
+
+  display:none;
+
+  position:fixed;
+
+  right:18px;
+
+  bottom:18px;
+
+  width:50px;
+
+  height:50px;
+
+  border-radius:50%;
+
+  z-index:999;
+
+  background:#172033;
+
+  box-shadow:0 7px 20px rgba(0,0,0,.25);
+}
+
+
+/* =====================================================
+   ANIMATIONS
+===================================================== */
+
+@keyframes pulse{
+
+  0%,100%{
+    box-shadow:
+      0 12px 30px rgba(0,0,0,.20);
+  }
+
+  50%{
+    box-shadow:
+      0 14px 42px rgba(179,33,33,.35);
+  }
+
+}
+
+@keyframes float{
+
+  0%,100%{
+    margin-top:0;
+  }
+
+  50%{
+    margin-top:-5px;
+  }
+
+}
+
+@keyframes slideIn{
+
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+
+/* =====================================================
+   DARK MODE
+===================================================== */
 
 body.dark{
   background:#101722;
@@ -342,42 +961,98 @@ body.dark{
 body.dark header,
 body.dark .map-box,
 body.dark .section{
+
   background:#182230;
+
+  border-color:#2d3a4c;
 }
 
 body.dark .hero{
-  background:linear-gradient(135deg,#151d29,#182230);
+
+  background:
+    radial-gradient(
+      circle at top left,
+      #342b1b 0,
+      #342b1b00 35%
+    ),
+    radial-gradient(
+      circle at bottom right,
+      #202d42 0,
+      #202d4200 35%
+    ),
+    #121a25;
+
+  border-color:#2d3a4c;
 }
 
 body.dark .hero p,
 body.dark .section-intro,
-body.dark .map-heading p,
-body.dark .details p{
+body.dark .map-heading p{
   color:#bbc5d4;
 }
 
 body.dark .search input{
+
   background:#111a27;
+
   color:#fff;
+
   border-color:#39475a;
 }
 
 body.dark .node{
-  background:#202c3c;
   color:#fff;
-  border-color:#3b4a61;
+  border-color:#47576c;
+}
+
+body.dark .n1{
+  background:#3a2a1c;
+}
+
+body.dark .n2{
+  background:#393021;
+}
+
+body.dark .n3,
+body.dark .n4{
+  background:#302942;
+}
+
+body.dark .n5{
+  background:#40272b;
+}
+
+body.dark .n6{
+  background:#423322;
+}
+
+body.dark .n7{
+  background:#203548;
+}
+
+body.dark .n8{
+  background:#21382a;
 }
 
 body.dark .details{
-  background:#29291f;
+  background:#30291e;
+  border-color:#c47b29;
+}
+
+body.dark .details h3{
+  color:#f0b86a;
+}
+
+body.dark .details p{
+  color:#c3ccd8;
 }
 
 body.dark .visual-card{
-  background:linear-gradient(135deg,#30281d,#3a3024);
+  filter:brightness(.75);
 }
 
 body.dark th{
-  background:#253142;
+  background:#293b55;
 }
 
 body.dark th,
@@ -385,71 +1060,54 @@ body.dark td{
   border-color:#465365;
 }
 
-body.dark .event,
-body.dark .revision{
+body.dark td:first-child{
   background:#202c3c;
-  border-color:#3b4a61;
 }
 
-/* BUTTON NAV */
-
-.quick-nav{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:10px;
+body.dark td{
+  background:#182230;
 }
 
-.quick-nav button{
-  background:#fff;
-  color:#172033;
-  border:1px solid #dce2eb;
+body.dark tr:nth-child(even) td{
+  background:#1c2837;
 }
 
-/* TOP */
-
-#topBtn{
-  display:none;
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:48px;
-  height:48px;
-  border-radius:50%;
-  z-index:999;
+body.dark tr:hover td{
+  background:#253447;
 }
 
-/* ANIMATION */
+body.dark .event{
 
-@keyframes pulse{
-  0%,100%{
-    box-shadow:0 12px 30px rgba(0,0,0,.2);
-  }
-  50%{
-    box-shadow:0 12px 38px rgba(215,123,22,.35);
-  }
+  background:#202c3c;
+
+  border-color:#d8872e;
 }
 
-@keyframes float{
-  0%,100%{
-    margin-top:0;
-  }
-  50%{
-    margin-top:-4px;
-  }
+body.dark .event strong{
+  color:#f0b86a;
 }
 
-@keyframes slideIn{
-  from{
-    opacity:0;
-    transform:translateY(10px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+body.dark .revision{
+  color:#f1f5fb;
 }
 
-/* MOBILE */
+body.dark .quick-nav button{
+
+  background:#202c3c;
+
+  color:#fff;
+
+  border-color:#465365;
+}
+
+body.dark footer{
+  background:#0b1119;
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
 
 @media(max-width:700px){
 
@@ -459,29 +1117,37 @@ body.dark .revision{
 
   .header-buttons button,
   .home-btn{
+
     font-size:12px;
+
     padding:8px 9px;
   }
 
   .hero{
-    padding:32px 13px 25px;
+    padding:35px 13px 28px;
   }
 
   .hero h1{
-    font-size:25px;
+    font-size:26px;
+  }
+
+  .hero p{
+    font-size:14px;
   }
 
   .map-box{
-    padding:18px 8px 25px;
+    padding:19px 8px 27px;
   }
 
   .map{
-    min-height:780px;
+    min-height:790px;
   }
 
   .center{
+
     width:145px;
-    height:80px;
+
+    height:82px;
   }
 
   .center strong{
@@ -489,9 +1155,13 @@ body.dark .revision{
   }
 
   .node{
+
     width:120px;
-    min-height:67px;
+
+    min-height:68px;
+
     font-size:12px;
+
     padding:7px;
   }
 
@@ -538,7 +1208,21 @@ body.dark .revision{
   }
 
   .section{
-    padding:20px 16px;
+    padding:22px 16px;
+    border-radius:17px;
+  }
+
+  .section h2{
+    font-size:22px;
+  }
+
+  .visual-card{
+    min-height:155px;
+    font-size:48px;
+  }
+
+  .visual-card div{
+    font-size:14px;
   }
 
   .revision-grid{
@@ -553,40 +1237,80 @@ body.dark .revision{
     min-width:520px;
   }
 
+  .details{
+    padding:18px;
+  }
+
 }
+
+
+/* =====================================================
+   REDUCED MOTION
+===================================================== */
 
 @media(prefers-reduced-motion:reduce){
 
   *,
   *::before,
   *::after{
+
     animation:none!important;
+
     transition:none!important;
+
     scroll-behavior:auto!important;
   }
 
 }
+
 </style>
+
+
 </head>
 
 <body>
 
+
+<!-- =====================================================
+     HEADER
+===================================================== -->
+
 <header>
 
-  <div class="logo">🇮🇳 UPSC Shiksha</div>
+  <div class="logo">
+    🇮🇳 UPSC Shiksha
+  </div>
 
   <div class="header-buttons">
-    <a href="index.html" class="home-btn">🏠 Home</a>
-    <button onclick="toggleDark()">🌙</button>
+
+    <a
+      href="index.html"
+      class="home-btn">
+      🏠 Home
+    </a>
+
+    <button onclick="toggleDark()">
+      🌙
+    </button>
+
   </div>
 
 </header>
 
+
+<!-- =====================================================
+     HERO
+===================================================== -->
+
 <section class="hero">
 
-  <div class="badge">🧠 UPSC GS-I Interactive Notes</div>
+  <div class="badge">
+    🧠 UPSC GS-I Interactive Notes
+  </div>
 
-  <h1>📜 History Interactive Mind Map</h1>
+  <h1>
+    📜 History Interactive Mind Map
+  </h1>
 
   <p>
     Ancient History • Medieval History • Modern History •
@@ -595,7 +1319,11 @@ body.dark .revision{
 
 </section>
 
+
 <main class="container">
+
+
+<!-- SEARCH -->
 
 <div class="search">
 
@@ -609,97 +1337,192 @@ body.dark .revision{
 </div>
 
 
-<!-- MIND MAP -->
+<!-- =====================================================
+     MIND MAP
+===================================================== -->
 
 <section class="map-box">
 
   <div class="map-heading">
-    <h2>🧠 History Mind Map</h2>
-    <p>Tap any topic to view important UPSC points</p>
+
+    <h2>
+      🧠 History Mind Map
+    </h2>
+
+    <p>
+      Tap any topic to view important UPSC points
+    </p>
+
   </div>
+
 
   <div class="map">
 
+
     <div class="center">
-      <strong>📜 Indian History</strong>
-      <small>UPSC GS-I</small>
+
+      <strong>
+        📜 Indian History
+      </strong>
+
+      <small>
+        UPSC GS-I
+      </small>
+
     </div>
 
-    <div class="node n1"
+
+    <!-- ANCIENT -->
+
+    <div
+      class="node n1"
       data-topic="Ancient History"
       onclick="showTopic('ancient')">
+
       <div>
+
         <span>🏺</span>
+
         Ancient History
+
       </div>
+
     </div>
 
-    <div class="node n2"
+
+    <!-- INDUS -->
+
+    <div
+      class="node n2"
       data-topic="Indus Valley Civilization"
       onclick="showTopic('indus')">
+
       <div>
+
         <span>🏛️</span>
+
         Indus Valley
+
       </div>
+
     </div>
 
-    <div class="node n3"
+
+    <!-- VEDIC -->
+
+    <div
+      class="node n3"
       data-topic="Vedic Age"
       onclick="showTopic('vedic')">
+
       <div>
+
         <span>📜</span>
+
         Vedic Age
+
       </div>
+
     </div>
 
-    <div class="node n4"
+
+    <!-- MEDIEVAL -->
+
+    <div
+      class="node n4"
       data-topic="Medieval History"
       onclick="showTopic('medieval')">
+
       <div>
+
         <span>🏰</span>
+
         Medieval History
+
       </div>
+
     </div>
 
-    <div class="node n5"
+
+    <!-- MODERN -->
+
+    <div
+      class="node n5"
       data-topic="Modern History"
       onclick="showTopic('modern')">
+
       <div>
+
         <span>🇮🇳</span>
+
         Modern History
+
       </div>
+
     </div>
 
-    <div class="node n6"
+
+    <!-- FREEDOM -->
+
+    <div
+      class="node n6"
       data-topic="Freedom Struggle"
       onclick="showTopic('freedom')">
+
       <div>
+
         <span>🕊️</span>
+
         Freedom Struggle
+
       </div>
+
     </div>
 
-    <div class="node n7"
+
+    <!-- CULTURE -->
+
+    <div
+      class="node n7"
       data-topic="Art and Culture"
       onclick="showTopic('culture')">
+
       <div>
+
         <span>🎨</span>
+
         Art & Culture
+
       </div>
+
     </div>
 
-    <div class="node n8"
+
+    <!-- POST -->
+
+    <div
+      class="node n8"
       data-topic="Post Independence"
       onclick="showTopic('post')">
+
       <div>
+
         <span>🇮🇳</span>
+
         Post-Independence
+
       </div>
+
     </div>
 
   </div>
 
-  <div class="details" id="detailsBox">
+
+  <!-- DETAILS -->
+
+  <div
+    class="details"
+    id="detailsBox">
 
     <h3 id="detailsTitle"></h3>
 
@@ -712,76 +1535,132 @@ body.dark .revision{
 </section>
 
 
-<!-- ANCIENT -->
+<!-- =====================================================
+     ANCIENT
+===================================================== -->
 
-<section class="section" id="ancientSection">
+<section
+  class="section"
+  id="ancientSection">
 
-  <h2>🏺 Ancient India</h2>
+  <h2>
+    🏺 Ancient India
+  </h2>
 
   <p class="section-intro">
     Major civilizations, Vedic traditions, religions, kingdoms,
     society and economy.
   </p>
 
+
   <div class="visual-card">
+
     🏺 🐂 📜 🛕
-    <div>Ancient India — Civilization • Society • Religion • Economy</div>
+
+    <div>
+      Ancient India — Civilization • Society • Religion • Economy
+    </div>
+
   </div>
+
 
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Aspect</th>
-        <th>Important Points</th>
+
+        <th>
+          Aspect
+        </th>
+
+        <th>
+          Important Points
+        </th>
+
       </tr>
 
+
       <tr>
-        <td>Indus Valley Civilization</td>
+
+        <td>
+          Indus Valley Civilization
+        </td>
+
         <td>
           Urban settlements, planned cities, drainage systems,
           craft production and long-distance trade.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Vedic Age</td>
+
+        <td>
+          Vedic Age
+        </td>
+
         <td>
           Early Vedic and Later Vedic phases, changing political,
           social and economic institutions.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Buddhism</td>
+
+        <td>
+          Buddhism
+        </td>
+
         <td>
           Teachings associated with Gautama Buddha,
           Four Noble Truths and Eightfold Path.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Jainism</td>
+
+        <td>
+          Jainism
+        </td>
+
         <td>
           Mahavira, non-violence, truth and the path of liberation.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Mauryan Empire</td>
+
+        <td>
+          Mauryan Empire
+        </td>
+
         <td>
           Chandragupta Maurya, Ashoka, administration and
           Ashokan inscriptions.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Gupta Period</td>
+
+        <td>
+          Gupta Period
+        </td>
+
         <td>
           Developments in literature, science, mathematics,
           art and architecture.
         </td>
+
       </tr>
 
     </table>
@@ -791,51 +1670,87 @@ body.dark .revision{
 </section>
 
 
-<!-- VEDIC -->
+<!-- =====================================================
+     VEDIC
+===================================================== -->
 
 <section class="section">
 
-  <h2>📜 Vedic Age — Quick Study Table</h2>
+  <h2>
+    📜 Vedic Age — Quick Study Table
+  </h2>
+
 
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Aspect</th>
-        <th>Details</th>
+
+        <th>
+          Aspect
+        </th>
+
+        <th>
+          Details
+        </th>
+
       </tr>
 
+
       <tr>
-        <td>Political Life</td>
+
+        <td>
+          Political Life
+        </td>
+
         <td>
           Institutions such as Sabha and Samiti are discussed
           in the study of early Vedic polity.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Economy</td>
+
+        <td>
+          Economy
+        </td>
+
         <td>
           Cattle played an important role; agriculture became
           increasingly important in later phases.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Social Life</td>
+
+        <td>
+          Social Life
+        </td>
+
         <td>
           Kinship, family and changing social institutions
           were important features.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Religion</td>
+
+        <td>
+          Religion
+        </td>
+
         <td>
           Rituals and deities associated with natural forces
           were important in early Vedic traditions.
         </td>
+
       </tr>
 
     </table>
@@ -845,67 +1760,117 @@ body.dark .revision{
 </section>
 
 
-<!-- MEDIEVAL -->
+<!-- =====================================================
+     MEDIEVAL
+===================================================== -->
 
-<section class="section" id="medievalSection">
+<section
+  class="section"
+  id="medievalSection">
 
-  <h2>🏰 Medieval India</h2>
+  <h2>
+    🏰 Medieval India
+  </h2>
 
   <p class="section-intro">
     Sultanates, Mughal rule, regional kingdoms, Bhakti-Sufi
     traditions and cultural developments.
   </p>
 
+
   <div class="visual-card">
+
     🏰 ⚔️ 👑 🕌
-    <div>Medieval India — Kingdoms • Administration • Culture</div>
+
+    <div>
+      Medieval India — Kingdoms • Administration • Culture
+    </div>
+
   </div>
+
 
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Theme</th>
-        <th>Major Areas</th>
+
+        <th>
+          Theme
+        </th>
+
+        <th>
+          Major Areas
+        </th>
+
       </tr>
 
+
       <tr>
-        <td>Delhi Sultanate</td>
+
+        <td>
+          Delhi Sultanate
+        </td>
+
         <td>
           Major dynasties, administration, architecture and
           economic developments.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Mughal Empire</td>
+
+        <td>
+          Mughal Empire
+        </td>
+
         <td>
           Mughal administration, mansabdari, revenue systems,
           architecture and cultural developments.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Bhakti Movement</td>
+
+        <td>
+          Bhakti Movement
+        </td>
+
         <td>
           Devotional traditions and contributions of different
           regional saints.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Sufi Traditions</td>
+
+        <td>
+          Sufi Traditions
+        </td>
+
         <td>
           Major Sufi orders and their social and cultural influence.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Regional Kingdoms</td>
+
+        <td>
+          Regional Kingdoms
+        </td>
+
         <td>
           Marathas, Vijayanagara and other regional powers.
         </td>
+
       </tr>
 
     </table>
@@ -915,64 +1880,114 @@ body.dark .revision{
 </section>
 
 
-<!-- MODERN -->
+<!-- =====================================================
+     MODERN
+===================================================== -->
 
-<section class="section" id="modernSection">
+<section
+  class="section"
+  id="modernSection">
 
-  <h2>🇮🇳 Modern Indian History</h2>
+  <h2>
+    🇮🇳 Modern Indian History
+  </h2>
 
   <p class="section-intro">
     Major developments from the eighteenth century to independence.
   </p>
 
+
   <div class="visual-card">
+
     ⚔️ 📜 🚂 🇮🇳
-    <div>Colonial Rule • Reform • Nationalism • Independence</div>
+
+    <div>
+      Colonial Rule • Reform • Nationalism • Independence
+    </div>
+
   </div>
+
 
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Theme</th>
-        <th>Important Areas</th>
+
+        <th>
+          Theme
+        </th>
+
+        <th>
+          Important Areas
+        </th>
+
       </tr>
 
+
       <tr>
-        <td>European Expansion</td>
+
+        <td>
+          European Expansion
+        </td>
+
         <td>
           Portuguese, Dutch, English and French presence in India.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>British Expansion</td>
+
+        <td>
+          British Expansion
+        </td>
+
         <td>
           Major battles, treaties, policies and territorial expansion.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Economic Impact</td>
+
+        <td>
+          Economic Impact
+        </td>
+
         <td>
           Land revenue systems, trade, industry and colonial economic policies.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Social Reform</td>
+
+        <td>
+          Social Reform
+        </td>
+
         <td>
           Reform movements, education, women's issues and
           opposition to social practices.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Constitutional Developments</td>
+
+        <td>
+          Constitutional Developments
+        </td>
+
         <td>
           Major Acts and institutional changes under British rule.
         </td>
+
       </tr>
 
     </table>
@@ -982,123 +1997,244 @@ body.dark .revision{
 </section>
 
 
-<!-- FREEDOM STRUGGLE -->
+<!-- =====================================================
+     FREEDOM STRUGGLE
+===================================================== -->
 
-<section class="section" id="freedomSection">
+<section
+  class="section"
+  id="freedomSection">
 
-  <h2>🕊️ Freedom Struggle</h2>
+  <h2>
+    🕊️ Freedom Struggle
+  </h2>
 
   <p class="section-intro">
     Major phases, movements, organisations and contributors.
   </p>
 
+
   <div class="timeline">
 
-    <div class="event">
-      <strong>1857 — Revolt</strong>
-      Major uprising against British rule with different regional centres and causes.
-    </div>
 
     <div class="event">
-      <strong>1885 — Indian National Congress</strong>
-      Formation of an important political organisation in the national movement.
+
+      <strong>
+        1857 — Revolt
+      </strong>
+
+      Major uprising against British rule with different
+      regional centres and causes.
+
     </div>
 
-    <div class="event">
-      <strong>1905 — Swadeshi Movement</strong>
-      Nationalist mobilisation associated with the partition of Bengal.
-    </div>
 
     <div class="event">
-      <strong>1919 — Rowlatt Satyagraha & Jallianwala Bagh</strong>
+
+      <strong>
+        1885 — Indian National Congress
+      </strong>
+
+      Formation of an important political organisation
+      in the national movement.
+
+    </div>
+
+
+    <div class="event">
+
+      <strong>
+        1905 — Swadeshi Movement
+      </strong>
+
+      Nationalist mobilisation associated with the
+      partition of Bengal.
+
+    </div>
+
+
+    <div class="event">
+
+      <strong>
+        1919 — Rowlatt Satyagraha & Jallianwala Bagh
+      </strong>
+
       Important developments in the nationalist movement.
+
     </div>
 
+
     <div class="event">
-      <strong>1920–22 — Non-Cooperation Movement</strong>
+
+      <strong>
+        1920–22 — Non-Cooperation Movement
+      </strong>
+
       Mass mobilisation under Gandhi's leadership.
+
     </div>
 
+
     <div class="event">
-      <strong>1930 — Civil Disobedience Movement</strong>
+
+      <strong>
+        1930 — Civil Disobedience Movement
+      </strong>
+
       Associated with the Salt March and wider civil resistance.
+
     </div>
 
+
     <div class="event">
-      <strong>1942 — Quit India Movement</strong>
+
+      <strong>
+        1942 — Quit India Movement
+      </strong>
+
       Major mass movement demanding an end to British rule.
+
     </div>
 
+
     <div class="event">
-      <strong>1947 — Independence</strong>
+
+      <strong>
+        1947 — Independence
+      </strong>
+
       India became independent on 15 August 1947.
+
     </div>
+
 
   </div>
 
 </section>
 
 
-<!-- ART CULTURE -->
+<!-- =====================================================
+     ART & CULTURE
+===================================================== -->
 
-<section class="section" id="cultureSection">
+<section
+  class="section"
+  id="cultureSection">
 
-  <h2>🎨 Indian Art & Culture</h2>
+  <h2>
+    🎨 Indian Art & Culture
+  </h2>
 
   <p class="section-intro">
     Important areas for UPSC revision from ancient to modern India.
   </p>
 
+
+  <div class="visual-card">
+
+    🛕 🎨 💃 🎵
+
+    <div>
+      Indian Art & Culture — Architecture • Dance • Music • Literature
+    </div>
+
+  </div>
+
+
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Area</th>
-        <th>Study Focus</th>
+
+        <th>
+          Area
+        </th>
+
+        <th>
+          Study Focus
+        </th>
+
       </tr>
 
+
       <tr>
-        <td>Architecture</td>
+
+        <td>
+          Architecture
+        </td>
+
         <td>
           Temple architecture, Buddhist architecture,
           Indo-Islamic architecture and colonial architecture.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Painting</td>
+
+        <td>
+          Painting
+        </td>
+
         <td>
           Cave paintings, miniature traditions and modern Indian art.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Dance</td>
+
+        <td>
+          Dance
+        </td>
+
         <td>
           Classical and folk traditions of different regions.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Music</td>
+
+        <td>
+          Music
+        </td>
+
         <td>
           Hindustani, Carnatic and regional musical traditions.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Literature</td>
+
+        <td>
+          Literature
+        </td>
+
         <td>
           Sanskrit, regional languages and modern Indian literature.
         </td>
+
       </tr>
 
+
       <tr>
-        <td>Religion & Philosophy</td>
+
         <td>
-          Major philosophical and religious traditions and their cultural influence.
+          Religion & Philosophy
         </td>
+
+        <td>
+          Major philosophical and religious traditions and
+          their cultural influence.
+        </td>
+
       </tr>
 
     </table>
@@ -1108,47 +2244,89 @@ body.dark .revision{
 </section>
 
 
-<!-- POST INDEPENDENCE -->
+<!-- =====================================================
+     POST INDEPENDENCE
+===================================================== -->
 
-<section class="section" id="postSection">
+<section
+  class="section"
+  id="postSection">
 
-  <h2>🇮🇳 Post-Independence India</h2>
+  <h2>
+    🇮🇳 Post-Independence India
+  </h2>
+
 
   <div class="table-wrap">
 
     <table>
 
       <tr>
-        <th>Theme</th>
-        <th>Revision Areas</th>
+
+        <th>
+          Theme
+        </th>
+
+        <th>
+          Revision Areas
+        </th>
+
       </tr>
 
-      <tr>
-        <td>Integration</td>
-        <td>
-          Integration of princely states and consolidation of the Union.
-        </td>
-      </tr>
 
       <tr>
-        <td>Reorganisation</td>
+
         <td>
-          Reorganisation of states and evolution of India's federal structure.
+          Integration
         </td>
+
+        <td>
+          Integration of princely states and consolidation
+          of the Union.
+        </td>
+
       </tr>
 
-      <tr>
-        <td>Economic Development</td>
-        <td>
-          Planning, public sector development and major policy changes.
-        </td>
-      </tr>
 
       <tr>
-        <td>Foreign Policy</td>
+
         <td>
-          Major principles and developments in India's external relations.
+          Reorganisation
         </td>
+
+        <td>
+          Reorganisation of states and evolution of India's
+          federal structure.
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td>
+          Economic Development
+        </td>
+
+        <td>
+          Planning, public sector development and major
+          policy changes.
+        </td>
+
+      </tr>
+
+
+      <tr>
+
+        <td>
+          Foreign Policy
+        </td>
+
+        <td>
+          Major principles and developments in India's
+          external relations.
+        </td>
+
       </tr>
 
     </table>
@@ -1158,332 +2336,599 @@ body.dark .revision{
 </section>
 
 
-<!-- QUICK REVISION -->
+<!-- =====================================================
+     QUICK REVISION
+===================================================== -->
 
 <section class="section">
 
-  <h2>⚡ Quick Revision</h2>
+  <h2>
+    ⚡ Quick Revision
+  </h2>
+
 
   <div class="revision-grid">
 
-    <div class="revision">
-      <strong>🏺 Ancient</strong>
-      Civilization → Vedic Age → Religions → Mauryas → Guptas
-    </div>
 
     <div class="revision">
-      <strong>🏰 Medieval</strong>
-      Sultanate → Mughals → Regional Powers → Bhakti-Sufi
+
+      <strong>
+        🏺 Ancient
+      </strong>
+
+      Civilization → Vedic Age → Religions →
+      Mauryas → Guptas
+
     </div>
 
-    <div class="revision">
-      <strong>🇮🇳 Modern</strong>
-      Europeans → British Expansion → Reform → Nationalism
-    </div>
 
     <div class="revision">
-      <strong>🕊️ Freedom Struggle</strong>
-      1857 → Swadeshi → NCM → CDM → Quit India → Independence
+
+      <strong>
+        🏰 Medieval
+      </strong>
+
+      Sultanate → Mughals → Regional Powers →
+      Bhakti-Sufi
+
     </div>
 
-    <div class="revision">
-      <strong>🎨 Culture</strong>
-      Architecture → Painting → Dance → Music → Literature
-    </div>
 
     <div class="revision">
-      <strong>📚 UPSC Focus</strong>
-      Causes → Events → Leaders → Consequences → Significance
+
+      <strong>
+        🇮🇳 Modern
+      </strong>
+
+      Europeans → British Expansion →
+      Reform → Nationalism
+
     </div>
+
+
+    <div class="revision">
+
+      <strong>
+        🕊️ Freedom Struggle
+      </strong>
+
+      1857 → Swadeshi → NCM → CDM →
+      Quit India → Independence
+
+    </div>
+
+
+    <div class="revision">
+
+      <strong>
+        🎨 Culture
+      </strong>
+
+      Architecture → Painting → Dance →
+      Music → Literature
+
+    </div>
+
+
+    <div class="revision">
+
+      <strong>
+        📚 UPSC Focus
+      </strong>
+
+      Causes → Events → Leaders →
+      Consequences → Significance
+
+    </div>
+
 
   </div>
 
 </section>
 
 
-<!-- QUICK NAV -->
+<!-- =====================================================
+     QUICK NAVIGATION
+===================================================== -->
 
 <section class="section">
 
-  <h2>📌 Quick Navigation</h2>
+  <h2>
+    📌 Quick Navigation
+  </h2>
+
 
   <div class="quick-nav">
 
-    <button onclick="goTo('ancientSection')">🏺 Ancient</button>
+    <button onclick="goTo('ancientSection')">
+      🏺 Ancient
+    </button>
 
-    <button onclick="goTo('medievalSection')">🏰 Medieval</button>
+    <button onclick="goTo('medievalSection')">
+      🏰 Medieval
+    </button>
 
-    <button onclick="goTo('modernSection')">🇮🇳 Modern</button>
+    <button onclick="goTo('modernSection')">
+      🇮🇳 Modern
+    </button>
 
-    <button onclick="goTo('freedomSection')">🕊️ Freedom Struggle</button>
+    <button onclick="goTo('freedomSection')">
+      🕊️ Freedom Struggle
+    </button>
 
-    <button onclick="goTo('cultureSection')">🎨 Art & Culture</button>
+    <button onclick="goTo('cultureSection')">
+      🎨 Art & Culture
+    </button>
 
-    <button onclick="goTo('postSection')">🇮🇳 Post-Independence</button>
+    <button onclick="goTo('postSection')">
+      🇮🇳 Post-Independence
+    </button>
 
   </div>
 
 </section>
+
 
 </main>
 
 
-<button id="topBtn" onclick="topFunction()">⬆️</button>
+<!-- =====================================================
+     TOP BUTTON
+===================================================== -->
 
+<button
+  id="topBtn"
+  onclick="topFunction()">
+
+  ⬆️
+
+</button>
+
+
+<!-- =====================================================
+     FOOTER
+===================================================== -->
 
 <footer>
 
-  <p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+  <p>
+    🇮🇳 <strong>UPSC Shiksha</strong>
+  </p>
 
   <p>
     History • Mind Maps • Notes • PYQs • Tests
   </p>
 
-  <p>© 2026 UPSC Shiksha</p>
+  <p>
+    © 2026 UPSC Shiksha
+  </p>
 
 </footer>
 
 
 <script>
 
+
+/* =====================================================
+   TOPIC DATA
+===================================================== */
+
 const topics={
 
+
 ancient:{
+
 title:"🏺 Ancient History",
-text:"Ancient India covers major civilizations, political systems, religions, economy, society, science and culture.",
+
+text:
+"Ancient India covers major civilizations, political systems, religions, economy, society, science and culture.",
+
 list:[
+
 "Indus Valley Civilization",
+
 "Vedic Age",
+
 "Mahajanapadas",
+
 "Buddhism and Jainism",
+
 "Mauryan Empire",
+
 "Gupta Period",
+
 "Ancient Art and Architecture"
+
 ]
+
 },
+
 
 indus:{
+
 title:"🏛️ Indus Valley Civilization",
-text:"The Indus Valley Civilization is studied for its urban planning, craft production, trade and material culture.",
+
+text:
+"The Indus Valley Civilization is studied for its urban planning, craft production, trade and material culture.",
+
 list:[
+
 "Urban settlements",
+
 "Planned cities",
+
 "Drainage systems",
+
 "Craft production",
+
 "Trade",
+
 "Seals and inscriptions",
+
 "Religious and social practices"
+
 ]
+
 },
+
 
 vedic:{
+
 title:"📜 Vedic Age",
-text:"The Vedic period is commonly studied through its political, social, economic and religious developments.",
+
+text:
+"The Vedic period is commonly studied through its political, social, economic and religious developments.",
+
 list:[
+
 "Early Vedic period",
+
 "Later Vedic period",
+
 "Sabha and Samiti",
+
 "Economy and agriculture",
+
 "Social institutions",
+
 "Vedic literature",
+
 "Religious practices"
+
 ]
+
 },
+
 
 medieval:{
+
 title:"🏰 Medieval History",
-text:"Medieval India includes the Delhi Sultanate, Mughal Empire, regional powers and major cultural movements.",
+
+text:
+"Medieval India includes the Delhi Sultanate, Mughal Empire, regional powers and major cultural movements.",
+
 list:[
+
 "Delhi Sultanate",
+
 "Mughal Empire",
+
 "Vijayanagara",
+
 "Marathas",
+
 "Bhakti Movement",
+
 "Sufi traditions",
+
 "Architecture and culture"
+
 ]
+
 },
+
 
 modern:{
+
 title:"🇮🇳 Modern Indian History",
-text:"Modern Indian history focuses on colonial expansion, economic changes, social reform and the rise of nationalism.",
+
+text:
+"Modern Indian history focuses on colonial expansion, economic changes, social reform and the rise of nationalism.",
+
 list:[
+
 "European expansion",
+
 "British territorial expansion",
+
 "Colonial economy",
+
 "Social reform movements",
+
 "Constitutional developments",
+
 "Rise of nationalism"
+
 ]
+
 },
+
 
 freedom:{
+
 title:"🕊️ Freedom Struggle",
-text:"The Indian national movement developed through different phases and forms of political and mass mobilisation.",
+
+text:
+"The Indian national movement developed through different phases and forms of political and mass mobilisation.",
+
 list:[
+
 "Revolt of 1857",
+
 "Moderate phase",
+
 "Swadeshi Movement",
+
 "Non-Cooperation Movement",
+
 "Civil Disobedience Movement",
+
 "Quit India Movement",
+
 "Independence and Partition"
+
 ]
+
 },
+
 
 culture:{
+
 title:"🎨 Art & Culture",
-text:"Indian culture includes diverse traditions of architecture, painting, dance, music, literature and philosophy.",
+
+text:
+"Indian culture includes diverse traditions of architecture, painting, dance, music, literature and philosophy.",
+
 list:[
+
 "Temple architecture",
+
 "Buddhist architecture",
+
 "Indo-Islamic architecture",
+
 "Classical dances",
+
 "Indian music",
+
 "Painting traditions",
+
 "Literature"
+
 ]
+
 },
 
+
 post:{
+
 title:"🇮🇳 Post-Independence India",
-text:"Post-independence history focuses on consolidation, state reorganisation, development and major national changes.",
+
+text:
+"Post-independence history focuses on consolidation, state reorganisation, development and major national changes.",
+
 list:[
+
 "Integration of princely states",
+
 "Reorganisation of states",
+
 "Planning",
+
 "Economic development",
+
 "Foreign policy",
+
 "Democratic consolidation"
+
 ]
+
 }
 
 };
 
 
+/* =====================================================
+   SHOW TOPIC
+===================================================== */
+
 function showTopic(topic){
 
-const data=topics[topic];
+  const data=topics[topic];
 
-if(!data)return;
+  if(!data)return;
 
-document.getElementById("detailsTitle").textContent=data.title;
+  document.getElementById(
+    "detailsTitle"
+  ).textContent=data.title;
 
-document.getElementById("detailsText").textContent=data.text;
+  document.getElementById(
+    "detailsText"
+  ).textContent=data.text;
 
-const list=document.getElementById("detailsList");
 
-list.innerHTML="";
+  const list=
+    document.getElementById("detailsList");
 
-data.list.forEach(function(item){
+  list.innerHTML="";
 
-const li=document.createElement("li");
 
-li.textContent=item;
+  data.list.forEach(function(item){
 
-list.appendChild(li);
+    const li=
+      document.createElement("li");
 
-});
+    li.textContent=item;
 
-const box=document.getElementById("detailsBox");
+    list.appendChild(li);
 
-box.classList.add("show");
+  });
 
-setTimeout(function(){
 
-box.scrollIntoView({
-behavior:"smooth",
-block:"center"
-});
+  const box=
+    document.getElementById("detailsBox");
 
-},50);
+  box.classList.add("show");
+
+
+  setTimeout(function(){
+
+    box.scrollIntoView({
+
+      behavior:"smooth",
+
+      block:"center"
+
+    });
+
+  },50);
 
 }
 
+
+/* =====================================================
+   SEARCH
+===================================================== */
 
 function searchTopics(){
 
-const value=document
-.getElementById("searchBox")
-.value
-.toLowerCase()
-.trim();
+  const value=
 
-document.querySelectorAll(".node").forEach(function(node){
+    document
+      .getElementById("searchBox")
+      .value
+      .toLowerCase()
+      .trim();
 
-const text=node.dataset.topic.toLowerCase();
 
-if(value==="" || text.includes(value)){
+  document
+    .querySelectorAll(".node")
+    .forEach(function(node){
 
-node.style.display="flex";
-node.style.opacity="1";
+      const text=
+        node.dataset.topic.toLowerCase();
 
-}else{
 
-node.style.display="none";
+      if(
+        value==="" ||
+        text.includes(value)
+      ){
+
+        node.style.display="flex";
+
+        node.style.opacity="1";
+
+      }else{
+
+        node.style.display="none";
+
+      }
+
+    });
 
 }
 
-});
 
-}
-
+/* =====================================================
+   DARK MODE
+===================================================== */
 
 function toggleDark(){
 
-document.body.classList.toggle("dark");
+  document.body.classList.toggle("dark");
 
-localStorage.setItem(
-"historyMindMapDark",
-document.body.classList.contains("dark")
-);
+  localStorage.setItem(
+
+    "historyMindMapDark",
+
+    document.body.classList.contains("dark")
+
+  );
+
+}
+
+
+if(
+  localStorage.getItem(
+    "historyMindMapDark"
+  )==="true"
+){
+
+  document.body.classList.add("dark");
 
 }
 
 
-if(localStorage.getItem("historyMindMapDark")==="true"){
-
-document.body.classList.add("dark");
-
-}
-
+/* =====================================================
+   QUICK NAVIGATION
+===================================================== */
 
 function goTo(id){
 
-document.getElementById(id).scrollIntoView({
-behavior:"smooth",
-block:"start"
-});
+  const element=
+    document.getElementById(id);
+
+  if(!element)return;
+
+  element.scrollIntoView({
+
+    behavior:"smooth",
+
+    block:"start"
+
+  });
 
 }
 
+
+/* =====================================================
+   TOP BUTTON
+===================================================== */
 
 window.onscroll=function(){
 
-const btn=document.getElementById("topBtn");
+  const btn=
+    document.getElementById("topBtn");
 
-if(
-document.body.scrollTop>300 ||
-document.documentElement.scrollTop>300
-){
 
-btn.style.display="block";
+  if(
 
-}else{
+    document.body.scrollTop>300 ||
 
-btn.style.display="none";
+    document.documentElement.scrollTop>300
 
-}
+  ){
+
+    btn.style.display="block";
+
+  }else{
+
+    btn.style.display="none";
+
+  }
 
 };
 
 
 function topFunction(){
 
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
+  window.scrollTo({
+
+    top:0,
+
+    behavior:"smooth"
+
+  });
 
 }
 
