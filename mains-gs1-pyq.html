@@ -8,10 +8,10 @@
 <meta name="viewport"
 content="width=device-width, initial-scale=1.0">
 
-<title>UPSC Shiksha | Mains GS-I PYQ</title>
+<title>Mains GS-I PYQ | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Mains General Studies Paper-I Previous Year Questions, practice questions, History, Geography, Society and World History.">
+content="UPSC Mains GS-I PYQ practice covering Indian History, World History, Society, Geography, Art and Culture and Social Issues.">
 
 <style>
 
@@ -28,15 +28,14 @@ scroll-behavior:smooth;
 body{
 font-family:Arial,Helvetica,sans-serif;
 background:#f5f7fb;
-color:#20242b;
+color:#222;
 line-height:1.6;
 transition:0.3s;
 }
 
-/* HEADER */
-
 header{
 background:#fff;
+padding:15px 20px;
 position:sticky;
 top:0;
 z-index:1000;
@@ -44,48 +43,43 @@ box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
 .navbar{
-max-width:1200px;
+max-width:1100px;
 margin:auto;
-padding:14px 20px;
 display:flex;
 align-items:center;
 justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-font-size:20px;
+font-size:22px;
 font-weight:bold;
-color:#e85d04;
+color:#7c3aed;
 }
 
-.logo span{
-color:#222;
-}
-
-.menu-btn{
-display:none;
-font-size:25px;
-background:none;
-border:none;
-cursor:pointer;
-}
-
-.nav-menu{
+nav{
 display:flex;
-gap:18px;
+flex-wrap:wrap;
+gap:8px;
 }
 
-.nav-menu a{
+nav a,
+nav button{
 text-decoration:none;
-color:#333;
+border:none;
+background:#f3f4f6;
+color:#222;
+padding:9px 13px;
+border-radius:8px;
+cursor:pointer;
 font-size:14px;
 }
 
-.nav-menu a:hover{
-color:#e85d04;
+nav a:hover,
+nav button:hover{
+background:#7c3aed;
+color:white;
 }
-
-/* CONTAINER */
 
 .container{
 max-width:1100px;
@@ -93,534 +87,530 @@ margin:auto;
 padding:20px;
 }
 
-/* BACK */
-
-.back-btn{
-display:inline-block;
-background:#333;
-color:#fff;
-padding:9px 15px;
-border-radius:7px;
-text-decoration:none;
-font-size:14px;
-margin-bottom:25px;
-}
-
 /* HERO */
 
-.hero{
-background:linear-gradient(135deg,#eefaf1,#fff);
+.pyq-hero{
+background:linear-gradient(135deg,#4c1d95,#7c3aed);
+color:white;
 padding:35px 20px;
 border-radius:18px;
 text-align:center;
-box-shadow:0 5px 18px rgba(0,0,0,0.07);
-margin-bottom:18px;
+margin-bottom:25px;
 }
 
-.hero h1{
-font-size:27px;
-margin-bottom:8px;
+.pyq-hero h1{
+font-size:32px;
+margin-bottom:10px;
 }
 
-.hero p{
-font-size:14px;
-color:#555;
+.pyq-hero p{
+font-size:16px;
 }
 
-.tags{
-margin-top:15px;
+.tag-box{
 display:flex;
 justify-content:center;
 flex-wrap:wrap;
 gap:8px;
+margin-top:18px;
 }
 
 .tag{
-background:#333;
-color:#fff;
-padding:5px 10px;
+background:rgba(255,255,255,0.18);
+padding:6px 12px;
 border-radius:20px;
-font-size:11px;
-}
-
-/* DARK MODE */
-
-.dark-btn{
-display:block;
-margin:0 auto 20px;
-background:#333;
-color:#fff;
-border:none;
-padding:10px 15px;
-border-radius:7px;
-cursor:pointer;
+font-size:13px;
 }
 
 /* SEARCH */
 
-.search-box{
-width:100%;
-padding:13px 15px;
-border:1px solid #ddd;
-border-radius:10px;
-font-size:14px;
-outline:none;
-margin-bottom:25px;
-background:#fff;
-}
-
-.search-box:focus{
-border-color:#e85d04;
-}
-
-/* QUIZ */
-
-.quiz-box{
-background:#fff;
-padding:25px;
-border-radius:16px;
-box-shadow:0 5px 18px rgba(0,0,0,0.07);
-margin-bottom:25px;
-}
-
-.quiz-box h2{
-font-size:21px;
-margin-bottom:5px;
-}
-
-.quiz-subtitle{
-font-size:13px;
-color:#666;
-margin-bottom:20px;
-}
-
-.quiz-filters{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:12px;
-margin-bottom:20px;
-}
-
-.quiz-filters select{
-width:100%;
-padding:11px;
-border:1px solid #ddd;
-border-radius:8px;
-background:#fff;
-font-size:13px;
-}
-
-.quiz-info{
-display:flex;
-justify-content:space-between;
-background:#f3f4f6;
-padding:10px 13px;
-border-radius:8px;
-font-size:13px;
-font-weight:bold;
-margin-bottom:15px;
-}
-
-.question-card{
-border:1px solid #e3e3e3;
-border-radius:12px;
-padding:20px;
-}
-
-.question-card h3{
-font-size:17px;
-margin-bottom:18px;
-line-height:1.5;
-}
-
-.option-btn{
-width:100%;
-text-align:left;
-padding:12px 14px;
-margin-bottom:10px;
-border:1px solid #ddd;
-background:#fff;
-border-radius:8px;
-cursor:pointer;
-font-size:14px;
-}
-
-.option-btn:hover{
-background:#f5f5f5;
-}
-
-.option-btn.correct{
-background:#d9f7df;
-border-color:#28a745;
-color:#146c2e;
-}
-
-.option-btn.wrong{
-background:#ffe0e0;
-border-color:#dc3545;
-color:#9b1c1c;
-}
-
-.option-btn:disabled{
-cursor:not-allowed;
-}
-
-.answer-box{
-display:none;
-margin-top:15px;
-padding:14px;
-border-radius:8px;
-background:#eef6ff;
-font-size:13px;
-}
-
-.answer-box.show{
-display:block;
-}
-
-.quiz-actions{
+.controls{
 display:flex;
 gap:10px;
-margin-top:18px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
-.quiz-actions button{
+#searchInput{
 flex:1;
-border:none;
-background:#333;
-color:#fff;
+min-width:220px;
 padding:12px;
-border-radius:8px;
-cursor:pointer;
-}
-
-.quiz-actions button:hover{
-background:#111;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
 }
 
 /* QUICK NAV */
 
 .quick-nav{
-background:#fff;
+background:white;
 padding:20px;
-border-radius:14px;
+border-radius:15px;
 margin-bottom:25px;
-box-shadow:0 3px 12px rgba(0,0,0,0.05);
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
 }
 
 .quick-nav h2{
-font-size:18px;
 margin-bottom:12px;
+font-size:22px;
 }
 
 .quick-links{
 display:flex;
 flex-wrap:wrap;
-gap:9px;
+gap:8px;
 }
 
 .quick-links a{
 text-decoration:none;
-color:#333;
-background:#fff;
-border:1px solid #ddd;
-padding:8px 13px;
-border-radius:7px;
-font-size:13px;
+background:#f5f3ff;
+color:#6d28d9;
+padding:8px 12px;
+border-radius:8px;
+font-size:14px;
 }
 
-/* YEAR GRID */
+/* QUIZ */
 
-.year-grid{
+.quiz-box{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.quiz-box h2{
+color:#4c1d95;
+margin-bottom:5px;
+}
+
+.quiz-subtitle{
+color:#666;
+margin-bottom:18px;
+}
+
+.quiz-filters{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+.quiz-filters select{
+flex:1;
+min-width:180px;
+padding:11px;
+border:1px solid #ddd;
+border-radius:9px;
+background:white;
+font-size:14px;
+}
+
+.quiz-info{
+display:flex;
+justify-content:space-between;
+gap:10px;
+background:#f5f3ff;
+padding:10px 14px;
+border-radius:9px;
+margin-bottom:15px;
+font-weight:bold;
+}
+
+.question-card{
+background:#fafafa;
+border:1px solid #e5e7eb;
+padding:20px;
+border-radius:14px;
+}
+
+.question-card h3{
+margin-bottom:15px;
+font-size:19px;
+}
+
+.option-btn{
+display:block;
+width:100%;
+text-align:left;
+padding:12px;
+margin:8px 0;
+border:1px solid #ddd;
+background:white;
+border-radius:9px;
+cursor:pointer;
+font-size:15px;
+transition:0.2s;
+}
+
+.option-btn:hover{
+background:#f5f3ff;
+}
+
+.option-btn.correct{
+background:#dcfce7;
+border-color:#16a34a;
+color:#166534;
+}
+
+.option-btn.wrong{
+background:#fee2e2;
+border-color:#dc2626;
+color:#991b1b;
+}
+
+.answer-box{
+margin-top:15px;
+padding:13px;
+background:#ede9fe;
+border-radius:9px;
+display:none;
+}
+
+.quiz-actions{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:18px;
+}
+
+.quiz-actions button{
+padding:11px 18px;
+border:none;
+border-radius:9px;
+cursor:pointer;
+font-weight:bold;
+background:#7c3aed;
+color:white;
+}
+
+.quiz-actions button:hover{
+background:#4c1d95;
+}
+
+/* CASE STUDY */
+
+.case-study{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
+}
+
+.case-study h2{
+color:#4c1d95;
+margin-bottom:12px;
+}
+
+.case-box{
+background:#f5f3ff;
+padding:18px;
+border-radius:12px;
+border-left:5px solid #7c3aed;
+margin-top:15px;
+}
+
+.case-box ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+/* PAPERS */
+
+.pyq-section{
+margin-bottom:25px;
+}
+
+.pyq-section h2{
+margin-bottom:15px;
+}
+
+.pyq-grid{
 display:grid;
-grid-template-columns:repeat(2,1fr);
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
 gap:15px;
 }
 
 .pyq-card{
-background:#fff;
+background:white;
 padding:20px;
-border-radius:14px;
-box-shadow:0 4px 14px rgba(0,0,0,0.07);
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
 }
 
-.pyq-card h2{
-font-size:19px;
-margin-bottom:5px;
-}
-
-.paper-label{
-display:inline-block;
-background:#eee;
-padding:4px 8px;
-border-radius:5px;
-font-size:11px;
-margin:5px 0 10px;
+.pyq-card h3{
+color:#4c1d95;
+margin-bottom:8px;
 }
 
 .pyq-card p{
-font-size:13px;
-margin-bottom:13px;
+font-size:14px;
+color:#555;
+margin-bottom:12px;
 }
 
-.paper-btn{
+.year-btn{
 display:inline-block;
-background:#333;
-color:#fff;
 text-decoration:none;
-padding:9px 12px;
-border-radius:7px;
-font-size:13px;
+background:#7c3aed;
+color:white;
+padding:9px 13px;
+border-radius:8px;
+font-size:14px;
+}
+
+.year-btn:hover{
+background:#4c1d95;
+}
+
+/* INFO */
+
+.info-box{
+background:#f5f3ff;
+border-left:5px solid #7c3aed;
+padding:18px;
+border-radius:10px;
+margin-bottom:25px;
 }
 
 /* STRATEGY */
 
 .strategy{
-background:#fff;
-padding:20px;
-border-radius:14px;
-margin-top:25px;
-box-shadow:0 3px 12px rgba(0,0,0,0.05);
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
 }
 
 .strategy h2{
-font-size:19px;
-margin-bottom:10px;
+color:#4c1d95;
+margin-bottom:12px;
 }
 
-.strategy p{
-font-size:14px;
-margin-bottom:7px;
+.strategy ul{
+margin-left:20px;
 }
 
-/* BOTTOM */
+/* MAJOR AREAS */
+
+.major-areas{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
+}
+
+.area-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+margin-top:15px;
+}
+
+.area{
+background:#f5f3ff;
+padding:15px;
+border-radius:10px;
+}
+
+/* BOTTOM NAV */
 
 .bottom-nav{
 display:flex;
+justify-content:center;
 flex-wrap:wrap;
-gap:10px;
-margin:25px 0;
+gap:8px;
+margin:30px 0;
 }
 
 .bottom-nav a{
-background:#333;
-color:#fff;
 text-decoration:none;
-padding:9px 13px;
-border-radius:7px;
-font-size:13px;
+background:#e5e7eb;
+color:#222;
+padding:9px 12px;
+border-radius:8px;
+font-size:14px;
 }
 
 /* FOOTER */
 
 footer{
-background:#222;
-color:#fff;
+background:#111827;
+color:white;
 text-align:center;
-padding:25px 15px;
+padding:25px;
 margin-top:30px;
 }
 
-footer p{
-font-size:13px;
-margin:4px;
-}
+/* TOP BUTTON */
 
-/* TOP */
-
-#topBtn{
-display:none;
+#backTop{
 position:fixed;
 right:18px;
-bottom:20px;
-z-index:999;
+bottom:18px;
+display:none;
 border:none;
-background:#333;
-color:#fff;
-padding:11px 14px;
+background:#7c3aed;
+color:white;
+padding:12px 15px;
 border-radius:50%;
-font-size:18px;
 cursor:pointer;
+font-size:18px;
+z-index:999;
 }
 
 /* DARK MODE */
 
 body.dark{
-background:#121212;
-color:#eee;
+background:#111827;
+color:#f3f4f6;
 }
 
-body.dark header{
-background:#1d1d1d;
-}
-
-body.dark .logo span,
-body.dark .nav-menu a{
-color:#eee;
-}
-
-body.dark .hero{
-background:linear-gradient(135deg,#1d3024,#1a1a1a);
-}
-
-body.dark .hero p,
-body.dark .quiz-subtitle{
-color:#bbb;
-}
-
-body.dark .search-box,
-body.dark .quiz-box,
-body.dark .question-card,
+body.dark header,
 body.dark .quick-nav,
+body.dark .quiz-box,
+body.dark .case-study,
 body.dark .pyq-card,
-body.dark .strategy{
-background:#1d1d1d;
-color:#eee;
-border-color:#333;
-}
-
-body.dark .search-box{
-color:#fff;
-}
-
-body.dark .quiz-filters select{
-background:#222;
-color:#fff;
-border-color:#444;
-}
-
-body.dark .quiz-info{
-background:#292929;
-}
-
-body.dark .option-btn{
-background:#222;
-color:#eee;
-border-color:#444;
-}
-
-body.dark .option-btn:hover{
-background:#333;
-}
-
-body.dark .option-btn.correct{
-background:#163c22;
-}
-
-body.dark .option-btn.wrong{
-background:#4a2020;
-}
-
-body.dark .answer-box{
-background:#202d3d;
+body.dark .strategy,
+body.dark .major-areas{
+background:#1f2937;
+color:#f3f4f6;
 }
 
 body.dark .quick-links a{
-background:#222;
-color:#eee;
-border-color:#444;
+background:#374151;
+color:#c4b5fd;
 }
 
-body.dark .paper-label{
-background:#333;
+body.dark .question-card{
+background:#111827;
+border-color:#374151;
+}
+
+body.dark .option-btn{
+background:#1f2937;
+color:#f3f4f6;
+border-color:#4b5563;
+}
+
+body.dark .option-btn:hover{
+background:#374151;
+}
+
+body.dark .quiz-filters select,
+body.dark #searchInput{
+background:#1f2937;
+color:white;
+border-color:#4b5563;
+}
+
+body.dark .quiz-info{
+background:#374151;
+}
+
+body.dark .answer-box{
+background:#4c1d95;
+color:#ede9fe;
+}
+
+body.dark .area{
+background:#374151;
+}
+
+body.dark .pyq-card p{
+color:#d1d5db;
+}
+
+body.dark .bottom-nav a{
+background:#374151;
+color:#f3f4f6;
+}
+
+body.dark .info-box{
+background:#4c1d95;
+border-color:#a78bfa;
+}
+
+body.dark .case-box{
+background:#4c1d95;
+}
+
+body.dark nav a{
+background:#374151;
+color:#f3f4f6;
 }
 
 /* MOBILE */
 
 @media(max-width:700px){
 
+header{
+padding:12px;
+}
+
 .navbar{
-padding:12px 15px;
-}
-
-.menu-btn{
-display:block;
-}
-
-.nav-menu{
-display:none;
-position:absolute;
-top:60px;
-left:0;
-right:0;
-background:#fff;
 flex-direction:column;
-padding:15px;
-box-shadow:0 4px 10px rgba(0,0,0,0.1);
+align-items:stretch;
 }
 
-.nav-menu.active{
-display:flex;
+.logo{
+text-align:center;
 }
 
-body.dark .nav-menu{
-background:#1d1d1d;
+nav{
+justify-content:center;
+}
+
+nav a,
+nav button{
+font-size:13px;
+padding:8px 10px;
 }
 
 .container{
 padding:12px;
 }
 
-.hero{
-padding:27px 15px;
+.pyq-hero{
+padding:28px 15px;
 }
 
-.hero h1{
-font-size:23px;
+.pyq-hero h1{
+font-size:25px;
 }
 
-.hero p{
-font-size:13px;
-}
-
-.quiz-box{
-padding:17px;
-}
-
-.quiz-filters{
-grid-template-columns:1fr;
-}
-
-.question-card{
-padding:15px;
+.quiz-box,
+.case-study,
+.strategy,
+.major-areas,
+.quick-nav{
+padding:18px;
 }
 
 .question-card h3{
-font-size:15px;
-}
-
-.option-btn{
-font-size:13px;
-}
-
-.quiz-actions{
-flex-direction:column;
-}
-
-.year-grid{
-grid-template-columns:1fr;
-}
-
-.pyq-card{
-padding:17px;
-}
-
-}
-
-/* SMALL */
-
-@media(max-width:400px){
-
-.logo{
 font-size:17px;
 }
 
-.hero h1{
-font-size:21px;
+.quiz-info{
+font-size:13px;
 }
 
-.quiz-info{
-font-size:12px;
+.quiz-actions button{
+width:100%;
+}
+
+.controls{
+flex-direction:column;
+}
+
+#searchInput{
+width:100%;
 }
 
 }
@@ -629,39 +619,36 @@ font-size:12px;
 
 </head>
 
-
 <body>
 
-
-<!-- HEADER -->
 
 <header>
 
 <div class="navbar">
 
 <div class="logo">
-🇮🇳 UPSC <span>Shiksha</span>
+🇮🇳 UPSC Shiksha
 </div>
 
-<button
-class="menu-btn"
-id="menuBtn">
-☰
-</button>
-
-<nav
-class="nav-menu"
-id="navMenu">
+<nav>
 
 <a href="index.html">Home</a>
-
-<a href="prelims.html">Prelims</a>
-
-<a href="csat.html">CSAT</a>
 
 <a href="mains.html">Mains</a>
 
 <a href="pyq.html">PYQ</a>
+
+<a href="csat-pyq.html">CSAT</a>
+
+<a href="mains-gs2-pyq.html">GS-II</a>
+
+<a href="mains-gs3-pyq.html">GS-III</a>
+
+<a href="mains-gs4-pyq.html">GS-IV</a>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
 
 </nav>
 
@@ -670,97 +657,89 @@ id="navMenu">
 </header>
 
 
-<div class="container">
+<main class="container">
 
 
-<!-- BACK -->
+<section class="pyq-hero">
 
-<a
-href="pyq.html"
-class="back-btn">
-
-← Back to PYQ
-
-</a>
-
-
-<!-- HERO -->
-
-<section class="hero">
-
-<h1>
-✍️ UPSC Mains GS-I PYQ
-</h1>
+<h1>📜 Mains GS-I PYQ</h1>
 
 <p>
-Civil Services Main Examination
-General Studies Paper-I Previous Year Questions
-& Practice
+UPSC Civil Services Mains General Studies Paper I
 </p>
 
-<div class="tags">
+<div class="tag-box">
 
-<span class="tag">
-MAINS
-</span>
+<span class="tag">MAINS</span>
 
-<span class="tag">
-GS-I
-</span>
+<span class="tag">GS-I</span>
 
-<span class="tag">
-HISTORY
-</span>
+<span class="tag">PYQ</span>
 
-<span class="tag">
-GEOGRAPHY
-</span>
+<span class="tag">HISTORY</span>
 
-<span class="tag">
-SOCIETY
-</span>
+<span class="tag">GEOGRAPHY</span>
+
+<span class="tag">SOCIETY</span>
+
+<span class="tag">ART & CULTURE</span>
 
 </div>
 
 </section>
 
 
-<!-- DARK MODE -->
-
-<button
-class="dark-btn"
-id="darkModeBtn">
-
-🌙 Dark Mode
-
-</button>
-
-
-<!-- SEARCH -->
+<div class="controls">
 
 <input
 type="text"
-id="searchBox"
-class="search-box"
-placeholder="🔍 Search Mains GS-I PYQ Year or Topic..."
+id="searchInput"
+placeholder="🔎 Search GS-I topics or years..."
 >
 
+</div>
 
-<!-- ========================= -->
-<!-- GS-I PRACTICE -->
-<!-- ========================= -->
 
-<section
-class="quiz-box"
-id="gs1Quiz">
+<section class="quick-nav">
 
-<h2>
-📝 GS-I Practice Questions
-</h2>
+<h2>⚡ Quick Navigation</h2>
+
+<div class="quick-links">
+
+<a href="#quiz">📝 Quiz</a>
+
+<a href="#caseStudy">📚 Case Study</a>
+
+<a href="#year2026">2026</a>
+
+<a href="#year2025">2025</a>
+
+<a href="#year2024">2024</a>
+
+<a href="#year2023">2023</a>
+
+<a href="#year2022">2022</a>
+
+<a href="#year2021">2021</a>
+
+<a href="#year2020">2020</a>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-box" id="quiz">
+
+<h2>📝 GS-I Practice Quiz</h2>
 
 <p class="quiz-subtitle">
-Practice Mains GS-I questions by year and topic.
-Write answers in your own words and review the model approach.
+
+Model/practice questions for UPSC Mains GS-I.
+These are NOT exact UPSC PYQ text.
+
 </p>
 
 
@@ -772,29 +751,17 @@ Write answers in your own words and review the model approach.
 All Years
 </option>
 
-<option value="2025">
-2025
-</option>
+<option value="2025">2025</option>
 
-<option value="2024">
-2024
-</option>
+<option value="2024">2024</option>
 
-<option value="2023">
-2023
-</option>
+<option value="2023">2023</option>
 
-<option value="2022">
-2022
-</option>
+<option value="2022">2022</option>
 
-<option value="2021">
-2021
-</option>
+<option value="2021">2021</option>
 
-<option value="2020">
-2020
-</option>
+<option value="2020">2020</option>
 
 </select>
 
@@ -814,11 +781,19 @@ World History
 </option>
 
 <option value="Society">
-Indian Society
+Society
 </option>
 
 <option value="Geography">
 Geography
+</option>
+
+<option value="Art & Culture">
+Art & Culture
+</option>
+
+<option value="Social Issues">
+Social Issues
 </option>
 
 </select>
@@ -842,14 +817,12 @@ Score: 0
 <div class="question-card">
 
 <h3 id="questionText">
-GS-I practice question will appear here.
+GS-I question will appear here.
 </h3>
 
-<div id="optionsBox">
-</div>
+<div id="optionsBox"></div>
 
-<div
-id="answerBox"
+<div id="answerBox"
 class="answer-box">
 </div>
 
@@ -871,263 +844,245 @@ class="answer-box">
 </section>
 
 
-<!-- QUICK NAV -->
+<!-- CASE STUDY -->
 
-<section class="quick-nav">
+<section class="case-study" id="caseStudy">
 
-<h2>
-⚡ Quick Navigation
-</h2>
+<h2>📚 GS-I Analytical Practice</h2>
 
-<div class="quick-links">
+<p>
+Use these prompts to practise analytical Mains answers
+from History, Society and Geography.
+</p>
 
-<a href="#gs12026">
-2026
-</a>
 
-<a href="#gs12025">
-2025
-</a>
+<div class="case-box">
 
-<a href="#gs12024">
-2024
-</a>
+<strong>Practice Scenario:</strong>
 
-<a href="#gs12023">
-2023
-</a>
+<p>
+A rapidly growing city is experiencing population pressure,
+housing shortages, traffic congestion and stress on water
+resources. At the same time, migration is creating new
+economic opportunities.
+</p>
 
-<a href="#gs12022">
-2022
-</a>
+<ul>
 
-<a href="#gs12021">
-2021
-</a>
+<li>Identify the major geographical factors involved.</li>
 
-<a href="#gs12020">
-2020
-</a>
+<li>Explain the social consequences of rapid urbanisation.</li>
+
+<li>Discuss opportunities created by migration.</li>
+
+<li>Suggest sustainable planning measures.</li>
+
+</ul>
+
+</div>
+
+
+<div class="case-box">
+
+<strong>Suggested Answer Approach:</strong>
+
+<ul>
+
+<li>Begin with a brief introduction.</li>
+
+<li>Analyse economic, social and geographical dimensions.</li>
+
+<li>Use examples and relevant data where possible.</li>
+
+<li>Discuss both opportunities and challenges.</li>
+
+<li>End with practical and sustainable solutions.</li>
+
+</ul>
 
 </div>
 
 </section>
 
 
-<!-- YEAR CARDS -->
+<!-- OFFICIAL PAPERS -->
 
-<div class="year-grid">
+<section class="pyq-section">
+
+<h2>📄 Official UPSC GS-I Papers</h2>
 
 
-<section
-class="pyq-card"
-id="gs12026">
+<div class="pyq-grid">
 
-<h2>
-📅 Mains GS-I 2026
-</h2>
 
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<div class="pyq-card"
+id="year2026">
+
+<h3>📅 GS-I 2026</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2026.
+Civil Services Main Examination 2026 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12025">
+<div class="pyq-card"
+id="year2025">
 
-<h2>
-📅 Mains GS-I 2025
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2025</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2025.
+Civil Services Main Examination 2025 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12024">
+<div class="pyq-card"
+id="year2024">
 
-<h2>
-📅 Mains GS-I 2024
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2024</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2024.
+Civil Services Main Examination 2024 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12023">
+<div class="pyq-card"
+id="year2023">
 
-<h2>
-📅 Mains GS-I 2023
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2023</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2023.
+Civil Services Main Examination 2023 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12022">
+<div class="pyq-card"
+id="year2022">
 
-<h2>
-📅 Mains GS-I 2022
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2022</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2022.
+Civil Services Main Examination 2022 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12021">
+<div class="pyq-card"
+id="year2021">
 
-<h2>
-📅 Mains GS-I 2021
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2021</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2021.
+Civil Services Main Examination 2021 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
-</section>
+</div>
 
 
-<section
-class="pyq-card"
-id="gs12020">
+<div class="pyq-card"
+id="year2020">
 
-<h2>
-📅 Mains GS-I 2020
-</h2>
-
-<span class="paper-label">
-General Studies Paper-I
-</span>
+<h3>📅 GS-I 2020</h3>
 
 <p>
-UPSC Civil Services Main Examination
-General Studies Paper-I for 2020.
+Civil Services Main Examination 2020 —
+General Studies Paper I.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-rel="noopener"
-class="paper-btn">
+target="_blank">
 
-📄 Open Official Paper →
+Official UPSC Paper
 
 </a>
 
+</div>
+
+
+</div>
+
 </section>
 
+
+<div class="info-box">
+
+<strong>📌 Important:</strong>
+
+The year buttons open the official UPSC
+Previous Year Question Papers / Archives pages.
+
+The quiz contains model practice questions,
+not verbatim UPSC PYQ text.
 
 </div>
 
@@ -1136,37 +1091,130 @@ class="paper-btn">
 
 <section class="strategy">
 
-<h2>
-🎯 GS-I PYQ Strategy
-</h2>
+<h2>🎯 GS-I Preparation Strategy</h2>
+
+<ul>
+
+<li>
+Build strong fundamentals in Indian History,
+World History, Geography, Society and Art & Culture.
+</li>
+
+<li>
+Connect static topics with current developments.
+</li>
+
+<li>
+Use maps, timelines and diagrams wherever relevant.
+</li>
+
+<li>
+Practise analytical answers rather than only memorising facts.
+</li>
+
+<li>
+For History, focus on causes, consequences,
+continuity and change.
+</li>
+
+<li>
+For Geography, connect physical processes with
+human and economic activities.
+</li>
+
+<li>
+For Society, discuss social changes using
+balanced and contemporary examples.
+</li>
+
+</ul>
+
+</section>
+
+
+<!-- MAJOR AREAS -->
+
+<section class="major-areas">
+
+<h2>📚 Major GS-I Areas</h2>
+
+
+<div class="area-grid">
+
+
+<div class="area">
+
+<strong>🏛️ Indian History</strong>
 
 <p>
-1️⃣ Read the question carefully and identify the demand.
+Ancient, Medieval and Modern India,
+freedom struggle and post-independence developments.
 </p>
 
-<p>
-2️⃣ Divide the answer into Introduction, Body and Conclusion.
-</p>
+</div>
+
+
+<div class="area">
+
+<strong>🌍 World History</strong>
 
 <p>
-3️⃣ Use examples, facts, maps and relevant concepts wherever appropriate.
+Industrial Revolution, world wars,
+colonisation, nationalism and political transformations.
 </p>
 
-<p>
-4️⃣ For History and Society, connect static concepts with suitable examples.
-</p>
+</div>
+
+
+<div class="area">
+
+<strong>👥 Indian Society</strong>
 
 <p>
-5️⃣ For Geography, use diagrams or maps where they add value.
+Diversity, urbanisation, migration,
+social change and population issues.
 </p>
 
-<p>
-6️⃣ Practice writing within the required word limit.
-</p>
+</div>
+
+
+<div class="area">
+
+<strong>🗺️ Geography</strong>
 
 <p>
-7️⃣ Use official UPSC papers as the reference for actual PYQs.
+Physical geography, resources,
+climate, agriculture, industries and human geography.
 </p>
+
+</div>
+
+
+<div class="area">
+
+<strong>🎨 Art & Culture</strong>
+
+<p>
+Architecture, literature, painting,
+religious traditions and cultural heritage.
+</p>
+
+</div>
+
+
+<div class="area">
+
+<strong>🤝 Social Issues</strong>
+
+<p>
+Women, vulnerable groups, poverty,
+education, health and social empowerment.
+</p>
+
+</div>
+
+
+</div>
 
 </section>
 
@@ -1180,7 +1228,7 @@ class="paper-btn">
 </a>
 
 <a href="prelims.html">
-📚 Prelims
+📘 Prelims
 </a>
 
 <a href="csat.html">
@@ -1188,24 +1236,42 @@ class="paper-btn">
 </a>
 
 <a href="mains.html">
-📝 Mains
+✍️ Mains
 </a>
 
 <a href="pyq.html">
-📄 PYQ
+📚 PYQ
 </a>
 
 <a href="csat-pyq.html">
-🧠 CSAT PYQ
+CSAT PYQ
+</a>
+
+<a href="mains-gs2-pyq.html">
+GS-II
+</a>
+
+<a href="mains-gs3-pyq.html">
+GS-III
+</a>
+
+<a href="mains-gs4-pyq.html">
+GS-IV
 </a>
 
 </div>
 
+</main>
 
-</div>
 
+<button
+id="backTop"
+onclick="topFunction()">
 
-<!-- FOOTER -->
+↑
+
+</button>
+
 
 <footer>
 
@@ -1214,7 +1280,7 @@ class="paper-btn">
 </p>
 
 <p>
-Mains GS-I • History • Geography • Society
+Free UPSC Preparation • Syllabus • PYQs • Tests • Current Affairs
 </p>
 
 <p>
@@ -1224,95 +1290,848 @@ Mains GS-I • History • Geography • Society
 </footer>
 
 
-<!-- TOP BUTTON -->
-
-<button
-id="topBtn"
-onclick="topFunction()">
-
-↑
-
-</button>
-
-
 <script>
 
 /* =========================
-   MOBILE MENU
+   GS-I QUIZ DATA
 ========================= */
 
-const menuBtn =
-document.getElementById("menuBtn");
+const quizQuestions = [
 
-const navMenu =
-document.getElementById("navMenu");
+/* INDIAN HISTORY */
 
-menuBtn.addEventListener(
-"click",
-function(){
+{
+year:"2025",
+topic:"Indian History",
+question:"The Bhakti and Sufi traditions contributed to Indian society mainly through:",
+options:[
+"Promoting diverse spiritual and social interactions",
+"Ending all regional cultures",
+"Replacing every local tradition",
+"Preventing cultural exchange"
+],
+answer:0,
+explanation:"Bhakti and Sufi traditions contributed to religious, social and cultural interactions across different communities."
+},
 
-navMenu.classList.toggle("active");
+{
+year:"2024",
+topic:"Indian History",
+question:"Historical monuments are important sources because they can provide evidence about:",
+options:[
+"Society, technology, economy and cultural practices",
+"Only military events",
+"Only population size",
+"Only modern political institutions"
+],
+answer:0,
+explanation:"Architecture and monuments provide evidence about technology, economy, social organisation and cultural life."
+},
 
-});
+{
+year:"2023",
+topic:"Indian History",
+question:"The Indian national movement involved:",
+options:[
+"Different social groups and forms of political mobilisation",
+"Only one social group",
+"Only constitutional negotiations",
+"Only armed movements"
+],
+answer:0,
+explanation:"The national movement involved diverse groups, methods and phases of mobilisation."
+},
+
+{
+year:"2022",
+topic:"Indian History",
+question:"Regional movements during the freedom struggle were significant because they:",
+options:[
+"Connected local issues with the wider national movement",
+"Had no connection with political developments",
+"Ended participation by local communities",
+"Focused only on international affairs"
+],
+answer:0,
+explanation:"Regional movements often linked local grievances and social issues with the broader anti-colonial struggle."
+},
+
+{
+year:"2021",
+topic:"Indian History",
+question:"Colonial rule significantly affected traditional Indian handicrafts through:",
+options:[
+"Changes in markets, production patterns and competition",
+"Complete protection of artisan industries",
+"Removal of all imported goods",
+"Elimination of commercial agriculture"
+],
+answer:0,
+explanation:"Colonial economic policies and industrial competition affected traditional artisan production and markets."
+},
+
+{
+year:"2020",
+topic:"Indian History",
+question:"The participation of different social groups in the national movement influenced:",
+options:[
+"The breadth and character of the freedom struggle",
+"Only foreign policy",
+"Only industrial production",
+"Only princely states"
+],
+answer:0,
+explanation:"Different social groups brought diverse interests, demands and forms of participation to the national movement."
+},
+
+
+/* WORLD HISTORY */
+
+{
+year:"2025",
+topic:"World History",
+question:"The Industrial Revolution transformed societies by:",
+options:[
+"Changing production, urbanisation and patterns of labour",
+"Ending technological innovation",
+"Reducing industrial production",
+"Stopping international trade"
+],
+answer:0,
+explanation:"Industrialisation changed production methods, labour systems, cities, transport and social structures."
+},
+
+{
+year:"2024",
+topic:"World History",
+question:"The Industrial Revolution is considered a major turning point because it:",
+options:[
+"Transformed production and economic organisation",
+"Ended all agriculture",
+"Eliminated cities",
+"Stopped scientific development"
+],
+answer:0,
+explanation:"Mechanised production and new energy sources transformed economies, societies and patterns of urbanisation."
+},
+
+{
+year:"2023",
+topic:"World History",
+question:"The rise of nationalism in Europe contributed to:",
+options:[
+"Major political transformations and the formation of nation-states",
+"Complete political stability",
+"End of political identities",
+"Elimination of territorial states"
+],
+answer:0,
+explanation:"Nationalism played a major role in political movements and the formation or consolidation of nation-states."
+},
+
+{
+year:"2022",
+topic:"World History",
+question:"Colonialism had major effects on colonised societies through:",
+options:[
+"Economic, political and social transformations",
+"Only cultural exchange",
+"No changes in local economies",
+"Only military development"
+],
+answer:0,
+explanation:"Colonial rule affected political institutions, economies, societies, resources and cultural life."
+},
+
+{
+year:"2021",
+topic:"World History",
+question:"The First World War had major consequences including:",
+options:[
+"Political changes, economic disruption and social transformation",
+"Only military changes",
+"No territorial changes",
+"Complete economic stability"
+],
+answer:0,
+explanation:"The war caused major political, economic, territorial and social consequences across the world."
+},
+
+{
+year:"2020",
+topic:"World History",
+question:"The spread of democratic ideas in modern history was associated with:",
+options:[
+"Greater emphasis on rights, representation and popular sovereignty",
+"Complete rejection of citizenship",
+"Removal of political participation",
+"End of constitutional government"
+],
+answer:0,
+explanation:"Modern democratic movements emphasised representation, rights, citizenship and popular participation."
+},
+
+
+/* SOCIETY */
+
+{
+year:"2025",
+topic:"Society",
+question:"Rapid urbanisation can create both opportunities and challenges because it:",
+options:[
+"Creates jobs while also increasing pressure on urban infrastructure",
+"Only reduces economic activity",
+"Eliminates migration",
+"Prevents social change"
+],
+answer:0,
+explanation:"Urbanisation can expand economic opportunities but also create pressure on housing, transport, water and sanitation."
+},
+
+{
+year:"2024",
+topic:"Society",
+question:"Social diversity in India is shaped by factors such as:",
+options:[
+"Language, religion, region, caste and cultural traditions",
+"Only geography",
+"Only income",
+"Only urbanisation"
+],
+answer:0,
+explanation:"Indian society reflects multiple overlapping identities and traditions."
+},
+
+{
+year:"2023",
+topic:"Society",
+question:"Education can contribute to social mobility by:",
+options:[
+"Expanding capabilities and access to opportunities",
+"Reducing skills",
+"Restricting employment",
+"Preventing social interaction"
+],
+answer:0,
+explanation:"Education can improve skills, capabilities and access to economic and social opportunities."
+},
+
+{
+year:"2022",
+topic:"Society",
+question:"Migration from rural to urban areas can result in:",
+options:[
+"Employment opportunities along with pressure on urban services",
+"Only negative outcomes",
+"Only positive outcomes",
+"No demographic changes"
+],
+answer:0,
+explanation:"Migration can improve livelihood opportunities while also creating challenges for housing and public services."
+},
+
+{
+year:"2021",
+topic:"Society",
+question:"Social empowerment involves:",
+options:[
+"Improving participation, rights, capabilities and opportunities",
+"Reducing representation",
+"Restricting education",
+"Preventing political participation"
+],
+answer:0,
+explanation:"Social empowerment expands people's ability to participate and exercise rights and opportunities."
+},
+
+{
+year:"2020",
+topic:"Society",
+question:"Changing family structures in India can be influenced by:",
+options:[
+"Urbanisation, education, employment and changing social norms",
+"Only climate",
+"Only agriculture",
+"Only international trade"
+],
+answer:0,
+explanation:"Urbanisation, education, employment and changing social norms can influence family structures and relationships."
+},
+
+
+/* GEOGRAPHY */
+
+{
+year:"2025",
+topic:"Geography",
+question:"The Indian monsoon is important for the economy mainly because it influences:",
+options:[
+"Agriculture, water availability and several economic activities",
+"Only tourism",
+"Only coastal shipping",
+"Only urban transport"
+],
+answer:0,
+explanation:"Monsoon rainfall significantly affects agriculture, reservoirs, groundwater and related economic activities."
+},
+
+{
+year:"2024",
+topic:"Geography",
+question:"Population distribution is influenced by:",
+options:[
+"Relief, climate, water availability, economic opportunities and resources",
+"Only political boundaries",
+"Only language",
+"Only historical monuments"
+],
+answer:0,
+explanation:"Physical and human factors jointly influence population distribution."
+},
+
+{
+year:"2023",
+topic:"Geography",
+question:"River systems are important because they support:",
+options:[
+"Water supply, agriculture, ecosystems and economic activities",
+"Only navigation",
+"Only tourism",
+"Only industrialisation"
+],
+answer:0,
+explanation:"Rivers support agriculture, drinking water, ecosystems, industry, transport and many livelihoods."
+},
+
+{
+year:"2022",
+topic:"Geography",
+question:"Urban heat islands are mainly associated with:",
+options:[
+"Built-up surfaces, reduced vegetation and human activities",
+"Only rural agriculture",
+"Only ocean currents",
+"Only mountain formation"
+],
+answer:0,
+explanation:"Concrete surfaces, reduced vegetation and heat generated by human activities can raise urban temperatures."
+},
+
+{
+year:"2021",
+topic:"Geography",
+question:"Coastal regions are vulnerable to hazards such as:",
+options:[
+"Cyclones, storm surges and coastal flooding",
+"Only earthquakes",
+"Only droughts",
+"Only snowfall"
+],
+answer:0,
+explanation:"Coastal regions can face cyclones, storm surges, coastal flooding and erosion."
+},
+
+{
+year:"2020",
+topic:"Geography",
+question:"Natural resources influence settlement patterns because:",
+options:[
+"People and economic activities often locate near useful resources and favourable conditions",
+"Resources have no effect on settlements",
+"Only political borders matter",
+"Only language determines settlement"
+],
+answer:0,
+explanation:"Water, minerals, fertile land, energy and other resources influence settlement and economic patterns."
+},
+
+
+/* ART & CULTURE */
+
+{
+year:"2025",
+topic:"Art & Culture",
+question:"Indian architectural traditions reflect:",
+options:[
+"Historical, religious, social and regional influences",
+"Only military requirements",
+"Only modern technology",
+"Only foreign traditions"
+],
+answer:0,
+explanation:"Indian architecture developed through diverse historical, religious, regional and cultural influences."
+},
+
+{
+year:"2024",
+topic:"Art & Culture",
+question:"Classical Indian dance traditions are important because they:",
+options:[
+"Preserve artistic, cultural and historical traditions",
+"Have no connection with society",
+"Are only modern forms",
+"Exist independently of cultural traditions"
+],
+answer:0,
+explanation:"Classical dance traditions preserve movements, music, narratives, aesthetics and cultural knowledge."
+},
+
+{
+year:"2023",
+topic:"Art & Culture",
+question:"Indian paintings represent cultural diversity through:",
+options:[
+"Diverse regional styles, themes and techniques",
+"Only one artistic tradition",
+"Only modern subjects",
+"Only religious architecture"
+],
+answer:0,
+explanation:"Indian painting traditions include diverse regional schools, themes, materials and techniques."
+},
+
+{
+year:"2022",
+topic:"Art & Culture",
+question:"Intangible cultural heritage includes:",
+options:[
+"Traditions, knowledge, performing arts and cultural practices",
+"Only monuments",
+"Only archaeological sites",
+"Only physical objects"
+],
+answer:0,
+explanation:"Intangible heritage includes practices, expressions, knowledge and skills transmitted across generations."
+},
+
+{
+year:"2021",
+topic:"Art & Culture",
+question:"Indian literature contributes to cultural understanding by:",
+options:[
+"Reflecting diverse languages, ideas and social experiences",
+"Representing only one region",
+"Eliminating linguistic diversity",
+"Existing separately from society"
+],
+answer:0,
+explanation:"Literary traditions provide insights into languages, values, experiences and historical contexts."
+},
+
+{
+year:"2020",
+topic:"Art & Culture",
+question:"Cultural heritage conservation is important because it:",
+options:[
+"Preserves historical knowledge and cultural identity",
+"Prevents all social change",
+"Eliminates cultural diversity",
+"Stops artistic development"
+],
+answer:0,
+explanation:"Heritage conservation protects important cultural resources and historical knowledge for future generations."
+},
+
+
+/* SOCIAL ISSUES */
+
+{
+year:"2025",
+topic:"Social Issues",
+question:"Poverty is multidimensional because it can involve:",
+options:[
+"Income, health, education, living conditions and opportunities",
+"Only income",
+"Only employment",
+"Only housing"
+],
+answer:0,
+explanation:"Poverty can involve multiple deprivations beyond income, including education, health and living conditions."
+},
+
+{
+year:"2024",
+topic:"Social Issues",
+question:"Gender inequality can be reduced through:",
+options:[
+"Equal opportunities, education, economic participation and institutional support",
+"Reducing women's education",
+"Restricting employment",
+"Reducing political participation"
+],
+answer:0,
+explanation:"Gender equality requires equal access to education, employment, resources, rights and participation."
+},
+
+{
+year:"2023",
+topic:"Social Issues",
+question:"Population ageing can create challenges related to:",
+options:[
+"Healthcare, social security and elderly care",
+"Only school education",
+"Only agriculture",
+"Only tourism"
+],
+answer:0,
+explanation:"An ageing population can increase demand for healthcare, social protection and care services."
+},
+
+{
+year:"2022",
+topic:"Social Issues",
+question:"Social exclusion refers to:",
+options:[
+"Processes that prevent individuals or groups from full participation in society",
+"Only economic growth",
+"Only migration",
+"Only urbanisation"
+],
+answer:0,
+explanation:"Social exclusion involves barriers that restrict participation in economic, social, political or cultural life."
+},
+
+{
+year:"2021",
+topic:"Social Issues",
+question:"Vulnerable groups may require special policy attention because:",
+options:[
+"They may face greater barriers to resources, opportunities and rights",
+"They always have higher incomes",
+"They face no social barriers",
+"They have complete access to services"
+],
+answer:0,
+explanation:"Vulnerability can arise from social, economic, geographic or institutional disadvantages."
+},
+
+{
+year:"2020",
+topic:"Social Issues",
+question:"Social cohesion can be strengthened through:",
+options:[
+"Inclusion, equal opportunities, dialogue and mutual respect",
+"Social exclusion",
+"Discrimination",
+"Reduced participation"
+],
+answer:0,
+explanation:"Inclusion, equal opportunities and dialogue can strengthen trust and social cohesion."
+}
+
+];
 
 
 /* =========================
-   DARK MODE
+   QUIZ ENGINE
 ========================= */
 
-const darkModeBtn =
-document.getElementById("darkModeBtn");
+let filteredQuestions =
+[...quizQuestions];
 
-darkModeBtn.addEventListener(
-"click",
+let currentQuestion = 0;
+
+let score = 0;
+
+let answered = false;
+
+
+const quizYear =
+document.getElementById("quizYear");
+
+const quizTopic =
+document.getElementById("quizTopic");
+
+const questionText =
+document.getElementById("questionText");
+
+const optionsBox =
+document.getElementById("optionsBox");
+
+const answerBox =
+document.getElementById("answerBox");
+
+const questionNumber =
+document.getElementById("questionNumber");
+
+const quizScore =
+document.getElementById("quizScore");
+
+
+function loadQuestion(){
+
+if(!filteredQuestions.length){
+
+questionNumber.textContent =
+"Question 0";
+
+quizScore.textContent =
+"Score: 0";
+
+questionText.textContent =
+"No questions found for this filter.";
+
+optionsBox.innerHTML = "";
+
+answerBox.style.display =
+"none";
+
+return;
+
+}
+
+const q =
+filteredQuestions[currentQuestion];
+
+answered = false;
+
+questionNumber.textContent =
+"Question "
++
+(currentQuestion + 1)
++
+" / "
++
+filteredQuestions.length;
+
+quizScore.textContent =
+"Score: "
++
+score;
+
+questionText.textContent =
+q.question;
+
+optionsBox.innerHTML = "";
+
+answerBox.style.display =
+"none";
+
+answerBox.innerHTML = "";
+
+
+q.options.forEach(
+function(option,index){
+
+const button =
+document.createElement("button");
+
+button.className =
+"option-btn";
+
+button.textContent =
+String.fromCharCode(
+65 + index
+)
++
+". "
++
+option;
+
+button.onclick =
 function(){
 
-document.body.classList.toggle("dark");
-
-localStorage.setItem(
-"mainsGs1PyqDarkMode",
-document.body.classList.contains("dark")
+checkAnswer(
+index,
+button
 );
 
-if(
-document.body.classList.contains("dark")
+};
+
+optionsBox.appendChild(
+button
+);
+
+});
+
+}
+
+
+function checkAnswer(
+selected,
+clickedButton
 ){
 
-darkModeBtn.innerHTML =
-"☀️ Light Mode";
+if(answered){
+return;
+}
 
-}else{
+answered = true;
 
-darkModeBtn.innerHTML =
-"🌙 Dark Mode";
+const q =
+filteredQuestions[
+currentQuestion
+];
+
+const buttons =
+document.querySelectorAll(
+".option-btn"
+);
+
+
+buttons.forEach(
+function(button,index){
+
+button.disabled = true;
+
+if(index === q.answer){
+
+button.classList.add(
+"correct"
+);
 
 }
 
 });
 
 
-if(
-localStorage.getItem(
-"mainsGs1PyqDarkMode"
-)==="true"
-){
+if(selected === q.answer){
 
-document.body.classList.add("dark");
+score++;
 
-darkModeBtn.innerHTML =
-"☀️ Light Mode";
+clickedButton.classList.add(
+"correct"
+);
+
+answerBox.innerHTML =
+"<strong>✅ Correct!</strong><br><br>"
++
+q.explanation;
+
+}else{
+
+clickedButton.classList.add(
+"wrong"
+);
+
+answerBox.innerHTML =
+"<strong>❌ Incorrect.</strong><br><br>"
++
+"<strong>Correct Answer:</strong> "
++
+String.fromCharCode(
+65 + q.answer
+)
++
+". "
++
+q.options[q.answer]
++
+"<br><br>"
++
+q.explanation;
 
 }
+
+answerBox.style.display =
+"block";
+
+quizScore.textContent =
+"Score: "
++
+score;
+
+}
+
+
+function filterQuiz(){
+
+const selectedYear =
+quizYear.value;
+
+const selectedTopic =
+quizTopic.value;
+
+
+filteredQuestions =
+quizQuestions.filter(
+function(q){
+
+const yearMatch =
+selectedYear === "all"
+||
+q.year === selectedYear;
+
+const topicMatch =
+selectedTopic === "all"
+||
+q.topic === selectedTopic;
+
+return yearMatch
+&&
+topicMatch;
+
+});
+
+
+currentQuestion = 0;
+
+score = 0;
+
+loadQuestion();
+
+}
+
+
+quizYear.addEventListener(
+"change",
+filterQuiz
+);
+
+quizTopic.addEventListener(
+"change",
+filterQuiz
+);
+
+
+document.getElementById(
+"nextQuestion"
+).addEventListener(
+"click",
+function(){
+
+if(!filteredQuestions.length){
+return;
+}
+
+currentQuestion++;
+
+if(
+currentQuestion >=
+filteredQuestions.length
+){
+
+currentQuestion = 0;
+
+}
+
+loadQuestion();
+
+});
+
+
+document.getElementById(
+"restartQuiz"
+).addEventListener(
+"click",
+function(){
+
+currentQuestion = 0;
+
+score = 0;
+
+loadQuestion();
+
+});
 
 
 /* =========================
    SEARCH
 ========================= */
 
-const searchBox =
-document.getElementById("searchBox");
-
-searchBox.addEventListener(
+document.getElementById(
+"searchInput"
+).addEventListener(
 "input",
 function(){
 
@@ -1332,8 +2151,10 @@ card.innerText.toLowerCase();
 
 card.style.display =
 text.includes(search)
-? "block"
-: "none";
+?
+"block"
+:
+"none";
 
 });
 
@@ -1341,749 +2162,64 @@ text.includes(search)
 
 
 /* =========================
-   GS-I PRACTICE QUESTIONS
+   DARK MODE
 ========================= */
 
-/*
-These are practice/model questions.
-They are not reproduced verbatim
-from UPSC papers.
-*/
+function toggleDarkMode(){
 
-const quizQuestions = [
-
-{
-year:"2025",
-topic:"Indian History",
-
-question:
-"Discuss how the Bhakti and Sufi traditions contributed to social and cultural interaction in medieval India.",
-
-options:[
-"Focus only on military expansion",
-"Examine their role in devotional traditions, social interaction and cultural exchange",
-"Discuss only Mughal taxation",
-"Discuss only temple architecture"
-],
-
-answer:1,
-
-explanation:
-"A good answer should cover devotional traditions, interaction across social groups, regional languages, cultural exchange and limitations or variations across regions."
-},
-
-{
-year:"2024",
-topic:"Indian History",
-
-question:
-"How can the study of Indian architecture help us understand the society and technology of its period?",
-
-options:[
-"Architecture provides no historical information",
-"Architecture can reveal social organisation, technology, beliefs and economic conditions",
-"Architecture only tells us about climate",
-"Architecture only records military events"
-],
-
-answer:1,
-
-explanation:
-"Architectural remains can provide evidence about technology, resources, social organisation, religious beliefs, patronage and economic conditions."
-},
-
-{
-year:"2023",
-topic:"Indian History",
-
-question:
-"While analysing the Indian freedom struggle, why is it important to consider both mass movements and constitutional developments?",
-
-options:[
-"Only constitutional developments matter",
-"Only mass movements matter",
-"Both provide different dimensions of the freedom struggle",
-"Neither is relevant"
-],
-
-answer:2,
-
-explanation:
-"A balanced answer should connect popular mobilisation, political organisations, constitutional developments, negotiations and changing colonial policies."
-},
-
-{
-year:"2022",
-topic:"Indian History",
-
-question:
-"What is the significance of regional movements in understanding the broader history of India's freedom struggle?",
-
-options:[
-"They were completely unrelated to nationalism",
-"They show how local issues and national political developments interacted",
-"They happened only after independence",
-"They were limited to economic issues"
-],
-
-answer:1,
-
-explanation:
-"Regional movements can demonstrate how local grievances, social groups and national political ideas interacted during the freedom struggle."
-},
-
-{
-year:"2021",
-topic:"Indian History",
-
-question:
-"How did colonial rule affect traditional Indian handicrafts and artisanal communities?",
-
-options:[
-"It had no effect",
-"It transformed markets and production patterns and affected many traditional artisans",
-"It increased all traditional handicraft employment",
-"It affected only agriculture"
-],
-
-answer:1,
-
-explanation:
-"A strong answer should discuss market changes, competition from machine-made imports, changing patronage and the impact on artisanal livelihoods."
-},
-
-{
-year:"2020",
-topic:"Indian History",
-
-question:
-"Why is the Indian national movement better understood as a process involving different social groups rather than as a single uniform movement?",
-
-options:[
-"Because no political activity occurred",
-"Because different groups participated with different interests and forms of mobilisation",
-"Because only one region participated",
-"Because the movement had no leadership"
-],
-
-answer:1,
-
-explanation:
-"Different regions, classes, communities, women, workers, peasants and political organisations participated in different ways and at different stages."
-},
-
-{
-year:"2025",
-topic:"World History",
-
-question:
-"Explain how industrialisation transformed economic and social life in Europe.",
-
-options:[
-"It affected only military technology",
-"It transformed production, urbanisation, labour and social structures",
-"It had no effect on cities",
-"It affected only agriculture"
-],
-
-answer:1,
-
-explanation:
-"Industrialisation changed production systems, encouraged urbanisation, created new labour relations and contributed to the growth of industrial and working classes."
-},
-
-{
-year:"2024",
-topic:"World History",
-
-question:
-"Why is the Industrial Revolution considered a major turning point in modern world history?",
-
-options:[
-"It changed only artistic styles",
-"It transformed production, technology, labour and economic organisation",
-"It had no global consequences",
-"It affected only political boundaries"
-],
-
-answer:1,
-
-explanation:
-"The Industrial Revolution brought major changes in technology, production, transport, urbanisation, labour relations and global economic connections."
-},
-
-{
-year:"2023",
-topic:"World History",
-
-question:
-"How did nationalism influence the political transformation of Europe in the nineteenth century?",
-
-options:[
-"It had no political effect",
-"It contributed to movements for national unity and political reorganisation",
-"It affected only overseas colonies",
-"It ended all political conflicts"
-],
-
-answer:1,
-
-explanation:
-"Nationalism contributed to movements for national unity and political reorganisation, although its effects differed across European regions."
-},
-
-{
-year:"2025",
-topic:"Society",
-
-question:
-"How can urbanisation create both opportunities and challenges for Indian society?",
-
-options:[
-"Urbanisation has only negative effects",
-"Urbanisation can create employment and services while also producing housing, infrastructure and inequality challenges",
-"Urbanisation has no social impact",
-"Urbanisation affects only agriculture"
-],
-
-answer:1,
-
-explanation:
-"Urbanisation can expand employment, education and services, but rapid growth can also create pressure on housing, transport, sanitation and social inclusion."
-},
-
-{
-year:"2024",
-topic:"Society",
-
-question:
-"Why is social diversity important for understanding Indian society?",
-
-options:[
-"India has no social diversity",
-"Diversity influences social relations, identities, institutions and public life",
-"Diversity affects only language",
-"Diversity affects only rural areas"
-],
-
-answer:1,
-
-explanation:
-"Indian society includes linguistic, regional, religious, caste and tribal diversity, which interact with social institutions and patterns of change."
-},
-
-{
-year:"2023",
-topic:"Society",
-
-question:
-"How can education contribute to social mobility in India?",
-
-options:[
-"Education cannot affect mobility",
-"Education can improve skills, opportunities and access to employment and institutions",
-"Education affects only cultural activities",
-"Education benefits only urban populations"
-],
-
-answer:1,
-
-explanation:
-"Education can expand skills and opportunities, although access, quality, affordability and social inequalities influence its outcomes."
-},
-
-{
-year:"2022",
-topic:"Society",
-
-question:
-"What are some major social consequences of migration from rural to urban areas?",
-
-options:[
-"Migration has no social consequences",
-"It can change family structures, labour patterns, urban communities and access to services",
-"It affects only agriculture",
-"It eliminates urban challenges"
-],
-
-answer:1,
-
-explanation:
-"Migration can affect family arrangements, labour markets, housing, social networks and the demand for urban services."
-},
-
-{
-year:"2025",
-topic:"Geography",
-
-question:
-"Why are monsoon patterns important for India's economy and society?",
-
-options:[
-"Monsoon has no economic relevance",
-"Monsoon influences agriculture, water availability, ecosystems and several economic activities",
-"Monsoon affects only coastal areas",
-"Monsoon affects only transport"
-],
-
-answer:1,
-
-explanation:
-"Monsoon rainfall is important for agriculture, reservoirs, groundwater, ecosystems and many economic activities."
-},
-
-{
-year:"2024",
-topic:"Geography",
-
-question:
-"Explain how geographical factors influence the distribution of population in India.",
-
-options:[
-"Population distribution is completely random",
-"Relief, climate, water, soil, economic opportunities and connectivity influence population distribution",
-"Only temperature matters",
-"Only political boundaries matter"
-],
-
-answer:1,
-
-explanation:
-"Population concentration is influenced by physical factors as well as economic opportunities, transport, urbanisation and historical development."
-},
-
-{
-year:"2023",
-topic:"Geography",
-
-question:
-"How do rivers contribute to both economic development and environmental challenges?",
-
-options:[
-"Rivers have only environmental importance",
-"Rivers support water, agriculture, transport and ecosystems but may also face pollution and overuse",
-"Rivers have no economic importance",
-"Rivers only affect forests"
-],
-
-answer:1,
-
-explanation:
-"Rivers provide water and ecosystem services, support agriculture and settlements, but face pollution, over-extraction, flooding and ecological degradation."
-}
-
-];
-
-
-/* =========================
-   QUIZ VARIABLES
-========================= */
-
-let filteredQuestions =
-[...quizQuestions];
-
-let currentQuestion = 0;
-
-let score = 0;
-
-let answered = false;
-
-
-/* =========================
-   LOAD QUESTION
-========================= */
-
-function loadQuestion(){
-
-const question =
-filteredQuestions[currentQuestion];
-
-if(!question){
-
-document.getElementById(
-"questionText"
-).innerText =
-"No questions found.";
-
-document.getElementById(
-"optionsBox"
-).innerHTML="";
-
-return;
-
-}
-
-
-document.getElementById(
-"questionNumber"
-).innerText =
-"Question "
-+
-(currentQuestion+1)
-+
-" / "
-+
-filteredQuestions.length;
-
-
-document.getElementById(
-"quizScore"
-).innerText =
-"Score: "
-+
-score;
-
-
-document.getElementById(
-"questionText"
-).innerText =
-question.question;
-
-
-const optionsBox =
-document.getElementById(
-"optionsBox"
+document.body.classList.toggle(
+"dark"
 );
 
-optionsBox.innerHTML="";
-
-
-const answerBox =
-document.getElementById(
-"answerBox"
-);
-
-answerBox.innerHTML="";
-
-answerBox.classList.remove(
-"show"
-);
-
-answered=false;
-
-
-question.options.forEach(
-function(option,index){
-
-const button =
-document.createElement(
-"button"
-);
-
-button.className =
-"option-btn";
-
-button.innerText =
-String.fromCharCode(
-65+index
+localStorage.setItem(
+"mainsGs1PyqDarkMode",
+document.body.classList.contains(
+"dark"
 )
-+
-". "
-+
-option;
-
-button.addEventListener(
-"click",
-function(){
-
-checkAnswer(
-index,
-button
 );
-
-});
-
-optionsBox.appendChild(
-button
-);
-
-});
 
 }
-
-
-/* =========================
-   CHECK ANSWER
-========================= */
-
-function checkAnswer(
-selectedIndex,
-selectedButton
-){
-
-if(answered){
-return;
-}
-
-answered=true;
-
-const question =
-filteredQuestions[currentQuestion];
-
-const buttons =
-document.querySelectorAll(
-".option-btn"
-);
-
-buttons.forEach(
-function(button){
-
-button.disabled=true;
-
-});
 
 
 if(
-selectedIndex ===
-question.answer
+localStorage.getItem(
+"mainsGs1PyqDarkMode"
+)
+===
+"true"
 ){
 
-selectedButton.classList.add(
-"correct"
-);
-
-score++;
-
-}else{
-
-selectedButton.classList.add(
-"wrong"
-);
-
-buttons[
-question.answer
-].classList.add(
-"correct"
-);
-
-}
-
-
-document.getElementById(
-"quizScore"
-).innerText =
-"Score: "
-+
-score;
-
-
-const answerBox =
-document.getElementById(
-"answerBox"
-);
-
-answerBox.innerHTML =
-
-"<strong>Model Approach:</strong> "
-+
-question.options[
-question.answer
-]
-+
-"<br><br>"
-+
-"<strong>Explanation:</strong> "
-+
-question.explanation;
-
-answerBox.classList.add(
-"show"
+document.body.classList.add(
+"dark"
 );
 
 }
 
 
 /* =========================
-   FILTER
+   BACK TO TOP
 ========================= */
 
-function filterQuiz(){
-
-const selectedYear =
+const backTop =
 document.getElementById(
-"quizYear"
-).value;
-
-const selectedTopic =
-document.getElementById(
-"quizTopic"
-).value;
-
-
-filteredQuestions =
-quizQuestions.filter(
-function(q){
-
-const yearMatch =
-selectedYear==="all"
-||
-q.year===selectedYear;
-
-const topicMatch =
-selectedTopic==="all"
-||
-q.topic===selectedTopic;
-
-return yearMatch &&
-topicMatch;
-
-});
-
-
-currentQuestion=0;
-
-score=0;
-
-
-if(
-filteredQuestions.length===0
-){
-
-document.getElementById(
-"questionText"
-).innerText =
-"No questions available for this filter.";
-
-document.getElementById(
-"optionsBox"
-).innerHTML="";
-
-document.getElementById(
-"questionNumber"
-).innerText =
-"No Questions";
-
-document.getElementById(
-"quizScore"
-).innerText =
-"Score: 0";
-
-return;
-
-}
-
-loadQuestion();
-
-}
-
-
-/* =========================
-   NEXT
-========================= */
-
-document.getElementById(
-"nextQuestion"
-).addEventListener(
-"click",
-function(){
-
-if(
-currentQuestion <
-filteredQuestions.length-1
-){
-
-currentQuestion++;
-
-loadQuestion();
-
-}else{
-
-document.getElementById(
-"questionText"
-).innerText =
-"🎉 Practice completed!";
-
-document.getElementById(
-"optionsBox"
-).innerHTML="";
-
-document.getElementById(
-"answerBox"
-).innerHTML =
-
-"<strong>Final Score:</strong> "
-+
-score
-+
-" / "
-+
-filteredQuestions.length
-+
-"<br><br>"
-+
-"Review the official UPSC paper and practice writing your answer within the required word limit.";
-
-document.getElementById(
-"answerBox"
-).classList.add(
-"show"
-);
-
-}
-
-});
-
-
-/* =========================
-   RESTART
-========================= */
-
-document.getElementById(
-"restartQuiz"
-).addEventListener(
-"click",
-function(){
-
-currentQuestion=0;
-
-score=0;
-
-loadQuestion();
-
-});
-
-
-/* FILTER EVENTS */
-
-document.getElementById(
-"quizYear"
-).addEventListener(
-"change",
-filterQuiz
-);
-
-document.getElementById(
-"quizTopic"
-).addEventListener(
-"change",
-filterQuiz
-);
-
-
-/* =========================
-   TOP BUTTON
-========================= */
-
-const topBtn =
-document.getElementById(
-"topBtn"
+"backTop"
 );
 
 window.onscroll =
 function(){
 
 if(
-document.body.scrollTop>300
+document.body.scrollTop > 300
 ||
-document.documentElement.scrollTop>300
+document.documentElement.scrollTop > 300
 ){
 
-topBtn.style.display =
+backTop.style.display =
 "block";
 
 }else{
 
-topBtn.style.display =
+backTop.style.display =
 "none";
 
 }
@@ -2094,21 +2230,21 @@ topBtn.style.display =
 function topFunction(){
 
 window.scrollTo({
+
 top:0,
+
 behavior:"smooth"
+
 });
 
 }
 
 
-/* =========================
-   START
-========================= */
+/* INITIAL QUESTION */
 
 loadQuestion();
 
 </script>
 
 </body>
-
 </html>
