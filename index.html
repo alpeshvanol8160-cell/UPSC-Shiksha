@@ -84,6 +84,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   border:1px solid #333;
 }
 
+
 /* =========================
    STATS
 ========================= */
@@ -113,6 +114,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   margin-bottom:0;
 }
 
+
 /* =========================
    TITLES
 ========================= */
@@ -136,6 +138,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
 .section-title p{
   line-height:1.6;
 }
+
 
 /* =========================
    GRIDS
@@ -181,6 +184,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-size:30px;
 }
 
+
 /* =========================
    BUTTONS
 ========================= */
@@ -209,6 +213,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-weight:bold;
   text-decoration:none;
 }
+
 
 /* =========================
    SYLLABUS
@@ -261,6 +266,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   line-height:1.5;
 }
 
+
 /* =========================
    TEST
 ========================= */
@@ -280,6 +286,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
 .test-icon{
   font-size:35px;
 }
+
 
 /* =========================
    PREMIUM
@@ -322,6 +329,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   color:#222;
 }
 
+
 /* =========================
    CONTACT
 ========================= */
@@ -359,6 +367,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-weight:bold;
 }
 
+
 /* =========================
    BACK TO TOP
 ========================= */
@@ -377,6 +386,7 @@ content="UPSC Shiksha - Free UPSC study material, complete syllabus, PYQs, mock 
   font-size:18px;
   z-index:999;
 }
+
 
 /* =========================
    DARK MODE
@@ -426,6 +436,7 @@ body.dark-home .subject-card p{
   color:#ddd;
 }
 
+
 /* =========================
    HOME ANIMATIONS
 ========================= */
@@ -435,7 +446,6 @@ body.dark-home .subject-card p{
 }
 
 @keyframes heroFadeUp{
-
   from{
     opacity:0;
     transform:translateY(25px);
@@ -445,7 +455,6 @@ body.dark-home .subject-card p{
     opacity:1;
     transform:translateY(0);
   }
-
 }
 
 .stat-card{
@@ -469,7 +478,6 @@ body.dark-home .subject-card p{
 }
 
 @keyframes cardReveal{
-
   from{
     opacity:0;
     transform:translateY(18px);
@@ -479,10 +487,12 @@ body.dark-home .subject-card p{
     opacity:1;
     transform:translateY(0);
   }
-
 }
 
-/* Cards */
+
+/* =========================
+   CARD HOVER
+========================= */
 
 .feature-card,
 .subject-card,
@@ -511,7 +521,10 @@ body.dark-home .subject-card p{
   box-shadow:0 12px 30px rgba(0,0,0,0.20);
 }
 
-/* Buttons */
+
+/* =========================
+   BUTTON ANIMATION
+========================= */
 
 .btn,
 .study-btn,
@@ -532,7 +545,41 @@ body.dark-home .subject-card p{
   box-shadow:0 6px 15px rgba(0,0,0,0.15);
 }
 
-/* Reduced motion support */
+
+/* =========================
+   NEW SCROLL REVEAL
+========================= */
+
+.scroll-reveal{
+  opacity:0;
+  transform:translateY(35px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.scroll-reveal.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+.scroll-reveal-left{
+  opacity:0;
+  transform:translateX(-35px);
+  transition:
+    opacity 0.7s ease,
+    transform 0.7s ease;
+}
+
+.scroll-reveal-left.show{
+  opacity:1;
+  transform:translateX(0);
+}
+
+
+/* =========================
+   REDUCED MOTION
+========================= */
 
 @media (prefers-reduced-motion:reduce){
 
@@ -550,11 +597,17 @@ body.dark-home .subject-card p{
   .study-btn,
   .pdf-btn,
   .test-btn,
-  .premium-btn{
+  .premium-btn,
+  .scroll-reveal,
+  .scroll-reveal-left{
     transition:none;
+    animation:none;
+    opacity:1;
+    transform:none;
   }
 
 }
+
 
 /* =========================
    MOBILE
@@ -636,7 +689,9 @@ body.dark-home .subject-card p{
 </style>
 </head>
 
+
 <body>
+
 
 <!-- =========================
      HEADER
@@ -664,6 +719,7 @@ body.dark-home .subject-card p{
   </nav>
 
 </header>
+
 
 <!-- =========================
      HERO
@@ -704,6 +760,7 @@ body.dark-home .subject-card p{
 
 </section>
 
+
 <!-- =========================
      STATS
 ========================= -->
@@ -732,6 +789,7 @@ body.dark-home .subject-card p{
 
 </section>
 
+
 <!-- =========================
      FEATURES
 ========================= -->
@@ -750,6 +808,7 @@ body.dark-home .subject-card p{
     </p>
 
   </div>
+
 
   <div class="feature-grid">
 
@@ -770,6 +829,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="feature-card">
 
       <div class="icon">📄</div>
@@ -786,6 +846,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="feature-card">
 
@@ -804,6 +865,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="feature-card">
 
       <div class="icon">📥</div>
@@ -820,6 +882,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="feature-card">
 
@@ -838,6 +901,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="feature-card">
 
       <div class="icon">📊</div>
@@ -854,6 +918,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="feature-card">
 
@@ -872,6 +937,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="feature-card">
 
       <div class="icon">🧠</div>
@@ -888,6 +954,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="feature-card">
 
@@ -910,6 +977,7 @@ body.dark-home .subject-card p{
 
 </section>
 
+
 <!-- =========================
      SYLLABUS
 ========================= -->
@@ -929,6 +997,7 @@ body.dark-home .subject-card p{
 
   </div>
 
+
   <div class="syllabus-tabs">
 
     <button class="syllabus-tab active" data-tab="prelims">
@@ -944,6 +1013,7 @@ body.dark-home .subject-card p{
     </button>
 
   </div>
+
 
   <!-- PRELIMS -->
 
@@ -979,6 +1049,7 @@ body.dark-home .subject-card p{
 
   </div>
 
+
   <!-- CSAT -->
 
   <div class="syllabus-content" id="csat">
@@ -1013,6 +1084,7 @@ body.dark-home .subject-card p{
 
   </div>
 
+
   <!-- MAINS -->
 
   <div class="syllabus-content" id="mains">
@@ -1029,6 +1101,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>🇬🇧 Paper-B — English</h3>
@@ -1041,6 +1114,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>✍️ Paper-I — Essay</h3>
@@ -1052,6 +1126,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>📖 Paper-II — General Studies-I</h3>
@@ -1059,9 +1134,7 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Indian Heritage and Culture</li>
-
         <li>History and Geography of the World</li>
-
         <li>Society</li>
 
       </ul>
@@ -1072,6 +1145,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>🏛️ Paper-III — General Studies-II</h3>
@@ -1079,13 +1153,9 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Governance</li>
-
         <li>Constitution</li>
-
         <li>Polity</li>
-
         <li>Social Justice</li>
-
         <li>International Relations</li>
 
       </ul>
@@ -1096,6 +1166,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>💰 Paper-IV — General Studies-III</h3>
@@ -1103,11 +1174,8 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Technology</li>
-
         <li>Economic Development</li>
-
         <li>Biodiversity and Environment</li>
-
         <li>Security and Disaster Management</li>
 
       </ul>
@@ -1118,6 +1186,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="syllabus-card">
 
       <h3>⚖️ Paper-V — General Studies-IV</h3>
@@ -1125,13 +1194,9 @@ body.dark-home .subject-card p{
       <ul>
 
         <li>Ethics</li>
-
         <li>Integrity</li>
-
         <li>Aptitude</li>
-
         <li>Emotional Intelligence</li>
-
         <li>Probity in Governance</li>
 
       </ul>
@@ -1141,6 +1206,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="syllabus-card">
 
@@ -1154,6 +1220,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <a href="mains.html" class="pdf-btn">
       ✍️ View Full Mains Syllabus
     </a>
@@ -1161,6 +1228,7 @@ body.dark-home .subject-card p{
   </div>
 
 </section>
+
 
 <!-- =========================
      FREE MATERIAL
@@ -1180,7 +1248,9 @@ body.dark-home .subject-card p{
 
   </div>
 
+
   <div class="subject-grid">
+
 
     <div class="subject-card">
 
@@ -1198,6 +1268,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="subject-card">
 
       <span>📜</span>
@@ -1213,6 +1284,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="subject-card">
 
@@ -1230,6 +1302,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="subject-card">
 
       <span>💰</span>
@@ -1245,6 +1318,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="subject-card">
 
@@ -1262,6 +1336,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="subject-card">
 
       <span>🔬</span>
@@ -1277,6 +1352,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="subject-card">
 
@@ -1295,6 +1371,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <div class="subject-card">
 
       <span>📚</span>
@@ -1311,6 +1388,7 @@ body.dark-home .subject-card p{
       </a>
 
     </div>
+
 
     <div class="subject-card">
 
@@ -1333,6 +1411,7 @@ body.dark-home .subject-card p{
 
 </section>
 
+
 <!-- =========================
      TESTS
 ========================= -->
@@ -1350,6 +1429,7 @@ body.dark-home .subject-card p{
     </p>
 
   </div>
+
 
   <div class="test-box">
 
@@ -1405,6 +1485,7 @@ body.dark-home .subject-card p{
 
     </div>
 
+
     <a href="test.html" class="test-btn">
       Start Test →
     </a>
@@ -1412,6 +1493,7 @@ body.dark-home .subject-card p{
   </div>
 
 </section>
+
 
 <!-- =========================
      PREMIUM
@@ -1443,6 +1525,7 @@ body.dark-home .subject-card p{
 
 </section>
 
+
 <!-- =========================
      CONTACT
 ========================= -->
@@ -1460,6 +1543,7 @@ body.dark-home .subject-card p{
     </p>
 
   </div>
+
 
   <form id="contactForm">
 
@@ -1487,6 +1571,7 @@ body.dark-home .subject-card p{
   </form>
 
 </section>
+
 
 <!-- =========================
      FOOTER
@@ -1522,13 +1607,16 @@ body.dark-home .subject-card p{
 
 </footer>
 
+
 <!-- BACK TO TOP -->
 
 <button id="topBtn">↑</button>
 
+
 <!-- COMMON SCRIPT -->
 
 <script src="script.js"></script>
+
 
 <script>
 
@@ -1570,6 +1658,7 @@ syllabusTabs.forEach(function(tab){
 
 });
 
+
 /* =========================
    BACK TO TOP
 ========================= */
@@ -1596,6 +1685,7 @@ topBtn.addEventListener("click",function(){
 
 });
 
+
 /* =========================
    CONTACT FORM
 ========================= */
@@ -1619,6 +1709,7 @@ if(contactForm){
 
 }
 
+
 /* =========================
    PREMIUM BUTTON
 ========================= */
@@ -1638,7 +1729,74 @@ if(premiumBtn){
 
 }
 
+
+/* =========================
+   SCROLL REVEAL ANIMATION
+========================= */
+
+const revealElements =
+  document.querySelectorAll(
+    ".section-title, .feature-card, .subject-card, .syllabus-card, .test-box, .premium, .contact form"
+  );
+
+
+/* Add animation class */
+
+revealElements.forEach(function(element){
+
+  element.classList.add("scroll-reveal");
+
+});
+
+
+/* Observe elements */
+
+if("IntersectionObserver" in window){
+
+  const revealObserver =
+    new IntersectionObserver(
+      function(entries, observer){
+
+        entries.forEach(function(entry){
+
+          if(entry.isIntersecting){
+
+            entry.target.classList.add("show");
+
+            observer.unobserve(entry.target);
+
+          }
+
+        });
+
+      },
+      {
+        threshold:0.12,
+        rootMargin:"0px 0px -30px 0px"
+      }
+    );
+
+
+  revealElements.forEach(function(element){
+
+    revealObserver.observe(element);
+
+  });
+
+}else{
+
+  /* Fallback for older browsers */
+
+  revealElements.forEach(function(element){
+
+    element.classList.add("show");
+
+  });
+
+}
+
 </script>
+
 
 </body>
 </html>
