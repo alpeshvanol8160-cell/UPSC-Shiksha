@@ -1,898 +1,1625 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Polity Mind Map | UPSC Shiksha</title>
+<title>Polity Interactive Mind Map | UPSC Shiksha</title>
+
+<meta name="description"
+content="Indian Polity interactive mind map, detailed notes, tables and quick revision for UPSC Prelims and Mains.">
 
 <style>
+
 *{
-  box-sizing:border-box;
-  margin:0;
-  padding:0;
+box-sizing:border-box;
+margin:0;
+padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  transition:.3s;
+font-family:Arial,Helvetica,sans-serif;
+background:#f4f7fb;
+color:#172033;
+line-height:1.7;
+transition:.3s;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:#ffffff;
-  padding:14px 16px;
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  box-shadow:0 2px 12px rgba(0,0,0,.10);
+position:sticky;
+top:0;
+z-index:1000;
+background:#ffffff;
+box-shadow:0 3px 15px rgba(0,0,0,.10);
+padding:12px;
+}
+
+.header-inner{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:10px;
 }
 
 .logo{
-  font-size:20px;
-  font-weight:bold;
+font-size:20px;
+font-weight:bold;
+color:#183b72;
 }
 
 .header-buttons{
-  display:flex;
-  gap:8px;
+display:flex;
+gap:8px;
 }
 
 button,
 .home-btn{
-  border:0;
-  border-radius:10px;
-  padding:10px 13px;
-  cursor:pointer;
-  font-weight:bold;
-  text-decoration:none;
-  background:#172033;
-  color:white;
+border:none;
+border-radius:10px;
+padding:10px 14px;
+font-weight:bold;
+cursor:pointer;
+text-decoration:none;
+background:#183b72;
+color:white;
+transition:.25s;
+}
+
+button:hover,
+.home-btn:hover{
+transform:translateY(-2px);
+box-shadow:0 7px 18px rgba(24,59,114,.25);
 }
 
 .hero{
-  text-align:center;
-  padding:45px 18px 30px;
-  background:linear-gradient(135deg,#eef4ff,#ffffff);
+max-width:1100px;
+margin:25px auto;
+padding:35px 20px;
+text-align:center;
+background:linear-gradient(135deg,#e9f2ff,#ffffff);
+border-radius:22px;
+box-shadow:0 8px 25px rgba(0,0,0,.08);
+animation:fadeUp .8s ease;
 }
 
 .hero h1{
-  font-size:32px;
-  margin-bottom:10px;
+font-size:32px;
+color:#173d78;
+margin-bottom:8px;
 }
 
 .hero p{
-  color:#596579;
-  line-height:1.6;
+max-width:750px;
+margin:auto;
+color:#596579;
 }
 
-.badge{
-  display:inline-block;
-  margin-bottom:14px;
-  padding:7px 13px;
-  border-radius:20px;
-  background:#e7efff;
-  color:#2454a6;
-  font-size:13px;
-  font-weight:bold;
+.tags{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin-top:18px;
 }
 
-.container{
-  width:min(1100px,94%);
-  margin:auto;
+.tag{
+padding:6px 12px;
+border-radius:20px;
+background:#e7efff;
+color:#234b88;
+font-size:13px;
+font-weight:bold;
 }
+
+/* Search */
 
 .search-box{
-  margin:20px auto;
-  max-width:600px;
+max-width:900px;
+margin:20px auto;
+padding:0 15px;
 }
 
-.search-box input{
-  width:100%;
-  padding:14px 16px;
-  border:1px solid #d7dce5;
-  border-radius:12px;
-  font-size:16px;
-  outline:none;
+#topicSearch{
+width:100%;
+padding:14px 16px;
+border:2px solid #d8e0ec;
+border-radius:14px;
+font-size:16px;
+outline:none;
 }
 
-.map-area{
-  margin:25px auto;
-  padding:25px 12px 35px;
-  background:white;
-  border-radius:20px;
-  box-shadow:0 5px 25px rgba(0,0,0,.08);
-  overflow:hidden;
+#topicSearch:focus{
+border-color:#3974c5;
 }
 
-.map-title{
-  text-align:center;
-  margin-bottom:25px;
-}
+/* Main */
 
-.map-title h2{
-  margin-bottom:7px;
-}
-
-.map-title p{
-  color:#687386;
-  font-size:14px;
-}
-
-.map{
-  position:relative;
-  max-width:1000px;
-  margin:auto;
-  min-height:650px;
-}
-
-.center-node{
-  position:absolute;
-  left:50%;
-  top:50%;
-  transform:translate(-50%,-50%);
-  width:170px;
-  height:90px;
-  border-radius:22px;
-  background:#172033;
-  color:white;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  z-index:5;
-  box-shadow:0 12px 30px rgba(0,0,0,.22);
-  animation:centerPulse 3s infinite;
-}
-
-.center-node strong{
-  font-size:20px;
-}
-
-.center-node small{
-  margin-top:5px;
-  opacity:.8;
-}
-
-.node{
-  position:absolute;
-  width:155px;
-  min-height:72px;
-  padding:12px 8px;
-  border-radius:17px;
-  background:#fff;
-  border:2px solid #dfe5ef;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  text-align:center;
-  cursor:pointer;
-  font-weight:bold;
-  box-shadow:0 6px 18px rgba(0,0,0,.08);
-  transition:.3s;
-  z-index:4;
-}
-
-.node:hover{
-  transform:scale(1.06) translateY(-4px);
-  box-shadow:0 12px 25px rgba(0,0,0,.15);
-}
-
-.node span{
-  font-size:23px;
-  display:block;
-  margin-bottom:4px;
-}
-
-.n1{top:4%;left:50%;transform:translateX(-50%);}
-.n2{top:15%;left:5%;}
-.n3{top:15%;right:5%;}
-.n4{top:40%;left:2%;}
-.n5{top:40%;right:2%;}
-.n6{bottom:12%;left:7%;}
-.n7{bottom:12%;right:7%;}
-.n8{bottom:2%;left:50%;transform:translateX(-50%);}
-.n9{top:70%;left:50%;transform:translateX(-50%);}
-.n10{top:4%;left:8%;}
-
-.connector{
-  position:absolute;
-  background:#cbd4e3;
-  height:3px;
-  transform-origin:left center;
-  z-index:1;
-}
-
-.line1{width:190px;left:50%;top:42%;transform:rotate(-90deg);}
-.line2{width:250px;left:43%;top:44%;transform:rotate(-155deg);}
-.line3{width:250px;left:57%;top:44%;transform:rotate(-25deg);}
-.line4{width:260px;left:44%;top:50%;transform:rotate(180deg);}
-.line5{width:260px;left:56%;top:50%;transform:rotate(0deg);}
-.line6{width:230px;left:44%;top:57%;transform:rotate(145deg);}
-.line7{width:230px;left:56%;top:57%;transform:rotate(35deg);}
-.line8{width:190px;left:50%;top:59%;transform:rotate(90deg);}
-.line9{width:160px;left:50%;top:55%;transform:rotate(90deg);}
-.line10{width:270px;left:45%;top:42%;transform:rotate(-135deg);}
-
-.details{
-  display:none;
-  margin:25px auto;
-  padding:22px;
-  max-width:800px;
-  border-radius:18px;
-  background:#f8faff;
-  border-left:5px solid #315bb5;
-  animation:detailsIn .35s ease;
-}
-
-.details.show{
-  display:block;
-}
-
-.details h3{
-  margin-bottom:10px;
-}
-
-.details p{
-  line-height:1.7;
-  color:#4c596c;
-}
-
-.details ul{
-  margin:12px 0 0 20px;
-  line-height:1.8;
-}
-
-.quick{
-  margin:25px auto;
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:12px;
-}
-
-.quick button{
-  background:white;
-  color:#172033;
-  border:1px solid #dce2ec;
+.container{
+max-width:1100px;
+margin:auto;
+padding:0 15px 40px;
 }
 
 .section{
-  background:white;
-  margin:20px auto;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 5px 20px rgba(0,0,0,.06);
+background:white;
+padding:25px;
+margin:25px 0;
+border-radius:20px;
+box-shadow:0 6px 20px rgba(0,0,0,.07);
+animation:fadeUp .8s ease;
 }
 
 .section h2{
-  margin-bottom:12px;
+color:#183b72;
+margin-bottom:15px;
+font-size:25px;
+}
+
+.section h3{
+color:#244e88;
+margin:18px 0 10px;
 }
 
 .section p{
-  color:#596579;
-  line-height:1.7;
+margin-bottom:10px;
 }
 
-footer{
-  text-align:center;
-  padding:30px 15px;
-  margin-top:35px;
-  background:#172033;
-  color:white;
-  line-height:1.8;
-}
+/* Mind Map */
 
-#topBtn{
-  display:none;
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  z-index:999;
-  border-radius:50%;
-  width:48px;
-  height:48px;
-  padding:0;
-}
-
-/* DARK MODE */
-
-body.dark{
-  background:#101722;
-  color:#f1f5fb;
-}
-
-body.dark header,
-body.dark .map-area,
-body.dark .section{
-  background:#182230;
-  color:#f1f5fb;
-}
-
-body.dark .hero{
-  background:linear-gradient(135deg,#111b2b,#182230);
-}
-
-body.dark .hero p,
-body.dark .map-title p,
-body.dark .section p{
-  color:#b8c2d2;
-}
-
-body.dark .search-box input{
-  background:#111a27;
-  color:white;
-  border-color:#354256;
-}
-
-body.dark .node{
-  background:#202c3c;
-  color:white;
-  border-color:#3b4a61;
-}
-
-body.dark .details{
-  background:#202c3c;
-}
-
-body.dark .details p{
-  color:#c1cad7;
-}
-
-body.dark .quick button{
-  background:#202c3c;
-  color:white;
-  border-color:#3b4a61;
-}
-
-body.dark .badge{
-  background:#263b5c;
-  color:#c9dcff;
-}
-
-/* ANIMATIONS */
-
-@keyframes centerPulse{
-  0%,100%{box-shadow:0 12px 30px rgba(0,0,0,.22);}
-  50%{box-shadow:0 12px 35px rgba(49,91,181,.35);}
-}
-
-@keyframes detailsIn{
-  from{
-    opacity:0;
-    transform:translateY(10px);
-  }
-  to{
-    opacity:1;
-    transform:translateY(0);
-  }
+.mindmap{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:15px;
+margin-top:20px;
 }
 
 .node{
-  animation:nodeFloat 4s ease-in-out infinite;
+padding:17px 10px;
+border-radius:15px;
+background:#edf4ff;
+border:2px solid #cbdcf6;
+text-align:center;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
 }
 
-@keyframes nodeFloat{
-  0%,100%{margin-top:0;}
-  50%{margin-top:-4px;}
+.node:hover{
+transform:translateY(-5px) scale(1.02);
+box-shadow:0 10px 22px rgba(35,78,136,.18);
+background:#e2edff;
 }
 
-@media(max-width:700px){
+.center-node{
+grid-column:1/-1;
+background:linear-gradient(135deg,#183b72,#356db8);
+color:white;
+border:none;
+font-size:20px;
+padding:22px;
+}
 
-  header{
-    padding:11px 12px;
-  }
+.details{
+margin-top:20px;
+padding:20px;
+border-radius:16px;
+background:#f5f8fd;
+border-left:5px solid #356db8;
+min-height:100px;
+}
 
-  .logo{
-    font-size:17px;
-  }
+.details h3{
+margin-top:0;
+}
 
-  .header-buttons button,
-  .home-btn{
-    padding:8px 9px;
-    font-size:12px;
-  }
+/* Tables */
 
-  .hero{
-    padding:32px 14px 22px;
-  }
+.table-wrap{
+overflow-x:auto;
+margin:15px 0;
+}
 
-  .hero h1{
-    font-size:25px;
-  }
+table{
+width:100%;
+border-collapse:collapse;
+min-width:600px;
+}
 
-  .map-area{
-    padding:18px 8px 25px;
-  }
+th,
+td{
+border:1px solid #dce3ed;
+padding:12px;
+text-align:left;
+vertical-align:top;
+}
 
-  .map{
-    min-height:850px;
-  }
+th{
+background:#183b72;
+color:white;
+}
 
-  .center-node{
-    width:145px;
-    height:78px;
-  }
+tr:nth-child(even){
+background:#f7f9fc;
+}
 
-  .center-node strong{
-    font-size:17px;
-  }
+/* Cards */
 
-  .node{
-    width:125px;
-    min-height:67px;
-    font-size:12px;
-    padding:8px 5px;
-  }
+.cards{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:15px;
+}
 
-  .node span{
-    font-size:19px;
-  }
+.card{
+padding:20px;
+background:#f7faff;
+border:1px solid #dce6f5;
+border-radius:16px;
+transition:.3s;
+}
 
-  .n1{
-    top:2%;
-  }
+.card:hover{
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(0,0,0,.10);
+}
 
-  .n2{
-    top:15%;
-    left:1%;
-  }
+.card h3{
+margin-top:0;
+}
 
-  .n3{
-    top:15%;
-    right:1%;
-  }
+/* Revision */
 
-  .n4{
-    top:38%;
-    left:0;
-  }
+.revision{
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:15px;
+}
 
-  .n5{
-    top:38%;
-    right:0;
-  }
+.revision-card{
+padding:18px;
+background:#f6f9ff;
+border-radius:15px;
+border-left:5px solid #356db8;
+}
 
-  .n6{
-    bottom:18%;
-    left:1%;
-  }
+.revision-card strong{
+color:#183b72;
+}
 
-  .n7{
-    bottom:18%;
-    right:1%;
-  }
+/* Quick nav */
 
-  .n8{
-    bottom:2%;
-  }
+.quick-nav{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
 
-  .n9{
-    bottom:9%;
-    top:auto;
-  }
+.quick-nav a{
+text-decoration:none;
+padding:9px 13px;
+background:#edf4ff;
+color:#183b72;
+border-radius:10px;
+font-weight:bold;
+font-size:14px;
+}
 
-  .n10{
-    top:2%;
-    left:1%;
-  }
+.quick-nav a:hover{
+background:#183b72;
+color:white;
+}
 
-  .connector{
-    display:none;
-  }
+/* UPSC box */
 
-  .quick{
-    grid-template-columns:1fr 1fr;
-  }
+.exam-box{
+background:linear-gradient(135deg,#fff7e5,#ffffff);
+border-left:6px solid #e2a326;
+}
 
-  .section{
-    padding:20px 17px;
-  }
+.exam-list{
+padding-left:20px;
+}
+
+.exam-list li{
+margin:7px 0;
+}
+
+/* Back top */
+
+#topBtn{
+display:none;
+position:fixed;
+right:18px;
+bottom:18px;
+z-index:999;
+width:45px;
+height:45px;
+border-radius:50%;
+font-size:18px;
+padding:0;
+}
+
+/* Footer */
+
+footer{
+background:#13294b;
+color:white;
+text-align:center;
+padding:25px 15px;
+margin-top:30px;
+}
+
+/* Dark */
+
+body.dark{
+background:#101722;
+color:#e9eef7;
+}
+
+body.dark header,
+body.dark .section{
+background:#172131;
+color:#e9eef7;
+}
+
+body.dark .hero{
+background:linear-gradient(135deg,#172a44,#182231);
+}
+
+body.dark .hero p{
+color:#c1cad8;
+}
+
+body.dark .section h2,
+body.dark .section h3,
+body.dark .logo{
+color:#8db9ff;
+}
+
+body.dark #topicSearch{
+background:#101722;
+color:white;
+border-color:#39495f;
+}
+
+body.dark .node{
+background:#1d304b;
+border-color:#39577d;
+color:#e9eef7;
+}
+
+body.dark .node:hover{
+background:#284366;
+}
+
+body.dark .details,
+body.dark .card,
+body.dark .revision-card{
+background:#1c293a;
+}
+
+body.dark th{
+background:#244e88;
+}
+
+body.dark td{
+border-color:#3a485b;
+}
+
+body.dark tr:nth-child(even){
+background:#1c293a;
+}
+
+body.dark .quick-nav a{
+background:#20344f;
+color:#bcd5ff;
+}
+
+/* Animations */
+
+@keyframes fadeUp{
+from{
+opacity:0;
+transform:translateY(25px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@keyframes pulse{
+0%,100%{
+transform:scale(1);
+}
+50%{
+transform:scale(1.03);
+}
+}
+
+.center-node{
+animation:pulse 3s ease-in-out infinite;
+}
+
+/* Mobile */
+
+@media(max-width:800px){
+
+.mindmap{
+grid-template-columns:repeat(2,1fr);
+}
+
+.center-node{
+grid-column:1/-1;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+.revision{
+grid-template-columns:1fr;
+}
+
+.hero h1{
+font-size:26px;
+}
+
+.section{
+padding:20px 15px;
+}
+
+}
+
+@media(max-width:500px){
+
+.logo{
+font-size:17px;
+}
+
+.header-buttons button,
+.home-btn{
+padding:8px 10px;
+font-size:12px;
+}
+
+.mindmap{
+grid-template-columns:1fr;
+}
+
+.center-node{
+grid-column:auto;
+}
+
+.node{
+padding:14px;
+}
+
+.hero{
+margin:15px 10px;
+padding:28px 15px;
+}
+
+.hero h1{
+font-size:24px;
+}
+
+.section h2{
+font-size:21px;
+}
+
 }
 
 @media(prefers-reduced-motion:reduce){
-  *,
-  *::before,
-  *::after{
-    animation:none !important;
-    transition:none !important;
-    scroll-behavior:auto !important;
-  }
+
+*{
+animation:none!important;
+transition:none!important;
+scroll-behavior:auto!important;
 }
+
+}
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-  <div class="header-buttons">
-    <a href="index.html" class="home-btn">🏠 Home</a>
-    <button onclick="toggleDark()">🌙</button>
-  </div>
+<div class="header-inner">
+
+<div class="logo">
+🇮🇳 UPSC Shiksha
+</div>
+
+<div class="header-buttons">
+
+<a href="index.html" class="home-btn">
+🏠 Home
+</a>
+
+<button onclick="toggleDark()">
+🌙 Dark
+</button>
+
+</div>
+
+</div>
+
 </header>
 
+
 <section class="hero">
-  <div class="badge">🧠 UPSC Interactive Mind Map</div>
 
-  <h1>🏛️ Indian Polity Mind Map</h1>
+<h1>🏛️ Indian Polity — Interactive Mind Map</h1>
 
-  <p>
-    Explore major Indian Polity topics through an interactive visual map.
-    Tap any topic to view its key areas.
-  </p>
+<p>
+Complete UPSC GS-II Polity revision with interactive mind map,
+detailed notes, tables and quick revision points.
+</p>
+
+<div class="tags">
+
+<span class="tag">PRELIMS</span>
+<span class="tag">MAINS</span>
+<span class="tag">GS-II</span>
+<span class="tag">IMPORTANT ARTICLES</span>
+<span class="tag">QUICK REVISION</span>
+
+</div>
+
 </section>
 
-<main class="container">
 
-  <div class="search-box">
-    <input
-      type="text"
-      id="searchBox"
-      placeholder="🔍 Search Polity topic..."
-      oninput="searchTopics()"
-    >
-  </div>
+<div class="search-box">
 
-  <section class="map-area">
+<input
+type="text"
+id="topicSearch"
+placeholder="🔍 Search Polity topics..."
+onkeyup="searchTopics()">
 
-    <div class="map-title">
-      <h2>🧠 Interactive Polity Map</h2>
-      <p>Tap a topic node to explore</p>
-    </div>
+</div>
 
-    <div class="map" id="mindMap">
 
-      <div class="connector line1"></div>
-      <div class="connector line2"></div>
-      <div class="connector line3"></div>
-      <div class="connector line4"></div>
-      <div class="connector line5"></div>
-      <div class="connector line6"></div>
-      <div class="connector line7"></div>
-      <div class="connector line8"></div>
-      <div class="connector line9"></div>
-      <div class="connector line10"></div>
+<div class="container">
 
-      <div class="center-node">
-        <strong>🇮🇳 Indian Polity</strong>
-        <small>UPSC GS-II</small>
-      </div>
 
-      <div class="node n1" data-topic="Constitution" onclick="showTopic('constitution')">
-        <div><span>📜</span>Constitution</div>
-      </div>
+<!-- QUICK NAV -->
 
-      <div class="node n2" data-topic="Fundamental Rights" onclick="showTopic('rights')">
-        <div><span>⚖️</span>Fundamental Rights</div>
-      </div>
+<section class="section">
 
-      <div class="node n3" data-topic="DPSP Duties" onclick="showTopic('dpsp')">
-        <div><span>📋</span>DPSP & Duties</div>
-      </div>
+<h2>🧭 Quick Navigation</h2>
 
-      <div class="node n4" data-topic="Parliament" onclick="showTopic('parliament')">
-        <div><span>🏛️</span>Parliament</div>
-      </div>
+<div class="quick-nav">
 
-      <div class="node n5" data-topic="Executive" onclick="showTopic('executive')">
-        <div><span>🇮🇳</span>Executive</div>
-      </div>
+<a href="#constitution">Constitution</a>
+<a href="#rights">Fundamental Rights</a>
+<a href="#dpsp">DPSP & Duties</a>
+<a href="#executive">Executive</a>
+<a href="#parliament">Parliament</a>
+<a href="#judiciary">Judiciary</a>
+<a href="#federalism">Federalism</a>
+<a href="#elections">Elections</a>
+<a href="#bodies">Constitutional Bodies</a>
+<a href="#local">Local Government</a>
+<a href="#emergency">Emergency</a>
+<a href="#governance">Governance</a>
 
-      <div class="node n6" data-topic="Judiciary" onclick="showTopic('judiciary')">
-        <div><span>⚖️</span>Judiciary</div>
-      </div>
+</div>
 
-      <div class="node n7" data-topic="Federalism" onclick="showTopic('federalism')">
-        <div><span>🔄</span>Federalism</div>
-      </div>
+</section>
 
-      <div class="node n8" data-topic="Elections" onclick="showTopic('elections')">
-        <div><span>🗳️</span>Elections</div>
-      </div>
 
-      <div class="node n9" data-topic="Constitutional Bodies" onclick="showTopic('bodies')">
-        <div><span>🏢</span>Constitutional Bodies</div>
-      </div>
+<!-- MIND MAP -->
 
-      <div class="node n10" data-topic="Local Government" onclick="showTopic('local')">
-        <div><span>🏘️</span>Local Government</div>
-      </div>
+<section class="section">
 
-    </div>
+<h2>🧠 Interactive Polity Mind Map</h2>
 
-    <div class="details" id="detailsBox">
-      <h3 id="detailsTitle"></h3>
-      <p id="detailsText"></p>
-      <ul id="detailsList"></ul>
-    </div>
+<p>
+Tap any topic to see its important UPSC points.
+</p>
 
-  </section>
+<div class="mindmap">
 
-  <section class="section">
+<div class="node center-node">
+🇮🇳 INDIAN POLITY
+<br>
+<span style="font-size:14px;">
+UPSC GS-II
+</span>
+</div>
 
-    <h2>📌 Quick Topics</h2>
+<div class="node" onclick="showTopic('constitution')">
+🏛️ Constitution
+</div>
 
-    <div class="quick">
-      <button onclick="showTopic('constitution')">📜 Constitution</button>
-      <button onclick="showTopic('rights')">⚖️ Fundamental Rights</button>
-      <button onclick="showTopic('dpsp')">📋 DPSP & Duties</button>
-      <button onclick="showTopic('parliament')">🏛️ Parliament</button>
-      <button onclick="showTopic('executive')">🇮🇳 Executive</button>
-      <button onclick="showTopic('judiciary')">⚖️ Judiciary</button>
-      <button onclick="showTopic('federalism')">🔄 Federalism</button>
-      <button onclick="showTopic('elections')">🗳️ Elections</button>
-      <button onclick="showTopic('bodies')">🏢 Bodies</button>
-      <button onclick="showTopic('local')">🏘️ Local Government</button>
-    </div>
+<div class="node" onclick="showTopic('rights')">
+⚖️ Fundamental Rights
+</div>
 
-  </section>
+<div class="node" onclick="showTopic('dpsp')">
+📜 DPSP & Duties
+</div>
 
-  <section class="section">
+<div class="node" onclick="showTopic('executive')">
+👤 Executive
+</div>
 
-    <h2>🎯 UPSC Preparation Use</h2>
+<div class="node" onclick="showTopic('parliament')">
+🏛️ Parliament
+</div>
 
-    <p>
-      Use this map for quick revision of major Polity areas.
-      The structure is designed around major GS-II themes such as
-      Constitution, Parliament, Executive, Judiciary, Federalism,
-      Governance and Constitutional Bodies.
-    </p>
+<div class="node" onclick="showTopic('judiciary')">
+⚖️ Judiciary
+</div>
 
-  </section>
+<div class="node" onclick="showTopic('federalism')">
+🇮🇳 Federalism
+</div>
 
-</main>
+<div class="node" onclick="showTopic('elections')">
+🗳️ Elections
+</div>
 
-<button id="topBtn" onclick="topFunction()">⬆️</button>
+<div class="node" onclick="showTopic('bodies')">
+🏢 Constitutional Bodies
+</div>
+
+<div class="node" onclick="showTopic('local')">
+🏘️ Local Government
+</div>
+
+<div class="node" onclick="showTopic('emergency')">
+🚨 Emergency
+</div>
+
+<div class="node" onclick="showTopic('governance')">
+📊 Governance
+</div>
+
+</div>
+
+<div class="details" id="topicDetails">
+
+<h3>👆 Select a topic</h3>
+
+<p>
+Tap any mind-map topic above to view its important points.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CONSTITUTION -->
+
+<section class="section topic-section" id="constitution">
+
+<h2>🏛️ 1. Indian Constitution</h2>
+
+<p>
+The Constitution is the fundamental legal framework of India.
+For UPSC, focus on its structure, constitutional philosophy,
+important Parts, Articles, Schedules and amendments.
+</p>
+
+<h3>📊 Aspects → Details</h3>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Aspect</th>
+<th>Details</th>
+</tr>
+
+<tr>
+<td>Constitution Making</td>
+<td>Constituent Assembly, constitutional debates and adoption.</td>
+</tr>
+
+<tr>
+<td>Philosophy</td>
+<td>Sovereignty, democracy, republicanism, justice, liberty, equality and fraternity.</td>
+</tr>
+
+<tr>
+<td>Preamble</td>
+<td>Provides a concise statement of constitutional objectives and values.</td>
+</tr>
+
+<tr>
+<td>Fundamental Rights</td>
+<td>Part III of the Constitution.</td>
+</tr>
+
+<tr>
+<td>DPSP</td>
+<td>Part IV of the Constitution.</td>
+</tr>
+
+<tr>
+<td>Fundamental Duties</td>
+<td>Part IVA, Article 51A.</td>
+</tr>
+
+<tr>
+<td>Amendment</td>
+<td>Article 368 provides the constitutional amendment procedure.</td>
+</tr>
+
+</table>
+
+</div>
+
+<h3>🎯 UPSC Focus</h3>
+
+<ul class="exam-list">
+
+<li>Preamble</li>
+<li>Important Articles</li>
+<li>Schedules</li>
+<li>Constitutional Amendments</li>
+<li>Basic Structure Doctrine</li>
+
+</ul>
+
+</section>
+
+
+<!-- RIGHTS -->
+
+<section class="section topic-section" id="rights">
+
+<h2>⚖️ 2. Fundamental Rights</h2>
+
+<p>
+Fundamental Rights are contained in Part III.
+Articles 12 and 13 provide the general framework, while Articles
+14 onwards cover specific rights. 1
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Right</th>
+<th>Main Area</th>
+</tr>
+
+<tr>
+<td>Right to Equality</td>
+<td>Articles 14–18</td>
+</tr>
+
+<tr>
+<td>Right to Freedom</td>
+<td>Articles 19–22</td>
+</tr>
+
+<tr>
+<td>Right against Exploitation</td>
+<td>Articles 23–24</td>
+</tr>
+
+<tr>
+<td>Freedom of Religion</td>
+<td>Articles 25–28</td>
+</tr>
+
+<tr>
+<td>Cultural & Educational Rights</td>
+<td>Articles 29–30</td>
+</tr>
+
+<tr>
+<td>Constitutional Remedies</td>
+<td>Article 32</td>
+</tr>
+
+</table>
+
+</div>
+
+<h3>📝 Quick Revision</h3>
+
+<div class="revision">
+
+<div class="revision-card">
+<strong>Article 14</strong><br>
+Equality before law and equal protection of laws.
+</div>
+
+<div class="revision-card">
+<strong>Article 19</strong><br>
+Six freedoms for citizens subject to constitutional restrictions.
+</div>
+
+<div class="revision-card">
+<strong>Article 21</strong><br>
+Protection of life and personal liberty.
+</div>
+
+<div class="revision-card">
+<strong>Article 32</strong><br>
+Constitutional remedies for enforcement of Fundamental Rights.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- DPSP -->
+
+<section class="section topic-section" id="dpsp">
+
+<h2>📜 3. DPSP & Fundamental Duties</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Topic</th>
+<th>Constitutional Location</th>
+<th>Purpose</th>
+</tr>
+
+<tr>
+<td>DPSP</td>
+<td>Part IV</td>
+<td>Guiding principles for governance.</td>
+</tr>
+
+<tr>
+<td>Fundamental Duties</td>
+<td>Part IVA, Article 51A</td>
+<td>Civic responsibilities of citizens.</td>
+</tr>
+
+</table>
+
+</div>
+
+<h3>📌 Important Areas</h3>
+
+<div class="cards">
+
+<div class="card">
+<h3>📜 DPSP</h3>
+<p>Social and economic objectives of governance.</p>
+</div>
+
+<div class="card">
+<h3>🇮🇳 Duties</h3>
+<p>Respect for Constitution, national symbols, environment and civic responsibility.</p>
+</div>
+
+<div class="card">
+<h3>⚖️ FR vs DPSP</h3>
+<p>Understand their relationship and constitutional evolution.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- EXECUTIVE -->
+
+<section class="section topic-section" id="executive">
+
+<h2>👤 4. Union Executive</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Institution</th>
+<th>Key Focus</th>
+</tr>
+
+<tr>
+<td>President</td>
+<td>Constitutional head of the Union.</td>
+</tr>
+
+<tr>
+<td>Vice-President</td>
+<td>Constitutional office and Chairman of Rajya Sabha.</td>
+</tr>
+
+<tr>
+<td>Prime Minister</td>
+<td>Head of the Council of Ministers.</td>
+</tr>
+
+<tr>
+<td>Council of Ministers</td>
+<td>Aids and advises the President through the constitutional framework.</td>
+</tr>
+
+<tr>
+<td>Attorney General</td>
+<td>Chief legal adviser to the Government of India.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- PARLIAMENT -->
+
+<section class="section topic-section" id="parliament">
+
+<h2>🏛️ 5. Parliament</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🏛️ Lok Sabha</h3>
+<p>House of the People and directly elected chamber.</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Rajya Sabha</h3>
+<p>Council of States and permanent House.</p>
+</div>
+
+<div class="card">
+<h3>📜 Bills</h3>
+<p>Ordinary Bills, Money Bills and Constitutional Amendment Bills.</p>
+</div>
+
+<div class="card">
+<h3>📊 Committees</h3>
+<p>Important instruments of parliamentary scrutiny.</p>
+</div>
+
+<div class="card">
+<h3>🗣️ Question Hour</h3>
+<p>Important mechanism of executive accountability.</p>
+</div>
+
+<div class="card">
+<h3>📑 Privileges</h3>
+<p>Parliamentary privileges and institutional functioning.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- JUDICIARY -->
+
+<section class="section topic-section" id="judiciary">
+
+<h2>⚖️ 6. Judiciary</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Topic</th>
+<th>Important Point</th>
+</tr>
+
+<tr>
+<td>Supreme Court</td>
+<td>Highest constitutional court of India.</td>
+</tr>
+
+<tr>
+<td>High Courts</td>
+<td>Constitutional courts at the state level.</td>
+</tr>
+
+<tr>
+<td>Judicial Review</td>
+<td>Power to examine constitutional validity of laws and executive action.</td>
+</tr>
+
+<tr>
+<td>PIL</td>
+<td>Public Interest Litigation.</td>
+</tr>
+
+<tr>
+<td>Judicial Independence</td>
+<td>Important feature of constitutional governance.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- FEDERALISM -->
+
+<section class="section topic-section" id="federalism">
+
+<h2>🇮🇳 7. Federalism</h2>
+
+<p>
+Indian federalism combines federal and unitary features.
+For UPSC, study Centre-State relations from legislative,
+administrative and financial perspectives.
+</p>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Area</th>
+<th>Study Points</th>
+</tr>
+
+<tr>
+<td>Legislative Relations</td>
+<td>Distribution of legislative powers.</td>
+</tr>
+
+<tr>
+<td>Administrative Relations</td>
+<td>Coordination between Union and States.</td>
+</tr>
+
+<tr>
+<td>Financial Relations</td>
+<td>Taxation, grants and resource distribution.</td>
+</tr>
+
+<tr>
+<td>Inter-State Relations</td>
+<td>Mechanisms for cooperation and dispute resolution.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- ELECTIONS -->
+
+<section class="section topic-section" id="elections">
+
+<h2>🗳️ 8. Elections</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🗳️ Election Commission</h3>
+<p>Constitutional authority dealing with elections under the constitutional framework.</p>
+</div>
+
+<div class="card">
+<h3>📊 Electoral System</h3>
+<p>Study representation, constituencies and voting systems.</p>
+</div>
+
+<div class="card">
+<h3>🏛️ Representation</h3>
+<p>Representation of people in legislatures.</p>
+</div>
+
+<div class="card">
+<h3>⚖️ Anti-Defection</h3>
+<p>Tenth Schedule and political defections.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BODIES -->
+
+<section class="section topic-section" id="bodies">
+
+<h2>🏢 9. Constitutional Bodies</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Body</th>
+<th>UPSC Focus</th>
+</tr>
+
+<tr>
+<td>Election Commission</td>
+<td>Elections and electoral administration.</td>
+</tr>
+
+<tr>
+<td>UPSC</td>
+<td>Recruitment and constitutional provisions relating to public services.</td>
+</tr>
+
+<tr>
+<td>Finance Commission</td>
+<td>Financial relations between Union and States.</td>
+</tr>
+
+<tr>
+<td>CAG</td>
+<td>Public financial accountability and audit.</td>
+</tr>
+
+<tr>
+<td>Attorney General</td>
+<td>Highest law officer of the Union.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- LOCAL -->
+
+<section class="section topic-section" id="local">
+
+<h2>🏘️ 10. Local Government</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Institution</th>
+<th>Major Area</th>
+</tr>
+
+<tr>
+<td>Gram Panchayat</td>
+<td>Village-level local governance.</td>
+</tr>
+
+<tr>
+<td>Panchayat Samiti</td>
+<td>Intermediate level.</td>
+</tr>
+
+<tr>
+<td>Zila Parishad</td>
+<td>District-level Panchayati Raj institution.</td>
+</tr>
+
+<tr>
+<td>Municipalities</td>
+<td>Urban local governance.</td>
+</tr>
+
+</table>
+
+</div>
+
+<h3>📌 Important</h3>
+
+<p>
+73rd Constitutional Amendment → Panchayati Raj.
+</p>
+
+<p>
+74th Constitutional Amendment → Urban Local Government.
+</p>
+
+</section>
+
+
+<!-- EMERGENCY -->
+
+<section class="section topic-section" id="emergency">
+
+<h2>🚨 11. Emergency Provisions</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Type</th>
+<th>Article</th>
+<th>Basic Area</th>
+</tr>
+
+<tr>
+<td>National Emergency</td>
+<td>Article 352</td>
+<td>Emergency due to war, external aggression or armed rebellion.</td>
+</tr>
+
+<tr>
+<td>President's Rule</td>
+<td>Article 356</td>
+<td>Failure of constitutional machinery in a State.</td>
+</tr>
+
+<tr>
+<td>Financial Emergency</td>
+<td>Article 360</td>
+<td>Financial stability or credit of India or a part thereof.</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- GOVERNANCE -->
+
+<section class="section topic-section" id="governance">
+
+<h2>📊 12. Governance</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>🔍 Transparency</h3>
+<p>Access to information and open governance.</p>
+</div>
+
+<div class="card">
+<h3>⚖️ Accountability</h3>
+<p>Institutions and public authorities being answerable for decisions and actions.</p>
+</div>
+
+<div class="card">
+<h3>👥 Citizen Participation</h3>
+<p>Citizen engagement in governance and public policy.</p>
+</div>
+
+<div class="card">
+<h3>💻 E-Governance</h3>
+<p>Use of digital technology to improve public services.</p>
+</div>
+
+<div class="card">
+<h3>📄 RTI</h3>
+<p>Important transparency mechanism for citizens.</p>
+</div>
+
+<div class="card">
+<h3>🎯 Citizen-Centric Governance</h3>
+<p>Focus on accessibility, responsiveness and service delivery.</p>
+</div>
+
+</div>
+
+</section>
+
+
+<!-- PRELIMS + MAINS -->
+
+<section class="section exam-box">
+
+<h2>🎯 UPSC Prelims + Mains Focus</h2>
+
+<div class="revision">
+
+<div class="revision-card">
+<strong>Prelims</strong><br>
+Articles, Schedules, Amendments, Constitutional Bodies,
+Parliament, Judiciary, Elections and Emergency.
+</div>
+
+<div class="revision-card">
+<strong>Mains GS-II</strong><br>
+Federalism, Parliament, Judiciary, Governance,
+Constitutional issues and institutional accountability.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="section">
+
+<h2>⚡ Polity Quick Revision</h2>
+
+<div class="table-wrap">
+
+<table>
+
+<tr>
+<th>Topic</th>
+<th>Remember</th>
+</tr>
+
+<tr>
+<td>Fundamental Rights</td>
+<td>Part III</td>
+</tr>
+
+<tr>
+<td>DPSP</td>
+<td>Part IV</td>
+</tr>
+
+<tr>
+<td>Fundamental Duties</td>
+<td>Part IVA — Article 51A</td>
+</tr>
+
+<tr>
+<td>Constitutional Amendment</td>
+<td>Article 368</td>
+</tr>
+
+<tr>
+<td>National Emergency</td>
+<td>Article 352</td>
+</tr>
+
+<tr>
+<td>President's Rule</td>
+<td>Article 356</td>
+</tr>
+
+<tr>
+<td>Financial Emergency</td>
+<td>Article 360</td>
+</tr>
+
+<tr>
+<td>Panchayati Raj</td>
+<td>73rd Amendment</td>
+</tr>
+
+<tr>
+<td>Municipalities</td>
+<td>74th Amendment</td>
+</tr>
+
+</table>
+
+</div>
+
+</section>
+
+
+<!-- OFFICIAL SOURCE -->
+
+<section class="section">
+
+<h2>📚 Official Reference</h2>
+
+<p>
+For exact constitutional wording and current constitutional text,
+refer to the official India Code Constitution of India.
+</p>
+
+<p style="margin-top:12px;">
+
+<a
+href="https://www.indiacode.nic.in/"
+target="_blank"
+class="home-btn">
+
+📖 Open India Code
+
+</a>
+
+</p>
+
+</section>
+
+
+</div>
+
+
+<button id="topBtn" onclick="topFunction()">↑</button>
+
 
 <footer>
-  <p>🇮🇳 <strong>UPSC Shiksha</strong></p>
-  <p>Free UPSC Preparation • Mind Maps • PYQs • Tests</p>
-  <p>© 2026 UPSC Shiksha</p>
+
+<p><strong>🇮🇳 UPSC Shiksha</strong></p>
+
+<p>
+Indian Polity • Mind Maps • Notes • Prelims • Mains
+</p>
+
+<p>
+© 2026 UPSC Shiksha
+</p>
+
 </footer>
+
 
 <script>
 
-const topics = {
-
-  constitution:{
-    title:"📜 Indian Constitution",
-    text:"The Constitution provides the basic framework for India's political and legal system.",
-    list:[
-      "Historical background",
-      "Constituent Assembly",
-      "Salient features",
-      "Amendment process",
-      "Basic Structure Doctrine",
-      "Important Articles & Schedules"
-    ]
-  },
-
-  rights:{
-    title:"⚖️ Fundamental Rights",
-    text:"Fundamental Rights protect important individual freedoms and constitutional guarantees.",
-    list:[
-      "Articles 12–35",
-      "Right to Equality",
-      "Right to Freedom",
-      "Right against Exploitation",
-      "Freedom of Religion",
-      "Cultural & Educational Rights",
-      "Constitutional Remedies"
-    ]
-  },
-
-  dpsp:{
-    title:"📋 DPSP & Fundamental Duties",
-    text:"Directive Principles guide the State while Fundamental Duties describe important civic responsibilities.",
-    list:[
-      "Directive Principles of State Policy",
-      "Social and economic justice",
-      "Welfare State",
-      "Fundamental Duties",
-      "Article 51A",
-      "FR vs DPSP"
-    ]
-  },
-
-  parliament:{
-    title:"🏛️ Parliament",
-    text:"Parliament is the central legislative institution of the Union government.",
-    list:[
-      "Lok Sabha",
-      "Rajya Sabha",
-      "President and Parliament",
-      "Legislative procedure",
-      "Parliamentary committees",
-      "Privileges",
-      "Budget and financial control"
-    ]
-  },
-
-  executive:{
-    title:"🇮🇳 Executive",
-    text:"The Union Executive includes the President, Vice-President, Prime Minister and Council of Ministers.",
-    list:[
-      "President",
-      "Vice-President",
-      "Prime Minister",
-      "Council of Ministers",
-      "Cabinet",
-      "Attorney General",
-      "Central Secretariat"
-    ]
-  },
-
-  judiciary:{
-    title:"⚖️ Judiciary",
-    text:"India has an integrated judicial system headed by the Supreme Court.",
-    list:[
-      "Supreme Court",
-      "High Courts",
-      "Judicial Review",
-      "Judicial Activism",
-      "PIL",
-      "Writ Jurisdiction",
-      "Independence of Judiciary"
-    ]
-  },
-
-  federalism:{
-    title:"🔄 Federalism",
-    text:"Indian federalism distributes powers between the Union and States.",
-    list:[
-      "Union-State relations",
-      "Legislative relations",
-      "Administrative relations",
-      "Financial relations",
-      "Inter-State Council",
-      "GST Council",
-      "Cooperative Federalism"
-    ]
-  },
-
-  elections:{
-    title:"🗳️ Elections",
-    text:"Elections are administered through the constitutional framework governing representation and electoral processes.",
-    list:[
-      "Election Commission of India",
-      "Electoral system",
-      "Representation of the People Acts",
-      "Electoral reforms",
-      "Political representation",
-      "Anti-defection provisions"
-    ]
-  },
-
-  bodies:{
-    title:"🏢 Constitutional Bodies",
-    text:"Constitutional bodies derive their authority directly from the Constitution.",
-    list:[
-      "Election Commission",
-      "UPSC",
-      "Finance Commission",
-      "CAG",
-      "Attorney General",
-      "State Public Service Commissions",
-      "GST Council"
-    ]
-  },
-
-  local:{
-    title:"🏘️ Local Government",
-    text:"Local government institutions support democratic decentralisation and grassroots governance.",
-    list:[
-      "73rd Constitutional Amendment",
-      "Panchayati Raj",
-      "Gram Sabha",
-      "74th Constitutional Amendment",
-      "Urban Local Bodies",
-      "State Election Commission",
-      "State Finance Commission"
-    ]
-  }
-
-};
-
-function showTopic(topic){
-
-  const data=topics[topic];
-
-  if(!data) return;
-
-  document.getElementById("detailsTitle").textContent=data.title;
-  document.getElementById("detailsText").textContent=data.text;
-
-  const list=document.getElementById("detailsList");
-
-  list.innerHTML="";
-
-  data.list.forEach(function(item){
-
-    const li=document.createElement("li");
-    li.textContent=item;
-    list.appendChild(li);
-
-  });
-
-  const box=document.getElementById("detailsBox");
-
-  box.classList.add("show");
-
-  setTimeout(function(){
-    box.scrollIntoView({
-      behavior:"smooth",
-      block:"center"
-    });
-  },50);
-}
-
-function searchTopics(){
-
-  const value=document
-    .getElementById("searchBox")
-    .value
-    .toLowerCase()
-    .trim();
-
-  document.querySelectorAll(".node").forEach(function(node){
-
-    const text=node.dataset.topic.toLowerCase();
-
-    if(text.includes(value) || value===""){
-      node.style.display="flex";
-      node.style.opacity="1";
-    }else{
-      node.style.display="none";
-    }
-
-  });
-}
+/* Dark Mode */
 
 function toggleDark(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "polityMindMapDark",
-    document.body.classList.contains("dark")
-  );
+localStorage.setItem(
+"polityMindMapDark",
+document.body.classList.contains("dark")
+);
+
 }
 
-if(localStorage.getItem("polityMindMapDark")==="true"){
-  document.body.classList.add("dark");
+if(
+localStorage.getItem("polityMindMapDark")==="true"
+){
+
+document.body.classList.add("dark");
+
 }
 
-window.onscroll=function(){
 
-  const btn=document.getElementById("topBtn");
+/* Interactive Mind Map */
 
-  if(
-    document.body.scrollTop>300 ||
-    document.documentElement.scrollTop>300
-  ){
-    btn.style.display="block";
-  }else{
-    btn.style.display="none";
-  }
+const topicData={
+
+constitution:{
+title:"🏛️ Indian Constitution",
+text:"Study the Constitution's making, philosophy, Preamble, Parts, Schedules, Fundamental Rights, DPSP, Fundamental Duties and amendment procedure."
+},
+
+rights:{
+title:"⚖️ Fundamental Rights",
+text:"Part III. Focus on Articles 12–35, equality, freedoms, protection against exploitation, religious freedom, cultural and educational rights and constitutional remedies."
+},
+
+dpsp:{
+title:"📜 DPSP & Duties",
+text:"DPSP are in Part IV. Fundamental Duties are in Part IVA under Article 51A. Understand their role in constitutional governance."
+},
+
+executive:{
+title:"👤 Union Executive",
+text:"Focus on President, Vice-President, Prime Minister, Council of Ministers and Attorney General."
+},
+
+parliament:{
+title:"🏛️ Parliament",
+text:"Study Lok Sabha, Rajya Sabha, legislative procedure, Money Bills, committees, privileges and parliamentary accountability."
+},
+
+judiciary:{
+title:"⚖️ Judiciary",
+text:"Focus on Supreme Court, High Courts, judicial review, PIL, independence of judiciary and constitutional interpretation."
+},
+
+federalism:{
+title:"🇮🇳 Federalism",
+text:"Study Centre-State legislative, administrative and financial relations along with cooperative and competitive federalism."
+},
+
+elections:{
+title:"🗳️ Elections",
+text:"Focus on Election Commission, electoral system, representation, constituencies and anti-defection provisions."
+},
+
+bodies:{
+title:"🏢 Constitutional Bodies",
+text:"Important bodies include Election Commission, UPSC, Finance Commission, CAG and Attorney General."
+},
+
+local:{
+title:"🏘️ Local Government",
+text:"Study Panchayati Raj, municipalities, 73rd Amendment and 74th Amendment."
+},
+
+emergency:{
+title:"🚨 Emergency",
+text:"National Emergency — Article 352; President's Rule — Article 356; Financial Emergency — Article 360."
+},
+
+governance:{
+title:"📊 Governance",
+text:"Focus on transparency, accountability, citizen participation, e-governance, RTI and citizen-centric service delivery."
+}
 
 };
 
+
+function showTopic(topic){
+
+const box=document.getElementById("topicDetails");
+
+const data=topicData[topic];
+
+box.innerHTML=
+"<h3>"+data.title+"</h3>"+
+"<p>"+data.text+"</p>";
+
+box.scrollIntoView({
+behavior:"smooth",
+block:"nearest"
+});
+
+}
+
+
+/* Search */
+
+function searchTopics(){
+
+const value=
+document.getElementById("topicSearch")
+.value
+.toLowerCase();
+
+document
+.querySelectorAll(".topic-section")
+.forEach(function(section){
+
+const text=
+section.innerText.toLowerCase();
+
+section.style.display=
+text.includes(value) ? "" : "none";
+
+});
+
+}
+
+
+/* Back To Top */
+
+window.onscroll=function(){
+
+const btn=document.getElementById("topBtn");
+
+if(
+document.body.scrollTop>350 ||
+document.documentElement.scrollTop>350
+){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+
 function topFunction(){
 
-  window.scrollTo({
-    top:0,
-    behavior:"smooth"
-  });
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
 
 }
 
