@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -6,11 +6,12 @@
 
 <title>Mains GS-II PYQ | UPSC Shiksha</title>
 
-<meta name="description" content="UPSC Mains General Studies Paper-II Previous Year Questions - UPSC Shiksha">
+<meta name="description" content="UPSC Mains General Studies Paper-II Previous Year Questions, practice quiz and answer-writing preparation - UPSC Shiksha">
 
 <link rel="stylesheet" href="style.css">
 
 <style>
+
 body{
   margin:0;
   font-family:Arial,sans-serif;
@@ -111,6 +112,108 @@ button{
   font-weight:bold;
 }
 
+/* QUIZ */
+
+.quiz-box{
+  background:white;
+  padding:25px;
+  border-radius:14px;
+  margin-bottom:30px;
+  box-shadow:0 3px 15px rgba(0,0,0,.08);
+}
+
+.quiz-box h2{
+  margin-top:0;
+  color:#1e3a8a;
+}
+
+.quiz-subtitle{
+  color:#555;
+}
+
+.quiz-filters{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:20px 0;
+}
+
+.quiz-filters select{
+  flex:1;
+  min-width:180px;
+  padding:12px;
+  border:1px solid #ccc;
+  border-radius:8px;
+  font-size:15px;
+}
+
+.quiz-info{
+  display:flex;
+  justify-content:space-between;
+  background:#eef2ff;
+  padding:12px;
+  border-radius:8px;
+  margin-bottom:15px;
+  font-weight:bold;
+}
+
+.question-card{
+  border:1px solid #ddd;
+  padding:20px;
+  border-radius:12px;
+}
+
+.question-card h3{
+  line-height:1.6;
+  margin-top:0;
+}
+
+.option-btn{
+  display:block;
+  width:100%;
+  text-align:left;
+  margin:10px 0;
+  background:#f3f4f6;
+  color:#111827;
+  border:1px solid #ddd;
+}
+
+.option-btn:hover{
+  background:#e5e7eb;
+}
+
+.option-btn.correct{
+  background:#dcfce7;
+  border:2px solid #16a34a;
+  color:#166534;
+}
+
+.option-btn.wrong{
+  background:#fee2e2;
+  border:2px solid #dc2626;
+  color:#991b1b;
+}
+
+.answer-box{
+  margin-top:15px;
+  padding:15px;
+  border-radius:8px;
+  background:#eff6ff;
+  display:none;
+  line-height:1.6;
+}
+
+.quiz-actions{
+  display:flex;
+  gap:10px;
+  margin-top:20px;
+  flex-wrap:wrap;
+}
+
+.quiz-actions button{
+  background:#1e40af;
+}
+
 .quick-nav{
   background:white;
   padding:20px;
@@ -207,13 +310,16 @@ footer{
   margin-top:40px;
 }
 
+/* DARK MODE */
+
 body.dark{
   background:#111827;
   color:#eee;
 }
 
 body.dark .quick-nav,
-body.dark .pyq-card{
+body.dark .pyq-card,
+body.dark .quiz-box{
   background:#1f2937;
   color:#eee;
 }
@@ -223,7 +329,8 @@ body.dark .quick-nav a{
   color:#fff;
 }
 
-body.dark .pyq-card h2{
+body.dark .pyq-card h2,
+body.dark .quiz-box h2{
   color:#93c5fd;
 }
 
@@ -231,7 +338,35 @@ body.dark .info{
   background:#292524;
 }
 
+body.dark .question-card{
+  border-color:#4b5563;
+}
+
+body.dark .quiz-info{
+  background:#374151;
+}
+
+body.dark .quiz-filters select{
+  background:#374151;
+  color:white;
+  border-color:#6b7280;
+}
+
+body.dark .option-btn{
+  background:#374151;
+  color:white;
+  border-color:#6b7280;
+}
+
+body.dark .answer-box{
+  background:#1e3a5f;
+  color:white;
+}
+
+/* MOBILE */
+
 @media(max-width:600px){
+
   .nav{
     flex-direction:column;
     gap:10px;
@@ -249,373 +384,871 @@ body.dark .info{
   .pyq-card{
     padding:20px;
   }
+
+  .quiz-box{
+    padding:18px;
+  }
+
+  .quiz-info{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .quiz-filters select{
+    width:100%;
+  }
+
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="nav">
 
-    <div class="logo">
-      🇮🇳 UPSC Shiksha
-    </div>
+<div class="nav">
 
-    <div>
-      <a href="index.html">Home</a>
-      <a href="mains.html">Mains</a>
-      <a href="pyq.html">PYQ</a>
-    </div>
+<div class="logo">
+🇮🇳 UPSC Shiksha
+</div>
 
-  </div>
+<div>
+
+<a href="index.html">Home</a>
+<a href="mains.html">Mains</a>
+<a href="pyq.html">PYQ</a>
+
+</div>
+
+</div>
+
 </header>
 
 
 <section class="hero">
 
-  <h1>🏛️ Mains GS-II PYQ</h1>
+<h1>🏛️ Mains GS-II PYQ</h1>
 
-  <p>
-    UPSC Civil Services Mains General Studies Paper-II
-    Previous Year Questions
-  </p>
+<p>
+UPSC Civil Services Mains General Studies Paper-II
+Previous Year Questions and Practice
+</p>
 
-  <div class="tags">
+<div class="tags">
 
-    <span class="tag">MAINS</span>
-    <span class="tag">GS-II</span>
-    <span class="tag">PYQ</span>
-    <span class="tag">POLITY</span>
-    <span class="tag">GOVERNANCE</span>
-    <span class="tag">IR</span>
+<span class="tag">MAINS</span>
+<span class="tag">GS-II</span>
+<span class="tag">PYQ</span>
+<span class="tag">POLITY</span>
+<span class="tag">GOVERNANCE</span>
+<span class="tag">IR</span>
 
-  </div>
+</div>
 
 </section>
 
 
 <div class="container">
 
-  <div class="tools">
 
-    <input
-      type="text"
-      id="searchBox"
-      placeholder="🔍 Search GS-II PYQ..."
-    >
+<div class="tools">
 
-    <button onclick="toggleDarkMode()">
-      🌙 Dark Mode
-    </button>
+<input
+type="text"
+id="searchBox"
+placeholder="🔍 Search GS-II PYQ..."
+>
 
-  </div>
-
-
-  <div class="quick-nav">
-
-    <h2>⚡ Quick Navigation</h2>
-
-    <a href="#2026">2026</a>
-    <a href="#2025">2025</a>
-    <a href="#2024">2024</a>
-    <a href="#2023">2023</a>
-    <a href="#2022">2022</a>
-    <a href="#2021">2021</a>
-    <a href="#2020">2020</a>
-
-  </div>
-
-
-  <div id="pyqList">
-
-
-    <div class="pyq-card" id="2026">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2026</h2>
-
-      <p>
-        General Studies Paper-II questions covering
-        Indian Constitution, Polity, Governance,
-        Social Justice and International Relations.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2025">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2025</h2>
-
-      <p>
-        Previous Year questions for Constitution,
-        Governance, Social Justice and International Relations.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2024">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2024</h2>
-
-      <p>
-        GS-II questions related to Polity,
-        Governance, Social Justice and International Relations.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2023">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2023</h2>
-
-      <p>
-        Practice the 2023 General Studies Paper-II
-        questions for answer-writing preparation.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2022">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2022</h2>
-
-      <p>
-        Previous Year GS-II questions covering
-        Constitution, Governance and International Relations.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2021">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2021</h2>
-
-      <p>
-        Practice GS-II questions and analyse important
-        themes from Polity, Governance and IR.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-
-    <div class="pyq-card" id="2020">
-
-      <h2>📅 UPSC Mains GS-II PYQ 2020</h2>
-
-      <p>
-        General Studies Paper-II previous year questions
-        for revision and answer-writing practice.
-      </p>
-
-      <a
-        href="https://upsc.gov.in/examinations/previous-question-papers"
-        target="_blank"
-        class="pyq-btn"
-      >
-        Official UPSC Questions →
-      </a>
-
-    </div>
-
-  </div>
-
-
-  <div class="info">
-
-    <strong>📌 How to use GS-II PYQs:</strong>
-
-    <br><br>
-
-    1. Constitution और Polity के topics के साथ PYQs को पढ़ो।<br>
-
-    2. Governance और Social Justice के recurring themes पहचानो।<br>
-
-    3. International Relations के questions को current affairs से जोड़ो।<br>
-
-    4. प्रत्येक प्रश्न का answer निर्धारित समय में लिखने का अभ्यास करो।
-
-  </div>
-
-
-  <div class="bottom-nav">
-
-    <a href="index.html">🏠 Home</a>
-
-    <a href="prelims.html">📚 Prelims</a>
-
-    <a href="csat.html">🧠 CSAT</a>
-
-    <a href="mains.html">📝 Mains</a>
-
-    <a href="pyq.html">📖 PYQ</a>
-
-    <a href="prelims-pyq.html">📄 Prelims PYQ</a>
-
-    <a href="csat-pyq.html">🧠 CSAT PYQ</a>
-
-    <a href="mains-gs1-pyq.html">✍️ GS-I PYQ</a>
-
-    <a href="polity.html">🏛️ Polity</a>
-
-  </div>
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
 
 </div>
 
 
-<button id="topBtn" onclick="topFunction()">↑</button>
+<!-- GS-II PRACTICE QUIZ -->
+
+<section class="quiz-box" id="gs2Quiz">
+
+<h2>📝 GS-II Practice Questions</h2>
+
+<p class="quiz-subtitle">
+Practice model questions based on UPSC GS-II themes.
+</p>
+
+<div class="quiz-filters">
+
+<select id="quizYear" onchange="filterQuiz()">
+
+<option value="all">All Years</option>
+<option value="2025">2025</option>
+<option value="2024">2024</option>
+<option value="2023">2023</option>
+<option value="2022">2022</option>
+<option value="2021">2021</option>
+<option value="2020">2020</option>
+
+</select>
+
+
+<select id="quizTopic" onchange="filterQuiz()">
+
+<option value="all">All Topics</option>
+<option value="Constitution">Constitution</option>
+<option value="Polity">Polity</option>
+<option value="Governance">Governance</option>
+<option value="Social Justice">Social Justice</option>
+<option value="International Relations">International Relations</option>
+
+</select>
+
+</div>
+
+
+<div class="quiz-info">
+
+<span id="questionNumber">
+Question 1
+</span>
+
+<span id="quizScore">
+Score: 0
+</span>
+
+</div>
+
+
+<div class="question-card">
+
+<h3 id="questionText">
+GS-II question will appear here.
+</h3>
+
+<div id="optionsBox"></div>
+
+<div id="answerBox" class="answer-box"></div>
+
+</div>
+
+
+<div class="quiz-actions">
+
+<button id="nextQuestion">
+➡️ Next Question
+</button>
+
+<button id="restartQuiz">
+🔄 Restart
+</button>
+
+</div>
+
+</section>
+
+
+<div class="quick-nav">
+
+<h2>⚡ Quick Navigation</h2>
+
+<a href="#2026">2026</a>
+<a href="#2025">2025</a>
+<a href="#2024">2024</a>
+<a href="#2023">2023</a>
+<a href="#2022">2022</a>
+<a href="#2021">2021</a>
+<a href="#2020">2020</a>
+
+</div>
+
+
+<div id="pyqList">
+
+
+<div class="pyq-card" id="2026">
+
+<h2>📅 UPSC Mains GS-II PYQ 2026</h2>
+
+<p>
+General Studies Paper-II questions covering
+Constitution, Polity, Governance, Social Justice
+and International Relations.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2025">
+
+<h2>📅 UPSC Mains GS-II PYQ 2025</h2>
+
+<p>
+Previous Year questions covering Constitution,
+Governance, Social Justice and International Relations.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2024">
+
+<h2>📅 UPSC Mains GS-II PYQ 2024</h2>
+
+<p>
+GS-II questions related to Polity,
+Governance, Social Justice and International Relations.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2023">
+
+<h2>📅 UPSC Mains GS-II PYQ 2023</h2>
+
+<p>
+Practice the 2023 General Studies Paper-II
+questions for answer-writing preparation.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2022">
+
+<h2>📅 UPSC Mains GS-II PYQ 2022</h2>
+
+<p>
+Previous Year GS-II questions covering
+Constitution, Governance and International Relations.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2021">
+
+<h2>📅 UPSC Mains GS-II PYQ 2021</h2>
+
+<p>
+Practice GS-II questions and analyse important
+themes from Polity, Governance and International Relations.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+
+<div class="pyq-card" id="2020">
+
+<h2>📅 UPSC Mains GS-II PYQ 2020</h2>
+
+<p>
+General Studies Paper-II previous year questions
+for revision and answer-writing practice.
+</p>
+
+<a
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank"
+class="pyq-btn"
+>
+Official UPSC Questions →
+</a>
+
+</div>
+
+</div>
+
+
+<div class="info">
+
+<strong>📌 How to use GS-II PYQs:</strong>
+
+<br><br>
+
+1. Study Constitution and Polity topics with PYQs.<br>
+
+2. Identify recurring themes in Governance and Social Justice.<br>
+
+3. Connect International Relations questions with current affairs.<br>
+
+4. Practice writing answers within the prescribed time.<br>
+
+5. Analyse the demand of each question before writing the answer.
+
+</div>
+
+
+<div class="bottom-nav">
+
+<a href="index.html">🏠 Home</a>
+
+<a href="prelims.html">📚 Prelims</a>
+
+<a href="csat.html">🧠 CSAT</a>
+
+<a href="mains.html">📝 Mains</a>
+
+<a href="pyq.html">📖 PYQ</a>
+
+<a href="prelims-pyq.html">📄 Prelims PYQ</a>
+
+<a href="csat-pyq.html">🧠 CSAT PYQ</a>
+
+<a href="mains-gs1-pyq.html">✍️ GS-I PYQ</a>
+
+<a href="mains-gs3-pyq.html">📊 GS-III PYQ</a>
+
+<a href="polity.html">🏛️ Polity</a>
+
+</div>
+
+</div>
+
+
+<button id="topBtn" onclick="topFunction()">
+↑
+</button>
 
 
 <footer>
 
-  <p>🇮🇳 UPSC Shiksha</p>
+<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
 
-  <p>
-    Free UPSC Study Material & PYQ Platform
-  </p>
+<p>
+Free UPSC Study Material & PYQ Platform
+</p>
 
-  <p>
-    © 2026 UPSC Shiksha
-  </p>
+<p>
+© 2026 UPSC Shiksha
+</p>
 
 </footer>
 
 
 <script>
 
-const searchBox =
-  document.getElementById("searchBox");
+/* =========================
+   GS-II QUIZ DATA
+========================= */
+
+const quizQuestions = [
+
+{
+year:"2025",
+topic:"Constitution",
+question:"Why is constitutionalism important in a democratic system?",
+options:[
+"To give unlimited power to the executive",
+"To ensure government power is limited by constitutional principles",
+"To remove judicial review",
+"To eliminate fundamental rights"
+],
+answer:1,
+explanation:"Constitutionalism emphasises limited government, rule of law, rights and institutional checks."
+},
+
+{
+year:"2024",
+topic:"Polity",
+question:"Which principle is most closely associated with the rule of law?",
+options:[
+"Government action must operate within the law",
+"Executive power is always unlimited",
+"Courts cannot review government action",
+"Only elected representatives are subject to law"
+],
+answer:0,
+explanation:"The rule of law requires public authorities and citizens to operate within the legal framework."
+},
+
+{
+year:"2023",
+topic:"Constitution",
+question:"What is the primary purpose of separation of powers?",
+options:[
+"To concentrate power in one institution",
+"To distribute governmental functions and create checks",
+"To abolish the legislature",
+"To make the judiciary subordinate to the executive"
+],
+answer:1,
+explanation:"Separation of powers distributes functions among institutions and helps prevent excessive concentration of power."
+},
+
+{
+year:"2022",
+topic:"Polity",
+question:"Why is parliamentary accountability important?",
+options:[
+"It removes legislative scrutiny",
+"It enables the executive to function without questions",
+"It makes the executive answerable to the legislature",
+"It prevents public debate"
+],
+answer:2,
+explanation:"Parliamentary accountability allows elected representatives to question and scrutinise executive actions."
+},
+
+{
+year:"2021",
+topic:"Governance",
+question:"Which approach can improve transparency in public administration?",
+options:[
+"Reducing access to public information",
+"Strengthening disclosure and accountability mechanisms",
+"Removing citizen participation",
+"Restricting institutional oversight"
+],
+answer:1,
+explanation:"Transparency improves when information disclosure, accountability and oversight mechanisms are strengthened."
+},
+
+{
+year:"2020",
+topic:"Social Justice",
+question:"Why is social justice important for inclusive development?",
+options:[
+"It focuses only on economic growth",
+"It seeks fair access to opportunities and public resources",
+"It eliminates all differences between citizens",
+"It removes the role of public institutions"
+],
+answer:1,
+explanation:"Social justice focuses on reducing exclusion and ensuring fair access to opportunities and essential services."
+},
+
+{
+year:"2025",
+topic:"Governance",
+question:"What is a major benefit of citizen participation in governance?",
+options:[
+"It can improve responsiveness of public institutions",
+"It eliminates the need for administration",
+"It prevents policy evaluation",
+"It removes accountability"
+],
+answer:0,
+explanation:"Citizen participation can help institutions understand public needs and improve responsiveness and accountability."
+},
+
+{
+year:"2024",
+topic:"Social Justice",
+question:"Which measure can help improve access to social welfare programmes?",
+options:[
+"Reducing awareness about schemes",
+"Improving last-mile delivery and accessibility",
+"Restricting eligibility information",
+"Reducing institutional monitoring"
+],
+answer:1,
+explanation:"Better last-mile delivery, awareness and accessibility can improve citizens' ability to benefit from welfare programmes."
+},
+
+{
+year:"2023",
+topic:"International Relations",
+question:"Why are regional organisations important in international relations?",
+options:[
+"They can facilitate cooperation among neighbouring countries",
+"They eliminate national sovereignty",
+"They prevent diplomatic engagement",
+"They replace all global institutions"
+],
+answer:0,
+explanation:"Regional organisations provide platforms for cooperation on economic, political, security and social issues."
+},
+
+{
+year:"2022",
+topic:"International Relations",
+question:"What is an important objective of diplomatic engagement?",
+options:[
+"To permanently prevent negotiations",
+"To manage differences and pursue cooperation",
+"To eliminate international trade",
+"To avoid communication between states"
+],
+answer:1,
+explanation:"Diplomacy helps states manage differences, negotiate interests and develop areas of cooperation."
+},
+
+{
+year:"2021",
+topic:"Governance",
+question:"How can digital governance improve public service delivery?",
+options:[
+"By reducing access to government services",
+"By enabling faster and more accessible service delivery",
+"By eliminating accountability",
+"By preventing feedback"
+],
+answer:1,
+explanation:"Digital platforms can make services faster, more accessible and easier to monitor when properly implemented."
+},
+
+{
+year:"2020",
+topic:"Constitution",
+question:"Why are Fundamental Rights important in a constitutional democracy?",
+options:[
+"They protect citizens against arbitrary state action",
+"They give unlimited power to government",
+"They remove judicial remedies",
+"They apply only to government officials"
+],
+answer:0,
+explanation:"Fundamental Rights provide constitutional protections for individual liberty and help limit arbitrary state action."
+}
+
+];
+
+
+let filteredQuestions=[...quizQuestions];
+
+let currentQuestion=0;
+
+let score=0;
+
+let answered=false;
+
+
+/* LOAD QUESTION */
+
+function loadQuestion(){
+
+const question=filteredQuestions[currentQuestion];
+
+if(!question){
+
+document.getElementById("questionText").innerText=
+"Quiz completed!";
+
+document.getElementById("optionsBox").innerHTML="";
+
+document.getElementById("answerBox").style.display="block";
+
+document.getElementById("answerBox").innerHTML=
+"<strong>🎉 Quiz Completed!</strong><br><br>"+
+"Your final score is <strong>"+
+score+
+" / "+
+filteredQuestions.length+
+"</strong>.<br><br>"+
+"Review the official UPSC papers and practise answer writing.";
+
+return;
+
+}
+
+answered=false;
+
+document.getElementById("questionNumber").innerText=
+"Question "+
+(currentQuestion+1)+
+" / "+
+filteredQuestions.length;
+
+document.getElementById("quizScore").innerText=
+"Score: "+
+score;
+
+document.getElementById("questionText").innerText=
+question.question;
+
+const optionsBox=
+document.getElementById("optionsBox");
+
+optionsBox.innerHTML="";
+
+question.options.forEach(function(option,index){
+
+const button=document.createElement("button");
+
+button.className="option-btn";
+
+button.innerText=
+String.fromCharCode(65+index)+
+". "+
+option;
+
+button.onclick=function(){
+
+checkAnswer(index,button);
+
+};
+
+optionsBox.appendChild(button);
+
+});
+
+document.getElementById("answerBox").style.display="none";
+
+document.getElementById("answerBox").innerHTML="";
+
+}
+
+
+/* CHECK ANSWER */
+
+function checkAnswer(selected,button){
+
+if(answered){
+return;
+}
+
+answered=true;
+
+const question=
+filteredQuestions[currentQuestion];
+
+const buttons=
+document.querySelectorAll(".option-btn");
+
+buttons.forEach(function(btn){
+btn.disabled=true;
+});
+
+if(selected===question.answer){
+
+button.classList.add("correct");
+
+score++;
+
+}else{
+
+button.classList.add("wrong");
+
+buttons[question.answer].classList.add("correct");
+
+}
+
+document.getElementById("quizScore").innerText=
+"Score: "+
+score;
+
+const answerBox=
+document.getElementById("answerBox");
+
+answerBox.style.display="block";
+
+answerBox.innerHTML=
+"<strong>Explanation:</strong><br>"+
+question.explanation;
+
+}
+
+
+/* NEXT */
+
+document.getElementById("nextQuestion")
+.addEventListener("click",function(){
+
+if(currentQuestion<
+filteredQuestions.length-1){
+
+currentQuestion++;
+
+loadQuestion();
+
+}else{
+
+currentQuestion++;
+
+loadQuestion();
+
+}
+
+});
+
+
+/* RESTART */
+
+document.getElementById("restartQuiz")
+.addEventListener("click",function(){
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+});
+
+
+/* FILTER */
+
+function filterQuiz(){
+
+const selectedYear=
+document.getElementById("quizYear").value;
+
+const selectedTopic=
+document.getElementById("quizTopic").value;
+
+filteredQuestions=
+quizQuestions.filter(function(q){
+
+const yearMatch=
+selectedYear==="all" ||
+q.year===selectedYear;
+
+const topicMatch=
+selectedTopic==="all" ||
+q.topic===selectedTopic;
+
+return yearMatch && topicMatch;
+
+});
+
+currentQuestion=0;
+
+score=0;
+
+loadQuestion();
+
+}
+
+
+/* INITIAL LOAD */
+
+loadQuestion();
+
+
+/* SEARCH */
+
+const searchBox=
+document.getElementById("searchBox");
 
 searchBox.addEventListener(
-  "input",
-  function(){
+"input",
+function(){
 
-    const search =
-      this.value.toLowerCase();
+const search=
+this.value.toLowerCase();
 
-    const cards =
-      document.querySelectorAll(".pyq-card");
+const cards=
+document.querySelectorAll(".pyq-card");
 
-    cards.forEach(function(card){
+cards.forEach(function(card){
 
-      const text =
-        card.innerText.toLowerCase();
+const text=
+card.innerText.toLowerCase();
 
-      card.style.display =
-        text.includes(search)
-        ? "block"
-        : "none";
+card.style.display=
+text.includes(search)
+?"block"
+:"none";
 
-    });
+});
 
-  }
-);
+});
 
+
+/* DARK MODE */
 
 function toggleDarkMode(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "mainsGs2PyqDarkMode",
-    document.body.classList.contains("dark")
-  );
+localStorage.setItem(
+"mainsGs2PyqDarkMode",
+document.body.classList.contains("dark")
+);
 
 }
 
 
 if(
-  localStorage.getItem("mainsGs2PyqDarkMode")
-  === "true"
+localStorage.getItem("mainsGs2PyqDarkMode")
+==="true"
 ){
 
-  document.body.classList.add("dark");
+document.body.classList.add("dark");
 
 }
 
 
-const topBtn =
-  document.getElementById("topBtn");
+/* TOP BUTTON */
+
+const topBtn=
+document.getElementById("topBtn");
 
 window.addEventListener(
-  "scroll",
-  function(){
+"scroll",
+function(){
 
-    if(window.scrollY > 300){
+if(window.scrollY>300){
 
-      topBtn.style.display = "block";
+topBtn.style.display="block";
 
-    }else{
+}else{
 
-      topBtn.style.display = "none";
+topBtn.style.display="none";
 
-    }
+}
 
-  }
-);
+});
 
 
 function topFunction(){
 
-  window.scrollTo({
+window.scrollTo({
 
-    top:0,
+top:0,
 
-    behavior:"smooth"
+behavior:"smooth"
 
-  });
+});
 
 }
 
