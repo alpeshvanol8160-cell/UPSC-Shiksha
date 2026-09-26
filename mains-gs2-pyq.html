@@ -1,447 +1,674 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
+
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
 
 <title>Mains GS-II PYQ | UPSC Shiksha</title>
 
-<meta name="description" content="UPSC Mains General Studies Paper-II Previous Year Questions, practice quiz and answer-writing preparation - UPSC Shiksha">
-
-<link rel="stylesheet" href="style.css">
+<meta name="description"
+content="UPSC Mains GS-II PYQ practice covering Constitution, Polity, Governance, Social Justice and International Relations.">
 
 <style>
 
+*{
+box-sizing:border-box;
+margin:0;
+padding:0;
+}
+
+html{
+scroll-behavior:smooth;
+}
+
 body{
-  margin:0;
-  font-family:Arial,sans-serif;
-  background:#f5f7fb;
-  color:#222;
+font-family:Arial,Helvetica,sans-serif;
+background:#f5f7fb;
+color:#222;
+line-height:1.6;
+transition:0.3s;
 }
 
 header{
-  background:#111827;
-  color:white;
-  padding:15px 20px;
-  position:sticky;
-  top:0;
-  z-index:1000;
+background:#fff;
+padding:15px 20px;
+position:sticky;
+top:0;
+z-index:1000;
+box-shadow:0 2px 10px rgba(0,0,0,0.08);
 }
 
-.nav{
-  max-width:1100px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
+.navbar{
+max-width:1100px;
+margin:auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:15px;
 }
 
 .logo{
-  font-size:21px;
-  font-weight:bold;
+font-size:22px;
+font-weight:bold;
+color:#2563eb;
 }
 
-.nav a{
-  color:white;
-  text-decoration:none;
-  margin-left:15px;
+nav{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
 }
 
-.hero{
-  text-align:center;
-  padding:55px 20px;
-  background:linear-gradient(135deg,#172554,#1e40af);
-  color:white;
+nav a,
+nav button{
+text-decoration:none;
+border:none;
+background:#f3f4f6;
+color:#222;
+padding:9px 13px;
+border-radius:8px;
+cursor:pointer;
+font-size:14px;
 }
 
-.hero h1{
-  font-size:32px;
-  margin-bottom:12px;
-}
-
-.hero p{
-  max-width:700px;
-  margin:auto;
-  line-height:1.6;
-}
-
-.tags{
-  margin-top:20px;
-}
-
-.tag{
-  display:inline-block;
-  padding:8px 13px;
-  margin:5px;
-  border-radius:20px;
-  background:white;
-  color:#1e40af;
-  font-size:13px;
-  font-weight:bold;
+nav a:hover,
+nav button:hover{
+background:#2563eb;
+color:white;
 }
 
 .container{
-  max-width:1000px;
-  margin:30px auto;
-  padding:0 15px;
+max-width:1100px;
+margin:auto;
+padding:20px;
 }
 
-.tools{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin-bottom:25px;
+.pyq-hero{
+background:linear-gradient(135deg,#1e3a8a,#2563eb);
+color:white;
+padding:35px 20px;
+border-radius:18px;
+text-align:center;
+margin-bottom:25px;
 }
 
-#searchBox{
-  flex:1;
-  min-width:220px;
-  padding:13px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:16px;
+.pyq-hero h1{
+font-size:32px;
+margin-bottom:10px;
 }
 
-button{
-  padding:13px 18px;
-  border:0;
-  border-radius:8px;
-  cursor:pointer;
-  background:#111827;
-  color:white;
-  font-weight:bold;
+.pyq-hero p{
+font-size:16px;
+}
+
+.tag-box{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin-top:18px;
+}
+
+.tag{
+background:rgba(255,255,255,0.18);
+padding:6px 12px;
+border-radius:20px;
+font-size:13px;
+}
+
+.controls{
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
+}
+
+#searchInput{
+flex:1;
+min-width:220px;
+padding:12px;
+border:1px solid #ddd;
+border-radius:10px;
+font-size:15px;
+}
+
+.quick-nav{
+background:white;
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+box-shadow:0 2px 8px rgba(0,0,0,0.06);
+}
+
+.quick-nav h2{
+margin-bottom:12px;
+font-size:22px;
+}
+
+.quick-links{
+display:flex;
+flex-wrap:wrap;
+gap:8px;
+}
+
+.quick-links a{
+text-decoration:none;
+background:#eff6ff;
+color:#1d4ed8;
+padding:8px 12px;
+border-radius:8px;
+font-size:14px;
 }
 
 /* QUIZ */
 
 .quiz-box{
-  background:white;
-  padding:25px;
-  border-radius:14px;
-  margin-bottom:30px;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
 .quiz-box h2{
-  margin-top:0;
-  color:#1e3a8a;
+color:#1e3a8a;
+margin-bottom:5px;
 }
 
 .quiz-subtitle{
-  color:#555;
+color:#666;
+margin-bottom:18px;
 }
 
 .quiz-filters{
-  display:flex;
-  gap:10px;
-  flex-wrap:wrap;
-  margin:20px 0;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-bottom:20px;
 }
 
 .quiz-filters select{
-  flex:1;
-  min-width:180px;
-  padding:12px;
-  border:1px solid #ccc;
-  border-radius:8px;
-  font-size:15px;
+flex:1;
+min-width:180px;
+padding:11px;
+border:1px solid #ddd;
+border-radius:9px;
+background:white;
+font-size:14px;
 }
 
 .quiz-info{
-  display:flex;
-  justify-content:space-between;
-  background:#eef2ff;
-  padding:12px;
-  border-radius:8px;
-  margin-bottom:15px;
-  font-weight:bold;
+display:flex;
+justify-content:space-between;
+gap:10px;
+background:#eff6ff;
+padding:10px 14px;
+border-radius:9px;
+margin-bottom:15px;
+font-weight:bold;
 }
 
 .question-card{
-  border:1px solid #ddd;
-  padding:20px;
-  border-radius:12px;
+background:#fafafa;
+border:1px solid #e5e7eb;
+padding:20px;
+border-radius:14px;
 }
 
 .question-card h3{
-  line-height:1.6;
-  margin-top:0;
+margin-bottom:15px;
+font-size:19px;
 }
 
 .option-btn{
-  display:block;
-  width:100%;
-  text-align:left;
-  margin:10px 0;
-  background:#f3f4f6;
-  color:#111827;
-  border:1px solid #ddd;
+display:block;
+width:100%;
+text-align:left;
+padding:12px;
+margin:8px 0;
+border:1px solid #ddd;
+background:white;
+border-radius:9px;
+cursor:pointer;
+font-size:15px;
+transition:0.2s;
 }
 
 .option-btn:hover{
-  background:#e5e7eb;
+background:#eff6ff;
 }
 
 .option-btn.correct{
-  background:#dcfce7;
-  border:2px solid #16a34a;
-  color:#166534;
+background:#dcfce7;
+border-color:#16a34a;
+color:#166534;
 }
 
 .option-btn.wrong{
-  background:#fee2e2;
-  border:2px solid #dc2626;
-  color:#991b1b;
+background:#fee2e2;
+border-color:#dc2626;
+color:#991b1b;
 }
 
 .answer-box{
-  margin-top:15px;
-  padding:15px;
-  border-radius:8px;
-  background:#eff6ff;
-  display:none;
-  line-height:1.6;
+margin-top:15px;
+padding:13px;
+background:#dbeafe;
+border-radius:9px;
+display:none;
 }
 
 .quiz-actions{
-  display:flex;
-  gap:10px;
-  margin-top:20px;
-  flex-wrap:wrap;
+display:flex;
+gap:10px;
+flex-wrap:wrap;
+margin-top:18px;
 }
 
 .quiz-actions button{
-  background:#1e40af;
+padding:11px 18px;
+border:none;
+border-radius:9px;
+cursor:pointer;
+font-weight:bold;
+background:#2563eb;
+color:white;
 }
 
-.quick-nav{
-  background:white;
-  padding:20px;
-  border-radius:12px;
-  margin-bottom:25px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+.quiz-actions button:hover{
+background:#1e3a8a;
 }
 
-.quick-nav h2{
-  margin-top:0;
+/* CASE STUDY */
+
+.case-study{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 3px 12px rgba(0,0,0,0.08);
 }
 
-.quick-nav a{
-  display:inline-block;
-  margin:5px;
-  padding:9px 13px;
-  background:#e8eefc;
-  color:#1e40af;
-  text-decoration:none;
-  border-radius:7px;
-  font-weight:bold;
+.case-study h2{
+color:#1e3a8a;
+margin-bottom:12px;
+}
+
+.case-box{
+background:#eff6ff;
+padding:18px;
+border-radius:12px;
+border-left:5px solid #2563eb;
+margin-top:15px;
+}
+
+.case-box ul{
+margin-left:20px;
+margin-top:10px;
+}
+
+/* PAPERS */
+
+.pyq-section{
+margin-bottom:25px;
+}
+
+.pyq-section h2{
+margin-bottom:15px;
+}
+
+.pyq-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(220px,1fr));
+gap:15px;
 }
 
 .pyq-card{
-  background:white;
-  padding:25px;
-  margin:20px 0;
-  border-radius:14px;
-  box-shadow:0 3px 15px rgba(0,0,0,.08);
+background:white;
+padding:20px;
+border-radius:15px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
 }
 
-.pyq-card h2{
-  margin-top:0;
-  color:#1e3a8a;
+.pyq-card h3{
+color:#1e3a8a;
+margin-bottom:8px;
 }
 
 .pyq-card p{
-  line-height:1.6;
+font-size:14px;
+color:#555;
+margin-bottom:12px;
 }
 
-.pyq-btn{
-  display:inline-block;
-  margin-top:10px;
-  padding:11px 17px;
-  background:#1e40af;
-  color:white;
-  text-decoration:none;
-  border-radius:8px;
-  font-weight:bold;
+.year-btn{
+display:inline-block;
+text-decoration:none;
+background:#2563eb;
+color:white;
+padding:9px 13px;
+border-radius:8px;
+font-size:14px;
 }
 
-.info{
-  background:#fff7ed;
-  border-left:5px solid #f97316;
-  padding:18px;
-  border-radius:8px;
-  margin:25px 0;
-  line-height:1.6;
+.year-btn:hover{
+background:#1e3a8a;
 }
+
+.info-box{
+background:#eff6ff;
+border-left:5px solid #2563eb;
+padding:18px;
+border-radius:10px;
+margin-bottom:25px;
+}
+
+/* STRATEGY */
+
+.strategy{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
+}
+
+.strategy h2{
+color:#1e3a8a;
+margin-bottom:12px;
+}
+
+.strategy ul{
+margin-left:20px;
+}
+
+/* AREAS */
+
+.major-areas{
+background:white;
+padding:25px;
+border-radius:18px;
+margin-bottom:25px;
+box-shadow:0 2px 10px rgba(0,0,0,0.07);
+}
+
+.area-grid{
+display:grid;
+grid-template-columns:
+repeat(auto-fit,minmax(200px,1fr));
+gap:12px;
+margin-top:15px;
+}
+
+.area{
+background:#eff6ff;
+padding:15px;
+border-radius:10px;
+}
+
+/* BOTTOM */
 
 .bottom-nav{
-  display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
-  gap:10px;
-  margin:35px 0;
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:8px;
+margin:30px 0;
 }
 
 .bottom-nav a{
-  text-decoration:none;
-  padding:11px 15px;
-  border-radius:8px;
-  background:#111827;
-  color:white;
-}
-
-#topBtn{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  display:none;
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  padding:0;
-  font-size:20px;
+text-decoration:none;
+background:#e5e7eb;
+color:#222;
+padding:9px 12px;
+border-radius:8px;
+font-size:14px;
 }
 
 footer{
-  background:#111827;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:40px;
+background:#111827;
+color:white;
+text-align:center;
+padding:25px;
+margin-top:30px;
+}
+
+#backTop{
+position:fixed;
+right:18px;
+bottom:18px;
+display:none;
+border:none;
+background:#2563eb;
+color:white;
+padding:12px 15px;
+border-radius:50%;
+cursor:pointer;
+font-size:18px;
+z-index:999;
 }
 
 /* DARK MODE */
 
 body.dark{
-  background:#111827;
-  color:#eee;
+background:#111827;
+color:#f3f4f6;
 }
 
+body.dark header,
 body.dark .quick-nav,
+body.dark .quiz-box,
+body.dark .case-study,
 body.dark .pyq-card,
-body.dark .quiz-box{
-  background:#1f2937;
-  color:#eee;
+body.dark .strategy,
+body.dark .major-areas{
+background:#1f2937;
+color:#f3f4f6;
 }
 
-body.dark .quick-nav a{
-  background:#374151;
-  color:#fff;
-}
-
-body.dark .pyq-card h2,
-body.dark .quiz-box h2{
-  color:#93c5fd;
-}
-
-body.dark .info{
-  background:#292524;
+body.dark .quick-links a{
+background:#374151;
+color:#93c5fd;
 }
 
 body.dark .question-card{
-  border-color:#4b5563;
-}
-
-body.dark .quiz-info{
-  background:#374151;
-}
-
-body.dark .quiz-filters select{
-  background:#374151;
-  color:white;
-  border-color:#6b7280;
+background:#111827;
+border-color:#374151;
 }
 
 body.dark .option-btn{
-  background:#374151;
-  color:white;
-  border-color:#6b7280;
+background:#1f2937;
+color:#f3f4f6;
+border-color:#4b5563;
+}
+
+body.dark .option-btn:hover{
+background:#374151;
+}
+
+body.dark .quiz-filters select,
+body.dark #searchInput{
+background:#1f2937;
+color:white;
+border-color:#4b5563;
+}
+
+body.dark .quiz-info{
+background:#374151;
 }
 
 body.dark .answer-box{
-  background:#1e3a5f;
-  color:white;
+background:#1e3a8a;
+color:#dbeafe;
+}
+
+body.dark .area{
+background:#374151;
+}
+
+body.dark .pyq-card p{
+color:#d1d5db;
+}
+
+body.dark .bottom-nav a{
+background:#374151;
+color:#f3f4f6;
+}
+
+body.dark .info-box{
+background:#1e3a8a;
+border-color:#60a5fa;
+}
+
+body.dark .case-box{
+background:#1e3a8a;
+}
+
+body.dark nav a{
+background:#374151;
+color:#f3f4f6;
 }
 
 /* MOBILE */
 
-@media(max-width:600px){
+@media(max-width:700px){
 
-  .nav{
-    flex-direction:column;
-    gap:10px;
-  }
+header{
+padding:12px;
+}
 
-  .nav a{
-    margin:0 6px;
-    font-size:14px;
-  }
+.navbar{
+flex-direction:column;
+align-items:stretch;
+}
 
-  .hero h1{
-    font-size:26px;
-  }
+.logo{
+text-align:center;
+}
 
-  .pyq-card{
-    padding:20px;
-  }
+nav{
+justify-content:center;
+}
 
-  .quiz-box{
-    padding:18px;
-  }
+nav a,
+nav button{
+font-size:13px;
+padding:8px 10px;
+}
 
-  .quiz-info{
-    flex-direction:column;
-    gap:8px;
-  }
+.container{
+padding:12px;
+}
 
-  .quiz-filters select{
-    width:100%;
-  }
+.pyq-hero{
+padding:28px 15px;
+}
+
+.pyq-hero h1{
+font-size:25px;
+}
+
+.quiz-box,
+.case-study,
+.strategy,
+.major-areas,
+.quick-nav{
+padding:18px;
+}
+
+.question-card h3{
+font-size:17px;
+}
+
+.quiz-info{
+font-size:13px;
+}
+
+.quiz-actions button{
+width:100%;
+}
+
+.controls{
+flex-direction:column;
+}
+
+#searchInput{
+width:100%;
+}
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+
 <header>
 
-<div class="nav">
+<div class="navbar">
 
 <div class="logo">
 🇮🇳 UPSC Shiksha
 </div>
 
-<div>
+<nav>
 
 <a href="index.html">Home</a>
+
 <a href="mains.html">Mains</a>
+
 <a href="pyq.html">PYQ</a>
 
-</div>
+<a href="mains-gs1-pyq.html">GS-I</a>
+
+<a href="mains-gs3-pyq.html">GS-III</a>
+
+<a href="mains-gs4-pyq.html">GS-IV</a>
+
+<button onclick="toggleDarkMode()">
+🌙 Dark Mode
+</button>
+
+</nav>
 
 </div>
 
 </header>
 
 
-<section class="hero">
+<main class="container">
+
+
+<section class="pyq-hero">
 
 <h1>🏛️ Mains GS-II PYQ</h1>
 
 <p>
-UPSC Civil Services Mains General Studies Paper-II
-Previous Year Questions and Practice
+UPSC Civil Services Mains General Studies Paper II
 </p>
 
-<div class="tags">
+<div class="tag-box">
 
 <span class="tag">MAINS</span>
+
 <span class="tag">GS-II</span>
+
 <span class="tag">PYQ</span>
+
+<span class="tag">CONSTITUTION</span>
+
 <span class="tag">POLITY</span>
+
 <span class="tag">GOVERNANCE</span>
+
+<span class="tag">SOCIAL JUSTICE</span>
+
 <span class="tag">IR</span>
 
 </div>
@@ -449,57 +676,108 @@ Previous Year Questions and Practice
 </section>
 
 
-<div class="container">
-
-
-<div class="tools">
+<div class="controls">
 
 <input
 type="text"
-id="searchBox"
-placeholder="🔍 Search GS-II PYQ..."
+id="searchInput"
+placeholder="🔎 Search GS-II topics or years..."
 >
-
-<button onclick="toggleDarkMode()">
-🌙 Dark Mode
-</button>
 
 </div>
 
 
-<!-- GS-II PRACTICE QUIZ -->
+<section class="quick-nav">
 
-<section class="quiz-box" id="gs2Quiz">
+<h2>⚡ Quick Navigation</h2>
 
-<h2>📝 GS-II Practice Questions</h2>
+<div class="quick-links">
+
+<a href="#quiz">📝 Quiz</a>
+
+<a href="#caseStudy">📚 Case Study</a>
+
+<a href="#year2026">2026</a>
+
+<a href="#year2025">2025</a>
+
+<a href="#year2024">2024</a>
+
+<a href="#year2023">2023</a>
+
+<a href="#year2022">2022</a>
+
+<a href="#year2021">2021</a>
+
+<a href="#year2020">2020</a>
+
+</div>
+
+</section>
+
+
+<!-- QUIZ -->
+
+<section class="quiz-box" id="quiz">
+
+<h2>📝 GS-II Practice Quiz</h2>
 
 <p class="quiz-subtitle">
-Practice model questions based on UPSC GS-II themes.
+
+Model/practice questions for UPSC Mains GS-II.
+These are NOT exact UPSC PYQ text.
+
 </p>
+
 
 <div class="quiz-filters">
 
-<select id="quizYear" onchange="filterQuiz()">
+<select id="quizYear">
 
-<option value="all">All Years</option>
+<option value="all">
+All Years
+</option>
+
 <option value="2025">2025</option>
+
 <option value="2024">2024</option>
+
 <option value="2023">2023</option>
+
 <option value="2022">2022</option>
+
 <option value="2021">2021</option>
+
 <option value="2020">2020</option>
 
 </select>
 
 
-<select id="quizTopic" onchange="filterQuiz()">
+<select id="quizTopic">
 
-<option value="all">All Topics</option>
-<option value="Constitution">Constitution</option>
-<option value="Polity">Polity</option>
-<option value="Governance">Governance</option>
-<option value="Social Justice">Social Justice</option>
-<option value="International Relations">International Relations</option>
+<option value="all">
+All Topics
+</option>
+
+<option value="Constitution">
+Constitution
+</option>
+
+<option value="Polity">
+Polity
+</option>
+
+<option value="Governance">
+Governance
+</option>
+
+<option value="Social Justice">
+Social Justice
+</option>
+
+<option value="International Relations">
+International Relations
+</option>
 
 </select>
 
@@ -527,7 +805,9 @@ GS-II question will appear here.
 
 <div id="optionsBox"></div>
 
-<div id="answerBox" class="answer-box"></div>
+<div id="answerBox"
+class="answer-box">
+</div>
 
 </div>
 
@@ -547,224 +827,428 @@ GS-II question will appear here.
 </section>
 
 
-<div class="quick-nav">
+<!-- CASE STUDY -->
 
-<h2>⚡ Quick Navigation</h2>
+<section class="case-study" id="caseStudy">
 
-<a href="#2026">2026</a>
-<a href="#2025">2025</a>
-<a href="#2024">2024</a>
-<a href="#2023">2023</a>
-<a href="#2022">2022</a>
-<a href="#2021">2021</a>
-<a href="#2020">2020</a>
+<h2>📚 GS-II Case Study Practice</h2>
+
+<p>
+Practice governance, constitutional and social-justice
+situations using a structured answer approach.
+</p>
+
+
+<div class="case-box">
+
+<strong>Case Study:</strong>
+
+<p>
+A district administration launches a welfare programme for
+vulnerable citizens. However, many eligible beneficiaries are
+unable to access the programme because of documentation,
+digital-access and awareness barriers.
+</p>
+
+<ul>
+
+<li>Identify the major stakeholders.</li>
+
+<li>Identify the governance challenges.</li>
+
+<li>Suggest practical solutions.</li>
+
+<li>Explain how technology can improve access without excluding citizens.</li>
+
+</ul>
 
 </div>
 
 
-<div id="pyqList">
+<div class="case-box">
+
+<strong>Suggested Approach:</strong>
+
+<ul>
+
+<li>Identify the constitutional and governance principles involved.</li>
+
+<li>Consider inclusion and accessibility.</li>
+
+<li>Use transparent and accountable procedures.</li>
+
+<li>Provide both digital and offline access.</li>
+
+<li>Use grievance-redressal mechanisms.</li>
+
+</ul>
+
+</div>
+
+</section>
 
 
-<div class="pyq-card" id="2026">
+<!-- OFFICIAL PAPERS -->
 
-<h2>📅 UPSC Mains GS-II PYQ 2026</h2>
+<section class="pyq-section">
+
+<h2>📄 Official UPSC GS-II Papers</h2>
+
+
+<div class="pyq-grid">
+
+
+<div class="pyq-card"
+id="year2026">
+
+<h3>📅 GS-II 2026</h3>
 
 <p>
-General Studies Paper-II questions covering
-Constitution, Polity, Governance, Social Justice
-and International Relations.
+Civil Services Main Examination 2026 —
+General Studies Paper II.
 </p>
 
 <a
+class="year-btn"
 href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
+target="_blank">
+
+Official UPSC Paper
+
 </a>
 
 </div>
 
 
-<div class="pyq-card" id="2025">
+<div class="pyq-card"
+id="year2025">
 
-<h2>📅 UPSC Mains GS-II PYQ 2025</h2>
+<h3>📅 GS-II 2025</h3>
 
 <p>
-Previous Year questions covering Constitution,
+Civil Services Main Examination 2025 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+<div class="pyq-card"
+id="year2024">
+
+<h3>📅 GS-II 2024</h3>
+
+<p>
+Civil Services Main Examination 2024 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+<div class="pyq-card"
+id="year2023">
+
+<h3>📅 GS-II 2023</h3>
+
+<p>
+Civil Services Main Examination 2023 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+<div class="pyq-card"
+id="year2022">
+
+<h3>📅 GS-II 2022</h3>
+
+<p>
+Civil Services Main Examination 2022 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+<div class="pyq-card"
+id="year2021">
+
+<h3>📅 GS-II 2021</h3>
+
+<p>
+Civil Services Main Examination 2021 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+<div class="pyq-card"
+id="year2020">
+
+<h3>📅 GS-II 2020</h3>
+
+<p>
+Civil Services Main Examination 2020 —
+General Studies Paper II.
+</p>
+
+<a
+class="year-btn"
+href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
+target="_blank">
+
+Official UPSC Paper
+
+</a>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<div class="info-box">
+
+<strong>📌 Important:</strong>
+
+The year buttons open the official UPSC
+Previous Year Question Papers / Archives pages.
+
+The quiz contains model practice questions,
+not verbatim UPSC PYQ text.
+
+</div>
+
+
+<!-- STRATEGY -->
+
+<section class="strategy">
+
+<h2>🎯 GS-II Preparation Strategy</h2>
+
+<ul>
+
+<li>
+Build strong concepts in Constitution, Polity,
 Governance, Social Justice and International Relations.
-</p>
+</li>
 
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
+<li>
+Connect static topics with current affairs.
+</li>
 
-</div>
+<li>
+Use constitutional articles, committees, judgments
+and examples where relevant.
+</li>
 
+<li>
+Practice previous-year questions regularly.
+</li>
 
-<div class="pyq-card" id="2024">
+<li>
+Use headings, subheadings and balanced arguments
+in Mains answers.
+</li>
 
-<h2>📅 UPSC Mains GS-II PYQ 2024</h2>
+<li>
+For governance questions, include practical,
+citizen-centric solutions.
+</li>
 
-<p>
-GS-II questions related to Polity,
-Governance, Social Justice and International Relations.
-</p>
+<li>
+For International Relations, use India's interests,
+regional context and global developments.
+</li>
 
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
+</ul>
 
-</div>
-
-
-<div class="pyq-card" id="2023">
-
-<h2>📅 UPSC Mains GS-II PYQ 2023</h2>
-
-<p>
-Practice the 2023 General Studies Paper-II
-questions for answer-writing preparation.
-</p>
-
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
-
-</div>
+</section>
 
 
-<div class="pyq-card" id="2022">
+<!-- MAJOR AREAS -->
 
-<h2>📅 UPSC Mains GS-II PYQ 2022</h2>
+<section class="major-areas">
+
+<h2>📚 Major GS-II Areas</h2>
+
+
+<div class="area-grid">
+
+
+<div class="area">
+
+<strong>🏛️ Constitution</strong>
 
 <p>
-Previous Year GS-II questions covering
-Constitution, Governance and International Relations.
+Constitutional provisions, amendments,
+rights and institutions.
 </p>
-
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
 
 </div>
 
 
-<div class="pyq-card" id="2021">
+<div class="area">
 
-<h2>📅 UPSC Mains GS-II PYQ 2021</h2>
+<strong>⚖️ Polity</strong>
 
 <p>
-Practice GS-II questions and analyse important
-themes from Polity, Governance and International Relations.
+Parliament, Judiciary, Executive,
+federalism and constitutional bodies.
 </p>
-
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
 
 </div>
 
 
-<div class="pyq-card" id="2020">
+<div class="area">
 
-<h2>📅 UPSC Mains GS-II PYQ 2020</h2>
+<strong>🧑‍💼 Governance</strong>
 
 <p>
-General Studies Paper-II previous year questions
-for revision and answer-writing practice.
+Transparency, accountability,
+e-governance and citizen participation.
 </p>
 
-<a
-href="https://www.upsc.gov.in/examinations/previous-question-papers/archives"
-target="_blank"
-class="pyq-btn"
->
-Official UPSC Questions →
-</a>
-
-</div>
-
 </div>
 
 
-<div class="info">
+<div class="area">
 
-<strong>📌 How to use GS-II PYQs:</strong>
+<strong>🤝 Social Justice</strong>
 
-<br><br>
-
-1. Study Constitution and Polity topics with PYQs.<br>
-
-2. Identify recurring themes in Governance and Social Justice.<br>
-
-3. Connect International Relations questions with current affairs.<br>
-
-4. Practice writing answers within the prescribed time.<br>
-
-5. Analyse the demand of each question before writing the answer.
+<p>
+Welfare schemes, vulnerable groups,
+health, education and inclusion.
+</p>
 
 </div>
 
+
+<div class="area">
+
+<strong>🌍 International Relations</strong>
+
+<p>
+India's relations, neighbourhood,
+global institutions and diplomacy.
+</p>
+
+</div>
+
+
+</div>
+
+</section>
+
+
+<!-- BOTTOM NAV -->
 
 <div class="bottom-nav">
 
-<a href="index.html">🏠 Home</a>
+<a href="index.html">
+🏠 Home
+</a>
 
-<a href="prelims.html">📚 Prelims</a>
+<a href="prelims.html">
+📘 Prelims
+</a>
 
-<a href="csat.html">🧠 CSAT</a>
+<a href="csat.html">
+🧠 CSAT
+</a>
 
-<a href="mains.html">📝 Mains</a>
+<a href="mains.html">
+✍️ Mains
+</a>
 
-<a href="pyq.html">📖 PYQ</a>
+<a href="pyq.html">
+📚 PYQ
+</a>
 
-<a href="prelims-pyq.html">📄 Prelims PYQ</a>
+<a href="mains-gs1-pyq.html">
+GS-I
+</a>
 
-<a href="csat-pyq.html">🧠 CSAT PYQ</a>
+<a href="mains-gs3-pyq.html">
+GS-III
+</a>
 
-<a href="mains-gs1-pyq.html">✍️ GS-I PYQ</a>
-
-<a href="mains-gs3-pyq.html">📊 GS-III PYQ</a>
-
-<a href="polity.html">🏛️ Polity</a>
+<a href="mains-gs4-pyq.html">
+GS-IV
+</a>
 
 </div>
 
-</div>
+</main>
 
 
-<button id="topBtn" onclick="topFunction()">
+<button
+id="backTop"
+onclick="topFunction()">
+
 ↑
+
 </button>
 
 
 <footer>
 
-<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+<p>
+🇮🇳 <strong>UPSC Shiksha</strong>
+</p>
 
 <p>
-Free UPSC Study Material & PYQ Platform
+Free UPSC Preparation • Syllabus • PYQs • Tests • Current Affairs
 </p>
 
 <p>
@@ -782,246 +1266,541 @@ Free UPSC Study Material & PYQ Platform
 
 const quizQuestions = [
 
+/* CONSTITUTION */
+
 {
 year:"2025",
 topic:"Constitution",
-question:"Why is constitutionalism important in a democratic system?",
+question:"The principle of constitutionalism primarily emphasises:",
 options:[
-"To give unlimited power to the executive",
-"To ensure government power is limited by constitutional principles",
-"To remove judicial review",
-"To eliminate fundamental rights"
+"Limited government under constitutional rules",
+"Unlimited executive authority",
+"Removal of judicial review",
+"Suspension of all fundamental rights"
 ],
-answer:1,
-explanation:"Constitutionalism emphasises limited government, rule of law, rights and institutional checks."
+answer:0,
+explanation:"Constitutionalism emphasises limited government, constitutional rules, rights and institutional checks."
 },
 
 {
 year:"2024",
-topic:"Polity",
-question:"Which principle is most closely associated with the rule of law?",
+topic:"Constitution",
+question:"Constitutional morality broadly refers to:",
 options:[
-"Government action must operate within the law",
-"Executive power is always unlimited",
-"Courts cannot review government action",
-"Only elected representatives are subject to law"
+"Respecting constitutional values and procedures",
+"Following only personal preferences",
+"Ignoring constitutional institutions",
+"Replacing law with administrative orders"
 ],
 answer:0,
-explanation:"The rule of law requires public authorities and citizens to operate within the legal framework."
+explanation:"Constitutional morality involves respecting constitutional values, procedures and institutional principles."
 },
 
 {
 year:"2023",
 topic:"Constitution",
-question:"What is the primary purpose of separation of powers?",
+question:"Fundamental Rights primarily protect:",
 options:[
-"To concentrate power in one institution",
-"To distribute governmental functions and create checks",
-"To abolish the legislature",
-"To make the judiciary subordinate to the executive"
+"Individual freedoms and equality under the Constitution",
+"Only government institutions",
+"Only economic production",
+"Only international relations"
 ],
-answer:1,
-explanation:"Separation of powers distributes functions among institutions and helps prevent excessive concentration of power."
+answer:0,
+explanation:"Fundamental Rights protect important freedoms, equality and individual interests against unconstitutional state action."
+},
+
+{
+year:"2022",
+topic:"Constitution",
+question:"Judicial review enables courts to:",
+options:[
+"Examine the constitutional validity of laws and executive actions",
+"Create the annual budget",
+"Conduct elections directly",
+"Replace Parliament in all matters"
+],
+answer:0,
+explanation:"Judicial review allows courts to examine whether laws and executive actions conform to the Constitution."
+},
+
+{
+year:"2021",
+topic:"Constitution",
+question:"The basic structure doctrine is associated with:",
+options:[
+"Limits on Parliament's power to alter the Constitution",
+"Unlimited amendment power",
+"Abolition of judicial review",
+"Removal of fundamental rights"
+],
+answer:0,
+explanation:"The basic structure doctrine holds that Parliament's amendment power cannot destroy the Constitution's basic structure."
+},
+
+{
+year:"2020",
+topic:"Constitution",
+question:"Federalism generally involves:",
+options:[
+"Constitutional distribution of powers between levels of government",
+"Only one level of government",
+"Complete abolition of state governments",
+"Exclusive local government authority"
+],
+answer:0,
+explanation:"Federal systems distribute governmental powers between different levels according to constitutional arrangements."
+},
+
+
+/* POLITY */
+
+{
+year:"2025",
+topic:"Polity",
+question:"Parliamentary accountability is strengthened when:",
+options:[
+"The executive remains answerable to the legislature",
+"Legislative scrutiny is completely removed",
+"Questions cannot be asked in Parliament",
+"Public expenditure is never examined"
+],
+answer:0,
+explanation:"Parliamentary accountability includes legislative questioning, debate, committees and scrutiny of executive action."
+},
+
+{
+year:"2024",
+topic:"Polity",
+question:"The rule of law means that:",
+options:[
+"Government authority is exercised according to law",
+"Officials are above the law",
+"Only citizens must follow laws",
+"Laws apply only during elections"
+],
+answer:0,
+explanation:"The rule of law requires lawful exercise of public authority and equality before the law."
+},
+
+{
+year:"2023",
+topic:"Polity",
+question:"Separation of powers primarily aims to:",
+options:[
+"Prevent concentration of governmental power",
+"Give all power to one institution",
+"Remove judicial independence",
+"End legislative scrutiny"
+],
+answer:0,
+explanation:"Separation of powers distributes functions and creates institutional checks against excessive concentration of power."
 },
 
 {
 year:"2022",
 topic:"Polity",
-question:"Why is parliamentary accountability important?",
+question:"Parliamentary committees are important because they:",
 options:[
-"It removes legislative scrutiny",
-"It enables the executive to function without questions",
-"It makes the executive answerable to the legislature",
-"It prevents public debate"
+"Provide detailed legislative and administrative scrutiny",
+"Replace the Supreme Court",
+"Conduct all elections",
+"Control every local government"
 ],
-answer:2,
-explanation:"Parliamentary accountability allows elected representatives to question and scrutinise executive actions."
+answer:0,
+explanation:"Parliamentary committees allow detailed examination of bills, expenditure and government functioning."
+},
+
+{
+year:"2021",
+topic:"Polity",
+question:"Cooperative federalism refers to:",
+options:[
+"Cooperation between different levels of government",
+"Complete centralisation of all powers",
+"Elimination of state governments",
+"Only local government administration"
+],
+answer:0,
+explanation:"Cooperative federalism emphasises collaboration between Union and State governments."
+},
+
+{
+year:"2020",
+topic:"Polity",
+question:"An independent judiciary is important because it:",
+options:[
+"Helps protect constitutional rights and the rule of law",
+"Removes the Constitution",
+"Controls all government departments",
+"Conducts legislative elections"
+],
+answer:0,
+explanation:"Judicial independence supports constitutional adjudication, rights protection and the rule of law."
+},
+
+
+/* GOVERNANCE */
+
+{
+year:"2025",
+topic:"Governance",
+question:"Citizen participation can improve governance by:",
+options:[
+"Making public decision-making more responsive",
+"Removing accountability",
+"Preventing public feedback",
+"Reducing transparency"
+],
+answer:0,
+explanation:"Citizen participation can improve responsiveness, accountability and understanding of local needs."
+},
+
+{
+year:"2024",
+topic:"Governance",
+question:"Transparency in administration helps to:",
+options:[
+"Improve accountability and public trust",
+"Hide public information",
+"Prevent audits",
+"Reduce institutional responsibility"
+],
+answer:0,
+explanation:"Transparency enables citizens and institutions to scrutinise public decisions and expenditure."
+},
+
+{
+year:"2023",
+topic:"Governance",
+question:"E-governance can improve public services by:",
+options:[
+"Using digital systems to improve access and efficiency",
+"Removing all grievance mechanisms",
+"Preventing citizens from accessing information",
+"Eliminating accountability"
+],
+answer:0,
+explanation:"E-governance can improve accessibility, speed and transparency when implemented inclusively."
+},
+
+{
+year:"2022",
+topic:"Governance",
+question:"Social audit is mainly associated with:",
+options:[
+"Community-based scrutiny of programme implementation",
+"Secret government decision-making",
+"Only judicial proceedings",
+"Only international diplomacy"
+],
+answer:0,
+explanation:"Social audits allow communities to examine implementation, expenditure and outcomes of public programmes."
 },
 
 {
 year:"2021",
 topic:"Governance",
-question:"Which approach can improve transparency in public administration?",
+question:"Good governance generally includes:",
 options:[
-"Reducing access to public information",
-"Strengthening disclosure and accountability mechanisms",
-"Removing citizen participation",
-"Restricting institutional oversight"
+"Transparency, accountability, responsiveness and participation",
+"Secrecy and arbitrary decisions",
+"Absence of citizen participation",
+"Unlimited administrative discretion"
 ],
-answer:1,
-explanation:"Transparency improves when information disclosure, accountability and oversight mechanisms are strengthened."
+answer:0,
+explanation:"Good governance is commonly associated with accountability, transparency, participation, responsiveness and effectiveness."
 },
 
 {
 year:"2020",
-topic:"Social Justice",
-question:"Why is social justice important for inclusive development?",
+topic:"Governance",
+question:"Grievance redressal mechanisms are important because they:",
 options:[
-"It focuses only on economic growth",
-"It seeks fair access to opportunities and public resources",
-"It eliminates all differences between citizens",
-"It removes the role of public institutions"
+"Provide citizens a channel to raise and resolve service-related complaints",
+"Prevent citizens from contacting authorities",
+"Remove administrative accountability",
+"Replace all courts"
 ],
-answer:1,
-explanation:"Social justice focuses on reducing exclusion and ensuring fair access to opportunities and essential services."
+answer:0,
+explanation:"Effective grievance redressal gives citizens a structured mechanism to report problems and seek resolution."
 },
+
+
+/* SOCIAL JUSTICE */
 
 {
 year:"2025",
-topic:"Governance",
-question:"What is a major benefit of citizen participation in governance?",
+topic:"Social Justice",
+question:"Inclusive development requires:",
 options:[
-"It can improve responsiveness of public institutions",
-"It eliminates the need for administration",
-"It prevents policy evaluation",
-"It removes accountability"
+"Ensuring disadvantaged groups can access opportunities and services",
+"Excluding vulnerable groups",
+"Only increasing aggregate GDP",
+"Reducing access to education"
 ],
 answer:0,
-explanation:"Citizen participation can help institutions understand public needs and improve responsiveness and accountability."
+explanation:"Inclusive development focuses on participation and access for disadvantaged and vulnerable groups."
 },
 
 {
 year:"2024",
 topic:"Social Justice",
-question:"Which measure can help improve access to social welfare programmes?",
+question:"Universal access to healthcare is important because:",
 options:[
-"Reducing awareness about schemes",
-"Improving last-mile delivery and accessibility",
-"Restricting eligibility information",
-"Reducing institutional monitoring"
+"It can reduce barriers to essential health services",
+"It eliminates every disease",
+"It removes the need for public health systems",
+"It only benefits urban populations"
 ],
-answer:1,
-explanation:"Better last-mile delivery, awareness and accessibility can improve citizens' ability to benefit from welfare programmes."
+answer:0,
+explanation:"Accessible healthcare can reduce financial, geographic and social barriers to essential services."
 },
 
 {
 year:"2023",
-topic:"International Relations",
-question:"Why are regional organisations important in international relations?",
+topic:"Social Justice",
+question:"Social empowerment of vulnerable groups involves:",
 options:[
-"They can facilitate cooperation among neighbouring countries",
-"They eliminate national sovereignty",
-"They prevent diplomatic engagement",
-"They replace all global institutions"
+"Expanding rights, opportunities, participation and capabilities",
+"Reducing representation",
+"Restricting education",
+"Preventing participation"
+],
+answer:0,
+explanation:"Empowerment involves improving rights, capabilities, opportunities and participation."
+},
+
+{
+year:"2022",
+topic:"Social Justice",
+question:"Quality education contributes to social justice by:",
+options:[
+"Expanding capabilities and opportunities",
+"Reducing social mobility",
+"Restricting access",
+"Preventing skill development"
+],
+answer:0,
+explanation:"Quality education can expand capabilities, employment opportunities and social mobility."
+},
+
+{
+year:"2021",
+topic:"Social Justice",
+question:"Social protection programmes primarily aim to:",
+options:[
+"Reduce vulnerability and support basic well-being",
+"Increase exclusion",
+"Prevent access to welfare",
+"Eliminate public services"
+],
+answer:0,
+explanation:"Social protection can reduce vulnerability caused by poverty, unemployment, disability and other risks."
+},
+
+{
+year:"2020",
+topic:"Social Justice",
+question:"Gender equality in development requires:",
+options:[
+"Equal opportunities, rights and participation",
+"Restricting women's participation",
+"Reducing access to education",
+"Removing legal protections"
+],
+answer:0,
+explanation:"Gender equality requires equal rights, opportunities, participation and protection from discrimination."
+},
+
+
+/* INTERNATIONAL RELATIONS */
+
+{
+year:"2025",
+topic:"International Relations",
+question:"Regional organisations can help countries by:",
+options:[
+"Promoting cooperation on shared regional issues",
+"Ending all bilateral relations",
+"Removing national sovereignty",
+"Preventing diplomatic engagement"
 ],
 answer:0,
 explanation:"Regional organisations provide platforms for cooperation on economic, political, security and social issues."
 },
 
 {
+year:"2024",
+topic:"International Relations",
+question:"Diplomatic engagement is important because it can:",
+options:[
+"Help manage differences and promote cooperation",
+"Guarantee that conflicts never occur",
+"Eliminate all national interests",
+"End international trade"
+],
+answer:0,
+explanation:"Diplomacy provides mechanisms for dialogue, negotiation and cooperation despite differences."
+},
+
+{
+year:"2023",
+topic:"International Relations",
+question:"Multilateral institutions are important because they:",
+options:[
+"Provide platforms for countries to address shared global issues",
+"Remove all national governments",
+"End international cooperation",
+"Prevent negotiations"
+],
+answer:0,
+explanation:"Multilateral institutions facilitate cooperation and collective responses to issues crossing national boundaries."
+},
+
+{
 year:"2022",
 topic:"International Relations",
-question:"What is an important objective of diplomatic engagement?",
+question:"Soft power refers mainly to the ability to:",
 options:[
-"To permanently prevent negotiations",
-"To manage differences and pursue cooperation",
-"To eliminate international trade",
-"To avoid communication between states"
+"Attract and influence through culture, values and policies",
+"Use only military force",
+"Control another country directly",
+"End diplomatic relations"
 ],
-answer:1,
-explanation:"Diplomacy helps states manage differences, negotiate interests and develop areas of cooperation."
+answer:0,
+explanation:"Soft power is associated with attraction and influence through culture, values, institutions and policies."
 },
 
 {
 year:"2021",
-topic:"Governance",
-question:"How can digital governance improve public service delivery?",
+topic:"International Relations",
+question:"International cooperation on climate change is necessary because:",
 options:[
-"By reducing access to government services",
-"By enabling faster and more accessible service delivery",
-"By eliminating accountability",
-"By preventing feedback"
+"Climate impacts cross national boundaries",
+"Climate change affects only one country",
+"National borders stop atmospheric processes",
+"Only one country produces greenhouse gases"
 ],
-answer:1,
-explanation:"Digital platforms can make services faster, more accessible and easier to monitor when properly implemented."
+answer:0,
+explanation:"Climate change is a transboundary problem requiring international cooperation."
 },
 
 {
 year:"2020",
-topic:"Constitution",
-question:"Why are Fundamental Rights important in a constitutional democracy?",
+topic:"International Relations",
+question:"A country's foreign policy generally seeks to:",
 options:[
-"They protect citizens against arbitrary state action",
-"They give unlimited power to government",
-"They remove judicial remedies",
-"They apply only to government officials"
+"Protect national interests while managing international relationships",
+"End all international relations",
+"Ignore national security",
+"Prevent international cooperation"
 ],
 answer:0,
-explanation:"Fundamental Rights provide constitutional protections for individual liberty and help limit arbitrary state action."
+explanation:"Foreign policy seeks to advance national interests through diplomatic, economic, security and other external relationships."
 }
 
 ];
 
 
-let filteredQuestions=[...quizQuestions];
+/* =========================
+   QUIZ ENGINE
+========================= */
 
-let currentQuestion=0;
+let filteredQuestions =
+[...quizQuestions];
 
-let score=0;
+let currentQuestion = 0;
 
-let answered=false;
+let score = 0;
+
+let answered = false;
 
 
-/* LOAD QUESTION */
+const quizYear =
+document.getElementById("quizYear");
+
+const quizTopic =
+document.getElementById("quizTopic");
+
+const questionText =
+document.getElementById("questionText");
+
+const optionsBox =
+document.getElementById("optionsBox");
+
+const answerBox =
+document.getElementById("answerBox");
+
+const questionNumber =
+document.getElementById("questionNumber");
+
+const quizScore =
+document.getElementById("quizScore");
+
 
 function loadQuestion(){
 
-const question=filteredQuestions[currentQuestion];
+if(!filteredQuestions.length){
 
-if(!question){
+questionNumber.textContent =
+"Question 0";
 
-document.getElementById("questionText").innerText=
-"Quiz completed!";
+quizScore.textContent =
+"Score: 0";
 
-document.getElementById("optionsBox").innerHTML="";
+questionText.textContent =
+"No questions found for this filter.";
 
-document.getElementById("answerBox").style.display="block";
+optionsBox.innerHTML = "";
 
-document.getElementById("answerBox").innerHTML=
-"<strong>🎉 Quiz Completed!</strong><br><br>"+
-"Your final score is <strong>"+
-score+
-" / "+
-filteredQuestions.length+
-"</strong>.<br><br>"+
-"Review the official UPSC papers and practise answer writing.";
+answerBox.style.display =
+"none";
 
 return;
 
 }
 
-answered=false;
+const q =
+filteredQuestions[currentQuestion];
 
-document.getElementById("questionNumber").innerText=
-"Question "+
-(currentQuestion+1)+
-" / "+
+answered = false;
+
+questionNumber.textContent =
+"Question " +
+(currentQuestion + 1) +
+" / " +
 filteredQuestions.length;
 
-document.getElementById("quizScore").innerText=
-"Score: "+
-score;
+quizScore.textContent =
+"Score: " + score;
 
-document.getElementById("questionText").innerText=
-question.question;
+questionText.textContent =
+q.question;
 
-const optionsBox=
-document.getElementById("optionsBox");
+optionsBox.innerHTML = "";
 
-optionsBox.innerHTML="";
+answerBox.style.display =
+"none";
 
-question.options.forEach(function(option,index){
+answerBox.innerHTML = "";
 
-const button=document.createElement("button");
 
-button.className="option-btn";
+q.options.forEach(function(option,index){
 
-button.innerText=
-String.fromCharCode(65+index)+
-". "+
-option;
+const button =
+document.createElement("button");
 
-button.onclick=function(){
+button.className =
+"option-btn";
+
+button.textContent =
+String.fromCharCode(65 + index)
++ ". "
++ option;
+
+button.onclick =
+function(){
 
 checkAnswer(index,button);
 
@@ -1031,163 +1810,206 @@ optionsBox.appendChild(button);
 
 });
 
-document.getElementById("answerBox").style.display="none";
-
-document.getElementById("answerBox").innerHTML="";
-
 }
 
 
-/* CHECK ANSWER */
-
-function checkAnswer(selected,button){
+function checkAnswer(
+selected,
+clickedButton
+){
 
 if(answered){
 return;
 }
 
-answered=true;
+answered = true;
 
-const question=
+const q =
 filteredQuestions[currentQuestion];
 
-const buttons=
-document.querySelectorAll(".option-btn");
+const buttons =
+document.querySelectorAll(
+".option-btn"
+);
 
-buttons.forEach(function(btn){
-btn.disabled=true;
+
+buttons.forEach(
+function(button,index){
+
+button.disabled = true;
+
+if(index === q.answer){
+
+button.classList.add(
+"correct"
+);
+
+}
+
 });
 
-if(selected===question.answer){
 
-button.classList.add("correct");
+if(selected === q.answer){
 
 score++;
 
-}else{
+clickedButton.classList.add(
+"correct"
+);
 
-button.classList.add("wrong");
-
-buttons[question.answer].classList.add("correct");
-
-}
-
-document.getElementById("quizScore").innerText=
-"Score: "+
-score;
-
-const answerBox=
-document.getElementById("answerBox");
-
-answerBox.style.display="block";
-
-answerBox.innerHTML=
-"<strong>Explanation:</strong><br>"+
-question.explanation;
-
-}
-
-
-/* NEXT */
-
-document.getElementById("nextQuestion")
-.addEventListener("click",function(){
-
-if(currentQuestion<
-filteredQuestions.length-1){
-
-currentQuestion++;
-
-loadQuestion();
+answerBox.innerHTML =
+"<strong>✅ Correct!</strong><br><br>"
++
+q.explanation;
 
 }else{
 
-currentQuestion++;
+clickedButton.classList.add(
+"wrong"
+);
 
-loadQuestion();
+answerBox.innerHTML =
+"<strong>❌ Incorrect.</strong><br><br>"
++
+"<strong>Correct Answer:</strong> "
++
+String.fromCharCode(
+65 + q.answer
+)
++
+". "
++
+q.options[q.answer]
++
+"<br><br>"
++
+q.explanation;
 
 }
 
-});
+answerBox.style.display =
+"block";
 
+quizScore.textContent =
+"Score: " + score;
 
-/* RESTART */
+}
 
-document.getElementById("restartQuiz")
-.addEventListener("click",function(){
-
-currentQuestion=0;
-
-score=0;
-
-loadQuestion();
-
-});
-
-
-/* FILTER */
 
 function filterQuiz(){
 
-const selectedYear=
-document.getElementById("quizYear").value;
+const selectedYear =
+quizYear.value;
 
-const selectedTopic=
-document.getElementById("quizTopic").value;
+const selectedTopic =
+quizTopic.value;
 
-filteredQuestions=
+
+filteredQuestions =
 quizQuestions.filter(function(q){
 
-const yearMatch=
-selectedYear==="all" ||
-q.year===selectedYear;
+const yearMatch =
+selectedYear === "all"
+||
+q.year === selectedYear;
 
-const topicMatch=
-selectedTopic==="all" ||
-q.topic===selectedTopic;
+const topicMatch =
+selectedTopic === "all"
+||
+q.topic === selectedTopic;
 
 return yearMatch && topicMatch;
 
 });
 
-currentQuestion=0;
 
-score=0;
+currentQuestion = 0;
+
+score = 0;
 
 loadQuestion();
 
 }
 
 
-/* INITIAL LOAD */
+quizYear.addEventListener(
+"change",
+filterQuiz
+);
+
+quizTopic.addEventListener(
+"change",
+filterQuiz
+);
+
+
+document.getElementById(
+"nextQuestion"
+).addEventListener(
+"click",
+function(){
+
+if(!filteredQuestions.length){
+return;
+}
+
+currentQuestion++;
+
+if(
+currentQuestion >=
+filteredQuestions.length
+){
+
+currentQuestion = 0;
+
+}
 
 loadQuestion();
+
+});
+
+
+document.getElementById(
+"restartQuiz"
+).addEventListener(
+"click",
+function(){
+
+currentQuestion = 0;
+
+score = 0;
+
+loadQuestion();
+
+});
 
 
 /* SEARCH */
 
-const searchBox=
-document.getElementById("searchBox");
-
-searchBox.addEventListener(
+document.getElementById(
+"searchInput"
+).addEventListener(
 "input",
 function(){
 
-const search=
+const search =
 this.value.toLowerCase();
 
-const cards=
-document.querySelectorAll(".pyq-card");
+const cards =
+document.querySelectorAll(
+".pyq-card"
+);
 
-cards.forEach(function(card){
+cards.forEach(
+function(card){
 
-const text=
+const text =
 card.innerText.toLowerCase();
 
-card.style.display=
+card.style.display =
 text.includes(search)
-?"block"
-:"none";
+? "block"
+: "none";
 
 });
 
@@ -1198,46 +2020,61 @@ text.includes(search)
 
 function toggleDarkMode(){
 
-document.body.classList.toggle("dark");
+document.body.classList.toggle(
+"dark"
+);
 
 localStorage.setItem(
 "mainsGs2PyqDarkMode",
-document.body.classList.contains("dark")
+document.body.classList.contains(
+"dark"
+)
 );
 
 }
 
 
 if(
-localStorage.getItem("mainsGs2PyqDarkMode")
-==="true"
+localStorage.getItem(
+"mainsGs2PyqDarkMode"
+) === "true"
 ){
 
-document.body.classList.add("dark");
+document.body.classList.add(
+"dark"
+);
 
 }
 
 
-/* TOP BUTTON */
+/* BACK TO TOP */
 
-const topBtn=
-document.getElementById("topBtn");
+const backTop =
+document.getElementById(
+"backTop"
+);
 
-window.addEventListener(
-"scroll",
+
+window.onscroll =
 function(){
 
-if(window.scrollY>300){
+if(
+document.body.scrollTop > 300
+||
+document.documentElement.scrollTop > 300
+){
 
-topBtn.style.display="block";
+backTop.style.display =
+"block";
 
 }else{
 
-topBtn.style.display="none";
+backTop.style.display =
+"none";
 
 }
 
-});
+};
 
 
 function topFunction(){
@@ -1251,6 +2088,11 @@ behavior:"smooth"
 });
 
 }
+
+
+/* INITIAL QUESTION */
+
+loadQuestion();
 
 </script>
 
