@@ -1,0 +1,1493 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>History Mind Map | UPSC Shiksha</title>
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fb;
+  color:#172033;
+  line-height:1.6;
+  transition:.3s;
+}
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:#fff;
+  padding:13px 15px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  box-shadow:0 2px 12px rgba(0,0,0,.1);
+}
+
+.logo{
+  font-size:19px;
+  font-weight:bold;
+}
+
+.header-buttons{
+  display:flex;
+  gap:7px;
+}
+
+button,
+.home-btn{
+  border:0;
+  border-radius:10px;
+  padding:9px 12px;
+  background:#172033;
+  color:#fff;
+  font-weight:bold;
+  cursor:pointer;
+  text-decoration:none;
+}
+
+.hero{
+  text-align:center;
+  padding:42px 15px 30px;
+  background:linear-gradient(135deg,#fff4e8,#ffffff);
+}
+
+.badge{
+  display:inline-block;
+  padding:6px 13px;
+  border-radius:20px;
+  background:#fff0dc;
+  color:#9a5712;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:31px;
+  margin-bottom:8px;
+}
+
+.hero p{
+  color:#667085;
+  max-width:750px;
+  margin:auto;
+}
+
+.container{
+  width:min(1100px,94%);
+  margin:auto;
+}
+
+.search{
+  margin:20px auto;
+  max-width:650px;
+}
+
+.search input{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #d8dee8;
+  border-radius:12px;
+  font-size:16px;
+  outline:none;
+}
+
+/* MIND MAP */
+
+.map-box{
+  background:#fff;
+  border-radius:20px;
+  padding:25px 12px 35px;
+  box-shadow:0 5px 25px rgba(0,0,0,.08);
+  margin:25px auto;
+}
+
+.map-heading{
+  text-align:center;
+  margin-bottom:20px;
+}
+
+.map-heading p{
+  color:#667085;
+  font-size:14px;
+}
+
+.map{
+  position:relative;
+  max-width:1000px;
+  min-height:650px;
+  margin:auto;
+}
+
+.center{
+  position:absolute;
+  left:50%;
+  top:50%;
+  transform:translate(-50%,-50%);
+  width:175px;
+  height:95px;
+  background:#172033;
+  color:#fff;
+  border-radius:23px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-direction:column;
+  text-align:center;
+  z-index:5;
+  box-shadow:0 12px 30px rgba(0,0,0,.2);
+  animation:pulse 3s infinite;
+}
+
+.center strong{
+  font-size:20px;
+}
+
+.center small{
+  opacity:.8;
+}
+
+.node{
+  position:absolute;
+  width:150px;
+  min-height:75px;
+  padding:10px;
+  background:#fff;
+  border:2px solid #e1e6ef;
+  border-radius:17px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  font-weight:bold;
+  cursor:pointer;
+  z-index:4;
+  box-shadow:0 5px 16px rgba(0,0,0,.08);
+  transition:.3s;
+  animation:float 4s ease-in-out infinite;
+}
+
+.node:hover{
+  transform:scale(1.06) translateY(-4px);
+  box-shadow:0 12px 25px rgba(0,0,0,.15);
+}
+
+.node span{
+  display:block;
+  font-size:24px;
+}
+
+.n1{top:3%;left:50%;transform:translateX(-50%);}
+.n2{top:17%;left:3%;}
+.n3{top:17%;right:3%;}
+.n4{top:42%;left:0;}
+.n5{top:42%;right:0;}
+.n6{bottom:13%;left:5%;}
+.n7{bottom:13%;right:5%;}
+.n8{bottom:2%;left:50%;transform:translateX(-50%);}
+
+.details{
+  display:none;
+  background:#fff9ef;
+  border-left:5px solid #d77b16;
+  padding:22px;
+  border-radius:15px;
+  max-width:850px;
+  margin:25px auto 0;
+  animation:slideIn .3s ease;
+}
+
+.details.show{
+  display:block;
+}
+
+.details h3{
+  margin-bottom:8px;
+}
+
+.details p{
+  color:#596579;
+}
+
+.details ul{
+  margin:10px 0 0 20px;
+}
+
+/* SECTIONS */
+
+.section{
+  background:#fff;
+  padding:25px;
+  border-radius:18px;
+  margin:22px auto;
+  box-shadow:0 4px 18px rgba(0,0,0,.06);
+}
+
+.section h2{
+  margin-bottom:8px;
+}
+
+.section-intro{
+  color:#667085;
+  margin-bottom:18px;
+}
+
+/* VISUAL NOTE */
+
+.visual-card{
+  background:linear-gradient(135deg,#fff4df,#f7e8d2);
+  border-radius:18px;
+  min-height:190px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-align:center;
+  padding:25px;
+  margin:15px 0 20px;
+  font-size:60px;
+}
+
+.visual-card div{
+  font-size:16px;
+  font-weight:bold;
+  margin-top:10px;
+}
+
+/* TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:550px;
+  margin-top:12px;
+}
+
+th,
+td{
+  border:1px solid #cfd5df;
+  padding:12px;
+  text-align:left;
+  vertical-align:top;
+}
+
+th{
+  background:#f0f3f8;
+  font-weight:bold;
+}
+
+/* TIMELINE */
+
+.timeline{
+  display:grid;
+  gap:12px;
+}
+
+.event{
+  background:#f7f9fc;
+  border-left:5px solid #315bb5;
+  padding:14px;
+  border-radius:10px;
+}
+
+.event strong{
+  display:block;
+  margin-bottom:4px;
+}
+
+/* QUICK REVISION */
+
+.revision-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.revision{
+  padding:15px;
+  border:1px solid #dce2eb;
+  border-radius:12px;
+  background:#fafbfc;
+}
+
+.revision strong{
+  display:block;
+  margin-bottom:5px;
+}
+
+/* DARK */
+
+body.dark{
+  background:#101722;
+  color:#f1f5fb;
+}
+
+body.dark header,
+body.dark .map-box,
+body.dark .section{
+  background:#182230;
+}
+
+body.dark .hero{
+  background:linear-gradient(135deg,#151d29,#182230);
+}
+
+body.dark .hero p,
+body.dark .section-intro,
+body.dark .map-heading p,
+body.dark .details p{
+  color:#bbc5d4;
+}
+
+body.dark .search input{
+  background:#111a27;
+  color:#fff;
+  border-color:#39475a;
+}
+
+body.dark .node{
+  background:#202c3c;
+  color:#fff;
+  border-color:#3b4a61;
+}
+
+body.dark .details{
+  background:#29291f;
+}
+
+body.dark .visual-card{
+  background:linear-gradient(135deg,#30281d,#3a3024);
+}
+
+body.dark th{
+  background:#253142;
+}
+
+body.dark th,
+body.dark td{
+  border-color:#465365;
+}
+
+body.dark .event,
+body.dark .revision{
+  background:#202c3c;
+  border-color:#3b4a61;
+}
+
+/* BUTTON NAV */
+
+.quick-nav{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:10px;
+}
+
+.quick-nav button{
+  background:#fff;
+  color:#172033;
+  border:1px solid #dce2eb;
+}
+
+/* TOP */
+
+#topBtn{
+  display:none;
+  position:fixed;
+  right:18px;
+  bottom:18px;
+  width:48px;
+  height:48px;
+  border-radius:50%;
+  z-index:999;
+}
+
+/* ANIMATION */
+
+@keyframes pulse{
+  0%,100%{
+    box-shadow:0 12px 30px rgba(0,0,0,.2);
+  }
+  50%{
+    box-shadow:0 12px 38px rgba(215,123,22,.35);
+  }
+}
+
+@keyframes float{
+  0%,100%{
+    margin-top:0;
+  }
+  50%{
+    margin-top:-4px;
+  }
+}
+
+@keyframes slideIn{
+  from{
+    opacity:0;
+    transform:translateY(10px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  .logo{
+    font-size:16px;
+  }
+
+  .header-buttons button,
+  .home-btn{
+    font-size:12px;
+    padding:8px 9px;
+  }
+
+  .hero{
+    padding:32px 13px 25px;
+  }
+
+  .hero h1{
+    font-size:25px;
+  }
+
+  .map-box{
+    padding:18px 8px 25px;
+  }
+
+  .map{
+    min-height:780px;
+  }
+
+  .center{
+    width:145px;
+    height:80px;
+  }
+
+  .center strong{
+    font-size:17px;
+  }
+
+  .node{
+    width:120px;
+    min-height:67px;
+    font-size:12px;
+    padding:7px;
+  }
+
+  .node span{
+    font-size:20px;
+  }
+
+  .n1{
+    top:2%;
+  }
+
+  .n2{
+    top:17%;
+    left:0;
+  }
+
+  .n3{
+    top:17%;
+    right:0;
+  }
+
+  .n4{
+    top:40%;
+    left:0;
+  }
+
+  .n5{
+    top:40%;
+    right:0;
+  }
+
+  .n6{
+    bottom:16%;
+    left:0;
+  }
+
+  .n7{
+    bottom:16%;
+    right:0;
+  }
+
+  .n8{
+    bottom:2%;
+  }
+
+  .section{
+    padding:20px 16px;
+  }
+
+  .revision-grid{
+    grid-template-columns:1fr;
+  }
+
+  .quick-nav{
+    grid-template-columns:1fr 1fr;
+  }
+
+  table{
+    min-width:520px;
+  }
+
+}
+
+@media(prefers-reduced-motion:reduce){
+
+  *,
+  *::before,
+  *::after{
+    animation:none!important;
+    transition:none!important;
+    scroll-behavior:auto!important;
+  }
+
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+  <div class="header-buttons">
+    <a href="index.html" class="home-btn">🏠 Home</a>
+    <button onclick="toggleDark()">🌙</button>
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <div class="badge">🧠 UPSC GS-I Interactive Notes</div>
+
+  <h1>📜 History Interactive Mind Map</h1>
+
+  <p>
+    Ancient History • Medieval History • Modern History •
+    Freedom Struggle • Art & Culture
+  </p>
+
+</section>
+
+<main class="container">
+
+<div class="search">
+
+  <input
+    type="text"
+    id="searchBox"
+    placeholder="🔍 Search History topic..."
+    oninput="searchTopics()"
+  >
+
+</div>
+
+
+<!-- MIND MAP -->
+
+<section class="map-box">
+
+  <div class="map-heading">
+    <h2>🧠 History Mind Map</h2>
+    <p>Tap any topic to view important UPSC points</p>
+  </div>
+
+  <div class="map">
+
+    <div class="center">
+      <strong>📜 Indian History</strong>
+      <small>UPSC GS-I</small>
+    </div>
+
+    <div class="node n1"
+      data-topic="Ancient History"
+      onclick="showTopic('ancient')">
+      <div>
+        <span>🏺</span>
+        Ancient History
+      </div>
+    </div>
+
+    <div class="node n2"
+      data-topic="Indus Valley Civilization"
+      onclick="showTopic('indus')">
+      <div>
+        <span>🏛️</span>
+        Indus Valley
+      </div>
+    </div>
+
+    <div class="node n3"
+      data-topic="Vedic Age"
+      onclick="showTopic('vedic')">
+      <div>
+        <span>📜</span>
+        Vedic Age
+      </div>
+    </div>
+
+    <div class="node n4"
+      data-topic="Medieval History"
+      onclick="showTopic('medieval')">
+      <div>
+        <span>🏰</span>
+        Medieval History
+      </div>
+    </div>
+
+    <div class="node n5"
+      data-topic="Modern History"
+      onclick="showTopic('modern')">
+      <div>
+        <span>🇮🇳</span>
+        Modern History
+      </div>
+    </div>
+
+    <div class="node n6"
+      data-topic="Freedom Struggle"
+      onclick="showTopic('freedom')">
+      <div>
+        <span>🕊️</span>
+        Freedom Struggle
+      </div>
+    </div>
+
+    <div class="node n7"
+      data-topic="Art and Culture"
+      onclick="showTopic('culture')">
+      <div>
+        <span>🎨</span>
+        Art & Culture
+      </div>
+    </div>
+
+    <div class="node n8"
+      data-topic="Post Independence"
+      onclick="showTopic('post')">
+      <div>
+        <span>🇮🇳</span>
+        Post-Independence
+      </div>
+    </div>
+
+  </div>
+
+  <div class="details" id="detailsBox">
+
+    <h3 id="detailsTitle"></h3>
+
+    <p id="detailsText"></p>
+
+    <ul id="detailsList"></ul>
+
+  </div>
+
+</section>
+
+
+<!-- ANCIENT -->
+
+<section class="section" id="ancientSection">
+
+  <h2>🏺 Ancient India</h2>
+
+  <p class="section-intro">
+    Major civilizations, Vedic traditions, religions, kingdoms,
+    society and economy.
+  </p>
+
+  <div class="visual-card">
+    🏺 🐂 📜 🛕
+    <div>Ancient India — Civilization • Society • Religion • Economy</div>
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Aspect</th>
+        <th>Important Points</th>
+      </tr>
+
+      <tr>
+        <td>Indus Valley Civilization</td>
+        <td>
+          Urban settlements, planned cities, drainage systems,
+          craft production and long-distance trade.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Vedic Age</td>
+        <td>
+          Early Vedic and Later Vedic phases, changing political,
+          social and economic institutions.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Buddhism</td>
+        <td>
+          Teachings associated with Gautama Buddha,
+          Four Noble Truths and Eightfold Path.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Jainism</td>
+        <td>
+          Mahavira, non-violence, truth and the path of liberation.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mauryan Empire</td>
+        <td>
+          Chandragupta Maurya, Ashoka, administration and
+          Ashokan inscriptions.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Gupta Period</td>
+        <td>
+          Developments in literature, science, mathematics,
+          art and architecture.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- VEDIC -->
+
+<section class="section">
+
+  <h2>📜 Vedic Age — Quick Study Table</h2>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Aspect</th>
+        <th>Details</th>
+      </tr>
+
+      <tr>
+        <td>Political Life</td>
+        <td>
+          Institutions such as Sabha and Samiti are discussed
+          in the study of early Vedic polity.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Economy</td>
+        <td>
+          Cattle played an important role; agriculture became
+          increasingly important in later phases.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Social Life</td>
+        <td>
+          Kinship, family and changing social institutions
+          were important features.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Religion</td>
+        <td>
+          Rituals and deities associated with natural forces
+          were important in early Vedic traditions.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- MEDIEVAL -->
+
+<section class="section" id="medievalSection">
+
+  <h2>🏰 Medieval India</h2>
+
+  <p class="section-intro">
+    Sultanates, Mughal rule, regional kingdoms, Bhakti-Sufi
+    traditions and cultural developments.
+  </p>
+
+  <div class="visual-card">
+    🏰 ⚔️ 👑 🕌
+    <div>Medieval India — Kingdoms • Administration • Culture</div>
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Theme</th>
+        <th>Major Areas</th>
+      </tr>
+
+      <tr>
+        <td>Delhi Sultanate</td>
+        <td>
+          Major dynasties, administration, architecture and
+          economic developments.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Mughal Empire</td>
+        <td>
+          Mughal administration, mansabdari, revenue systems,
+          architecture and cultural developments.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Bhakti Movement</td>
+        <td>
+          Devotional traditions and contributions of different
+          regional saints.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Sufi Traditions</td>
+        <td>
+          Major Sufi orders and their social and cultural influence.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Regional Kingdoms</td>
+        <td>
+          Marathas, Vijayanagara and other regional powers.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- MODERN -->
+
+<section class="section" id="modernSection">
+
+  <h2>🇮🇳 Modern Indian History</h2>
+
+  <p class="section-intro">
+    Major developments from the eighteenth century to independence.
+  </p>
+
+  <div class="visual-card">
+    ⚔️ 📜 🚂 🇮🇳
+    <div>Colonial Rule • Reform • Nationalism • Independence</div>
+  </div>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Theme</th>
+        <th>Important Areas</th>
+      </tr>
+
+      <tr>
+        <td>European Expansion</td>
+        <td>
+          Portuguese, Dutch, English and French presence in India.
+        </td>
+      </tr>
+
+      <tr>
+        <td>British Expansion</td>
+        <td>
+          Major battles, treaties, policies and territorial expansion.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Economic Impact</td>
+        <td>
+          Land revenue systems, trade, industry and colonial economic policies.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Social Reform</td>
+        <td>
+          Reform movements, education, women's issues and
+          opposition to social practices.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Constitutional Developments</td>
+        <td>
+          Major Acts and institutional changes under British rule.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- FREEDOM STRUGGLE -->
+
+<section class="section" id="freedomSection">
+
+  <h2>🕊️ Freedom Struggle</h2>
+
+  <p class="section-intro">
+    Major phases, movements, organisations and contributors.
+  </p>
+
+  <div class="timeline">
+
+    <div class="event">
+      <strong>1857 — Revolt</strong>
+      Major uprising against British rule with different regional centres and causes.
+    </div>
+
+    <div class="event">
+      <strong>1885 — Indian National Congress</strong>
+      Formation of an important political organisation in the national movement.
+    </div>
+
+    <div class="event">
+      <strong>1905 — Swadeshi Movement</strong>
+      Nationalist mobilisation associated with the partition of Bengal.
+    </div>
+
+    <div class="event">
+      <strong>1919 — Rowlatt Satyagraha & Jallianwala Bagh</strong>
+      Important developments in the nationalist movement.
+    </div>
+
+    <div class="event">
+      <strong>1920–22 — Non-Cooperation Movement</strong>
+      Mass mobilisation under Gandhi's leadership.
+    </div>
+
+    <div class="event">
+      <strong>1930 — Civil Disobedience Movement</strong>
+      Associated with the Salt March and wider civil resistance.
+    </div>
+
+    <div class="event">
+      <strong>1942 — Quit India Movement</strong>
+      Major mass movement demanding an end to British rule.
+    </div>
+
+    <div class="event">
+      <strong>1947 — Independence</strong>
+      India became independent on 15 August 1947.
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- ART CULTURE -->
+
+<section class="section" id="cultureSection">
+
+  <h2>🎨 Indian Art & Culture</h2>
+
+  <p class="section-intro">
+    Important areas for UPSC revision from ancient to modern India.
+  </p>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Area</th>
+        <th>Study Focus</th>
+      </tr>
+
+      <tr>
+        <td>Architecture</td>
+        <td>
+          Temple architecture, Buddhist architecture,
+          Indo-Islamic architecture and colonial architecture.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Painting</td>
+        <td>
+          Cave paintings, miniature traditions and modern Indian art.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Dance</td>
+        <td>
+          Classical and folk traditions of different regions.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Music</td>
+        <td>
+          Hindustani, Carnatic and regional musical traditions.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Literature</td>
+        <td>
+          Sanskrit, regional languages and modern Indian literature.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Religion & Philosophy</td>
+        <td>
+          Major philosophical and religious traditions and their cultural influence.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- POST INDEPENDENCE -->
+
+<section class="section" id="postSection">
+
+  <h2>🇮🇳 Post-Independence India</h2>
+
+  <div class="table-wrap">
+
+    <table>
+
+      <tr>
+        <th>Theme</th>
+        <th>Revision Areas</th>
+      </tr>
+
+      <tr>
+        <td>Integration</td>
+        <td>
+          Integration of princely states and consolidation of the Union.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Reorganisation</td>
+        <td>
+          Reorganisation of states and evolution of India's federal structure.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Economic Development</td>
+        <td>
+          Planning, public sector development and major policy changes.
+        </td>
+      </tr>
+
+      <tr>
+        <td>Foreign Policy</td>
+        <td>
+          Major principles and developments in India's external relations.
+        </td>
+      </tr>
+
+    </table>
+
+  </div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="section">
+
+  <h2>⚡ Quick Revision</h2>
+
+  <div class="revision-grid">
+
+    <div class="revision">
+      <strong>🏺 Ancient</strong>
+      Civilization → Vedic Age → Religions → Mauryas → Guptas
+    </div>
+
+    <div class="revision">
+      <strong>🏰 Medieval</strong>
+      Sultanate → Mughals → Regional Powers → Bhakti-Sufi
+    </div>
+
+    <div class="revision">
+      <strong>🇮🇳 Modern</strong>
+      Europeans → British Expansion → Reform → Nationalism
+    </div>
+
+    <div class="revision">
+      <strong>🕊️ Freedom Struggle</strong>
+      1857 → Swadeshi → NCM → CDM → Quit India → Independence
+    </div>
+
+    <div class="revision">
+      <strong>🎨 Culture</strong>
+      Architecture → Painting → Dance → Music → Literature
+    </div>
+
+    <div class="revision">
+      <strong>📚 UPSC Focus</strong>
+      Causes → Events → Leaders → Consequences → Significance
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- QUICK NAV -->
+
+<section class="section">
+
+  <h2>📌 Quick Navigation</h2>
+
+  <div class="quick-nav">
+
+    <button onclick="goTo('ancientSection')">🏺 Ancient</button>
+
+    <button onclick="goTo('medievalSection')">🏰 Medieval</button>
+
+    <button onclick="goTo('modernSection')">🇮🇳 Modern</button>
+
+    <button onclick="goTo('freedomSection')">🕊️ Freedom Struggle</button>
+
+    <button onclick="goTo('cultureSection')">🎨 Art & Culture</button>
+
+    <button onclick="goTo('postSection')">🇮🇳 Post-Independence</button>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<button id="topBtn" onclick="topFunction()">⬆️</button>
+
+
+<footer>
+
+  <p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+
+  <p>
+    History • Mind Maps • Notes • PYQs • Tests
+  </p>
+
+  <p>© 2026 UPSC Shiksha</p>
+
+</footer>
+
+
+<script>
+
+const topics={
+
+ancient:{
+title:"🏺 Ancient History",
+text:"Ancient India covers major civilizations, political systems, religions, economy, society, science and culture.",
+list:[
+"Indus Valley Civilization",
+"Vedic Age",
+"Mahajanapadas",
+"Buddhism and Jainism",
+"Mauryan Empire",
+"Gupta Period",
+"Ancient Art and Architecture"
+]
+},
+
+indus:{
+title:"🏛️ Indus Valley Civilization",
+text:"The Indus Valley Civilization is studied for its urban planning, craft production, trade and material culture.",
+list:[
+"Urban settlements",
+"Planned cities",
+"Drainage systems",
+"Craft production",
+"Trade",
+"Seals and inscriptions",
+"Religious and social practices"
+]
+},
+
+vedic:{
+title:"📜 Vedic Age",
+text:"The Vedic period is commonly studied through its political, social, economic and religious developments.",
+list:[
+"Early Vedic period",
+"Later Vedic period",
+"Sabha and Samiti",
+"Economy and agriculture",
+"Social institutions",
+"Vedic literature",
+"Religious practices"
+]
+},
+
+medieval:{
+title:"🏰 Medieval History",
+text:"Medieval India includes the Delhi Sultanate, Mughal Empire, regional powers and major cultural movements.",
+list:[
+"Delhi Sultanate",
+"Mughal Empire",
+"Vijayanagara",
+"Marathas",
+"Bhakti Movement",
+"Sufi traditions",
+"Architecture and culture"
+]
+},
+
+modern:{
+title:"🇮🇳 Modern Indian History",
+text:"Modern Indian history focuses on colonial expansion, economic changes, social reform and the rise of nationalism.",
+list:[
+"European expansion",
+"British territorial expansion",
+"Colonial economy",
+"Social reform movements",
+"Constitutional developments",
+"Rise of nationalism"
+]
+},
+
+freedom:{
+title:"🕊️ Freedom Struggle",
+text:"The Indian national movement developed through different phases and forms of political and mass mobilisation.",
+list:[
+"Revolt of 1857",
+"Moderate phase",
+"Swadeshi Movement",
+"Non-Cooperation Movement",
+"Civil Disobedience Movement",
+"Quit India Movement",
+"Independence and Partition"
+]
+},
+
+culture:{
+title:"🎨 Art & Culture",
+text:"Indian culture includes diverse traditions of architecture, painting, dance, music, literature and philosophy.",
+list:[
+"Temple architecture",
+"Buddhist architecture",
+"Indo-Islamic architecture",
+"Classical dances",
+"Indian music",
+"Painting traditions",
+"Literature"
+]
+},
+
+post:{
+title:"🇮🇳 Post-Independence India",
+text:"Post-independence history focuses on consolidation, state reorganisation, development and major national changes.",
+list:[
+"Integration of princely states",
+"Reorganisation of states",
+"Planning",
+"Economic development",
+"Foreign policy",
+"Democratic consolidation"
+]
+}
+
+};
+
+
+function showTopic(topic){
+
+const data=topics[topic];
+
+if(!data)return;
+
+document.getElementById("detailsTitle").textContent=data.title;
+
+document.getElementById("detailsText").textContent=data.text;
+
+const list=document.getElementById("detailsList");
+
+list.innerHTML="";
+
+data.list.forEach(function(item){
+
+const li=document.createElement("li");
+
+li.textContent=item;
+
+list.appendChild(li);
+
+});
+
+const box=document.getElementById("detailsBox");
+
+box.classList.add("show");
+
+setTimeout(function(){
+
+box.scrollIntoView({
+behavior:"smooth",
+block:"center"
+});
+
+},50);
+
+}
+
+
+function searchTopics(){
+
+const value=document
+.getElementById("searchBox")
+.value
+.toLowerCase()
+.trim();
+
+document.querySelectorAll(".node").forEach(function(node){
+
+const text=node.dataset.topic.toLowerCase();
+
+if(value==="" || text.includes(value)){
+
+node.style.display="flex";
+node.style.opacity="1";
+
+}else{
+
+node.style.display="none";
+
+}
+
+});
+
+}
+
+
+function toggleDark(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"historyMindMapDark",
+document.body.classList.contains("dark")
+);
+
+}
+
+
+if(localStorage.getItem("historyMindMapDark")==="true"){
+
+document.body.classList.add("dark");
+
+}
+
+
+function goTo(id){
+
+document.getElementById(id).scrollIntoView({
+behavior:"smooth",
+block:"start"
+});
+
+}
+
+
+window.onscroll=function(){
+
+const btn=document.getElementById("topBtn");
+
+if(
+document.body.scrollTop>300 ||
+document.documentElement.scrollTop>300
+){
+
+btn.style.display="block";
+
+}else{
+
+btn.style.display="none";
+
+}
+
+};
+
+
+function topFunction(){
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+}
+
+</script>
+
+</body>
+</html>
