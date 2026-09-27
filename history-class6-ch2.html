@@ -6,7 +6,8 @@
 
 <title>Chapter 2 | On the Trail of the Earliest People | UPSC Shiksha</title>
 
-<meta name="description" content="Detailed Class 6 History Chapter 2 study material with English and Hindi explanations, examples, tests, solutions, UPSC points, audio, charts and revision.">
+<meta name="description"
+content="Class 6 History Chapter 2 - On the Trail of the Earliest People. Detailed English and Hindi UPSC-oriented notes, visuals, audio, MCQs, tests and solutions.">
 
 <style>
 *{
@@ -15,18 +16,19 @@
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
   background:#f4f7fb;
-  color:#1f2937;
+  color:#172033;
   line-height:1.7;
   transition:0.3s;
 }
 
-body.dark{
-  background:#111827;
-  color:#e5e7eb;
-}
+/* HEADER */
 
 header{
   position:sticky;
@@ -39,11 +41,11 @@ header{
   justify-content:space-between;
   align-items:center;
   gap:10px;
-  box-shadow:0 3px 12px rgba(0,0,0,.2);
+  box-shadow:0 4px 15px rgba(0,0,0,0.2);
 }
 
 .logo{
-  font-size:20px;
+  font-size:18px;
   font-weight:bold;
 }
 
@@ -52,12 +54,14 @@ header{
   gap:8px;
 }
 
-button{
+button,
+.home-btn{
   border:none;
-  border-radius:8px;
+  border-radius:9px;
   padding:9px 13px;
   cursor:pointer;
   font-weight:bold;
+  text-decoration:none;
 }
 
 .home-btn{
@@ -70,321 +74,483 @@ button{
   color:white;
 }
 
-.container{
-  width:94%;
-  max-width:1050px;
-  margin:auto;
-  padding:20px 0 50px;
-}
+/* HERO */
 
 .hero{
-  background:linear-gradient(135deg,#1d4ed8,#7c3aed);
+  margin:24px auto;
+  max-width:1100px;
+  padding:55px 25px;
+  border-radius:22px;
   color:white;
-  padding:32px 20px;
-  border-radius:18px;
-  margin-bottom:22px;
   text-align:center;
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  background:linear-gradient(135deg,#2563eb,#7c3aed,#9333ea);
+  position:relative;
+  overflow:hidden;
+  box-shadow:0 12px 35px rgba(37,99,235,0.25);
+}
+
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:rgba(255,255,255,0.09);
+  animation:float 7s infinite ease-in-out;
+}
+
+.hero::before{
+  top:-70px;
+  left:-50px;
+}
+
+.hero::after{
+  bottom:-80px;
+  right:-40px;
+  animation-delay:2s;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
-  font-size:30px;
-  margin-bottom:8px;
+  font-size:clamp(28px,5vw,46px);
+  margin-bottom:12px;
 }
 
 .hero p{
-  font-size:16px;
+  font-size:17px;
+  max-width:800px;
+  margin:auto;
 }
 
-.progress-box{
-  background:white;
-  padding:18px;
-  border-radius:14px;
-  margin-bottom:22px;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+.tags{
+  margin-top:20px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
 }
 
-body.dark .progress-box,
-body.dark .section,
-body.dark .test-box,
-body.dark .revision,
-body.dark .example,
-body.dark .highlight{
-  background:#1f2937;
-}
-
-.progress-bar{
-  width:100%;
-  height:13px;
-  background:#d1d5db;
+.tag{
+  background:rgba(255,255,255,0.18);
+  padding:5px 12px;
   border-radius:20px;
-  overflow:hidden;
-  margin-top:10px;
+  font-size:13px;
+  font-weight:bold;
 }
 
-.progress-fill{
-  width:0%;
-  height:100%;
-  background:linear-gradient(90deg,#22c55e,#16a34a);
-  transition:width .5s;
+/* MAIN */
+
+.container{
+  max-width:1100px;
+  margin:auto;
+  padding:0 15px 50px;
 }
 
 .section{
   background:white;
-  padding:24px;
-  border-radius:16px;
-  margin-bottom:20px;
-  box-shadow:0 3px 12px rgba(0,0,0,.07);
+  margin:20px 0;
+  padding:28px;
+  border-radius:18px;
+  box-shadow:0 5px 20px rgba(0,0,0,0.07);
+  animation:fadeUp 0.8s ease both;
 }
 
 .section h2{
-  color:#1d4ed8;
-  margin-bottom:14px;
-}
-
-body.dark .section h2{
-  color:#60a5fa;
+  color:#2563eb;
+  margin-bottom:18px;
+  font-size:26px;
 }
 
 .section h3{
-  margin-top:18px;
-  margin-bottom:8px;
   color:#7c3aed;
+  margin:22px 0 10px;
 }
+
+.section p{
+  margin-bottom:12px;
+}
+
+/* ENGLISH / HINDI LABEL */
+
+.language-title{
+  padding:15px 18px;
+  border-radius:12px;
+  margin-bottom:20px;
+  color:white;
+  font-size:22px;
+  font-weight:bold;
+  background:linear-gradient(90deg,#2563eb,#7c3aed);
+}
+
+/* HIGHLIGHTS */
 
 .highlight{
-  background:#fff7cc;
+  margin:18px 0;
+  padding:18px;
   border-left:5px solid #f59e0b;
-  padding:15px;
-  border-radius:8px;
-  margin:15px 0;
-}
-
-body.dark .highlight{
-  background:#3b3214;
+  background:#fff7d6;
+  border-radius:10px;
 }
 
 .example{
-  background:#eef6ff;
+  margin:18px 0;
+  padding:18px;
   border-left:5px solid #2563eb;
-  padding:15px;
-  border-radius:8px;
-  margin:15px 0;
+  background:#eef4ff;
+  border-radius:10px;
 }
 
-body.dark .example{
-  background:#172554;
+.important{
+  margin:18px 0;
+  padding:18px;
+  border-left:5px solid #16a34a;
+  background:#ecfdf3;
+  border-radius:10px;
 }
 
-.tag{
-  display:inline-block;
-  padding:5px 9px;
-  margin:4px;
-  border-radius:20px;
-  background:#e0e7ff;
-  color:#3730a3;
-  font-size:12px;
-  font-weight:bold;
+.warning{
+  margin:18px 0;
+  padding:18px;
+  border-left:5px solid #ef4444;
+  background:#fff1f2;
+  border-radius:10px;
 }
 
-body.dark .tag{
-  background:#312e81;
-  color:#ddd6fe;
+/* INFO GRID */
+
+.info-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+  margin-top:20px;
 }
 
-/* VISUAL TIMELINE */
+.info-card{
+  padding:20px;
+  border-radius:15px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  transition:0.3s;
+}
+
+.info-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 12px 25px rgba(0,0,0,0.12);
+}
+
+.info-card .icon{
+  font-size:35px;
+  margin-bottom:8px;
+}
+
+/* TIMELINE */
 
 .timeline{
   position:relative;
-  margin:25px 0;
-  padding-left:25px;
+  margin:35px 10px;
+  padding-left:35px;
   border-left:4px solid #6366f1;
 }
 
 .timeline-item{
+  position:relative;
+  margin-bottom:30px;
+  padding:20px;
   background:#f8fafc;
-  padding:15px;
-  border-radius:12px;
-  margin-bottom:15px;
-  animation:slideIn .7s ease;
+  border-radius:15px;
+  animation:slideRight 0.8s ease both;
 }
 
-body.dark .timeline-item{
-  background:#111827;
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-48px;
+  top:22px;
+  width:22px;
+  height:22px;
+  border-radius:50%;
+  background:#6366f1;
+  border:5px solid white;
+  box-shadow:0 0 0 3px #6366f1;
 }
 
-.timeline-item strong{
-  color:#4f46e5;
+.timeline-item:nth-child(2){
+  animation-delay:.15s;
 }
 
-@keyframes slideIn{
-  from{
-    opacity:0;
-    transform:translateX(-20px);
-  }
-  to{
-    opacity:1;
-    transform:translateX(0);
-  }
+.timeline-item:nth-child(3){
+  animation-delay:.3s;
 }
 
-/* TOOL CARDS */
-
-.tool-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:15px;
-  margin-top:15px;
+.timeline-item:nth-child(4){
+  animation-delay:.45s;
 }
 
-.tool-card{
-  background:#f8fafc;
+.timeline-item:nth-child(5){
+  animation-delay:.6s;
+}
+
+/* VISUAL FLOW */
+
+.flow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:12px;
+  margin:30px 0;
+}
+
+.flow-box{
+  min-width:150px;
   padding:18px;
-  border-radius:14px;
   text-align:center;
-  border:1px solid #e5e7eb;
-  transition:.3s;
+  border-radius:14px;
+  background:#eef2ff;
+  border:2px solid #6366f1;
+  font-weight:bold;
+  animation:pulseBox 2.5s infinite;
 }
 
-.tool-card:hover{
-  transform:translateY(-5px);
-  box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-body.dark .tool-card{
-  background:#111827;
-  border-color:#374151;
+.arrow{
+  font-size:28px;
+  color:#6366f1;
 }
 
 /* BAR CHART */
 
-.chart{
-  margin-top:20px;
+.chart-box{
+  margin:30px 0;
+  padding:25px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
+  border:1px solid #dbeafe;
+}
+
+.chart-title{
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:22px;
+  text-align:center;
 }
 
 .bar-row{
-  margin:14px 0;
+  display:grid;
+  grid-template-columns:170px 1fr 60px;
+  align-items:center;
+  gap:12px;
+  margin:15px 0;
 }
 
-.bar-label{
-  font-weight:bold;
-  margin-bottom:5px;
-}
-
-.bar{
-  height:24px;
+.bar-bg{
+  height:25px;
   background:#e5e7eb;
   border-radius:20px;
   overflow:hidden;
 }
 
-.bar-fill{
+.bar{
   height:100%;
   width:0;
   border-radius:20px;
-  background:linear-gradient(90deg,#2563eb,#7c3aed);
-  animation:growBar 1.5s forwards;
+  background:linear-gradient(90deg,#2563eb,#8b5cf6);
+  animation:growBar 2s forwards;
 }
 
-@keyframes growBar{
-  from{width:0;}
+.bar1{width:92%;}
+.bar2{width:78%;}
+.bar3{width:65%;}
+.bar4{width:48%;}
+
+/* SITE CARDS */
+
+.site-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+  margin-top:20px;
+}
+
+.site{
+  padding:22px;
+  border-radius:16px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  transition:0.35s;
+}
+
+.site:hover{
+  transform:scale(1.025);
+  box-shadow:0 12px 25px rgba(0,0,0,0.12);
+}
+
+.site-icon{
+  font-size:40px;
+}
+
+/* VISUAL ILLUSTRATION */
+
+.illustration{
+  min-height:260px;
+  margin:25px 0;
+  border-radius:20px;
+  background:linear-gradient(180deg,#dbeafe,#fef3c7);
+  position:relative;
+  overflow:hidden;
+  padding:25px;
+}
+
+.sun{
+  width:65px;
+  height:65px;
+  background:#fbbf24;
+  border-radius:50%;
+  position:absolute;
+  top:25px;
+  right:45px;
+  box-shadow:0 0 30px rgba(251,191,36,.6);
+  animation:sunPulse 3s infinite;
+}
+
+.mountain{
+  position:absolute;
+  bottom:0;
+  width:0;
+  height:0;
+  border-left:150px solid transparent;
+  border-right:150px solid transparent;
+  border-bottom:180px solid #64748b;
+}
+
+.m1{
+  left:30px;
+}
+
+.m2{
+  right:20px;
+  border-bottom-color:#475569;
+}
+
+.cave{
+  position:absolute;
+  bottom:0;
+  left:42%;
+  width:180px;
+  height:125px;
+  background:#334155;
+  border-radius:100px 100px 0 0;
+}
+
+.fire{
+  position:absolute;
+  bottom:18px;
+  left:48%;
+  font-size:45px;
+  animation:fireMove .7s infinite alternate;
+}
+
+.people{
+  position:absolute;
+  bottom:15px;
+  left:25%;
+  font-size:35px;
 }
 
 /* AUDIO */
 
 .audio-box{
-  background:#ecfdf5;
-  padding:18px;
-  border-radius:14px;
-  border-left:5px solid #10b981;
-}
-
-body.dark .audio-box{
-  background:#064e3b;
+  text-align:center;
+  padding:25px;
+  border-radius:18px;
+  background:#eef2ff;
 }
 
 .audio-buttons{
   display:flex;
+  justify-content:center;
+  gap:12px;
   flex-wrap:wrap;
-  gap:10px;
-  margin-top:12px;
+  margin-top:15px;
 }
 
 .audio-buttons button{
-  background:#059669;
+  background:#2563eb;
   color:white;
 }
 
-/* TEST */
+/* TESTS */
 
-.test-box{
-  background:white;
-  border-radius:15px;
-  padding:20px;
+.test{
   margin:18px 0;
-  box-shadow:0 3px 10px rgba(0,0,0,.07);
+  padding:22px;
+  border-radius:15px;
+  background:#f8fafc;
+  border:1px solid #e5e7eb;
+  transition:.3s;
+}
+
+.test:hover{
+  transform:translateY(-3px);
 }
 
 .option{
-  display:block;
-  margin:8px 0;
-  padding:10px;
-  background:#f3f4f6;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-body.dark .option{
-  background:#374151;
-}
-
-.option:hover{
-  background:#dbeafe;
-}
-
-.test-btn{
-  background:#2563eb;
-  color:white;
-  margin-top:12px;
+  padding:10px 13px;
+  margin:7px 0;
+  background:white;
+  border:1px solid #d1d5db;
+  border-radius:9px;
 }
 
 .answer{
-  display:none;
   margin-top:12px;
   padding:13px;
-  border-radius:8px;
   background:#ecfdf5;
-  border-left:5px solid #10b981;
+  border-left:4px solid #16a34a;
+  border-radius:8px;
 }
 
-body.dark .answer{
-  background:#064e3b;
+/* PROGRESS */
+
+.progress-box{
+  background:#1e293b;
+  color:white;
+  padding:22px;
+  border-radius:16px;
+  margin:20px 0;
 }
 
-/* REVISION */
-
-.revision{
-  background:white;
-  padding:20px;
-  border-radius:15px;
+.progress-track{
+  height:14px;
+  background:#475569;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:12px;
 }
 
-.revision li{
-  margin:8px 0;
+.progress-fill{
+  height:100%;
+  width:0;
+  background:linear-gradient(90deg,#22c55e,#06b6d4);
+  transition:1s;
 }
 
-/* PYQ */
+/* CHECKLIST */
 
-.pyq{
-  background:#fef3c7;
-  padding:16px;
-  border-radius:12px;
+.checklist label{
+  display:block;
   margin:12px 0;
-  border-left:5px solid #f59e0b;
+  padding:13px;
+  background:#f8fafc;
+  border-radius:9px;
 }
 
-body.dark .pyq{
-  background:#422006;
+.checklist input{
+  margin-right:10px;
 }
 
 /* TOP BUTTON */
@@ -392,33 +558,219 @@ body.dark .pyq{
 #topBtn{
   position:fixed;
   right:18px;
-  bottom:18px;
-  display:none;
-  background:#2563eb;
-  color:white;
-  border-radius:50%;
+  bottom:20px;
   width:45px;
   height:45px;
+  border-radius:50%;
+  background:#2563eb;
+  color:white;
+  display:none;
+  z-index:999;
 }
 
-/* RESPONSIVE */
+/* DARK MODE */
 
-@media(max-width:600px){
+body.dark{
+  background:#0f172a;
+  color:#e5e7eb;
+}
+
+body.dark .section,
+body.dark .info-card,
+body.dark .site,
+body.dark .timeline-item,
+body.dark .test{
+  background:#1e293b;
+  color:#e5e7eb;
+  border-color:#334155;
+}
+
+body.dark .example{
+  background:#172554;
+}
+
+body.dark .highlight{
+  background:#3b2f08;
+}
+
+body.dark .important{
+  background:#052e16;
+}
+
+body.dark .chart-box{
+  background:#172033;
+  border-color:#334155;
+}
+
+body.dark .flow-box{
+  background:#1e1b4b;
+}
+
+body.dark .option,
+body.dark .checklist label{
+  background:#273449;
+  border-color:#475569;
+}
+
+body.dark .bar-bg{
+  background:#475569;
+}
+
+/* FOOTER */
+
+footer{
+  text-align:center;
+  padding:30px 15px;
+  background:#111827;
+  color:white;
+  margin-top:30px;
+}
+
+/* ANIMATIONS */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+@keyframes slideRight{
+  from{
+    opacity:0;
+    transform:translateX(-35px);
+  }
+  to{
+    opacity:1;
+    transform:translateX(0);
+  }
+}
+
+@keyframes float{
+  0%,100%{
+    transform:translateY(0);
+  }
+  50%{
+    transform:translateY(20px);
+  }
+}
+
+@keyframes pulseBox{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.04);
+  }
+}
+
+@keyframes growBar{
+  from{
+    width:0;
+  }
+}
+
+@keyframes sunPulse{
+  0%,100%{
+    transform:scale(1);
+  }
+  50%{
+    transform:scale(1.12);
+  }
+}
+
+@keyframes fireMove{
+  from{
+    transform:translateY(0) scale(1);
+  }
+  to{
+    transform:translateY(-7px) scale(1.08);
+  }
+}
+
+/* MOBILE */
+
+@media(max-width:700px){
+
+  header{
+    padding:11px;
+  }
+
+  .logo{
+    font-size:15px;
+  }
+
+  .home-btn,
+  .dark-btn{
+    padding:7px 9px;
+    font-size:12px;
+  }
+
+  .hero{
+    margin:12px;
+    padding:38px 17px;
+  }
+
   .hero h1{
-    font-size:24px;
+    font-size:27px;
+  }
+
+  .hero p{
+    font-size:14px;
+  }
+
+  .container{
+    padding:0 9px 40px;
   }
 
   .section{
-    padding:18px;
+    padding:20px 15px;
+    margin:15px 0;
   }
 
-  header{
+  .section h2{
+    font-size:22px;
+  }
+
+  .info-grid,
+  .site-grid{
+    grid-template-columns:1fr;
+  }
+
+  .bar-row{
+    grid-template-columns:95px 1fr 35px;
+    gap:7px;
+    font-size:13px;
+  }
+
+  .illustration{
+    min-height:210px;
+  }
+
+  .cave{
+    width:130px;
+    height:90px;
+    left:34%;
+  }
+
+  .fire{
+    left:44%;
+  }
+
+  .timeline{
+    margin-left:5px;
+  }
+
+  .flow{
     flex-direction:column;
   }
 
-  .header-buttons{
-    width:100%;
-    justify-content:center;
+  .arrow{
+    transform:rotate(90deg);
   }
 }
 </style>
@@ -427,846 +779,1999 @@ body.dark .pyq{
 <body>
 
 <header>
-  <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-  <div class="header-buttons">
-    <button class="home-btn" onclick="location.href='ncert-history.html'">
-      🏠 Home
-    </button>
+<div class="logo">🇮🇳 UPSC Shiksha</div>
 
-    <button class="dark-btn" onclick="toggleDarkMode()">
-      🌙 Dark Mode
-    </button>
-  </div>
+<div class="header-buttons">
+
+<a href="ncert-history.html" class="home-btn">
+🏠 Home
+</a>
+
+<button class="dark-btn" onclick="toggleDarkMode()">
+🌙 Dark
+</button>
+
+</div>
+
 </header>
 
-<div class="container">
 
 <!-- HERO -->
 
 <section class="hero">
-  <h1>📚 Chapter 2: On the Trail of the Earliest People</h1>
-  <p>Class 6 History • Premium NCERT • UPSC Foundation</p>
 
-  <div style="margin-top:15px;">
-    <span class="tag">PRELIMS</span>
-    <span class="tag">HISTORY</span>
-    <span class="tag">ANCIENT INDIA</span>
-    <span class="tag">10 TESTS</span>
-  </div>
+<div class="hero-content">
+
+<h1>📚 Chapter 2</h1>
+
+<h2>On the Trail of the Earliest People</h2>
+
+<p>
+Class 6 History • Premium NCERT Learning • UPSC Foundation
+</p>
+
+<div class="tags">
+
+<span class="tag">PRELIMS</span>
+<span class="tag">HISTORY</span>
+<span class="tag">ANCIENT INDIA</span>
+<span class="tag">10 TESTS</span>
+<span class="tag">ENGLISH + हिंदी</span>
+
+</div>
+
+</div>
+
 </section>
+
+
+<div class="container">
+
 
 <!-- PROGRESS -->
 
 <div class="progress-box">
-  <strong>📈 Chapter Progress</strong>
 
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
+<strong>📊 Chapter Progress</strong>
 
-  <p id="progressText" style="margin-top:8px;">
-    0% completed
-  </p>
+<div class="progress-track">
+<div class="progress-fill" id="progressFill"></div>
 </div>
 
-<!-- INTRO -->
+<p id="progressText">0% completed</p>
+
+</div>
+
+
+<!-- ================= ENGLISH ================= -->
+
+<div class="language-title">
+🇬🇧 PART 1 — ENGLISH
+</div>
+
+
+<!-- OVERVIEW -->
 
 <section class="section">
+
 <h2>1. Chapter Overview</h2>
 
 <p>
 This chapter introduces us to some of the earliest human communities.
-These people lived thousands of years ago, long before the development
-of cities, kingdoms and written records.
+Long before the development of cities, kingdoms and written records,
+people lived in small groups and depended heavily on their natural surroundings.
 </p>
 
 <p>
-They survived mainly by hunting animals, gathering plants, collecting
-fruits, roots, seeds and other naturally available resources.
+They hunted animals, collected fruits and roots, gathered seeds and other
+plant resources, and learned to use stones, wood and other materials available
+in their surroundings.
+</p>
+
+<p>
+Their lives were closely connected with rivers, forests, grasslands, hills,
+caves and seasonal changes.
 </p>
 
 <div class="highlight">
-<strong>⭐ UPSC Concept:</strong>
-The study of early humans helps us understand the development of
-technology, food habits, settlement patterns and the gradual transition
-from hunting-gathering to food production.
+
+<strong>⭐ UPSC Concept</strong>
+
+<p>
+The study of early human communities helps us understand the development of
+technology, food habits, settlement patterns and the gradual transition from
+food gathering to food production.
+</p>
+
 </div>
 
 <div class="example">
-<strong>💡 Simple Example:</strong><br>
-Imagine a group of people living in a forest without shops, farms or
-modern tools. They would have to depend directly on nature for food,
-water, shelter and materials.
+
+<strong>💡 Simple Example</strong>
+
+<p>
+Imagine a small group living in a forest without shops, supermarkets or farms.
+They would have to depend on nature for food, water, shelter and raw materials.
+</p>
+
 </div>
+
 </section>
+
 
 <!-- HUNTER GATHERERS -->
 
 <section class="section">
+
 <h2>2. Who Were Hunter-Gatherers?</h2>
 
-<h3>English Explanation</h3>
-
 <p>
-Hunter-gatherers were communities that obtained food directly from
-their natural surroundings. They hunted animals and gathered edible
-plants, fruits, roots, seeds, eggs and other resources.
+Hunter-gatherers were communities that obtained food directly from their
+natural surroundings.
 </p>
 
 <p>
-They generally did not produce food through large-scale farming.
-Because food resources could become scarce in one location, many groups
-moved from one place to another.
+Hunters pursued animals and birds, while gatherers collected edible plants,
+fruits, roots, tubers, seeds and other useful resources.
 </p>
-
-<h3>हिंदी में समझें</h3>
 
 <p>
-शिकारी-संग्रहकर्ता वे प्रारंभिक मानव समुदाय थे जो अपने आसपास के
-प्राकृतिक संसाधनों से भोजन प्राप्त करते थे। वे जानवरों का शिकार करते
-और फल, जड़ें, बीज, अंडे तथा अन्य खाद्य पदार्थ एकत्र करते थे।
+These communities generally did not depend on large-scale agriculture.
+Because food resources could vary from place to place and season to season,
+movement was often an important part of their way of life.
 </p>
 
-<div class="highlight">
-<strong>Remember:</strong><br>
-Hunter → Animals and birds<br>
-Gatherer → Plants, fruits, roots, seeds and other resources
+<div class="info-grid">
+
+<div class="info-card">
+<div class="icon">🏹</div>
+<h3>Hunters</h3>
+<p>Obtained food by hunting animals and birds.</p>
 </div>
+
+<div class="info-card">
+<div class="icon">🌿</div>
+<h3>Gatherers</h3>
+<p>Collected fruits, roots, seeds, plants and other resources.</p>
+</div>
+
+<div class="info-card">
+<div class="icon">🚶</div>
+<h3>Movement</h3>
+<p>Moved when local resources became less available.</p>
+</div>
+
+</div>
+
+<div class="important">
+
+<strong>📌 Remember</strong>
+
+<p>
+Hunter → Animals and birds
+<br>
+Gatherer → Plants, fruits, roots, seeds and other resources
+</p>
+
+</div>
+
 </section>
+
 
 <!-- WHY MOVE -->
 
 <section class="section">
+
 <h2>3. Why Did Early People Move From Place to Place?</h2>
 
-<h3>English</h3>
-
 <p>
-Early humans often moved because food and water were not available
-equally throughout the year.
+Early people often moved because food and water were not available equally
+throughout the year.
 </p>
 
 <p>
-If animals moved to another area, hunters might follow them. If a
-particular plant or fruit became available in another season, people
-could move towards that area.
-</p>
-
-<h3>हिंदी</h3>
-
-<p>
-प्रारंभिक लोग एक स्थान पर हमेशा नहीं रहते थे क्योंकि भोजन और पानी
-हर जगह तथा हर मौसम में समान रूप से उपलब्ध नहीं होते थे।
+If animals moved to another area, hunters might follow them.
+Similarly, when a particular plant or fruit became available in another
+season, people could move towards that area.
 </p>
 
 <p>
-यदि जानवर किसी दूसरे क्षेत्र में चले जाते थे तो शिकारी उनका पीछा कर
-सकते थे। इसी तरह किसी मौसम में मिलने वाले फल या पौधे की तलाश में भी
-वे स्थान बदलते थे।
+Movement could also help people find water, avoid dangerous conditions and
+explore new areas.
 </p>
 
-<div class="example">
-<strong>🌳 Example:</strong>
-If a forest does not provide enough food during one season, a group may
-move towards another area where water, animals or edible plants are
-available.
+<div class="flow">
+
+<div class="flow-box">
+🌳 Food resources
 </div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+💧 Water
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🏕️ Shelter
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🚶 Movement
+</div>
+
+</div>
+
+<div class="highlight">
+
+<strong>⭐ Key Idea</strong>
+
+<p>
+Mobility was closely connected with the availability of natural resources.
+</p>
+
+</div>
+
 </section>
 
-<!-- VISUAL TIMELINE -->
+
+<!-- VISUAL SCENE -->
 
 <section class="section">
-<h2>4. Early Human Life — Visual Timeline</h2>
+
+<h2>4. Visual Learning — Life of Early People</h2>
+
+<p>
+The following visual represents a simplified learning model of an early
+human environment.
+</p>
+
+<div class="illustration">
+
+<div class="sun"></div>
+
+<div class="mountain m1"></div>
+<div class="mountain m2"></div>
+
+<div class="cave"></div>
+
+<div class="people">🧍 🧍</div>
+
+<div class="fire">🔥</div>
+
+</div>
+
+<div class="example">
+
+<strong>🔎 Observe</strong>
+
+<p>
+Early communities needed food, water, shelter, tools and protection.
+Their surroundings played an important role in everyday life.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section">
+
+<h2>5. Early Human Life — Conceptual Timeline</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
-<strong>1️⃣ Hunting & Gathering</strong>
-<p>People depended directly on natural resources.</p>
+
+<h3>🌿 Stage 1 — Food Gathering</h3>
+
+<p>
+People depended heavily on naturally available plants, fruits, roots,
+seeds and other resources.
+</p>
+
 </div>
 
 <div class="timeline-item">
-<strong>2️⃣ Better Tools</strong>
-<p>Stone tools became important for cutting, hunting and processing food.</p>
+
+<h3>🏹 Stage 2 — Hunting</h3>
+
+<p>
+People developed methods and tools that helped them hunt animals and birds.
+</p>
+
 </div>
 
 <div class="timeline-item">
-<strong>3️⃣ Fire</strong>
-<p>Fire became useful for cooking, warmth and protection.</p>
+
+<h3>🪨 Stage 3 — Stone Technology</h3>
+
+<p>
+Stone was shaped into different tools for cutting, scraping, chopping
+and other activities.
+</p>
+
 </div>
 
 <div class="timeline-item">
-<strong>4️⃣ Temporary Shelters</strong>
-<p>Caves and rock shelters provided protection.</p>
+
+<h3>🔥 Stage 4 — Use of Fire</h3>
+
+<p>
+Fire became an important technological resource for warmth, protection
+and food-related activities.
+</p>
+
 </div>
 
 <div class="timeline-item">
-<strong>5️⃣ Food Production</strong>
-<p>Some communities gradually began growing plants and domesticating animals.</p>
+
+<h3>🌾 Stage 5 — Food Production</h3>
+
+<p>
+Over a long period, some communities began experimenting with growing plants
+and rearing animals.
+</p>
+
 </div>
 
 </div>
+
 </section>
 
-<!-- TOOLS -->
+
+<!-- STONE TOOLS -->
 
 <section class="section">
-<h2>5. Stone Tools</h2>
 
-<h3>English</h3>
-
-<p>
-Stone was one of the important materials used by early humans.
-Different types of tools could be made for different purposes.
-</p>
-
-<div class="tool-grid">
-
-<div class="tool-card">
-<h3>🪨 Cutting Tools</h3>
-<p>Used for cutting plants, meat and other materials.</p>
-</div>
-
-<div class="tool-card">
-<h3>🏹 Hunting Tools</h3>
-<p>Tools helped people hunt animals and obtain food.</p>
-</div>
-
-<div class="tool-card">
-<h3>🔨 Processing Tools</h3>
-<p>Used to break, scrape or process materials.</p>
-</div>
-
-<div class="tool-card">
-<h3>🧰 Multi-purpose Tools</h3>
-<p>Some tools could be used for more than one activity.</p>
-</div>
-
-</div>
-
-<h3>हिंदी</h3>
+<h2>6. Stone Tools</h2>
 
 <p>
-पत्थर प्रारंभिक मानवों द्वारा उपयोग की जाने वाली महत्वपूर्ण सामग्री
-था। इससे काटने, शिकार करने और अन्य कार्यों के लिए अलग-अलग प्रकार के
-औजार बनाए जाते थे।
+Stone was one of the important materials used by early people.
+Different types of stone tools were useful for different activities.
 </p>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="icon">🪨</div>
+
+<h3>Cutting</h3>
+
+<p>
+Sharp stone edges could be used for cutting different materials.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🔨</div>
+
+<h3>Chopping</h3>
+
+<p>
+Heavier tools could be useful for chopping and breaking materials.
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🪵</div>
+
+<h3>Scraping</h3>
+
+<p>
+Some tools were useful for scraping and processing materials.
+</p>
+
+</div>
+
+</div>
 
 <div class="highlight">
-<strong>⭐ UPSC Link:</strong>
-Stone tools are archaeological evidence because they can help historians
-and archaeologists reconstruct aspects of early human life.
+
+<strong>⭐ UPSC Connection</strong>
+
+<p>
+The development of tools reflects the relationship between human needs,
+technology and the environment.
+</p>
+
 </div>
+
 </section>
+
 
 <!-- FIRE -->
 
 <section class="section">
-<h2>6. Discovery and Use of Fire</h2>
 
-<h3>English</h3>
-
-<p>
-Fire was extremely important in the development of human life.
-It could provide warmth, help in cooking and offer protection from
-animals.
-</p>
-
-<h3>हिंदी</h3>
+<h2>7. Discovery and Use of Fire</h2>
 
 <p>
-आग मानव जीवन के विकास में बहुत महत्वपूर्ण थी। इसका उपयोग भोजन पकाने,
-ठंड से बचने और जंगली जानवरों से सुरक्षा जैसे कार्यों में किया जा सकता
-था।
+Fire was an important technological development in human history.
+It could provide warmth and light and could also be useful in food-related
+activities.
 </p>
 
-<div class="example">
-<strong>🔥 Example:</strong>
-Cooking food could make some foods easier to eat and digest.
+<p>
+Fire could also help provide protection from some wild animals.
+</p>
+
+<div class="chart-box">
+
+<div class="chart-title">
+🔥 Major Uses of Fire — Conceptual Learning Chart
 </div>
+
+<div class="bar-row">
+<span>Warmth</span>
+<div class="bar-bg">
+<div class="bar bar1"></div>
+</div>
+<span>High</span>
+</div>
+
+<div class="bar-row">
+<span>Light</span>
+<div class="bar-bg">
+<div class="bar bar2"></div>
+</div>
+<span>High</span>
+</div>
+
+<div class="bar-row">
+<span>Cooking</span>
+<div class="bar-bg">
+<div class="bar bar3"></div>
+</div>
+<span>High</span>
+</div>
+
+<div class="bar-row">
+<span>Protection</span>
+<div class="bar-bg">
+<div class="bar bar4"></div>
+</div>
+<span>Use</span>
+</div>
+
+<p style="font-size:13px;margin-top:15px;">
+⚠️ This is a conceptual visual for learning, not statistical data.
+</p>
+
+</div>
+
 </section>
+
 
 <!-- CAVES -->
 
 <section class="section">
-<h2>7. Caves and Rock Shelters</h2>
+
+<h2>8. Caves and Rock Shelters</h2>
 
 <p>
-Caves and rock shelters could provide protection from rain, heat,
-cold and wild animals.
+Caves and rock shelters could provide protection from weather conditions
+and could serve as temporary living spaces.
 </p>
 
 <p>
-Some caves and rock shelters also contain paintings and other evidence
-that help us study the lives and activities of prehistoric people.
+Some rock shelters also contain evidence of human activity, including
+paintings and other remains.
 </p>
 
-<h3>हिंदी</h3>
+<div class="example">
+
+<strong>🎨 Rock Art</strong>
 
 <p>
-गुफाएँ और शैलाश्रय बारिश, गर्मी, ठंड तथा जंगली जानवरों से सुरक्षा
-प्रदान कर सकते थे। कुछ स्थानों पर मिले चित्र और अन्य पुरातात्त्विक
-साक्ष्य प्रारंभिक मानव जीवन को समझने में सहायता करते हैं।
+Paintings and other archaeological evidence can provide clues about the
+activities, animals and environment known to ancient communities.
 </p>
+
+</div>
+
 </section>
+
 
 <!-- BHIMBETKA -->
 
 <section class="section">
-<h2>8. Bhimbetka — Important Example</h2>
+
+<h2>9. Bhimbetka — An Important Example</h2>
 
 <p>
-Bhimbetka in present-day Madhya Pradesh is an important archaeological
-site associated with prehistoric rock shelters and paintings.
+Bhimbetka in present-day Madhya Pradesh is well known for its rock shelters
+and prehistoric paintings.
 </p>
 
 <p>
-The site provides evidence useful for understanding aspects of
-prehistoric human activity.
+The site provides important archaeological evidence for understanding
+early human activity and the relationship between people and their environment.
 </p>
 
-<div class="highlight">
-<strong>⭐ UPSC Point:</strong><br>
-Bhimbetka → Madhya Pradesh → Rock shelters → Prehistoric paintings
+<div class="site">
+
+<div class="site-icon">🏞️</div>
+
+<h3>Bhimbetka</h3>
+
+<p>
+<strong>Location:</strong> Madhya Pradesh
+</p>
+
+<p>
+<strong>Importance:</strong> Rock shelters and prehistoric paintings.
+</p>
+
 </div>
 
-<h3>हिंदी</h3>
-
-<p>
-भीमबेटका वर्तमान मध्य प्रदेश में स्थित एक महत्वपूर्ण पुरातात्त्विक
-स्थल है। यहाँ शैलाश्रय और प्रागैतिहासिक चित्र मिले हैं, जो प्रारंभिक
-मानव गतिविधियों को समझने में उपयोगी हैं।
-</p>
 </section>
 
-<!-- CHART -->
-
-<section class="section">
-<h2>9. From Hunting-Gathering to Food Production</h2>
-
-<p>
-Human societies did not change from hunting-gathering to farming in a
-single day. The transition developed gradually in different places.
-</p>
-
-<div class="chart">
-
-<div class="bar-row">
-<div class="bar-label">Hunting & Gathering</div>
-<div class="bar">
-<div class="bar-fill" style="width:90%"></div>
-</div>
-</div>
-
-<div class="bar-row">
-<div class="bar-label">Tool Development</div>
-<div class="bar">
-<div class="bar-fill" style="width:75%"></div>
-</div>
-</div>
-
-<div class="bar-row">
-<div class="bar-label">Use of Fire</div>
-<div class="bar">
-<div class="bar-fill" style="width:65%"></div>
-</div>
-</div>
-
-<div class="bar-row">
-<div class="bar-label">Food Production</div>
-<div class="bar">
-<div class="bar-fill" style="width:50%"></div>
-</div>
-</div>
-
-</div>
-
-<p style="font-size:13px;margin-top:10px;">
-*This chart is a conceptual learning visual, not statistical data.
-</p>
-</section>
 
 <!-- FOOD PRODUCTION -->
 
 <section class="section">
-<h2>10. Beginning of Food Production</h2>
 
-<h3>English</h3>
-
-<p>
-Over time, some communities began to produce food by growing plants
-and keeping animals. This was a major change in human history.
-</p>
+<h2>10. From Food Gathering to Food Production</h2>
 
 <p>
-Food production could encourage people to stay in one area for longer
-periods, although the transition was gradual and varied across regions.
+A major change in human history occurred when some communities gradually
+started producing food rather than depending entirely on naturally available
+resources.
 </p>
 
-<h3>हिंदी</h3>
+<div class="flow">
 
-<p>
-समय के साथ कुछ मानव समुदायों ने पौधे उगाना और पशुओं को पालना शुरू
-किया। यह मानव इतिहास में एक महत्वपूर्ण परिवर्तन था।
-</p>
-
-<div class="highlight">
-<strong>⭐ Key Concept:</strong>
-Food production is associated with the development of agriculture and
-animal domestication.
+<div class="flow-box">
+🌿 Gathering
 </div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🌱 Planting
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🌾 Cultivation
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🏠 Settlements
+</div>
+
+</div>
+
+<p>
+This was not an instant transformation. It developed over long periods and
+in different regions at different times.
+</p>
+
+<div class="important">
+
+<strong>📌 Important</strong>
+
+<p>
+Food production is closely connected with changes in settlement patterns,
+technology, storage and social organisation.
+</p>
+
+</div>
+
 </section>
+
 
 <!-- SITES -->
 
 <section class="section">
+
 <h2>11. Important Archaeological Sites</h2>
 
-<div class="tool-grid">
+<div class="site-grid">
 
-<div class="tool-card">
-<h3>📍 Bhimbetka</h3>
-<p>Madhya Pradesh</p>
-<p>Rock shelters and prehistoric paintings</p>
-</div>
+<div class="site">
 
-<div class="tool-card">
-<h3>📍 Hunsgi</h3>
-<p>Karnataka</p>
-<p>Important prehistoric archaeological evidence</p>
-</div>
+<div class="site-icon">🏞️</div>
 
-<div class="tool-card">
-<h3>📍 Kurnool Caves</h3>
-<p>Andhra Pradesh</p>
-<p>Evidence associated with prehistoric life</p>
-</div>
+<h3>Bhimbetka</h3>
 
-<div class="tool-card">
-<h3>📍 Mehrgarh</h3>
-<p>Present-day Pakistan</p>
-<p>Important early farming and settlement evidence</p>
-</div>
+<p>
+Madhya Pradesh. Known for rock shelters and prehistoric paintings.
+</p>
 
 </div>
+
+<div class="site">
+
+<div class="site-icon">🪨</div>
+
+<h3>Hunsgi</h3>
+
+<p>
+Karnataka. Important prehistoric archaeological evidence has been found
+in the region.
+</p>
+
+</div>
+
+<div class="site">
+
+<div class="site-icon">⛰️</div>
+
+<h3>Kurnool Caves</h3>
+
+<p>
+Present-day Andhra Pradesh. Archaeological evidence helps in studying
+prehistoric human activity.
+</p>
+
+</div>
+
+<div class="site">
+
+<div class="site-icon">🌾</div>
+
+<h3>Mehrgarh</h3>
+
+<p>
+Present-day Pakistan. Important for understanding early farming and
+herding communities.
+</p>
+
+</div>
+
+</div>
+
 </section>
+
 
 <!-- AUDIO -->
 
 <section class="section">
-<h2>12. 🎧 Audio Learning</h2>
+
+<h2>12. 🎧 Audio Learning — English</h2>
 
 <div class="audio-box">
 
 <p>
-You can listen to the chapter content in English or Hindi using your
-device's built-in speech system.
+Listen to the English chapter summary using your phone's built-in
+speech system.
 </p>
 
 <div class="audio-buttons">
-<button onclick="speakEnglish()">🔊 English Audio</button>
-<button onclick="speakHindi()">🔊 Hindi Audio</button>
-<button onclick="stopAudio()">⏹ Stop</button>
-</div>
 
-</div>
-</section>
-
-<!-- UPSC POINTS -->
-
-<section class="section">
-<h2>13. ⭐ UPSC Important Points</h2>
-
-<ul>
-<li>Early humans depended heavily on natural resources.</li>
-<li>Hunter-gatherers obtained food through hunting and gathering.</li>
-<li>Movement was often linked to availability of food and water.</li>
-<li>Stone was an important material for tool-making.</li>
-<li>Fire had several important uses.</li>
-<li>Caves and rock shelters provided protection.</li>
-<li>Bhimbetka is an important prehistoric site in Madhya Pradesh.</li>
-<li>Food production developed gradually.</li>
-<li>Plant cultivation and animal domestication changed human life.</li>
-<li>Archaeological evidence helps reconstruct prehistoric societies.</li>
-</ul>
-</section>
-
-<!-- MAINS -->
-
-<section class="section">
-<h2>14. ✍️ UPSC Mains Practice</h2>
-
-<div class="pyq">
-<strong>Question 1:</strong><br>
-Discuss the major features of hunter-gatherer societies.
-</div>
-
-<div class="pyq">
-<strong>Question 2:</strong><br>
-Why did early humans frequently move from one place to another?
-</div>
-
-<div class="pyq">
-<strong>Question 3:</strong><br>
-Explain the importance of stone tools in understanding prehistoric human life.
-</div>
-
-<div class="pyq">
-<strong>Question 4:</strong><br>
-How did the beginning of food production change human societies?
-</div>
-
-</section>
-
-<!-- 10 TEST SERIES -->
-
-<section class="section">
-<h2>15. 📝 10 Chapter Test Series</h2>
-
-<p>
-Each test contains questions with answers and explanations. Complete all
-10 tests for full chapter practice.
-</p>
-
-<!-- TEST 1 -->
-
-<div class="test-box">
-<h3>Test 1 — Basic Concepts</h3>
-
-<p><strong>1. Hunter-gatherers mainly obtained food from:</strong></p>
-
-<label class="option">
-<input type="radio" name="t1q1" value="a">
-Factories
-</label>
-
-<label class="option">
-<input type="radio" name="t1q1" value="b">
-Natural surroundings
-</label>
-
-<label class="option">
-<input type="radio" name="t1q1" value="c">
-Supermarkets
-</label>
-
-<label class="option">
-<input type="radio" name="t1q1" value="d">
-Banks
-</label>
-
-<button class="test-btn" onclick="showAnswer('a1')">
-Show Answer
+<button onclick="speakEnglish()">
+▶️ Play English
 </button>
 
-<div class="answer" id="a1">
-<strong>Correct Answer: B — Natural surroundings.</strong><br>
-Hunter-gatherers depended directly on naturally available resources
-such as animals, plants, fruits, roots and seeds.
-</div>
+<button onclick="stopAudio()">
+⏹️ Stop
+</button>
+
 </div>
 
-<!-- TEST 2 -->
+</div>
 
-<div class="test-box">
+</section>
+
+
+<!-- ENGLISH UPSC -->
+
+<section class="section">
+
+<h2>13. 🎯 UPSC Important Points — English</h2>
+
+<div class="important">
+
+<p>✔ Hunter-gatherers depended heavily on natural resources.</p>
+
+<p>✔ Hunting involved obtaining animals and birds as food.</p>
+
+<p>✔ Gathering included collecting plants, fruits, roots and seeds.</p>
+
+<p>✔ Movement was often related to availability of food and water.</p>
+
+<p>✔ Stone tools were important technological developments.</p>
+
+<p>✔ Fire had several important uses.</p>
+
+<p>✔ Caves and rock shelters provide archaeological evidence.</p>
+
+<p>✔ Bhimbetka is an important prehistoric site.</p>
+
+<p>✔ Food production developed gradually.</p>
+
+<p>✔ Archaeology helps reconstruct periods without written records.</p>
+
+</div>
+
+</section>
+
+
+<!-- ENGLISH MAINS -->
+
+<section class="section">
+
+<h2>14. ✍️ UPSC Mains Practice — English</h2>
+
+<div class="test">
+
+<h3>Question 1</h3>
+
+<p>
+Explain how the availability of natural resources influenced the movement
+of early human communities.
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>Question 2</h3>
+
+<p>
+Discuss the importance of stone tools in understanding early human technology.
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>Question 3</h3>
+
+<p>
+How does archaeological evidence help historians understand prehistoric societies?
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>Question 4</h3>
+
+<p>
+Explain the significance of the transition from food gathering to food production.
+</p>
+
+</div>
+
+</section>
+
+
+<!-- ENGLISH TESTS -->
+
+<section class="section">
+
+<h2>15. 🧠 10 Chapter Test Series — English</h2>
+
+
+<div class="test">
+
+<h3>Test 1 — Hunter-Gatherers</h3>
+
+<p><strong>Q.</strong> Hunter-gatherers mainly depended on:</p>
+
+<div class="option">A. Large factories</div>
+<div class="option">B. Natural resources</div>
+<div class="option">C. Modern markets</div>
+<div class="option">D. Written records</div>
+
+<div class="answer">
+<strong>✅ Answer: B</strong>
+<br>
+<strong>Explanation:</strong>
+Hunter-gatherers obtained food mainly from their natural surroundings.
+</div>
+
+</div>
+
+
+<div class="test">
+
 <h3>Test 2 — Movement</h3>
 
-<p><strong>2. Why did many early humans move from place to place?</strong></p>
+<p><strong>Q.</strong> Why did early people often move?</p>
 
-<label class="option">
-<input type="radio" name="t2q1">
-Because food and water availability changed
-</label>
+<div class="option">A. To visit modern cities</div>
+<div class="option">B. To follow resources</div>
+<div class="option">C. To attend schools</div>
+<div class="option">D. To trade online</div>
 
-<label class="option">
-<input type="radio" name="t2q1">
-Because of modern transport
-</label>
-
-<label class="option">
-<input type="radio" name="t2q1">
-Because of factories
-</label>
-
-<label class="option">
-<input type="radio" name="t2q1">
-Because of schools
-</label>
-
-<button class="test-btn" onclick="showAnswer('a2')">
-Show Answer
-</button>
-
-<div class="answer" id="a2">
-<strong>Correct Answer: A.</strong><br>
-Availability of food, water, plants and animals influenced movement.
-</div>
+<div class="answer">
+<strong>✅ Answer: B</strong>
+<br>
+<strong>Explanation:</strong>
+Availability of food, water and other resources influenced movement.
 </div>
 
-<!-- TEST 3 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 3 — Tools</h3>
 
-<p><strong>3. Which material was especially important for early tools?</strong></p>
+<p><strong>Q.</strong> Which material was important in early tool technology?</p>
 
-<p>
-A. Plastic<br>
-B. Stone<br>
-C. Steel<br>
-D. Aluminium
-</p>
+<div class="option">A. Plastic</div>
+<div class="option">B. Stone</div>
+<div class="option">C. Steel</div>
+<div class="option">D. Aluminium</div>
 
-<button class="test-btn" onclick="showAnswer('a3')">
-Show Answer
-</button>
-
-<div class="answer" id="a3">
-<strong>Correct Answer: B — Stone.</strong><br>
-Stone was an important material for making several types of early tools.
-</div>
+<div class="answer">
+<strong>✅ Answer: B</strong>
+<br>
+<strong>Explanation:</strong>
+Stone was widely used to make early tools.
 </div>
 
-<!-- TEST 4 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 4 — Fire</h3>
 
-<p><strong>4. Which was NOT a major use of fire for early humans?</strong></p>
+<p><strong>Q.</strong> Which was an important use of fire?</p>
 
-<p>
-A. Cooking<br>
-B. Warmth<br>
-C. Protection<br>
-D. Internet communication
-</p>
+<div class="option">A. Warmth</div>
+<div class="option">B. Internet access</div>
+<div class="option">C. Writing books</div>
+<div class="option">D. Building computers</div>
 
-<button class="test-btn" onclick="showAnswer('a4')">
-Show Answer
-</button>
-
-<div class="answer" id="a4">
-<strong>Correct Answer: D.</strong><br>
-Internet communication is a modern technology and not a use of fire.
-</div>
+<div class="answer">
+<strong>✅ Answer: A</strong>
+<br>
+<strong>Explanation:</strong>
+Fire could provide warmth and light and had other important uses.
 </div>
 
-<!-- TEST 5 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 5 — Bhimbetka</h3>
 
-<p><strong>5. Bhimbetka is located in:</strong></p>
+<p><strong>Q.</strong> Bhimbetka is located in:</p>
 
-<p>
-A. Madhya Pradesh<br>
-B. Punjab<br>
-C. Assam<br>
-D. Kerala
-</p>
+<div class="option">A. Madhya Pradesh</div>
+<div class="option">B. Gujarat</div>
+<div class="option">C. Punjab</div>
+<div class="option">D. Kerala</div>
 
-<button class="test-btn" onclick="showAnswer('a5')">
-Show Answer
-</button>
-
-<div class="answer" id="a5">
-<strong>Correct Answer: A — Madhya Pradesh.</strong><br>
-Bhimbetka is an important prehistoric archaeological site in Madhya Pradesh.
-</div>
+<div class="answer">
+<strong>✅ Answer: A</strong>
+<br>
+<strong>Explanation:</strong>
+Bhimbetka is an important prehistoric site in Madhya Pradesh.
 </div>
 
-<!-- TEST 6 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 6 — Archaeology</h3>
 
-<p><strong>6. Archaeologists study which evidence to understand prehistoric life?</strong></p>
+<p><strong>Q.</strong> Archaeological evidence is useful for studying:</p>
 
-<p>
-A. Only modern newspapers<br>
-B. Tools, shelters, paintings and other material remains<br>
-C. Television programmes<br>
-D. Modern websites
-</p>
+<div class="option">A. Only modern politics</div>
+<div class="option">B. Past human activity</div>
+<div class="option">C. Only future events</div>
+<div class="option">D. Weather forecasts</div>
 
-<button class="test-btn" onclick="showAnswer('a6')">
-Show Answer
-</button>
-
-<div class="answer" id="a6">
-<strong>Correct Answer: B.</strong><br>
-Material remains are important sources for reconstructing prehistoric life.
-</div>
+<div class="answer">
+<strong>✅ Answer: B</strong>
+<br>
+<strong>Explanation:</strong>
+Archaeology studies material remains to understand the human past.
 </div>
 
-<!-- TEST 7 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 7 — Food Production</h3>
 
-<p><strong>7. Food production includes:</strong></p>
+<p><strong>Q.</strong> Food production is associated with:</p>
 
-<p>
-A. Growing plants and keeping animals<br>
-B. Only hunting<br>
-C. Only gathering<br>
-D. Manufacturing cars
-</p>
+<div class="option">A. Cultivation and herding</div>
+<div class="option">B. Only hunting</div>
+<div class="option">C. Only gathering</div>
+<div class="option">D. Modern factories</div>
 
-<button class="test-btn" onclick="showAnswer('a7')">
-Show Answer
-</button>
-
-<div class="answer" id="a7">
-<strong>Correct Answer: A.</strong><br>
-Food production includes cultivation of plants and domestication/
-keeping of animals.
-</div>
+<div class="answer">
+<strong>✅ Answer: A</strong>
+<br>
+<strong>Explanation:</strong>
+Food production includes activities such as cultivation and animal herding.
 </div>
 
-<!-- TEST 8 -->
-
-<div class="test-box">
-<h3>Test 8 — Conceptual</h3>
-
-<p><strong>8. Which development could encourage longer stays in one place?</strong></p>
-
-<p>
-A. Food production<br>
-B. Random movement<br>
-C. Lack of water<br>
-D. Absence of food
-</p>
-
-<button class="test-btn" onclick="showAnswer('a8')">
-Show Answer
-</button>
-
-<div class="answer" id="a8">
-<strong>Correct Answer: A — Food production.</strong><br>
-Cultivation and animal keeping could provide a more regular local food
-supply and support longer settlements.
-</div>
 </div>
 
-<!-- TEST 9 -->
 
-<div class="test-box">
+<div class="test">
+
+<h3>Test 8 — Rock Shelters</h3>
+
+<p><strong>Q.</strong> Rock shelters can provide evidence about:</p>
+
+<div class="option">A. Prehistoric human activity</div>
+<div class="option">B. Modern elections</div>
+<div class="option">C. Space stations</div>
+<div class="option">D. Internet networks</div>
+
+<div class="answer">
+<strong>✅ Answer: A</strong>
+<br>
+<strong>Explanation:</strong>
+Rock shelters may preserve evidence of past human activity.
+</div>
+
+</div>
+
+
+<div class="test">
+
 <h3>Test 9 — UPSC Foundation</h3>
 
-<p><strong>9. Which statement is correct?</strong></p>
+<p><strong>Q.</strong> Which concept best explains early human mobility?</p>
 
-<p>
-A. All early humans lived permanently in cities.<br>
-B. Early human societies were completely independent of nature.<br>
-C. Natural resource availability influenced human movement.<br>
-D. Stone tools were never used.
-</p>
+<div class="option">A. Resource availability</div>
+<div class="option">B. Digital technology</div>
+<div class="option">C. Industrialisation</div>
+<div class="option">D. Urban transport</div>
 
-<button class="test-btn" onclick="showAnswer('a9')">
-Show Answer
-</button>
-
-<div class="answer" id="a9">
-<strong>Correct Answer: C.</strong><br>
-Availability of natural resources was an important factor influencing
-the movement and survival strategies of early communities.
-</div>
+<div class="answer">
+<strong>✅ Answer: A</strong>
+<br>
+<strong>Explanation:</strong>
+Natural resource availability was an important factor influencing movement.
 </div>
 
-<!-- TEST 10 -->
+</div>
 
-<div class="test-box">
+
+<div class="test">
+
 <h3>Test 10 — Final Revision</h3>
 
-<p><strong>10. Which sequence best represents a broad development in human history?</strong></p>
+<p><strong>Q.</strong> Which statement is correct?</p>
 
-<p>
-A. Hunting-gathering → tool development → food production<br>
-B. Internet → agriculture → stone tools<br>
-C. Factories → hunting → stone tools<br>
-D. Cities → stone tools → hunting
-</p>
+<div class="option">A. Early humans always lived in permanent cities.</div>
+<div class="option">B. Early humans interacted closely with their environment.</div>
+<div class="option">C. Stone tools were never used.</div>
+<div class="option">D. Food production appeared instantly everywhere.</div>
 
-<button class="test-btn" onclick="showAnswer('a10')">
-Show Answer
-</button>
-
-<div class="answer" id="a10">
-<strong>Correct Answer: A.</strong><br>
-This is a simplified learning sequence. Human development was gradual
-and differed across regions and communities.
+<div class="answer">
+<strong>✅ Answer: B</strong>
+<br>
+<strong>Explanation:</strong>
+Early human life was closely connected with the environment and available
+natural resources.
 </div>
+
 </div>
 
 </section>
+
 
 <!-- QUICK REVISION -->
 
 <section class="section">
-<h2>16. 🔄 Quick Revision</h2>
 
-<div class="revision">
+<h2>16. ⚡ Quick Revision — English</h2>
 
-<ul>
-<li>Hunter-gatherers depended on nature for food.</li>
-<li>Hunting involved obtaining animals and birds.</li>
-<li>Gathering included collecting fruits, roots, seeds and plants.</li>
-<li>Early humans often moved because resources changed.</li>
-<li>Stone was an important material for tools.</li>
-<li>Fire was useful for cooking, warmth and protection.</li>
-<li>Caves and rock shelters provided protection.</li>
-<li>Bhimbetka is an important prehistoric site in Madhya Pradesh.</li>
-<li>Food production involved cultivation and animal keeping.</li>
-<li>Archaeology helps us reconstruct prehistoric life.</li>
-</ul>
+<div class="flow">
+
+<div class="flow-box">🌿 Gathering</div>
+<div class="arrow">→</div>
+<div class="flow-box">🏹 Hunting</div>
+<div class="arrow">→</div>
+<div class="flow-box">🪨 Tools</div>
+<div class="arrow">→</div>
+<div class="flow-box">🔥 Fire</div>
+<div class="arrow">→</div>
+<div class="flow-box">🌾 Food Production</div>
 
 </div>
+
+<div class="important">
+
+<p>
+<strong>Remember:</strong>
+Early human history can be understood through archaeology, tools,
+rock shelters, paintings, food practices and environmental evidence.
+</p>
+
+</div>
+
 </section>
 
-<!-- FINAL CHECK -->
+
+<!-- ================= HINDI ================= -->
+
+<div class="language-title">
+🇮🇳 PART 2 — हिंदी
+</div>
+
 
 <section class="section">
-<h2>🎯 Chapter Completion Checklist</h2>
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I completed the English explanation
-</label>
+<h2>1. अध्याय का परिचय</h2>
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I completed the Hindi explanation
-</label>
+<p>
+यह अध्याय प्रारंभिक मानव समुदायों के जीवन को समझने में हमारी सहायता करता है।
+शहरों, राज्यों और लिखित अभिलेखों के विकास से बहुत पहले मनुष्य छोटे-छोटे
+समुदायों में रहते थे।
+</p>
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I studied the important points
-</label>
+<p>
+वे भोजन के लिए जानवरों का शिकार करते थे तथा फल, जड़ें, बीज और अन्य
+वनस्पति संसाधन एकत्र करते थे।
+</p>
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I completed the Mains questions
-</label>
+<p>
+उनका जीवन नदियों, जंगलों, घासभूमियों, पहाड़ियों, गुफाओं और मौसम जैसे
+प्राकृतिक तत्वों से बहुत गहराई से जुड़ा हुआ था।
+</p>
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I completed all 10 tests
-</label>
+<div class="highlight">
 
-<label class="option">
-<input type="checkbox" onchange="updateProgress()">
-I completed quick revision
-</label>
+<strong>⭐ UPSC Concept</strong>
+
+<p>
+प्रारंभिक मानव का अध्ययन हमें तकनीक, भोजन, आवास, पर्यावरण और
+खाद्य-संग्रह से खाद्य-उत्पादन की ओर हुए परिवर्तन को समझने में मदद करता है।
+</p>
+
+</div>
 
 </section>
 
+
+<section class="section">
+
+<h2>2. शिकारी-संग्राहक कौन थे?</h2>
+
+<p>
+शिकारी-संग्राहक वे समुदाय थे जो अपने आसपास के प्राकृतिक वातावरण से सीधे
+भोजन प्राप्त करते थे।
+</p>
+
+<p>
+शिकारी जानवरों और पक्षियों का शिकार करते थे, जबकि संग्राहक फल, जड़ें,
+बीज, कंद और अन्य उपयोगी वनस्पतियों को एकत्र करते थे।
+</p>
+
+<p>
+इनका जीवन बड़े पैमाने की खेती पर निर्भर नहीं था।
+प्राकृतिक संसाधनों की उपलब्धता बदलने के कारण इनके जीवन में स्थान परिवर्तन
+महत्वपूर्ण भूमिका निभा सकता था।
+</p>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="icon">🏹</div>
+
+<h3>शिकारी</h3>
+
+<p>
+जानवरों और पक्षियों से भोजन प्राप्त करते थे।
+</p>
+
 </div>
+
+<div class="info-card">
+
+<div class="icon">🌿</div>
+
+<h3>संग्राहक</h3>
+
+<p>
+फल, जड़ें, बीज और अन्य प्राकृतिक संसाधन एकत्र करते थे।
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🚶</div>
+
+<h3>गतिशीलता</h3>
+
+<p>
+संसाधनों की उपलब्धता के अनुसार स्थान बदल सकते थे।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>3. प्रारंभिक लोग एक स्थान से दूसरे स्थान क्यों जाते थे?</h2>
+
+<p>
+प्रारंभिक लोगों के लिए भोजन और पानी पूरे वर्ष समान रूप से उपलब्ध नहीं होते थे।
+इसलिए संसाधनों की उपलब्धता के अनुसार उन्हें स्थान बदलना पड़ सकता था।
+</p>
+
+<p>
+यदि किसी क्षेत्र में जानवर चले जाते थे, तो शिकारी उनका पीछा कर सकते थे।
+इसी तरह किसी विशेष मौसम में उपलब्ध फल या पौधों के कारण लोग किसी अन्य
+क्षेत्र की ओर जा सकते थे।
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+🌳 भोजन
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+💧 पानी
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🏕️ आश्रय
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🚶 स्थान परिवर्तन
+</div>
+
+</div>
+
+<div class="important">
+
+<strong>📌 याद रखें</strong>
+
+<p>
+प्रारंभिक मानव की गतिशीलता का संबंध प्राकृतिक संसाधनों की उपलब्धता से
+गहराई से जुड़ा था।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>4. प्रारंभिक मानव जीवन — समयरेखा</h2>
+
+<div class="timeline">
+
+<div class="timeline-item">
+
+<h3>🌿 चरण 1 — भोजन का संग्रह</h3>
+
+<p>
+लोग प्राकृतिक रूप से उपलब्ध फल, जड़ें, बीज और अन्य संसाधन एकत्र करते थे।
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>🏹 चरण 2 — शिकार</h3>
+
+<p>
+जानवरों और पक्षियों से भोजन प्राप्त करने के लिए शिकार की तकनीकों का विकास हुआ।
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>🪨 चरण 3 — पत्थर के औजार</h3>
+
+<p>
+पत्थर को अलग-अलग आकार देकर काटने, खुरचने और अन्य कार्यों के लिए
+उपयोग किया गया।
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>🔥 चरण 4 — आग का उपयोग</h3>
+
+<p>
+आग गर्मी, प्रकाश, भोजन से जुड़े कार्यों और सुरक्षा के लिए महत्वपूर्ण संसाधन बनी।
+</p>
+
+</div>
+
+<div class="timeline-item">
+
+<h3>🌾 चरण 5 — खाद्य उत्पादन</h3>
+
+<p>
+लंबे समय के दौरान कुछ समुदायों ने पौधों को उगाने और पशुओं को पालने की
+दिशा में कदम बढ़ाया।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>5. पत्थर के औजार</h2>
+
+<p>
+प्रारंभिक मानव द्वारा उपयोग किए जाने वाले महत्वपूर्ण संसाधनों में पत्थर भी
+एक था। अलग-अलग औजार अलग-अलग कार्यों के लिए उपयोग किए जा सकते थे।
+</p>
+
+<div class="info-grid">
+
+<div class="info-card">
+
+<div class="icon">🪨</div>
+
+<h3>काटना</h3>
+
+<p>
+पत्थर की धारदार सतह का उपयोग काटने के कार्य में किया जा सकता था।
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🔨</div>
+
+<h3>काट-छांट</h3>
+
+<p>
+भारी औजारों का उपयोग विभिन्न सामग्रियों पर कार्य करने में किया जा सकता था।
+</p>
+
+</div>
+
+<div class="info-card">
+
+<div class="icon">🪵</div>
+
+<h3>खुरचना</h3>
+
+<p>
+कुछ औजारों का उपयोग सतहों को खुरचने और संसाधित करने में किया जाता था।
+</p>
+
+</div>
+
+</div>
+
+<div class="highlight">
+
+<strong>⭐ UPSC Connection</strong>
+
+<p>
+औजारों का विकास मानव की आवश्यकताओं, तकनीकी क्षमता और पर्यावरण के बीच
+संबंध को समझने में मदद करता है।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>6. आग का उपयोग</h2>
+
+<p>
+आग मानव इतिहास की महत्वपूर्ण तकनीकी उपलब्धियों में से एक थी।
+इसका उपयोग गर्मी और प्रकाश प्राप्त करने के लिए किया जा सकता था।
+</p>
+
+<p>
+आग भोजन से जुड़े कार्यों और कुछ जंगली जानवरों से सुरक्षा में भी उपयोगी हो सकती थी।
+</p>
+
+<div class="chart-box">
+
+<div class="chart-title">
+🔥 आग के प्रमुख उपयोग — Conceptual Chart
+</div>
+
+<div class="bar-row">
+
+<span>गर्मी</span>
+
+<div class="bar-bg">
+<div class="bar bar1"></div>
+</div>
+
+<span>High</span>
+
+</div>
+
+<div class="bar-row">
+
+<span>प्रकाश</span>
+
+<div class="bar-bg">
+<div class="bar bar2"></div>
+</div>
+
+<span>High</span>
+
+</div>
+
+<div class="bar-row">
+
+<span>भोजन</span>
+
+<div class="bar-bg">
+<div class="bar bar3"></div>
+</div>
+
+<span>High</span>
+
+</div>
+
+<div class="bar-row">
+
+<span>सुरक्षा</span>
+
+<div class="bar-bg">
+<div class="bar bar4"></div>
+</div>
+
+<span>Use</span>
+
+</div>
+
+<p style="font-size:13px;margin-top:15px;">
+⚠️ यह केवल समझाने के लिए बनाया गया conceptual visual है, वास्तविक statistical data नहीं।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>7. गुफाएँ और शैलाश्रय</h2>
+
+<p>
+गुफाएँ और शैलाश्रय प्रारंभिक लोगों को मौसम से बचाव और अस्थायी आश्रय प्रदान
+कर सकते थे।
+</p>
+
+<p>
+कुछ शैलाश्रयों में मानव गतिविधियों के प्रमाण भी मिले हैं।
+इनमें चित्र और अन्य पुरातात्त्विक प्रमाण शामिल हो सकते हैं।
+</p>
+
+<div class="example">
+
+<strong>🎨 शैल चित्र</strong>
+
+<p>
+शैल चित्र हमें उस समय के लोगों द्वारा देखे गए जानवरों, पर्यावरण और
+मानवीय गतिविधियों के बारे में महत्वपूर्ण संकेत दे सकते हैं।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>8. भीमबेटका — महत्वपूर्ण उदाहरण</h2>
+
+<p>
+भीमबेटका वर्तमान मध्य प्रदेश में स्थित एक महत्वपूर्ण प्रागैतिहासिक स्थल है।
+यहाँ शैलाश्रयों और प्रागैतिहासिक चित्रों के कारण इसका विशेष महत्व है।
+</p>
+
+<div class="site">
+
+<div class="site-icon">🏞️</div>
+
+<h3>भीमबेटका</h3>
+
+<p>
+<strong>स्थान:</strong> मध्य प्रदेश
+</p>
+
+<p>
+<strong>महत्व:</strong> शैलाश्रय और प्रागैतिहासिक चित्र।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>9. खाद्य-संग्रह से खाद्य-उत्पादन तक</h2>
+
+<p>
+मानव इतिहास में एक महत्वपूर्ण परिवर्तन तब आया जब कुछ समुदायों ने
+केवल प्राकृतिक रूप से उपलब्ध भोजन पर निर्भर रहने के बजाय भोजन का उत्पादन
+करना शुरू किया।
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+🌿 संग्रह
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🌱 पौधे लगाना
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🌾 खेती
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+🏠 बस्तियाँ
+</div>
+
+</div>
+
+<p>
+यह परिवर्तन अचानक नहीं हुआ। यह लंबे समय में विकसित हुआ और अलग-अलग
+क्षेत्रों में अलग-अलग समय पर हुआ।
+</p>
+
+<div class="important">
+
+<strong>📌 महत्वपूर्ण</strong>
+
+<p>
+खाद्य-उत्पादन का संबंध स्थायी बस्तियों, भंडारण, तकनीक और सामाजिक संगठन
+में होने वाले परिवर्तनों से भी है।
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>10. महत्वपूर्ण पुरातात्त्विक स्थल</h2>
+
+<div class="site-grid">
+
+<div class="site">
+
+<div class="site-icon">🏞️</div>
+
+<h3>भीमबेटका</h3>
+
+<p>
+मध्य प्रदेश — शैलाश्रय और प्रागैतिहासिक चित्रों के लिए प्रसिद्ध।
+</p>
+
+</div>
+
+<div class="site">
+
+<div class="site-icon">🪨</div>
+
+<h3>हुंसगी</h3>
+
+<p>
+कर्नाटक — प्रागैतिहासिक पुरातात्त्विक प्रमाणों के अध्ययन में महत्वपूर्ण।
+</p>
+
+</div>
+
+<div class="site">
+
+<div class="site-icon">⛰️</div>
+
+<h3>कुरनूल गुफाएँ</h3>
+
+<p>
+वर्तमान आंध्र प्रदेश — प्रागैतिहासिक मानव गतिविधियों के अध्ययन के लिए महत्वपूर्ण।
+</p>
+
+</div>
+
+<div class="site">
+
+<div class="site-icon">🌾</div>
+
+<h3>मेहरगढ़</h3>
+
+<p>
+वर्तमान पाकिस्तान — प्रारंभिक खेती और पशुपालन के अध्ययन के लिए महत्वपूर्ण।
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HINDI AUDIO -->
+
+<section class="section">
+
+<h2>11. 🎧 ऑडियो लर्निंग — हिंदी</h2>
+
+<div class="audio-box">
+
+<p>
+अब पूरे हिंदी भाग का संक्षिप्त ऑडियो सुनें।
+</p>
+
+<div class="audio-buttons">
+
+<button onclick="speakHindi()">
+▶️ हिंदी सुनें
+</button>
+
+<button onclick="stopAudio()">
+⏹️ बंद करें
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>12. 🎯 UPSC महत्वपूर्ण बिंदु — हिंदी</h2>
+
+<div class="important">
+
+<p>✔ शिकारी-संग्राहक प्राकृतिक संसाधनों पर निर्भर थे।</p>
+
+<p>✔ शिकारी जानवरों और पक्षियों से भोजन प्राप्त करते थे।</p>
+
+<p>✔ संग्राहक फल, जड़ें, बीज और पौधों को एकत्र करते थे।</p>
+
+<p>✔ भोजन और पानी की उपलब्धता स्थान परिवर्तन को प्रभावित कर सकती थी।</p>
+
+<p>✔ पत्थर के औजार प्रारंभिक तकनीकी विकास का महत्वपूर्ण उदाहरण हैं।</p>
+
+<p>✔ आग के कई महत्वपूर्ण उपयोग थे।</p>
+
+<p>✔ गुफाएँ और शैलाश्रय पुरातात्त्विक प्रमाण प्रदान करते हैं।</p>
+
+<p>✔ भीमबेटका एक महत्वपूर्ण प्रागैतिहासिक स्थल है।</p>
+
+<p>✔ खाद्य-उत्पादन धीरे-धीरे विकसित हुआ।</p>
+
+<p>✔ पुरातत्व लिखित अभिलेखों से पहले के मानव इतिहास को समझने में मदद करता है।</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>13. ✍️ UPSC Mains Practice — हिंदी</h2>
+
+<div class="test">
+
+<h3>प्रश्न 1</h3>
+
+<p>
+प्राकृतिक संसाधनों की उपलब्धता ने प्रारंभिक मानव समुदायों की गतिशीलता को
+किस प्रकार प्रभावित किया?
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>प्रश्न 2</h3>
+
+<p>
+प्रारंभिक मानव के जीवन को समझने में पत्थर के औजारों के महत्व की चर्चा कीजिए।
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>प्रश्न 3</h3>
+
+<p>
+प्रागैतिहासिक समाजों के अध्ययन में पुरातात्त्विक प्रमाणों का क्या महत्व है?
+</p>
+
+</div>
+
+<div class="test">
+
+<h3>प्रश्न 4</h3>
+
+<p>
+खाद्य-संग्रह से खाद्य-उत्पादन की ओर परिवर्तन का मानव इतिहास में क्या महत्व है?
+</p>
+
+</div>
+
+</section>
+
+
+<!-- HINDI TESTS -->
+
+<section class="section">
+
+<h2>14. 🧠 10 Chapter Test Series — हिंदी</h2>
+
+
+<div class="test">
+
+<h3>Test 1 — शिकारी-संग्राहक</h3>
+
+<p><strong>प्रश्न:</strong> शिकारी-संग्राहक मुख्य रूप से किस पर निर्भर थे?</p>
+
+<div class="option">A. बड़े कारखाने</div>
+<div class="option">B. प्राकृतिक संसाधन</div>
+<div class="option">C. आधुनिक बाजार</div>
+<div class="option">D. लिखित अभिलेख</div>
+
+<div class="answer">
+<strong>✅ उत्तर: B</strong>
+<br>
+<strong>व्याख्या:</strong>
+शिकारी-संग्राहक मुख्य रूप से अपने प्राकृतिक वातावरण से भोजन प्राप्त करते थे।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 2 — स्थान परिवर्तन</h3>
+
+<p><strong>प्रश्न:</strong> प्रारंभिक लोग अक्सर स्थान क्यों बदलते थे?</p>
+
+<div class="option">A. प्राकृतिक संसाधनों की खोज के लिए</div>
+<div class="option">B. आधुनिक शहरों में जाने के लिए</div>
+<div class="option">C. स्कूल जाने के लिए</div>
+<div class="option">D. इंटरनेट उपयोग के लिए</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+भोजन, पानी और अन्य प्राकृतिक संसाधनों की उपलब्धता स्थान परिवर्तन का कारण बन सकती थी।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 3 — पत्थर के औजार</h3>
+
+<p><strong>प्रश्न:</strong> प्रारंभिक औजारों के निर्माण में कौन-सी सामग्री महत्वपूर्ण थी?</p>
+
+<div class="option">A. प्लास्टिक</div>
+<div class="option">B. पत्थर</div>
+<div class="option">C. स्टील</div>
+<div class="option">D. एल्युमिनियम</div>
+
+<div class="answer">
+<strong>✅ उत्तर: B</strong>
+<br>
+<strong>व्याख्या:</strong>
+पत्थर प्रारंभिक मानव की महत्वपूर्ण औजार-निर्माण सामग्री थी।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 4 — आग</h3>
+
+<p><strong>प्रश्न:</strong> आग का एक महत्वपूर्ण उपयोग क्या था?</p>
+
+<div class="option">A. गर्मी प्राप्त करना</div>
+<div class="option">B. इंटरनेट चलाना</div>
+<div class="option">C. कंप्यूटर बनाना</div>
+<div class="option">D. ऑनलाइन शिक्षा</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+आग से गर्मी और प्रकाश प्राप्त किया जा सकता था तथा इसके अन्य उपयोग भी थे।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 5 — भीमबेटका</h3>
+
+<p><strong>प्रश्न:</strong> भीमबेटका किस राज्य में स्थित है?</p>
+
+<div class="option">A. मध्य प्रदेश</div>
+<div class="option">B. गुजरात</div>
+<div class="option">C. पंजाब</div>
+<div class="option">D. केरल</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+भीमबेटका मध्य प्रदेश का महत्वपूर्ण प्रागैतिहासिक स्थल है।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 6 — पुरातत्व</h3>
+
+<p><strong>प्रश्न:</strong> पुरातात्त्विक प्रमाण किसे समझने में मदद करते हैं?</p>
+
+<div class="option">A. अतीत की मानव गतिविधियों को</div>
+<div class="option">B. केवल भविष्य को</div>
+<div class="option">C. केवल मौसम को</div>
+<div class="option">D. केवल आधुनिक राजनीति को</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+पुरातत्व भौतिक अवशेषों के माध्यम से मानव अतीत को समझने में मदद करता है।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 7 — खाद्य-उत्पादन</h3>
+
+<p><strong>प्रश्न:</strong> खाद्य-उत्पादन का संबंध किससे है?</p>
+
+<div class="option">A. खेती और पशुपालन</div>
+<div class="option">B. केवल शिकार</div>
+<div class="option">C. केवल संग्रह</div>
+<div class="option">D. केवल उद्योग</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+खाद्य-उत्पादन में खेती और पशुपालन जैसी गतिविधियाँ शामिल हैं।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 8 — शैलाश्रय</h3>
+
+<p><strong>प्रश्न:</strong> शैलाश्रय किस प्रकार की जानकारी दे सकते हैं?</p>
+
+<div class="option">A. प्रागैतिहासिक मानव गतिविधियों की</div>
+<div class="option">B. आधुनिक चुनावों की</div>
+<div class="option">C. इंटरनेट की</div>
+<div class="option">D. अंतरिक्ष स्टेशनों की</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+शैलाश्रयों में अतीत की मानव गतिविधियों के प्रमाण मिल सकते हैं।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 9 — UPSC Foundation</h3>
+
+<p><strong>प्रश्न:</strong> प्रारंभिक मानव की गतिशीलता को कौन-सा विचार सबसे अच्छी तरह समझाता है?</p>
+
+<div class="option">A. संसाधनों की उपलब्धता</div>
+<div class="option">B. डिजिटल तकनीक</div>
+<div class="option">C. औद्योगीकरण</div>
+<div class="option">D. आधुनिक परिवहन</div>
+
+<div class="answer">
+<strong>✅ उत्तर: A</strong>
+<br>
+<strong>व्याख्या:</strong>
+प्राकृतिक संसाधनों की उपलब्धता प्रारंभिक मानव की गतिशीलता को प्रभावित करती थी।
+</div>
+
+</div>
+
+
+<div class="test">
+
+<h3>Test 10 — Final Revision</h3>
+
+<p><strong>प्रश्न:</strong> निम्न में से कौन-सा कथन सही है?</p>
+
+<div class="option">A. प्रारंभिक मानव हमेशा स्थायी शहरों में रहते थे।</div>
+<div class="option">B. प्रारंभिक मानव का जीवन पर्यावरण से गहराई से जुड़ा था।</div>
+<div class="option">C. पत्थर के औजार उपयोग नहीं किए जाते थे।</div>
+<div class="option">D. खाद्य-उत्पादन हर जगह एक ही समय पर शुरू हुआ।</div>
+
+<div class="answer">
+<strong>✅ उत्तर: B</strong>
+<br>
+<strong>व्याख्या:</strong>
+प्रारंभिक मानव का जीवन प्राकृतिक पर्यावरण और उपलब्ध संसाधनों से बहुत
+गहराई से जुड़ा हुआ था।
+</div>
+
+</div>
+
+</section>
+
+
+<!-- QUICK REVISION -->
+
+<section class="section">
+
+<h2>15. ⚡ Quick Revision — हिंदी</h2>
+
+<div class="flow">
+
+<div class="flow-box">🌿 संग्रह</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">🏹 शिकार</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">🪨 औजार</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">🔥 आग</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">🌾 खाद्य उत्पादन</div>
+
+</div>
+
+<div class="important">
+
+<p>
+<strong>याद रखें:</strong>
+प्रागैतिहासिक मानव इतिहास को समझने के लिए औजार, शैलाश्रय, चित्र,
+पुरातात्त्विक अवशेष, भोजन और पर्यावरण महत्वपूर्ण प्रमाण हैं।
+</p>
+
+</div>
+
+</section>
+
+
+<!-- CHECKLIST -->
+
+<section class="section">
+
+<h2>16. ✅ Chapter Completion Checklist</h2>
+
+<div class="checklist">
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+English section completed
+</label>
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+Hindi section completed
+</label>
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+Visuals & timeline revised
+</label>
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+UPSC Important Points revised
+</label>
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+Mains questions practiced
+</label>
+
+<label>
+<input type="checkbox" onchange="updateProgress()">
+10 Test Series completed
+</label>
+
+</div>
+
+</section>
+
+
+</div>
+
+
+<footer>
+
+<p>🇮🇳 UPSC Shiksha</p>
+
+<p>
+Free + Premium UPSC Learning Platform
+</p>
+
+<p>
+© 2026 UPSC Shiksha
+</p>
+
+</footer>
+
 
 <button id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
 ↑
 </button>
+
 
 <script>
 
@@ -1274,85 +2779,98 @@ I completed quick revision
 
 function toggleDarkMode(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "upscDarkMode",
-    document.body.classList.contains("dark")
-  );
+localStorage.setItem(
+"upscDarkMode",
+document.body.classList.contains("dark")
+);
+
 }
 
 if(localStorage.getItem("upscDarkMode")==="true"){
-  document.body.classList.add("dark");
-}
-
-
-/* ANSWERS */
-
-function showAnswer(id){
-
-  const box=document.getElementById(id);
-
-  if(box){
-    box.style.display =
-      box.style.display==="block" ? "none" : "block";
-  }
+document.body.classList.add("dark");
 }
 
 
 /* AUDIO */
 
-const englishText=`
-Chapter 2: On the Trail of the Earliest People.
-Hunter gatherers were early human communities that depended on
-natural surroundings for food.
-They hunted animals and gathered fruits, roots, seeds and plants.
-Early humans often moved from one place to another because food and
-water were not available equally throughout the year.
-Stone was an important material for making tools.
-Fire was useful for cooking, warmth and protection.
-Caves and rock shelters provided protection.
-Bhimbetka in Madhya Pradesh is an important prehistoric archaeological
-site with rock shelters and paintings.
-Over time, some communities began producing food by growing plants
-and keeping animals.
-`;
-
-const hindiText=`
-अध्याय दो: प्रारंभिक मानवों की खोज।
-प्रारंभिक शिकारी-संग्रहकर्ता समुदाय प्राकृतिक संसाधनों पर निर्भर थे।
-वे जानवरों का शिकार करते और फल, जड़ें, बीज तथा पौधे एकत्र करते थे।
-भोजन और पानी की उपलब्धता हर स्थान और मौसम में समान नहीं होती थी,
-इसलिए प्रारंभिक लोग एक स्थान से दूसरे स्थान पर जाते थे।
-पत्थर औजार बनाने की महत्वपूर्ण सामग्री था।
-आग का उपयोग भोजन पकाने, गर्मी प्राप्त करने और सुरक्षा के लिए किया जाता था।
-गुफाएँ और शैलाश्रय सुरक्षा प्रदान करते थे।
-मध्य प्रदेश का भीमबेटका एक महत्वपूर्ण प्रागैतिहासिक पुरातात्त्विक स्थल है।
-समय के साथ कुछ समुदायों ने पौधे उगाना और पशुओं को रखना शुरू किया।
-`;
-
-function speakText(text,lang){
-
-  window.speechSynthesis.cancel();
-
-  const speech=new SpeechSynthesisUtterance(text);
-
-  speech.lang=lang;
-  speech.rate=.9;
-
-  window.speechSynthesis.speak(speech);
-}
-
 function speakEnglish(){
-  speakText(englishText,"en-IN");
+
+stopAudio();
+
+const text=`
+
+Chapter 2. On the Trail of the Earliest People.
+
+Hunter gatherers obtained food from their natural surroundings.
+Hunters obtained animals and birds, while gatherers collected plants,
+fruits, roots and seeds.
+
+Early people often moved because food and water were not equally available
+throughout the year.
+
+Stone tools were important technological developments.
+Fire was useful for warmth, light, food related activities and protection.
+
+Caves and rock shelters provide important archaeological evidence.
+Bhimbetka in Madhya Pradesh is an important prehistoric site.
+
+Over a long period, some communities gradually moved towards food production,
+including cultivation and animal herding.
+`;
+
+const speech=new SpeechSynthesisUtterance(text);
+
+speech.lang="en-IN";
+speech.rate=0.9;
+speech.pitch=1;
+
+window.speechSynthesis.speak(speech);
+
 }
+
 
 function speakHindi(){
-  speakText(hindiText,"hi-IN");
+
+stopAudio();
+
+const text=`
+
+अध्याय 2. प्रारंभिक लोगों के पदचिह्न।
+
+शिकारी संग्राहक अपने प्राकृतिक वातावरण से भोजन प्राप्त करते थे।
+शिकारी जानवरों और पक्षियों का शिकार करते थे,
+जबकि संग्राहक फल, जड़ें, बीज और पौधों को एकत्र करते थे।
+
+प्रारंभिक लोग भोजन और पानी की उपलब्धता के अनुसार
+एक स्थान से दूसरे स्थान पर जा सकते थे।
+
+पत्थर के औजार प्रारंभिक मानव की महत्वपूर्ण तकनीकी उपलब्धि थे।
+आग का उपयोग गर्मी, प्रकाश, भोजन से जुड़े कार्यों और सुरक्षा के लिए किया जा सकता था।
+
+गुफाएँ और शैलाश्रय महत्वपूर्ण पुरातात्त्विक प्रमाण प्रदान करते हैं।
+मध्य प्रदेश का भीमबेटका एक महत्वपूर्ण प्रागैतिहासिक स्थल है।
+
+लंबे समय में कुछ समुदायों ने खाद्य उत्पादन की दिशा में कदम बढ़ाया,
+जिसमें खेती और पशुपालन शामिल थे।
+`;
+
+const speech=new SpeechSynthesisUtterance(text);
+
+speech.lang="hi-IN";
+speech.rate=0.85;
+speech.pitch=1;
+
+window.speechSynthesis.speak(speech);
+
 }
 
+
 function stopAudio(){
-  window.speechSynthesis.cancel();
+
+window.speechSynthesis.cancel();
+
 }
 
 
@@ -1360,34 +2878,40 @@ function stopAudio(){
 
 function updateProgress(){
 
-  const boxes=document.querySelectorAll(
-    'input[type="checkbox"]'
-  );
+const checks=document.querySelectorAll(
+'.checklist input[type="checkbox"]'
+);
 
-  let completed=0;
+let completed=0;
 
-  boxes.forEach(box=>{
-    if(box.checked) completed++;
-  });
+checks.forEach((check,index)=>{
 
-  const total=boxes.length;
+if(check.checked){
+completed++;
+}
 
-  const percent=Math.round(
-    (completed/total)*100
-  );
+localStorage.setItem(
+"historyClass6Ch2Check"+index,
+check.checked
+);
 
-  document.getElementById("progressFill").style.width=
-    percent+"%";
+});
 
-  document.getElementById("progressText").innerText=
-    percent+"% completed";
+const percent=Math.round(
+(completed/checks.length)*100
+);
 
-  localStorage.setItem(
-    "historyClass6Ch2Progress",
-    JSON.stringify(
-      Array.from(boxes).map(box=>box.checked)
-    )
-  );
+document.getElementById("progressFill").style.width=
+percent+"%";
+
+document.getElementById("progressText").innerText=
+percent+"% completed";
+
+localStorage.setItem(
+"historyClass6Ch2Progress",
+percent
+);
+
 }
 
 
@@ -1395,30 +2919,25 @@ function updateProgress(){
 
 function loadProgress(){
 
-  const saved=
-    localStorage.getItem("historyClass6Ch2Progress");
+const checks=document.querySelectorAll(
+'.checklist input[type="checkbox"]'
+);
 
-  if(!saved) return;
+checks.forEach((check,index)=>{
 
-  try{
+const saved=
+localStorage.getItem(
+"historyClass6Ch2Check"+index
+);
 
-    const states=JSON.parse(saved);
+if(saved==="true"){
+check.checked=true;
+}
 
-    const boxes=document.querySelectorAll(
-      'input[type="checkbox"]'
-    );
+});
 
-    boxes.forEach((box,index)=>{
-      box.checked=!!states[index];
-    });
+updateProgress();
 
-    updateProgress();
-
-  }catch(error){
-
-    console.log("Progress loading error");
-
-  }
 }
 
 loadProgress();
@@ -1428,13 +2947,13 @@ loadProgress();
 
 window.addEventListener("scroll",function(){
 
-  const btn=document.getElementById("topBtn");
+const button=document.getElementById("topBtn");
 
-  if(window.scrollY>400){
-    btn.style.display="block";
-  }else{
-    btn.style.display="none";
-  }
+if(window.scrollY>400){
+button.style.display="block";
+}else{
+button.style.display="none";
+}
 
 });
 
