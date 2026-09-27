@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Premium NCERT Notes | UPSC Shiksha</title>
+
+<meta name="description" content="UPSC Shiksha Premium NCERT Notes for Classes 6 to 12 with reading, audio, Hindi, Gujarati, MCQs and solutions.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial, sans-serif;
+  background:#f5f7fa;
+  color:#17212b;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#12395b,#176b87);
+  color:white;
+  padding:22px 16px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.header-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  font-size:23px;
+  font-weight:bold;
+}
+
+.header-btn{
+  border:none;
+  background:white;
+  color:#12395b;
+  padding:9px 13px;
+  border-radius:20px;
+  cursor:pointer;
+  font-weight:bold;
+}
+
+.hero{
+  background:white;
+  padding:28px 18px;
+  text-align:center;
+  border-bottom:1px solid #ddd;
+}
+
+.badge{
+  display:inline-block;
+  background:#fff3cd;
+  color:#9a6b00;
+  padding:6px 12px;
+  border-radius:8px;
+  font-weight:bold;
+  font-size:13px;
+  margin-bottom:12px;
+}
+
+.hero h1{
+  font-size:30px;
+  margin-bottom:8px;
+}
+
+.hero p{
+  color:#66727d;
+  max-width:650px;
+  margin:auto;
+}
+
+.progress-box{
+  max-width:650px;
+  margin:20px auto 0;
+  background:#eef3f7;
+  padding:15px;
+  border-radius:14px;
+  text-align:left;
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  font-weight:bold;
+  margin-bottom:8px;
+}
+
+.progress{
+  height:9px;
+  background:#dce3e8;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+  background:#176b87;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px 14px 100px;
+}
+
+.section-title{
+  font-size:22px;
+  margin:15px 0;
+}
+
+.course-card{
+  background:white;
+  border-radius:18px;
+  padding:20px;
+  margin-bottom:16px;
+  display:flex;
+  align-items:center;
+  gap:16px;
+  box-shadow:0 3px 12px rgba(0,0,0,.08);
+  border:1px solid #e8edf0;
+  transition:.2s;
+  cursor:pointer;
+}
+
+.course-card:hover{
+  transform:translateY(-2px);
+  box-shadow:0 6px 18px rgba(0,0,0,.12);
+}
+
+.number{
+  width:62px;
+  height:62px;
+  border-radius:50%;
+  background:#f1f6f9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:21px;
+  font-weight:bold;
+  color:#758692;
+  flex-shrink:0;
+}
+
+.course-info{
+  flex:1;
+}
+
+.course-info h2{
+  font-size:20px;
+  margin-bottom:4px;
+}
+
+.course-info p{
+  color:#8b969e;
+  font-size:15px;
+}
+
+.arrow{
+  font-size:30px;
+  color:#87949c;
+}
+
+.features{
+  background:white;
+  border-radius:18px;
+  padding:22px;
+  margin-top:25px;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.features h2{
+  margin-bottom:15px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.feature{
+  background:#f7fafc;
+  padding:14px;
+  border-radius:12px;
+  font-weight:bold;
+}
+
+.premium-note{
+  margin-top:22px;
+  background:#fff8e5;
+  border:1px solid #f1df9d;
+  border-radius:15px;
+  padding:18px;
+}
+
+footer{
+  text-align:center;
+  padding:25px 15px;
+  background:#12395b;
+  color:white;
+}
+
+body.dark{
+  background:#101820;
+  color:#f2f5f7;
+}
+
+body.dark header{
+  background:#0b263d;
+}
+
+body.dark .hero,
+body.dark .course-card,
+body.dark .features{
+  background:#182630;
+  border-color:#2b3b46;
+}
+
+body.dark .hero p,
+body.dark .course-info p{
+  color:#b8c2c9;
+}
+
+body.dark .number{
+  background:#263741;
+  color:#c2ccd2;
+}
+
+body.dark .feature{
+  background:#22323d;
+}
+
+body.dark .progress-box{
+  background:#22323d;
+}
+
+body.dark .premium-note{
+  background:#302b1c;
+  border-color:#665c32;
+}
+
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .course-card{
+    padding:16px;
+  }
+
+  .number{
+    width:55px;
+    height:55px;
+    font-size:18px;
+  }
+
+  .course-info h2{
+    font-size:18px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .logo{
+    font-size:20px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-top">
+
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+    <div>
+      <button class="header-btn" onclick="toggleDarkMode()">
+        🌙 Dark
+      </button>
+    </div>
+
+  </div>
+
+</header>
+
+<section class="hero">
+
+  <span class="badge">💎 PREMIUM NCERT</span>
+
+  <h1>NCERT Notes & Learning</h1>
+
+  <p>
+    Classes 6 to 12 NCERT-based learning with
+    reading, audio, Hindi, Gujarati, MCQs,
+    solutions and UPSC-focused revision.
+  </p>
+
+  <div class="progress-box">
+
+    <div class="progress-top">
+      <span>Your Progress</span>
+      <span id="progressText">0%</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+  </div>
+
+</section>
+
+<main class="container">
+
+  <h2 class="section-title">
+    📚 NCERT Subjects
+  </h2>
+
+  <!-- HISTORY -->
+
+  <div class="course-card" onclick="openSubject('history')">
+
+    <div class="number">01</div>
+
+    <div class="course-info">
+      <h2>History (Class 6 to Class 12)</h2>
+      <p>📚 Chapters • 🎧 Audio • 📝 MCQs</p>
+    </div>
+
+    <div class="arrow">›</div>
+
+  </div>
+
+
+  <!-- GEOGRAPHY -->
+
+  <div class="course-card" onclick="openSubject('geography')">
+
+    <div class="number">02</div>
+
+    <div class="course-info">
+      <h2>Geography (Class 6 to Class 12)</h2>
+      <p>🗺️ Maps • 🎧 Audio • 📝 MCQs</p>
+    </div>
+
+    <div class="arrow">›</div>
+
+  </div>
+
+
+  <!-- SCIENCE -->
+
+  <div class="course-card" onclick="openSubject('science')">
+
+    <div class="number">03</div>
+
+    <div class="course-info">
+      <h2>General Science (Class 6 to Class 12)</h2>
+      <p>🔬 Concepts • 🎧 Audio • 📝 MCQs</p>
+    </div>
+
+    <div class="arrow">›</div>
+
+  </div>
+
+
+  <!-- POLITY -->
+
+  <div class="course-card" onclick="openSubject('polity')">
+
+    <div class="number">04</div>
+
+    <div class="course-info">
+      <h2>Polity & Constitution (Class 6 to Class 12)</h2>
+      <p>🏛️ Constitution • ⭐ UPSC • 📝 MCQs</p>
+    </div>
+
+    <div class="arrow">›</div>
+
+  </div>
+
+
+  <!-- ECONOMY -->
+
+  <div class="course-card" onclick="openSubject('economy')">
+
+    <div class="number">05</div>
+
+    <div class="course-info">
+      <h2>Economy & Indian Economy (Class 9 to Class 12)</h2>
+      <p>💰 Concepts • 🎧 Audio • 📝 MCQs</p>
+    </div>
+
+    <div class="arrow">›</div>
+
+  </div>
+
+
+  <!-- FEATURES -->
+
+  <section class="features">
+
+    <h2>✨ Premium Features</h2>
+
+    <div class="feature-grid">
+
+      <div class="feature">📖 Easy Reading</div>
+
+      <div class="feature">🎧 Audio Learning</div>
+
+      <div class="feature">🇮🇳 Hindi Translation</div>
+
+      <div class="feature">🟢 Gujarati Translation</div>
+
+      <div class="feature">📝 MCQ Practice</div>
+
+      <div class="feature">✅ Detailed Solutions</div>
+
+      <div class="feature">⭐ UPSC Important</div>
+
+      <div class="feature">✍️ Mains Questions</div>
+
+      <div class="feature">🔗 PYQs</div>
+
+      <div class="feature">⚡ Quick Revision</div>
+
+    </div>
+
+  </section>
+
+
+  <section class="premium-note">
+
+    <h3>💎 UPSC Shiksha Premium</h3>
+
+    <p>
+      Learn NCERT concepts in simple language,
+      practice questions and revise important
+      topics for UPSC preparation.
+    </p>
+
+  </section>
+
+</main>
+
+
+<footer>
+
+  <p>🇮🇳 UPSC Shiksha</p>
+  <p>Learn • Practice • Revise • Succeed</p>
+
+</footer>
+
+
+<script>
+
+function toggleDarkMode(){
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+    localStorage.setItem("upscDarkMode","on");
+  }else{
+    localStorage.setItem("upscDarkMode","off");
+  }
+
+}
+
+
+if(localStorage.getItem("upscDarkMode") === "on"){
+  document.body.classList.add("dark");
+}
+
+
+function openSubject(subject){
+
+  if(subject === "history"){
+    window.location.href = "ncert-history.html";
+  }
+
+  else if(subject === "geography"){
+    window.location.href = "ncert-geography.html";
+  }
+
+  else if(subject === "science"){
+    window.location.href = "ncert-science.html";
+  }
+
+  else if(subject === "polity"){
+    window.location.href = "ncert-polity.html";
+  }
+
+  else if(subject === "economy"){
+    window.location.href = "ncert-economy.html";
+  }
+
+}
+
+
+let progress = localStorage.getItem("ncertProgress") || 0;
+
+document.getElementById("progressBar").style.width = progress + "%";
+
+document.getElementById("progressText").innerText =
+  progress + "%";
+
+</script>
+
+</body>
+</html>
