@@ -10,6 +10,7 @@
         content="Indian History study material for UPSC - Ancient, Medieval, Modern India, Art and Culture and Indian National Movement.">
 
   <style>
+
     * {
       margin: 0;
       padding: 0;
@@ -28,7 +29,8 @@
       transition: 0.3s;
     }
 
-    /* HEADER */
+    /* ================= HEADER ================= */
+
     header {
       background: #111827;
       color: white;
@@ -81,7 +83,8 @@
       background: #374151;
     }
 
-    /* HERO */
+    /* ================= HERO ================= */
+
     .hero {
       background: linear-gradient(135deg, #431407, #9a3412);
       color: white;
@@ -110,7 +113,8 @@
       font-size: 16px;
     }
 
-    /* SEARCH */
+    /* ================= SEARCH ================= */
+
     .search-box {
       max-width: 700px;
       margin: -22px auto 28px;
@@ -134,7 +138,8 @@
       border-color: #ea580c;
     }
 
-    /* CONTAINER */
+    /* ================= CONTAINER ================= */
+
     .container {
       max-width: 1050px;
       margin: auto;
@@ -160,7 +165,8 @@
       margin-bottom: 8px;
     }
 
-    /* TAGS */
+    /* ================= TAGS ================= */
+
     .tags {
       display: flex;
       flex-wrap: wrap;
@@ -177,7 +183,8 @@
       font-weight: bold;
     }
 
-    /* QUICK NAV */
+    /* ================= QUICK NAV ================= */
+
     .quick-nav {
       padding: 20px;
       margin-bottom: 30px;
@@ -210,7 +217,8 @@
       background: #ffedd5;
     }
 
-    /* TOPICS */
+    /* ================= TOPICS ================= */
+
     .topic {
       padding: 24px;
       margin-bottom: 22px;
@@ -260,7 +268,55 @@
       color: #047857;
     }
 
-    /* TIMELINE */
+    /* ================= CLASS 6 CHAPTER GRID ================= */
+
+    .chapter-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .chapter-card {
+      display: block;
+      text-decoration: none;
+      background: linear-gradient(135deg, #fff7ed, #ffedd5);
+      color: #172033;
+      padding: 18px;
+      border-radius: 12px;
+      border: 1px solid #fed7aa;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.06);
+      transition: 0.25s;
+    }
+
+    .chapter-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 8px 18px rgba(0,0,0,0.10);
+    }
+
+    .chapter-number {
+      display: block;
+      color: #ea580c;
+      font-size: 13px;
+      font-weight: bold;
+      margin-bottom: 6px;
+    }
+
+    .chapter-card strong {
+      display: block;
+      font-size: 16px;
+      line-height: 1.45;
+    }
+
+    .chapter-card small {
+      display: block;
+      margin-top: 10px;
+      color: #9a3412;
+      font-weight: bold;
+    }
+
+    /* ================= TIMELINE ================= */
+
     .timeline {
       border-left: 3px solid #f59e0b;
       padding-left: 18px;
@@ -275,7 +331,8 @@
       color: #9a3412;
     }
 
-    /* TABLE */
+    /* ================= TABLE ================= */
+
     .table-wrapper {
       overflow-x: auto;
       margin-top: 12px;
@@ -299,7 +356,8 @@
       color: #9a3412;
     }
 
-    /* BUTTONS */
+    /* ================= BUTTONS ================= */
+
     .bottom-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -326,7 +384,8 @@
       color: white;
     }
 
-    /* BACK TO TOP */
+    /* ================= BACK TO TOP ================= */
+
     #topBtn {
       position: fixed;
       right: 18px;
@@ -344,7 +403,8 @@
       box-shadow: 0 4px 12px rgba(0,0,0,0.2);
     }
 
-    /* FOOTER */
+    /* ================= FOOTER ================= */
+
     footer {
       background: #111827;
       color: #d1d5db;
@@ -368,7 +428,8 @@
       margin-bottom: 4px;
     }
 
-    /* DARK MODE */
+    /* ================= DARK MODE ================= */
+
     body.dark {
       background: #0f172a;
       color: #e5e7eb;
@@ -429,7 +490,22 @@
       color: #fdba74;
     }
 
-    /* MOBILE */
+    body.dark .chapter-card {
+      background: linear-gradient(135deg, #3b2518, #422006);
+      color: #f3f4f6;
+      border-color: #92400e;
+    }
+
+    body.dark .chapter-number {
+      color: #fdba74;
+    }
+
+    body.dark .chapter-card small {
+      color: #fdba74;
+    }
+
+    /* ================= MOBILE ================= */
+
     @media (max-width: 600px) {
 
       .header-inner {
@@ -484,6 +560,19 @@
         grid-template-columns: 1fr;
       }
 
+      .chapter-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+      }
+
+      .chapter-card {
+        padding: 16px;
+      }
+
+      .chapter-card strong {
+        font-size: 15px;
+      }
+
       .topic li,
       .topic p,
       .intro p {
@@ -503,14 +592,18 @@
         right: 14px;
         bottom: 14px;
       }
+
     }
+
   </style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
+  <!-- ================= HEADER ================= -->
+
   <header>
+
     <div class="header-inner">
 
       <div class="logo">
@@ -518,6 +611,7 @@
       </div>
 
       <div class="header-actions">
+
         <button class="dark-btn" onclick="toggleDarkMode()">
           🌙
         </button>
@@ -525,13 +619,16 @@
         <a href="index.html" class="home-btn">
           ← Home
         </a>
+
       </div>
 
     </div>
+
   </header>
 
 
-  <!-- HERO -->
+  <!-- ================= HERO ================= -->
+
   <section class="hero">
 
     <div class="icon">📜</div>
@@ -547,20 +644,25 @@
   </section>
 
 
-  <!-- SEARCH -->
+  <!-- ================= SEARCH ================= -->
+
   <div class="search-box">
+
     <input
       type="text"
       id="historySearch"
       placeholder="🔎 Search History topics..."
       onkeyup="searchHistory()"
     >
+
   </div>
 
 
   <main class="container">
 
-    <!-- INTRO -->
+
+    <!-- ================= INTRO ================= -->
+
     <section class="intro">
 
       <h2>📚 Indian History for UPSC</h2>
@@ -572,30 +674,38 @@
       </p>
 
       <div class="tags">
+
         <span class="tag">PRELIMS</span>
         <span class="tag">MAINS</span>
         <span class="tag">ANCIENT INDIA</span>
         <span class="tag">MEDIEVAL INDIA</span>
         <span class="tag">MODERN INDIA</span>
         <span class="tag">ART & CULTURE</span>
+
       </div>
 
       <div class="highlight">
+
         <strong>🎯 Preparation Tip:</strong>
+
         Focus on chronology, causes and consequences,
         important personalities, movements, cultural developments
         and previous year questions.
+
       </div>
 
     </section>
 
 
-    <!-- QUICK NAVIGATION -->
+    <!-- ================= QUICK NAVIGATION ================= -->
+
     <section class="quick-nav">
 
       <h2>🧭 History Topics</h2>
 
       <div class="nav-grid">
+
+        <a href="#class6">📚 Class 6 NCERT</a>
 
         <a href="#ancient">🏺 Ancient India</a>
 
@@ -622,7 +732,271 @@
     </section>
 
 
-    <!-- ANCIENT -->
+    <!-- ================================================= -->
+    <!-- CLASS 6 NCERT HISTORY -->
+    <!-- ================================================= -->
+
+    <section class="topic" id="class6">
+
+      <h2>📚 Class 6 NCERT History — Chapters 1–12</h2>
+
+      <p>
+        Complete Class 6 History learning section with detailed
+        explanations, Hindi support, audio learning,
+        UPSC Important Points, Mains Practice,
+        Quick Revision and chapter-wise tests.
+      </p>
+
+
+      <div class="chapter-grid">
+
+
+        <!-- CHAPTER 1 -->
+
+        <a href="history-class6-ch1.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 1
+          </span>
+
+          <strong>
+            What, Where, How and When?
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 2 -->
+
+        <a href="history-class6-ch2.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 2
+          </span>
+
+          <strong>
+            On the Trial of the Earliest People
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 3 -->
+
+        <a href="history-class6-ch3.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 3
+          </span>
+
+          <strong>
+            In the Earliest Cities
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 4 -->
+
+        <a href="history-class6-ch4.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 4
+          </span>
+
+          <strong>
+            What Books and Burials Tell Us
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 5 -->
+
+        <a href="history-class6-ch5.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 5
+          </span>
+
+          <strong>
+            Kingdoms, Kings and an Early Republic
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 6 -->
+
+        <a href="history-class6-ch6.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 6
+          </span>
+
+          <strong>
+            New Questions and Ideas
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 7 -->
+
+        <a href="history-class6-ch7.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 7
+          </span>
+
+          <strong>
+            From a Kingdom to an Empire
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 8 -->
+
+        <a href="history-class6-ch8.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 8
+          </span>
+
+          <strong>
+            Ashoka, the Emperor Who Gave Up War
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 9 -->
+
+        <a href="history-class6-ch9.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 9
+          </span>
+
+          <strong>
+            Vital Villages and Thriving Towns
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 10 -->
+
+        <a href="history-class6-ch10.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 10
+          </span>
+
+          <strong>
+            Traders, Kings and Pilgrims
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 11 -->
+
+        <a href="history-class6-ch11.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 11
+          </span>
+
+          <strong>
+            Buildings, Paintings and Books
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+        <!-- CHAPTER 12 -->
+
+        <a href="history-class6-ch12.html" class="chapter-card">
+
+          <span class="chapter-number">
+            Chapter 12
+          </span>
+
+          <strong>
+            New Empires and Kingdoms
+          </strong>
+
+          <small>
+            📖 Read Chapter →
+          </small>
+
+        </a>
+
+
+      </div>
+
+
+      <div class="study-box">
+
+        <strong>🎯 UPSC Shiksha Features:</strong>
+
+        English Explanation • Hindi Explanation • Audio •
+        UPSC Important Points • Mains Practice • Quick Revision •
+        4 Chapter Tests × 5 Questions
+
+      </div>
+
+    </section>
+
+
+    <!-- ================= ANCIENT ================= -->
+
     <section class="topic searchable" id="ancient">
 
       <h2>🏺 1. Ancient India</h2>
@@ -674,7 +1048,8 @@
         <li>Gupta Empire</li>
         <li>Post-Gupta Period</li>
       </ul>
-           <h3>Sangam Age</h3>
+
+      <h3>Sangam Age</h3>
 
       <ul>
         <li>Sangam Literature</li>
@@ -699,15 +1074,19 @@
       </ul>
 
       <div class="study-box">
+
         <strong>UPSC Focus:</strong>
+
         Indus Valley Civilization, Buddhism, Jainism,
         Mauryan administration and Gupta culture.
+
       </div>
 
     </section>
 
 
-    <!-- RELIGIONS -->
+    <!-- ================= RELIGIONS ================= -->
+
     <section class="topic searchable" id="religion">
 
       <h2>☸️ 2. Buddhism & Jainism</h2>
@@ -736,7 +1115,8 @@
     </section>
 
 
-    <!-- MEDIEVAL -->
+    <!-- ================= MEDIEVAL ================= -->
+
     <section class="topic searchable" id="medieval">
 
       <h2>🏰 3. Medieval India</h2>
@@ -785,7 +1165,8 @@
         <li>Sufi Orders</li>
         <li>Social and Cultural Impact</li>
       </ul>
-           <h3>Vijayanagara Empire</h3>
+
+      <h3>Vijayanagara Empire</h3>
 
       <ul>
         <li>Foundation and Important Rulers</li>
@@ -814,7 +1195,8 @@
     </section>
 
 
-    <!-- MODERN -->
+    <!-- ================= MODERN ================= -->
+
     <section class="topic searchable" id="modern">
 
       <h2>🇬🇧 4. Modern India</h2>
@@ -867,25 +1249,27 @@
         <li>Deindustrialization</li>
         <li>Railways and Communication</li>
       </ul>
-     <h3>Socio-Religious Reform Movements</h3>
 
-<ul>
-  <li>Brahmo Samaj</li>
-  <li>Arya Samaj</li>
-  <li>Prarthana Samaj</li>
-  <li>Ramakrishna Mission</li>
-  <li>Aligarh Movement</li>
-  <li>Theosophical Society</li>
-  <li>Satyashodhak Samaj</li>
-  <li>Social Reform and Women's Education</li>
-  <li>Abolition of Sati</li>
-  <li>Reform of Widow Remarriage</li>
-</ul>
+      <h3>Socio-Religious Reform Movements</h3>
+
+      <ul>
+        <li>Brahmo Samaj</li>
+        <li>Arya Samaj</li>
+        <li>Prarthana Samaj</li>
+        <li>Ramakrishna Mission</li>
+        <li>Aligarh Movement</li>
+        <li>Theosophical Society</li>
+        <li>Satyashodhak Samaj</li>
+        <li>Social Reform and Women's Education</li>
+        <li>Abolition of Sati</li>
+        <li>Reform of Widow Remarriage</li>
+      </ul>
 
     </section>
 
 
-    <!-- 1857 -->
+    <!-- ================= 1857 ================= -->
+
     <section class="topic searchable" id="revolt">
 
       <h2>🔥 5. Revolt of 1857</h2>
@@ -921,7 +1305,8 @@
     </section>
 
 
-    <!-- NATIONAL MOVEMENT -->
+    <!-- ================= NATIONAL MOVEMENT ================= -->
+
     <section class="topic searchable" id="freedom">
 
       <h2>🇮🇳 6. Indian National Movement</h2>
@@ -959,37 +1344,41 @@
         <li>Mountbatten Plan</li>
         <li>Indian Independence Act, 1947</li>
       </ul>
-     <h3>Revolutionary Organisations & Activities</h3>
 
-<ul>
-  <li>Anushilan Samiti</li>
-  <li>Jugantar</li>
-  <li>Hindustan Republican Association</li>
-  <li>Hindustan Socialist Republican Association</li>
-  <li>Kakori Case</li>
-  <li>Bhagat Singh and Revolutionary Activities</li>
-  <li>Chittagong Armoury Raid</li>
-</ul>
+      <h3>Revolutionary Organisations & Activities</h3>
 
-<h3>Constitutional Developments — Important Acts & Missions</h3>
+      <ul>
+        <li>Anushilan Samiti</li>
+        <li>Jugantar</li>
+        <li>Hindustan Republican Association</li>
+        <li>Hindustan Socialist Republican Association</li>
+        <li>Kakori Case</li>
+        <li>Bhagat Singh and Revolutionary Activities</li>
+        <li>Chittagong Armoury Raid</li>
+      </ul>
 
-<ul>
-  <li>Indian Councils Act, 1909</li>
-  <li>Government of India Act, 1919</li>
-  <li>Cripps Mission</li>
-</ul>
+      <h3>Constitutional Developments — Important Acts & Missions</h3>
 
+      <ul>
+        <li>Indian Councils Act, 1909</li>
+        <li>Government of India Act, 1919</li>
+        <li>Cripps Mission</li>
+      </ul>
 
       <div class="study-box">
+
         <strong>UPSC Focus:</strong>
+
         Study every major movement through its causes,
         programme, leaders, spread, participation and consequences.
+
       </div>
 
     </section>
 
 
-    <!-- ART & CULTURE -->
+    <!-- ================= ART & CULTURE ================= -->
+
     <section class="topic searchable" id="culture">
 
       <h2>🎨 7. Art & Culture</h2>
@@ -1035,30 +1424,32 @@
         <li>Medieval Literature</li>
         <li>Modern Indian Literature</li>
       </ul>
-     <h3>Sculpture & Crafts</h3>
 
-<ul>
-  <li>Harappan Sculptures</li>
-  <li>Mauryan Sculptures</li>
-  <li>Gandhara and Mathura Art</li>
-  <li>Chola Bronzes</li>
-  <li>Traditional Handicrafts</li>
-  <li>Metal and Stone Craft Traditions</li>
-</ul>
+      <h3>Sculpture & Crafts</h3>
 
-<h3>UNESCO & Cultural Heritage</h3>
+      <ul>
+        <li>Harappan Sculptures</li>
+        <li>Mauryan Sculptures</li>
+        <li>Gandhara and Mathura Art</li>
+        <li>Chola Bronzes</li>
+        <li>Traditional Handicrafts</li>
+        <li>Metal and Stone Craft Traditions</li>
+      </ul>
 
-<ul>
-  <li>World Heritage Sites in India</li>
-  <li>Important Cultural Heritage Traditions</li>
-  <li>Intangible Cultural Heritage</li>
-  <li>Important Festivals and Traditions</li>
-</ul>
+      <h3>UNESCO & Cultural Heritage</h3>
+
+      <ul>
+        <li>World Heritage Sites in India</li>
+        <li>Important Cultural Heritage Traditions</li>
+        <li>Intangible Cultural Heritage</li>
+        <li>Important Festivals and Traditions</li>
+      </ul>
 
     </section>
 
 
-    <!-- TIMELINE -->
+    <!-- ================= TIMELINE ================= -->
+
     <section class="topic searchable" id="timeline">
 
       <h2>⏳ 8. Important Historical Timeline</h2>
@@ -1125,7 +1516,8 @@
     </section>
 
 
-    <!-- PERSONALITIES -->
+    <!-- ================= PERSONALITIES ================= -->
+
     <section class="topic searchable" id="personalities">
 
       <h2>👤 9. Important Personalities</h2>
@@ -1196,7 +1588,8 @@
     </section>
 
 
-    <!-- PREPARATION -->
+    <!-- ================= PREPARATION ================= -->
+
     <section class="topic searchable" id="preparation">
 
       <h2>🎯 10. How to Prepare History</h2>
@@ -1230,15 +1623,19 @@
       </p>
 
       <div class="highlight">
+
         <strong>📌 Remember:</strong>
+
         History preparation becomes easier when you combine
         chronology + concepts + maps + revision + PYQs.
+
       </div>
 
     </section>
 
 
-    <!-- BOTTOM BUTTONS -->
+    <!-- ================= BOTTOM BUTTONS ================= -->
+
     <div class="bottom-buttons">
 
       <a href="index.html" class="btn btn-primary">
@@ -1266,50 +1663,82 @@
   </main>
 
 
-  <!-- BACK TO TOP -->
-  <button id="topBtn" onclick="goTop()">↑</button>
+  <!-- ================= BACK TO TOP ================= -->
+
+  <button id="topBtn" onclick="goTop()">
+    ↑
+  </button>
 
 
-  <!-- FOOTER -->
+  <!-- ================= FOOTER ================= -->
+
   <footer>
 
     <div class="footer-logo">
       🇮🇳 UPSC <b>Shiksha</b>
     </div>
 
-    <p>Free UPSC Preparation Platform</p>
+    <p>
+      Free UPSC Preparation Platform
+    </p>
 
-    <p>© 2026 UPSC Shiksha. All Rights Reserved.</p>
+    <p>
+      © 2026 UPSC Shiksha. All Rights Reserved.
+    </p>
 
   </footer>
 
 
+  <!-- ================= JAVASCRIPT ================= -->
+
   <script>
 
-    /* DARK MODE */
+    /* ================= DARK MODE ================= */
+
     function toggleDarkMode() {
+
       document.body.classList.toggle("dark");
 
       if (document.body.classList.contains("dark")) {
-        localStorage.setItem("historyDarkMode", "on");
+
+        localStorage.setItem(
+          "historyDarkMode",
+          "on"
+        );
+
       } else {
-        localStorage.setItem("historyDarkMode", "off");
+
+        localStorage.setItem(
+          "historyDarkMode",
+          "off"
+        );
+
       }
+
     }
 
-    if (localStorage.getItem("historyDarkMode") === "on") {
+
+    /* LOAD DARK MODE */
+
+    if (
+      localStorage.getItem("historyDarkMode") === "on"
+    ) {
+
       document.body.classList.add("dark");
+
     }
 
 
-    /* SEARCH */
+    /* ================= SEARCH ================= */
+
     function searchHistory() {
 
       const input =
-        document.getElementById("historySearch")
-        .value
-        .toLowerCase()
-        .trim();
+        document
+          .getElementById("historySearch")
+          .value
+          .toLowerCase()
+          .trim();
 
       const topics =
         document.querySelectorAll(".searchable");
@@ -1320,9 +1749,13 @@
           topic.innerText.toLowerCase();
 
         if (text.includes(input)) {
+
           topic.style.display = "";
+
         } else {
+
           topic.style.display = "none";
+
         }
 
       });
@@ -1330,26 +1763,37 @@
     }
 
 
-    /* BACK TO TOP */
+    /* ================= BACK TO TOP ================= */
+
     const topBtn =
       document.getElementById("topBtn");
 
-    window.addEventListener("scroll", function() {
 
-      if (window.scrollY > 400) {
-        topBtn.style.display = "block";
-      } else {
-        topBtn.style.display = "none";
+    window.addEventListener(
+      "scroll",
+      function() {
+
+        if (window.scrollY > 400) {
+
+          topBtn.style.display = "block";
+
+        } else {
+
+          topBtn.style.display = "none";
+
+        }
+
       }
-
-    });
+    );
 
 
     function goTop() {
+
       window.scrollTo({
         top: 0,
         behavior: "smooth"
       });
+
     }
 
   </script>
