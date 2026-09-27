@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>NCERT History | UPSC Shiksha</title>
+
+<meta name="description" content="UPSC Shiksha Premium NCERT History classes 6 to 12 with reading, audio, Hindi, Gujarati, MCQs and solutions.">
+
+<style>
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+body{
+  font-family:Arial,sans-serif;
+  background:#f5f7fa;
+  color:#17212b;
+  line-height:1.6;
+}
+
+header{
+  background:linear-gradient(135deg,#12395b,#176b87);
+  color:white;
+  padding:18px 15px;
+  position:sticky;
+  top:0;
+  z-index:1000;
+  box-shadow:0 3px 12px rgba(0,0,0,.15);
+}
+
+.header-row{
+  max-width:900px;
+  margin:auto;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:bold;
+}
+
+.header-buttons{
+  display:flex;
+  gap:7px;
+}
+
+.header-btn{
+  border:0;
+  background:white;
+  color:#12395b;
+  padding:8px 12px;
+  border-radius:18px;
+  font-weight:bold;
+  cursor:pointer;
+}
+
+.hero{
+  background:white;
+  padding:28px 15px;
+  text-align:center;
+  border-bottom:1px solid #ddd;
+}
+
+.badge{
+  display:inline-block;
+  background:#fff3cd;
+  color:#936b00;
+  padding:6px 12px;
+  border-radius:8px;
+  font-size:13px;
+  font-weight:bold;
+  margin-bottom:10px;
+}
+
+.hero h1{
+  font-size:30px;
+  margin-bottom:6px;
+}
+
+.hero p{
+  color:#68757e;
+  max-width:650px;
+  margin:auto;
+}
+
+.progress-box{
+  max-width:650px;
+  margin:20px auto 0;
+  background:#eef3f7;
+  padding:14px;
+  border-radius:14px;
+  text-align:left;
+}
+
+.progress-top{
+  display:flex;
+  justify-content:space-between;
+  margin-bottom:8px;
+  font-weight:bold;
+}
+
+.progress{
+  height:9px;
+  background:#d9e1e6;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+  background:#176b87;
+}
+
+.container{
+  max-width:900px;
+  margin:auto;
+  padding:20px 14px 100px;
+}
+
+.class-card{
+  background:white;
+  margin-bottom:15px;
+  border-radius:17px;
+  overflow:hidden;
+  border:1px solid #e5eaed;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.class-header{
+  padding:18px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  cursor:pointer;
+}
+
+.class-title{
+  display:flex;
+  align-items:center;
+  gap:13px;
+}
+
+.class-number{
+  width:50px;
+  height:50px;
+  border-radius:50%;
+  background:#f1f6f9;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#71818b;
+  font-weight:bold;
+}
+
+.class-title h2{
+  font-size:20px;
+}
+
+.class-title p{
+  color:#8b969e;
+  font-size:14px;
+}
+
+.arrow{
+  font-size:27px;
+  color:#7c8991;
+  transition:.2s;
+}
+
+.chapter-list{
+  display:none;
+  padding:0 15px 15px;
+  border-top:1px solid #edf0f2;
+}
+
+.chapter{
+  background:#f8fafb;
+  border-radius:12px;
+  padding:14px;
+  margin-top:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  cursor:pointer;
+}
+
+.chapter:hover{
+  background:#eef5f8;
+}
+
+.chapter-icon{
+  font-size:25px;
+}
+
+.chapter-info{
+  flex:1;
+}
+
+.chapter-info h3{
+  font-size:16px;
+}
+
+.chapter-info p{
+  color:#8a969e;
+  font-size:13px;
+}
+
+.chapter-arrow{
+  color:#84929a;
+  font-size:24px;
+}
+
+.info-box{
+  background:white;
+  border-radius:17px;
+  padding:20px;
+  margin-top:22px;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
+}
+
+.info-box h2{
+  margin-bottom:13px;
+}
+
+.feature-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:10px;
+}
+
+.feature{
+  background:#f7fafc;
+  padding:12px;
+  border-radius:11px;
+  font-weight:bold;
+}
+
+footer{
+  background:#12395b;
+  color:white;
+  text-align:center;
+  padding:25px 15px;
+}
+
+body.dark{
+  background:#101820;
+  color:#f1f4f6;
+}
+
+body.dark header{
+  background:#0b263d;
+}
+
+body.dark .hero,
+body.dark .class-card,
+body.dark .info-box{
+  background:#182630;
+  border-color:#2c3b45;
+}
+
+body.dark .hero p,
+body.dark .class-title p,
+body.dark .chapter-info p{
+  color:#b7c1c7;
+}
+
+body.dark .progress-box{
+  background:#22323d;
+}
+
+body.dark .class-number{
+  background:#263741;
+  color:#c4cdd2;
+}
+
+body.dark .chapter,
+body.dark .feature{
+  background:#22323d;
+}
+
+@media(max-width:600px){
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .class-title h2{
+    font-size:18px;
+  }
+
+  .class-header{
+    padding:15px;
+  }
+
+  .chapter{
+    padding:12px;
+  }
+
+  .feature-grid{
+    grid-template-columns:1fr;
+  }
+
+  .logo{
+    font-size:18px;
+  }
+
+  .header-btn{
+    padding:7px 9px;
+    font-size:12px;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+  <div class="header-row">
+
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
+
+    <div class="header-buttons">
+
+      <button class="header-btn" onclick="goHome()">
+        🏠 Home
+      </button>
+
+      <button class="header-btn" onclick="toggleDarkMode()">
+        🌙
+      </button>
+
+    </div>
+
+  </div>
+
+</header>
+
+
+<section class="hero">
+
+  <span class="badge">💎 PREMIUM NCERT</span>
+
+  <h1>📚 History — Class 6 to 12</h1>
+
+  <p>
+    NCERT-based History learning with reading,
+    audio, Hindi & Gujarati support, MCQs,
+    solutions and UPSC-focused revision.
+  </p>
+
+  <div class="progress-box">
+
+    <div class="progress-top">
+      <span>History Progress</span>
+      <span id="progressText">0%</span>
+    </div>
+
+    <div class="progress">
+      <div class="progress-bar" id="progressBar"></div>
+    </div>
+
+  </div>
+
+</section>
+
+
+<main class="container">
+
+
+<!-- CLASS 6 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class6',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">06</div>
+
+      <div>
+        <h2>Class 6 History</h2>
+        <p>Our Pasts – I • 12 Chapters</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+
+  <div class="chapter-list" id="class6">
+
+    <div class="chapter"
+         onclick="openChapter('history-class6-ch1.html')">
+
+      <div class="chapter-icon">📖</div>
+
+      <div class="chapter-info">
+        <h3>Chapter 1 — What, Where, How and When?</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+
+      <div class="chapter-arrow">›</div>
+
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 2 — On the Trail of the Earliest People</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 3 — From Gathering to Growing Food</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 4 — In the Earliest Cities</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 5 — What Books and Burials Tell Us</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 6 — Kingdoms, Kings and an Early Republic</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 7 — New Questions and Ideas</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 8 — Ashoka, the Emperor Who Gave Up War</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 9 — Vital Villages, Thriving Towns</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 10 — Traders, Kings and Pilgrims</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 11 — New Empires and Kingdoms</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 12 — Buildings, Paintings and Books</h3>
+        <p>Reading • Audio • MCQs • Solutions</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 7 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class7',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">07</div>
+
+      <div>
+        <h2>Class 7 History</h2>
+        <p>Our Pasts – II • 8 Chapters</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class7">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 1 — Introduction: Tracing Changes Through a Thousand Years</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 2 — New Kings and Kingdoms</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 3 — The Delhi Sultans</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 4 — The Mughal Empire</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 5 — Rulers and Buildings</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 6 — Towns, Traders and Craftspersons</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 7 — Tribes, Nomads and Settled Communities</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 8 — Devotional Paths to the Divine</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 8 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class8',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">08</div>
+
+      <div>
+        <h2>Class 8 History</h2>
+        <p>Our Pasts – III • 8 Chapters</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class8">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 1 — How, When and Where</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 2 — From Trade to Territory</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 3 — Ruling the Countryside</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 4 — Tribals, Dikus and the Vision of a Golden Age</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 5 — When People Rebel</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 6 — Civilising the Native, Educating the Nation</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 7 — Women, Caste and Reform</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Chapter 8 — The Making of the National Movement</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 9 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class9',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">09</div>
+
+      <div>
+        <h2>Class 9 History</h2>
+        <p>India and the Contemporary World – I</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class9">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>The French Revolution</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Socialism in Europe and the Russian Revolution</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Nazism and the Rise of Hitler</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 10 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class10',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">10</div>
+
+      <div>
+        <h2>Class 10 History</h2>
+        <p>India and the Contemporary World – II</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class10">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>The Rise of Nationalism in Europe</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Nationalism in India</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>The Making of a Global World</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 11 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class11',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">11</div>
+
+      <div>
+        <h2>Class 11 History</h2>
+        <p>Themes in World History</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class11">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>From the Beginning of Time</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Writing and City Life</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- CLASS 12 -->
+
+<div class="class-card">
+
+  <div class="class-header" onclick="toggleClass('class12',this)">
+
+    <div class="class-title">
+
+      <div class="class-number">12</div>
+
+      <div>
+        <h2>Class 12 History</h2>
+        <p>Themes in Indian History</p>
+      </div>
+
+    </div>
+
+    <div class="arrow">⌄</div>
+
+  </div>
+
+  <div class="chapter-list" id="class12">
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Bricks, Beads and Bones</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Kinship, Caste and Class</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+    <div class="chapter">
+      <div class="chapter-icon">📖</div>
+      <div class="chapter-info">
+        <h3>Thinkers, Beliefs and Buildings</h3>
+        <p>Reading • Audio • MCQs</p>
+      </div>
+      <div class="chapter-arrow">›</div>
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- FEATURES -->
+
+<section class="info-box">
+
+  <h2>✨ What You Get</h2>
+
+  <div class="feature-grid">
+
+    <div class="feature">📖 Easy Reading</div>
+
+    <div class="feature">🎧 Audio Learning</div>
+
+    <div class="feature">🇮🇳 Hindi</div>
+
+    <div class="feature">🟢 Gujarati</div>
+
+    <div class="feature">📝 MCQs</div>
+
+    <div class="feature">✅ Solutions</div>
+
+    <div class="feature">⭐ UPSC Points</div>
+
+    <div class="feature">✍️ Mains Questions</div>
+
+  </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+  <p>🇮🇳 UPSC Shiksha</p>
+  <p>Learn • Practice • Revise</p>
+
+</footer>
+
+
+<script>
+
+function toggleClass(id,element){
+
+  const box=document.getElementById(id);
+
+  const arrow=element.querySelector(".arrow");
+
+  if(box.style.display==="block"){
+
+    box.style.display="none";
+    arrow.style.transform="rotate(0deg)";
+
+  }else{
+
+    box.style.display="block";
+    arrow.style.transform="rotate(180deg)";
+
+  }
+
+}
+
+
+function openChapter(page){
+
+  window.location.href=page;
+
+}
+
+
+function goHome(){
+
+  window.location.href="premium-ncert.html";
+
+}
+
+
+function toggleDarkMode(){
+
+  document.body.classList.toggle("dark");
+
+  if(document.body.classList.contains("dark")){
+
+    localStorage.setItem("upscDarkMode","on");
+
+  }else{
+
+    localStorage.setItem("upscDarkMode","off");
+
+  }
+
+}
+
+
+if(localStorage.getItem("upscDarkMode")==="on"){
+
+  document.body.classList.add("dark");
+
+}
+
+
+let progress=localStorage.getItem("historyProgress") || 0;
+
+document.getElementById("progressBar").style.width=progress+"%";
+
+document.getElementById("progressText").innerText=progress+"%";
+
+</script>
+
+</body>
+</html>
