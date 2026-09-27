@@ -2,39 +2,71 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 6 History Chapter 1 | UPSC Shiksha</title>
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>
+Class 6 History Chapter 1 | UPSC Shiksha
+</title>
 
 <meta name="description"
-content="Class 6 History Chapter 1 - What, Where, How and When? Complete UPSC-oriented study material with audio, languages, MCQs, tests and solutions.">
+content="Class 6 History Chapter 1 What, Where, How and When? Detailed English and Hindi UPSC-oriented learning with illustrations, charts, animations, audio, MCQs, tests and solutions.">
 
 <style>
+
+/* =========================
+   GLOBAL
+========================= */
+
 *{
   box-sizing:border-box;
   margin:0;
   padding:0;
 }
 
-body{
-  font-family:Arial, sans-serif;
-  background:#f5f7fb;
-  color:#222;
-  line-height:1.7;
-  transition:0.3s;
+html{
+  scroll-behavior:smooth;
 }
 
+body{
+  font-family:Arial,Helvetica,sans-serif;
+  background:#f4f7fb;
+  color:#1f2937;
+  line-height:1.75;
+  transition:background .3s,color .3s;
+}
+
+button{
+  font-family:inherit;
+  cursor:pointer;
+}
+
+.container{
+  width:100%;
+  max-width:1100px;
+  margin:auto;
+  padding:18px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
 header{
+  position:sticky;
+  top:0;
+  z-index:999;
   background:#111827;
   color:white;
-  padding:14px 16px;
+  padding:12px 16px;
+
   display:flex;
   justify-content:space-between;
   align-items:center;
   gap:10px;
-  position:sticky;
-  top:0;
-  z-index:1000;
+
+  box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
 header h2{
@@ -46,12 +78,10 @@ header h2{
   gap:7px;
 }
 
-button,
-.btn{
-  border:none;
+.header-buttons button{
+  border:0;
+  padding:9px 12px;
   border-radius:8px;
-  padding:9px 13px;
-  cursor:pointer;
   font-weight:bold;
 }
 
@@ -65,58 +95,221 @@ button,
   color:white;
 }
 
-.container{
-  max-width:1000px;
-  margin:auto;
-  padding:20px;
-}
+/* =========================
+   HERO
+========================= */
 
 .hero{
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  position:relative;
+  overflow:hidden;
+
+  margin-top:15px;
+  padding:35px 22px;
+
   color:white;
-  padding:30px 20px;
-  border-radius:15px;
-  margin-bottom:20px;
+
+  border-radius:20px;
+
+  background:
+  linear-gradient(
+    135deg,
+    #1d4ed8,
+    #4f46e5,
+    #7c3aed
+  );
+
+  box-shadow:0 10px 30px rgba(37,99,235,.25);
+}
+
+.hero::before,
+.hero::after{
+  content:"";
+  position:absolute;
+
+  width:130px;
+  height:130px;
+
+  border:2px solid rgba(255,255,255,.2);
+  border-radius:50%;
+
+  animation:floatCircle 5s infinite ease-in-out;
+}
+
+.hero::before{
+  right:-40px;
+  top:-30px;
+}
+
+.hero::after{
+  left:-50px;
+  bottom:-70px;
+  animation-delay:1s;
+}
+
+.hero-content{
+  position:relative;
+  z-index:2;
 }
 
 .hero h1{
-  font-size:30px;
+  font-size:32px;
+  line-height:1.3;
   margin-bottom:8px;
 }
 
 .hero p{
-  opacity:.95;
+  margin:5px 0;
 }
+
+.chapter-badge{
+  display:inline-block;
+
+  background:rgba(255,255,255,.18);
+
+  border:1px solid rgba(255,255,255,.3);
+
+  padding:5px 12px;
+
+  border-radius:30px;
+
+  font-size:13px;
+  font-weight:bold;
+
+  margin-bottom:12px;
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes floatCircle{
+
+  0%,100%{
+    transform:translateY(0) rotate(0deg);
+  }
+
+  50%{
+    transform:translateY(-15px) rotate(20deg);
+  }
+
+}
+
+@keyframes pulse{
+
+  0%,100%{
+    transform:scale(1);
+    opacity:1;
+  }
+
+  50%{
+    transform:scale(1.05);
+    opacity:.75;
+  }
+
+}
+
+@keyframes slideIn{
+
+  from{
+    opacity:0;
+    transform:translateY(25px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+
+}
+
+@keyframes growBar{
+
+  from{
+    width:0;
+  }
+
+}
+
+@keyframes timelinePulse{
+
+  0%,100%{
+    box-shadow:0 0 0 0 rgba(37,99,235,.4);
+  }
+
+  50%{
+    box-shadow:0 0 0 10px rgba(37,99,235,0);
+  }
+
+}
+
+.pulse{
+  animation:pulse 2s infinite;
+}
+
+/* =========================
+   PROGRESS
+========================= */
 
 .progress-box{
   background:white;
-  padding:15px;
-  border-radius:12px;
-  margin:20px 0;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+  padding:17px;
+
+  margin:18px 0;
+
+  border-radius:14px;
+
+  box-shadow:0 4px 15px rgba(0,0,0,.07);
 }
 
-.progress-bar{
+.progress-header{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+}
+
+.progress-track{
+  width:100%;
   height:12px;
+
   background:#e5e7eb;
+
   border-radius:20px;
+
   overflow:hidden;
-  margin-top:8px;
+
+  margin-top:9px;
 }
 
 .progress-fill{
-  height:100%;
   width:0%;
-  background:#22c55e;
-  transition:.3s;
+  height:100%;
+
+  background:linear-gradient(
+    90deg,
+    #22c55e,
+    #16a34a
+  );
+
+  transition:width .5s;
 }
+
+/* =========================
+   CARDS
+========================= */
 
 .card{
   background:white;
-  padding:22px;
-  border-radius:14px;
+
+  padding:24px;
+
   margin:20px 0;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
+
+  border-radius:16px;
+
+  box-shadow:0 4px 16px rgba(0,0,0,.07);
+
+  animation:slideIn .5s ease;
 }
 
 .card h2{
@@ -125,113 +318,524 @@ button,
 }
 
 .card h3{
-  color:#7c3aed;
-  margin:15px 0 7px;
+  color:#4f46e5;
+  margin:18px 0 7px;
 }
+
+.card p{
+  margin:8px 0;
+}
+
+.card ul{
+  padding-left:23px;
+}
+
+.card li{
+  margin:6px 0;
+}
+
+/* =========================
+   TAGS
+========================= */
 
 .tag{
   display:inline-block;
+
   background:#dbeafe;
   color:#1d4ed8;
-  padding:4px 9px;
+
+  padding:4px 10px;
+
   border-radius:20px;
+
   font-size:12px;
+
   font-weight:bold;
+
   margin-bottom:10px;
 }
+
+/* =========================
+   HIGHLIGHT
+========================= */
+
+.highlight-box{
+  position:relative;
+
+  padding:18px;
+
+  margin:16px 0;
+
+  border-left:6px solid #2563eb;
+
+  background:#eff6ff;
+
+  border-radius:10px;
+
+  overflow:hidden;
+}
+
+.highlight-box::after{
+  content:"";
+
+  position:absolute;
+
+  width:80px;
+  height:80px;
+
+  right:-30px;
+  top:-30px;
+
+  border-radius:50%;
+
+  background:rgba(37,99,235,.08);
+
+  animation:floatCircle 4s infinite;
+}
+
+.important{
+  display:inline-block;
+
+  background:#f59e0b;
+  color:white;
+
+  padding:3px 8px;
+
+  border-radius:15px;
+
+  font-size:11px;
+
+  font-weight:bold;
+
+  margin-bottom:7px;
+
+  animation:pulse 2s infinite;
+}
+
+/* =========================
+   EXAMPLE BOX
+========================= */
+
+.example-box{
+  background:#f0fdf4;
+
+  border-left:6px solid #16a34a;
+
+  padding:17px;
+
+  margin:15px 0;
+
+  border-radius:10px;
+}
+
+.example-box strong{
+  color:#15803d;
+}
+
+/* =========================
+   UPSC BOX
+========================= */
+
+.upsc-box{
+  background:#fff7ed;
+
+  border-left:6px solid #f97316;
+
+  padding:18px;
+
+  margin:17px 0;
+
+  border-radius:10px;
+}
+
+.upsc-box h3{
+  color:#c2410c;
+  margin-top:0;
+}
+
+/* =========================
+   ILLUSTRATION
+========================= */
+
+.illustration{
+  background:
+  linear-gradient(
+    135deg,
+    #eff6ff,
+    #eef2ff
+  );
+
+  border-radius:16px;
+
+  padding:15px;
+
+  margin:18px 0;
+
+  text-align:center;
+
+  overflow:hidden;
+}
+
+.illustration svg{
+  width:100%;
+  max-width:650px;
+  height:auto;
+}
+
+/* =========================
+   CHART
+========================= */
+
+.chart-box{
+  background:#f8fafc;
+
+  padding:18px;
+
+  border-radius:14px;
+
+  margin:18px 0;
+}
+
+.chart-row{
+  margin:15px 0;
+}
+
+.chart-label{
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+.bar-track{
+  width:100%;
+  height:25px;
+
+  background:#e5e7eb;
+
+  border-radius:20px;
+
+  overflow:hidden;
+}
+
+.bar-fill{
+  height:100%;
+
+  border-radius:20px;
+
+  animation:growBar 2s ease;
+
+  background:linear-gradient(
+    90deg,
+    #2563eb,
+    #7c3aed
+  );
+}
+
+.bar-80{
+  width:80%;
+}
+
+.bar-90{
+  width:90%;
+}
+
+.bar-70{
+  width:70%;
+}
+
+.bar-60{
+  width:60%;
+}
+
+/* =========================
+   COMPARISON TABLE
+========================= */
+
+.table-wrapper{
+  overflow-x:auto;
+  margin-top:15px;
+}
+
+table{
+  width:100%;
+  border-collapse:collapse;
+  min-width:600px;
+}
+
+th,
+td{
+  border:1px solid #d1d5db;
+  padding:10px;
+  text-align:left;
+}
+
+th{
+  background:#1d4ed8;
+  color:white;
+}
+
+tr:nth-child(even){
+  background:#f8fafc;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline{
+  position:relative;
+
+  margin:25px 0;
+
+  padding-left:30px;
+}
+
+.timeline::before{
+  content:"";
+
+  position:absolute;
+
+  left:9px;
+  top:0;
+  bottom:0;
+
+  width:3px;
+
+  background:#2563eb;
+}
+
+.timeline-item{
+  position:relative;
+
+  margin:22px 0;
+
+  padding:15px;
+
+  background:#f8fafc;
+
+  border-radius:10px;
+}
+
+.timeline-item::before{
+  content:"";
+
+  position:absolute;
+
+  left:-27px;
+  top:18px;
+
+  width:15px;
+  height:15px;
+
+  border-radius:50%;
+
+  background:#2563eb;
+
+  animation:timelinePulse 2s infinite;
+}
+
+/* =========================
+   AUDIO
+========================= */
 
 .audio-buttons{
   display:flex;
   flex-wrap:wrap;
-  gap:8px;
+  gap:9px;
+
   margin-top:12px;
 }
 
 .audio-buttons button{
+  border:0;
+
+  padding:10px 14px;
+
+  border-radius:9px;
+
   background:#16a34a;
   color:white;
+
+  font-weight:bold;
 }
 
-.stop-btn{
-  background:#dc2626 !important;
+.audio-buttons .stop{
+  background:#dc2626;
 }
 
-.language-box{
+/* =========================
+   QUICK REVISION
+========================= */
+
+.revision-grid{
+  display:grid;
+
+  grid-template-columns:
+  repeat(2,1fr);
+
+  gap:12px;
+
+  margin-top:15px;
+}
+
+.revision-card{
   background:#f8fafc;
-  border-left:5px solid #2563eb;
+
   padding:15px;
-  margin:12px 0;
-  border-radius:8px;
+
+  border-radius:10px;
+
+  border-left:4px solid #2563eb;
 }
 
-.quick-list li{
-  margin:7px 0 7px 20px;
-}
+/* =========================
+   MAINS
+========================= */
 
 .mains-question{
   background:#fff7ed;
+
   border-left:5px solid #f97316;
-  padding:14px;
+
+  padding:15px;
+
   margin:10px 0;
-  border-radius:8px;
+
+  border-radius:9px;
 }
 
-/* TEST SERIES */
+/* =========================
+   TEST SERIES
+========================= */
 
 .test-series{
-  background:#eef2ff;
+  background:
+  linear-gradient(
+    135deg,
+    #eef2ff,
+    #f5f3ff
+  );
 }
 
 .test-grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
+
+  grid-template-columns:
+  repeat(2,1fr);
+
   gap:12px;
-  margin-top:15px;
+
+  margin-top:18px;
 }
 
 .test-card{
   background:white;
-  padding:16px;
-  border-radius:12px;
+
+  padding:17px;
+
+  border-radius:13px;
+
   border:1px solid #dbeafe;
+
+  transition:.25s;
+}
+
+.test-card:hover{
+  transform:translateY(-4px);
+
+  box-shadow:0 8px 20px rgba(0,0,0,.1);
 }
 
 .test-card h3{
+  margin:0 0 5px;
+
   color:#1d4ed8;
-  margin-top:0;
+}
+
+.test-card p{
+  font-size:14px;
 }
 
 .test-card button{
-  background:#2563eb;
-  color:white;
   width:100%;
-  margin-top:10px;
+
+  margin-top:8px;
+
+  border:0;
+
+  padding:10px;
+
+  border-radius:8px;
+
+  background:#2563eb;
+
+  color:white;
+
+  font-weight:bold;
 }
+
+/* =========================
+   TEST AREA
+========================= */
 
 #testArea{
   display:none;
 }
 
+.test-top{
+  display:flex;
+
+  justify-content:space-between;
+
+  align-items:center;
+
+  gap:10px;
+}
+
+.back-test{
+  border:0;
+
+  padding:9px 12px;
+
+  border-radius:8px;
+
+  background:#6b7280;
+
+  color:white;
+
+  font-weight:bold;
+}
+
 .question{
   background:#f8fafc;
+
   padding:18px;
-  border-radius:12px;
+
   margin:15px 0;
+
+  border-radius:12px;
+
   border:1px solid #e5e7eb;
 }
 
 .question h3{
   color:#111827;
+
   margin:0 0 12px;
 }
 
 .option{
   display:block;
+
   background:white;
-  padding:10px;
-  margin:7px 0;
+
   border:1px solid #d1d5db;
+
+  padding:10px;
+
+  margin:7px 0;
+
   border-radius:8px;
+
   cursor:pointer;
 }
 
@@ -243,60 +847,71 @@ button,
   margin-right:8px;
 }
 
-.submit-test{
-  background:#16a34a;
-  color:white;
-  width:100%;
-  padding:13px;
-  font-size:16px;
-  margin-top:10px;
+.solution{
+  display:none;
+
+  background:#fefce8;
+
+  border-left:5px solid #eab308;
+
+  padding:14px;
+
+  margin-top:12px;
+
+  border-radius:8px;
 }
 
-.back-test{
-  background:#6b7280;
+.submit-test{
+  width:100%;
+
+  border:0;
+
+  padding:13px;
+
+  border-radius:10px;
+
+  background:#16a34a;
+
   color:white;
-  margin-bottom:10px;
+
+  font-size:16px;
+
+  font-weight:bold;
 }
 
 .result{
   display:none;
-  background:#ecfdf5;
-  border-left:5px solid #16a34a;
-  padding:18px;
-  border-radius:10px;
+
   margin-top:20px;
+
+  background:#ecfdf5;
+
+  border-left:6px solid #16a34a;
+
+  padding:20px;
+
+  border-radius:10px;
 }
 
-.solution{
-  display:none;
-  background:#fefce8;
-  border-left:5px solid #eab308;
-  padding:14px;
-  margin-top:10px;
-  border-radius:8px;
-}
-
-.test-navigation{
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  margin-bottom:15px;
-  gap:10px;
-}
-
-#testTitle{
-  color:#1d4ed8;
-}
+/* =========================
+   FOOTER
+========================= */
 
 footer{
   background:#111827;
+
   color:white;
+
   text-align:center;
+
   padding:25px 15px;
+
   margin-top:30px;
 }
 
-/* DARK MODE */
+/* =========================
+   DARK MODE
+========================= */
 
 body.dark{
   background:#0f172a;
@@ -310,7 +925,10 @@ body.dark .test-card{
   color:#e5e7eb;
 }
 
-body.dark .language-box,
+body.dark .illustration,
+body.dark .chart-box,
+body.dark .timeline-item,
+body.dark .revision-card,
 body.dark .question{
   background:#111827;
 }
@@ -321,33 +939,55 @@ body.dark .option{
   border-color:#475569;
 }
 
-body.dark .test-series{
+body.dark .highlight-box{
   background:#172554;
 }
 
-body.dark .result{
-  background:#064e3b;
+body.dark .example-box{
+  background:#052e16;
 }
 
-body.dark .solution{
-  background:#422006;
+body.dark .upsc-box{
+  background:#431407;
 }
 
 body.dark .mains-question{
   background:#431407;
 }
 
-body.dark .progress-bar{
+body.dark .test-series{
+  background:#172554;
+}
+
+body.dark .solution{
+  background:#422006;
+}
+
+body.dark .result{
+  background:#064e3b;
+}
+
+body.dark .bar-track,
+body.dark .progress-track{
   background:#334155;
 }
 
-/* MOBILE */
+body.dark td{
+  border-color:#475569;
+}
+
+body.dark tr:nth-child(even){
+  background:#1e293b;
+}
+
+/* =========================
+   MOBILE
+========================= */
 
 @media(max-width:700px){
 
   header{
     flex-direction:column;
-    align-items:stretch;
   }
 
   header h2{
@@ -359,7 +999,7 @@ body.dark .progress-bar{
   }
 
   .hero h1{
-    font-size:24px;
+    font-size:25px;
   }
 
   .container{
@@ -367,30 +1007,54 @@ body.dark .progress-bar{
   }
 
   .card{
-    padding:16px;
+    padding:17px;
   }
 
+  .revision-grid,
   .test-grid{
     grid-template-columns:1fr;
   }
 
-  .test-navigation{
+  .test-top{
     flex-direction:column;
     align-items:stretch;
   }
+
+  table{
+    font-size:14px;
+  }
+
 }
+
 </style>
 </head>
 
+
 <body>
+
+
+<!-- =========================
+     HEADER
+========================= -->
 
 <header>
 
   <h2>🇮🇳 UPSC Shiksha</h2>
 
   <div class="header-buttons">
-    <button class="home-btn" onclick="goHome()">🏠 Home</button>
-    <button class="dark-btn" onclick="toggleDarkMode()">🌙 Dark</button>
+
+    <button
+      class="home-btn"
+      onclick="goHome()">
+      🏠 Home
+    </button>
+
+    <button
+      class="dark-btn"
+      onclick="toggleDarkMode()">
+      🌙 Dark
+    </button>
+
   </div>
 
 </header>
@@ -398,405 +1062,1574 @@ body.dark .progress-bar{
 
 <div class="container">
 
+
+<!-- =========================
+     HERO
+========================= -->
+
 <section class="hero">
 
-  <h1>📚 Class 6 History — Chapter 1</h1>
+  <div class="hero-content">
 
-  <p><strong>What, Where, How and When?</strong></p>
+    <span class="chapter-badge">
+      PREMIUM NCERT • CLASS 6 • HISTORY
+    </span>
+
+    <h1>
+      What, Where, How and When?
+    </h1>
+
+    <p>
+      Chapter 1 — Understanding History and Historical Sources
+    </p>
+
+    <p>
+      📖 Detailed Learning • 🎯 UPSC Foundation • 📝 100 MCQs
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     PROGRESS
+========================= -->
+
+<div class="progress-box">
+
+  <div class="progress-header">
+
+    <strong>
+      📊 Chapter Test Progress
+    </strong>
+
+    <span id="progressText">
+      0%
+    </span>
+
+  </div>
+
+  <div class="progress-track">
+
+    <div
+      class="progress-fill"
+      id="progressFill">
+    </div>
+
+  </div>
+
+</div>
+
+
+<!-- =========================
+     LEARNING OBJECTIVES
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    🎯 LEARNING OBJECTIVES
+  </span>
+
+  <h2>
+    What will you learn?
+  </h2>
 
   <p>
-    Premium NCERT-based learning material for UPSC preparation.
+    After completing this chapter, you should be able to explain
+    what history means, identify different historical sources,
+    understand how historians and archaeologists reconstruct the
+    past, and connect these ideas with basic UPSC preparation.
+  </p>
+
+  <div class="revision-grid">
+
+    <div class="revision-card">
+      <strong>📖 Concept</strong>
+      <p>
+        Understand the meaning and importance of history.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🔎 Evidence</strong>
+      <p>
+        Learn how historical evidence is collected and interpreted.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🏺 Archaeology</strong>
+      <p>
+        Understand material remains and archaeological sources.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🎯 UPSC</strong>
+      <p>
+        Build a foundation for Prelims and Mains questions.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ORIGINAL ILLUSTRATION
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    🖼️ VISUAL EXAMPLE
+  </span>
+
+  <h2>
+    How do we discover the past?
+  </h2>
+
+  <p>
+    Imagine an archaeologist finding an ancient site. A tool,
+    pottery fragment, coin or inscription may look like an ordinary
+    object, but each object can provide evidence about the people
+    who used it.
+  </p>
+
+
+  <div class="illustration">
+
+    <svg
+      viewBox="0 0 700 300"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <!-- sky -->
+      <rect
+        width="700"
+        height="300"
+        fill="#dbeafe"/>
+
+      <!-- ground -->
+      <rect
+        y="210"
+        width="700"
+        height="90"
+        fill="#d6b98c"/>
+
+      <!-- sun -->
+      <circle
+        cx="590"
+        cy="65"
+        r="35"
+        fill="#fbbf24"/>
+
+      <!-- ancient structure -->
+      <rect
+        x="80"
+        y="130"
+        width="170"
+        height="80"
+        fill="#a16207"/>
+
+      <polygon
+        points="60,130 270,130 235,95 95,95"
+        fill="#92400e"/>
+
+      <!-- columns -->
+      <rect x="105" y="145" width="20" height="65" fill="#fef3c7"/>
+      <rect x="150" y="145" width="20" height="65" fill="#fef3c7"/>
+      <rect x="195" y="145" width="20" height="65" fill="#fef3c7"/>
+
+      <!-- archaeologist -->
+      <circle
+        cx="400"
+        cy="120"
+        r="22"
+        fill="#f5c6a5"/>
+
+      <rect
+        x="380"
+        y="142"
+        width="40"
+        height="65"
+        rx="8"
+        fill="#2563eb"/>
+
+      <line
+        x1="385"
+        y1="155"
+        x2="345"
+        y2="205"
+        stroke="#111827"
+        stroke-width="8"/>
+
+      <!-- tool -->
+      <path
+        d="M320 215 L350 190"
+        stroke="#92400e"
+        stroke-width="8"/>
+
+      <!-- artifact -->
+      <ellipse
+        cx="500"
+        cy="230"
+        rx="38"
+        ry="18"
+        fill="#92400e"/>
+
+      <circle
+        cx="500"
+        cy="220"
+        r="15"
+        fill="#f59e0b"/>
+
+      <!-- labels -->
+      <text
+        x="85"
+        y="270"
+        font-size="18"
+        fill="#1f2937">
+        Ancient Site
+      </text>
+
+      <text
+        x="355"
+        y="270"
+        font-size="18"
+        fill="#1f2937">
+        Archaeologist
+      </text>
+
+      <text
+        x="465"
+        y="195"
+        font-size="15"
+        fill="#1f2937">
+        Evidence
+      </text>
+
+    </svg>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     ENGLISH
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    🇬🇧 ENGLISH • DETAILED EXPLANATION
+  </span>
+
+  <h2>
+    1. What is History?
+  </h2>
+
+  <p>
+    History is the systematic study of the human past. It attempts
+    to understand how people lived, worked, travelled, interacted,
+    organised societies and responded to changes in their environment.
+  </p>
+
+  <p>
+    History is not simply a collection of dates and names. It is
+    an attempt to reconstruct and interpret the past using available
+    evidence.
+  </p>
+
+  <div class="highlight-box">
+
+    <span class="important">
+      ⭐ IMPORTANT
+    </span>
+
+    <p>
+      <strong>
+        History = Past + Evidence + Interpretation
+      </strong>
+    </p>
+
+  </div>
+
+
+  <div class="example-box">
+
+    <strong>💡 Example:</strong>
+
+    <p>
+      Suppose archaeologists find several stone tools near an old
+      settlement. The tools may provide clues about the activities,
+      technology and lifestyle of the people who used them.
+    </p>
+
+  </div>
+
+
+  <h3>
+    Why do we study History?
+  </h3>
+
+  <p>
+    Studying history helps us understand change and continuity.
+    It allows us to examine how societies developed and how
+    different economic, social, cultural and political institutions
+    emerged over time.
+  </p>
+
+
+  <div class="upsc-box">
+
+    <h3>
+      🎯 UPSC Focus
+    </h3>
+
+    <p>
+      UPSC questions often require students to connect historical
+      evidence with broader themes such as society, economy,
+      technology, culture and geography.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     WHERE
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    🌍 CONCEPT 2
+  </span>
+
+  <h2>
+    2. Where did people live?
+  </h2>
+
+  <p>
+    Human communities lived in many different geographical
+    environments. Rivers, forests, grasslands, mountains,
+    coastal regions and plains offered different opportunities
+    and challenges.
+  </p>
+
+  <p>
+    Availability of water, food, fertile land, animals and other
+    natural resources influenced where people lived and how they
+    moved.
+  </p>
+
+
+  <div class="example-box">
+
+    <strong>💡 Example:</strong>
+
+    <p>
+      A river can provide water for drinking, agriculture and
+      transportation. Therefore, river valleys have historically
+      supported many human settlements.
+    </p>
+
+  </div>
+
+
+  <div class="upsc-box">
+
+    <h3>
+      🎯 UPSC Connection
+    </h3>
+
+    <p>
+      Geography and history are closely connected. Physical
+      environment can influence settlement patterns, agriculture,
+      trade routes and human movement.
+    </p>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     SOURCE CHART
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    📊 VISUAL LEARNING
+  </span>
+
+  <h2>
+    3. Major Types of Historical Evidence
+  </h2>
+
+  <p>
+    Historians use different types of sources because no single
+    source can explain every aspect of the past.
+  </p>
+
+
+  <div class="chart-box">
+
+    <div class="chart-row">
+
+      <div class="chart-label">
+        📝 Written Sources
+      </div>
+
+      <div class="bar-track">
+
+        <div class="bar-fill bar-80"></div>
+
+      </div>
+
+    </div>
+
+
+    <div class="chart-row">
+
+      <div class="chart-label">
+        🏺 Archaeological Sources
+      </div>
+
+      <div class="bar-track">
+
+        <div class="bar-fill bar-90"></div>
+
+      </div>
+
+    </div>
+
+
+    <div class="chart-row">
+
+      <div class="chart-label">
+        🪙 Coins & Objects
+      </div>
+
+      <div class="bar-track">
+
+        <div class="bar-fill bar-70"></div>
+
+      </div>
+
+    </div>
+
+
+    <div class="chart-row">
+
+      <div class="chart-label">
+        🏛️ Buildings & Monuments
+      </div>
+
+      <div class="bar-track">
+
+        <div class="bar-fill bar-60"></div>
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <p>
+    <small>
+      The bars are a learning visualization, not statistical
+      measurements of the actual historical record.
+    </small>
   </p>
 
 </section>
 
 
-<div class="progress-box">
+<!-- =========================
+     MANUSCRIPTS
+========================= -->
 
-  <strong>📊 Chapter Progress</strong>
+<section class="card">
 
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
+  <span class="tag">
+    📝 SOURCE 1
+  </span>
+
+  <h2>
+    4. Manuscripts
+  </h2>
+
+  <p>
+    Manuscripts are texts written by hand. In the past, people
+    wrote on different materials depending on the region and
+    period.
+  </p>
+
+  <p>
+    Manuscripts can contain information about religion, literature,
+    administration, society, science, medicine and many other
+    subjects.
+  </p>
+
+
+  <div class="illustration">
+
+    <svg
+      viewBox="0 0 700 260"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <rect
+        width="700"
+        height="260"
+        rx="15"
+        fill="#fef3c7"/>
+
+      <rect
+        x="130"
+        y="40"
+        width="440"
+        height="170"
+        rx="8"
+        fill="#fde68a"
+        stroke="#92400e"
+        stroke-width="4"/>
+
+      <line
+        x1="180"
+        y1="75"
+        x2="520"
+        y2="75"
+        stroke="#92400e"
+        stroke-width="4"/>
+
+      <line
+        x1="180"
+        y1="105"
+        x2="520"
+        y2="105"
+        stroke="#92400e"
+        stroke-width="4"/>
+
+      <line
+        x1="180"
+        y1="135"
+        x2="520"
+        y2="135"
+        stroke="#92400e"
+        stroke-width="4"/>
+
+      <line
+        x1="180"
+        y1="165"
+        x2="450"
+        y2="165"
+        stroke="#92400e"
+        stroke-width="4"/>
+
+      <text
+        x="285"
+        y="235"
+        font-size="22"
+        fill="#78350f">
+        HANDWRITTEN MANUSCRIPT
+      </text>
+
+    </svg>
+
   </div>
 
-  <p id="progressText">0% completed</p>
 
-</div>
+  <div class="highlight-box">
+
+    <span class="important">
+      REMEMBER
+    </span>
+
+    <p>
+      A manuscript is a <strong>handwritten source</strong>.
+    </p>
+
+  </div>
+
+</section>
 
 
-<!-- INTRODUCTION -->
+<!-- =========================
+     INSCRIPTIONS
+========================= -->
 
 <section class="card">
 
-<span class="tag">NCERT + UPSC FOUNDATION</span>
+  <span class="tag">
+    🪨 SOURCE 2
+  </span>
 
-<h2>📖 Chapter Overview</h2>
+  <h2>
+    5. Inscriptions
+  </h2>
 
-<p>
-History helps us understand how people lived, worked, travelled,
-fought, traded and organised their societies in the past.
-</p>
+  <p>
+    Inscriptions are writings engraved, carved or inscribed on
+    relatively hard surfaces such as stone or metal.
+  </p>
 
-<p>
-Historians reconstruct the past using different kinds of evidence.
-These include manuscripts, inscriptions, coins, tools, buildings,
-pottery, bones and other archaeological remains.
-</p>
+  <p>
+    They can provide information about rulers, donations,
+    administrative activities, religious practices, events and
+    other aspects of society.
+  </p>
+
+
+  <div class="illustration">
+
+    <svg
+      viewBox="0 0 700 270"
+      xmlns="http://www.w3.org/2000/svg">
+
+      <rect
+        width="700"
+        height="270"
+        rx="15"
+        fill="#e5e7eb"/>
+
+      <rect
+        x="190"
+        y="30"
+        width="320"
+        height="190"
+        rx="15"
+        fill="#9ca3af"
+        stroke="#374151"
+        stroke-width="5"/>
+
+      <text
+        x="245"
+        y="75"
+        font-size="24"
+        fill="#374151">
+        INSCRIPTION
+      </text>
+
+      <line
+        x1="230"
+        y1="100"
+        x2="470"
+        y2="100"
+        stroke="#374151"
+        stroke-width="5"/>
+
+      <line
+        x1="230"
+        y1="130"
+        x2="470"
+        y2="130"
+        stroke="#374151"
+        stroke-width="5"/>
+
+      <line
+        x1="230"
+        y1="160"
+        x2="450"
+        y2="160"
+        stroke="#374151"
+        stroke-width="5"/>
+
+      <line
+        x1="230"
+        y1="190"
+        x2="420"
+        y2="190"
+        stroke="#374151"
+        stroke-width="5"/>
+
+      <text
+        x="265"
+        y="250"
+        font-size="18"
+        fill="#1f2937">
+        WRITING ON A HARD SURFACE
+      </text>
+
+    </svg>
+
+  </div>
+
+
+  <div class="example-box">
+
+    <strong>💡 Example:</strong>
+
+    <p>
+      An inscription recording a donation can help historians
+      understand relationships between rulers, institutions and
+      communities.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- ENGLISH -->
+<!-- =========================
+     ARCHAEOLOGY
+========================= -->
 
 <section class="card">
 
-<h2>🇬🇧 English Explanation</h2>
+  <span class="tag">
+    🏺 SOURCE 3
+  </span>
 
-<h3>1. What is History?</h3>
+  <h2>
+    6. Archaeological Sources
+  </h2>
 
-<p>
-History is the study of the human past. It helps us understand
-changes in society, economy, culture, technology and political life.
-</p>
+  <p>
+    Archaeological sources are physical remains of the past.
+    Archaeologists study objects, structures and other remains
+    to understand earlier societies.
+  </p>
 
-<h3>2. Where did early people live?</h3>
+  <div class="revision-grid">
 
-<p>
-Early humans lived in different environments such as forests,
-grasslands, river valleys, mountains and coastal regions.
-Availability of water, food and other resources influenced human
-settlements and movement.
-</p>
+    <div class="revision-card">
+      🪨 <strong>Tools</strong>
+      <p>
+        Can provide clues about technology and activities.
+      </p>
+    </div>
 
-<h3>3. How do we know about the past?</h3>
+    <div class="revision-card">
+      🏺 <strong>Pottery</strong>
+      <p>
+        Can provide information about daily life and technology.
+      </p>
+    </div>
 
-<p>
-Historians and archaeologists use different sources to reconstruct
-the past. Written sources include manuscripts and inscriptions.
-Archaeological sources include tools, pottery, coins, buildings,
-bones and other remains.
-</p>
+    <div class="revision-card">
+      🪙 <strong>Coins</strong>
+      <p>
+        Can provide evidence about economy, rulers and trade.
+      </p>
+    </div>
 
-<h3>4. Manuscripts</h3>
+    <div class="revision-card">
+      🦴 <strong>Bones</strong>
+      <p>
+        Can provide clues about humans, animals and past life.
+      </p>
+    </div>
 
-<p>
-Manuscripts were written by hand. They could be written on materials
-such as palm leaves, birch bark and other surfaces.
-</p>
+  </div>
 
-<h3>5. Inscriptions</h3>
 
-<p>
-Inscriptions are writings engraved or carved on hard surfaces such
-as stone or metal. They can provide information about rulers,
-events, donations and social life.
-</p>
+  <div class="highlight-box">
 
-<h3>6. Archaeological Sources</h3>
+    <span class="important">
+      UPSC FACT
+    </span>
 
-<p>
-Archaeologists study material remains from the past. Objects such as
-tools, pottery, ornaments, coins and structures can provide evidence
-about earlier societies.
-</p>
+    <p>
+      Archaeology is especially important when written records
+      are limited or unavailable.
+    </p>
 
-<h3>7. Dates in History</h3>
-
-<p>
-Dates help historians arrange events in chronological order.
-BC/BCE and AD/CE are systems used to refer to historical time.
-</p>
+  </div>
 
 </section>
 
 
-<!-- HINDI -->
+<!-- =========================
+     COMPARISON
+========================= -->
 
 <section class="card">
 
-<h2>🇮🇳 हिंदी में समझें</h2>
+  <span class="tag">
+    🔎 COMPARE
+  </span>
 
-<div class="language-box">
+  <h2>
+    7. Manuscript vs Inscription vs Archaeological Object
+  </h2>
 
-<h3>इतिहास क्या है?</h3>
+  <div class="table-wrapper">
 
-<p>
-इतिहास मानव अतीत का अध्ययन है। इससे हमें यह समझने में सहायता मिलती
-है कि अलग-अलग समय में लोग कैसे रहते थे, क्या खाते थे, किस प्रकार
-काम करते थे और समाज में क्या परिवर्तन हुए।
-</p>
+    <table>
 
-<h3>अतीत के बारे में जानकारी कैसे मिलती है?</h3>
+      <tr>
+        <th>Source</th>
+        <th>Nature</th>
+        <th>Example</th>
+        <th>Possible Information</th>
+      </tr>
 
-<p>
-इतिहासकार और पुरातत्वविद विभिन्न स्रोतों का अध्ययन करते हैं।
-पांडुलिपियाँ, अभिलेख, सिक्के, औजार, मिट्टी के बर्तन, इमारतें और
-मानव तथा पशु अवशेष महत्वपूर्ण स्रोत हैं।
-</p>
+      <tr>
+        <td>Manuscript</td>
+        <td>Written by hand</td>
+        <td>Old handwritten text</td>
+        <td>Ideas, literature, religion, administration</td>
+      </tr>
 
-<h3>पांडुलिपियाँ</h3>
+      <tr>
+        <td>Inscription</td>
+        <td>Engraved writing</td>
+        <td>Stone inscription</td>
+        <td>Rulers, donations, events</td>
+      </tr>
 
-<p>
-हाथ से लिखे गए पुराने लेखों को पांडुलिपियाँ कहा जाता है।
-</p>
+      <tr>
+        <td>Archaeological object</td>
+        <td>Material evidence</td>
+        <td>Tool or pottery</td>
+        <td>Technology, lifestyle, activities</td>
+      </tr>
 
-<h3>अभिलेख</h3>
+    </table>
 
-<p>
-पत्थर या धातु जैसी कठोर सतहों पर लिखे या खुदे हुए लेख अभिलेख
-कहलाते हैं।
-</p>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- GUJARATI -->
+<!-- =========================
+     COINS
+========================= -->
 
 <section class="card">
 
-<h2>🟢 ગુજરાતી માં સમજીએ</h2>
+  <span class="tag">
+    🪙 SOURCE 4
+  </span>
 
-<div class="language-box">
+  <h2>
+    8. Coins
+  </h2>
 
-<h3>ઇતિહાસ શું છે?</h3>
+  <p>
+    Coins are important material sources. Their symbols, inscriptions,
+    metals, designs and distribution can provide clues about rulers,
+    economic activity and exchange.
+  </p>
 
-<p>
-ઇતિહાસ માનવ ભૂતકાળનો અભ્યાસ છે. તે આપણને ભૂતકાળના લોકોનું જીવન,
-તેમની પ્રવૃત્તિઓ અને સમાજમાં થયેલા ફેરફારો સમજવામાં મદદ કરે છે.
-</p>
+  <div class="example-box">
 
-<h3>ભૂતકાળ વિશે માહિતી કેવી રીતે મળે છે?</h3>
+    <strong>💡 Example:</strong>
 
-<p>
-ઇતિહાસકારો અને પુરાતત્વવિદો વિવિધ પુરાવાઓનો અભ્યાસ કરે છે.
-હસ્તપ્રતો, શિલાલેખો, સિક્કા, સાધનો, માટીના વાસણો અને ઇમારતો
-મહત્વપૂર્ણ સ્ત્રોતો છે.
-</p>
+    <p>
+      If coins belonging to a particular ruler are found in a
+      distant region, historians may investigate what this tells
+      us about trade, political influence or economic connections.
+    </p>
 
-</div>
+  </div>
+
+  <div class="upsc-box">
+
+    <h3>
+      🎯 UPSC Focus
+    </h3>
+
+    <p>
+      Remember that coins are not only objects of money. They can
+      also function as historical evidence.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- AUDIO -->
+<!-- =========================
+     BUILDINGS
+========================= -->
 
 <section class="card">
 
-<h2>🔊 Audio Learning</h2>
+  <span class="tag">
+    🏛️ SOURCE 5
+  </span>
 
-<p>
-You can listen to the content in the currently selected language
-using the buttons below.
-</p>
+  <h2>
+    9. Buildings and Monuments
+  </h2>
 
-<div class="audio-buttons">
+  <p>
+    Buildings, monuments, structures and archaeological sites can
+    reveal information about technology, architecture, religion,
+    political authority and social organisation.
+  </p>
 
-<button onclick="speakEnglish()">🔊 English</button>
+  <div class="example-box">
 
-<button onclick="speakHindi()">🔊 Hindi</button>
+    <strong>💡 Example:</strong>
 
-<button onclick="speakGujarati()">🔊 Gujarati</button>
+    <p>
+      The design and construction of a large historical structure
+      can provide clues about engineering skills, available
+      resources and the organisation of labour.
+    </p>
 
-<button class="stop-btn" onclick="stopAudio()">⏹ Stop</button>
-
-</div>
+  </div>
 
 </section>
 
 
-<!-- UPSC POINTS -->
+<!-- =========================
+     DATES
+========================= -->
 
 <section class="card">
 
-<h2>🎯 UPSC Important Points</h2>
+  <span class="tag">
+    🕐 TIME & CHRONOLOGY
+  </span>
 
-<ul class="quick-list">
+  <h2>
+    10. Dates and Chronology
+  </h2>
 
-<li>History is the study of the human past.</li>
+  <p>
+    Dates help historians arrange events in a sequence. This
+    sequence is called chronology.
+  </p>
 
-<li>Historians use different sources to reconstruct the past.</li>
+  <div class="highlight-box">
 
-<li>Manuscripts are handwritten sources.</li>
+    <span class="important">
+      KEY TERM
+    </span>
 
-<li>Inscriptions are writings engraved on hard surfaces.</li>
+    <p>
+      <strong>Chronology = Arrangement of events according to time.</strong>
+    </p>
 
-<li>Archaeology studies material remains.</li>
+  </div>
 
-<li>Tools and pottery provide information about past societies.</li>
 
-<li>Coins can provide information about economy and rulers.</li>
+  <h3>
+    BCE and CE
+  </h3>
 
-<li>Dates help establish chronology.</li>
+  <p>
+    BCE means Before Common Era and CE means Common Era. AD is
+    traditionally associated with the Latin expression Anno Domini.
+  </p>
 
-<li>BC/BCE and AD/CE are systems for referring to historical time.</li>
 
-<li>Geographical conditions influenced human settlement and movement.</li>
+  <div class="upsc-box">
 
-</ul>
+    <h3>
+      🎯 Exam Point
+    </h3>
+
+    <p>
+      Do not confuse chronology with archaeology. Chronology is
+      concerned with time and sequence, while archaeology studies
+      material remains.
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- MAINS -->
+<!-- =========================
+     TIMELINE
+========================= -->
 
 <section class="card">
 
-<h2>✍️ Mains Practice</h2>
+  <span class="tag">
+    🕐 ANIMATED TIMELINE
+  </span>
 
-<div class="mains-question">
-<strong>Q1.</strong> Explain the importance of archaeological sources
-in reconstructing ancient history.
-</div>
+  <h2>
+    How Historical Reconstruction Works
+  </h2>
 
-<div class="mains-question">
-<strong>Q2.</strong> How do manuscripts and inscriptions help historians?
-</div>
+  <div class="timeline">
 
-<div class="mains-question">
-<strong>Q3.</strong> Explain how geography influenced the life of early
-human communities.
-</div>
+    <div class="timeline-item">
 
-<div class="mains-question">
-<strong>Q4.</strong> Why is chronology important in the study of history?
-</div>
+      <h3>
+        Step 1 — Evidence
+      </h3>
+
+      <p>
+        Historians and archaeologists collect available evidence.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>
+        Step 2 — Examination
+      </h3>
+
+      <p>
+        Sources are examined and compared.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>
+        Step 3 — Interpretation
+      </h3>
+
+      <p>
+        Evidence is interpreted in its historical context.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <h3>
+        Step 4 — Reconstruction
+      </h3>
+
+      <p>
+        A reasoned picture of the past is developed.
+      </p>
+
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- QUICK REVISION -->
+<!-- =========================
+     HINDI
+========================= -->
 
 <section class="card">
 
-<h2>⚡ Quick Revision</h2>
+  <span class="tag">
+    🇮🇳 हिंदी • विस्तृत व्याख्या
+  </span>
 
-<ul class="quick-list">
+  <h2>
+    11. इतिहास क्या है?
+  </h2>
 
-<li><strong>History:</strong> Study of the human past.</li>
+  <p>
+    इतिहास मानव अतीत का व्यवस्थित अध्ययन है। इतिहास के माध्यम से
+    हम यह समझने का प्रयास करते हैं कि अलग-अलग समय में लोग किस
+    प्रकार रहते थे, काम करते थे, यात्रा करते थे और समाज का
+    निर्माण करते थे।
+  </p>
 
-<li><strong>Manuscript:</strong> Handwritten historical source.</li>
+  <p>
+    इतिहास केवल तिथियों और राजाओं के नाम याद करना नहीं है। इतिहास
+    उपलब्ध प्रमाणों के आधार पर अतीत को समझने और उसकी व्याख्या
+    करने का प्रयास है।
+  </p>
 
-<li><strong>Inscription:</strong> Writing engraved on a hard surface.</li>
 
-<li><strong>Archaeology:</strong> Study of material remains.</li>
+  <div class="highlight-box">
 
-<li><strong>Coins:</strong> Important evidence about economy and rulers.</li>
+    <span class="important">
+      ⭐ याद रखें
+    </span>
 
-<li><strong>Chronology:</strong> Arrangement of events according to time.</li>
+    <p>
+      <strong>
+        इतिहास = अतीत + प्रमाण + व्याख्या
+      </strong>
+    </p>
 
-</ul>
+  </div>
+
+
+  <h3>
+    लोग कहाँ रहते थे?
+  </h3>
+
+  <p>
+    मानव समुदाय अलग-अलग भौगोलिक क्षेत्रों में रहते थे। नदियाँ,
+    मैदान, जंगल, पहाड़ और समुद्री क्षेत्र लोगों को अलग-अलग
+    प्रकार के संसाधन उपलब्ध कराते थे।
+  </p>
+
+  <p>
+    पानी, भोजन, उपजाऊ भूमि और अन्य प्राकृतिक संसाधनों की उपलब्धता
+    लोगों के रहने और एक स्थान से दूसरे स्थान जाने को प्रभावित
+    कर सकती थी।
+  </p>
+
+
+  <div class="example-box">
+
+    <strong>💡 उदाहरण:</strong>
+
+    <p>
+      नदी से पानी, कृषि और परिवहन जैसी सुविधाएँ मिल सकती हैं।
+      इसलिए कई ऐतिहासिक बस्तियाँ नदियों के आसपास विकसित हुईं।
+    </p>
+
+  </div>
+
+
+  <h3>
+    अतीत के बारे में हमें कैसे पता चलता है?
+  </h3>
+
+  <p>
+    इतिहासकार और पुरातत्वविद अलग-अलग स्रोतों का अध्ययन करते हैं।
+    इनमें पांडुलिपियाँ, अभिलेख, सिक्के, औजार, मिट्टी के बर्तन,
+    इमारतें और अन्य भौतिक अवशेष शामिल हो सकते हैं।
+  </p>
+
+
+  <h3>
+    पांडुलिपियाँ
+  </h3>
+
+  <p>
+    हाथ से लिखे गए पुराने लेखों को पांडुलिपियाँ कहा जाता है।
+    इनमें साहित्य, धर्म, प्रशासन, समाज और अन्य विषयों से संबंधित
+    जानकारी मिल सकती है।
+  </p>
+
+
+  <h3>
+    अभिलेख
+  </h3>
+
+  <p>
+    पत्थर या धातु जैसी कठोर सतहों पर खुदे हुए लेख अभिलेख कहलाते
+    हैं। उनसे शासकों, दान, प्रशासन और अन्य ऐतिहासिक गतिविधियों
+    के बारे में जानकारी मिल सकती है।
+  </p>
+
+
+  <h3>
+    पुरातात्विक स्रोत
+  </h3>
+
+  <p>
+    पुरातत्वविद अतीत के भौतिक अवशेषों का अध्ययन करते हैं। औजार,
+    मिट्टी के बर्तन, सिक्के, हड्डियाँ और इमारतें ऐसे प्रमाणों
+    के उदाहरण हैं।
+  </p>
+
+
+  <div class="upsc-box">
+
+    <h3>
+      🎯 UPSC के लिए
+    </h3>
+
+    <p>
+      प्रारंभिक इतिहास में जब लिखित स्रोत सीमित होते हैं, तब
+      पुरातात्विक प्रमाण अतीत को समझने में विशेष महत्व रखते हैं।
+    </p>
+
+  </div>
 
 </section>
 
 
-<!-- TEST SERIES -->
+<!-- =========================
+     AUDIO
+========================= -->
 
-<section class="card test-series">
+<section class="card">
 
-<h2>📝 Chapter Test Series</h2>
+  <span class="tag">
+    🔊 AUDIO LEARNING
+  </span>
 
-<p>
-<strong>10 Tests × 10 Questions = 100 MCQs</strong>
-</p>
+  <h2>
+    Listen & Learn
+  </h2>
 
-<p>
-हर test के बाद आपका score और detailed solution दिखाई देगा।
-</p>
+  <p>
+    नीचे दिए गए buttons से English या Hindi explanation सुन सकते हैं।
+  </p>
 
-<div class="test-grid" id="testGrid"></div>
+  <div class="audio-buttons">
+
+    <button onclick="speakEnglish()">
+      🔊 English
+    </button>
+
+    <button onclick="speakHindi()">
+      🇮🇳 Hindi
+    </button>
+
+    <button
+      class="stop"
+      onclick="stopAudio()">
+      ⏹ Stop
+    </button>
+
+  </div>
 
 </section>
 
 
-<!-- TEST AREA -->
+<!-- =========================
+     UPSC IMPORTANT POINTS
+========================= -->
 
-<section class="card" id="testArea">
+<section class="card">
 
-<div class="test-navigation">
+  <span class="tag">
+    🎯 UPSC FOUNDATION
+  </span>
 
-<button class="back-test" onclick="backToTests()">
-⬅️ Back to Tests
-</button>
+  <h2>
+    Important Points for UPSC
+  </h2>
 
-<h2 id="testTitle"></h2>
+  <ul>
+
+    <li>
+      History is the study of the human past.
+    </li>
+
+    <li>
+      Historical reconstruction depends on evidence.
+    </li>
+
+    <li>
+      Manuscripts are handwritten sources.
+    </li>
+
+    <li>
+      Inscriptions are writings engraved on hard surfaces.
+    </li>
+
+    <li>
+      Archaeology studies material remains.
+    </li>
+
+    <li>
+      Tools provide clues about technology and activities.
+    </li>
+
+    <li>
+      Pottery can provide information about daily life.
+    </li>
+
+    <li>
+      Coins can provide information about economy and rulers.
+    </li>
+
+    <li>
+      Buildings and monuments can reveal information about
+      architecture and society.
+    </li>
+
+    <li>
+      Chronology means arranging events according to time.
+    </li>
+
+    <li>
+      BCE means Before Common Era.
+    </li>
+
+    <li>
+      CE means Common Era.
+    </li>
+
+    <li>
+      Geography can influence settlement and human movement.
+    </li>
+
+  </ul>
+
+</section>
+
+
+<!-- =========================
+     QUICK REVISION
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    ⚡ QUICK REVISION
+  </span>
+
+  <h2>
+    One-Minute Revision
+  </h2>
+
+  <div class="revision-grid">
+
+    <div class="revision-card">
+      <strong>📖 History</strong>
+      <p>
+        Study of the human past.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>📝 Manuscript</strong>
+      <p>
+        Handwritten historical text.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🪨 Inscription</strong>
+      <p>
+        Writing engraved on a hard surface.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🏺 Archaeology</strong>
+      <p>
+        Study of material remains.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🪙 Coins</strong>
+      <p>
+        Material evidence of economic and political activity.
+      </p>
+    </div>
+
+    <div class="revision-card">
+      <strong>🕐 Chronology</strong>
+      <p>
+        Arrangement of events according to time.
+      </p>
+    </div>
+
+  </div>
+
+</section>
+
+
+<!-- =========================
+     MAINS
+========================= -->
+
+<section class="card">
+
+  <span class="tag">
+    ✍️ MAINS PRACTICE
+  </span>
+
+  <h2>
+    Descriptive Questions
+  </h2>
+
+  <div class="mains-question">
+    <strong>Q1.</strong>
+    Explain the importance of different sources in reconstructing
+    the human past.
+  </div>
+
+  <div class="mains-question">
+    <strong>Q2.</strong>
+    Differentiate between manuscripts, inscriptions and
+    archaeological sources.
+  </div>
+
+  <div class="mains-question">
+    <strong>Q3.</strong>
+    How can geographical conditions influence human settlement?
+  </div>
+
+  <div class="mains-question">
+    <strong>Q4.</strong>
+    Explain the role of archaeology in understanding periods
+    where written records are limited.
+  </div>
+
+  <div class="mains-question">
+    <strong>Q5.</strong>
+    Why is chronology important for the study of history?
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TEST SERIES
+========================= -->
+
+<section
+  class="card test-series"
+  id="testSeries">
+
+  <span class="tag">
+    📝 10 TEST SERIES
+  </span>
+
+  <h2>
+    Chapter Test Series
+  </h2>
+
+  <p>
+    इस chapter में कुल <strong>10 Tests</strong> हैं।
+    प्रत्येक test में <strong>10 MCQs</strong> हैं।
+  </p>
+
+  <p>
+    <strong>
+      Total = 10 Tests × 10 Questions = 100 MCQs
+    </strong>
+  </p>
+
+  <div
+    class="test-grid"
+    id="testGrid">
+  </div>
+
+</section>
+
+
+<!-- =========================
+     TEST AREA
+========================= -->
+
+<section
+  class="card"
+  id="testArea">
+
+  <div class="test-top">
+
+    <button
+      class="back-test"
+      onclick="backToTests()">
+      ⬅️ Back to Tests
+    </button>
+
+    <h2 id="testTitle">
+      Test
+    </h2>
+
+  </div>
+
+  <div id="questionsContainer"></div>
+
+  <button
+    class="submit-test"
+    onclick="submitTest()">
+    ✅ Submit Test
+  </button>
+
+  <div
+    class="result"
+    id="resultBox">
+  </div>
+
+</section>
+
 
 </div>
 
-<div id="questionsContainer"></div>
 
-<button class="submit-test" onclick="submitTest()">
-✅ Submit Test
-</button>
-
-<div class="result" id="resultBox"></div>
-
-</section>
-
-</div>
-
+<!-- =========================
+     FOOTER
+========================= -->
 
 <footer>
 
-<p>🇮🇳 UPSC Shiksha</p>
+  <p>
+    🇮🇳 <strong>UPSC Shiksha</strong>
+  </p>
 
-<p>Free & Premium UPSC Learning Platform</p>
+  <p>
+    Free & Premium UPSC Learning Platform
+  </p>
 
-<p>© 2026 UPSC Shiksha</p>
+  <p>
+    © 2026 UPSC Shiksha
+  </p>
 
 </footer>
 
 
 <script>
 
-/* HOME */
+/* =========================
+   HOME
+========================= */
 
 function goHome(){
-  window.location.href="ncert-history.html";
+
+  window.location.href =
+  "ncert-history.html";
+
 }
 
 
-/* DARK MODE */
+/* =========================
+   DARK MODE
+========================= */
 
 function toggleDarkMode(){
 
   document.body.classList.toggle("dark");
 
-  if(document.body.classList.contains("dark")){
-    localStorage.setItem("upscDarkMode","true");
-  }else{
-    localStorage.setItem("upscDarkMode","false");
-  }
+  localStorage.setItem(
+    "upscDarkMode",
+    document.body.classList.contains("dark")
+  );
 
 }
 
-if(localStorage.getItem("upscDarkMode")==="true"){
+
+if(
+  localStorage.getItem("upscDarkMode")
+  === "true"
+){
+
   document.body.classList.add("dark");
+
 }
 
 
-/* AUDIO */
+/* =========================
+   AUDIO
+========================= */
 
-function speak(text,lang){
+function speak(text,language){
 
   speechSynthesis.cancel();
 
-  const speech=new SpeechSynthesisUtterance(text);
+  const speech =
+  new SpeechSynthesisUtterance(text);
 
-  speech.lang=lang;
+  speech.lang = language;
 
-  speech.rate=.9;
+  speech.rate = .9;
+
+  speech.pitch = 1;
 
   speechSynthesis.speak(speech);
+
 }
 
 
 function speakEnglish(){
 
   speak(
-  "History is the study of the human past. Historians use manuscripts, inscriptions, coins, tools, pottery and buildings to reconstruct the past.",
+
+  "History is the systematic study of the human past. History is not simply a collection of dates and names. Historians use evidence such as manuscripts, inscriptions, coins, tools, pottery, buildings and other archaeological remains to reconstruct and interpret the past.",
+
   "en-IN"
+
   );
 
 }
@@ -805,138 +2638,198 @@ function speakEnglish(){
 function speakHindi(){
 
   speak(
-  "इतिहास मानव अतीत का अध्ययन है। इतिहासकार पांडुलिपियों, अभिलेखों, सिक्कों, औजारों, मिट्टी के बर्तनों और इमारतों जैसे स्रोतों का अध्ययन करते हैं।",
+
+  "इतिहास मानव अतीत का व्यवस्थित अध्ययन है। इतिहास केवल तिथियों और नामों को याद करना नहीं है। इतिहासकार पांडुलिपियों, अभिलेखों, सिक्कों, औजारों, मिट्टी के बर्तनों, इमारतों और अन्य पुरातात्विक प्रमाणों का अध्ययन करके अतीत को समझने का प्रयास करते हैं।",
+
   "hi-IN"
-  );
 
-}
-
-
-function speakGujarati(){
-
-  speak(
-  "ઇતિહાસ માનવ ભૂતકાળનો અભ્યાસ છે. ઇતિહાસકારો હસ્તપ્રતો, શિલાલેખો, સિક્કા, સાધનો અને ઇમારતો જેવા પુરાવાઓનો અભ્યાસ કરે છે.",
-  "gu-IN"
   );
 
 }
 
 
 function stopAudio(){
+
   speechSynthesis.cancel();
+
 }
 
 
-/* TEST DATA */
+/* =========================
+   TEST DATA
+========================= */
 
-const tests=[
+const tests = [
 
 {
 title:"Test 1 — History Basics",
+
 questions:[
 
-["History mainly deals with:",["Future events","Human past","Weather","Mathematics"],1,
-"History is the study of the human past."],
+["History is mainly the study of:",
+["Human past","Future events","Weather","Mathematics"],
+0,
+"History is the systematic study of the human past."],
 
-["Which is a written source?",["Stone tool","Manuscript","Pottery","Coin"],1,
-"A manuscript is a handwritten written source."],
+["A manuscript is:",
+["A handwritten text","A coin","A building","A stone tool"],
+0,
+"A manuscript is a text written by hand."],
 
-["An inscription is generally written on:",["Hard surfaces","Leaves only","Cloth only","Water"],0,
-"Inscriptions are writings engraved on hard surfaces such as stone or metal."],
+["An inscription is generally found on:",
+["A hard surface","Water","Clouds","Air"],
+0,
+"An inscription is writing engraved or carved on a hard surface."],
 
-["Who studies material remains?",["Archaeologists","Astronomers","Doctors","Engineers"],0,
-"Archaeologists study material remains of past societies."],
+["Archaeology studies:",
+["Material remains","Only future events","Only mathematics","Weather"],
+0,
+"Archaeology studies material remains of past societies."],
 
-["Which can provide evidence about ancient economies?",["Coins","Clouds","Rainbows","Stars"],0,
-"Coins can provide information about economy, rulers and trade."],
+["Which can provide information about economic activity?",
+["Coins","Clouds","Rainbows","Stars"],
+0,
+"Coins can provide clues about economy, rulers and trade."],
 
-["Chronology means:",["Study of animals","Arrangement according to time","Study of plants","Measurement of rainfall"],1,
-"Chronology is the arrangement of events according to time."],
+["Chronology means:",
+["Arrangement of events according to time","Study of plants","Study of animals","Map-making"],
+0,
+"Chronology means arranging events according to time."],
 
-["A manuscript is:",["A handwritten text","A building","A weapon","A coin"],0,
-"Manuscripts are texts written by hand."],
+["Which is a material source?",
+["Stone tool","Email","Modern website","SMS"],
+0,
+"A stone tool is physical archaeological evidence."],
 
-["Which is an archaeological source?",["Tool","Modern newspaper","Website","Email"],0,
-"Tools are material remains studied by archaeologists."],
+["Why do historians use different sources?",
+["Different sources provide different evidence","Sources are useless","History has no evidence","Dates do not matter"],
+0,
+"Different sources provide different kinds of evidence."],
 
-["Why are dates important?",["They establish chronology","They predict weather","They measure height","They identify planets"],0,
-"Dates help arrange historical events chronologically."],
+["BCE means:",
+["Before Common Era","British Common Empire","Before Current Economy","Basic Cultural Era"],
+0,
+"BCE means Before Common Era."],
 
-["History helps us understand:",["Only the future","Human societies and change","Only geography","Only mathematics"],1,
-"History helps us understand human societies and changes over time."]
+["CE means:",
+["Common Era","Central Economy","Cultural Empire","Current Education"],
+0,
+"CE means Common Era."]
 ]
 
 },
 
 {
-title:"Test 2 — Sources of History",
+title:"Test 2 — Historical Sources",
+
 questions:[
 
-["Which is NOT a historical source?",["Inscription","Manuscript","Coin","Modern calculator"],3,
-"A modern calculator is not normally a source for ancient history."],
+["Which is a written source?",
+["Manuscript","Stone tool","Pottery","Coin"],
+0,
+"A manuscript is a written source."],
 
-["Pottery is useful because it is a:",["Material source","Written newspaper","Modern source only","Digital source"],0,
-"Pottery is a material archaeological source."],
+["Which is an archaeological source?",
+["Pottery","Email","Website","Modern newspaper"],
+0,
+"Pottery is material archaeological evidence."],
 
-["Inscriptions may contain information about:",["Rulers","Only weather","Only animals","Only planets"],0,
-"Inscriptions can provide information about rulers, events and donations."],
+["Inscriptions can provide information about:",
+["Rulers and events","Only weather","Only planets","Only animals"],
+0,
+"Inscriptions may contain information about rulers, donations and events."],
 
-["Archaeology mainly examines:",["Material remains","Future predictions","Mathematical equations","Clouds"],0,
-"Archaeology examines material remains from the past."],
+["Tools can provide clues about:",
+["Technology","Future elections","Internet use","Modern transport"],
+0,
+"Tools reveal technological practices and activities."],
 
-["Coins can tell historians about:",["Economy","Rainfall only","Mountains only","Languages only"],0,
-"Coins can provide evidence about economy, rulers and trade."],
+["Bones may provide information about:",
+["Past life","Computer programming","Modern websites","Future events"],
+0,
+"Human and animal remains can provide clues about past life."],
 
-["A handwritten old text is called:",["Manuscript","Inscription","Coin","Pottery"],0,
-"A handwritten old text is a manuscript."],
+["Coins can be useful for studying:",
+["Economy and rulers","Only rainfall","Only mountains","Only literature"],
+0,
+"Coins can provide economic and political evidence."],
 
-["A writing carved on stone is an:",["Inscription","Manuscript","Tool","Ornament"],0,
-"Writing carved on a hard surface is an inscription."],
+["Buildings may reveal:",
+["Architecture and social organisation","Only weather","Only mathematics","Only language"],
+0,
+"Buildings can provide information about architecture and society."],
 
-["Which source may reveal information about technology?",["Tools","Clouds","Modern advertisements","Rain"],0,
-"Tools reveal technological practices of earlier communities."],
+["Pottery can provide clues about:",
+["Daily life and technology","Future events","Internet speed","Modern banking"],
+0,
+"Pottery is useful for understanding aspects of daily life and technology."],
 
-["Buildings can be studied as:",["Material remains","Future predictions","Only literary sources","Weather sources"],0,
-"Buildings are archaeological/material evidence."],
+["A stone inscription is primarily:",
+["Written evidence on a hard surface","A manuscript","A coin","A tool"],
+0,
+"An inscription is written evidence engraved on a hard surface."],
 
-["Different sources are used because:",["They provide different evidence","One source always tells everything","Sources are unnecessary","History has no evidence"],0,
-"Different sources provide different kinds of evidence about the past."]
+["A collection of material remains is especially studied by:",
+["Archaeologists","Astronomers","Doctors","Engineers"],
+0,
+"Archaeologists study material remains."]
 ]
 
 },
 
 {
 title:"Test 3 — Manuscripts & Inscriptions",
+
 questions:[
 
-["Manuscripts were generally:",["Written by hand","Printed by machines","Made of metal only","Coins"],0,
+["Manuscripts are generally:",
+["Written by hand","Printed by computers","Made only of stone","Coins"],
+0,
 "Manuscripts are handwritten texts."],
 
-["Inscriptions are usually found on:",["Hard surfaces","Water","Clouds","Air"],0,
-"Inscriptions are engraved on hard surfaces."],
+["An inscription is usually:",
+["Engraved on a hard surface","Written on clouds","A coin","A tool"],
+0,
+"Inscriptions are engraved or carved on hard surfaces."],
 
-["Which can be a manuscript material?",["Palm leaf","Cloud","Plastic bottle","Computer screen"],0,
-"Palm leaves were among materials used for manuscripts."],
+["Which could be used for manuscripts historically?",
+["Palm leaf","Cloud","Plastic bottle","Computer screen"],
+0,
+"Palm leaves were used as a writing material in some historical contexts."],
 
-["An inscription can be found on:",["Stone","Cloud","Rain","Smoke"],0,
-"Stone is a common surface for inscriptions."],
+["Which is an example of an inscription?",
+["Writing carved on stone","A handwritten diary","A coin","A pottery bowl"],
+0,
+"Writing carved on stone is an inscription."],
 
-["Manuscripts help historians study:",["Written information","Only rainfall","Only mountains","Only animals"],0,
-"Manuscripts preserve written information from the past."],
+["Manuscripts may contain information about:",
+["Religion and literature","Only weather","Only mountains","Only planets"],
+0,
+"Manuscripts can contain literary, religious and administrative information."],
 
-["Inscriptions may record:",["Donations","Modern passwords","Internet messages","Weather apps"],0,
-"Historical inscriptions can record donations and other information."],
+["An inscription recording a donation can tell us about:",
+["Social and administrative practices","Internet use","Modern banking","Future events"],
+0,
+"Donation inscriptions can reveal social, religious and administrative practices."],
 
-["Which source is carved rather than handwritten?",["Inscription","Manuscript","Modern book","Newspaper"],0,
-"An inscription is engraved or carved on a surface."],
+["Which term refers specifically to handwritten text?",
+["Manuscript","Inscription","Chronology","Archaeology"],
+0,
+"Manuscript means a handwritten text."],
 
-["A manuscript is best described as:",["Handwritten text","Stone tool","Coin","Building"],0,
-"A manuscript is a handwritten text."],
+["Which source is engraved rather than handwritten?",
+["Inscription","Modern book","Email","Newspaper"],
+0,
+"An inscription is engraved or carved onto a surface."],
 
-["Why are inscriptions valuable?",["They can provide direct historical evidence","They predict elections","They show future events","They replace archaeology"],0,
-"Inscriptions provide historical evidence about people, rulers and events."],
+["Why can inscriptions be valuable?",
+["They provide historical evidence","They predict weather","They show the future","They replace all sources"],
+0,
+"Inscriptions provide evidence about people, rulers and activities."],
 
-["Which pair is correct?",["Manuscript—handwritten","Coin—manuscript","Tool—inscription","Pottery—date system"],0,
+["Which pair is correct?",
+["Manuscript — handwritten text","Coin — manuscript","Tool — chronology","Pottery — date system"],
+0,
 "Manuscript means a handwritten text."]
 ]
 
@@ -944,356 +2837,547 @@ questions:[
 
 {
 title:"Test 4 — Archaeology",
+
 questions:[
 
-["Archaeology studies:",["Material remains","Only literature","Future events","Weather"],0,
-"Archaeology studies material remains of past societies."],
+["Archaeology mainly studies:",
+["Material remains","Future events","Weather","Only poetry"],
+0,
+"Archaeology studies physical remains of the past."],
 
-["Which is archaeological evidence?",["Pottery","Email","Modern SMS","Website"],0,
-"Pottery is an archaeological source."],
+["Which is archaeological evidence?",
+["Pottery","Email","Website","Modern advertisement"],
+0,
+"Pottery is a material archaeological source."],
 
-["Stone tools can tell us about:",["Technology and activities","Future climate","Modern politics","Internet use"],0,
-"Tools provide evidence about technology and activities."],
+["Stone tools can reveal information about:",
+["Technology and activities","Future politics","Internet use","Modern transport"],
+0,
+"Tools can reveal technological practices and activities."],
 
-["Bones may provide information about:",["Past life","Modern websites","Future elections","Computer programming"],0,
-"Animal and human bones can provide evidence about past life."],
+["Bones can help study:",
+["Past humans and animals","Modern websites","Future elections","Computer systems"],
+0,
+"Human and animal remains can provide evidence about past life."],
 
-["Archaeological remains are important because:",["They provide physical evidence","They are always written","They predict future","They are fictional"],0,
-"Material remains provide physical evidence about the past."],
+["Archaeological evidence is:",
+["Physical evidence","Imaginary evidence","Future evidence","Digital-only evidence"],
+0,
+"Archaeological evidence consists of physical remains."],
 
-["Pottery may help study:",["Daily life","Only astronomy","Only mathematics","Only politics"],0,
-"Pottery can provide clues about daily life and activities."],
+["Pottery may provide clues about:",
+["Daily life","Only astronomy","Only mathematics","Only politics"],
+0,
+"Pottery can provide clues about daily life and technology."],
 
-["Ornaments can provide clues about:",["Culture and social practices","Weather forecasts","Computer systems","Modern traffic"],0,
-"Ornaments may provide information about culture and social practices."],
+["Ornaments can provide clues about:",
+["Culture and social practices","Weather forecasts","Computer systems","Modern traffic"],
+0,
+"Ornaments can provide information about culture and social practices."],
 
-["Tools are evidence of:",["Human activities","Only religion","Only climate","Only literature"],0,
-"Tools show how people worked and used technology."],
+["Tools are evidence of:",
+["Human activities and technology","Only literature","Only weather","Only dates"],
+0,
+"Tools reveal activities and technological practices."],
 
-["Coins are usually studied as:",["Archaeological/material evidence","Weather records","Modern messages","Maps only"],0,
-"Coins are material evidence and can provide economic information."],
+["Coins are:",
+["Material historical evidence","Weather records","Modern messages","Maps only"],
+0,
+"Coins are material evidence."],
 
-["Archaeological evidence is generally:",["Physical evidence","Imaginary evidence","Future evidence","Digital-only evidence"],0,
-"Archaeological evidence consists of physical/material remains."]
+["Archaeology becomes especially important when:",
+["Written evidence is limited","There is too much internet","Weather changes","Modern machines stop"],
+0,
+"Archaeology is particularly important where written evidence is limited."]
 ]
 
 },
 
 {
-title:"Test 5 — Time & Dates",
+title:"Test 5 — Time & Chronology",
+
 questions:[
 
-["Chronology refers to:",["Order of events in time","Study of plants","Study of animals","Map-making"],0,
-"Chronology arranges events according to time."],
+["Chronology is related to:",
+["Time and sequence","Pottery","Animals","Plants"],
+0,
+"Chronology deals with the sequence of events in time."],
 
-["BCE refers to:",["Before Common Era","British Common Empire","Before Current Economy","Basic Cultural Era"],0,
+["BCE stands for:",
+["Before Common Era","British Common Empire","Before Current Economy","Basic Cultural Era"],
+0,
 "BCE means Before Common Era."],
 
-["CE refers to:",["Common Era","Central Economy","Cultural Empire","Current Education"],0,
+["CE stands for:",
+["Common Era","Central Economy","Cultural Education","Current Empire"],
+0,
 "CE means Common Era."],
 
-["AD is traditionally associated with:",["Anno Domini","Ancient Date","After Dynasty","Archaeological Data"],0,
-"AD is traditionally expanded as Anno Domini."],
+["AD is traditionally associated with:",
+["Anno Domini","Ancient Date","After Dynasty","Archaeological Data"],
+0,
+"AD is traditionally associated with the Latin expression Anno Domini."],
 
-["Dates help historians:",["Arrange events","Predict weather","Measure mountains","Identify stars"],0,
-"Dates help establish chronological order."],
+["Dates help historians:",
+["Arrange events chronologically","Predict weather","Measure mountains","Identify stars"],
+0,
+"Dates help establish the sequence of historical events."],
 
-["A timeline mainly shows:",["Sequence of events","Types of pottery","Different animals","Languages"],0,
-"A timeline shows events in chronological sequence."],
+["A timeline represents:",
+["Sequence of events","Types of pottery","Animals","Languages"],
+0,
+"A timeline shows events in chronological order."],
 
-["Which is a time reference system?",["BCE/CE","KG/CM","KM/HR","GB/MB"],0,
-"BCE and CE are systems used for historical dates."],
-
-["Chronology helps answer:",["When did it happen?","What is the weather?","How tall is a mountain?","What is the speed of light?"],0,
+["Chronology helps answer:",
+["When did it happen?","What is the weather?","How tall is a mountain?","What is the speed of light?"],
+0,
 "Chronology helps establish when events occurred."],
 
-["Historical dates are useful for:",["Comparing events over time","Predicting rainfall","Finding passwords","Measuring blood pressure"],0,
-"Dates allow historians to compare and sequence events."],
+["BCE and CE are:",
+["Systems for referring to historical dates","Types of pottery","Archaeological tools","Political institutions"],
+0,
+"BCE and CE are systems used to refer to historical time."],
 
-["A sequence from oldest to newest is a:",["Chronological sequence","Random sequence","Scientific formula","Map"],0,
-"Oldest-to-newest arrangement is chronological."]
+["Arranging events from oldest to newest is:",
+["Chronological order","Random order","Geographical order","Economic order"],
+0,
+"Oldest-to-newest arrangement is chronological."],
+
+["Why are dates useful?",
+["They help compare and sequence events","They predict the future","They identify weather","They measure tools"],
+0,
+"Dates help historians establish sequence and relationships between events."]
 ]
 
 },
 
 {
-title:"Test 6 — Early Human Life",
+title:"Test 6 — Geography & Human Life",
+
 questions:[
 
-["Early humans depended heavily on:",["Natural resources","Internet","Factories","Modern machines"],0,
-"Early communities depended greatly on resources available in nature."],
-
-["Water was important because it was needed for:",["Life","Only writing","Only construction","Only trade"],0,
+["Which resource is essential for human life?",
+["Water","Internet","Cars","Factories"],
+0,
 "Water is essential for human and animal life."],
 
-["Early people moved from place to place partly in search of:",["Food and resources","Computers","Factories","Schools"],0,
-"Resource availability influenced movement."],
+["Early human movement could be influenced by:",
+["Availability of food and water","Internet speed","Mobile battery","Modern transport"],
+0,
+"Availability of resources could influence movement."],
 
-["Forests could provide:",["Food and other resources","Internet access","Modern vehicles","Printed books"],0,
-"Forests provided various food and natural resources."],
+["River valleys could support settlements because of:",
+["Water and fertile land","Computers","Airports","Factories only"],
+0,
+"Rivers can provide water and fertile areas."],
 
-["River valleys could support settlements because of:",["Water and fertile land","Computers","Modern roads","Airports"],0,
-"Water and fertile land could support human settlement."],
+["Forests could provide:",
+["Food and natural resources","Internet","Modern vehicles","Printed books"],
+0,
+"Forests provide various natural resources."],
 
-["Geography influenced:",["Human settlement","Only writing","Only coins","Only manuscripts"],0,
-"Physical environment influenced settlement and movement."],
+["Geography can influence:",
+["Settlement patterns","Only writing","Only coins","Only manuscripts"],
+0,
+"Geographical conditions influence settlement and movement."],
 
-["Early humans used natural resources for:",["Food and tools","Smartphones","Cars","Factories"],0,
-"Natural resources were used for food, tools and other needs."],
+["People may move when:",
+["Resources become unavailable","Internet is slow","Television stops","Cars are expensive"],
+0,
+"Resource availability can influence human movement."],
 
-["Movement could be influenced by:",["Availability of resources","Internet speed","Electricity bills","Modern transport"],0,
-"Availability of food, water and other resources influenced movement."],
-
-["A source of water important to settlements is:",["River","Cloud only","Book","Coin"],0,
+["Which geographical feature can be a source of water?",
+["River","Book","Coin","Tool"],
+0,
 "Rivers are important sources of water."],
 
-["Understanding environment helps explain:",["Where people lived","Modern websites","Computer coding","Future events"],0,
-"Environment helps explain patterns of human settlement."]
+["Fertile land is particularly useful for:",
+["Agriculture","Internet access","Writing emails","Making coins"],
+0,
+"Fertile land can support agriculture."],
+
+["Coastal regions may provide opportunities related to:",
+["Fishing and trade","Computer programming","Only mining","Only writing"],
+0,
+"Coastal environments can support fishing and maritime activities."],
+
+["Understanding geography helps explain:",
+["Where people lived and moved","Only modern technology","Only literature","Only dates"],
+0,
+"Geography helps explain settlement and movement patterns."]
 ]
 
 },
 
 {
 title:"Test 7 — Historical Thinking",
+
 questions:[
 
-["Historians reconstruct the past using:",["Evidence","Guesswork only","Future predictions","Fiction only"],0,
-"Historical reconstruction relies on evidence."],
+["Historians reconstruct the past using:",
+["Evidence","Guesswork only","Future predictions","Fiction only"],
+0,
+"Historical reconstruction depends on evidence."],
 
-["One source may be insufficient because:",["Different sources provide different information","Sources are useless","History has no evidence","Dates do not matter"],0,
-"Different sources reveal different aspects of the past."],
+["Why compare different sources?",
+["They provide different information","All sources are identical","Sources are useless","Dates are unnecessary"],
+0,
+"Different sources can provide complementary information."],
 
-["A historian should examine evidence:",["Carefully","Randomly","Without comparison","Without context"],0,
-"Historical evidence must be critically examined."],
+["Historical evidence should be:",
+["Carefully examined","Accepted blindly","Ignored","Invented"],
+0,
+"Evidence should be critically examined."],
 
-["Archaeological evidence can complement:",["Written evidence","Weather forecasts","Modern advertisements","Computer games"],0,
-"Material and written evidence can complement each other."],
+["Archaeological evidence can complement:",
+["Written evidence","Weather forecasts","Modern advertisements","Computer games"],
+0,
+"Material evidence can complement written evidence."],
 
-["Historical evidence should be:",["Interpreted in context","Ignored","Invented","Changed randomly"],0,
-"Evidence needs contextual interpretation."],
+["Historical evidence must be interpreted:",
+["In context","Randomly","Without comparison","Without evidence"],
+0,
+"Historical interpretation requires context."],
 
-["Comparing sources can help:",["Build a fuller picture","Destroy history","Predict future","Avoid evidence"],0,
-"Comparing sources can provide a fuller understanding."],
+["A source may have:",
+["Strengths and limitations","Only future information","No information","No context"],
+0,
+"Historical sources have strengths and limitations."],
 
-["A historical question often asks:",["What happened and how do we know?","What will happen tomorrow?","What is my password?","What is the weather?"],0,
-"Historical study focuses on events and evidence."],
+["Historical study asks:",
+["What happened and how do we know?","What will happen tomorrow?","What is my password?","What is the weather?"],
+0,
+"Historical inquiry involves events and evidence."],
 
-["Evidence from objects is especially useful for studying:",["Material culture","Future events","Internet traffic","Modern passwords"],0,
+["Objects can provide information about:",
+["Material culture","Future events","Internet traffic","Modern passwords"],
+0,
 "Objects provide evidence of material culture."],
 
-["Historical sources may have:",["Limitations","No information","Only future information","No context"],0,
-"Every source has strengths and limitations."],
+["Comparing sources can create:",
+["A fuller historical picture","Future predictions","Fiction","Weather reports"],
+0,
+"Comparing sources can improve historical understanding."],
 
-["Good historical study requires:",["Evidence and analysis","Guessing only","Copying rumours","Ignoring sources"],0,
-"Historical study depends on evidence and careful analysis."]
+["Good historical study requires:",
+["Evidence and analysis","Guessing","Rumours","Ignoring sources"],
+0,
+"Historical study depends on evidence and analysis."]
 ]
 
 },
 
 {
 title:"Test 8 — Mixed UPSC Foundation",
+
 questions:[
 
-["Which source can provide information about a ruler?",["Inscription","Cloud","Tree only","Modern calculator"],0,
-"Inscriptions can provide information about rulers."],
+["Which source may provide information about a ruler?",
+["Inscription","Cloud","Tree","Modern calculator"],
+0,
+"Inscriptions may record information about rulers."],
 
-["Which is a material source?",["Pottery","Manuscript","Essay","Poem"],0,
-"Pottery is a physical/material source."],
+["Which is a material source?",
+["Pottery","Essay","Poem","Email"],
+0,
+"Pottery is material evidence."],
 
-["Which term means handwritten text?",["Manuscript","Inscription","Chronology","Archaeology"],0,
+["Which means handwritten text?",
+["Manuscript","Inscription","Chronology","Archaeology"],
+0,
 "Manuscript means handwritten text."],
 
-["Which field studies material remains?",["Archaeology","Astronomy","Botany","Physics"],0,
+["Which field studies material remains?",
+["Archaeology","Astronomy","Botany","Physics"],
+0,
 "Archaeology studies material remains."],
 
-["Why are coins useful?",["They can provide economic information","They predict weather","They show planets","They are manuscripts"],0,
-"Coins can reveal economic and political information."],
+["Why can coins be useful?",
+["They can provide economic information","They predict weather","They show planets","They are manuscripts"],
+0,
+"Coins can provide economic and political clues."],
 
-["Chronology is related to:",["Time","Pottery","Tools","Buildings"],0,
-"Chronology concerns the sequence of events in time."],
+["Chronology concerns:",
+["Time","Pottery","Tools","Buildings"],
+0,
+"Chronology concerns the order of events in time."],
 
-["Which factor could influence settlement?",["Availability of water","Internet speed","Mobile battery","Television"],0,
-"Water availability strongly influences settlement."],
+["Which can influence settlement?",
+["Water availability","Internet speed","Mobile battery","Television"],
+0,
+"Water availability is an important factor in settlement."],
 
-["A stone tool is:",["Material evidence","A manuscript","A date system","A literary text"],0,
+["A stone tool is:",
+["Material evidence","A manuscript","A date system","A literary text"],
+0,
 "A stone tool is material archaeological evidence."],
 
-["Historical sources should be:",["Critically examined","Accepted blindly","Ignored","Invented"],0,
-"Sources should be critically examined and interpreted."],
+["Historical sources should be:",
+["Critically examined","Accepted blindly","Ignored","Invented"],
+0,
+"Sources should be critically examined."],
 
-["History helps understand:",["Change over time","Only geography","Only mathematics","Only weather"],0,
-"History helps us understand change in human societies over time."]
+["History helps us understand:",
+["Change over time","Only geography","Only mathematics","Only weather"],
+0,
+"History helps us understand changes in human societies over time."]
 ]
 
 },
 
 {
 title:"Test 9 — Revision Test",
+
 questions:[
 
-["History studies:",["The human past","Only the future","Only weather","Only mathematics"],0,
+["History studies:",
+["The human past","Only the future","Only weather","Only mathematics"],
+0,
 "History is the study of the human past."],
 
-["Manuscripts are:",["Handwritten texts","Coins","Tools","Buildings"],0,
+["Manuscripts are:",
+["Handwritten texts","Coins","Tools","Buildings"],
+0,
 "Manuscripts are handwritten texts."],
 
-["Inscriptions are:",["Engraved writings","Coins","Pottery","Bones"],0,
+["Inscriptions are:",
+["Engraved writings","Coins","Pottery","Bones"],
+0,
 "Inscriptions are writings engraved on hard surfaces."],
 
-["Archaeology studies:",["Material remains","Only manuscripts","Future events","Weather"],0,
+["Archaeology studies:",
+["Material remains","Only manuscripts","Future events","Weather"],
+0,
 "Archaeology studies material remains."],
 
-["Coins may tell us about:",["Economy and rulers","Only rainfall","Only plants","Only mountains"],0,
-"Coins provide evidence about economy and rulers."],
+["Coins may tell us about:",
+["Economy and rulers","Only rainfall","Only plants","Only mountains"],
+0,
+"Coins can provide economic and political information."],
 
-["Chronology means:",["Arrangement according to time","Study of tools","Study of plants","Study of rivers"],0,
-"Chronology is the arrangement of events according to time."],
+["Chronology means:",
+["Arrangement according to time","Study of tools","Study of plants","Study of rivers"],
+0,
+"Chronology is arrangement according to time."],
 
-["BCE means:",["Before Common Era","British Common Era","Before Current Economy","Basic Cultural Era"],0,
+["BCE means:",
+["Before Common Era","British Common Era","Before Current Economy","Basic Cultural Era"],
+0,
 "BCE means Before Common Era."],
 
-["CE means:",["Common Era","Central Economy","Cultural Education","Current Empire"],0,
+["CE means:",
+["Common Era","Central Economy","Cultural Education","Current Empire"],
+0,
 "CE means Common Era."],
 
-["Tools can provide information about:",["Technology","Only literature","Only weather","Only dates"],0,
-"Tools reveal technological practices and activities."],
+["Tools can provide information about:",
+["Technology","Only literature","Only weather","Only dates"],
+0,
+"Tools reveal technological practices."],
 
-["Different sources help historians:",["Reconstruct the past","Predict the future","Avoid evidence","Create fiction"],0,
-"Different sources help reconstruct different aspects of the past."]
+["Different sources help historians:",
+["Reconstruct the past","Predict the future","Avoid evidence","Create fiction"],
+0,
+"Different sources help reconstruct the past."]
 ]
 
 },
 
 {
 title:"Test 10 — Final Chapter Test",
+
 questions:[
 
-["What is the main subject of history?",["Human past","Future technology","Weather","Mathematics"],0,
+["What is the main subject of history?",
+["Human past","Future technology","Weather","Mathematics"],
+0,
 "History deals with the human past."],
 
-["Which one is a written source?",["Manuscript","Stone tool","Pottery","Bone"],0,
+["Which is a written source?",
+["Manuscript","Stone tool","Pottery","Bone"],
+0,
 "A manuscript is a written source."],
 
-["Which one is an engraved source?",["Inscription","Manuscript","Pottery","Coin"],0,
+["Which is an engraved source?",
+["Inscription","Manuscript","Pottery","Coin"],
+0,
 "An inscription is engraved on a hard surface."],
 
-["Who studies archaeological remains?",["Archaeologists","Astronomers","Economists only","Doctors"],0,
+["Who studies archaeological remains?",
+["Archaeologists","Astronomers","Doctors","Engineers"],
+0,
 "Archaeologists study material remains."],
 
-["Which object can reveal information about trade and economy?",["Coins","Clouds","Leaves","Rocks only"],0,
-"Coins can provide evidence about trade and economy."],
+["Which can provide evidence about trade and economy?",
+["Coins","Clouds","Leaves","Rocks only"],
+0,
+"Coins can provide evidence about economic activity and trade."],
 
-["Why do historians use many types of sources?",["Each provides different evidence","One source is never useful","History has no sources","Dates are irrelevant"],0,
-"Different sources provide different kinds of information."],
+["Why use many types of sources?",
+["Each provides different evidence","One source tells everything","History has no sources","Dates are irrelevant"],
+0,
+"Different sources provide different types of evidence."],
 
-["What influenced early human movement?",["Availability of resources","Internet","Modern transport","Factories"],0,
-"Food, water and other resources influenced movement."],
+["What could influence early human movement?",
+["Availability of resources","Internet","Modern transport","Factories"],
+0,
+"Food, water and other resources could influence movement."],
 
-["What does chronology help establish?",["Order of events","Weight of tools","Colour of pottery","Size of buildings"],0,
+["What does chronology establish?",
+["Order of events","Weight of tools","Colour of pottery","Size of buildings"],
+0,
 "Chronology establishes the order of events in time."],
 
-["Which is an example of material evidence?",["Stone tool","Poem only","Modern email","Website"],0,
-"A stone tool is physical/material evidence."],
+["Which is material evidence?",
+["Stone tool","Poem only","Modern email","Website"],
+0,
+"A stone tool is physical material evidence."],
 
-["The best approach to historical evidence is:",["Careful analysis","Blind acceptance","Guessing","Ignoring sources"],0,
+["The best approach to historical evidence is:",
+["Careful analysis","Blind acceptance","Guessing","Ignoring sources"],
+0,
 "Historical evidence should be carefully analysed and interpreted."]
 ]
 
 }
-
 ];
 
 
-/* CREATE TEST BUTTONS */
+/* =========================
+   CREATE TEST BUTTONS
+========================= */
 
-const testGrid=document.getElementById("testGrid");
+const testGrid =
+document.getElementById("testGrid");
 
 tests.forEach((test,index)=>{
 
-  const div=document.createElement("div");
+  const card =
+  document.createElement("div");
 
-  div.className="test-card";
+  card.className =
+  "test-card";
 
-  div.innerHTML=`
+  card.innerHTML = `
 
-    <h3>📝 ${test.title}</h3>
+    <h3>
+      📝 ${test.title}
+    </h3>
 
-    <p>10 MCQs • Detailed Solutions</p>
+    <p>
+      10 MCQs • Detailed Solutions
+    </p>
 
-    <button onclick="startTest(${index})">
+    <button
+      onclick="startTest(${index})">
       Start Test ${index+1}
     </button>
 
   `;
 
-  testGrid.appendChild(div);
+  testGrid.appendChild(card);
 
 });
 
 
-let currentTest=0;
+let currentTest = 0;
 
 
-/* START TEST */
+/* =========================
+   START TEST
+========================= */
 
 function startTest(index){
 
-  currentTest=index;
+  currentTest = index;
 
-  const test=tests[index];
+  const test = tests[index];
 
-  document.getElementById("testGrid").parentElement.style.display="none";
+  document.getElementById(
+    "testSeries"
+  ).style.display = "none";
 
-  document.getElementById("testArea").style.display="block";
+  document.getElementById(
+    "testArea"
+  ).style.display = "block";
 
-  document.getElementById("testTitle").innerText=test.title;
+  document.getElementById(
+    "testTitle"
+  ).innerText = test.title;
 
-  const container=document.getElementById("questionsContainer");
+  const container =
+  document.getElementById(
+    "questionsContainer"
+  );
 
-  container.innerHTML="";
+  container.innerHTML = "";
+
+  document.getElementById(
+    "resultBox"
+  ).style.display = "none";
+
 
   test.questions.forEach((q,i)=>{
 
-    const question=document.createElement("div");
+    const question =
+    document.createElement("div");
 
-    question.className="question";
+    question.className =
+    "question";
 
-    let options="";
 
-    q[1].forEach((option,optIndex)=>{
+    let options = "";
 
-      options+=`
+    q[1].forEach(
+      (option,optIndex)=>{
 
-      <label class="option">
+        options += `
 
-        <input
-          type="radio"
-          name="question${i}"
-          value="${optIndex}"
-        >
+          <label class="option">
 
-        ${String.fromCharCode(65+optIndex)}. ${option}
+            <input
+              type="radio"
+              name="question${i}"
+              value="${optIndex}">
 
-      </label>
+            ${String.fromCharCode(
+              65+optIndex
+            )}. ${option}
 
-      `;
+          </label>
 
-    });
+        `;
 
-    question.innerHTML=`
+      }
+    );
 
-      <h3>Q${i+1}. ${q[0]}</h3>
+
+    question.innerHTML = `
+
+      <h3>
+        Q${i+1}. ${q[0]}
+      </h3>
 
       ${options}
 
-      <div class="solution" id="solution${i}">
+      <div
+        class="solution"
+        id="solution${i}">
 
-        <strong>✅ Correct Answer:</strong>
-        ${String.fromCharCode(65+q[2])}. ${q[1][q[2]]}
+        <strong>
+          ✅ Correct Answer:
+        </strong>
+
+        ${String.fromCharCode(
+          65+q[2]
+        )}. ${q[1][q[2]]}
 
         <br><br>
 
-        <strong>💡 Explanation:</strong>
+        <strong>
+          💡 Detailed Explanation:
+        </strong>
+
         ${q[3]}
 
       </div>
@@ -1304,122 +3388,216 @@ function startTest(index){
 
   });
 
+
   window.scrollTo({
-    top:document.getElementById("testArea").offsetTop-70,
+    top:
+    document.getElementById(
+      "testArea"
+    ).offsetTop - 70,
+
     behavior:"smooth"
   });
 
 }
 
 
-/* SUBMIT TEST */
+/* =========================
+   SUBMIT TEST
+========================= */
 
 function submitTest(){
 
-  const test=tests[currentTest];
+  const test =
+  tests[currentTest];
 
-  let score=0;
+  let score = 0;
 
-  test.questions.forEach((q,i)=>{
 
-    const selected=document.querySelector(
-      `input[name="question${i}"]:checked`
-    );
+  test.questions.forEach(
+    (q,i)=>{
 
-    if(selected && Number(selected.value)===q[2]){
-      score++;
+      const selected =
+      document.querySelector(
+        `input[name="question${i}"]:checked`
+      );
+
+
+      if(
+        selected &&
+        Number(selected.value)
+        === q[2]
+      ){
+
+        score++;
+
+      }
+
+
+      const solution =
+      document.getElementById(
+        "solution"+i
+      );
+
+
+      if(solution){
+
+        solution.style.display =
+        "block";
+
+      }
+
     }
-
-    const solution=document.getElementById("solution"+i);
-
-    if(solution){
-      solution.style.display="block";
-    }
-
-  });
+  );
 
 
-  const percentage=(score/10)*100;
+  const percentage =
+  score * 10;
 
-  const result=document.getElementById("resultBox");
 
-  result.style.display="block";
+  const result =
+  document.getElementById(
+    "resultBox"
+  );
 
-  let message="";
 
-  if(score>=9){
-    message="🔥 Excellent! UPSC foundation is very strong.";
+  result.style.display =
+  "block";
+
+
+  let message;
+
+
+  if(score === 10){
+
+    message =
+    "🏆 Perfect score! Excellent chapter preparation.";
+
   }
-  else if(score>=7){
-    message="👏 Very Good! Keep revising the chapter.";
+  else if(score >= 8){
+
+    message =
+    "🔥 Excellent performance! Review the explanations once.";
+
   }
-  else if(score>=5){
-    message="👍 Good attempt. Review the solutions once.";
+  else if(score >= 6){
+
+    message =
+    "👏 Good performance. Revise the important concepts.";
+
+  }
+  else if(score >= 4){
+
+    message =
+    "📖 Keep practising. Re-read the chapter and try again.";
+
   }
   else{
-    message="📖 Revise the chapter and attempt the test again.";
+
+    message =
+    "💪 Revise the chapter carefully and attempt the test again.";
+
   }
 
 
-  result.innerHTML=`
+  result.innerHTML = `
 
-    <h3>🎉 Test Completed!</h3>
-
-    <p><strong>Score:</strong> ${score}/10</p>
-
-    <p><strong>Percentage:</strong> ${percentage}%</p>
-
-    <p>${message}</p>
+    <h3>
+      🎉 Test Completed
+    </h3>
 
     <p>
-      Scroll down to see the detailed solution of every question.
+      <strong>
+        Score:
+      </strong>
+      ${score}/10
+    </p>
+
+    <p>
+      <strong>
+        Percentage:
+      </strong>
+      ${percentage}%
+    </p>
+
+    <p>
+      ${message}
+    </p>
+
+    <p>
+      Scroll below to see the detailed solutions.
     </p>
 
   `;
 
 
   localStorage.setItem(
-    "historyClass6Ch1Test"+(currentTest+1),
+    "historyClass6Ch1Test"+
+    (currentTest+1),
+
     score
   );
 
+
   updateProgress();
 
+
   window.scrollTo({
-    top:result.offsetTop-80,
+    top:
+    result.offsetTop - 70,
+
     behavior:"smooth"
   });
 
 }
 
 
-/* BACK TO TEST LIST */
+/* =========================
+   BACK TO TESTS
+========================= */
 
 function backToTests(){
 
-  document.getElementById("testArea").style.display="none";
+  document.getElementById(
+    "testArea"
+  ).style.display = "none";
 
-  document.getElementById("testGrid").parentElement.style.display="block";
+  document.getElementById(
+    "testSeries"
+  ).style.display = "block";
+
 
   window.scrollTo({
-    top:document.querySelector(".test-series").offsetTop-70,
+    top:
+    document.getElementById(
+      "testSeries"
+    ).offsetTop - 70,
+
     behavior:"smooth"
   });
 
 }
 
 
-/* PROGRESS */
+/* =========================
+   PROGRESS
+========================= */
 
 function updateProgress(){
 
-  let completed=0;
+  let completed = 0;
 
-  for(let i=1;i<=10;i++){
 
-    if(localStorage.getItem(
-      "historyClass6Ch1Test"+i
-    )!==null){
+  for(
+    let i=1;
+    i<=10;
+    i++
+  ){
+
+    if(
+      localStorage.getItem(
+        "historyClass6Ch1Test"+i
+      ) !== null
+    ){
 
       completed++;
 
@@ -1427,19 +3605,29 @@ function updateProgress(){
 
   }
 
-  let percent=completed*10;
 
-  document.getElementById("progressFill").style.width=
-    percent+"%";
+  const percent =
+  completed * 10;
 
-  document.getElementById("progressText").innerText=
-    percent+"% test progress — "+
-    completed+"/10 tests attempted";
+
+  document.getElementById(
+    "progressFill"
+  ).style.width =
+  percent+"%";
+
+
+  document.getElementById(
+    "progressText"
+  ).innerText =
+  percent+"%";
+
 
 }
 
 
-/* INITIAL PROGRESS */
+/* =========================
+   INITIALIZE
+========================= */
 
 updateProgress();
 
