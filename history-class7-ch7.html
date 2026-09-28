@@ -1,17 +1,19 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>An Imperial Capital: Vijayanagara | UPSC Shiksha</title>
+<title>The Making of Regional Cultures | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Shiksha Class 7 History Chapter 7 - An Imperial Capital: Vijayanagara. Original study notes, Hindi explanations, audio, UPSC points, Mains questions and MCQs.">
+content="Class 7 History Chapter 7 - The Making of Regional Cultures. Original supplementary UPSC study notes with English, Hindi, visuals, charts, animation, audio, Mains practice and MCQs.">
 
 <style>
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
@@ -19,11 +21,10 @@ html{
 }
 
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
   background:#f5f7fb;
-  color:#1f2937;
-  line-height:1.7;
+  color:#202124;
+  line-height:1.75;
   transition:.3s;
 }
 
@@ -33,13 +34,13 @@ body.dark{
 }
 
 header{
-  background:linear-gradient(135deg,#7c2d12,#ea580c);
+  background:linear-gradient(135deg,#7c3aed,#4f46e5);
   color:white;
-  padding:15px 20px;
+  padding:18px 15px;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 3px 12px rgba(0,0,0,.2);
+  box-shadow:0 3px 15px rgba(0,0,0,.18);
 }
 
 .header-inner{
@@ -56,458 +57,558 @@ header{
   font-weight:bold;
 }
 
-.header-actions{
+.header-buttons{
   display:flex;
   gap:8px;
   flex-wrap:wrap;
 }
 
-.header-actions button,
-.header-actions a{
+button,
+.nav-btn,
+.home-btn{
   border:none;
-  text-decoration:none;
-  background:white;
-  color:#7c2d12;
-  padding:8px 13px;
-  border-radius:8px;
-  font-weight:bold;
   cursor:pointer;
+  text-decoration:none;
+  display:inline-block;
+  padding:9px 13px;
+  border-radius:10px;
+  font-weight:bold;
+  font-size:14px;
 }
 
-body.dark header{
-  background:linear-gradient(135deg,#431407,#9a3412);
+.home-btn{
+  background:white;
+  color:#4f46e5;
 }
 
-body.dark .header-actions button,
-body.dark .header-actions a{
-  background:#1f2937;
-  color:#fed7aa;
+.theme-btn{
+  background:#111827;
+  color:white;
 }
 
-.container{
+main{
   max-width:1100px;
   margin:auto;
-  padding:20px;
+  padding:20px 14px 60px;
 }
 
 .hero{
-  background:linear-gradient(135deg,#fff7ed,#ffedd5);
-  border-radius:18px;
-  padding:30px 22px;
+  background:linear-gradient(135deg,#ede9fe,#dbeafe);
+  border-radius:22px;
+  padding:32px 22px;
   margin:20px 0;
   text-align:center;
-  border:1px solid #fed7aa;
+  border:1px solid #ddd6fe;
 }
 
 body.dark .hero{
-  background:linear-gradient(135deg,#431407,#292524);
-  border-color:#9a3412;
+  background:linear-gradient(135deg,#312e81,#1e3a8a);
+  border-color:#4c1d95;
 }
 
 .hero h1{
-  margin:0 0 10px;
-  color:#9a3412;
-  font-size:32px;
-}
-
-body.dark .hero h1{
-  color:#fdba74;
+  font-size:34px;
+  margin-bottom:10px;
 }
 
 .hero p{
-  margin:8px 0;
+  max-width:850px;
+  margin:auto;
+}
+
+.badge{
+  display:inline-block;
+  background:#7c3aed;
+  color:white;
+  padding:6px 12px;
+  border-radius:20px;
+  margin-bottom:12px;
+  font-size:13px;
+  font-weight:bold;
 }
 
 .notice{
   background:#fff7ed;
-  border-left:5px solid #ea580c;
-  padding:15px;
+  border-left:5px solid #f97316;
+  padding:16px;
   border-radius:10px;
-  margin:18px 0;
+  margin:20px 0;
 }
 
 body.dark .notice{
-  background:#2b1b13;
+  background:#3b2416;
   color:#fed7aa;
 }
 
 .progress-box{
   background:white;
   padding:18px;
-  border-radius:14px;
-  box-shadow:0 2px 8px rgba(0,0,0,.08);
-  margin:18px 0;
+  border-radius:15px;
+  margin:20px 0;
+  box-shadow:0 2px 10px rgba(0,0,0,.07);
 }
 
 body.dark .progress-box{
   background:#1f2937;
 }
 
-.progress{
-  height:14px;
+.progress-bar{
+  width:100%;
+  height:13px;
   background:#e5e7eb;
   border-radius:20px;
   overflow:hidden;
   margin-top:10px;
 }
 
-body.dark .progress{
-  background:#374151;
-}
-
-.progress-bar{
+.progress-fill{
   height:100%;
   width:0%;
-  background:linear-gradient(90deg,#ea580c,#f97316);
-  transition:.3s;
+  background:linear-gradient(90deg,#7c3aed,#2563eb);
+  transition:.4s;
 }
 
 .quick-nav{
   display:flex;
-  flex-wrap:wrap;
   gap:8px;
+  flex-wrap:wrap;
   margin:20px 0;
 }
 
 .quick-nav a{
-  text-decoration:none;
-  background:#fff;
-  color:#9a3412;
+  background:#ede9fe;
+  color:#5b21b6;
   padding:8px 12px;
-  border-radius:8px;
-  border:1px solid #fed7aa;
+  border-radius:9px;
+  text-decoration:none;
   font-weight:bold;
+  font-size:13px;
 }
 
 body.dark .quick-nav a{
-  background:#1f2937;
-  color:#fdba74;
-  border-color:#9a3412;
+  background:#312e81;
+  color:#ddd6fe;
 }
 
-section{
+.section{
   background:white;
+  padding:24px;
+  border-radius:18px;
   margin:22px 0;
-  padding:25px;
-  border-radius:15px;
-  box-shadow:0 2px 9px rgba(0,0,0,.07);
+  box-shadow:0 2px 12px rgba(0,0,0,.06);
 }
 
-body.dark section{
+body.dark .section{
   background:#1f2937;
-  box-shadow:0 2px 9px rgba(0,0,0,.25);
+  box-shadow:none;
 }
 
-section h2{
-  color:#9a3412;
-  border-bottom:2px solid #fed7aa;
-  padding-bottom:8px;
+.section h2{
+  color:#5b21b6;
+  margin-bottom:15px;
+  font-size:25px;
 }
 
-body.dark section h2{
-  color:#fdba74;
-  border-color:#7c2d12;
+body.dark .section h2{
+  color:#c4b5fd;
 }
 
-section h3{
-  color:#c2410c;
+.section h3{
+  color:#4338ca;
+  margin:18px 0 8px;
 }
 
-body.dark section h3{
-  color:#fb923c;
+body.dark .section h3{
+  color:#a5b4fc;
 }
 
 .highlight{
-  background:#fff7ed;
-  border-left:5px solid #f97316;
+  background:#fef3c7;
+  border-left:5px solid #f59e0b;
   padding:15px;
-  border-radius:10px;
   margin:15px 0;
+  border-radius:9px;
 }
 
 body.dark .highlight{
-  background:#29211d;
-  color:#ffedd5;
-  border-left-color:#fb923c;
+  background:#3b3014;
+  color:#fde68a;
 }
 
-.cards{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:15px;
-  margin:18px 0;
+.example{
+  background:#ecfdf5;
+  border-left:5px solid #10b981;
+  padding:15px;
+  margin:15px 0;
+  border-radius:9px;
 }
 
-.card{
-  background:#fff7ed;
-  border:1px solid #fed7aa;
-  padding:18px;
-  border-radius:13px;
-  transition:.25s;
+body.dark .example{
+  background:#12352a;
+  color:#d1fae5;
 }
 
-.card:hover{
-  transform:translateY(-4px);
+.upsc{
+  background:#eff6ff;
+  border-left:5px solid #2563eb;
+  padding:16px;
+  margin:15px 0;
+  border-radius:10px;
 }
 
-body.dark .card{
-  background:#292524;
-  border-color:#7c2d12;
+body.dark .upsc{
+  background:#172554;
+  color:#dbeafe;
 }
 
-.timeline{
-  position:relative;
-  margin:25px 0;
-  padding-left:25px;
-  border-left:4px solid #ea580c;
+.visual-box{
+  margin:20px 0;
+  padding:20px;
+  border-radius:16px;
+  background:linear-gradient(135deg,#f8fafc,#eef2ff);
+  border:1px solid #c7d2fe;
+  overflow:hidden;
 }
 
-.timeline-item{
-  margin-bottom:20px;
-  position:relative;
+body.dark .visual-box{
+  background:#182235;
+  border-color:#4338ca;
 }
 
-.timeline-item::before{
-  content:"";
-  width:14px;
-  height:14px;
-  background:#ea580c;
-  border-radius:50%;
-  position:absolute;
-  left:-34px;
-  top:7px;
+.visual-title{
+  text-align:center;
+  font-size:20px;
+  font-weight:bold;
+  margin-bottom:16px;
+  color:#4338ca;
+}
+
+body.dark .visual-title{
+  color:#c4b5fd;
 }
 
 .flow{
   display:flex;
-  flex-wrap:wrap;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
   gap:10px;
-  margin:25px 0;
 }
 
-.flow-box{
-  background:#fff7ed;
-  border:2px solid #fb923c;
-  border-radius:12px;
-  padding:14px;
-  min-width:150px;
+.flow-item{
+  min-width:145px;
+  padding:15px;
+  background:white;
+  border-radius:14px;
   text-align:center;
+  border:2px solid #c4b5fd;
   font-weight:bold;
-  animation:pulse 2s infinite;
+  box-shadow:0 3px 8px rgba(0,0,0,.08);
+  animation:floatBox 3s ease-in-out infinite;
 }
 
-body.dark .flow-box{
-  background:#292524;
-  color:#fed7aa;
+body.dark .flow-item{
+  background:#273449;
+  color:#f3f4f6;
 }
 
-.arrow{
-  font-size:24px;
-  color:#ea580c;
+.flow-arrow{
+  font-size:28px;
+  color:#7c3aed;
+  font-weight:bold;
 }
 
-@keyframes pulse{
-  0%,100%{transform:scale(1);}
-  50%{transform:scale(1.04);}
+@keyframes floatBox{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-5px)}
 }
 
-table{
+.explain-animation{
+  margin-top:15px;
+  padding:14px;
+  background:#fdf4ff;
+  border-radius:10px;
+  border-left:5px solid #c026d3;
+}
+
+body.dark .explain-animation{
+  background:#35153b;
+  color:#f5d0fe;
+}
+
+.timeline{
+  position:relative;
+  margin:20px 0;
+  padding-left:25px;
+  border-left:4px solid #8b5cf6;
+}
+
+.timeline-item{
+  margin:18px 0;
+  position:relative;
+  background:#faf5ff;
+  padding:15px;
+  border-radius:10px;
+}
+
+body.dark .timeline-item{
+  background:#2d2140;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-36px;
+  top:18px;
+  width:14px;
+  height:14px;
+  background:#7c3aed;
+  border-radius:50%;
+  border:3px solid white;
+}
+
+body.dark .timeline-item::before{
+  border-color:#1f2937;
+}
+
+.chart{
+  margin:18px 0;
+}
+
+.chart-row{
+  margin:14px 0;
+}
+
+.chart-label{
+  font-weight:bold;
+  margin-bottom:5px;
+}
+
+.bar{
+  height:28px;
+  background:#e5e7eb;
+  border-radius:20px;
+  overflow:hidden;
+}
+
+body.dark .bar{
+  background:#374151;
+}
+
+.bar-fill{
+  height:100%;
+  border-radius:20px;
+  background:linear-gradient(90deg,#8b5cf6,#3b82f6);
+  animation:growBar 1.5s ease forwards;
+}
+
+@keyframes growBar{
+  from{width:0}
+}
+
+.comparison{
   width:100%;
   border-collapse:collapse;
   margin:18px 0;
 }
 
-th,td{
-  border:1px solid #fed7aa;
+.comparison th,
+.comparison td{
+  border:1px solid #d1d5db;
   padding:11px;
   text-align:left;
 }
 
-th{
-  background:#fff7ed;
-  color:#9a3412;
+.comparison th{
+  background:#ede9fe;
+  color:#4c1d95;
 }
 
-body.dark th{
-  background:#431407;
-  color:#fed7aa;
+body.dark .comparison th{
+  background:#312e81;
+  color:#ede9fe;
 }
 
-body.dark td{
-  border-color:#7c2d12;
+body.dark .comparison td{
+  border-color:#4b5563;
 }
 
 .audio-box{
-  background:#fff7ed;
-  border:1px solid #fed7aa;
+  background:#f0fdf4;
   padding:18px;
-  border-radius:12px;
+  border-radius:14px;
   margin:20px 0;
+  border:1px solid #86efac;
 }
 
 body.dark .audio-box{
-  background:#292524;
+  background:#123522;
+  color:#dcfce7;
+  border-color:#166534;
 }
 
-.audio-box button,
-.complete-btn,
-.check-btn{
-  border:none;
-  background:#ea580c;
+.audio-buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:12px;
+}
+
+.audio-buttons button{
+  background:#16a34a;
   color:white;
-  padding:10px 15px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-  margin:4px;
-}
-
-.audio-box button:hover,
-.complete-btn:hover,
-.check-btn:hover{
-  background:#c2410c;
 }
 
 .mains-box{
-  background:#fff7ed;
-  color:#431407;
-  border-left:5px solid #ea580c;
+  background:#f5f3ff;
+  border-left:5px solid #7c3aed;
   padding:18px;
   border-radius:10px;
-  margin:15px 0;
+  margin:12px 0;
 }
 
 body.dark .mains-box{
   background:#29213a;
   color:#f3e8ff;
-  border-left:5px solid #c084fc;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
+  border-left-color:#c084fc;
 }
 
 body.dark .mains-box strong{
   color:#ffffff;
 }
 
+.mcq-container{
+  margin-top:20px;
+}
+
+.test-heading{
+  background:#4f46e5;
+  color:white;
+  padding:13px;
+  border-radius:10px;
+  margin:22px 0 12px;
+}
+
 .question{
-  border:1px solid #fed7aa;
+  background:#f9fafb;
+  border:1px solid #e5e7eb;
   padding:18px;
-  border-radius:12px;
-  margin:18px 0;
-  background:#fff;
+  border-radius:13px;
+  margin:15px 0;
 }
 
 body.dark .question{
   background:#111827;
-  border-color:#7c2d12;
+  border-color:#374151;
 }
 
 .option{
   display:block;
-  padding:9px;
-  margin:7px 0;
-  border-radius:7px;
+  padding:11px;
+  margin:8px 0;
+  border-radius:8px;
+  background:#fff;
+  border:1px solid #d1d5db;
   cursor:pointer;
 }
 
+body.dark .option{
+  background:#1f2937;
+  border-color:#4b5563;
+}
+
 .option:hover{
-  background:#fff7ed;
+  border-color:#7c3aed;
 }
 
-body.dark .option:hover{
-  background:#292524;
+.check-btn{
+  background:#7c3aed;
+  color:white;
+  margin-top:8px;
 }
 
-.result{
-  margin-top:10px;
-  padding:12px;
-  border-radius:8px;
+.answer-box{
   display:none;
+  margin-top:12px;
+  padding:15px;
+  border-radius:10px;
+  background:#ecfdf5;
+  border-left:5px solid #10b981;
 }
 
-.correct{
-  background:#dcfce7;
-  color:#166534;
+body.dark .answer-box{
+  background:#12352a;
+  color:#d1fae5;
 }
 
-.wrong{
-  background:#fee2e2;
-  color:#991b1b;
+.revision-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
 
-body.dark .correct{
-  background:#14532d;
-  color:#dcfce7;
+.revision-card{
+  background:#eef2ff;
+  padding:15px;
+  border-radius:12px;
 }
 
-body.dark .wrong{
-  background:#7f1d1d;
-  color:#fee2e2;
+body.dark .revision-card{
+  background:#252b45;
 }
 
-.revision-list li{
-  margin:8px 0;
+.complete-btn{
+  background:#16a34a;
+  color:white;
+  padding:13px 18px;
+  margin-top:15px;
 }
 
 footer{
+  background:#111827;
+  color:#d1d5db;
   text-align:center;
-  background:#431407;
-  color:white;
-  padding:25px;
+  padding:30px 15px;
   margin-top:30px;
 }
 
+.small{
+  font-size:13px;
+  opacity:.85;
+}
+
 @media(max-width:700px){
-
-  .container{
-    padding:12px;
-  }
-
-  .hero{
-    padding:23px 15px;
-  }
-
   .hero h1{
-    font-size:25px;
+    font-size:26px;
   }
 
-  section{
+  .section{
     padding:18px;
+  }
+
+  .section h2{
+    font-size:22px;
+  }
+
+  .flow-item{
+    width:100%;
+  }
+
+  .flow-arrow{
+    transform:rotate(90deg);
+  }
+
+  .revision-grid{
+    grid-template-columns:1fr;
   }
 
   .header-inner{
     align-items:flex-start;
+    flex-direction:column;
   }
 
-  .logo{
-    font-size:18px;
-  }
-
-  .header-actions{
-    justify-content:flex-end;
-  }
-
-  .header-actions button,
-  .header-actions a{
-    padding:7px 9px;
-    font-size:12px;
-  }
-
-  table{
+  .comparison{
     font-size:13px;
-  }
-
-  th,td{
-    padding:8px;
-  }
-
-  .flow-box{
-    width:100%;
-  }
-
-  .arrow{
-    transform:rotate(90deg);
   }
 }
 </style>
@@ -517,1254 +618,1627 @@ footer{
 
 <header>
   <div class="header-inner">
-
     <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-    <div class="header-actions">
-      <a href="ncert-history.html">🏠 History</a>
-      <button onclick="toggleTheme()">🌙 Dark</button>
+    <div class="header-buttons">
+      <a class="home-btn" href="ncert-history.html">📚 History</a>
+      <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
     </div>
-
   </div>
 </header>
 
-<div class="container">
+<main>
 
-<div class="hero">
-  <h1>🏛️ An Imperial Capital: Vijayanagara</h1>
-  <p><strong>Class 7 History — Chapter 7</strong></p>
-  <p>Vijayanagara Empire, Hampi, architecture, administration, trade and historical sources.</p>
-</div>
+<section class="hero">
+
+  <span class="badge">CLASS 7 HISTORY • CHAPTER 7</span>
+
+  <h1>🌍 The Making of Regional Cultures</h1>
+
+  <p>
+    How regional languages, literature, traditions, art, architecture,
+    religious practices and local identities developed through interaction
+    between different communities.
+  </p>
+
+</section>
 
 <div class="notice">
-  <strong>📌 Study Note:</strong>
-  This page is an original explanatory study resource for UPSC Shiksha.
-  It does not reproduce the NCERT textbook word-for-word.
+  <strong>📌 Legacy / Supplementary Chapter:</strong>
+  This page follows the older NCERT Class 7 History chapter sequence.
+  The explanations below are original UPSC Shiksha study notes and are
+  not a reproduction of the textbook.
 </div>
 
-<div class="progress-box">
-  <strong>📈 Chapter Progress</strong>
-  <div class="progress">
-    <div class="progress-bar" id="progressBar"></div>
+<section class="progress-box">
+
+  <strong>📊 Chapter Progress</strong>
+
+  <div class="progress-bar">
+    <div class="progress-fill" id="progressFill"></div>
   </div>
+
   <p id="progressText">0% completed</p>
-</div>
+
+</section>
 
 <div class="quick-nav">
-  <a href="#english">English</a>
-  <a href="#hampi">Hampi</a>
-  <a href="#empire">Empire</a>
-  <a href="#architecture">Architecture</a>
-  <a href="#sources">Sources</a>
+
+  <a href="#regional">Regional Cultures</a>
+  <a href="#language">Language</a>
+  <a href="#cheras">Cheras</a>
+  <a href="#jagannatha">Jagannatha</a>
+  <a href="#rajputs">Rajputs</a>
+  <a href="#kathak">Kathak</a>
+  <a href="#paintings">Paintings</a>
+  <a href="#bengal">Bengal</a>
+  <a href="#visuals">Visuals</a>
   <a href="#hindi">Hindi</a>
   <a href="#upsc">UPSC</a>
   <a href="#mains">Mains</a>
   <a href="#tests">Tests</a>
-  <a href="#revision">Revision</a>
+
 </div>
+
 
 <!-- ENGLISH -->
 
-<section id="english">
+<section class="section" id="regional">
 
-<h2>🇬🇧 English Explanation</h2>
-
-<h3>1. What was Vijayanagara?</h3>
+<h2>1. What Are Regional Cultures?</h2>
 
 <p>
-Vijayanagara literally means <strong>“City of Victory.”</strong>
-It was the name of both a powerful empire and its imperial capital.
-The empire emerged in southern India during the fourteenth century and
-became one of the important political powers of the medieval Deccan and
-South India.
+A regional culture develops when people living in a particular geographical
+area gradually develop shared patterns of language, literature, food,
+religious practices, festivals, art, architecture, music and social customs.
+</p>
+
+<p>
+Regional cultures were not isolated from one another. Traders, pilgrims,
+rulers, artists, poets and religious teachers travelled between regions.
+As a result, local traditions interacted with wider cultural traditions.
 </p>
 
 <div class="highlight">
-<strong>UPSC Concept:</strong>
-Vijayanagara should be studied not only as a political empire but also
-as an example of urban planning, temple architecture, irrigation,
-trade and cultural interaction.
+<strong>Key Idea:</strong>
+Regional culture is not simply a fixed identity. It develops through
+continuous interaction between geography, society, language, religion,
+politics, trade and artistic traditions.
 </div>
 
-<h3>2. The Location of Vijayanagara</h3>
+<div class="visual-box">
 
-<p>
-The capital developed in the region around the Tungabhadra River.
-The surrounding landscape contained rocky hills, river valleys and
-fertile areas. The natural geography helped the city in defence as well
-as agriculture and water management.
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>🌊 Tungabhadra</h3>
-<p>
-The river was important for water supply, agriculture and the development
-of the capital.
-</p>
+<div class="visual-title">
+🔄 How Regional Cultures Develop
 </div>
-
-<div class="card">
-<h3>⛰️ Rocky Landscape</h3>
-<p>
-Hills and boulders provided natural defensive advantages around the city.
-</p>
-</div>
-
-<div class="card">
-<h3>🌾 Fertile Areas</h3>
-<p>
-Agricultural production supported the large population and political centre.
-</p>
-</div>
-
-</div>
-
-<h3 id="hampi">3. Hampi — The Historic Landscape</h3>
-
-<p>
-The ruins of Vijayanagara are today associated with Hampi in Karnataka.
-After the destruction and decline of the imperial capital, the settlement
-became a major archaeological landscape.
-</p>
-
-<p>
-The historical reconstruction of Hampi uses several types of evidence:
-monuments, inscriptions, archaeological remains, local traditions and
-accounts of foreign travellers.
-</p>
-
-<div class="highlight">
-<strong>Remember:</strong>
-History is reconstructed by comparing different sources rather than
-depending on a single source.
-</div>
-
-<h3>4. Discovery and Study of Hampi</h3>
-
-<p>
-The ruins attracted scholarly attention during the colonial period.
-Surveying, photography, inscriptional studies and archaeological work
-helped historians understand the former capital.
-</p>
-
-<p>
-Information from local traditions was also compared with written records
-and accounts of travellers.
-</p>
-
-<h3>5. Foundation and Expansion</h3>
-
-<p>
-Vijayanagara was founded in the fourteenth century. Its rulers gradually
-expanded their political influence across large parts of southern India.
-</p>
-
-<p>
-The empire had to compete with other regional powers for territory,
-resources, trade routes and political influence.
-</p>
 
 <div class="flow">
 
-<div class="flow-box">Political Centre</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Military Power</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Territorial Expansion</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Imperial Capital</div>
+<div class="flow-item">
+🌍 Geography<br>
+Local environment
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+👥 Communities<br>
+People & traditions
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+🗣️ Language<br>
+Local expression
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+🎨 Culture<br>
+Art & traditions
+</div>
 
 </div>
 
-<h3 id="empire">6. Major Rulers and Dynasties</h3>
+<div class="explain-animation">
+
+<strong>🎬 What this animation explains:</strong>
+
+The sequence shows that regional culture is produced through several
+connected factors rather than through one single event.
+
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="language">
+
+<h2>2. Language and Regional Identity</h2>
 
 <p>
-The Vijayanagara Empire was ruled by different dynasties.
-Among them, the Sangama, Saluva, Tuluva and Aravidu dynasties are
-important in the historical sequence.
+Language is one of the strongest ways through which communities express
+regional identity. Over time, spoken languages developed different literary
+forms.
 </p>
+
+<p>
+Poets and writers used regional languages to communicate stories, religious
+ideas, political traditions and social experiences to wider audiences.
+</p>
+
+<div class="example">
+
+<strong>Example:</strong>
+
+A literary tradition can help transform a commonly spoken regional language
+into an important language of poetry, administration or religious expression.
+</div>
+
+<h3>Why did regional languages become important?</h3>
+
+<ul>
+<li>They allowed wider communication.</li>
+<li>Poets could express local experiences.</li>
+<li>Religious ideas could reach ordinary people.</li>
+<li>Regional rulers sometimes supported literature.</li>
+<li>Local traditions could be preserved through writing.</li>
+</ul>
+
+<div class="upsc">
+<strong>UPSC Connection:</strong>
+Language is closely connected with identity, cultural continuity and the
+formation of regional political communities.
+</div>
+
+</section>
+
+
+<section class="section" id="cheras">
+
+<h2>3. The Cheras and the Development of Malayalam</h2>
+
+<p>
+The south-western region of the Indian subcontinent had strong links with
+the Chera political tradition. Over time, Malayalam developed as a distinct
+regional language in Kerala.
+</p>
+
+<p>
+The development of a regional language was not an instant process. It
+involved interaction between local speech, literary traditions and contact
+with other languages and cultures.
+</p>
+
+<div class="visual-box">
+
+<div class="visual-title">
+🌴 Regional Language Development
+</div>
+
+<div class="flow">
+
+<div class="flow-item">Local Speech</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">Literary Usage</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">Regional Tradition</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">Malayalam Identity</div>
+
+</div>
+
+<div class="explain-animation">
+<strong>What this explains:</strong>
+The visual represents language development as a gradual cultural process.
+It is not a numerical or chronological chart.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="jagannatha">
+
+<h2>4. The Jagannatha Tradition</h2>
+
+<p>
+The Jagannatha tradition associated with Puri in Odisha became an important
+example of how local traditions could become part of a wider religious
+culture.
+</p>
+
+<p>
+The Jagannatha temple became an important centre of pilgrimage. Political
+rulers also associated themselves with important religious institutions,
+which could strengthen their legitimacy.
+</p>
+
+<div class="highlight">
+
+<strong>Important:</strong>
+
+Religious centres could perform several roles at the same time:
+they could be places of worship, pilgrimage, economic activity,
+artistic production and political patronage.
+</div>
+
+<div class="visual-box">
+
+<div class="visual-title">
+🛕 Temple as a Cultural Centre
+</div>
+
+<div class="flow">
+
+<div class="flow-item">🙏 Worship</div>
+<div class="flow-arrow">→</div>
+<div class="flow-item">🚶 Pilgrimage</div>
+<div class="flow-arrow">→</div>
+<div class="flow-item">🏪 Economic Activity</div>
+<div class="flow-arrow">→</div>
+<div class="flow-item">🎨 Cultural Production</div>
+
+</div>
+
+<div class="explain-animation">
+
+<strong>🎬 What this animation explains:</strong>
+
+A major religious centre could connect religious practices with travel,
+trade, patronage and artistic traditions.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="rajputs">
+
+<h2>5. Rajput Heroic Traditions</h2>
+
+<p>
+Regional cultures were also shaped by stories about rulers, warriors,
+heroes and local communities.
+</p>
+
+<p>
+Rajput traditions included heroic stories celebrating courage, loyalty,
+honour and sacrifice. Such stories were transmitted through oral traditions,
+poetry and later written literature.
+</p>
+
+<div class="example">
+
+<strong>Historical significance:</strong>
+
+Heroic traditions tell historians not only about political events but also
+about the values that particular communities wanted to celebrate.
+</div>
+
+<h3>Source Awareness</h3>
+
+<p>
+Historians must distinguish between a literary description of an ideal hero
+and independently verified evidence about an actual historical event.
+</p>
+
+</section>
+
+
+<section class="section" id="kathak">
+
+<h2>6. The Development of Kathak</h2>
+
+<p>
+Kathak developed through a long interaction between storytelling traditions,
+music, dance and changing systems of patronage.
+</p>
+
+<p>
+The word is connected with the tradition of storytellers. Over time,
+Kathak developed different styles and became associated with courts as well
+as other cultural settings.
+</p>
+
+<div class="visual-box">
+
+<div class="visual-title">
+💃 Kathak — Cultural Development Flow
+</div>
+
+<div class="flow">
+
+<div class="flow-item">📖 Storytelling</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">🎵 Music</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">💃 Dance</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">🏛️ Patronage</div>
+
+</div>
+
+<div class="explain-animation">
+
+<strong>What this animation explains:</strong>
+
+The development of an artistic tradition can involve several influences,
+including performance, storytelling, music and patronage.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section" id="paintings">
+
+<h2>7. Miniature Paintings and Regional Art</h2>
+
+<p>
+Regional courts supported different forms of painting and artistic
+production. Miniature painting traditions developed in several regions and
+were influenced by courtly culture, literature, religion and local artistic
+styles.
+</p>
+
+<p>
+Paintings can provide evidence about clothing, architecture, court life,
+religious stories and artistic conventions.
+</p>
+
+<div class="chart">
+
+<h3>🎨 What a Historical Painting Can Tell Us</h3>
+
+<div class="chart-row">
+<div class="chart-label">Court Life</div>
+<div class="bar">
+<div class="bar-fill" style="width:90%"></div>
+</div>
+</div>
+
+<div class="chart-row">
+<div class="chart-label">Clothing & Appearance</div>
+<div class="bar">
+<div class="bar-fill" style="width:82%"></div>
+</div>
+</div>
+
+<div class="chart-row">
+<div class="chart-label">Architecture</div>
+<div class="bar">
+<div class="bar-fill" style="width:75%"></div>
+</div>
+</div>
+
+<div class="chart-row">
+<div class="chart-label">Religious / Literary Themes</div>
+<div class="bar">
+<div class="bar-fill" style="width:88%"></div>
+</div>
+</div>
+
+</div>
+
+<p class="small">
+Note: These bars are a conceptual learning graphic, not statistical
+measurements of historical importance.
+</p>
+
+</section>
+
+
+<section class="section" id="bengal">
+
+<h2>8. Bengal and the Formation of a Regional Culture</h2>
+
+<p>
+Bengal developed a distinctive regional culture shaped by its geography,
+agriculture, river systems, settlements, religious traditions, literature
+and political developments.
+</p>
+
+<h3>Rice and Agriculture</h3>
+
+<p>
+The riverine environment supported intensive agriculture in many areas.
+Rice became an important crop and influenced everyday life and settlement
+patterns.
+</p>
+
+<h3>Religious Traditions</h3>
+
+<p>
+Different religious traditions interacted in Bengal. Local practices could
+be incorporated into broader religious traditions, creating new cultural
+forms.
+</p>
+
+<h3>Literature</h3>
+
+<p>
+Bengali literary traditions developed through different genres, including
+religious and narrative literature.
+</p>
+
+<div class="visual-box">
+
+<div class="visual-title">
+🌾 Bengal — Culture Formation
+</div>
+
+<div class="flow">
+
+<div class="flow-item">🌊 Rivers</div>
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">🌾 Agriculture</div>
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">🏘️ Settlements</div>
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">🛕 Religious Traditions</div>
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">📚 Regional Culture</div>
+
+</div>
+
+<div class="explain-animation">
+
+<strong>🎬 What this animation explains:</strong>
+
+Geography can influence agriculture and settlement. Over time, these
+conditions interact with religion, language and literature to contribute
+to regional cultural development.
+</div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>9. Architecture and Regional Culture</h2>
+
+<p>
+Buildings are important historical sources because architecture can reveal
+religious practices, political power, available technology, artistic
+traditions and patterns of patronage.
+</p>
+
+<table class="comparison">
+
+<tr>
+<th>Evidence</th>
+<th>What historians may study</th>
+</tr>
+
+<tr>
+<td>Temples</td>
+<td>Religious practices, patronage and architecture</td>
+</tr>
+
+<tr>
+<td>Palaces</td>
+<td>Political authority and court culture</td>
+</tr>
+
+<tr>
+<td>Monuments</td>
+<td>Artistic and political traditions</td>
+</tr>
+
+<tr>
+<td>Inscriptions</td>
+<td>Names, donations, institutions and claims</td>
+</tr>
+
+</table>
+
+<div class="highlight">
+
+<strong>Historical Method:</strong>
+
+One source should not automatically be treated as complete truth.
+Historians compare architecture, inscriptions, literature, archaeology and
+other evidence wherever possible.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>10. Regional Cultures Were Connected</h2>
+
+<p>
+Regional cultures should not be understood as completely isolated systems.
+People travelled for trade, pilgrimage, education, political activity and
+religious purposes.
+</p>
+
+<div class="visual-box">
+
+<div class="visual-title">
+🌐 Interaction Between Regions
+</div>
+
+<div class="flow">
+
+<div class="flow-item">🚶 Pilgrims</div>
+<div class="flow-arrow">↔</div>
+
+<div class="flow-item">🛍️ Traders</div>
+<div class="flow-arrow">↔</div>
+
+<div class="flow-item">👑 Rulers</div>
+<div class="flow-arrow">↔</div>
+
+<div class="flow-item">🎨 Artists</div>
+<div class="flow-arrow">↔</div>
+
+<div class="flow-item">📚 Scholars</div>
+
+</div>
+
+<p style="margin-top:15px;text-align:center;">
+These movements helped ideas, artistic styles, languages and traditions
+travel between regions.
+</p>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>11. How Historians Study Regional Cultures</h2>
+
+<p>
+Historians use multiple types of evidence to reconstruct cultural change.
+</p>
+
+<table class="comparison">
+
+<tr>
+<th>Source</th>
+<th>Possible Information</th>
+<th>Caution</th>
+</tr>
+
+<tr>
+<td>Literature</td>
+<td>Ideas, stories and cultural values</td>
+<td>May contain exaggeration or idealisation</td>
+</tr>
+
+<tr>
+<td>Inscriptions</td>
+<td>Donations, rulers and institutions</td>
+<td>Often represent the viewpoint of the issuer</td>
+</tr>
+
+<tr>
+<td>Buildings</td>
+<td>Architecture and patronage</td>
+<td>Interpretation requires context</td>
+</tr>
+
+<tr>
+<td>Paintings</td>
+<td>Visual representation and artistic styles</td>
+<td>May represent an idealised scene</td>
+</tr>
+
+<tr>
+<td>Archaeology</td>
+<td>Material remains and settlement patterns</td>
+<td>Evidence may be incomplete</td>
+</tr>
+
+</table>
+
+<div class="upsc">
+
+<strong>UPSC Method:</strong>
+
+When analysing historical sources, always ask:
+Who created the source? Why was it created? Who was its audience?
+What does it tell us? What can it not tell us?
+</div>
+
+</section>
+
+
+<!-- TIMELINE -->
+
+<section class="section">
+
+<h2>12. Conceptual Timeline</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
-<strong>14th Century</strong>
-<p>Foundation and consolidation of Vijayanagara power.</p>
+<strong>Regional Languages</strong>
+<p>Local languages increasingly became important vehicles of literature and cultural expression.</p>
 </div>
 
 <div class="timeline-item">
-<strong>15th Century</strong>
-<p>Expansion of the empire and development of the capital.</p>
+<strong>Religious Centres</strong>
+<p>Major pilgrimage centres connected local traditions with wider religious networks.</p>
 </div>
 
 <div class="timeline-item">
-<strong>16th Century</strong>
-<p>Vijayanagara reached a major phase of political and cultural prominence.</p>
+<strong>Regional Courts</strong>
+<p>Political centres supported literature, art, architecture and performance traditions.</p>
 </div>
 
 <div class="timeline-item">
-<strong>1565</strong>
-<p>
-The capital suffered major destruction following the Battle of Talikota.
-</p>
+<strong>Artistic Traditions</strong>
+<p>Painting, dance, music and architecture developed through multiple influences.</p>
+</div>
+
+<div class="timeline-item">
+<strong>Regional Cultural Identities</strong>
+<p>Different cultural elements became associated with particular regions while continuing to interact with other regions.</p>
 </div>
 
 </div>
-
-<h3>7. Krishnadeva Raya</h3>
-
-<p>
-Krishnadeva Raya of the Tuluva dynasty was one of the best-known rulers
-associated with Vijayanagara's power and prosperity.
-</p>
-
-<p>
-His reign is remembered for military campaigns, political expansion,
-support for temples and cultural activities.
-</p>
-
-<div class="highlight">
-<strong>UPSC Point:</strong>
-Krishnadeva Raya is important for understanding the relationship between
-political authority, military expansion, temple patronage and cultural
-production.
-</div>
-
-<h3 id="architecture">8. Fortifications and City Planning</h3>
-
-<p>
-Vijayanagara had extensive fortifications. Walls, gateways and natural
-landscape features contributed to the defence of the city.
-</p>
-
-<p>
-The urban area contained different zones including residential areas,
-sacred centres, royal spaces, markets and agricultural zones.
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>🧱 Fortifications</h3>
-<p>Walls and gateways strengthened defence.</p>
-</div>
-
-<div class="card">
-<h3>🏛️ Royal Centre</h3>
-<p>Contained important administrative and ceremonial structures.</p>
-</div>
-
-<div class="card">
-<h3>🛕 Sacred Centre</h3>
-<p>Contained major temples and religious institutions.</p>
-</div>
-
-<div class="card">
-<h3>🛍️ Markets</h3>
-<p>Supported trade and exchange of goods.</p>
-</div>
-
-</div>
-
-<h3>9. Water Management</h3>
-
-<p>
-Water management was essential because the capital had a large population
-and required water for agriculture, domestic use and other activities.
-</p>
-
-<p>
-Tanks, canals, reservoirs and channels helped distribute water.
-The Tungabhadra and surrounding landscape played an important role in
-this system.
-</p>
-
-<div class="flow">
-
-<div class="flow-box">River</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Channels</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Reservoirs</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">Agriculture</div>
-
-</div>
-
-<h3>10. Agriculture and Irrigation</h3>
-
-<p>
-Agricultural production was necessary to sustain the population,
-army and urban economy. Irrigation helped increase the availability
-and reliability of cultivated land.
-</p>
-
-<p>
-The connection between agriculture and political power is important:
-agricultural surplus could support taxation, armies, temples and urban
-centres.
-</p>
-
-<h3>11. Temples and Architecture</h3>
-
-<p>
-Temples were important religious as well as social and economic
-institutions.
-</p>
-
-<p>
-Large temple complexes required architects, sculptors, builders,
-craft workers and financial resources. They also became important
-centres of cultural activity.
-</p>
-
-<div class="cards">
-
-<div class="card">
-<h3>🛕 Virupaksha Temple</h3>
-<p>A major temple associated with the sacred landscape of Hampi.</p>
-</div>
-
-<div class="card">
-<h3>🏛️ Vitthala Temple</h3>
-<p>Known for its monumental architecture and famous stone structures.</p>
-</div>
-
-<div class="card">
-<h3>🪨 Stone Architecture</h3>
-<p>Massive stone construction reflects skilled craftsmanship.</p>
-</div>
-
-</div>
-
-<h3>12. Markets and Trade</h3>
-
-<p>
-Markets were an important part of the urban economy.
-Goods from different regions could reach the city through trade networks.
-</p>
-
-<p>
-The capital's political importance, wealthy elites and religious centres
-created demand for food, luxury goods, craft products and other items.
-</p>
-
-<h3>13. Foreign Travellers</h3>
-
-<p>
-Foreign travellers left descriptions of Vijayanagara.
-Their accounts provide useful information about the city, markets,
-royal ceremonies, buildings and social life.
-</p>
-
-<p>
-However, historians do not accept every traveller's statement without
-comparison. Traveller accounts are evaluated alongside archaeological
-and inscriptional evidence.
-</p>
-
-<div class="highlight">
-<strong>Historical Method:</strong>
-A traveller's account is a source of evidence, not automatically a
-complete or unbiased description of the entire society.
-</div>
-
-<h3>14. Social and Economic Life</h3>
-
-<p>
-The large capital contained rulers, soldiers, administrators, merchants,
-craft workers, farmers, religious specialists and many other groups.
-</p>
-
-<p>
-The city therefore represented a complex relationship between political
-authority, agriculture, trade, religion and urban life.
-</p>
-
-<h3 id="sources">15. Sources for Studying Vijayanagara</h3>
-
-<table>
-
-<tr>
-<th>Source</th>
-<th>What it can tell us</th>
-</tr>
-
-<tr>
-<td>🏛️ Monuments</td>
-<td>Architecture, religious institutions and urban planning</td>
-</tr>
-
-<tr>
-<td>📜 Inscriptions</td>
-<td>Rulers, donations, institutions and administrative information</td>
-</tr>
-
-<tr>
-<td>🪙 Coins</td>
-<td>Political authority, economy and circulation</td>
-</tr>
-
-<tr>
-<td>📖 Literary works</td>
-<td>Cultural and political ideas</td>
-</tr>
-
-<tr>
-<td>🌍 Traveller accounts</td>
-<td>Observations about cities, markets and royal life</td>
-</tr>
-
-<tr>
-<td>🏺 Archaeology</td>
-<td>Material remains and settlement patterns</td>
-</tr>
-
-</table>
 
 </section>
 
-<!-- HINDI -->
 
-<section id="hindi">
+<!-- MASTER GRAPHIC -->
 
-<h2>🇮🇳 हिंदी में विस्तृत अध्ययन</h2>
+<section class="section" id="visuals">
 
-<h3>1. विजयनगर क्या था?</h3>
+<h2>13. ⭐ Master Concept Graphic</h2>
 
-<p>
-विजयनगर का अर्थ सामान्य रूप से <strong>“विजय का नगर”</strong> माना जाता है।
-यह नाम एक साम्राज्य और उसकी राजधानी दोनों के लिए प्रयोग किया जाता था।
-चौदहवीं शताब्दी में इसका उदय हुआ और दक्षिण भारत की राजनीति में इसका
-महत्वपूर्ण स्थान बना।
-</p>
+<div class="visual-box">
 
-<h3>2. हम्पी और विजयनगर</h3>
-
-<p>
-आज विजयनगर की राजधानी के अवशेष कर्नाटक के हम्पी क्षेत्र में दिखाई देते हैं।
-यह क्षेत्र तुंगभद्रा नदी और पहाड़ी भू-दृश्य के आसपास विकसित हुआ था।
-</p>
-
-<div class="highlight">
-<strong>मुख्य बात:</strong>
-हम्पी के इतिहास को समझने के लिए पुरातत्व, स्थापत्य, अभिलेख,
-स्थानीय परंपराओं और विदेशी यात्रियों के विवरणों को साथ पढ़ना जरूरी है।
+<div class="visual-title">
+🌍 Geography → Society → Culture
 </div>
-
-<h3>3. प्राकृतिक स्थिति</h3>
-
-<p>
-तुंगभद्रा नदी ने जल की उपलब्धता में सहायता की। आसपास की चट्टानी पहाड़ियाँ
-प्राकृतिक सुरक्षा प्रदान करती थीं। कृषि के लिए सिंचाई व्यवस्था विकसित की गई।
-</p>
-
-<h3>4. साम्राज्य का विस्तार</h3>
-
-<p>
-विजयनगर के शासकों ने दक्षिण भारत के बड़े क्षेत्रों पर अपना राजनीतिक
-प्रभाव स्थापित किया। अलग-अलग समय में साम्राज्य का क्षेत्र और राजनीतिक
-शक्ति बदलती रही।
-</p>
-
-<h3>5. कृष्णदेव राय</h3>
-
-<p>
-कृष्णदेव राय तुलुव वंश के प्रमुख शासकों में से थे। उनके शासनकाल को
-विजयनगर की राजनीतिक और सांस्कृतिक शक्ति के महत्वपूर्ण चरण के रूप में
-देखा जाता है।
-</p>
-
-<p>
-उनके समय में सैन्य अभियानों, राजनीतिक विस्तार, मंदिरों के संरक्षण और
-सांस्कृतिक गतिविधियों को महत्व मिला।
-</p>
-
-<h3>6. किलेबंदी और नगर योजना</h3>
-
-<p>
-विजयनगर में विशाल किलेबंदी, प्रवेश द्वार और प्राकृतिक सुरक्षा व्यवस्था
-का उपयोग किया गया। नगर में राजकीय क्षेत्र, धार्मिक क्षेत्र, बाजार और
-अन्य गतिविधियों के लिए अलग-अलग स्थान थे।
-</p>
-
-<h3>7. जल प्रबंधन</h3>
-
-<p>
-बड़ी आबादी और कृषि को पानी उपलब्ध कराने के लिए जलाशयों, नहरों,
-तालाबों और अन्य जल संरचनाओं का उपयोग किया गया।
-</p>
 
 <div class="flow">
 
-<div class="flow-box">तुंगभद्रा नदी</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">जल व्यवस्था</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">सिंचाई</div>
-<div class="arrow">➡️</div>
-<div class="flow-box">कृषि</div>
+<div class="flow-item">
+🌍 Geography
+<br>
+Rivers • Mountains • Coast
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+👥 Society
+<br>
+Communities • Settlements
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+🗣️ Language
+<br>
+Speech • Literature
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+🙏 Religion
+<br>
+Pilgrimage • Traditions
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-item">
+🎨 Culture
+<br>
+Art • Architecture • Identity
+</div>
 
 </div>
 
-<h3>8. मंदिर और स्थापत्य</h3>
+<div class="explain-animation">
 
-<p>
-मंदिर केवल धार्मिक स्थान नहीं थे। वे सामाजिक, आर्थिक और सांस्कृतिक
-गतिविधियों के महत्वपूर्ण केन्द्र भी हो सकते थे।
-</p>
+<strong>🎬 Animation Explanation:</strong>
 
-<p>
-विरुपाक्ष मंदिर और विट्ठल मंदिर हम्पी के प्रसिद्ध स्थापत्य उदाहरण हैं।
-इनमें पत्थर की उत्कृष्ट शिल्पकला दिखाई देती है।
-</p>
+This is the main conceptual model of the chapter. It shows that regional
+culture emerges through the interaction of environmental conditions,
+communities, languages, religious traditions and artistic practices.
 
-<h3>9. बाजार और व्यापार</h3>
+The arrows indicate interaction, not a strict one-way historical sequence.
+</div>
 
-<p>
-विजयनगर जैसे बड़े शहरी केन्द्र में विभिन्न प्रकार की वस्तुओं का
-व्यापार होता था। कृषि उत्पादन, शिल्प और व्यापार ने शहरी अर्थव्यवस्था
-को मजबूत किया।
-</p>
-
-<h3>10. विदेशी यात्री</h3>
-
-<p>
-विभिन्न विदेशी यात्रियों ने विजयनगर का वर्णन किया। उनके विवरणों से
-बाजार, राजदरबार, भवनों और सामाजिक जीवन के बारे में जानकारी मिलती है।
-</p>
-
-<p>
-लेकिन इतिहासकार इन विवरणों को अन्य स्रोतों से मिलाकर देखते हैं।
-</p>
-
-<h3>11. इतिहास के स्रोत</h3>
-
-<table>
-
-<tr>
-<th>स्रोत</th>
-<th>महत्व</th>
-</tr>
-
-<tr>
-<td>अभिलेख</td>
-<td>शासकों, दान और प्रशासन की जानकारी</td>
-</tr>
-
-<tr>
-<td>स्मारक</td>
-<td>स्थापत्य और धार्मिक जीवन</td>
-</tr>
-
-<tr>
-<td>सिक्के</td>
-<td>आर्थिक और राजनीतिक जानकारी</td>
-</tr>
-
-<tr>
-<td>यात्रियों के विवरण</td>
-<td>नगर और समाज के बारे में बाहरी दृष्टिकोण</td>
-</tr>
-
-<tr>
-<td>पुरातत्व</td>
-<td>भौतिक अवशेष और नगर संरचना</td>
-</tr>
-
-</table>
-
-<h3>12. 1565 और विजयनगर का पतन</h3>
-
-<p>
-1565 में तालिकोटा के युद्ध के बाद विजयनगर की राजधानी को भारी विनाश का
-सामना करना पड़ा। इसके बाद राजधानी की पूर्व राजनीतिक महत्ता कमजोर हुई।
-</p>
-
-<div class="highlight">
-<strong>UPSC Link:</strong>
-विजयनगर का अध्ययन मध्यकालीन भारत में राज्य निर्माण, युद्ध, शहरीकरण,
-कृषि, सिंचाई, मंदिर अर्थव्यवस्था और सांस्कृतिक आदान-प्रदान को जोड़ता है।
 </div>
 
 </section>
+
 
 <!-- AUDIO -->
 
-<section>
+<section class="section audio-box">
 
 <h2>🎧 Audio Learning</h2>
 
-<div class="audio-box">
-
 <p>
-English और Hindi content को सुनने के लिए नीचे दिए गए buttons का उपयोग करें।
+English और Hindi explanation सुनने के लिए नीचे buttons का उपयोग करें।
 </p>
+
+<div class="audio-buttons">
 
 <button onclick="speakEnglish()">▶️ English Audio</button>
 
 <button onclick="speakHindi()">▶️ Hindi Audio</button>
 
-<button onclick="stopSpeech()">⏹️ Stop</button>
+<button onclick="stopSpeech()">⏹ Stop</button>
 
 </div>
 
 </section>
 
+
+<!-- HINDI -->
+
+<section class="section" id="hindi">
+
+<h2>🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
+
+<h3>1. क्षेत्रीय संस्कृतियाँ क्या हैं?</h3>
+
+<p>
+किसी क्षेत्र में रहने वाले लोगों की भाषा, साहित्य, धार्मिक परंपराएँ,
+कला, स्थापत्य, संगीत, भोजन और सामाजिक रीति-रिवाज मिलकर क्षेत्रीय संस्कृति
+के निर्माण में योगदान देते हैं।
+</p>
+
+<p>
+क्षेत्रीय संस्कृतियाँ अलग-अलग क्षेत्रों में पूरी तरह बंद नहीं थीं।
+व्यापारी, तीर्थयात्री, शासक, कलाकार और विद्वान एक स्थान से दूसरे स्थान
+तक जाते थे। इससे विचारों और परंपराओं का आदान-प्रदान हुआ।
+</p>
+
+<div class="highlight">
+
+<strong>मुख्य बात:</strong>
+
+क्षेत्रीय संस्कृति एक लंबे समय में विकसित होने वाली प्रक्रिया है।
+इसमें भूगोल, समाज, भाषा, धर्म, राजनीति और कला सभी की भूमिका हो सकती है।
+</div>
+
+
+<h3>2. भाषा और क्षेत्रीय पहचान</h3>
+
+<p>
+क्षेत्रीय भाषाएँ स्थानीय लोगों को अपने अनुभव और परंपराओं को व्यक्त करने
+का माध्यम देती थीं। कवियों और लेखकों ने इन भाषाओं में साहित्य की रचना की।
+</p>
+
+
+<h3>3. चेर और मलयालम</h3>
+
+<p>
+दक्षिण-पश्चिमी क्षेत्र में चेर परंपरा और स्थानीय भाषाई विकास के बीच संबंध
+दिखाई देता है। समय के साथ मलयालम एक विशिष्ट क्षेत्रीय भाषा के रूप में
+विकसित हुई।
+</p>
+
+
+<h3>4. जगन्नाथ परंपरा</h3>
+
+<p>
+ओडिशा का पुरी क्षेत्र जगन्नाथ परंपरा का महत्वपूर्ण केन्द्र बना। मंदिर
+धार्मिक गतिविधियों के साथ-साथ तीर्थयात्रा, आर्थिक गतिविधियों और सांस्कृतिक
+परंपराओं से भी जुड़ा था।
+</p>
+
+
+<h3>5. राजपूत वीर परंपराएँ</h3>
+
+<p>
+राजपूत परंपराओं में वीरता, सम्मान, निष्ठा और बलिदान जैसी धारणाओं को
+महत्व दिया गया। इन परंपराओं को लोककथाओं, कविताओं और साहित्य के माध्यम
+से आगे बढ़ाया गया।
+</p>
+
+
+<h3>6. कथक का विकास</h3>
+
+<p>
+कथक का संबंध कहानी कहने की परंपरा से जुड़ा है। समय के साथ इसमें संगीत,
+नृत्य और दरबारी संरक्षण के विभिन्न प्रभाव जुड़े।
+</p>
+
+
+<h3>7. चित्रकला</h3>
+
+<p>
+क्षेत्रीय दरबारों ने विभिन्न चित्रकला परंपराओं को संरक्षण दिया।
+ऐतिहासिक चित्रों से वस्त्र, दरबारी जीवन, वास्तुकला और धार्मिक या साहित्यिक
+विषयों के बारे में जानकारी मिल सकती है।
+</p>
+
+
+<h3>8. बंगाल की क्षेत्रीय संस्कृति</h3>
+
+<p>
+बंगाल की संस्कृति के निर्माण में नदियों, कृषि, बस्तियों, धार्मिक परंपराओं,
+भाषा और साहित्य की भूमिका रही। चावल की खेती कई क्षेत्रों में महत्वपूर्ण
+थी।
+</p>
+
+
+<h3>9. इतिहासकारों की पद्धति</h3>
+
+<p>
+इतिहासकार साहित्य, अभिलेख, स्थापत्य, चित्रकला और पुरातात्त्विक सामग्री
+जैसे विभिन्न स्रोतों की तुलना करते हैं। किसी एक स्रोत को बिना जाँच के
+पूर्ण सत्य नहीं माना जाता।
+</p>
+
+<div class="upsc">
+
+<strong>UPSC दृष्टिकोण:</strong>
+
+क्षेत्रीय संस्कृति को समझने के लिए Geography + Society + Language +
+Religion + Art + Political Patronage के बीच संबंध समझना महत्वपूर्ण है।
+</div>
+
+</section>
+
+
 <!-- UPSC -->
 
-<section id="upsc">
+<section class="section" id="upsc">
 
 <h2>📌 UPSC Important Points</h2>
 
 <ul>
 
-<li>Vijayanagara was both an empire and its capital city.</li>
+<li>Regional cultures develop through interaction of multiple factors.</li>
 
-<li>Hampi is the major archaeological site associated with Vijayanagara.</li>
+<li>Language is an important component of regional identity.</li>
 
-<li>The Tungabhadra River was important for the region.</li>
+<li>Literature can preserve regional traditions and cultural ideas.</li>
 
-<li>Natural hills and fortifications contributed to defence.</li>
+<li>Religious centres can become cultural and economic centres.</li>
 
-<li>Krishnadeva Raya was a major ruler of the Tuluva dynasty.</li>
+<li>Jagannatha tradition is associated strongly with Puri in Odisha.</li>
 
-<li>Water management was essential for agriculture and urban life.</li>
+<li>Rajput traditions included heroic narratives and ideals of honour.</li>
 
-<li>Temples were important religious, social and economic institutions.</li>
+<li>Kathak developed through storytelling, music, dance and patronage.</li>
 
-<li>Markets connected the capital with wider economic networks.</li>
+<li>Regional courts supported different artistic traditions.</li>
 
-<li>Foreign travellers provide valuable but limited perspectives.</li>
+<li>Bengal's culture was influenced by its riverine environment and agriculture.</li>
 
-<li>Inscriptions, monuments, coins and archaeology help reconstruct history.</li>
+<li>Historians compare different sources to construct a more reliable interpretation.</li>
 
-<li>1565 is associated with the major destruction of the capital after the Battle of Talikota.</li>
+<li>Literary sources may contain idealisation or exaggeration.</li>
+
+<li>Inscriptions often reflect the viewpoint of the person or institution that created them.</li>
 
 </ul>
 
 </section>
 
+
 <!-- MAINS -->
 
-<section id="mains">
+<section class="section" id="mains">
 
 <h2>✍️ Mains Practice</h2>
 
 <div class="mains-box">
 <strong>Q1.</strong>
-Explain the geographical factors that contributed to the development of Vijayanagara.
+Explain the major factors responsible for the development of regional cultures in medieval India.
 </div>
 
 <div class="mains-box">
 <strong>Q2.</strong>
-Discuss the importance of water management in sustaining the Vijayanagara capital.
+How did language and literature contribute to the formation of regional identities?
 </div>
 
 <div class="mains-box">
 <strong>Q3.</strong>
-How did temples contribute to the social and economic life of Vijayanagara?
+Discuss the role of religious centres in the development of regional cultures.
 </div>
 
 <div class="mains-box">
 <strong>Q4.</strong>
-Discuss the importance and limitations of foreign travellers' accounts
-as sources for reconstructing the history of Vijayanagara.
+How can paintings, architecture and inscriptions help historians reconstruct regional history?
 </div>
 
 <div class="mains-box">
 <strong>Q5.</strong>
-Explain how agriculture, trade, political power and urbanisation were
-interconnected in the Vijayanagara Empire.
+“Regional cultures were shaped by interaction rather than isolation.” Explain with suitable examples.
 </div>
 
 </section>
 
-<!-- REVISION -->
 
-<section id="revision">
+<!-- QUICK REVISION -->
 
-<h2>🧠 Quick Revision</h2>
+<section class="section">
 
-<ul class="revision-list">
+<h2>🔁 Quick Revision</h2>
 
-<li>🏛️ Vijayanagara = City of Victory.</li>
+<div class="revision-grid">
 
-<li>📍 Major archaeological site = Hampi.</li>
-
-<li>🌊 Important river = Tungabhadra.</li>
-
-<li>👑 Major ruler = Krishnadeva Raya.</li>
-
-<li>🛕 Important monuments = Virupaksha and Vitthala temples.</li>
-
-<li>🌾 Agriculture depended partly on irrigation.</li>
-
-<li>🛍️ Markets supported the urban economy.</li>
-
-<li>📜 Inscriptions and monuments are major historical sources.</li>
-
-<li>🌍 Foreign travellers provide external observations.</li>
-
-<li>⚔️ 1565 = major destruction of the capital after Talikota.</li>
-
-</ul>
-
-</section>
-
-<!-- FLOW -->
-
-<section>
-
-<h2>🎬 Final Chapter Conceptual Flow</h2>
-
-<div class="flow">
-
-<div class="flow-box">
-Vijayanagara<br>
-Empire
+<div class="revision-card">
+<strong>🌍 Regional Culture</strong>
+<p>Culture shaped by geography, society, language, religion and art.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Hampi<br>
-Capital
+<div class="revision-card">
+<strong>🗣️ Language</strong>
+<p>Important medium of regional identity and literature.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Fortifications<br>
-& Planning
+<div class="revision-card">
+<strong>🛕 Jagannatha</strong>
+<p>Important religious and cultural tradition associated with Puri.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Water<br>
-Management
+<div class="revision-card">
+<strong>🏹 Rajputs</strong>
+<p>Heroic traditions emphasised courage, honour and loyalty.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Agriculture<br>
-& Trade
+<div class="revision-card">
+<strong>💃 Kathak</strong>
+<p>Developed through storytelling, music, dance and patronage.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Temples<br>
-& Culture
+<div class="revision-card">
+<strong>🎨 Paintings</strong>
+<p>Visual sources that can reveal aspects of historical culture.</p>
 </div>
 
-<div class="arrow">➡️</div>
+<div class="revision-card">
+<strong>🌾 Bengal</strong>
+<p>Riverine geography and agriculture influenced cultural development.</p>
+</div>
 
-<div class="flow-box">
-Historical<br>
-Sources
+<div class="revision-card">
+<strong>📚 Historical Sources</strong>
+<p>Historians compare multiple sources instead of depending on only one.</p>
 </div>
 
 </div>
 
 </section>
 
-<!-- TESTS -->
 
-<section id="tests">
+<!-- MCQs -->
 
-<h2>🎯 Test Series — 20 MCQs</h2>
+<section class="section" id="tests">
+
+<h2>🎯 Chapter Tests — 4 × 5 = 20 MCQs</h2>
 
 <p>
-<strong>4 Tests × 5 Questions = 20 Questions</strong>
+पहले अपना answer select करो। फिर <strong>Check Answer</strong> दबाने पर
+correct answer और explanation दिखाई देगा।
 </p>
 
-<div id="questions"></div>
-
-</section>
-
-<section>
-
-<h2>🏁 Chapter Completion</h2>
-
-<p>
-All sections पढ़ने और tests attempt करने के बाद नीचे button दबाएँ।
-</p>
+<div class="mcq-container" id="questions"></div>
 
 <button class="complete-btn" onclick="completeChapter()">
 ✅ Complete Chapter
 </button>
 
-<p id="completeMessage"></p>
-
 </section>
 
-</div>
+</main>
+
 
 <footer>
 
-<p>🇮🇳 UPSC Shiksha</p>
-<p>Class 7 History — An Imperial Capital: Vijayanagara</p>
-<p>Original educational study material</p>
+<p><strong>🇮🇳 UPSC Shiksha</strong></p>
+
+<p>
+Class 7 History • The Making of Regional Cultures
+</p>
+
+<p class="small">
+Original supplementary study material for UPSC preparation.
+</p>
 
 </footer>
+
 
 <script>
 
 const questions = [
 
 {
-q:"Vijayanagara was the name of:",
+q:"Regional cultures generally develop through interaction between which factors?",
 options:[
-"Only a temple",
-"Only a river",
-"An empire and its capital",
-"Only a market"
-],
-answer:"C",
-exp:"Vijayanagara referred to both a powerful empire and its imperial capital."
-},
-
-{
-q:"Hampi is mainly associated with:",
-options:[
-"Vijayanagara",
-"Magadha",
-"Chola capital only",
-"Mughal Delhi"
-],
-answer:"A",
-exp:"The archaeological remains of the Vijayanagara capital are located at Hampi."
-},
-
-{
-q:"Which river was important for the Vijayanagara region?",
-options:[
-"Ganga",
-"Yamuna",
-"Tungabhadra",
-"Narmada"
-],
-answer:"C",
-exp:"The Tungabhadra River was important for water, agriculture and the landscape of Vijayanagara."
-},
-
-{
-q:"Which ruler belonged to the Tuluva dynasty?",
-options:[
-"Krishnadeva Raya",
-"Prithviraja Chauhan",
-"Harshavardhana",
-"Ashoka"
-],
-answer:"A",
-exp:"Krishnadeva Raya was a major ruler of the Tuluva dynasty."
-},
-
-{
-q:"Which of the following is an important feature of Vijayanagara?",
-options:[
-"Only underground cities",
-"Extensive fortifications",
-"No irrigation",
-"No temples"
+"Only military power",
+"Geography, society, language, religion and art",
+"Only climate",
+"Only royal families"
 ],
 answer:"B",
-exp:"Vijayanagara had extensive fortifications along with natural defensive features."
+exp:"Regional cultures develop through the interaction of geography, communities, languages, religious traditions, political institutions and artistic practices."
 },
 
 {
-q:"Why was water management important at Vijayanagara?",
+q:"Which factor is especially important in expressing regional identity?",
 options:[
-"For agriculture and urban needs",
-"Only for decoration",
-"Only for military ceremonies",
-"It had no importance"
+"Language",
+"Coin weight only",
+"Military rank",
+"Tax rate alone"
 ],
 answer:"A",
-exp:"Water was necessary for agriculture, domestic use and sustaining the large urban population."
+exp:"Language provides an important medium for expressing local experiences, literature and cultural identity."
 },
 
 {
-q:"Which is a famous temple associated with Hampi?",
+q:"The Jagannatha tradition is strongly associated with which place?",
 options:[
-"Virupaksha Temple",
-"Konark Temple only",
-"Somnath Temple only",
-"Golden Temple"
-],
-answer:"A",
-exp:"The Virupaksha Temple is an important monument in the Hampi landscape."
-},
-
-{
-q:"The Vitthala Temple is associated with:",
-options:[
-"Hampi",
+"Puri",
 "Delhi",
-"Patna",
-"Agra"
+"Agra",
+"Lahore"
 ],
 answer:"A",
-exp:"The Vitthala Temple is one of the famous architectural complexes at Hampi."
+exp:"The Jagannatha tradition is strongly associated with Puri in Odisha."
 },
 
 {
-q:"Why are traveller accounts useful to historians?",
+q:"The development of Malayalam is associated particularly with which region?",
 options:[
-"They provide observations about places and society",
-"They are always completely unbiased",
-"They replace all archaeological evidence",
-"They contain no historical information"
+"Kerala",
+"Punjab",
+"Rajasthan",
+"Assam"
 ],
 answer:"A",
-exp:"Traveller accounts can provide observations about cities, markets, rulers and social life."
+exp:"Malayalam developed as a distinct regional language in the Kerala region."
 },
 
 {
-q:"Which source can provide information through physical remains?",
+q:"Rajput heroic traditions commonly emphasised which values?",
 options:[
-"Archaeology",
-"Only oral rumours",
-"Only modern newspapers",
-"Only fictional stories"
+"Honour and courage",
+"Industrial production",
+"Ocean navigation",
+"Scientific taxation"
 ],
 answer:"A",
-exp:"Archaeology studies material remains such as buildings, objects and settlement patterns."
+exp:"Rajput heroic traditions often celebrated courage, loyalty, honour and sacrifice."
 },
 
 {
-q:"What is an inscription?",
+q:"The term Kathak is historically connected with which tradition?",
 options:[
-"A written record engraved or recorded on a durable surface",
-"A type of irrigation tank",
-"A military weapon",
-"A market tax only"
+"Storytelling",
+"Shipbuilding",
+"Coin minting",
+"Irrigation engineering"
 ],
 answer:"A",
-exp:"Inscriptions are written records preserved on materials such as stone or metal."
+exp:"Kathak is connected with the tradition of storytellers and later developed through music, dance and patronage."
 },
 
 {
-q:"What was one major function of markets in Vijayanagara?",
+q:"Why are paintings useful to historians?",
 options:[
-"Exchange of goods",
-"Only religious worship",
-"Only military training",
-"Only writing inscriptions"
+"They can provide visual evidence about historical life",
+"They always show exact events",
+"They contain no artistic interpretation",
+"They replace all archaeological evidence"
 ],
 answer:"A",
-exp:"Markets supported the exchange and distribution of goods in the urban economy."
+exp:"Paintings can provide evidence about clothing, architecture, court life, religious themes and artistic conventions, although they may also be idealised."
 },
 
 {
-q:"Agricultural surplus could support:",
+q:"Which geographical feature strongly influenced agriculture and settlement in Bengal?",
 options:[
-"Only temples",
-"Only travellers",
-"Taxation, armies and urban centres",
-"Nothing",
-],
-answer:"C",
-exp:"Agricultural production and surplus could support taxation, armies, temples and urban populations."
-},
-
-{
-q:"Which natural feature helped Vijayanagara's defence?",
-options:[
-"Rocky hills",
-"Desert dunes only",
-"Ocean ice",
-"Glaciers"
+"River systems",
+"Deserts alone",
+"High mountains alone",
+"Polar climate"
 ],
 answer:"A",
-exp:"The rocky terrain and hills around Hampi provided natural defensive advantages."
+exp:"Bengal's riverine environment influenced agriculture, settlements and economic life."
 },
 
 {
-q:"Which year is associated with the major destruction of Vijayanagara's capital?",
+q:"Why should historians compare multiple sources?",
 options:[
-"1526",
-"1565",
-"1600",
-"1757"
+"Because every source has limitations",
+"Because one source is always false",
+"Because written sources have no value",
+"Because archaeology cannot provide evidence"
+],
+answer:"A",
+exp:"Different sources provide different types of evidence and also have limitations, so comparison helps produce a more balanced interpretation."
+},
+
+{
+q:"What can inscriptions sometimes reveal?",
+options:[
+"Donations, rulers and institutions",
+"Only weather",
+"Only crop prices",
+"Only dance techniques"
+],
+answer:"A",
+exp:"Inscriptions can provide information about rulers, donations, institutions, religious activities and political claims."
+},
+
+{
+q:"A regional culture should best be understood as:",
+options:[
+"A completely isolated system",
+"A result of continuous cultural interaction",
+"A purely military institution",
+"A fixed biological characteristic"
 ],
 answer:"B",
-exp:"1565 is associated with the Battle of Talikota and major destruction of the capital."
+exp:"Regional cultures develop through interaction among communities, languages, religions, political institutions and artistic traditions."
 },
 
 {
-q:"Why should historians compare different sources?",
+q:"Which activity could help cultural ideas travel between regions?",
 options:[
-"To build a more reliable historical interpretation",
-"Because no source is ever useful",
-"To ignore archaeology",
-"To use only traveller accounts"
+"Pilgrimage",
+"Isolation",
+"Permanent closure of roads",
+"Stopping communication"
 ],
 answer:"A",
-exp:"Comparing sources helps historians identify differences, limitations and supporting evidence."
+exp:"Pilgrims travelled between religious centres and helped connect different regions and traditions."
 },
 
 {
-q:"Which pair is correctly matched?",
+q:"What role could regional courts play in cultural development?",
 options:[
-"Vijayanagara — Hampi",
-"Vijayanagara — Pataliputra",
-"Vijayanagara — Taxila",
-"Vijayanagara — Sarnath"
+"Supporting literature and art",
+"Eliminating all local traditions",
+"Preventing artistic activity",
+"Ending language development"
 ],
 answer:"A",
-exp:"Hampi is the major archaeological site associated with Vijayanagara."
+exp:"Regional courts could provide patronage to poets, artists, musicians and architects."
 },
 
 {
-q:"Temples in Vijayanagara could function as:",
+q:"Which is an important caution when using literary sources?",
 options:[
-"Only private houses",
-"Religious, social and economic institutions",
-"Only military forts",
-"Only water tanks"
-],
-answer:"B",
-exp:"Large temples could have important religious, social, cultural and economic roles."
-},
-
-{
-q:"Which source can provide information about rulers and donations?",
-options:[
-"Inscriptions",
-"Only weather reports",
-"Only modern maps",
-"Only fictional novels"
+"They may contain idealisation",
+"They always contain exact statistics",
+"They are never influenced by their authors",
+"They cannot reveal cultural ideas"
 ],
 answer:"A",
-exp:"Inscriptions can record royal orders, donations, institutions and other historical information."
+exp:"Literary works can reveal cultural ideas but may also idealise people, events or social values."
 },
 
 {
-q:"The best way to understand Vijayanagara's urban economy is to connect:",
+q:"Which combination best represents the cultural development process discussed in this chapter?",
 options:[
-"Agriculture, trade, crafts and political power",
-"Only temples",
-"Only warfare",
-"Only foreign travellers"
+"Geography → Society → Language → Religion → Art",
+"War → Tax → Army → War",
+"Coins → Weapons → Climate → Crops",
+"Palace → Army → Coin → River"
 ],
 answer:"A",
-exp:"The city's economy depended on interconnected systems of agriculture, trade, crafts and political authority."
+exp:"Regional cultures emerge through interaction among geography, society, language, religious traditions and artistic expression."
+},
+
+{
+q:"Why are religious centres historically important?",
+options:[
+"They could connect worship, pilgrimage, economy and culture",
+"They were only military camps",
+"They had no connection with society",
+"They existed only for taxation"
+],
+answer:"A",
+exp:"Major religious centres could become places of worship, pilgrimage, economic activity, artistic production and political patronage."
+},
+
+{
+q:"Which source is primarily visual evidence?",
+options:[
+"Painting",
+"Tax register",
+"Written inscription",
+"Literary poem"
+],
+answer:"A",
+exp:"Paintings are visual sources and can provide information about historical representation, clothing, architecture and cultural themes."
+},
+
+{
+q:"What is the best approach when studying a historical inscription?",
+options:[
+"Consider who created it and why",
+"Assume every claim is automatically true",
+"Ignore its historical context",
+"Treat it as a modern newspaper"
+],
+answer:"A",
+exp:"Historians examine the creator, purpose, audience and context of an inscription before interpreting its claims."
+},
+
+{
+q:"What is one major connection between regional cultures and literature?",
+options:[
+"Literature can preserve regional stories and traditions",
+"Literature always eliminates local identities",
+"Literature has no connection with language",
+"Literature cannot reflect cultural values"
+],
+answer:"A",
+exp:"Literature can preserve stories, religious ideas, social values and regional traditions through language."
+},
+
+{
+q:"Which statement best summarises the chapter?",
+options:[
+"Regional cultures developed through interaction and adaptation",
+"Every region remained completely isolated",
+"Only rulers created culture",
+"Culture was unrelated to geography or society"
+],
+answer:"A",
+exp:"The chapter shows how regional cultures developed through interaction among geography, communities, languages, religious traditions, political patronage and artistic practices."
 }
 
 ];
 
+
 function renderQuestions(){
 
-  const container=document.getElementById("questions");
+const container=document.getElementById("questions");
 
-  let html="";
+let html="";
 
-  questions.forEach((item,index)=>{
+questions.forEach((item,index)=>{
 
-    const number=index+1;
+const qNo=index+1;
 
-    html+=`
-    <div class="question">
+if(index%5===0){
 
-      <h3>Q${number}. ${item.q}</h3>
+html+=`
+<div class="test-heading">
+📝 Test ${Math.floor(index/5)+1} — Questions ${index+1} to ${index+5}
+</div>
+`;
 
-      ${item.options.map((option,i)=>{
-
-        const letter=String.fromCharCode(65+i);
-
-        return `
-        <label class="option">
-          <input type="radio" name="q${number}" value="${letter}">
-          <strong>${letter}.</strong> ${option}
-        </label>
-        `;
-
-      }).join("")}
-
-      <button class="check-btn"
-        onclick="checkAnswer(${number})">
-        ✅ Check Answer
-      </button>
-
-      <div id="result${number}" class="result"></div>
-
-    </div>
-    `;
-
-  });
-
-  container.innerHTML=html;
-
-  updateProgress();
 }
 
-function checkAnswer(number){
+html+=`
 
-  const selected=
-    document.querySelector(
-      `input[name="q${number}"]:checked`
-    );
+<div class="question">
 
-  const result=
-    document.getElementById(`result${number}`);
+<p>
+<strong>Q${qNo}. ${item.q}</strong>
+</p>
 
-  if(!selected){
+<label class="option">
+<input type="radio" name="q${qNo}" value="A">
+A. ${item.options[0]}
+</label>
 
-    result.style.display="block";
-    result.className="result wrong";
-    result.innerHTML=
-      "⚠️ Please select an option first.";
+<label class="option">
+<input type="radio" name="q${qNo}" value="B">
+B. ${item.options[1]}
+</label>
 
-    return;
-  }
+<label class="option">
+<input type="radio" name="q${qNo}" value="C">
+C. ${item.options[2]}
+</label>
 
-  const current=questions[number-1];
+<label class="option">
+<input type="radio" name="q${qNo}" value="D">
+D. ${item.options[3]}
+</label>
 
-  result.style.display="block";
+<button
+class="check-btn"
+onclick="checkAnswer(${index})">
+Check Answer
+</button>
 
-  if(selected.value===current.answer){
+<div class="answer-box" id="answer${index}"></div>
 
-    result.className="result correct";
+</div>
+`;
 
-    result.innerHTML=
-      `<strong>✅ Correct!</strong><br>
-       Correct Answer: ${current.answer}<br>
-       <br>
-       <strong>Explanation:</strong> ${current.exp}`;
+});
 
-  }else{
+container.innerHTML=html;
 
-    result.className="result wrong";
+updateProgress();
 
-    result.innerHTML=
-      `<strong>❌ Incorrect.</strong><br>
-       Correct Answer: ${current.answer}<br>
-       <br>
-       <strong>Explanation:</strong> ${current.exp}`;
-
-  }
-
-  localStorage.setItem(
-    `class7ch7q${number}`,
-    selected.value
-  );
-
-  updateProgress();
 }
+
+
+function checkAnswer(index){
+
+const selected=
+document.querySelector(
+`input[name="q${index+1}"]:checked`
+);
+
+const box=
+document.getElementById(`answer${index}`);
+
+if(!selected){
+
+box.style.display="block";
+
+box.innerHTML=
+"⚠️ Please select an option first.";
+
+return;
+
+}
+
+const item=questions[index];
+
+const correct=
+selected.value===item.answer;
+
+box.style.display="block";
+
+box.innerHTML=
+correct
+?
+`<strong>✅ Correct!</strong><br>
+Correct answer: ${item.answer}<br><br>
+${item.exp}`
+:
+`<strong>❌ Not correct.</strong><br>
+Correct answer: ${item.answer}<br><br>
+${item.exp}`;
+
+localStorage.setItem(
+"class7ch7q"+(index+1),
+selected.value
+);
+
+updateProgress();
+
+}
+
 
 function updateProgress(){
 
-  let checked=0;
+let checked=0;
 
-  questions.forEach((q,index)=>{
+questions.forEach((_,index)=>{
 
-    if(
-      localStorage.getItem(`class7ch7q${index+1}`)
-    ){
-      checked++;
-    }
+if(
+localStorage.getItem(
+"class7ch7q"+(index+1)
+)
+){
+checked++;
+}
 
-  });
+});
 
-  const percentage=
-    Math.round((checked/questions.length)*100);
+const percent=
+Math.round(
+(checked/questions.length)*100
+);
 
-  document.getElementById("progressBar").style.width=
-    percentage+"%";
+document.getElementById(
+"progressFill"
+).style.width=percent+"%";
 
-  document.getElementById("progressText").innerText=
-    percentage+"% completed";
+document.getElementById(
+"progressText"
+).textContent=
+percent+"% completed";
 
 }
+
 
 function completeChapter(){
 
-  localStorage.setItem("class7ch7done","true");
+localStorage.setItem(
+"class7ch7done",
+"true"
+);
 
-  document.getElementById("completeMessage").innerHTML=
-    "🎉 <strong>Chapter 7 Completed!</strong> Your progress has been saved.";
+document.getElementById(
+"progressFill"
+).style.width="100%";
 
-  updateProgress();
+document.getElementById(
+"progressText"
+).textContent=
+"100% completed — Chapter Finished 🎉";
+
+alert(
+"🎉 Chapter 7 completed! Keep going with the next chapter."
+);
 
 }
+
 
 function toggleTheme(){
 
-  document.body.classList.toggle("dark");
+document.body.classList.toggle("dark");
 
-  localStorage.setItem(
-    "class7ch7theme",
-    document.body.classList.contains("dark")
-      ? "dark"
-      : "light"
-  );
+const isDark=
+document.body.classList.contains("dark");
+
+localStorage.setItem(
+"class7ch7theme",
+isDark?"dark":"light"
+);
 
 }
+
 
 function loadTheme(){
 
-  const theme=
-    localStorage.getItem("class7ch7theme");
+const theme=
+localStorage.getItem("class7ch7theme");
 
-  if(theme==="dark"){
-    document.body.classList.add("dark");
-  }
+if(theme==="dark"){
+
+document.body.classList.add("dark");
+
+}
 
 }
 
-function speakText(text,lang){
 
-  window.speechSynthesis.cancel();
+const englishText=`
 
-  const speech=
-    new SpeechSynthesisUtterance(text);
+The Making of Regional Cultures.
 
-  speech.lang=lang;
-  speech.rate=.9;
+Regional cultures developed through interaction between geography,
+communities, languages, religious traditions, political institutions
+and artistic practices.
 
-  window.speechSynthesis.speak(speech);
+Language became an important expression of regional identity.
+The development of regional languages helped preserve local literature
+and traditions.
+
+The Jagannatha tradition of Puri shows how religious centres could become
+important centres of pilgrimage, economy and culture.
+
+Rajput traditions preserved heroic ideas of courage, honour and loyalty.
+
+Kathak developed through storytelling, music, dance and systems of patronage.
+
+Regional courts supported painting, literature, architecture and other arts.
+
+Bengal developed a distinctive culture influenced by its river systems,
+agriculture, settlements, religion and literature.
+
+Historians study regional cultures through literature, inscriptions,
+architecture, paintings and archaeological evidence.
+
+The most important idea is that regional cultures developed through
+interaction rather than complete isolation.
+
+`;
+
+
+const hindiText=`
+
+क्षेत्रीय संस्कृतियों का निर्माण भूगोल, समाज, भाषा, धर्म, राजनीति और कला
+के बीच होने वाली लगातार बातचीत से हुआ।
+
+भाषा क्षेत्रीय पहचान का महत्वपूर्ण माध्यम बनी।
+
+पुरी की जगन्नाथ परंपरा दिखाती है कि धार्मिक केन्द्र तीर्थयात्रा,
+अर्थव्यवस्था और संस्कृति के केन्द्र भी बन सकते थे।
+
+राजपूत परंपराओं में वीरता, सम्मान और निष्ठा जैसे आदर्शों को महत्व दिया गया।
+
+कथक का विकास कहानी कहने, संगीत, नृत्य और संरक्षण की परंपराओं से जुड़ा।
+
+क्षेत्रीय दरबारों ने चित्रकला, साहित्य और स्थापत्य को संरक्षण दिया।
+
+बंगाल की संस्कृति के विकास में नदियों, कृषि, बस्तियों, धार्मिक परंपराओं
+और साहित्य की महत्वपूर्ण भूमिका रही।
+
+इतिहासकार विभिन्न स्रोतों की तुलना करके क्षेत्रीय इतिहास को समझते हैं।
+
+इस अध्याय की मुख्य बात यह है कि क्षेत्रीय संस्कृतियाँ अलगाव में नहीं,
+बल्कि लगातार होने वाले सांस्कृतिक आदान-प्रदान से विकसित हुईं।
+
+`;
+
+
+function speakText(text,language){
+
+if("speechSynthesis" in window){
+
+window.speechSynthesis.cancel();
+
+const speech=
+new SpeechSynthesisUtterance(text);
+
+speech.lang=language;
+
+speech.rate=.9;
+
+window.speechSynthesis.speak(speech);
 
 }
+
+}
+
 
 function speakEnglish(){
 
-  speakText(
-    "Vijayanagara was a powerful empire and an important imperial capital in southern India. Hampi was its famous capital. The Tungabhadra River, fortifications, agriculture, irrigation, temples, markets and trade were important features of the city. Krishnadeva Raya was one of its major rulers. Historians study Vijayanagara using monuments, inscriptions, archaeology, coins, literature and accounts of foreign travellers.",
-    "en-IN"
-  );
+speakText(englishText,"en-IN");
 
 }
+
 
 function speakHindi(){
 
-  speakText(
-    "विजयनगर दक्षिण भारत का एक शक्तिशाली साम्राज्य और उसकी राजधानी थी। हम्पी इसके प्रमुख पुरातात्विक अवशेषों के लिए प्रसिद्ध है। तुंगभद्रा नदी, किलेबंदी, कृषि, सिंचाई, मंदिर, बाजार और व्यापार विजयनगर के महत्वपूर्ण पहलू थे। कृष्णदेव राय इसके प्रमुख शासकों में से एक थे। इतिहासकार अभिलेखों, स्मारकों, पुरातत्व, सिक्कों, साहित्य और विदेशी यात्रियों के विवरणों से विजयनगर के इतिहास को समझते हैं।",
-    "hi-IN"
-  );
+speakText(hindiText,"hi-IN");
 
 }
+
 
 function stopSpeech(){
 
-  window.speechSynthesis.cancel();
+if("speechSynthesis" in window){
+
+window.speechSynthesis.cancel();
 
 }
+
+}
+
+
+window.addEventListener(
+"load",
+function(){
 
 loadTheme();
 
 renderQuestions();
 
-if(localStorage.getItem("class7ch7done")==="true"){
-
-  document.getElementById("completeMessage").innerHTML=
-    "✅ Chapter 7 was previously marked as completed.";
-
 }
+);
 
 </script>
 
