@@ -7,7 +7,7 @@
 <title>New Kings and Kingdoms | UPSC Shiksha</title>
 
 <meta name="description"
-content="Class 7 History Chapter 2 - New Kings and Kingdoms. Detailed English and Hindi UPSC learning notes, visuals, audio, MCQs, Mains practice and revision.">
+content="Class 7 History Chapter 2 - New Kings and Kingdoms. Detailed English and Hindi UPSC learning notes, audio, visuals, MCQs, Mains practice and revision.">
 
 <style>
 *{
@@ -17,7 +17,7 @@ content="Class 7 History Chapter 2 - New Kings and Kingdoms. Detailed English an
 }
 
 body{
-  font-family:Arial, sans-serif;
+  font-family:Arial,sans-serif;
   line-height:1.7;
   background:#f4f7fb;
   color:#172033;
@@ -179,6 +179,7 @@ button,.btn{
 
 .highlight{
   background:#fff4cc;
+  color:#4a3500;
   border-left:5px solid #f39c12;
   padding:14px;
   border-radius:10px;
@@ -187,6 +188,7 @@ button,.btn{
 
 .example{
   background:#eaf7ee;
+  color:#174d2c;
   border-left:5px solid #27ae60;
   padding:14px;
   border-radius:10px;
@@ -195,6 +197,7 @@ button,.btn{
 
 .warning{
   background:#fff0f0;
+  color:#5a1717;
   border-left:5px solid #c0392b;
   padding:14px;
   border-radius:10px;
@@ -289,6 +292,7 @@ th{
 
 .audio-box{
   background:#f0f4ff;
+  color:#172033;
   padding:18px;
   border-radius:15px;
   margin:20px 0;
@@ -302,16 +306,21 @@ th{
 
 .upsc-list li,
 .revision-list li{
-  margin:8px 0;
-  margin-left:20px;
+  margin:8px 0 8px 20px;
 }
 
 .mains-box{
   background:#f8f1ff;
+  color:#35184d;
   border-left:5px solid #8e44ad;
   padding:15px;
   border-radius:10px;
   margin:10px 0;
+  font-weight:500;
+}
+
+.mains-box strong{
+  color:#6c3483;
 }
 
 .test{
@@ -320,6 +329,7 @@ th{
 
 .question{
   background:#f8fafc;
+  color:#172033;
   border:1px solid #ddd;
   border-radius:14px;
   padding:17px;
@@ -335,6 +345,7 @@ th{
   padding:9px;
   margin:6px 0;
   background:white;
+  color:#172033;
   border:1px solid #ddd;
   border-radius:8px;
   cursor:pointer;
@@ -350,6 +361,7 @@ th{
   padding:13px;
   border-radius:10px;
   background:#eaf7ee;
+  color:#174d2c;
 }
 
 .check-btn{
@@ -380,6 +392,10 @@ footer{
   margin-top:30px;
 }
 
+/* =========================
+   DARK MODE
+========================= */
+
 body.dark{
   background:#111827;
   color:#e5e7eb;
@@ -392,10 +408,21 @@ body.dark header{
 body.dark .hero,
 body.dark .progress-box,
 body.dark .quick-nav,
-body.dark .section,
-body.dark .question{
+body.dark .section{
   background:#1f2937;
   color:#e5e7eb;
+}
+
+body.dark .hero h2{
+  color:#ffb59f;
+}
+
+body.dark .section h2{
+  color:#ffb59f;
+}
+
+body.dark .section h3{
+  color:#ffc1ad;
 }
 
 body.dark .quick-nav a{
@@ -403,14 +430,21 @@ body.dark .quick-nav a{
   color:#ffd5c8;
 }
 
+body.dark .badge{
+  background:#342322;
+  color:#ffd5c8;
+}
+
 body.dark .highlight{
   background:#4a3d16;
   color:#fff4c2;
+  border-left-color:#f1c40f;
 }
 
 body.dark .example{
   background:#163b27;
   color:#d8ffe5;
+  border-left-color:#2ecc71;
 }
 
 body.dark .warning{
@@ -420,20 +454,54 @@ body.dark .warning{
 
 body.dark .visual-card{
   background:#302426;
+  color:#f3e8e4;
   border-color:#6d4a43;
 }
 
 body.dark .audio-box{
   background:#202b42;
+  color:#f1f5f9;
 }
 
 body.dark .question{
-  border-color:#374151;
+  background:#1f2937;
+  color:#f3f4f6;
+  border-color:#4b5563;
+}
+
+body.dark .question h4{
+  color:#ffffff;
 }
 
 body.dark .option{
   background:#273244;
+  color:#f9fafb;
   border-color:#4b5563;
+}
+
+body.dark .option:hover{
+  background:#3a465b;
+}
+
+body.dark .answer-box{
+  background:#163b27;
+  color:#d8ffe5;
+}
+
+body.dark .mains-box{
+  background:#29213a;
+  color:#f3e8ff;
+  border-left:5px solid #c084fc;
+  box-shadow:0 2px 8px rgba(0,0,0,.25);
+}
+
+body.dark .mains-box strong{
+  color:#ffffff;
+}
+
+body.dark .final-flow{
+  background:linear-gradient(135deg,#30231f,#30253b);
+  color:#f3f4f6;
 }
 
 body.dark table th{
@@ -442,15 +510,33 @@ body.dark table th{
 
 body.dark table td{
   border-color:#4b5563;
+  color:#e5e7eb;
 }
 
+body.dark .progress-box h3{
+  color:#ffffff;
+}
+
+body.dark .progress-text{
+  color:#f3f4f6;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
 @media(max-width:600px){
+
   .container{
     padding:10px;
   }
 
   .section{
     padding:16px;
+  }
+
+  .hero{
+    padding:22px 14px;
   }
 
   .hero h2{
@@ -463,18 +549,30 @@ body.dark table td{
 
   table{
     font-size:13px;
+    display:block;
+    overflow-x:auto;
   }
 
   th,td{
     padding:7px;
+    min-width:110px;
   }
 
   .flow-box{
     width:100%;
+    text-align:center;
   }
 
   .arrow{
     transform:rotate(90deg);
+  }
+
+  .mains-box{
+    padding:13px;
+  }
+
+  .option{
+    font-size:14px;
   }
 }
 </style>
@@ -483,65 +581,83 @@ body.dark table td{
 <body>
 
 <header>
-  <h1>🇮🇳 UPSC Shiksha</h1>
 
-  <div class="header-buttons">
-    <a class="btn home-btn" href="ncert-history.html">🏠 History</a>
-    <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
-  </div>
+<h1>🇮🇳 UPSC Shiksha</h1>
+
+<div class="header-buttons">
+
+<a class="btn home-btn" href="ncert-history.html">
+🏠 History
+</a>
+
+<button class="theme-btn" onclick="toggleTheme()">
+🌙 Dark Mode
+</button>
+
+</div>
+
 </header>
 
 <div class="container">
 
 <section class="hero">
-  <h2>👑 New Kings and Kingdoms</h2>
-  <p>
-    Class 7 History — Chapter 2
-  </p>
 
-  <p style="margin-top:10px;">
-    A detailed learning chapter on the rise of regional kingdoms,
-    samantas, warfare, administration, land grants and the Cholas.
-  </p>
+<h2>👑 New Kings and Kingdoms</h2>
 
-  <div class="badges">
-    <span class="badge">📖 Detailed Notes</span>
-    <span class="badge">🇬🇧 English</span>
-    <span class="badge">🇮🇳 Hindi</span>
-    <span class="badge">🎧 Audio</span>
-    <span class="badge">🎯 UPSC</span>
-    <span class="badge">📝 20 MCQs</span>
-    <span class="badge">✍️ Mains</span>
-  </div>
+<p>
+Class 7 History — Chapter 2
+</p>
+
+<p style="margin-top:10px;">
+A detailed learning chapter on the rise of regional kingdoms,
+samantas, warfare, administration, land grants and the Cholas.
+</p>
+
+<div class="badges">
+
+<span class="badge">📖 Detailed Notes</span>
+<span class="badge">🇬🇧 English</span>
+<span class="badge">🇮🇳 Hindi</span>
+<span class="badge">🎧 Audio</span>
+<span class="badge">🎯 UPSC</span>
+<span class="badge">📝 20 MCQs</span>
+<span class="badge">✍️ Mains</span>
+
+</div>
+
 </section>
 
 <section class="progress-box">
-  <h3>📈 Chapter Progress</h3>
 
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
+<h3>📈 Chapter Progress</h3>
 
-  <div class="progress-text" id="progressText">
-    0% completed
-  </div>
+<div class="progress-bar">
+<div class="progress-fill" id="progressFill"></div>
+</div>
+
+<div class="progress-text" id="progressText">
+0% completed
+</div>
+
 </section>
 
 <section class="quick-nav">
-  <h3>⚡ Quick Navigation</h3>
 
-  <a href="#emergence">New Dynasties</a>
-  <a href="#samantas">Samantas</a>
-  <a href="#rashtrakutas">Rashtrakutas</a>
-  <a href="#prashastis">Prashastis</a>
-  <a href="#warfare">Warfare</a>
-  <a href="#cholas">Cholas</a>
-  <a href="#administration">Administration</a>
-  <a href="#irrigation">Irrigation</a>
-  <a href="#hindi">Hindi</a>
-  <a href="#upsc">UPSC</a>
-  <a href="#mains">Mains</a>
-  <a href="#tests">Tests</a>
+<h3>⚡ Quick Navigation</h3>
+
+<a href="#emergence">New Dynasties</a>
+<a href="#samantas">Samantas</a>
+<a href="#rashtrakutas">Rashtrakutas</a>
+<a href="#prashastis">Prashastis</a>
+<a href="#warfare">Warfare</a>
+<a href="#cholas">Cholas</a>
+<a href="#administration">Administration</a>
+<a href="#irrigation">Irrigation</a>
+<a href="#hindi">Hindi</a>
+<a href="#upsc">UPSC</a>
+<a href="#mains">Mains</a>
+<a href="#tests">Tests</a>
+
 </section>
 
 <!-- ENGLISH -->
@@ -564,9 +680,12 @@ authority.
 </p>
 
 <div class="highlight">
+
 <strong>🔥 Key Idea:</strong>
+
 Political power was not fixed. A subordinate chief could become powerful,
 gain supporters, control territory and eventually establish a new dynasty.
+
 </div>
 
 <h3>How did a chief become a king?</h3>
@@ -575,20 +694,25 @@ gain supporters, control territory and eventually establish a new dynasty.
 A ruler needed more than military strength. He also needed recognition,
 resources, administrative support and a political claim to legitimacy.
 Royal titles, genealogies, rituals, inscriptions and patronage of
-religious institutions helped rulers present themselves as legitimate
-kings.
+religious institutions helped rulers present themselves as legitimate kings.
 </p>
 
 <div class="flow">
+
 <div class="flow-box">Local Chief</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Military Power</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Territory</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Royal Legitimacy</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Kingdom</div>
+
 </div>
 
 </section>
@@ -604,9 +728,9 @@ powerful local leaders who served a superior ruler.
 
 <p>
 A samanta could be expected to provide military assistance, attend the
-ruler's court and offer gifts or tribute. However, over time, some
-samantas accumulated enough wealth and military power to challenge or
-replace their former overlords.
+ruler's court and offer gifts or tribute. Over time, some samantas
+accumulated enough wealth and military power to challenge or replace
+their former overlords.
 </p>
 
 <div class="visual-grid">
@@ -632,9 +756,12 @@ replace their former overlords.
 </div>
 
 <div class="example">
+
 <strong>Example:</strong>
+
 The rise of several regional ruling families illustrates how local
 political authority could gradually transform into independent kingship.
+
 </div>
 
 </section>
@@ -658,21 +785,25 @@ independent base of authority.
 </p>
 
 <div class="highlight">
+
 <strong>UPSC Connection:</strong>
+
 The Rashtrakutas are important for understanding early-medieval state
-formation and the political competition among regional powers.
+formation and political competition among regional powers.
+
 </div>
 
 <h3>The Tripartite Struggle</h3>
 
 <p>
-One of the major political contests of this period centred on
-<strong>Kanauj</strong>. The Gurjara-Pratiharas, Rashtrakutas and Palas
-were important participants in the long struggle for influence over
-Kanauj and northern India.
+One major political contest centred on <strong>Kanauj</strong>.
+The Gurjara-Pratiharas, Rashtrakutas and Palas were important
+participants in the long struggle for influence over Kanauj and
+northern India.
 </p>
 
 <table>
+
 <tr>
 <th>Power</th>
 <th>Broad Region</th>
@@ -696,6 +827,7 @@ Kanauj and northern India.
 <td>Bengal and eastern India</td>
 <td>Important eastern Indian dynasty</td>
 </tr>
+
 </table>
 
 </section>
@@ -739,9 +871,12 @@ the ruler.
 </div>
 
 <div class="warning">
+
 <strong>⚠️ Remember:</strong>
+
 A royal inscription is a historical source, but it should not
 automatically be treated as an unbiased description of reality.
+
 </div>
 
 </section>
@@ -763,22 +898,33 @@ other beneficiaries. Such grants could be recorded through inscriptions.
 <h3>Why were land grants important?</h3>
 
 <ul>
+
 <li>They could strengthen relations between rulers and influential groups.</li>
+
 <li>They helped extend cultivation into new areas.</li>
+
 <li>They created networks of political and social authority.</li>
+
 <li>They provide historians with evidence about land, taxes and society.</li>
+
 </ul>
 
 <div class="flow">
+
 <div class="flow-box">Land</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Cultivation</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Produce</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Revenue</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">State Power</div>
+
 </div>
 
 </section>
@@ -797,8 +943,6 @@ Military campaigns could bring territory and resources under a ruler's
 control. Important political centres such as Kanauj became objects of
 competition.
 </p>
-
-<h3>Why was warfare important?</h3>
 
 <div class="visual-grid">
 
@@ -898,22 +1042,31 @@ water for cultivation.
 </p>
 
 <div class="flow">
+
 <div class="flow-box">Kaveri Water</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Irrigation</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Cultivation</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Surplus</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Revenue</div>
+
 </div>
 
 <div class="highlight">
+
 <strong>Concept:</strong>
+
 Agricultural expansion was closely connected with political power.
 A ruler who controlled productive agricultural areas could obtain
 resources needed for administration and warfare.
+
 </div>
 
 </section>
@@ -938,7 +1091,7 @@ An <strong>ur</strong> was an assembly associated with ordinary villages.
 <p>
 A <strong>sabha</strong> was an assembly associated especially with
 Brahmana settlements. Inscriptions from Uttaramerur provide information
-about the organisation of committees and qualifications for membership.
+about committees and qualifications for membership.
 </p>
 
 <h3>Nadu</h3>
@@ -949,6 +1102,7 @@ groups of villages.
 </p>
 
 <table>
+
 <tr>
 <th>Institution</th>
 <th>Meaning / Role</th>
@@ -968,13 +1122,17 @@ groups of villages.
 <td>Nadu</td>
 <td>Larger territorial organisation</td>
 </tr>
+
 </table>
 
 <div class="example">
+
 <strong>Important:</strong>
+
 These institutions should not simply be equated with modern democratic
 institutions. Their membership and functioning were shaped by the social
 conditions of their time.
+
 </div>
 
 </section>
@@ -989,11 +1147,17 @@ function as important economic, social and cultural centres.
 </p>
 
 <ul>
+
 <li>They received land and other resources.</li>
+
 <li>They employed specialists and craftspeople.</li>
+
 <li>They supported artistic production.</li>
+
 <li>They became centres of social activity.</li>
+
 <li>They reflected royal patronage and political authority.</li>
+
 </ul>
 
 <div class="visual-grid">
@@ -1036,6 +1200,7 @@ new kingdoms.
 </p>
 
 <table>
+
 <tr>
 <th>Source</th>
 <th>What it can tell us</th>
@@ -1071,13 +1236,17 @@ new kingdoms.
 <td>Material remains and settlement patterns</td>
 <td>Evidence may be incomplete</td>
 </tr>
+
 </table>
 
 <div class="highlight">
+
 <strong>UPSC Skill:</strong>
+
 Do not only ask “What does the source say?”
-Also ask: “Who produced it?”, “Why?”, “For whom?”, and “What other
-evidence can confirm or challenge it?”
+Also ask: “Who produced it?”, “Why?”, “For whom?”, and
+“What other evidence can confirm or challenge it?”
+
 </div>
 
 </section>
@@ -1137,8 +1306,11 @@ Listen to the chapter using your phone's built-in speech system.
 </p>
 
 <div class="highlight">
+
 <strong>याद रखें:</strong>
+
 सामंत → शक्ति और संसाधनों का संचय → स्वतंत्रता की संभावना → नया राजवंश
+
 </div>
 
 <h3>3. राष्ट्रकूट</h3>
@@ -1193,7 +1365,7 @@ Listen to the chapter using your phone's built-in speech system.
 
 <p>
 कावेरी क्षेत्र में कृषि को बढ़ाने के लिए जल प्रबंधन महत्वपूर्ण था।
-नहरें, बांध/तटबंध, कुएँ और तालाब जैसे साधनों से सिंचाई को बढ़ावा मिला।
+नहरें, तटबंध, कुएँ और तालाब जैसे साधनों से सिंचाई को बढ़ावा मिला।
 </p>
 
 <h3>10. चोल स्थानीय प्रशासन</h3>
@@ -1204,9 +1376,13 @@ Listen to the chapter using your phone's built-in speech system.
 </p>
 
 <ul>
+
 <li><strong>उर:</strong> सामान्य गाँव से जुड़ी सभा</li>
+
 <li><strong>सभा:</strong> ब्राह्मण बस्तियों से जुड़ी सभा</li>
+
 <li><strong>नाडु:</strong> गाँवों से बनी बड़ी क्षेत्रीय इकाई</li>
+
 </ul>
 
 <h3>11. चोल मंदिर</h3>
@@ -1308,17 +1484,29 @@ Listen to the chapter using your phone's built-in speech system.
 <ul class="revision-list">
 
 <li>New dynasties → 7th–12th centuries</li>
+
 <li>Samanta → subordinate/local powerful chief</li>
+
 <li>Rashtrakutas → important Deccan power</li>
+
 <li>Tripartite struggle → Palas, Rashtrakutas, Gurjara-Pratiharas</li>
+
 <li>Kanauj → major political centre</li>
+
 <li>Prashasti → ruler's praise/achievement record</li>
+
 <li>Land grants → important source for state and society</li>
+
 <li>Cholas → major southern Indian power</li>
+
 <li>Kaveri delta → important agricultural region</li>
+
 <li>Ur → village assembly</li>
+
 <li>Sabha → assembly associated with Brahmana settlements</li>
+
 <li>Nadu → larger territorial organisation</li>
+
 <li>Temples → religious + economic + social + cultural roles</li>
 
 </ul>
@@ -1334,40 +1522,58 @@ Listen to the chapter using your phone's built-in speech system.
 <div class="final-flow">
 
 <div class="flow">
+
 <div class="flow-box">Local Chiefs</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Samantas</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Military & Land</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">New Dynasties</div>
+
 </div>
 
 <div class="flow">
+
 <div class="flow-box">Agriculture</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Revenue</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Army</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Political Power</div>
+
 </div>
 
 <div class="flow">
+
 <div class="flow-box">Cholas</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Kaveri Agriculture</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Administration</div>
 <div class="arrow">→</div>
+
 <div class="flow-box">Temples & Culture</div>
+
 </div>
 
 <p style="margin-top:15px;">
+
 <strong>Core Idea:</strong>
+
 Early-medieval state formation involved the interaction of land,
 agriculture, revenue, military power, administration, social groups
 and political legitimacy.
+
 </p>
 
 </div>
@@ -1408,14 +1614,16 @@ Correct answer और explanation उसके बाद ही दिखाई 
 </div>
 
 <footer>
+
 <p>🇮🇳 UPSC Shiksha</p>
 <p>Class 7 History • Chapter 2</p>
 <p>Learn • Revise • Practice • Improve</p>
+
 </footer>
 
 <script>
 
-const questions = [
+const questions=[
 
 {
 q:"Who were samantas?",
@@ -1438,7 +1646,7 @@ options:[
 "Chalukyas, Pallavas and Hoysalas"
 ],
 answer:"B",
-exp:"The Tripartite Struggle involved the Palas, Rashtrakutas and Gurjara-Pratiharas and was connected with competition for Kanauj and influence in northern India."
+exp:"The Tripartite Struggle involved the Palas, Rashtrakutas and Gurjara-Pratiharas and was connected with competition for Kanauj."
 },
 
 {
@@ -1498,7 +1706,7 @@ options:[
 "Prithviraja"
 ],
 answer:"A",
-exp:"Rajaraja I was a major Chola ruler associated with expansion, administration and large-scale temple patronage."
+exp:"Rajaraja I was a major Chola ruler associated with expansion, administration and temple patronage."
 },
 
 {
@@ -1522,7 +1730,7 @@ options:[
 "A royal palace"
 ],
 answer:"A",
-exp:"Sabha was an assembly associated particularly with Brahmana settlements and is known from Chola inscriptions."
+exp:"Sabha was an assembly associated particularly with Brahmana settlements."
 },
 
 {
@@ -1546,11 +1754,11 @@ options:[
 "It replaced farming"
 ],
 answer:"B",
-exp:"Irrigation helped make agricultural production more reliable and supported cultivation in the Kaveri region."
+exp:"Irrigation helped support agricultural production and cultivation in the Kaveri region."
 },
 
 {
-q:"Which of the following could be an important reason for medieval warfare?",
+q:"Which could be an important reason for medieval warfare?",
 options:[
 "Control over fertile land and resources",
 "Only religious festivals",
@@ -1594,7 +1802,7 @@ options:[
 "They had no connection with agriculture"
 ],
 answer:"A",
-exp:"Land-grant records can provide evidence about land rights, cultivation, beneficiaries, taxes and relationships between rulers and social groups."
+exp:"Land-grant records can provide evidence about land rights, cultivation, beneficiaries, taxes and social relationships."
 },
 
 {
@@ -1642,7 +1850,7 @@ options:[
 "It had no connection with local society"
 ],
 answer:"B",
-exp:"State formation involved several interconnected factors including territory, agriculture, revenue, military strength, administration and legitimacy."
+exp:"State formation involved territory, agriculture, revenue, military strength, administration and legitimacy."
 },
 
 {
@@ -1654,7 +1862,7 @@ options:[
 "Modern election reports"
 ],
 answer:"A",
-exp:"Inscriptions from places such as Uttaramerur provide important evidence about local assemblies and their organisation."
+exp:"Uttaramerur inscriptions provide important evidence about Chola local assemblies and their organisation."
 }
 
 ];
@@ -1668,6 +1876,7 @@ questions.forEach((item,index)=>{
 let number=index+1;
 
 html+=`
+
 <div class="question">
 
 <h4>Q${number}. ${item.q}</h4>
@@ -1700,6 +1909,7 @@ Check Answer
 <div class="answer-box" id="answer${number}"></div>
 
 </div>
+
 `;
 
 });
@@ -1721,35 +1931,43 @@ let box=document.getElementById(`answer${number}`);
 if(!selected){
 
 box.style.display="block";
-box.innerHTML="⚠️ Please select an option first.";
+
+box.innerHTML=
+"⚠️ Please select an option first.";
+
 return;
 
 }
 
 let data=questions[number-1];
 
-let isCorrect=selected.value===data.answer;
+let isCorrect=
+selected.value===data.answer;
 
 box.style.display="block";
 
 if(isCorrect){
 
 box.innerHTML=`
+
 <strong>✅ Correct!</strong>
 <br>
 Correct Answer: ${data.answer}
 <br>
 ${data.exp}
+
 `;
 
 }else{
 
 box.innerHTML=`
+
 <strong>❌ Incorrect.</strong>
 <br>
 Correct Answer: ${data.answer}
 <br>
 ${data.exp}
+
 `;
 
 }
@@ -1783,11 +2001,15 @@ let percent=Math.round(
 (checked/questions.length)*100
 );
 
-document.getElementById("progressFill").style.width=
-percent+"%";
+document.getElementById(
+"progressFill"
+).style.width=percent+"%";
 
-document.getElementById("progressText").innerText=
-percent+"% completed • "+checked+"/20 questions checked";
+document.getElementById(
+"progressText"
+).innerText=
+percent+"% completed • "+
+checked+"/20 questions checked";
 
 }
 
@@ -1819,7 +2041,9 @@ document.body.classList.contains("dark")
 
 function loadTheme(){
 
-if(localStorage.getItem("class7ch2theme")==="dark"){
+if(localStorage.getItem(
+"class7ch2theme"
+)==="dark"){
 
 document.body.classList.add("dark");
 
@@ -1831,7 +2055,9 @@ function speakText(text,language){
 
 if(!("speechSynthesis" in window)){
 
-alert("Audio is not supported on this browser.");
+alert(
+"Audio is not supported on this browser."
+);
 
 return;
 
@@ -1839,7 +2065,8 @@ return;
 
 speechSynthesis.cancel();
 
-let speech=new SpeechSynthesisUtterance(text);
+let speech=
+new SpeechSynthesisUtterance(text);
 
 speech.lang=language;
 speech.rate=.9;
@@ -1852,6 +2079,7 @@ speechSynthesis.speak(speech);
 function speakEnglish(){
 
 let text=`
+
 New Kings and Kingdoms.
 
 Between the seventh and twelfth centuries,
@@ -1879,6 +2107,7 @@ social and cultural centres.
 
 Historians use inscriptions, coins, temples,
 literature and archaeology to understand this period.
+
 `;
 
 speakText(text,"en-IN");
@@ -1888,6 +2117,7 @@ speakText(text,"en-IN");
 function speakHindi(){
 
 let text=`
+
 नए राजवंशों और राज्यों के इस अध्याय में
 हम सातवीं से बारहवीं शताब्दी के राजनीतिक
 परिवर्तनों को समझते हैं।
@@ -1913,6 +2143,7 @@ let text=`
 इतिहासकार अभिलेख, सिक्के, मंदिर,
 साहित्य और पुरातात्विक प्रमाणों की मदद से
 इस काल का अध्ययन करते हैं।
+
 `;
 
 speakText(text,"hi-IN");
