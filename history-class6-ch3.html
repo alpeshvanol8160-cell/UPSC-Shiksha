@@ -1,485 +1,738 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 6 History Chapter 3 | UPSC Shiksha</title>
+<title>The Beginnings of Indian Civilisation | UPSC Shiksha</title>
 
 <meta name="description"
-content="Class 6 History Chapter 3 - In the Earliest Cities. Detailed English and Hindi UPSC-oriented learning with audio, visuals, important points, mains practice and tests.">
+content="UPSC Shiksha Class 6 History Chapter 3 - The Beginnings of Indian Civilisation. Current NCERT 2026-27 based original study material.">
 
 <style>
-:root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#172033;
-  --muted:#5f6b7a;
-  --primary:#173b73;
-  --secondary:#2563eb;
-  --border:#dbe2ea;
-  --highlight-bg:#fff8cc;
-  --highlight-text:#684f00;
-  --highlight-border:#e8c84a;
-  --example-bg:#eaf5ff;
-  --example-border:#62aaf5;
-  --upsc-bg:#eaf8ef;
-  --upsc-border:#49a56a;
-  --warning-bg:#fff0f0;
-  --warning-border:#e06b6b;
-}
-
-body.dark{
-  --bg:#0f172a;
-  --card:#172033;
-  --text:#f1f5f9;
-  --muted:#c1cad6;
-  --primary:#93c5fd;
-  --secondary:#60a5fa;
-  --border:#334155;
-  --highlight-bg:#40370c;
-  --highlight-text:#ffe88a;
-  --highlight-border:#a88919;
-  --example-bg:#102f49;
-  --example-border:#378bd1;
-  --upsc-bg:#123522;
-  --upsc-border:#3f9d62;
-  --warning-bg:#421c1c;
-  --warning-border:#c55b5b;
-}
-
 *{
-  box-sizing:border-box;
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
 }
 
 html{
-  scroll-behavior:smooth;
+    scroll-behavior:smooth;
 }
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.7;
-  transition:.3s;
+    font-family:Arial, Helvetica, sans-serif;
+    background:#f5f7fb;
+    color:#172033;
+    line-height:1.7;
+    transition:0.3s;
+}
+
+body.dark{
+    background:#10151f;
+    color:#e8edf7;
 }
 
 header{
-  position:sticky;
-  top:0;
-  z-index:1000;
-  background:var(--card);
-  border-bottom:1px solid var(--border);
-  padding:12px 16px;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:10px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    background:#ffffff;
+    border-bottom:1px solid #ddd;
+    padding:12px 16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,0.06);
+}
+
+body.dark header{
+    background:#171e2b;
+    border-color:#30394a;
 }
 
 .logo{
-  font-size:20px;
-  font-weight:800;
-  color:var(--primary);
+    font-size:20px;
+    font-weight:800;
 }
 
 .header-buttons{
-  display:flex;
-  gap:8px;
+    display:flex;
+    gap:8px;
+    flex-wrap:wrap;
 }
 
 button,
 .btn{
-  border:none;
-  border-radius:9px;
-  padding:10px 14px;
-  cursor:pointer;
-  font-weight:700;
+    border:none;
+    border-radius:10px;
+    padding:9px 13px;
+    cursor:pointer;
+    font-weight:700;
+    text-decoration:none;
+    display:inline-block;
 }
 
 .home-btn{
-  background:#2563eb;
-  color:white;
+    background:#2563eb;
+    color:white;
 }
 
-.theme-btn{
-  background:#111827;
-  color:white;
+.dark-btn{
+    background:#111827;
+    color:white;
 }
 
-body.dark .theme-btn{
-  background:#f8fafc;
-  color:#111827;
-}
-
-.hero{
-  padding:40px 18px;
-  text-align:center;
-  background:linear-gradient(135deg,#173b73,#2563eb);
-  color:white;
-}
-
-.hero h1{
-  margin:0 0 10px;
-  font-size:32px;
-}
-
-.hero p{
-  margin:6px auto;
-  max-width:850px;
+body.dark .dark-btn{
+    background:#f3f4f6;
+    color:#111827;
 }
 
 .container{
-  max-width:1050px;
-  margin:auto;
-  padding:20px 15px 50px;
+    width:min(1100px,94%);
+    margin:auto;
 }
 
-.progress-box{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:15px;
-  margin:20px 0;
+.hero{
+    margin:25px auto;
+    padding:35px 22px;
+    border-radius:22px;
+    background:linear-gradient(135deg,#fff7ed,#ffedd5,#fef3c7);
+    border:1px solid #fed7aa;
+    text-align:center;
 }
 
-.progress-bar{
-  height:12px;
-  background:#dbe2ea;
-  border-radius:20px;
-  overflow:hidden;
+body.dark .hero{
+    background:linear-gradient(135deg,#2a2017,#302418,#29231a);
+    border-color:#59432b;
 }
 
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:#22c55e;
-  transition:.4s;
+.badge{
+    display:inline-block;
+    background:#166534;
+    color:white;
+    padding:6px 12px;
+    border-radius:30px;
+    font-size:13px;
+    font-weight:800;
+    margin-bottom:12px;
 }
 
-.progress-text{
-  margin-top:8px;
-  font-weight:bold;
+.hero h1{
+    font-size:clamp(28px,6vw,48px);
+    line-height:1.15;
+    margin-bottom:12px;
 }
 
-.quick-nav{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:15px;
-  border-radius:14px;
-  margin-bottom:25px;
+.hero p{
+    max-width:850px;
+    margin:auto;
+    color:#4b5563;
 }
 
-.quick-nav a{
-  display:inline-block;
-  margin:5px;
-  padding:7px 10px;
-  border-radius:20px;
-  background:#e8f0ff;
-  color:#174b9b;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:bold;
+body.dark .hero p{
+    color:#cbd5e1;
 }
 
-body.dark .quick-nav a{
-  background:#243653;
-  color:#bfdbfe;
+.notice{
+    margin:20px auto;
+    padding:15px;
+    border-left:5px solid #f59e0b;
+    background:#fffbeb;
+    border-radius:10px;
+}
+
+body.dark .notice{
+    background:#282216;
+    border-color:#f59e0b;
 }
 
 .section{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:24px;
-  margin:24px 0;
-  box-shadow:0 5px 18px rgba(0,0,0,.05);
+    margin:24px 0;
+    padding:24px;
+    background:white;
+    border-radius:18px;
+    border:1px solid #e5e7eb;
+    box-shadow:0 4px 18px rgba(0,0,0,0.04);
+}
+
+body.dark .section{
+    background:#171e2b;
+    border-color:#30394a;
+    box-shadow:none;
 }
 
 .section h2{
-  color:var(--primary);
-  border-bottom:2px solid var(--border);
-  padding-bottom:8px;
+    color:#b45309;
+    margin-bottom:12px;
+    font-size:28px;
 }
 
 .section h3{
-  color:var(--secondary);
+    color:#2563eb;
+    margin:18px 0 8px;
+}
+
+body.dark .section h2{
+    color:#fbbf24;
+}
+
+body.dark .section h3{
+    color:#60a5fa;
 }
 
 .highlight{
-  background:var(--highlight-bg);
-  color:var(--highlight-text);
-  border-left:5px solid var(--highlight-border);
-  padding:15px;
-  border-radius:10px;
-  margin:15px 0;
+    padding:16px;
+    margin:14px 0;
+    background:#eff6ff;
+    border-left:5px solid #2563eb;
+    border-radius:10px;
 }
 
-.example{
-  background:var(--example-bg);
-  border-left:5px solid var(--example-border);
-  padding:15px;
-  border-radius:10px;
-  margin:15px 0;
-}
-
-.upsc{
-  background:var(--upsc-bg);
-  border-left:5px solid var(--upsc-border);
-  padding:15px;
-  border-radius:10px;
-  margin:15px 0;
+body.dark .highlight{
+    background:#17253a;
+    border-color:#60a5fa;
 }
 
 .warning{
-  background:var(--warning-bg);
-  border-left:5px solid var(--warning-border);
-  padding:15px;
-  border-radius:10px;
-  margin:15px 0;
+    padding:16px;
+    margin:14px 0;
+    background:#fff7ed;
+    border-left:5px solid #f97316;
+    border-radius:10px;
 }
 
-.visual-grid{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:15px;
-  margin:20px 0;
+body.dark .warning{
+    background:#2a2118;
 }
 
-.visual-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:18px;
-  text-align:center;
-  animation:floatCard 3s ease-in-out infinite;
+.grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:15px;
+    margin-top:18px;
 }
 
-.visual-card:nth-child(2){
-  animation-delay:.3s;
+.card{
+    background:#f8fafc;
+    border:1px solid #e2e8f0;
+    border-radius:15px;
+    padding:18px;
 }
 
-.visual-card:nth-child(3){
-  animation-delay:.6s;
+body.dark .card{
+    background:#202938;
+    border-color:#364154;
 }
 
-.visual-card:nth-child(4){
-  animation-delay:.9s;
+.card h3{
+    margin-top:0;
 }
 
-.visual-icon{
-  font-size:42px;
-  display:block;
-  margin-bottom:8px;
+.big-number{
+    font-size:32px;
+    font-weight:900;
+    color:#b45309;
 }
 
-@keyframes floatCard{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-7px)}
-}
-
-.flow{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin:25px 0;
-}
-
-.flow-item{
-  min-width:135px;
-  padding:15px;
-  border-radius:14px;
-  background:#eaf2ff;
-  color:#173b73;
-  text-align:center;
-  font-weight:bold;
-  animation:flowPop 2.5s infinite;
-}
-
-body.dark .flow-item{
-  background:#223653;
-  color:#bfdbfe;
-}
-
-.flow-item:nth-child(2){animation-delay:.4s}
-.flow-item:nth-child(3){animation-delay:.8s}
-.flow-item:nth-child(4){animation-delay:1.2s}
-.flow-item:nth-child(5){animation-delay:1.6s}
-
-.flow-arrow{
-  font-size:24px;
-  animation:arrowMove 1.5s infinite;
-}
-
-@keyframes flowPop{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
-}
-
-@keyframes arrowMove{
-  0%,100%{transform:translateX(0)}
-  50%{transform:translateX(5px)}
+body.dark .big-number{
+    color:#fbbf24;
 }
 
 table{
-  width:100%;
-  border-collapse:collapse;
-  margin:18px 0;
+    width:100%;
+    border-collapse:collapse;
+    margin:18px 0;
+    overflow:hidden;
 }
 
-th,td{
-  border:1px solid var(--border);
-  padding:11px;
-  text-align:left;
+th,
+td{
+    border:1px solid #dbe2ea;
+    padding:12px;
+    text-align:left;
+    vertical-align:top;
 }
 
 th{
-  background:#eaf0fa;
+    background:#f1f5f9;
+}
+
+body.dark th,
+body.dark td{
+    border-color:#374151;
 }
 
 body.dark th{
-  background:#26344b;
+    background:#222b39;
 }
 
-.audio-box{
-  text-align:center;
-  background:var(--example-bg);
-  border-radius:14px;
-  padding:20px;
+.timeline{
+    position:relative;
+    margin:25px 0;
+    padding-left:25px;
+    border-left:4px solid #f59e0b;
 }
 
-.audio-box button{
-  margin:5px;
-  background:#2563eb;
-  color:white;
+.timeline-item{
+    position:relative;
+    margin-bottom:22px;
+    padding:15px 18px;
+    background:#fffbeb;
+    border-radius:12px;
 }
 
-.mains{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:15px;
-  border-radius:12px;
-  margin:12px 0;
+body.dark .timeline-item{
+    background:#292319;
 }
 
-.test{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:20px;
-  margin:25px 0;
+.timeline-item::before{
+    content:"";
+    position:absolute;
+    width:15px;
+    height:15px;
+    border-radius:50%;
+    background:#f59e0b;
+    left:-35px;
+    top:20px;
 }
 
-.test h3{
-  color:var(--primary);
+.flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    flex-wrap:wrap;
+    gap:8px;
+    margin:25px 0;
+}
+
+.flow-box{
+    padding:13px 15px;
+    border-radius:12px;
+    background:#dbeafe;
+    color:#1e3a8a;
+    font-weight:800;
+    text-align:center;
+}
+
+body.dark .flow-box{
+    background:#1e3a5f;
+    color:#bfdbfe;
+}
+
+.arrow{
+    font-size:25px;
+    font-weight:900;
+}
+
+.chart-wrap{
+    margin:25px 0;
+    padding:20px;
+    background:#f8fafc;
+    border-radius:18px;
+    border:1px solid #e2e8f0;
+}
+
+body.dark .chart-wrap{
+    background:#1c2533;
+    border-color:#364154;
+}
+
+.bar-row{
+    margin:15px 0;
+}
+
+.bar-label{
+    display:flex;
+    justify-content:space-between;
+    font-weight:700;
+    margin-bottom:5px;
+}
+
+.bar{
+    height:18px;
+    border-radius:20px;
+    background:#e5e7eb;
+    overflow:hidden;
+}
+
+.bar-fill{
+    height:100%;
+    border-radius:20px;
+    background:#d97706;
+    width:0;
+    transition:width 1.4s ease;
+}
+
+body.dark .bar{
+    background:#374151;
+}
+
+.analysis-box{
+    background:#f0fdf4;
+    border-left:5px solid #16a34a;
+    padding:17px;
+    border-radius:10px;
+    margin:16px 0;
+}
+
+body.dark .analysis-box{
+    background:#17271d;
+}
+
+.animation-box{
+    position:relative;
+    min-height:160px;
+    margin:20px 0;
+    padding:20px;
+    background:#0f172a;
+    color:white;
+    border-radius:18px;
+    overflow:hidden;
+}
+
+.animation-title{
+    text-align:center;
+    font-weight:800;
+    margin-bottom:15px;
+}
+
+.moving-flow{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    gap:8px;
+    flex-wrap:wrap;
+}
+
+.moving-box{
+    padding:12px;
+    border-radius:10px;
+    background:#1d4ed8;
+    animation:pulseBox 2s infinite alternate;
+}
+
+.moving-box:nth-child(2){
+    animation-delay:.4s;
+}
+
+.moving-box:nth-child(3){
+    animation-delay:.8s;
+}
+
+.moving-box:nth-child(4){
+    animation-delay:1.2s;
+}
+
+@keyframes pulseBox{
+    from{
+        transform:translateY(7px);
+        opacity:.55;
+    }
+    to{
+        transform:translateY(-7px);
+        opacity:1;
+    }
+}
+
+.water-animation{
+    height:220px;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+    background:linear-gradient(#dbeafe 0 55%,#d6b58b 55%);
+    margin:20px 0;
+}
+
+.reservoir{
+    position:absolute;
+    left:15%;
+    right:15%;
+    bottom:20px;
+    height:70px;
+    background:#2563eb;
+    border-radius:10px 10px 30px 30px;
+    animation:waterPulse 2s infinite alternate;
+}
+
+.house{
+    position:absolute;
+    width:55px;
+    height:40px;
+    background:#a16207;
+    bottom:30px;
+}
+
+.house::before{
+    content:"";
+    position:absolute;
+    left:-8px;
+    top:-20px;
+    border-left:35px solid transparent;
+    border-right:35px solid transparent;
+    border-bottom:25px solid #78350f;
+}
+
+.house.one{
+    left:8%;
+}
+
+.house.two{
+    right:8%;
+}
+
+@keyframes waterPulse{
+    from{
+        height:60px;
+    }
+    to{
+        height:85px;
+    }
+}
+
+.concept-map{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:12px;
+    align-items:center;
+    margin:20px 0;
+}
+
+.map-center{
+    padding:25px 10px;
+    border-radius:50%;
+    background:#f59e0b;
+    color:white;
+    font-weight:900;
+    text-align:center;
+    min-height:100px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.map-node{
+    padding:16px 10px;
+    border-radius:12px;
+    background:#eff6ff;
+    border:1px solid #bfdbfe;
+    text-align:center;
+    font-weight:700;
+}
+
+body.dark .map-node{
+    background:#17253a;
+    border-color:#36547b;
+}
+
+.list{
+    padding-left:22px;
+}
+
+.list li{
+    margin:7px 0;
+}
+
+.tag{
+    display:inline-block;
+    padding:4px 9px;
+    border-radius:20px;
+    background:#e0f2fe;
+    color:#075985;
+    font-size:12px;
+    font-weight:800;
+    margin:3px;
+}
+
+body.dark .tag{
+    background:#16354b;
+    color:#bae6fd;
+}
+
+.upsc{
+    background:#eef2ff;
+    border-left:5px solid #4f46e5;
+    padding:18px;
+    border-radius:10px;
+}
+
+body.dark .upsc{
+    background:#20233d;
 }
 
 .question{
-  border-top:1px solid var(--border);
-  padding:20px 0;
+    margin:15px 0;
+    padding:18px;
+    background:#f8fafc;
+    border-radius:14px;
+    border:1px solid #e2e8f0;
 }
 
-.question:first-child{
-  border-top:none;
+body.dark .question{
+    background:#202938;
+    border-color:#364154;
 }
 
-.options label{
-  display:block;
-  padding:11px;
-  margin:8px 0;
-  border:1px solid var(--border);
-  border-radius:9px;
-  cursor:pointer;
+.option{
+    display:block;
+    margin:8px 0;
+    padding:9px;
+    border-radius:8px;
 }
 
-.options label:hover{
-  background:var(--example-bg);
+.option:hover{
+    background:#e2e8f0;
+}
+
+body.dark .option:hover{
+    background:#303b4d;
+}
+
+.explanation{
+    display:none;
+    margin-top:10px;
+    padding:12px;
+    border-radius:9px;
+    background:#ecfdf5;
+    border-left:4px solid #16a34a;
+}
+
+body.dark .explanation{
+    background:#17291f;
 }
 
 .check-btn{
-  background:#16a34a;
-  color:white;
-  margin-top:10px;
+    background:#16a34a;
+    color:white;
+    margin-top:10px;
 }
 
-.result{
-  display:none;
-  margin-top:12px;
-  padding:15px;
-  border-radius:10px;
-  background:var(--example-bg);
+.audio-buttons{
+    display:flex;
+    gap:10px;
+    flex-wrap:wrap;
+    margin-top:15px;
 }
 
-.correct{
-  border-left:5px solid #16a34a;
+.audio-buttons button{
+    background:#7c3aed;
+    color:white;
 }
 
-.incorrect{
-  border-left:5px solid #dc2626;
+.progress-container{
+    margin:18px 0;
+}
+
+.progress-bg{
+    width:100%;
+    height:14px;
+    border-radius:20px;
+    background:#e5e7eb;
+    overflow:hidden;
+}
+
+body.dark .progress-bg{
+    background:#374151;
+}
+
+.progress-fill{
+    width:0%;
+    height:100%;
+    background:#16a34a;
+    transition:.5s;
+}
+
+.progress-text{
+    margin-top:6px;
+    font-weight:700;
 }
 
 .complete-btn{
-  display:block;
-  margin:25px auto;
-  background:#7c3aed;
-  color:white;
-  padding:13px 20px;
+    background:#dc2626;
+    color:white;
+    font-size:16px;
+    padding:12px 18px;
+}
+
+.completed{
+    background:#dcfce7;
+    color:#166534;
+    padding:15px;
+    border-radius:10px;
+    display:none;
+    margin-top:15px;
+}
+
+body.dark .completed{
+    background:#17301f;
+    color:#86efac;
 }
 
 footer{
-  text-align:center;
-  padding:30px 15px;
-  background:var(--card);
-  border-top:1px solid var(--border);
-  color:var(--muted);
+    margin-top:40px;
+    padding:30px 15px;
+    text-align:center;
+    background:#111827;
+    color:#d1d5db;
 }
 
-@media(max-width:800px){
-  .visual-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
+.small{
+    font-size:13px;
+    color:#64748b;
 }
 
-@media(max-width:600px){
-  header{
-    flex-direction:column;
-    align-items:stretch;
-  }
+body.dark .small{
+    color:#94a3b8;
+}
 
-  .header-buttons{
-    justify-content:center;
-  }
+@media(max-width:700px){
 
-  .hero h1{
-    font-size:25px;
-  }
+    header{
+        align-items:flex-start;
+    }
 
-  .section{
-    padding:17px;
-  }
+    .logo{
+        font-size:16px;
+    }
 
-  .visual-grid{
-    grid-template-columns:1fr 1fr;
-  }
+    .header-buttons{
+        justify-content:flex-end;
+    }
 
-  .flow{
-    flex-direction:column;
-  }
+    .hero{
+        padding:25px 15px;
+    }
 
-  .flow-arrow{
-    transform:rotate(90deg);
-  }
+    .section{
+        padding:17px;
+    }
 
-  .flow-item{
-    width:90%;
-  }
+    .section h2{
+        font-size:23px;
+    }
 
-  table{
-    font-size:14px;
-  }
+    table{
+        display:block;
+        overflow-x:auto;
+        white-space:normal;
+    }
+
+    .concept-map{
+        grid-template-columns:1fr;
+    }
+
+    .map-center{
+        border-radius:18px;
+    }
+
+    .flow{
+        flex-direction:column;
+    }
+
+    .arrow{
+        transform:rotate(90deg);
+    }
 }
 </style>
 </head>
@@ -487,1463 +740,1886 @@ footer{
 <body>
 
 <header>
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-  <div class="logo">🇮🇳 UPSC Shiksha</div>
-
-  <div class="header-buttons">
-    <button class="home-btn"
-      onclick="location.href='ncert-history.html'">
-      🏠 Home
-    </button>
-
-    <button class="theme-btn"
-      onclick="toggleTheme()">
-      🌙 Dark Mode
-    </button>
-  </div>
-
+    <div class="header-buttons">
+        <a class="btn home-btn" href="history.html">🏠 History</a>
+        <button class="dark-btn" onclick="toggleTheme()">🌙 Dark</button>
+    </div>
 </header>
+
+<main class="container">
 
 <section class="hero">
 
-  <h1>🏙️ Chapter 3: In the Earliest Cities</h1>
+    <span class="badge">CURRENT NCERT 2026–27</span>
 
-  <p>
-    Class 6 History | Premium NCERT Learning
-  </p>
+    <h1>
+        The Beginnings of Indian Civilisation
+    </h1>
 
-  <p>
-    Learn about the earliest cities, Harappan civilisation,
-    planned settlements, crafts, trade and urban life.
-  </p>
+    <p>
+        Class 6 History — UPSC Shiksha History Chapter 3
+    </p>
+
+    <p style="margin-top:8px;">
+        Original detailed learning material based on the current NCERT
+        Social Science book, Chapter 6.
+    </p>
 
 </section>
 
-<div class="container">
+<div class="notice">
 
-<!-- PROGRESS -->
+<strong>📌 Important numbering note:</strong>
 
-<div class="progress-box">
+The integrated NCERT book's official Chapter 6 is
+<strong>“The Beginnings of Indian Civilisation”</strong>.
+For the UPSC Shiksha subject-wise History section, this is presented as
+<strong>History Class 6 — Chapter 3</strong>.
 
-  <strong>📈 Chapter Progress</strong>
-
-  <div class="progress-bar">
-    <div class="progress-fill" id="progressFill"></div>
-  </div>
-
-  <div class="progress-text" id="progressText">
-    0% completed
-  </div>
+This page uses original explanations and learning aids rather than reproducing
+the textbook word-for-word.
 
 </div>
 
-<!-- QUICK NAV -->
+<section class="section">
 
-<div class="quick-nav">
-
-  <strong>⚡ Quick Navigation</strong><br>
-
-  <a href="#english">English</a>
-  <a href="#visuals">Visual Learning</a>
-  <a href="#hindi">Hindi</a>
-  <a href="#audio">Audio</a>
-  <a href="#upsc">UPSC Points</a>
-  <a href="#mains">Mains</a>
-  <a href="#tests">Tests</a>
-  <a href="#flow">Chapter Flow</a>
-
-</div>
-
-
-<!-- ENGLISH -->
-
-<section class="section" id="english">
-
-<h2>🇬🇧 English Explanation</h2>
-
-<h3>1. What were the earliest cities?</h3>
+<h2>🎯 Chapter Overview</h2>
 
 <p>
-The development of cities was an important stage in early human history.
-People gradually moved from small settlements towards larger and more
-organised communities.
+This chapter takes us into the earliest urban civilisation of the Indian
+Subcontinent commonly associated with the Harappan, Indus or
+Indus-Sarasvati civilisation.
 </p>
 
+<div class="grid">
+
+<div class="card">
+<div class="big-number">1</div>
+<h3>Understand civilisation</h3>
 <p>
-Some of the earliest cities developed in the north-western parts of the
-Indian subcontinent around the third millennium BCE.
-These settlements are commonly associated with the
-Harappan or Indus Valley civilisation.
+Learn why a large settled society becomes different from a small village
+community.
+</p>
+</div>
+
+<div class="card">
+<div class="big-number">2</div>
+<h3>Study cities</h3>
+<p>
+Understand town planning, streets, drainage and organised settlement.
+</p>
+</div>
+
+<div class="card">
+<div class="big-number">3</div>
+<h3>Study water</h3>
+<p>
+See why wells, reservoirs and water management were essential.
+</p>
+</div>
+
+<div class="card">
+<div class="big-number">4</div>
+<h3>Study economy</h3>
+<p>
+Connect farming, crafts, specialised workers and trade.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🏛️ What Is a Civilisation?</h2>
+
+<p>
+A civilisation is more than simply a group of people living together.
+As societies become larger and more complex, they need systems to manage
+food, water, work, trade, construction and social life.
 </p>
 
 <div class="highlight">
 
-<strong>⭐ Key Idea:</strong>
+<strong>Easy way to understand:</strong>
 
-The emergence of cities involved organised settlements,
-specialised occupations, craft production, trade and systems of
-planning and management.
-
-</div>
-
-
-<h3>2. The Harappan civilisation</h3>
-
-<p>
-The Harappan civilisation is named after Harappa, one of its important
-archaeological sites.
-It covered a large geographical area and included many settlements.
-</p>
-
-<p>
-Important sites include Harappa, Mohenjo-daro, Dholavira, Lothal and
-Kalibangan.
-</p>
-
-<div class="example">
-
-<strong>💡 Example:</strong>
-
-Dholavira is particularly important for understanding water management,
-while Lothal is associated with craft production and maritime trade.
+A village may produce food mainly for its own community.
+A civilisation usually shows a much more complex combination of
+administration, cities, specialised crafts, trade, writing or recording,
+culture and productive agriculture.
 
 </div>
 
+<h3>Seven major characteristics</h3>
 
-<h3>3. Planned cities</h3>
+<div class="grid">
 
+<div class="card">
+<h3>1️⃣ Government & Administration</h3>
 <p>
-Many Harappan settlements show evidence of careful planning.
-Streets were often laid out in an organised pattern and buildings were
-constructed using standardised bricks.
+Some form of organisation is required to coordinate a large population
+and its activities.
 </p>
+</div>
 
+<div class="card">
+<h3>2️⃣ Urbanism</h3>
 <p>
-Some cities had raised areas often called citadels and lower residential
-areas.
+Cities or large settlements show planning, infrastructure and organised
+public spaces.
 </p>
+</div>
+
+<div class="card">
+<h3>3️⃣ Crafts</h3>
+<p>
+Different people can specialise in pottery, metalwork, ornaments,
+stonework and other skilled activities.
+</p>
+</div>
+
+<div class="card">
+<h3>4️⃣ Trade</h3>
+<p>
+Goods can move between settlements and sometimes across long distances.
+</p>
+</div>
+
+<div class="card">
+<h3>5️⃣ Writing</h3>
+<p>
+A civilisation may develop a system of writing or other organised ways
+of recording information.
+</p>
+</div>
+
+<div class="card">
+<h3>6️⃣ Cultural Expression</h3>
+<p>
+Art, architecture, customs and other cultural practices reveal ideas
+and values.
+</p>
+</div>
+
+<div class="card">
+<h3>7️⃣ Productive Agriculture</h3>
+<p>
+Food production must support not only farmers but also people engaged
+in other specialised occupations.
+</p>
+</div>
+
+</div>
+
+<div class="analysis-box">
+
+<strong>🔍 Analysis:</strong>
+
+These characteristics are interconnected.
+For example, productive agriculture can create surplus food.
+Surplus can support specialised workers.
+Specialisation can encourage trade.
+Trade and growing populations can support towns.
+Large towns require administration and infrastructure.
+
+So civilisation should be understood as a
+<strong>system of connected developments</strong>, not as one single invention.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🔄 Civilisation Development — Concept Animation</h2>
+
+<div class="animation-box">
+
+<div class="animation-title">
+How a complex society can develop
+</div>
+
+<div class="moving-flow">
+
+<div class="moving-box">🌾 Agriculture</div>
+<div>→</div>
+<div class="moving-box">📦 Surplus</div>
+<div>→</div>
+<div class="moving-box">🛠️ Specialisation</div>
+<div>→</div>
+<div class="moving-box">🏪 Trade</div>
+<div>→</div>
+<div class="moving-box">🏙️ Cities</div>
+
+</div>
+
+</div>
 
 <div class="highlight">
 
-<strong>Remember:</strong>
+<strong>🎬 What this animation explains:</strong>
 
-Urban planning is one of the major features visible in archaeological
-remains of Harappan settlements.
-
-</div>
-
-
-<h3>4. Drainage system</h3>
-
-<p>
-One of the striking features of several Harappan settlements was their
-drainage system.
-Drains were constructed alongside streets and many were covered.
-</p>
-
-<p>
-The drainage arrangements suggest attention to sanitation and water
-management.
-</p>
-
-
-<h3>5. Houses and wells</h3>
-
-<p>
-Archaeologists have found houses of different sizes.
-Some houses had courtyards and bathing areas.
-Wells were also found at several settlements.
-</p>
-
-<p>
-The presence of bathing areas, wells and drains provides useful evidence
-about everyday urban life.
-</p>
-
-
-<h3>6. Crafts and craftspersons</h3>
-
-<p>
-People living in these cities practised many specialised crafts.
-These included pottery, bead-making, metalworking, stone working and
-shell working.
-</p>
-
-<div class="example">
-
-<strong>💡 Example:</strong>
-
-Beads were made from materials such as stone, shell and other substances.
-Craft objects can help historians understand technology,
-specialisation and trade.
+Agricultural surplus does not automatically create a civilisation.
+But surplus can allow some members of society to spend more time on
+crafts, administration, construction and trade. As these activities
+become interconnected, larger and more organised settlements can develop.
 
 </div>
 
+</section>
 
-<h3>7. Trade</h3>
+<section class="section">
 
-<p>
-The Harappans were connected through networks of exchange.
-Archaeologists have found materials at sites that originated from
-different regions.
-</p>
+<h2>🗺️ The Harappan / Indus-Sarasvati Civilisation</h2>
 
 <p>
-Seals, beads and other objects provide clues about economic activities
-and long-distance contacts.
+The civilisation discussed in this chapter is associated with a large
+geographical region of the north-western Indian Subcontinent.
 </p>
 
+<div class="concept-map">
 
-<h3>8. Food and agriculture</h3>
+<div class="map-node">
+🏔️ Mountain regions
+</div>
 
-<p>
-People depended on agriculture, animal keeping, fishing and other
-activities for food.
-Wheat, barley and other crops were cultivated in different regions.
-</p>
+<div class="map-node">
+🌊 River systems
+</div>
 
-<p>
-Archaeologists study charred grains, animal bones and other remains to
-understand ancient food practices.
-</p>
+<div class="map-node">
+🌾 Agricultural plains
+</div>
 
+<div class="map-node">
+🏙️ Settlements
+</div>
 
-<h3>9. Writing and seals</h3>
+<div class="map-center">
+HARAPPAN<br>
+CIVILISATION
+</div>
 
-<p>
-Harappan seals often contain images and short signs.
-The Harappan script has not yet been conclusively deciphered.
-</p>
+<div class="map-node">
+🏺 Craft centres
+</div>
+
+<div class="map-node">
+🐚 Trade networks
+</div>
+
+<div class="map-node">
+🚰 Water systems
+</div>
+
+<div class="map-node">
+🌍 Long-distance connections
+</div>
+
+</div>
 
 <div class="warning">
 
-<strong>⚠️ UPSC Note:</strong>
+<strong>⚠️ Important:</strong>
 
-Do not claim that the Harappan script has been completely deciphered.
-Its meaning remains an important unresolved question in archaeology.
-
-</div>
-
-
-<h3>10. Why did cities change?</h3>
-
-<p>
-Urban settlements changed over time.
-After the mature Harappan phase, several cities declined or were
-transformed and people increasingly lived in smaller settlements in
-many regions.
-</p>
-
-<p>
-Historians and archaeologists discuss several possible factors,
-including environmental changes, shifts in river systems, changes in
-trade networks and other regional developments.
-</p>
-
-<div class="highlight">
-
-<strong>Important:</strong>
-
-There is no single universally accepted explanation for all changes
-across the entire Harappan region.
+This is a conceptual learning map, not a political or administrative map.
+Ancient geographical boundaries should not be confused with modern
+international borders.
 
 </div>
 
 </section>
 
+<section class="section">
 
-<!-- VISUALS -->
+<h2>⏳ Approximate Urban Phase</h2>
 
-<section class="section" id="visuals">
+<div class="timeline">
 
-<h2>🎨 Visual Learning</h2>
+<div class="timeline-item">
+<strong>Early development</strong>
+<p>
+Settled farming communities and technological developments created the
+foundation for more complex societies.
+</p>
+</div>
 
-<div class="visual-grid">
+<div class="timeline-item">
+<strong>c. 2600 BCE onward</strong>
+<p>
+A major urban phase developed, with large planned settlements and
+extensive networks.
+</p>
+</div>
 
-  <div class="visual-card">
-    <span class="visual-icon">🏙️</span>
-    <strong>Planned City</strong>
-    <p>Organised streets and buildings.</p>
-  </div>
+<div class="timeline-item">
+<strong>c. 2600–1900 BCE</strong>
+<p>
+This is commonly used as the approximate mature urban phase of the
+Harappan civilisation.
+</p>
+</div>
 
-  <div class="visual-card">
-    <span class="visual-icon">🚰</span>
-    <strong>Drainage</strong>
-    <p>Water and sanitation arrangements.</p>
-  </div>
-
-  <div class="visual-card">
-    <span class="visual-icon">🏺</span>
-    <strong>Crafts</strong>
-    <p>Pottery, beads and metalwork.</p>
-  </div>
-
-  <div class="visual-card">
-    <span class="visual-icon">🚢</span>
-    <strong>Trade</strong>
-    <p>Exchange across regions.</p>
-  </div>
+<div class="timeline-item">
+<strong>Later transformation</strong>
+<p>
+Urban centres changed and declined in their earlier form, while people
+continued living and working in different settlements and regions.
+</p>
+</div>
 
 </div>
 
-<h3>🏗️ How an early city worked</h3>
+<div class="analysis-box">
+
+<strong>UPSC-style analysis:</strong>
+
+When historians discuss the “decline” of a civilisation, it does not
+necessarily mean that every person suddenly disappeared.
+Urban systems can weaken, populations can shift, trade networks can
+change, and settlement patterns can transform.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🏙️ Planned Cities</h2>
+
+<p>
+One of the most striking features of Harappan urban settlements is the
+evidence of planning.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>📐 Streets</h3>
+<p>
+Some settlements show organised street layouts rather than completely
+random construction.
+</p>
+</div>
+
+<div class="card">
+<h3>🧱 Bricks</h3>
+<p>
+Standardised construction materials were used extensively in many
+settlements.
+</p>
+</div>
+
+<div class="card">
+<h3>🚰 Drainage</h3>
+<p>
+Drainage systems demonstrate attention to wastewater management and
+urban cleanliness.
+</p>
+</div>
+
+<div class="card">
+<h3>🏠 Houses</h3>
+<p>
+House layouts and neighbourhood organisation reveal patterns of urban
+life.
+</p>
+</div>
+
+</div>
+
+<div class="analysis-box">
+
+<strong>Why is town planning important?</strong>
+
+A planned settlement requires coordination.
+Someone had to decide where structures, streets, water facilities and
+drainage systems should be placed and maintained.
+
+Therefore, urban planning provides evidence about the organisational
+capacity of the society.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🚰 Water Management — A Major Achievement</h2>
+
+<p>
+Water was one of the most important requirements of an urban civilisation.
+Different settlements developed different ways of collecting, storing
+and accessing water.
+</p>
+
+<div class="water-animation">
+
+<div class="house one"></div>
+<div class="house two"></div>
+<div class="reservoir"></div>
+
+</div>
+
+<div class="highlight">
+
+<strong>🎬 Animation explanation:</strong>
+
+The blue reservoir represents stored water.
+The houses represent a settlement dependent on organised water access.
+The animation demonstrates a basic principle:
+
+<strong>
+water security → settlement stability → urban life
+</strong>
+
+</div>
+
+<h3>💧 Dholavira</h3>
+
+<p>
+Dholavira is particularly important for understanding water management.
+Its reservoirs and related infrastructure show how people adapted
+water systems to local environmental conditions.
+</p>
+
+<h3>🚰 Wells</h3>
+
+<p>
+Wells provided access to groundwater and could support everyday life
+in large settlements.
+</p>
+
+<div class="analysis-box">
+
+<strong>Deep analysis:</strong>
+
+Water management is not simply a “technology” topic.
+It connects geography, engineering, public organisation and daily life.
+
+For UPSC preparation, this is an example of how
+<strong>environment + technology + society</strong>
+can be studied together.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🧱 Mohenjo-daro and Urban Infrastructure</h2>
+
+<p>
+Mohenjo-daro provides important archaeological evidence of urban
+infrastructure, including houses, streets, wells and drainage features.
+</p>
+
+<div class="chart-wrap">
+
+<h3>🏙️ What urban infrastructure tells historians</h3>
+
+<div class="bar-row">
+<div class="bar-label">
+<span>Water access</span>
+<span>Essential</span>
+</div>
+<div class="bar">
+<div class="bar-fill" data-width="92"></div>
+</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-label">
+<span>Waste management</span>
+<span>Highly important</span>
+</div>
+<div class="bar">
+<div class="bar-fill" data-width="88"></div>
+</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-label">
+<span>Construction planning</span>
+<span>Highly organised</span>
+</div>
+<div class="bar">
+<div class="bar-fill" data-width="90"></div>
+</div>
+</div>
+
+<div class="bar-row">
+<div class="bar-label">
+<span>Community coordination</span>
+<span>Important</span>
+</div>
+<div class="bar">
+<div class="bar-fill" data-width="84"></div>
+</div>
+</div>
+
+<p class="small">
+This visual is a conceptual learning chart, not statistical data.
+</p>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🌾 Agriculture and Food Production</h2>
+
+<p>
+Cities cannot exist independently of their surrounding food-producing
+regions.
+</p>
 
 <div class="flow">
 
-  <div class="flow-item">🌾 Agriculture</div>
-  <div class="flow-arrow">➡️</div>
-
-  <div class="flow-item">🏺 Craft Production</div>
-  <div class="flow-arrow">➡️</div>
-
-  <div class="flow-item">🏙️ Urban Settlement</div>
-  <div class="flow-arrow">➡️</div>
-
-  <div class="flow-item">🚰 Infrastructure</div>
-  <div class="flow-arrow">➡️</div>
-
-  <div class="flow-item">🤝 Trade</div>
+<div class="flow-box">🌾 Farmers</div>
+<div class="arrow">→</div>
+<div class="flow-box">🥣 Food Production</div>
+<div class="arrow">→</div>
+<div class="flow-box">📦 Surplus</div>
+<div class="arrow">→</div>
+<div class="flow-box">🏙️ Urban Population</div>
 
 </div>
 
-<p class="highlight">
-
-This diagram is a simplified learning model.
-Real ancient societies were more complex and did not necessarily follow
-one identical sequence.
-
+<p>
+Agriculture provided the food base that supported both village
+communities and people involved in specialised urban occupations.
 </p>
 
-<h3>📊 Important Harappan Sites</h3>
+<div class="analysis-box">
+
+<strong>Example:</strong>
+
+Imagine a settlement where every person must grow their own food.
+It would be difficult to maintain large groups of potters, metalworkers,
+builders, traders and administrators.
+
+But if agriculture produces enough food beyond immediate household needs,
+some people can specialise in other occupations.
+
+That is one reason agricultural surplus is important in understanding
+urbanisation.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🛠️ Crafts and Specialisation</h2>
+
+<p>
+Harappan sites have produced evidence of specialised craft activities.
+These include pottery, bead-making, metalwork, ornaments, stonework and
+other forms of production.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏺 Pottery</h3>
+<p>
+Ceramic vessels were useful for storage, cooking and other activities.
+</p>
+</div>
+
+<div class="card">
+<h3>📿 Beads</h3>
+<p>
+Bead-making demonstrates specialised skill and production techniques.
+</p>
+</div>
+
+<div class="card">
+<h3>⚒️ Metalwork</h3>
+<p>
+Knowledge of metals expanded the range of tools and objects available.
+</p>
+</div>
+
+<div class="card">
+<h3>💎 Ornaments</h3>
+<p>
+Ornaments provide clues about craft skill, materials and social practices.
+</p>
+</div>
+
+</div>
+
+<div class="highlight">
+
+<strong>UPSC connection:</strong>
+
+Craft specialisation is evidence of an economy where not everyone had
+to perform the same occupation.
+
+This helps historians understand the relationship between
+<strong>surplus → specialisation → exchange → urban economy</strong>.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>⚖️ Standardised Weights and Measures</h2>
+
+<p>
+Standardised weights are important archaeological evidence because they
+suggest that people needed reasonably consistent ways of measuring
+goods.
+</p>
 
 <table>
 
 <tr>
-<th>Site</th>
-<th>Region</th>
-<th>Important Feature</th>
+<th>Evidence</th>
+<th>What it may indicate</th>
+<th>Historical significance</th>
 </tr>
 
 <tr>
-<td>Harappa</td>
-<td>Punjab region</td>
-<td>Major archaeological site</td>
+<td>Standardised weights</td>
+<td>Consistent measurement</td>
+<td>Useful for exchange and trade</td>
 </tr>
 
 <tr>
-<td>Mohenjo-daro</td>
-<td>Sindh region</td>
-<td>Urban planning and Great Bath</td>
+<td>Repeated craft forms</td>
+<td>Organised production</td>
+<td>Possible specialised manufacturing</td>
 </tr>
 
 <tr>
-<td>Dholavira</td>
-<td>Gujarat</td>
-<td>Water management and urban planning</td>
+<td>Seals</td>
+<td>Identity, goods or administrative practices</td>
+<td>Evidence of complex economic activity</td>
+</tr>
+
+</table>
+
+<div class="analysis-box">
+
+<strong>Important historical method:</strong>
+
+An archaeological object does not automatically tell us exactly what
+people thought.
+
+Historians compare multiple pieces of evidence before drawing a
+conclusion.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🐚 Seals and Trade</h2>
+
+<p>
+Seals are among the distinctive objects associated with Harappan
+archaeological sites.
+</p>
+
+<p>
+They often contain designs, animals and signs that provide clues about
+the society and its economic or administrative activities.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">🏺 Goods</div>
+<div class="arrow">→</div>
+<div class="flow-box">🐚 Seal / Mark</div>
+<div class="arrow">→</div>
+<div class="flow-box">🚚 Movement</div>
+<div class="arrow">→</div>
+<div class="flow-box">🤝 Exchange</div>
+
+</div>
+
+<div class="warning">
+
+<strong>⚠️ Historical caution:</strong>
+
+The script associated with the Harappan civilisation has not been
+deciphered in a universally accepted way.
+
+Therefore, we should not invent translations of individual signs.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🌍 Internal and Long-Distance Trade</h2>
+
+<p>
+A large civilisation needs networks connecting different ecological
+regions and production centres.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<h3>🏘️ Local exchange</h3>
+<p>
+Nearby settlements could exchange agricultural and craft products.
+</p>
+</div>
+
+<div class="card">
+<h3>🛣️ Regional networks</h3>
+<p>
+Goods could travel between settlements located in different regions.
+</p>
+</div>
+
+<div class="card">
+<h3>🌊 Long-distance links</h3>
+<p>
+Archaeological evidence indicates connections extending beyond individual
+settlements.
+</p>
+</div>
+
+<div class="card">
+<h3>🧭 Geography matters</h3>
+<p>
+Rivers, deserts, coasts and mountain routes influenced movement and
+exchange.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🔍 How Archaeologists Study a Civilisation</h2>
+
+<p>
+The Harappan civilisation is known mainly through archaeological
+evidence.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">⛏️ Excavation</div>
+<div class="arrow">→</div>
+<div class="flow-box">🧱 Objects</div>
+<div class="arrow">→</div>
+<div class="flow-box">🔬 Analysis</div>
+<div class="arrow">→</div>
+<div class="flow-box">🧠 Interpretation</div>
+
+</div>
+
+<h3>Evidence may include:</h3>
+
+<ul class="list">
+<li>Buildings and settlement remains</li>
+<li>Pottery</li>
+<li>Tools</li>
+<li>Beads and ornaments</li>
+<li>Metal objects</li>
+<li>Seals</li>
+<li>Burials</li>
+<li>Water structures</li>
+<li>Animal and plant remains</li>
+</ul>
+
+<div class="analysis-box">
+
+<strong>Evidence → Interpretation:</strong>
+
+Suppose archaeologists find a large number of beads in one location.
+That does not automatically prove that the location was a “bead factory.”
+
+Researchers need to examine tools, unfinished products, raw materials,
+production waste and other evidence before making a stronger conclusion.
+
+This is an important historical thinking skill.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🧠 Evidence-Based Thinking</h2>
+
+<table>
+
+<tr>
+<th>Observation</th>
+<th>Possible interpretation</th>
+<th>What else should be checked?</th>
 </tr>
 
 <tr>
-<td>Lothal</td>
-<td>Gujarat</td>
-<td>Crafts and trade-related evidence</td>
+<td>Many wells</td>
+<td>Water was important</td>
+<td>Settlement size, climate, groundwater and maintenance</td>
 </tr>
 
 <tr>
-<td>Kalibangan</td>
-<td>Rajasthan</td>
-<td>Agricultural and settlement evidence</td>
+<td>Drainage structures</td>
+<td>Wastewater was managed</td>
+<td>Construction pattern and actual function</td>
+</tr>
+
+<tr>
+<td>Standardised weights</td>
+<td>Measurement mattered</td>
+<td>Distribution and usage context</td>
+</tr>
+
+<tr>
+<td>Seals</td>
+<td>Economic/administrative activity</td>
+<td>Other archaeological evidence</td>
+</tr>
+
+<tr>
+<td>Craft objects</td>
+<td>Specialised production</td>
+<td>Tools, raw material and production waste</td>
 </tr>
 
 </table>
 
 </section>
 
+<section class="section">
 
-<!-- HINDI -->
-
-<section class="section" id="hindi">
-
-<h2>🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
-
-<h3>1. सबसे प्रारंभिक नगर</h3>
+<h2>🏙️ Why Was Urban Planning Important?</h2>
 
 <p>
-मानव समाज के विकास में छोटे बस्तियों से बड़े और अधिक संगठित नगरों की
-ओर बढ़ना एक महत्वपूर्ण परिवर्तन था।
+Large populations create problems that small settlements may not face
+at the same scale.
 </p>
 
+<div class="grid">
+
+<div class="card">
+<h3>💧 Water</h3>
 <p>
-भारतीय उपमहाद्वीप के उत्तर-पश्चिमी क्षेत्र में तीसरी सहस्राब्दी ईसा
-पूर्व के आसपास अनेक महत्वपूर्ण नगर विकसित हुए।
-इनका संबंध हड़प्पा या सिंधु सभ्यता से माना जाता है।
+Large populations need reliable access to water.
 </p>
+</div>
+
+<div class="card">
+<h3>🗑️ Waste</h3>
+<p>
+More people create more wastewater and waste.
+</p>
+</div>
+
+<div class="card">
+<h3>🏠 Housing</h3>
+<p>
+Growing populations require organised residential spaces.
+</p>
+</div>
+
+<div class="card">
+<h3>🚚 Movement</h3>
+<p>
+Goods and people need routes through settlements.
+</p>
+</div>
+
+</div>
 
 <div class="highlight">
 
-<strong>⭐ मुख्य बात:</strong>
+<strong>Modern comparison:</strong>
 
-नगरों के विकास के साथ नियोजित बस्तियाँ, विशेष शिल्प,
-व्यापार और जल निकासी जैसी व्यवस्थाएँ विकसित हुईं।
+Think about a modern Indian city.
 
-</div>
+A city cannot function only because houses exist.
+It also needs roads, water supply, drainage, waste management,
+electricity and public administration.
 
-
-<h3>2. हड़प्पा सभ्यता</h3>
-
-<p>
-हड़प्पा एक महत्वपूर्ण पुरातात्विक स्थल है और इसी के नाम पर इस सभ्यता
-को हड़प्पा सभ्यता कहा जाता है।
-</p>
-
-<p>
-मोहनजोदड़ो, धोलावीरा, लोथल और कालीबंगा जैसे कई अन्य महत्वपूर्ण स्थल
-भी इस सभ्यता से जुड़े हैं।
-</p>
-
-
-<h3>3. नगर नियोजन</h3>
-
-<p>
-कई हड़प्पाई नगरों में सड़कों, मकानों और अन्य संरचनाओं की योजना दिखाई
-देती है।
-ईंटों के मानकीकृत आकार का भी प्रमाण मिलता है।
-</p>
-
-<p>
-कुछ नगरों में ऊँचे क्षेत्र और नीचे स्थित आवासीय क्षेत्र पाए गए हैं।
-</p>
-
-
-<h3>4. जल निकासी व्यवस्था</h3>
-
-<p>
-हड़प्पाई नगरों की जल निकासी व्यवस्था उनकी प्रमुख विशेषताओं में से एक
-मानी जाती है।
-कई स्थानों पर सड़कों के किनारे नालियाँ बनाई गई थीं।
-</p>
-
-<p>
-इन व्यवस्थाओं से स्वच्छता और जल प्रबंधन के प्रति ध्यान का संकेत मिलता
-है।
-</p>
-
-
-<h3>5. घर और कुएँ</h3>
-
-<p>
-पुरातत्वविदों को अलग-अलग आकार के घर मिले हैं।
-कुछ घरों में आँगन और स्नान क्षेत्र भी पाए गए हैं।
-</p>
-
-<p>
-कई बस्तियों में कुओं के प्रमाण भी मिले हैं।
-</p>
-
-
-<h3>6. शिल्प और कारीगर</h3>
-
-<p>
-हड़प्पाई समाज में विभिन्न प्रकार के शिल्प विकसित थे।
-इनमें मिट्टी के बर्तन, मनके बनाना, धातु का काम, पत्थर और शंख से
-वस्तुएँ बनाना आदि शामिल थे।
-</p>
-
-<div class="example">
-
-<strong>💡 उदाहरण:</strong>
-
-मनकों को विभिन्न पत्थरों, शंख और अन्य सामग्रियों से बनाया जाता था।
-इन वस्तुओं से तकनीक, विशेषज्ञता और व्यापार के बारे में जानकारी मिलती है।
+Ancient urban settlements faced their own versions of similar
+coordination problems.
 
 </div>
-
-
-<h3>7. व्यापार</h3>
-
-<p>
-हड़प्पाई बस्तियाँ विभिन्न क्षेत्रों के साथ वस्तुओं का आदान-प्रदान करती
-थीं।
-पुरातात्विक वस्तुओं से लंबी दूरी के संपर्कों के संकेत मिलते हैं।
-</p>
-
-
-<h3>8. भोजन और कृषि</h3>
-
-<p>
-लोग कृषि, पशुपालन, मछली पकड़ने और अन्य गतिविधियों से भोजन प्राप्त
-करते थे।
-</p>
-
-<p>
-पुरातत्वविद जले हुए अनाज, पशुओं की हड्डियों और अन्य अवशेषों का अध्ययन
-करके भोजन और कृषि के बारे में जानकारी प्राप्त करते हैं।
-</p>
-
-
-<h3>9. मुहर और लिपि</h3>
-
-<p>
-हड़प्पाई स्थलों से अनेक मुहरें मिली हैं।
-इन पर चित्र और छोटे-छोटे संकेत पाए जाते हैं।
-</p>
-
-<div class="warning">
-
-<strong>⚠️ परीक्षा के लिए:</strong>
-
-हड़प्पाई लिपि को अभी तक निश्चित रूप से पढ़ा नहीं जा सका है।
-इसलिए इसे पूर्ण रूप से deciphered बताना गलत होगा।
-
-</div>
-
-
-<h3>10. नगरों में परिवर्तन</h3>
-
-<p>
-समय के साथ हड़प्पाई नगरों में परिवर्तन आया।
-परिपक्व हड़प्पा काल के बाद कई क्षेत्रों में बड़े नगरों का महत्व कम हुआ
-और छोटी बस्तियों का महत्व बढ़ा।
-</p>
-
-<p>
-इसके पीछे पर्यावरणीय परिवर्तन, नदियों के मार्ग में बदलाव,
-व्यापारिक नेटवर्क में परिवर्तन तथा क्षेत्रीय परिस्थितियों जैसे कई
-कारकों पर चर्चा की जाती है।
-</p>
 
 </section>
 
+<section class="section">
 
-<!-- AUDIO -->
+<h2>📊 Civilisation — The Complete System</h2>
 
-<section class="section" id="audio">
+<div class="chart-wrap">
+
+<div class="flow">
+
+<div class="flow-box">🌾 Agriculture</div>
+<div class="arrow">→</div>
+<div class="flow-box">📦 Surplus</div>
+<div class="arrow">→</div>
+<div class="flow-box">🛠️ Crafts</div>
+<div class="arrow">→</div>
+<div class="flow-box">🤝 Trade</div>
+
+</div>
+
+<div class="flow">
+
+<div class="flow-box">🏙️ Cities</div>
+<div class="arrow">↔</div>
+<div class="flow-box">🚰 Infrastructure</div>
+<div class="arrow">↔</div>
+<div class="flow-box">🏛️ Organisation</div>
+
+</div>
+
+<div class="analysis-box">
+
+<strong>Core idea:</strong>
+
+Civilisation is best understood as an interconnected network.
+Agriculture, technology, economy, cities, administration and culture
+support one another.
+
+</div>
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🎬 Final Concept Animation</h2>
+
+<div class="animation-box">
+
+<div class="animation-title">
+From village economy to complex urban civilisation
+</div>
+
+<div class="moving-flow">
+
+<div class="moving-box">🌾 Food</div>
+<div>→</div>
+<div class="moving-box">📦 Surplus</div>
+<div>→</div>
+<div class="moving-box">👨‍🔧 Specialists</div>
+<div>→</div>
+<div class="moving-box">🏪 Exchange</div>
+<div>→</div>
+<div class="moving-box">🏙️ Urban System</div>
+
+</div>
+
+</div>
+
+<div class="highlight">
+
+<strong>What this animation explains:</strong>
+
+The growth of civilisation was not one sudden event.
+Different developments reinforced one another over time.
+
+That is why historians study agriculture, crafts, trade, water,
+settlements and administration together.
+
+</div>
+
+</section>
+
+<section class="section">
+
+<h2>🇮🇳 Why the Harappan Civilisation Matters</h2>
+
+<ul class="list">
+
+<li>
+It provides evidence of an early urban civilisation in the Indian
+Subcontinent.
+</li>
+
+<li>
+Its settlements demonstrate sophisticated approaches to construction
+and urban infrastructure.
+</li>
+
+<li>
+Water management provides an important example of adapting technology
+to environmental conditions.
+</li>
+
+<li>
+Craft production demonstrates occupational specialisation.
+</li>
+
+<li>
+Weights, seals and trade evidence help historians understand economic
+networks.
+</li>
+
+<li>
+Its study shows how archaeology can reconstruct societies even when
+written sources are limited or difficult to interpret.
+</li>
+
+</ul>
+
+</section>
+
+<section class="section">
+
+<h2>🇮🇳 Hindi Explanation</h2>
+
+<h3>सभ्यता क्या है?</h3>
+
+<p>
+सभ्यता केवल पुराने समय में रहने वाले लोगों का नाम नहीं है।
+जब कोई समाज अधिक बड़ा और जटिल हो जाता है तथा उसमें प्रशासन,
+शहर, विशेष प्रकार के शिल्प, व्यापार, सांस्कृतिक अभिव्यक्ति और
+उत्पादक कृषि जैसी व्यवस्थाएँ दिखाई देती हैं, तो हम उसे सभ्यता के
+रूप में समझ सकते हैं।
+</p>
+
+<h3>सिंधु-सरस्वती / हड़प्पा सभ्यता</h3>
+
+<p>
+इस अध्याय में भारतीय उपमहाद्वीप की प्रारम्भिक नगरीय सभ्यता का अध्ययन
+किया जाता है। इसे हड़प्पा सभ्यता, सिंधु सभ्यता या सिंधु-सरस्वती
+सभ्यता जैसे नामों से जाना जाता है।
+</p>
+
+<h3>नगर नियोजन</h3>
+
+<p>
+हड़प्पा सभ्यता के कई स्थलों पर सड़कों, मकानों, कुओं और जल निकासी
+व्यवस्था से संबंधित पुरातात्त्विक प्रमाण मिले हैं। इससे पता चलता है
+कि कुछ नगरों में निर्माण और सार्वजनिक सुविधाओं के लिए काफी संगठन
+की आवश्यकता थी।
+</p>
+
+<h3>जल प्रबंधन</h3>
+
+<p>
+धोलावीरा जैसे स्थलों पर जल संग्रह और प्रबंधन की विशेष व्यवस्था
+महत्वपूर्ण है। यह बताता है कि लोगों ने अपने पर्यावरण और पानी की
+उपलब्धता के अनुसार तकनीकी समाधान विकसित किए।
+</p>
+
+<h3>कृषि और शिल्प</h3>
+
+<p>
+कृषि ने भोजन उपलब्ध कराया। जब उत्पादन आवश्यकता से अधिक हो सकता था,
+तो समाज के कुछ लोग अन्य कार्यों जैसे शिल्प, व्यापार और निर्माण में
+विशेषज्ञता विकसित कर सकते थे।
+</p>
+
+<h3>व्यापार</h3>
+
+<p>
+विभिन्न वस्तुओं, कच्चे माल और तैयार उत्पादों का आदान-प्रदान अलग-अलग
+क्षेत्रों को जोड़ सकता था। मानकीकृत बाट और मुहरें आर्थिक गतिविधियों
+को समझने में उपयोगी पुरातात्त्विक प्रमाण हैं।
+</p>
+
+<div class="analysis-box">
+
+<strong>सरल उदाहरण:</strong>
+
+आज एक बड़े शहर में हर व्यक्ति किसान नहीं होता।
+कोई शिक्षक है, कोई इंजीनियर, कोई दुकानदार, कोई डॉक्टर और कोई
+प्रशासन में काम करता है।
+
+इसी प्रकार बड़े प्राचीन समाजों में भी काम का विभाजन बढ़ सकता था।
+इसके पीछे कृषि उत्पादन और संसाधनों की उपलब्धता महत्वपूर्ण थी।
+
+</div>
+
+</section>
+
+<section class="section">
 
 <h2>🔊 Audio Learning</h2>
 
-<div class="audio-box">
-
 <p>
-You can listen to the content in the selected language using the buttons
-below.
+नीचे दिए buttons से इस chapter की मुख्य explanation को सुन सकते हो।
+Mobile browser में SpeechSynthesis support के अनुसार आवाज उपलब्ध होगी।
 </p>
 
-<button onclick="speakEnglish()">▶️ English Audio</button>
+<div class="audio-buttons">
 
-<button onclick="speakHindi()">▶️ Hindi Audio</button>
+<button onclick="speakEnglish()">🔊 English Audio</button>
 
-<button onclick="stopSpeech()">⏹️ Stop</button>
+<button onclick="speakHindi()">🔊 Hindi Audio</button>
+
+<button onclick="stopSpeech()">⏹ Stop</button>
 
 </div>
 
 </section>
 
-
-<!-- UPSC -->
-
-<section class="section" id="upsc">
+<section class="section">
 
 <h2>🎯 UPSC Important Points</h2>
 
 <div class="upsc">
 
-<ol>
+<ul class="list">
 
-<li>Harappan civilisation is also called the Indus civilisation.</li>
+<li>
+Civilisation involves interconnected social, economic, technological
+and administrative developments.
+</li>
 
-<li>Harappa was an important archaeological site.</li>
+<li>
+The Harappan civilisation represents an important early urban tradition
+of the Indian Subcontinent.
+</li>
 
-<li>Mohenjo-daro is famous for urban remains including the Great Bath.</li>
+<li>
+Town planning and drainage are important archaeological evidence.
+</li>
 
-<li>Dholavira is important for its sophisticated water-management features.</li>
+<li>
+Dholavira is especially important for understanding water management.
+</li>
 
-<li>Lothal is associated with craft production and trade-related evidence.</li>
+<li>
+Agricultural production could support urban populations and specialised
+occupations.
+</li>
 
-<li>Harappan settlements show evidence of urban planning.</li>
+<li>
+Craft specialisation indicates occupational differentiation.
+</li>
 
-<li>Drainage systems are an important feature of several settlements.</li>
+<li>
+Standardised weights are useful evidence for organised exchange.
+</li>
 
-<li>Craft specialisation was an important part of urban life.</li>
+<li>
+Seals provide important clues about Harappan economic and cultural life.
+</li>
 
-<li>Seals provide important archaeological evidence.</li>
+<li>
+The Harappan script remains undeciphered in a universally accepted way.
+</li>
 
-<li>The Harappan script remains undeciphered.</li>
+<li>
+Archaeologists build interpretations by comparing multiple types of
+evidence.
+</li>
 
-<li>Archaeology helps reconstruct Harappan life through material remains.</li>
-
-<li>The decline of urban Harappan centres cannot be explained by one
-single universally accepted cause.</li>
-
-</ol>
-
-</div>
-
-<h3>🧠 Prelims Quick Revision</h3>
-
-<div class="highlight">
-
-<strong>Harappa → Mohenjo-daro → Dholavira → Lothal → Kalibangan</strong>
-
-<p>
-Remember these sites and their broad geographical and archaeological
-significance.
-</p>
+</ul>
 
 </div>
 
 </section>
 
-
-<!-- MAINS -->
-
-<section class="section" id="mains">
+<section class="section">
 
 <h2>✍️ Mains Practice</h2>
 
-<div class="mains">
-
-<strong>Q1.</strong>
-
-Discuss the major features of urban planning in the Harappan civilisation.
-
+<div class="question">
+<strong>1.</strong>
+What features help historians identify a civilisation? Explain with
+reference to the Harappan civilisation.
 </div>
 
-<div class="mains">
-
-<strong>Q2.</strong>
-
-Explain how archaeological evidence helps historians understand the
-economic activities of Harappan society.
-
+<div class="question">
+<strong>2.</strong>
+Explain the importance of water management in Harappan urban settlements.
 </div>
 
-<div class="mains">
-
-<strong>Q3.</strong>
-
-Discuss the importance of drainage and water-management systems in
-understanding Harappan urban life.
-
+<div class="question">
+<strong>3.</strong>
+How did agriculture and craft specialisation contribute to urban life?
 </div>
 
-<div class="mains">
+<div class="question">
+<strong>4.</strong>
+Why are archaeological objects not always sufficient by themselves to
+prove a historical interpretation?
+</div>
 
-<strong>Q4.</strong>
-
-What do seals, beads and other artefacts tell us about Harappan trade
-and craft production?
-
+<div class="question">
+<strong>5.</strong>
+Compare the challenges of managing a large modern city with those of
+an ancient urban settlement.
 </div>
 
 </section>
 
+<section class="section">
 
-<!-- TESTS -->
+<h2>⚡ Quick Revision</h2>
 
-<section class="section" id="tests">
+<table>
 
-<h2>📝 Chapter Tests</h2>
+<tr>
+<th>Topic</th>
+<th>Remember</th>
+</tr>
 
-<p class="highlight">
+<tr>
+<td>Civilisation</td>
+<td>Complex society with interconnected institutions and activities.</td>
+</tr>
 
-<strong>20 Questions Total:</strong>
-4 Tests × 5 Questions.
+<tr>
+<td>Harappan civilisation</td>
+<td>Important early urban civilisation of the Indian Subcontinent.</td>
+</tr>
 
-Select an answer first. The correct answer and explanation will appear
-only after you press <strong>Check Answer</strong>.
+<tr>
+<td>Urban planning</td>
+<td>Organised settlement, streets, buildings and infrastructure.</td>
+</tr>
 
+<tr>
+<td>Water management</td>
+<td>Wells, reservoirs and systems adapted to local conditions.</td>
+</tr>
+
+<tr>
+<td>Agriculture</td>
+<td>Food production supported villages and cities.</td>
+</tr>
+
+<tr>
+<td>Crafts</td>
+<td>Specialised production such as pottery, beads and metalwork.</td>
+</tr>
+
+<tr>
+<td>Trade</td>
+<td>Exchange connected settlements and regions.</td>
+</tr>
+
+<tr>
+<td>Seals</td>
+<td>Important archaeological evidence related to Harappan society.</td>
+</tr>
+
+</table>
+
+</section>
+
+<section class="section">
+
+<h2>📝 Test Series — 20 MCQs</h2>
+
+<p>
+<strong>Rule:</strong>
+Answer select karo → <strong>Check Answer</strong> dabao.
+Explanation uske baad hi dikhega.
 </p>
 
-
-<!-- TEST 1 -->
-
-<div class="test">
-
-<h3>📝 Test 1 — Early Cities</h3>
-
-<div class="question">
-
-<p><strong>1. The Harappan civilisation is named after which archaeological site?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q1" value="A"> A. Lothal</label>
-<label><input type="radio" name="q1" value="B"> B. Harappa</label>
-<label><input type="radio" name="q1" value="C"> C. Dholavira</label>
-<label><input type="radio" name="q1" value="D"> D. Kalibangan</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(1,'B',
-'Harappa gave its name to the Harappan civilisation.',
-'हड़प्पा स्थल के नाम पर इस सभ्यता को हड़प्पा सभ्यता कहा जाता है।')">
-Check Answer
-</button>
-
-<div class="result" id="r1"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>2. Which feature is strongly associated with Harappan urban settlements?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q2" value="A"> A. Drainage systems</label>
-<label><input type="radio" name="q2" value="B"> B. Printing presses</label>
-<label><input type="radio" name="q2" value="C"> C. Iron railways</label>
-<label><input type="radio" name="q2" value="D"> D. Paper currency</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(2,'A',
-'Drainage systems are an important archaeological feature of several Harappan settlements.',
-'कई हड़प्पाई नगरों में जल निकासी व्यवस्था एक महत्वपूर्ण पुरातात्विक विशेषता थी।')">
-Check Answer
-</button>
-
-<div class="result" id="r2"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>3. Which site is located in present-day Gujarat?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q3" value="A"> A. Dholavira</label>
-<label><input type="radio" name="q3" value="B"> B. Harappa</label>
-<label><input type="radio" name="q3" value="C"> C. Mohenjo-daro</label>
-<label><input type="radio" name="q3" value="D"> D. Kalibangan</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(3,'A',
-'Dholavira is located in present-day Gujarat.',
-'धोलावीरा वर्तमान गुजरात में स्थित एक महत्वपूर्ण हड़प्पाई स्थल है।')">
-Check Answer
-</button>
-
-<div class="result" id="r3"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>4. Which of the following is associated with Harappan craft production?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q4" value="A"> A. Bead-making</label>
-<label><input type="radio" name="q4" value="B"> B. Printing books</label>
-<label><input type="radio" name="q4" value="C"> C. Steam engines</label>
-<label><input type="radio" name="q4" value="D"> D. Telegraphy</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(4,'A',
-'Bead-making was an important specialised craft in Harappan settlements.',
-'मनके बनाना हड़प्पाई बस्तियों का एक महत्वपूर्ण विशेषीकृत शिल्प था।')">
-Check Answer
-</button>
-
-<div class="result" id="r4"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>5. What is the current status of the Harappan script?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q5" value="A"> A. Completely deciphered</label>
-<label><input type="radio" name="q5" value="B"> B. Partly translated into Sanskrit</label>
-<label><input type="radio" name="q5" value="C"> C. Not conclusively deciphered</label>
-<label><input type="radio" name="q5" value="D"> D. Written only in Greek</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(5,'C',
-'The Harappan script has not been conclusively deciphered.',
-'हड़प्पाई लिपि को अभी तक निश्चित रूप से पढ़ा नहीं जा सका है।')">
-Check Answer
-</button>
-
-<div class="result" id="r5"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 2 -->
-
-<div class="test">
-
-<h3>📝 Test 2 — Urban Life</h3>
-
-<div class="question">
-
-<p><strong>6. Which site is famous for evidence of sophisticated water management?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q6" value="A"> A. Dholavira</label>
-<label><input type="radio" name="q6" value="B"> B. Harappa</label>
-<label><input type="radio" name="q6" value="C"> C. Sarnath</label>
-<label><input type="radio" name="q6" value="D"> D. Taxila</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(6,'A',
-'Dholavira provides important evidence of water storage and management.',
-'धोलावीरा जल संग्रह और जल प्रबंधन की महत्वपूर्ण व्यवस्था के प्रमाण देता है।')">
-Check Answer
-</button>
-
-<div class="result" id="r6"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>7. What can archaeologists learn from charred grains?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q7" value="A"> A. Ancient food and agriculture</label>
-<label><input type="radio" name="q7" value="B"> B. Modern elections</label>
-<label><input type="radio" name="q7" value="C"> C. Modern transport</label>
-<label><input type="radio" name="q7" value="D"> D. Medieval literature</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(7,'A',
-'Charred grains can provide evidence about ancient crops and food practices.',
-'जले हुए अनाज से प्राचीन फसलों और भोजन की जानकारी मिल सकती है।')">
-Check Answer
-</button>
-
-<div class="result" id="r7"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>8. What does the presence of specialised crafts indicate?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q8" value="A"> A. Occupational specialisation</label>
-<label><input type="radio" name="q8" value="B"> B. Absence of settlements</label>
-<label><input type="radio" name="q8" value="C"> C. Lack of trade</label>
-<label><input type="radio" name="q8" value="D"> D. No technology</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(8,'A',
-'Specialised crafts suggest that some people focused on particular occupations.',
-'विशेषीकृत शिल्प बताते हैं कि कुछ लोग विशेष व्यवसायों में लगे हुए थे।')">
-Check Answer
-</button>
-
-<div class="result" id="r8"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>9. Which object can provide evidence about Harappan symbols?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q9" value="A"> A. Seals</label>
-<label><input type="radio" name="q9" value="B"> B. Modern coins</label>
-<label><input type="radio" name="q9" value="C"> C. Printed newspapers</label>
-<label><input type="radio" name="q9" value="D"> D. Railway tickets</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(9,'A',
-'Harappan seals often contain symbols and images.',
-'हड़प्पाई मुहरों पर अक्सर संकेत और चित्र पाए जाते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r9"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>10. Why are archaeological remains important?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q10" value="A"> A. They provide material evidence about past societies</label>
-<label><input type="radio" name="q10" value="B"> B. They are always complete written records</label>
-<label><input type="radio" name="q10" value="C"> C. They only show modern life</label>
-<label><input type="radio" name="q10" value="D"> D. They eliminate all historical debates</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(10,'A',
-'Archaeological remains provide material evidence that helps reconstruct past societies.',
-'पुरातात्विक अवशेष अतीत के समाजों को समझने के लिए भौतिक प्रमाण देते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r10"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 3 -->
-
-<div class="test">
-
-<h3>📝 Test 3 — Harappan Economy & Society</h3>
-
-<div class="question">
-
-<p><strong>11. Which material was used in Harappan bead-making?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q11" value="A"> A. Stone</label>
-<label><input type="radio" name="q11" value="B"> B. Plastic</label>
-<label><input type="radio" name="q11" value="C"> C. Aluminium foil</label>
-<label><input type="radio" name="q11" value="D"> D. Synthetic fibre</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(11,'A',
-'Stone was among the materials used for making beads.',
-'पत्थर मनके बनाने के लिए उपयोग की जाने वाली सामग्रियों में शामिल था।')">
-Check Answer
-</button>
-
-<div class="result" id="r11"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>12. What can animal bones tell archaeologists?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q12" value="A"> A. Aspects of diet and animal use</label>
-<label><input type="radio" name="q12" value="B"> B. Exact modern population</label>
-<label><input type="radio" name="q12" value="C"> C. Modern political parties</label>
-<label><input type="radio" name="q12" value="D"> D. Modern climate policy</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(12,'A',
-'Animal bones can provide clues about diet, domestication and animal use.',
-'पशुओं की हड्डियाँ भोजन, पशुपालन और पशुओं के उपयोग के बारे में संकेत दे सकती हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r12"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>13. Which activity helped connect different regions?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q13" value="A"> A. Trade and exchange</label>
-<label><input type="radio" name="q13" value="B"> B. Television</label>
-<label><input type="radio" name="q13" value="C"> C. Internet</label>
-<label><input type="radio" name="q13" value="D"> D. Railways</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(13,'A',
-'Trade and exchange connected different regions in the ancient world.',
-'व्यापार और वस्तु-विनिमय ने विभिन्न क्षेत्रों को जोड़ने में भूमिका निभाई।')">
-Check Answer
-</button>
-
-<div class="result" id="r13"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>14. Which of the following is an example of urban infrastructure?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q14" value="A"> A. Drainage system</label>
-<label><input type="radio" name="q14" value="B"> B. Smartphone network</label>
-<label><input type="radio" name="q14" value="C"> C. Railway station</label>
-<label><input type="radio" name="q14" value="D"> D. Internet tower</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(14,'A',
-'Drainage systems were an important form of urban infrastructure.',
-'जल निकासी व्यवस्था प्राचीन नगरों के महत्वपूर्ण आधारभूत ढाँचे का हिस्सा थी।')">
-Check Answer
-</button>
-
-<div class="result" id="r14"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>15. What is one limitation of archaeological evidence?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q15" value="A"> A. It may not provide a complete picture of society</label>
-<label><input type="radio" name="q15" value="B"> B. It is always fictional</label>
-<label><input type="radio" name="q15" value="C"> C. It never contains useful information</label>
-<label><input type="radio" name="q15" value="D"> D. It only studies modern objects</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(15,'A',
-'Archaeological evidence is valuable but incomplete, so historians interpret multiple types of evidence.',
-'पुरातात्विक प्रमाण महत्वपूर्ण होते हैं, लेकिन वे पूर्ण नहीं होते; इसलिए इतिहासकार कई प्रकार के प्रमाणों का उपयोग करते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r15"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 4 -->
-
-<div class="test">
-
-<h3>📝 Test 4 — UPSC Revision</h3>
-
-<div class="question">
-
-<p><strong>16. Which statement about Harappan cities is correct?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q16" value="A"> A. Some show evidence of careful planning</label>
-<label><input type="radio" name="q16" value="B"> B. All were identical</label>
-<label><input type="radio" name="q16" value="C"> C. None had drainage</label>
-<label><input type="radio" name="q16" value="D"> D. All were built after the Roman Empire</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(16,'A',
-'Several Harappan settlements show evidence of organised urban planning.',
-'कई हड़प्पाई बस्तियों में संगठित नगर नियोजन के प्रमाण मिलते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r16"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>17. Why is Dholavira important for UPSC preparation?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q17" value="A"> A. It provides important evidence of water management</label>
-<label><input type="radio" name="q17" value="B"> B. It was a medieval capital of Delhi</label>
-<label><input type="radio" name="q17" value="C"> C. It was a Mughal fort</label>
-<label><input type="radio" name="q17" value="D"> D. It was a British port</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(17,'A',
-'Dholavira is particularly important for its water-management features.',
-'धोलावीरा अपनी जल प्रबंधन व्यवस्था के कारण विशेष रूप से महत्वपूर्ण है।')">
-Check Answer
-</button>
-
-<div class="result" id="r17"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>18. Which statement about the Harappan script is correct?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q18" value="A"> A. It has not been conclusively deciphered</label>
-<label><input type="radio" name="q18" value="B"> B. It is completely understood</label>
-<label><input type="radio" name="q18" value="C"> C. It was written in English</label>
-<label><input type="radio" name="q18" value="D"> D. It was written only in Latin</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(18,'A',
-'The Harappan script remains undeciphered in a conclusive sense.',
-'हड़प्पाई लिपि अभी तक निश्चित रूप से पढ़ी नहीं जा सकी है।')">
-Check Answer
-</button>
-
-<div class="result" id="r18"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>19. Which combination is correctly matched?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q19" value="A"> A. Dholavira — Gujarat</label>
-<label><input type="radio" name="q19" value="B"> B. Harappa — Kerala</label>
-<label><input type="radio" name="q19" value="C"> C. Mohenjo-daro — Tamil Nadu</label>
-<label><input type="radio" name="q19" value="D"> D. Kalibangan — Odisha</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(19,'A',
-'Dholavira is located in present-day Gujarat.',
-'धोलावीरा वर्तमान गुजरात में स्थित है।')">
-Check Answer
-</button>
-
-<div class="result" id="r19"></div>
-
-</div>
-
-
-<div class="question">
-
-<p><strong>20. What is the best approach to explaining the decline of Harappan cities?</strong></p>
-
-<div class="options">
-
-<label><input type="radio" name="q20" value="A"> A. Consider multiple regional factors and evidence</label>
-<label><input type="radio" name="q20" value="B"> B. Assume one cause explains everything</label>
-<label><input type="radio" name="q20" value="C"> C. Ignore archaeological evidence</label>
-<label><input type="radio" name="q20" value="D"> D. Use only modern political explanations</label>
-
-</div>
-
-<button class="check-btn" onclick="checkAnswer(20,'A',
-'Historians consider several possible environmental, economic and regional factors rather than assuming one universal cause.',
-'इतिहासकार कई पर्यावरणीय, आर्थिक और क्षेत्रीय कारकों पर विचार करते हैं, न कि केवल एक कारण को सार्वभौमिक मानते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r20"></div>
-
-</div>
-
-</div>
+<div id="quiz"></div>
 
 </section>
 
+<section class="section">
 
-<!-- FINAL FLOW -->
+<h2>📈 Chapter Progress</h2>
 
-<section class="section" id="flow">
+<div class="progress-container">
 
-<h2>🔄 Chapter 3 — Complete Conceptual Flow</h2>
-
-<div class="flow">
-
-<div class="flow-item">
-🌾<br>
-Agriculture
+<div class="progress-bg">
+<div class="progress-fill" id="progressFill"></div>
 </div>
 
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🏺<br>
-Crafts
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🏙️<br>
-Cities
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🚰<br>
-Infrastructure
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🤝<br>
-Trade
+<div class="progress-text" id="progressText">
+0 / 20 questions checked
 </div>
 
 </div>
-
-<div class="highlight">
-
-<strong>🧠 One-Line Revision:</strong>
-
-Agriculture and other economic activities supported specialised
-production, exchange and the development of organised urban settlements.
-
-</div>
-
-</section>
-
 
 <button class="complete-btn" onclick="completeChapter()">
 ✅ Mark Chapter Complete
 </button>
 
+<div class="completed" id="completedBox">
+🎉 Chapter 3 completed!
 </div>
 
+</section>
+
+<section class="section">
+
+<h2>📚 Study Strategy</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Step 1</h3>
+<p>
+First understand the civilisation concept and its seven characteristics.
+</p>
+</div>
+
+<div class="card">
+<h3>Step 2</h3>
+<p>
+Then connect agriculture, surplus, crafts and trade.
+</p>
+</div>
+
+<div class="card">
+<h3>Step 3</h3>
+<p>
+Study urban planning and water management carefully.
+</p>
+</div>
+
+<div class="card">
+<h3>Step 4</h3>
+<p>
+Finally solve all 20 MCQs and attempt the Mains questions.
+</p>
+</div>
+
+</div>
+
+</section>
+
+</main>
 
 <footer>
 
-<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
-
 <p>
-Premium NCERT Learning • English + Hindi • UPSC Focus
+🇮🇳 UPSC Shiksha
 </p>
 
 <p>
-© 2026 UPSC Shiksha
+Class 6 History • Current NCERT 2026–27
+</p>
+
+<p class="small">
+Original educational explanations created for UPSC Shiksha.
 </p>
 
 </footer>
 
-
 <script>
 
-let checked = JSON.parse(
-  localStorage.getItem("ch3_checked") || "[]"
-);
+const questions = [
+
+{
+q:"Which combination best describes the main features used in this chapter to identify a civilisation?",
+o:[
+"Government, urbanism, crafts, trade, writing, culture and productive agriculture",
+"Only farming, hunting, pottery and fishing",
+"Only kings, armies, temples and palaces",
+"Only writing, coins, roads and monuments"
+],
+a:0,
+e:"The chapter connects civilisation with administration, urbanism, specialised crafts, trade, writing, cultural expression and productive agriculture."
+},
+
+{
+q:"Why is agricultural surplus important for the development of complex societies?",
+o:[
+"It can allow some people to specialise in occupations other than food production",
+"It makes all people dependent on hunting",
+"It eliminates the need for trade",
+"It prevents the growth of settlements"
+],
+a:0,
+e:"Surplus food can support people engaged in crafts, construction, trade and administration."
+},
+
+{
+q:"Which site is especially associated with sophisticated water-management systems?",
+o:[
+"Dholavira",
+"Taxila",
+"Pataliputra",
+"Ujjain"
+],
+a:0,
+e:"Dholavira is particularly important for understanding reservoirs and water management."
+},
+
+{
+q:"What do planned streets and drainage systems primarily suggest?",
+o:[
+"Some degree of urban organisation and coordination",
+"That every resident was a farmer",
+"That writing had already been deciphered",
+"That the settlement had no trade"
+],
+a:0,
+e:"Urban infrastructure requires planning, construction and maintenance, suggesting organised coordination."
+},
+
+{
+q:"Why are standardised weights historically significant?",
+o:[
+"They suggest consistent measurement was important",
+"They prove the exact language of the civilisation",
+"They show that agriculture did not exist",
+"They prove every settlement had the same government"
+],
+a:0,
+e:"Standardised weights indicate that consistent measurement could have been important in exchange and economic activity."
+},
+
+{
+q:"Which is the best example of occupational specialisation?",
+o:[
+"Some people focusing on bead-making while others perform different occupations",
+"Everyone in a settlement doing exactly the same work",
+"Every family producing all possible goods alone",
+"People avoiding all forms of exchange"
+],
+a:0,
+e:"Specialisation occurs when different people or groups focus on particular skilled activities."
+},
+
+{
+q:"Why should historians be careful when interpreting a single archaeological object?",
+o:[
+"An object may have several possible meanings and needs contextual evidence",
+"Objects never provide historical information",
+"Only written books can provide evidence",
+"Archaeologists are not allowed to compare objects"
+],
+a:0,
+e:"Archaeological interpretation becomes stronger when objects are studied with their location, context and other evidence."
+},
+
+{
+q:"Which sequence best represents the economic relationship discussed in the chapter?",
+o:[
+"Agriculture → surplus → specialisation → exchange → urban growth",
+"Trade → disappearance of farming → smaller settlements → no crafts",
+"Writing → hunting → abandonment of cities → agriculture",
+"Drainage → disappearance of food production → trade stops"
+],
+a:0,
+e:"The chapter encourages understanding agriculture, surplus, specialisation, exchange and urban development as interconnected processes."
+},
+
+{
+q:"What is one important limitation when studying the Harappan script?",
+o:[
+"It has not been deciphered in a universally accepted way",
+"It was written only in modern Hindi",
+"It has already been translated completely",
+"It contained only numerical tables"
+],
+a:0,
+e:"The Harappan script remains undeciphered in a universally accepted manner."
+},
+
+{
+q:"Why are wells important evidence in an ancient urban settlement?",
+o:[
+"They provide clues about access to water and everyday urban life",
+"They prove that every person was a trader",
+"They prove that agriculture was absent",
+"They show that cities had no public organisation"
+],
+a:0,
+e:"Wells provide evidence about water access, settlement needs and urban infrastructure."
+},
+
+{
+q:"What does craft specialisation tell historians?",
+o:[
+"Some people possessed specialised skills and production activities",
+"Nobody exchanged goods",
+"All production was done by farmers",
+"Cities had no economic organisation"
+],
+a:0,
+e:"Specialised crafts show occupational differentiation and organised production."
+},
+
+{
+q:"Why is drainage important in understanding urban life?",
+o:[
+"It shows attention to managing wastewater and settlement infrastructure",
+"It proves that people lived only outside cities",
+"It shows that agriculture did not exist",
+"It proves that every house was a palace"
+],
+a:0,
+e:"Drainage is an infrastructure response to the needs of a settled and relatively dense population."
+},
+
+{
+q:"Which statement best describes the relationship between villages and cities?",
+o:[
+"Cities depend on wider networks of food, resources, labour and exchange",
+"Cities always function independently of rural areas",
+"Villages never supplied cities",
+"Cities could exist without food production"
+],
+a:0,
+e:"Urban populations require food and resources supplied through wider economic networks."
+},
+
+{
+q:"What is the best historical method for interpreting evidence?",
+o:[
+"Compare multiple pieces of evidence before drawing conclusions",
+"Choose the most attractive explanation immediately",
+"Ignore archaeological context",
+"Assume every object has only one possible meaning"
+],
+a:0,
+e:"Historians strengthen interpretations by comparing evidence and considering archaeological context."
+},
+
+{
+q:"What is meant by urbanism in this chapter?",
+o:[
+"The development and organisation of towns or cities",
+"Only the existence of farms",
+"Only the presence of forests",
+"Only long-distance travel"
+],
+a:0,
+e:"Urbanism refers to organised urban settlement and the systems associated with towns and cities."
+},
+
+{
+q:"Why is Dholavira useful for studying environmental adaptation?",
+o:[
+"Its water-management features show responses to local water conditions",
+"It had no need for water",
+"It was located in a modern industrial zone",
+"It provides evidence only about warfare"
+],
+a:0,
+e:"Dholavira's water infrastructure demonstrates how people developed systems suited to local environmental conditions."
+},
+
+{
+q:"Which evidence can help historians study Harappan craft production?",
+o:[
+"Finished objects, tools, raw materials and production waste",
+"Only modern textbooks",
+"Only legends written centuries later",
+"Only modern maps"
+],
+a:0,
+e:"A combination of objects, tools, raw materials and production waste can help identify specialised craft activities."
+},
+
+{
+q:"Why should 'decline' of an ancient civilisation not automatically mean total disappearance?",
+o:[
+"Urban systems may change while populations, settlements and traditions continue in different forms",
+"All people always disappear simultaneously",
+"Archaeology cannot study change",
+"Decline always means complete extinction"
+],
+a:0,
+e:"Urban decline can involve population movement, changing settlement patterns and transformation of economic networks."
+},
+
+{
+q:"Which modern comparison best helps understand ancient urban infrastructure?",
+o:[
+"Modern cities also require coordinated water, roads, drainage and waste systems",
+"Modern cities do not need infrastructure",
+"Ancient settlements had electricity like modern cities",
+"Modern cities depend only on hunting"
+],
+a:0,
+e:"Both ancient and modern cities face coordination challenges involving water, movement, waste and settlement management."
+},
+
+{
+q:"What is the strongest overall lesson from this chapter?",
+o:[
+"Early civilisation developed through interconnected economic, technological, environmental and social systems",
+"One invention alone created every ancient city",
+"Trade was completely unrelated to agriculture",
+"Urban life had no connection with the environment"
+],
+a:0,
+e:"The chapter presents civilisation as an interconnected system involving agriculture, crafts, trade, infrastructure, environment and social organisation."
+}
+
+];
+
+function buildQuiz(){
+
+    const quiz=document.getElementById("quiz");
+
+    questions.forEach((item,index)=>{
+
+        const div=document.createElement("div");
+
+        div.className="question";
+
+        let html=`
+            <h3>Q${index+1}. ${item.q}</h3>
+        `;
+
+        item.o.forEach((option,optIndex)=>{
+
+            html+=`
+            <label class="option">
+                <input type="radio"
+                       name="q${index}"
+                       value="${optIndex}">
+                ${String.fromCharCode(65+optIndex)}.
+                ${option}
+            </label>
+            `;
+
+        });
+
+        html+=`
+            <button class="check-btn"
+                    onclick="checkAnswer(${index})">
+                ✅ Check Answer
+            </button>
+
+            <div class="explanation"
+                 id="exp${index}">
+                <strong>Explanation:</strong>
+                ${item.e}
+            </div>
+        `;
+
+        div.innerHTML=html;
+
+        quiz.appendChild(div);
+
+    });
+
+}
+
+function checkAnswer(index){
+
+    const selected=document.querySelector(
+        `input[name="q${index}"]:checked`
+    );
+
+    if(!selected){
+
+        alert("Please select an answer first.");
+
+        return;
+
+    }
+
+    const answer=parseInt(selected.value);
+
+    const exp=document.getElementById(`exp${index}`);
+
+    exp.style.display="block";
+
+    localStorage.setItem(
+        `class6history3q${index+1}`,
+        "checked"
+    );
+
+    updateProgress();
+
+}
 
 function updateProgress(){
 
-  const total = 20;
+    let count=0;
 
-  const done = checked.length;
+    for(let i=1;i<=20;i++){
 
-  const percent = Math.round((done / total) * 100);
+        if(
+            localStorage.getItem(
+                `class6history3q${i}`
+            )==="checked"
+        ){
 
-  document.getElementById("progressFill").style.width =
-    percent + "%";
+            count++;
 
-  document.getElementById("progressText").textContent =
-    percent + "% completed (" + done + "/" + total + " questions checked)";
+        }
 
-}
+    }
 
-function checkAnswer(number, correct, explanation, hindiExplanation){
+    const percentage=(count/20)*100;
 
-  const selected =
-    document.querySelector(
-      'input[name="q' + number + '"]:checked'
-    );
+    document.getElementById(
+        "progressFill"
+    ).style.width=percentage+"%";
 
-  const result =
-    document.getElementById("r" + number);
-
-  if(!selected){
-
-    result.style.display = "block";
-    result.className = "result incorrect";
-
-    result.innerHTML =
-      "⚠️ Please select an option first.";
-
-    return;
-  }
-
-  const answer = selected.value;
-
-  if(!checked.includes(number)){
-
-    checked.push(number);
-
-    localStorage.setItem(
-      "ch3_checked",
-      JSON.stringify(checked)
-    );
-
-  }
-
-  result.style.display = "block";
-
-  if(answer === correct){
-
-    result.className = "result correct";
-
-    result.innerHTML =
-      "<strong>✅ Correct!</strong><br><br>" +
-      "<strong>Explanation:</strong> " +
-      explanation +
-      "<br><br>" +
-      "<strong>हिंदी व्याख्या:</strong> " +
-      hindiExplanation;
-
-  }else{
-
-    result.className = "result incorrect";
-
-    result.innerHTML =
-      "<strong>❌ Incorrect.</strong><br><br>" +
-      "<strong>Correct Answer:</strong> " +
-      correct +
-      "<br><br>" +
-      "<strong>Explanation:</strong> " +
-      explanation +
-      "<br><br>" +
-      "<strong>हिंदी व्याख्या:</strong> " +
-      hindiExplanation;
-
-  }
-
-  updateProgress();
+    document.getElementById(
+        "progressText"
+    ).textContent=
+        `${count} / 20 questions checked`;
 
 }
-
 
 function toggleTheme(){
 
-  document.body.classList.toggle("dark");
+    document.body.classList.toggle("dark");
 
-  const dark =
-    document.body.classList.contains("dark");
-
-  localStorage.setItem(
-    "ch3_theme",
-    dark ? "dark" : "light"
-  );
-
-}
-
-
-function loadTheme(){
-
-  const theme =
-    localStorage.getItem("ch3_theme");
-
-  if(theme === "dark"){
-
-    document.body.classList.add("dark");
-
-  }
+    localStorage.setItem(
+        "class6history3theme",
+        document.body.classList.contains("dark")
+        ? "dark"
+        : "light"
+    );
 
 }
 
+function restoreTheme(){
 
-function speak(text, lang){
+    if(
+        localStorage.getItem(
+            "class6history3theme"
+        )==="dark"
+    ){
 
-  window.speechSynthesis.cancel();
+        document.body.classList.add("dark");
 
-  const speech =
-    new SpeechSynthesisUtterance(text);
-
-  speech.lang = lang;
-
-  speech.rate = .9;
-
-  speech.pitch = 1;
-
-  window.speechSynthesis.speak(speech);
+    }
 
 }
-
-
-function speakEnglish(){
-
-  const text = `
-  Chapter 3: In the Earliest Cities.
-  The Harappan civilisation developed large and organised settlements.
-  Important sites include Harappa, Mohenjo-daro, Dholavira, Lothal and
-  Kalibangan.
-  Harappan settlements show evidence of urban planning, drainage systems,
-  specialised crafts and trade.
-  Dholavira is especially important for water management.
-  The Harappan script has not been conclusively deciphered.
-  `;
-
-  speak(text,"en-IN");
-
-}
-
-
-function speakHindi(){
-
-  const text = `
-  अध्याय तीन: प्रारंभिक नगर।
-  हड़प्पा सभ्यता में कई बड़े और संगठित नगर विकसित हुए।
-  महत्वपूर्ण स्थलों में हड़प्पा, मोहनजोदड़ो, धोलावीरा, लोथल और कालीबंगा
-  शामिल हैं।
-  हड़प्पाई नगरों में नगर नियोजन, जल निकासी, विशेषीकृत शिल्प और व्यापार
-  के प्रमाण मिलते हैं।
-  धोलावीरा जल प्रबंधन के लिए विशेष रूप से महत्वपूर्ण है।
-  हड़प्पाई लिपि को अभी तक निश्चित रूप से पढ़ा नहीं जा सका है।
-  `;
-
-  speak(text,"hi-IN");
-
-}
-
-
-function stopSpeech(){
-
-  window.speechSynthesis.cancel();
-
-}
-
 
 function completeChapter(){
 
-  localStorage.setItem(
-    "ch3_done",
-    "true"
-  );
+    localStorage.setItem(
+        "class6history3done",
+        "completed"
+    );
 
-  alert(
-    "🎉 Chapter 3 completed! Great work."
-  );
+    document.getElementById(
+        "completedBox"
+    ).style.display="block";
 
 }
 
+function restoreCompletion(){
 
-loadTheme();
+    if(
+        localStorage.getItem(
+            "class6history3done"
+        )==="completed"
+    ){
+
+        document.getElementById(
+            "completedBox"
+        ).style.display="block";
+
+    }
+
+}
+
+function speakEnglish(){
+
+    stopSpeech();
+
+    const text=`
+    The Beginnings of Indian Civilisation.
+    A civilisation is a complex form of human society.
+    Important features include government, urbanism, specialised crafts,
+    trade, writing, cultural expression and productive agriculture.
+    The Harappan civilisation is an important early urban civilisation
+    of the Indian Subcontinent.
+    Archaeological evidence shows planned settlements, drainage,
+    wells, water management, crafts, standardised weights and trade.
+    Dholavira is especially important for water management.
+    Agriculture provided food and helped support specialised occupations.
+    Archaeologists interpret the civilisation by comparing different
+    types of evidence.
+    `;
+
+    const speech=new SpeechSynthesisUtterance(text);
+
+    speech.lang="en-IN";
+
+    speech.rate=.9;
+
+    speechSynthesis.speak(speech);
+
+}
+
+function speakHindi(){
+
+    stopSpeech();
+
+    const text=`
+    भारतीय सभ्यता की शुरुआत को समझने के लिए हमें कृषि,
+    अतिरिक्त उत्पादन, शिल्प, व्यापार, नगर और जल प्रबंधन को
+    एक दूसरे से जोड़कर देखना चाहिए।
+    हड़प्पा सभ्यता भारतीय उपमहाद्वीप की एक महत्वपूर्ण प्रारम्भिक
+    नगरीय सभ्यता थी।
+    इसके पुरातात्त्विक स्थलों से नगर नियोजन, जल निकासी,
+    कुओं, जल प्रबंधन, शिल्प, बाट और व्यापार से संबंधित प्रमाण मिलते हैं।
+    धोलावीरा जल प्रबंधन के अध्ययन के लिए विशेष रूप से महत्वपूर्ण है।
+    इतिहासकार अलग-अलग प्रमाणों की तुलना करके अतीत को समझते हैं।
+    `;
+
+    const speech=new SpeechSynthesisUtterance(text);
+
+    speech.lang="hi-IN";
+
+    speech.rate=.9;
+
+    speechSynthesis.speak(speech);
+
+}
+
+function stopSpeech(){
+
+    if("speechSynthesis" in window){
+
+        speechSynthesis.cancel();
+
+    }
+
+}
+
+function animateCharts(){
+
+    const bars=document.querySelectorAll(
+        ".bar-fill"
+    );
+
+    bars.forEach(bar=>{
+
+        const width=bar.dataset.width;
+
+        setTimeout(()=>{
+
+            bar.style.width=width+"%";
+
+        },300);
+
+    });
+
+}
+
+buildQuiz();
+
+restoreTheme();
+
+restoreCompletion();
 
 updateProgress();
+
+animateCharts();
 
 </script>
 
