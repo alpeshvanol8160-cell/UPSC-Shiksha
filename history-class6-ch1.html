@@ -7,9 +7,26 @@
 <title>Timeline and Sources of History | Class 6 History | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Shiksha Class 6 History current NCERT 2026-27 Chapter 1: Timeline and Sources of History. Original explanations, Hindi notes, visuals, timeline, sources, UPSC points, mains practice and MCQs.">
+content="Class 6 History Chapter 1 - Timeline and Sources of History. Detailed NCERT 2026-27 based original explanations, examples, analysis, MCQs, UPSC points and revision.">
 
 <style>
+
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#172033;
+  --muted:#5e6878;
+  --primary:#7c3aed;
+  --primary2:#5b21b6;
+  --accent:#f59e0b;
+  --green:#16a34a;
+  --red:#dc2626;
+  --blue:#2563eb;
+  --border:#e2e8f0;
+  --soft:#f1f5f9;
+  --shadow:0 8px 25px rgba(15,23,42,.08);
+}
+
 *{
   box-sizing:border-box;
   margin:0;
@@ -22,34 +39,53 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f5f7fb;
-  color:#172033;
-  line-height:1.7;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
   transition:.3s;
 }
 
 body.dark{
-  background:#111827;
-  color:#e5e7eb;
+  --bg:#0f172a;
+  --card:#172033;
+  --text:#f1f5f9;
+  --muted:#cbd5e1;
+  --border:#334155;
+  --soft:#1e293b;
+  --shadow:0 8px 25px rgba(0,0,0,.3);
 }
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+button{
+  font-family:inherit;
+}
+
+.container{
+  width:min(1100px,92%);
+  margin:auto;
+}
+
+/* HEADER */
 
 header{
   position:sticky;
   top:0;
   z-index:1000;
-  background:#ffffff;
-  box-shadow:0 2px 12px rgba(0,0,0,.10);
-  padding:12px 16px;
+  background:rgba(255,255,255,.95);
+  border-bottom:1px solid var(--border);
+  backdrop-filter:blur(10px);
 }
 
 body.dark header{
-  background:#18202d;
-  box-shadow:0 2px 12px rgba(0,0,0,.35);
+  background:rgba(15,23,42,.95);
 }
 
 .header-inner{
-  max-width:1100px;
-  margin:auto;
+  min-height:64px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -57,13 +93,9 @@ body.dark header{
 }
 
 .logo{
-  font-size:20px;
   font-weight:800;
-  color:#173b78;
-}
-
-body.dark .logo{
-  color:#93c5fd;
+  font-size:18px;
+  color:var(--primary);
 }
 
 .header-actions{
@@ -71,278 +103,242 @@ body.dark .logo{
   gap:8px;
 }
 
-.btn{
-  border:0;
+.top-btn{
+  border:none;
   border-radius:10px;
   padding:9px 13px;
+  background:var(--soft);
+  color:var(--text);
   cursor:pointer;
   font-weight:700;
-  background:#173b78;
+}
+
+.top-btn:hover{
+  background:var(--primary);
   color:#fff;
 }
 
-.btn:hover{
-  opacity:.9;
-}
+/* HERO */
 
 .hero{
-  max-width:1100px;
-  margin:22px auto;
-  padding:30px 20px;
-  border-radius:20px;
-  background:linear-gradient(135deg,#183b72,#3568ad);
-  color:white;
-  box-shadow:0 8px 25px rgba(20,50,100,.20);
+  margin:25px auto;
+  padding:32px 24px;
+  border-radius:22px;
+  background:linear-gradient(135deg,#4c1d95,#7c3aed,#9333ea);
+  color:#fff;
+  box-shadow:var(--shadow);
+  overflow:hidden;
+  position:relative;
 }
 
-.hero-badge{
-  display:inline-block;
-  background:rgba(255,255,255,.15);
-  border:1px solid rgba(255,255,255,.3);
-  padding:6px 11px;
-  border-radius:20px;
-  font-size:13px;
-  font-weight:700;
-  margin-bottom:12px;
+.hero:after{
+  content:"";
+  position:absolute;
+  width:220px;
+  height:220px;
+  border-radius:50%;
+  right:-80px;
+  top:-80px;
+  background:rgba(255,255,255,.1);
 }
 
 .hero h1{
-  font-size:34px;
-  margin-bottom:8px;
+  font-size:clamp(25px,5vw,42px);
+  line-height:1.2;
+  margin-bottom:12px;
+  position:relative;
+  z-index:2;
 }
 
 .hero p{
   max-width:850px;
+  opacity:.95;
+  position:relative;
+  z-index:2;
 }
 
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:0 16px 40px;
+.badges{
+  display:flex;
+  flex-wrap:wrap;
+  gap:8px;
+  margin-top:18px;
+  position:relative;
+  z-index:2;
 }
 
-.notice{
-  background:#fff8e1;
-  border-left:5px solid #e0a500;
-  padding:16px;
-  border-radius:12px;
-  margin-bottom:20px;
-}
-
-body.dark .notice{
-  background:#302a19;
-  color:#fef3c7;
-}
-
-.progress-box{
-  background:white;
-  padding:18px;
-  border-radius:16px;
-  box-shadow:0 3px 14px rgba(0,0,0,.07);
-  margin-bottom:20px;
-}
-
-body.dark .progress-box{
-  background:#1f2937;
-}
-
-.progress-track{
-  width:100%;
-  height:12px;
-  background:#e5e7eb;
-  border-radius:20px;
-  overflow:hidden;
-  margin-top:10px;
-}
-
-body.dark .progress-track{
-  background:#374151;
-}
-
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:#2563eb;
-  transition:.4s;
-}
-
-.quick-nav{
-  background:white;
-  padding:15px;
-  border-radius:15px;
-  margin-bottom:22px;
-  box-shadow:0 3px 12px rgba(0,0,0,.06);
-}
-
-body.dark .quick-nav{
-  background:#1f2937;
-}
-
-.quick-nav a{
-  display:inline-block;
-  margin:5px;
-  padding:7px 10px;
-  background:#eef4ff;
-  color:#173b78;
-  text-decoration:none;
-  border-radius:8px;
+.badge{
+  background:rgba(255,255,255,.15);
+  border:1px solid rgba(255,255,255,.25);
+  padding:6px 11px;
+  border-radius:999px;
   font-size:13px;
   font-weight:700;
 }
 
-body.dark .quick-nav a{
-  background:#263754;
-  color:#bfdbfe;
+/* NOTICE */
+
+.notice{
+  margin:20px 0;
+  padding:17px 18px;
+  border-left:5px solid var(--accent);
+  background:#fff7ed;
+  color:#7c2d12;
+  border-radius:12px;
 }
+
+body.dark .notice{
+  background:#3b2512;
+  color:#fed7aa;
+}
+
+/* CONTENT */
 
 .section{
-  background:white;
-  border-radius:18px;
-  padding:24px;
-  margin-bottom:22px;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);
+  margin:25px 0;
 }
 
-body.dark .section{
-  background:#1f2937;
-  box-shadow:0 3px 15px rgba(0,0,0,.25);
+.section-title{
+  font-size:27px;
+  margin-bottom:14px;
+  color:var(--primary);
 }
 
-.section h2{
-  color:#173b78;
-  margin-bottom:12px;
-  font-size:25px;
+.sub-title{
+  font-size:21px;
+  margin:25px 0 10px;
 }
 
-body.dark .section h2{
-  color:#93c5fd;
+.card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:17px;
+  padding:23px;
+  margin:17px 0;
+  box-shadow:var(--shadow);
 }
 
-.section h3{
-  margin-top:18px;
-  margin-bottom:7px;
-  color:#284b83;
+.card h3{
+  margin-bottom:10px;
+  color:var(--primary);
 }
 
-body.dark .section h3{
-  color:#bfdbfe;
+.card p{
+  margin:9px 0;
 }
 
-.highlight{
-  background:#edf5ff;
-  border-left:5px solid #2563eb;
-  padding:14px;
-  border-radius:10px;
-  margin:15px 0;
+ul,ol{
+  padding-left:24px;
 }
 
-body.dark .highlight{
-  background:#172a46;
-  color:#dbeafe;
+li{
+  margin:6px 0;
+}
+
+/* ANALYSIS */
+
+.analysis{
+  margin:18px 0;
+  padding:18px;
+  border-radius:14px;
+  background:#eff6ff;
+  border-left:5px solid var(--blue);
+}
+
+body.dark .analysis{
+  background:#172b49;
+}
+
+.analysis strong{
+  color:var(--blue);
 }
 
 .example{
-  background:#f5f3ff;
-  border-left:5px solid #7c3aed;
-  padding:14px;
-  border-radius:10px;
-  margin:15px 0;
+  margin:18px 0;
+  padding:18px;
+  border-radius:14px;
+  background:#f0fdf4;
+  border-left:5px solid var(--green);
 }
 
 body.dark .example{
-  background:#2a2340;
-  color:#ede9fe;
+  background:#13291c;
 }
 
-.concept-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-top:15px;
+.example strong{
+  color:var(--green);
 }
 
-.concept-card{
-  background:#f8fafc;
-  border:1px solid #dbe3ef;
-  border-radius:14px;
+.warning{
+  margin:18px 0;
   padding:17px;
+  border-radius:14px;
+  background:#fef2f2;
+  border-left:5px solid var(--red);
 }
 
-body.dark .concept-card{
-  background:#182331;
-  border-color:#374151;
-}
-
-.concept-card strong{
-  display:block;
-  color:#173b78;
-  margin-bottom:5px;
-}
-
-body.dark .concept-card strong{
-  color:#93c5fd;
+body.dark .warning{
+  background:#35191b;
 }
 
 /* TIMELINE */
 
 .timeline{
   position:relative;
-  margin:25px 0;
-  padding-left:30px;
-  border-left:4px solid #3b82f6;
+  margin:30px 0;
+  padding:10px 0;
+}
+
+.timeline:before{
+  content:"";
+  position:absolute;
+  left:50%;
+  top:0;
+  bottom:0;
+  width:4px;
+  background:linear-gradient(var(--primary),var(--accent));
+  transform:translateX(-50%);
+  border-radius:10px;
 }
 
 .timeline-item{
+  width:50%;
+  padding:12px 35px;
   position:relative;
-  margin-bottom:20px;
-  padding:15px;
-  background:#f8fafc;
-  border-radius:12px;
 }
 
-body.dark .timeline-item{
-  background:#182331;
+.timeline-item:nth-child(odd){
+  text-align:right;
 }
 
-.timeline-item:before{
-  content:"";
+.timeline-item:nth-child(even){
+  margin-left:50%;
+}
+
+.timeline-dot{
   position:absolute;
-  left:-41px;
-  top:19px;
-  width:15px;
-  height:15px;
-  background:#3b82f6;
+  top:25px;
+  width:18px;
+  height:18px;
   border-radius:50%;
-  border:3px solid white;
+  background:var(--accent);
+  border:4px solid var(--card);
+  box-shadow:0 0 0 3px var(--accent);
 }
 
-body.dark .timeline-item:before{
-  border-color:#111827;
+.timeline-item:nth-child(odd) .timeline-dot{
+  right:-9px;
 }
 
-/* SOURCES */
-
-.source-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:15px;
-  margin-top:18px;
+.timeline-item:nth-child(even) .timeline-dot{
+  left:-9px;
 }
 
-.source-card{
-  padding:18px;
+.timeline-box{
+  background:var(--card);
+  border:1px solid var(--border);
+  padding:15px;
   border-radius:14px;
-  background:#f8fafc;
-  border:1px solid #dbe3ef;
-}
-
-body.dark .source-card{
-  background:#182331;
-  border-color:#374151;
-}
-
-.source-icon{
-  font-size:30px;
+  box-shadow:var(--shadow);
 }
 
 /* FLOW */
@@ -353,533 +349,666 @@ body.dark .source-card{
   justify-content:center;
   flex-wrap:wrap;
   gap:10px;
-  margin:22px 0;
+  margin:25px 0;
 }
 
 .flow-box{
-  padding:14px 18px;
-  background:#eaf2ff;
-  border:2px solid #3b82f6;
-  border-radius:12px;
-  font-weight:700;
+  min-width:145px;
   text-align:center;
+  padding:15px;
+  border-radius:14px;
+  background:var(--soft);
+  border:2px solid var(--border);
+  font-weight:800;
 }
 
-body.dark .flow-box{
-  background:#172a46;
-  color:#dbeafe;
-}
-
-.arrow{
-  font-size:24px;
-  font-weight:bold;
-  color:#2563eb;
+.flow-arrow{
+  font-size:25px;
+  color:var(--primary);
 }
 
 /* ANIMATION */
 
 .animation-box{
-  overflow:hidden;
-  background:#0f172a;
-  border-radius:16px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:18px;
   padding:22px;
-  color:white;
-  margin:18px 0;
+  margin:20px 0;
+  overflow:hidden;
 }
 
-.animation-title{
-  text-align:center;
-  margin-bottom:18px;
-  color:#bfdbfe;
-}
-
-.moving-line{
-  height:6px;
-  background:#334155;
+.animation-track{
+  height:12px;
+  background:var(--soft);
+  border-radius:20px;
   position:relative;
-  border-radius:10px;
+  margin:35px 5px 20px;
 }
 
 .moving-dot{
-  width:20px;
-  height:20px;
-  background:#60a5fa;
-  border-radius:50%;
   position:absolute;
-  top:-7px;
+  top:50%;
   left:0;
-  animation:moveTimeline 4s linear infinite;
+  width:25px;
+  height:25px;
+  transform:translate(-50%,-50%);
+  border-radius:50%;
+  background:var(--accent);
+  box-shadow:0 0 0 6px rgba(245,158,11,.2);
+  animation:moveTimeline 5s infinite ease-in-out;
 }
 
 @keyframes moveTimeline{
-  0%{left:0}
-  100%{left:calc(100% - 20px)}
+  0%{left:0;}
+  25%{left:25%;}
+  50%{left:50%;}
+  75%{left:75%;}
+  100%{left:100%;}
 }
 
-.year-row{
+.animation-labels{
   display:flex;
   justify-content:space-between;
-  margin-top:15px;
-  font-size:13px;
+  font-size:12px;
+  color:var(--muted);
 }
 
-.animation-explain{
+/* SOURCE GRID */
+
+.source-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
   margin-top:15px;
-  padding:13px;
-  background:#1e293b;
-  border-radius:10px;
-  color:#e2e8f0;
 }
 
-/* TABLE */
+.source-card{
+  padding:18px;
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:14px;
+}
 
-.table-wrap{
+.source-card h4{
+  color:var(--primary);
+  margin-bottom:6px;
+}
+
+/* COMPARISON */
+
+.compare{
   overflow-x:auto;
+  margin:18px 0;
 }
 
 table{
   width:100%;
   border-collapse:collapse;
-  margin-top:15px;
+  min-width:650px;
 }
 
 th,td{
-  border:1px solid #d6dde8;
+  border:1px solid var(--border);
   padding:12px;
   text-align:left;
 }
 
 th{
-  background:#eaf2ff;
-  color:#173b78;
+  background:var(--primary);
+  color:#fff;
 }
 
-body.dark th{
-  background:#263754;
-  color:#dbeafe;
+tr:nth-child(even){
+  background:var(--soft);
 }
 
-body.dark th,
-body.dark td{
-  border-color:#374151;
+/* AUDIO */
+
+.audio-box{
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
 }
 
-/* MAINS */
-
-.mains-box{
-  background:#f3edff;
-  color:#24163d;
-  border-left:5px solid #7c3aed;
-  padding:16px;
-  border-radius:12px;
-  margin:12px 0;
+.audio-btn{
+  border:none;
+  border-radius:10px;
+  padding:11px 15px;
+  background:var(--primary);
+  color:#fff;
+  cursor:pointer;
+  font-weight:700;
 }
 
-body.dark .mains-box{
-  background:#29213a;
-  color:#f3e8ff;
-  border-left-color:#c084fc;
+.audio-btn.stop{
+  background:var(--red);
 }
 
-body.dark .mains-box strong{
-  color:#ffffff;
-}
+/* POINTS */
 
-/* REVISION */
-
-.revision-list{
+.points{
   display:grid;
   grid-template-columns:repeat(2,1fr);
-  gap:12px;
+  gap:13px;
 }
 
-.revision-item{
-  padding:13px;
-  background:#f8fafc;
-  border-radius:10px;
+.point{
+  background:var(--soft);
+  border:1px solid var(--border);
+  border-radius:14px;
+  padding:15px;
 }
 
-body.dark .revision-item{
-  background:#182331;
-}
-
-/* TESTS */
+/* MCQ */
 
 .test{
-  background:#f8fafc;
-  padding:18px;
-  border-radius:14px;
-  margin-bottom:18px;
-  border:1px solid #dbe3ef;
+  margin:25px 0;
+  padding:20px;
+  border:1px solid var(--border);
+  border-radius:18px;
+  background:var(--card);
+  box-shadow:var(--shadow);
 }
 
-body.dark .test{
-  background:#182331;
-  border-color:#374151;
+.test-title{
+  color:var(--primary);
+  font-size:22px;
+  margin-bottom:17px;
 }
 
 .question{
-  font-weight:700;
-  margin-bottom:10px;
+  margin:18px 0;
+  padding:18px;
+  background:var(--soft);
+  border-radius:14px;
 }
 
-.option{
+.options label{
   display:block;
-  padding:10px;
-  margin:7px 0;
-  background:white;
-  border:1px solid #d9e0ea;
-  border-radius:9px;
+  margin:9px 0;
+  padding:10px 12px;
+  border:1px solid var(--border);
+  border-radius:10px;
   cursor:pointer;
+  background:var(--card);
 }
 
-body.dark .option{
-  background:#202b39;
-  border-color:#465364;
+.options label:hover{
+  border-color:var(--primary);
 }
 
-.option:hover{
-  background:#edf5ff;
+.check-btn{
+  margin-top:10px;
+  border:none;
+  border-radius:10px;
+  padding:10px 15px;
+  background:var(--green);
+  color:#fff;
+  cursor:pointer;
+  font-weight:700;
 }
 
-body.dark .option:hover{
-  background:#263754;
-}
-
-.answer-box{
+.feedback{
   display:none;
   margin-top:12px;
   padding:13px;
   border-radius:10px;
   background:#ecfdf5;
-  border-left:4px solid #16a34a;
+  color:#14532d;
 }
 
-body.dark .answer-box{
-  background:#123126;
-  color:#d1fae5;
+body.dark .feedback{
+  background:#123322;
+  color:#bbf7d0;
 }
 
-.check-btn{
-  margin-top:8px;
-  background:#2563eb;
-  color:white;
-  border:0;
-  padding:9px 13px;
-  border-radius:8px;
-  font-weight:bold;
-  cursor:pointer;
+/* PROGRESS */
+
+.progress-card{
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:16px;
+  padding:18px;
+  margin:20px 0;
 }
 
-/* COMPLETE */
+.progress-bar{
+  height:13px;
+  background:var(--soft);
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:10px;
+}
 
-.complete{
+.progress-fill{
+  width:0%;
+  height:100%;
+  background:linear-gradient(90deg,var(--primary),var(--accent));
+  transition:.4s;
+}
+
+/* COMPLETION */
+
+.complete-box{
   text-align:center;
+  padding:28px;
+  border-radius:18px;
+  background:linear-gradient(135deg,#14532d,#16a34a);
+  color:#fff;
+  margin:30px 0;
 }
 
 .complete-btn{
-  background:#16a34a;
-  color:white;
-  border:0;
-  border-radius:12px;
-  padding:13px 20px;
-  font-size:16px;
+  border:none;
+  background:#fff;
+  color:#14532d;
+  padding:12px 18px;
+  border-radius:10px;
   font-weight:800;
   cursor:pointer;
-}
-
-.status{
   margin-top:12px;
-  font-weight:700;
 }
 
 /* FOOTER */
 
 footer{
-  background:#172033;
-  color:#dbeafe;
+  margin-top:40px;
+  padding:30px 0;
   text-align:center;
-  padding:25px 15px;
-  margin-top:30px;
-}
-
-body.dark footer{
-  background:#0b1220;
+  border-top:1px solid var(--border);
+  color:var(--muted);
 }
 
 /* MOBILE */
 
-@media(max-width:700px){
+@media(max-width:750px){
 
-  .hero h1{
-    font-size:27px;
+  .header-inner{
+    min-height:58px;
   }
 
-  .section{
-    padding:18px;
+  .logo{
+    font-size:15px;
   }
 
-  .concept-grid,
+  .top-btn{
+    padding:8px 10px;
+    font-size:12px;
+  }
+
+  .hero{
+    padding:25px 18px;
+    border-radius:17px;
+  }
+
+  .card{
+    padding:17px;
+  }
+
+  .section-title{
+    font-size:23px;
+  }
+
+  .sub-title{
+    font-size:19px;
+  }
+
   .source-grid,
-  .revision-list{
+  .points{
     grid-template-columns:1fr;
   }
 
-  .header-inner{
-    flex-direction:column;
-    align-items:stretch;
+  .timeline:before{
+    left:12px;
   }
 
-  .header-actions{
-    justify-content:space-between;
+  .timeline-item,
+  .timeline-item:nth-child(even){
+    width:100%;
+    margin-left:0;
+    padding-left:40px;
+    padding-right:5px;
+    text-align:left;
   }
 
-  .btn{
-    flex:1;
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot{
+    left:3px;
+    right:auto;
   }
 
-  .flow{
-    flex-direction:column;
+  .flow-box{
+    width:100%;
   }
 
-  .arrow{
+  .flow-arrow{
     transform:rotate(90deg);
   }
 
-  table{
-    min-width:650px;
+  body{
+    font-size:15px;
   }
 }
+
 </style>
 </head>
 
 <body>
 
 <header>
-  <div class="header-inner">
+  <div class="container header-inner">
 
-    <div class="logo">🇮🇳 UPSC Shiksha</div>
+    <div class="logo">
+      🇮🇳 UPSC Shiksha
+    </div>
 
     <div class="header-actions">
-      <button class="btn" onclick="goHome()">🏠 History</button>
-      <button class="btn" onclick="toggleTheme()">🌙 Dark</button>
+      <a href="history.html" class="top-btn">🏠 History</a>
+      <button class="top-btn" onclick="toggleTheme()">🌙 Theme</button>
     </div>
 
   </div>
 </header>
 
-<section class="hero">
 
-  <span class="hero-badge">
-    🆕 CURRENT NCERT 2026–27 • CLASS 6 • HISTORY
-  </span>
+<main class="container">
+
+<!-- HERO -->
+
+<section class="hero">
 
   <h1>📜 Timeline and Sources of History</h1>
 
   <p>
-    Class 6 History — Current NCERT 2026–27 learning chapter.
-    This is an original UPSC Shiksha explanation designed for school learning
-    and competitive-exam foundation.
+    Class 6 History — Detailed Learning Chapter
   </p>
+
+  <p style="margin-top:8px;">
+    Current NCERT 2026–27 • Official Integrated Social Science Chapter 4
+    • UPSC Shiksha History Section Chapter 1
+  </p>
+
+  <div class="badges">
+    <span class="badge">📚 Detailed Notes</span>
+    <span class="badge">🔍 Analysis</span>
+    <span class="badge">💡 Examples</span>
+    <span class="badge">📊 Visual Learning</span>
+    <span class="badge">🎯 UPSC</span>
+    <span class="badge">📝 20 MCQs</span>
+  </div>
 
 </section>
 
-<main class="container">
 
 <div class="notice">
 
-  <strong>📌 Important:</strong>
-  Current NCERT 2026–27 की integrated Social Science book
-  <em>Exploring Society: India and Beyond</em> में यह विषय
-  <strong>official Chapter 4</strong> है। UPSC Shiksha के History section
-  में इसे <strong>Class 6 History — Chapter 1</strong> के रूप में रखा गया है।
+  <strong>📌 Chapter Mapping:</strong>
 
-  <br><br>
-
-  यह page NCERT textbook का word-to-word reproduction नहीं है।
-  यहाँ concepts को original explanatory format में समझाया गया है।
+  The current integrated Class 6 Social Science book places
+  <strong>“Timeline and Sources of History”</strong> as official Chapter 4.
+  On UPSC Shiksha, it is organised as
+  <strong>History Class 6 — Chapter 1</strong>
+  so that the History section can have its own chapter numbering.
 
 </div>
 
 
 <!-- PROGRESS -->
 
-<section class="progress-box">
+<section class="progress-card">
 
   <strong>📈 Chapter Progress</strong>
 
-  <div class="progress-track">
+  <div class="progress-bar">
     <div class="progress-fill" id="progressFill"></div>
   </div>
 
-  <p id="progressText">0 / 20 questions checked</p>
+  <p id="progressText">
+    0% completed
+  </p>
 
 </section>
 
 
-<!-- QUICK NAV -->
+<!-- LEARNING OBJECTIVE -->
 
-<section class="quick-nav">
+<section class="section">
 
-  <strong>🔗 Quick Navigation</strong>
+<h2 class="section-title">🎯 What Will You Learn?</h2>
 
-  <br>
+<div class="card">
 
-  <a href="#intro">Introduction</a>
-  <a href="#time">Historical Time</a>
-  <a href="#timeline">Timeline</a>
-  <a href="#experts">Experts</a>
-  <a href="#sources">Sources</a>
-  <a href="#earlyhumans">Early Humans</a>
-  <a href="#graphics">Graphics</a>
-  <a href="#audio">Audio</a>
-  <a href="#upsc">UPSC Points</a>
-  <a href="#mains">Mains</a>
-  <a href="#revision">Revision</a>
-  <a href="#tests">Tests</a>
+<p>
+History is not simply a collection of dates, kings and battles.
+History is an attempt to understand the human past by examining
+evidence and connecting different events, people, places and ideas.
+</p>
+
+<p>
+In this chapter you will learn how historians organise time,
+how different sources help us reconstruct the past and why
+one source alone is often not enough.
+</p>
+
+<div class="analysis">
+
+<strong>🔍 Core Idea:</strong>
+
+<p>
+A historian does not simply ask,
+“What happened?”
+</p>
+
+<p>
+A historian also asks:
+</p>
+
+<ul>
+<li>How do we know that it happened?</li>
+<li>What evidence supports the claim?</li>
+<li>Who created the source?</li>
+<li>When was it created?</li>
+<li>What information does it provide?</li>
+<li>What information might it leave out?</li>
+<li>Can another source confirm or challenge it?</li>
+</ul>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- INTRODUCTION -->
+<!-- SECTION 1 -->
 
-<section class="section" id="intro">
+<section class="section">
 
-<h2>1. 📖 What Is History?</h2>
+<h2 class="section-title">
+1. 🕰️ Understanding Historical Time
+</h2>
+
+<div class="card">
+
+<h3>What is a Timeline?</h3>
 
 <p>
-History is the systematic study of the human past. It helps us understand
-how people lived, what they created, how societies changed and how events
-in the past shaped the world around us.
+A timeline is a way of arranging events in chronological order.
+Chronological order means arranging events according to the time
+in which they happened.
 </p>
-
-<p>
-The past cannot be observed directly. Therefore, historians reconstruct it
-using evidence. Different types of evidence give different pieces of
-information, and historians compare these pieces before reaching conclusions.
-</p>
-
-<div class="highlight">
-
-<strong>⭐ Core Concept:</strong>
-
-History is not simply a list of dates and kings. It is an attempt to
-understand the lives, activities, ideas and changes of people in the past
-through available evidence.
-
-</div>
-
-<div class="flow">
-
-<div class="flow-box">Past</div>
-
-<div class="arrow">→</div>
-
-<div class="flow-box">Evidence</div>
-
-<div class="arrow">→</div>
-
-<div class="flow-box">Analysis</div>
-
-<div class="arrow">→</div>
-
-<div class="flow-box">Historical Understanding</div>
-
-</div>
 
 <div class="example">
 
-<strong>Example:</strong>
+<strong>💡 Simple Example</strong>
 
-अगर किसी पुराने स्थान पर coins, pottery और building remains मिलते हैं,
-तो historians इन अलग-अलग pieces of evidence को जोड़कर उस समाज के बारे
-में समझ बनाने की कोशिश करते हैं।
+<p>
+Suppose your school has these events:
+</p>
+
+<ol>
+<li>Admission — June</li>
+<li>First test — July</li>
+<li>Half-yearly examination — September</li>
+<li>Annual examination — March</li>
+</ol>
+
+<p>
+Putting these events in their correct order creates a simple
+timeline of the school year.
+</p>
 
 </div>
 
-</section>
+<div class="analysis">
 
-
-<!-- TIME -->
-
-<section class="section" id="time">
-
-<h2>2. ⏳ How Do We Measure Historical Time?</h2>
+<strong>🔍 Historical Analysis</strong>
 
 <p>
-Historical events happened at different points in time. To arrange them
-correctly, historians use systems of dating and chronological order.
+A timeline helps us understand not only individual dates but also
+the relationship between events.
 </p>
+
+<p>
+For example, if Event A happened before Event B, we can investigate
+whether A may have influenced B. However, <strong>sequence alone does
+not automatically prove causation</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
 
 <h3>Years, Decades, Centuries and Millennia</h3>
 
-<div class="concept-grid">
+<ul>
 
-<div class="concept-card">
-<strong>📅 Year</strong>
-A single year is a basic unit for recording dates.
-</div>
+<li>
+<strong>Year:</strong> a basic unit for recording historical time.
+</li>
 
-<div class="concept-card">
-<strong>🔟 Decade</strong>
-A period of 10 years.
-</div>
+<li>
+<strong>Decade:</strong> a period of 10 years.
+</li>
 
-<div class="concept-card">
-<strong>💯 Century</strong>
-A period of 100 years.
-</div>
+<li>
+<strong>Century:</strong> a period of 100 years.
+</li>
 
-<div class="concept-card">
-<strong>🌎 Millennium</strong>
-A period of 1,000 years.
-</div>
+<li>
+<strong>Millennium:</strong> a period of 1,000 years.
+</li>
 
-</div>
+</ul>
 
 <div class="example">
 
-<strong>Example:</strong>
+<strong>💡 Example:</strong>
 
-2001 से 2100 तक का period 21st century है।
+<p>
+The years 2001–2010 form a decade.
+</p>
 
-इसी तरह 1901 से 2000 तक 20th century थी।
+<p>
+The years 2001–2100 form a century.
+</p>
+
+<p>
+The years 2001–3000 form a millennium.
+</p>
 
 </div>
+
+</div>
+
+</section>
+
+
+<!-- BCE CE -->
+
+<section class="section">
+
+<h2 class="section-title">
+2. 📅 BCE, CE and Historical Dating
+</h2>
+
+<div class="card">
 
 <h3>BCE and CE</h3>
 
 <p>
-Modern historical writing commonly uses <strong>BCE</strong>
+Historical dates are often written using <strong>BCE</strong>
 (Before Common Era) and <strong>CE</strong> (Common Era).
 </p>
 
-<div class="concept-grid">
+<p>
+They provide a common system for placing historical events
+within a chronological framework.
+</p>
 
-<div class="concept-card">
+<div class="example">
 
-<strong>BCE</strong>
+<strong>💡 Example:</strong>
 
-The years before the beginning of the Common Era.
+<p>
+500 BCE means a point approximately 500 years before the beginning
+of the Common Era.
+</p>
+
+<p>
+500 CE refers to a date within the Common Era.
+</p>
 
 </div>
 
-<div class="concept-card">
+<div class="analysis">
 
-<strong>CE</strong>
+<strong>🧠 Important Analysis</strong>
 
-The years of the Common Era.
+<p>
+When moving backward in BCE dates, the numerical value becomes
+larger.
+</p>
+
+<p>
+For example:
+</p>
+
+<p style="text-align:center;font-size:20px;font-weight:bold;">
+200 BCE → 500 BCE → 800 BCE
+</p>
+
+<p>
+This means 800 BCE is earlier than 500 BCE.
+</p>
 
 </div>
 
 </div>
 
-<div class="highlight">
 
-<strong>⚠️ Important:</strong>
+<div class="card">
 
-BCE dates move toward 1 as time approaches the beginning of the Common Era.
-For example, 500 BCE is earlier than 200 BCE.
+<h3>⚠️ Common Student Mistake</h3>
+
+<div class="warning">
+
+<p>
+Students sometimes assume that 800 BCE is later than 500 BCE
+because 800 is numerically larger.
+</p>
+
+<p>
+In BCE chronology, the opposite is true:
+<strong>800 BCE is earlier than 500 BCE.</strong>
+</p>
+
+</div>
 
 </div>
 
@@ -888,158 +1017,205 @@ For example, 500 BCE is earlier than 200 BCE.
 
 <!-- TIMELINE -->
 
-<section class="section" id="timeline">
+<section class="section">
 
-<h2>3. 📏 Understanding a Historical Timeline</h2>
+<h2 class="section-title">
+3. 📊 Historical Timeline — Visual Understanding
+</h2>
 
-<p>
-A timeline places events in chronological order. It helps us visually
-understand which event happened earlier and which happened later.
-</p>
+<div class="card">
 
 <div class="timeline">
 
 <div class="timeline-item">
-<strong>3000 BCE</strong>
-<br>
-An event placed here happened earlier than an event at 1000 BCE.
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>c. 2600 BCE</strong>
+
+<p>
+Approximate period associated with the mature phase of the
+Harappan/Indus civilisation.
+</p>
+
 </div>
+
+</div>
+
 
 <div class="timeline-item">
-<strong>1000 BCE</strong>
-<br>
-This comes later than 3000 BCE in a BCE timeline.
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>6th century BCE</strong>
+
+<p>
+A period associated with major intellectual and religious developments
+in ancient India.
+</p>
+
 </div>
+
+</div>
+
 
 <div class="timeline-item">
-<strong>500 BCE</strong>
-<br>
-This comes later than 1000 BCE.
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>3rd century BCE</strong>
+
+<p>
+The Mauryan period and the reign of Ashoka belong to this broad
+historical context.
+</p>
+
 </div>
+
+</div>
+
 
 <div class="timeline-item">
-<strong>1 CE → later CE years</strong>
-<br>
-CE dates move forward as the number increases.
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>1206 CE</strong>
+
+<p>
+Beginning of the Delhi Sultanate is conventionally associated
+with this year.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>1757 CE</strong>
+
+<p>
+Battle of Plassey became an important turning point in the expansion
+of British political influence in Bengal.
+</p>
+
 </div>
 
 </div>
 
-<div class="highlight">
 
-<strong>🧠 Remember:</strong>
+<div class="timeline-item">
 
-For BCE dates, a larger number generally means an earlier date.
+<div class="timeline-dot"></div>
 
-For CE dates, a larger number generally means a later date.
+<div class="timeline-box">
+
+<strong>1857 CE</strong>
+
+<p>
+The Revolt of 1857 marked a major challenge to British rule.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="timeline-item">
+
+<div class="timeline-dot"></div>
+
+<div class="timeline-box">
+
+<strong>1947 CE</strong>
+
+<p>
+India became independent from British rule.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔍 Why is the timeline useful?</strong>
+
+<p>
+The timeline allows us to see the broad sequence of events.
+It helps us ask deeper questions such as:
+</p>
+
+<ul>
+<li>What changed between two periods?</li>
+<li>What continued over a long period?</li>
+<li>Which developments happened at approximately the same time?</li>
+<li>Could two regions have experienced different developments simultaneously?</li>
+</ul>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- TIMELINE ANIMATION -->
+<!-- ANIMATION -->
 
 <section class="section">
 
-<h2>4. 🎬 Timeline Animation</h2>
+<h2 class="section-title">
+4. 🎬 Timeline Animation — How Historical Time Moves
+</h2>
 
 <div class="animation-box">
 
-<h3 class="animation-title">Historical Time Moving Forward</h3>
-
-<div class="moving-line">
-  <div class="moving-dot"></div>
-</div>
-
-<div class="year-row">
-<span>3000 BCE</span>
-<span>2000 BCE</span>
-<span>1000 BCE</span>
-<span>1 CE</span>
-<span>1000 CE</span>
-<span>2000 CE</span>
-</div>
-
-<div class="animation-explain">
-
-<strong>What this animation explains:</strong>
-
-The moving point represents the passage of historical time.
-It helps us understand that events are arranged chronologically.
-On the BCE side, the numbers become smaller as we approach the Common Era;
-on the CE side, the numbers increase as time moves forward.
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- EXPERTS -->
-
-<section class="section" id="experts">
-
-<h2>5. 🔎 Who Studies the Past?</h2>
-
 <p>
-Understanding the past is a multidisciplinary activity. Different experts
-study different kinds of evidence.
+The moving point represents a historian moving through time.
+The important idea is that historical events exist within a sequence.
 </p>
 
-<div class="source-grid">
-
-<div class="source-card">
-
-<div class="source-icon">🌍</div>
-
-<strong>Geologists</strong>
-
-Study the physical features and geological history of the Earth.
-
+<div class="animation-track">
+<div class="moving-dot"></div>
 </div>
 
-<div class="source-card">
-
-<div class="source-icon">🦴</div>
-
-<strong>Palaeontologists</strong>
-
-Study fossils and remains of ancient plants and animals.
-
+<div class="animation-labels">
+<span>Earlier</span>
+<span>Middle Period</span>
+<span>Later</span>
 </div>
 
-<div class="source-card">
+<div class="analysis">
 
-<div class="source-icon">👥</div>
+<strong>🎯 What does this animation explain?</strong>
 
-<strong>Anthropologists</strong>
+<p>
+The animation demonstrates chronological progression.
+It does <strong>not</strong> mean that every event moves at the same speed
+or that historical change is always continuous.
+</p>
 
-Study humans, societies, cultures and human development.
-
-</div>
-
-<div class="source-card">
-
-<div class="source-icon">🏺</div>
-
-<strong>Archaeologists</strong>
-
-Study material remains left behind by people and investigate
-archaeological sites.
+<p>
+Some developments happen gradually over centuries, while some events
+can create rapid political or social change.
+</p>
 
 </div>
-
-</div>
-
-<div class="highlight">
-
-<strong>UPSC Foundation:</strong>
-
-History often requires evidence from several disciplines.
-This is why archaeological, environmental and cultural evidence can
-complement written sources.
 
 </div>
 
@@ -1048,80 +1224,86 @@ complement written sources.
 
 <!-- SOURCES -->
 
-<section class="section" id="sources">
+<section class="section">
 
-<h2>6. 🏺 Sources of History</h2>
+<h2 class="section-title">
+5. 🔎 Sources of History
+</h2>
+
+<div class="card">
 
 <p>
-Historical sources are the pieces of evidence from which we learn about
-the past. No single source always gives the complete picture.
+Historians reconstruct the past by examining different types
+of evidence. These are commonly called historical sources.
 </p>
 
 <div class="source-grid">
 
 <div class="source-card">
 
-<div class="source-icon">🏺</div>
+<h4>🏺 Archaeological Sources</h4>
 
-<strong>Archaeological Sources</strong>
-
-Tools, pottery, beads, buildings, burials, ornaments, sculptures,
-coins and other material remains.
-
-</div>
-
-<div class="source-card">
-
-<div class="source-icon">📜</div>
-
-<strong>Literary Sources</strong>
-
-Manuscripts, historical writings, poems, plays, religious literature,
-chronicles and other written material.
+<p>
+Objects and physical remains such as pottery, tools, buildings,
+bones, beads, sculptures and other material remains.
+</p>
 
 </div>
 
 <div class="source-card">
 
-<div class="source-icon">🗿</div>
+<h4>🪙 Coins</h4>
 
-<strong>Inscriptions</strong>
-
-Writing engraved or recorded on materials such as stone or metal
-can provide valuable historical evidence.
-
-</div>
-
-<div class="source-card">
-
-<div class="source-icon">🪙</div>
-
-<strong>Coins</strong>
-
-Coins can provide clues about rulers, symbols, economy, political
-authority and trade.
+<p>
+Coins can provide clues about rulers, symbols, economy,
+trade and political authority.
+</p>
 
 </div>
 
 <div class="source-card">
 
-<div class="source-icon">🏛️</div>
+<h4>🪨 Inscriptions</h4>
 
-<strong>Monuments and Structures</strong>
-
-Buildings, temples, forts, settlements and other structures can
-reveal technology, art, architecture and social organisation.
+<p>
+Writing engraved on stone, metal, pillars, caves or other durable
+surfaces can preserve historical information.
+</p>
 
 </div>
 
 <div class="source-card">
 
-<div class="source-icon">🗣️</div>
+<h4>📜 Literary Sources</h4>
 
-<strong>Oral Traditions</strong>
+<p>
+Texts can provide information about ideas, beliefs, institutions,
+events and social life.
+</p>
 
-Stories, memories, songs and traditions transmitted orally can
-preserve information about communities and their past.
+</div>
+
+<div class="source-card">
+
+<h4>🏛️ Monuments</h4>
+
+<p>
+Buildings and structures can reveal architectural techniques,
+religious practices, political power and cultural traditions.
+</p>
+
+</div>
+
+<div class="source-card">
+
+<h4>🗣️ Oral Traditions</h4>
+
+<p>
+Stories, songs and traditions transmitted orally can preserve
+memories and cultural knowledge.
+</p>
+
+</div>
 
 </div>
 
@@ -1130,45 +1312,130 @@ preserve information about communities and their past.
 </section>
 
 
-<!-- SOURCE FLOW -->
+<!-- SOURCE ANALYSIS -->
 
 <section class="section">
 
-<h2>7. 🧩 How Historians Reconstruct the Past</h2>
+<h2 class="section-title">
+6. 🧠 How Historians Analyse a Source
+</h2>
+
+<div class="card">
 
 <div class="flow">
 
-<div class="flow-box">Find Evidence</div>
+<div class="flow-box">
+📦 Source
+</div>
 
-<div class="arrow">→</div>
+<div class="flow-arrow">→</div>
 
-<div class="flow-box">Study Context</div>
+<div class="flow-box">
+🔍 Examine
+</div>
 
-<div class="arrow">→</div>
+<div class="flow-arrow">→</div>
 
-<div class="flow-box">Compare Sources</div>
+<div class="flow-box">
+⚖️ Compare
+</div>
 
-<div class="arrow">→</div>
+<div class="flow-arrow">→</div>
 
-<div class="flow-box">Interpret</div>
+<div class="flow-box">
+🧠 Interpret
+</div>
 
-<div class="arrow">→</div>
+<div class="flow-arrow">→</div>
 
-<div class="flow-box">Build Historical Understanding</div>
+<div class="flow-box">
+📖 Conclusion
+</div>
 
 </div>
 
-<div class="animation-box">
+<div class="analysis">
 
-<h3 class="animation-title">Evidence → History</h3>
+<strong>🔍 Deep Analysis</strong>
 
-<div class="animation-explain">
+<p>
+A source is not automatically the same thing as the final historical
+conclusion.
+</p>
 
-<strong>What this animation explains:</strong>
+<p>
+The historian first examines the source, asks questions about it,
+compares it with other evidence and then develops an interpretation.
+</p>
 
-Historians do not simply collect objects. They ask questions about where
-an object was found, what it is, what it can tell us and how it compares
-with other evidence.
+</div>
+
+</div>
+
+</section>
+
+
+<!-- COIN EXAMPLE -->
+
+<section class="section">
+
+<h2 class="section-title">
+7. 🪙 Example — How a Coin Can Become Historical Evidence
+</h2>
+
+<div class="card">
+
+<p>
+Imagine archaeologists discover an ancient coin during an excavation.
+The coin contains a ruler's name and a symbol.
+</p>
+
+<h3>Step 1 — Observation</h3>
+
+<p>
+The researcher records its material, shape, size, script, symbols
+and physical condition.
+</p>
+
+<h3>Step 2 — Identification</h3>
+
+<p>
+The script and design are compared with known examples.
+</p>
+
+<h3>Step 3 — Context</h3>
+
+<p>
+Researchers examine where the coin was found and what other objects
+were discovered nearby.
+</p>
+
+<h3>Step 4 — Comparison</h3>
+
+<p>
+The coin is compared with coins from other locations and periods.
+</p>
+
+<h3>Step 5 — Interpretation</h3>
+
+<p>
+The evidence may provide clues about political authority,
+economic activity or circulation of goods.
+</p>
+
+<div class="analysis">
+
+<strong>⚠️ Important:</strong>
+
+<p>
+A coin does not automatically tell us everything about society.
+For example, one coin cannot by itself describe the complete
+life of ordinary people.
+</p>
+
+<p>
+This is why historians combine different types of evidence.
+</p>
 
 </div>
 
@@ -1181,57 +1448,56 @@ with other evidence.
 
 <section class="section">
 
-<h2>8. 🏺 Archaeology and Excavation</h2>
+<h2 class="section-title">
+8. 🏺 Archaeology and Excavation
+</h2>
+
+<div class="card">
 
 <p>
-Archaeologists investigate places where remains of past human activity
-may survive. Excavation can reveal layers containing objects and structures
-from different periods.
+Archaeology studies the human past through material remains.
+Archaeologists may investigate settlements, buildings, tools,
+pottery, ornaments, bones and other remains.
 </p>
-
-<h3>What Can Archaeologists Find?</h3>
-
-<div class="concept-grid">
-
-<div class="concept-card">
-<strong>Tools</strong>
-Can provide clues about technology and activities.
-</div>
-
-<div class="concept-card">
-<strong>Pottery</strong>
-Can reveal manufacturing techniques, food practices and exchange.
-</div>
-
-<div class="concept-card">
-<strong>Buildings</strong>
-Can show settlement patterns and construction techniques.
-</div>
-
-<div class="concept-card">
-<strong>Burials</strong>
-Can provide clues about customs and social practices.
-</div>
-
-<div class="concept-card">
-<strong>Coins</strong>
-Can help study political and economic history.
-</div>
-
-<div class="concept-card">
-<strong>Plant and Animal Remains</strong>
-Can provide information about diet, environment and subsistence.
-</div>
-
-</div>
 
 <div class="example">
 
-<strong>Example:</strong>
+<strong>💡 Example:</strong>
 
-यदि excavation में pottery, animal bones और plant remains मिलते हैं,
-तो इन्हें साथ देखकर researchers उस community के food habits और
-daily life के बारे में questions पूछ सकते हैं।
+<p>
+Suppose an excavation reveals:
+</p>
+
+<ul>
+<li>pottery</li>
+<li>stone tools</li>
+<li>beads</li>
+<li>animal bones</li>
+<li>house foundations</li>
+</ul>
+
+<p>
+Together, these objects may provide clues about technology,
+food habits, craft production and settlement patterns.
+</p>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔍 Analysis:</strong>
+
+<p>
+The important point is that archaeologists do not simply collect
+objects. They study the <strong>context</strong> in which objects are found.
+</p>
+
+<p>
+The location, layer, association with other objects and condition
+of an artefact can affect its interpretation.
+</p>
+
+</div>
 
 </div>
 
@@ -1242,187 +1508,181 @@ daily life के बारे में questions पूछ सकते है
 
 <section class="section">
 
-<h2>9. 📜 Written and Literary Evidence</h2>
+<h2 class="section-title">
+9. 📜 Literary and Written Sources
+</h2>
+
+<div class="card">
 
 <p>
-Written material can preserve ideas, events, traditions and information
-about societies. However, written sources also need to be studied critically.
+Written sources can include inscriptions, manuscripts, official
+records, religious literature, administrative records and other texts.
 </p>
 
-<div class="table-wrap">
+<div class="example">
+
+<strong>💡 Example:</strong>
+
+<p>
+An inscription issued by a ruler may provide information about
+the ruler's policies, claims or public messages.
+</p>
+
+</div>
+
+<div class="analysis">
+
+<strong>🧠 Critical Reading:</strong>
+
+<p>
+A written source must also be examined critically.
+</p>
+
+<p>
+A royal inscription, for example, may present the ruler's own
+perspective. It may emphasise achievements and not provide a complete
+picture of every group in society.
+</p>
+
+<p>
+Therefore historians compare written evidence with archaeological
+and other sources.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- MULTIPLE SOURCES -->
+
+<section class="section">
+
+<h2 class="section-title">
+10. 🔗 Why Multiple Sources Matter
+</h2>
+
+<div class="card">
+
+<div class="compare">
 
 <table>
 
 <tr>
 <th>Source</th>
 <th>Possible Information</th>
-<th>Careful Reading Needed</th>
+<th>Limitation</th>
 </tr>
 
 <tr>
-<td>Manuscripts</td>
-<td>Ideas, stories, knowledge and traditions</td>
-<td>Who wrote it? When? For whom?</td>
+<td>Coins</td>
+<td>Rulers, symbols, economy, circulation</td>
+<td>May not explain everyday life completely</td>
 </tr>
 
 <tr>
 <td>Inscriptions</td>
-<td>Orders, donations, achievements and public messages</td>
-<td>Purpose and historical context</td>
+<td>Orders, donations, achievements, claims</td>
+<td>Perspective of the person/institution involved</td>
 </tr>
 
 <tr>
-<td>Chronicles</td>
-<td>Events and accounts of rulers or societies</td>
-<td>Author and intended audience</td>
+<td>Pottery</td>
+<td>Material culture, technology, use patterns</td>
+<td>Meaning may require contextual interpretation</td>
 </tr>
 
 <tr>
-<td>Poems and Stories</td>
-<td>Cultural ideas and social memory</td>
-<td>Literary form and historical context</td>
+<td>Buildings</td>
+<td>Architecture, technology, religious or political context</td>
+<td>Cannot reveal every aspect of social life</td>
+</tr>
+
+<tr>
+<td>Literary texts</td>
+<td>Ideas, beliefs, institutions, narratives</td>
+<td>Author, purpose and audience matter</td>
 </tr>
 
 </table>
 
 </div>
 
-<div class="highlight">
+<div class="analysis">
 
-<strong>Important:</strong>
+<strong>🎯 Key Principle:</strong>
 
-A written source should not automatically be treated as a completely
-objective record. Historians consider its context, purpose and perspective.
+<p>
+<strong>Different sources can complement one another.</strong>
+One source may provide information that another source cannot.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- SOURCE COMPARISON -->
+<!-- CASE STUDY -->
 
 <section class="section">
 
-<h2>10. 🔬 Why Compare Different Sources?</h2>
+<h2 class="section-title">
+11. 🔬 Mini Case Study — Reconstructing a Settlement
+</h2>
+
+<div class="card">
 
 <p>
-Different sources may provide different perspectives. Comparing them can
-help historians identify agreements, differences and gaps.
+Imagine historians discover an ancient settlement.
+They find houses, pottery, beads, tools and animal bones.
 </p>
 
-<div class="flow">
-
-<div class="flow-box">Coins</div>
-<div class="arrow">+</div>
-<div class="flow-box">Inscriptions</div>
-<div class="arrow">+</div>
-<div class="flow-box">Buildings</div>
-<div class="arrow">+</div>
-<div class="flow-box">Texts</div>
-
-</div>
-
-<div class="highlight">
-
-<strong>Result:</strong>
-
-More evidence can create a richer historical picture, but historians
-must still evaluate the reliability and context of each source.
-
-</div>
-
-</section>
-
-
-<!-- EARLY HUMANS -->
-
-<section class="section" id="earlyhumans">
-
-<h2>11. 👣 Early Humans and the Past</h2>
+<h3>Evidence A — Houses</h3>
 
 <p>
-The study of early human life depends heavily on archaeological,
-environmental and biological evidence because written records did not
-exist for many very early periods.
+May provide clues about settlement planning and construction methods.
 </p>
 
-<h3>Hunter-Gatherer Life</h3>
+<h3>Evidence B — Pottery</h3>
 
 <p>
-Early human communities often depended on hunting, gathering,
-fishing and collecting available resources. Their movements could be
-connected to water, food availability, climate and seasonal changes.
+May provide clues about household activities and technology.
 </p>
 
-<h3>Gradual Changes</h3>
+<h3>Evidence C — Beads</h3>
 
-<div class="flow">
+<p>
+May suggest craft production or exchange networks, depending on
+the archaeological context.
+</p>
 
-<div class="flow-box">Movement</div>
-<div class="arrow">→</div>
+<h3>Evidence D — Animal Bones</h3>
 
-<div class="flow-box">Resource Use</div>
-<div class="arrow">→</div>
+<p>
+May provide clues about food practices and animal use.
+</p>
 
-<div class="flow-box">New Technologies</div>
-<div class="arrow">→</div>
+<div class="analysis">
 
-<div class="flow-box">Changing Settlements</div>
+<strong>🧠 Historian's Reasoning:</strong>
 
-</div>
+<p>
+The historian does not say:
+“Beads = trade” automatically.
+</p>
 
-<div class="highlight">
+<p>
+Instead, the historian asks whether the wider evidence supports
+the possibility of production, exchange or another explanation.
+</p>
 
-<strong>Concept:</strong>
-
-Human history is a long process of change. Technology, environment,
-food systems and social organisation all influenced how communities lived.
-
-</div>
-
-</section>
-
-
-<!-- MAP / CONCEPT GRAPHIC -->
-
-<section class="section" id="graphics">
-
-<h2>12. 🧠 Visual Concept Map</h2>
-
-<div class="flow">
-
-<div class="flow-box">Human Past</div>
-
-<div class="arrow">↓</div>
-
-<div class="flow-box">Evidence</div>
-
-<div class="arrow">↓</div>
-
-<div class="flow-box">Archaeological<br>Literary<br>Oral</div>
-
-<div class="arrow">↓</div>
-
-<div class="flow-box">Historical Analysis</div>
-
-<div class="arrow">↓</div>
-
-<div class="flow-box">Understanding the Past</div>
-
-</div>
-
-<div class="animation-box">
-
-<h3 class="animation-title">🧩 History as a Puzzle</h3>
-
-<div class="animation-explain">
-
-<strong>What this graphic explains:</strong>
-
-Historical knowledge is built from multiple pieces of evidence.
-One source may answer one question while another source answers a
-different question. Together they can help construct a stronger
-interpretation of the past.
+<p>
+This is an important example of <strong>evidence-based historical reasoning</strong>.
+</p>
 
 </div>
 
@@ -1431,69 +1691,379 @@ interpretation of the past.
 </section>
 
 
-<!-- AUDIO -->
+<!-- SPECIALISTS -->
 
-<section class="section" id="audio">
+<section class="section">
 
-<h2>13. 🔊 Audio Learning</h2>
+<h2 class="section-title">
+12. 👩‍🔬 Different Specialists and the Past
+</h2>
+
+<div class="card">
+
+<div class="source-grid">
+
+<div class="source-card">
+
+<h4>🪨 Geologists</h4>
 
 <p>
-Use the buttons below to listen to an original short revision explanation.
+Study rocks, earth processes and geological formations.
+Their work can help us understand the environmental context
+of past human activity.
 </p>
 
-<button class="btn" onclick="speakEnglish()">🔊 English Audio</button>
-<button class="btn" onclick="speakHindi()">🔊 Hindi Audio</button>
-<button class="btn" onclick="stopSpeech()">⏹ Stop</button>
+</div>
+
+<div class="source-card">
+
+<h4>🦴 Palaeontologists</h4>
+
+<p>
+Study fossils and ancient life forms.
+</p>
+
+</div>
+
+<div class="source-card">
+
+<h4>🧑‍🤝‍🧑 Anthropologists</h4>
+
+<p>
+Study humans, cultures and societies using different approaches.
+</p>
+
+</div>
+
+<div class="source-card">
+
+<h4>🏺 Archaeologists</h4>
+
+<p>
+Study material remains of past human activity.
+</p>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔍 Why interdisciplinary study matters</strong>
+
+<p>
+Understanding the past can require knowledge from multiple fields.
+History therefore often works together with archaeology,
+anthropology, geology and other disciplines.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- REAL LIFE EXAMPLE -->
+
+<section class="section">
+
+<h2 class="section-title">
+13. 📱 Real-Life Example — Imagine Future Historians
+</h2>
+
+<div class="card">
+
+<p>
+Imagine that 500 years in the future, researchers discover a smartphone
+from our time.
+</p>
+
+<p>
+What could they learn?
+</p>
+
+<ul>
+
+<li>
+The device could provide clues about technological development.
+</li>
+
+<li>
+Its materials could provide clues about manufacturing.
+</li>
+
+<li>
+Its design could show something about communication technology.
+</li>
+
+</ul>
+
+<p>
+But could the smartphone alone explain our political system,
+family relationships, education or beliefs?
+</p>
+
+<p>
+Probably not.
+</p>
+
+<div class="analysis">
+
+<strong>🧠 Historical Lesson:</strong>
+
+<p>
+One source gives only part of the picture.
+Historians need multiple kinds of evidence to reconstruct
+a complex society.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ENGLISH AUDIO -->
+
+<section class="section">
+
+<h2 class="section-title">
+14. 🎧 Listen — English
+</h2>
+
+<div class="card">
+
+<p>
+Use the audio controls to listen to a short revision explanation.
+</p>
+
+<div class="audio-box">
+
+<button class="audio-btn" onclick="speakEnglish()">
+▶️ Play English
+</button>
+
+<button class="audio-btn stop" onclick="stopSpeech()">
+⏹ Stop
+</button>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HINDI -->
+
+<section class="section">
+
+<h2 class="section-title">
+15. 🇮🇳 विस्तृत हिन्दी व्याख्या
+</h2>
+
+<div class="card">
+
+<h3>इतिहास को समझने के लिए समय क्यों जरूरी है?</h3>
+
+<p>
+इतिहास केवल पुराने राजाओं, युद्धों और तारीखों को याद करने का विषय
+नहीं है। इतिहास में हम यह समझने का प्रयास करते हैं कि अतीत में
+लोग कैसे रहते थे, समाज कैसे बदलता गया और अलग-अलग घटनाओं के बीच
+क्या संबंध था।
+</p>
+
+<p>
+इन घटनाओं को सही क्रम में रखने के लिए समय और कालक्रम बहुत महत्वपूर्ण
+हैं। इसी उद्देश्य से टाइमलाइन का उपयोग किया जाता है।
+</p>
+
+<div class="example">
+
+<strong>💡 उदाहरण:</strong>
+
+<p>
+यदि हम 1757, 1857 और 1947 को देखते हैं, तो ये तीनों अलग-अलग
+ऐतिहासिक परिस्थितियों से जुड़े हैं। इन्हें क्रम में देखने से
+भारत में ब्रिटिश सत्ता और उसके विरुद्ध संघर्ष की व्यापक प्रक्रिया
+को समझने में सहायता मिलती है।
+</p>
+
+</div>
+
+<h3>ऐतिहासिक स्रोत क्या हैं?</h3>
+
+<p>
+अतीत के बारे में जानकारी प्राप्त करने के लिए इतिहासकार विभिन्न
+स्रोतों का अध्ययन करते हैं। इनमें सिक्के, अभिलेख, भवन, मिट्टी के
+बर्तन, औजार, साहित्यिक ग्रंथ और मौखिक परंपराएँ शामिल हो सकती हैं।
+</p>
+
+<h3>स्रोतों का विश्लेषण क्यों जरूरी है?</h3>
+
+<p>
+किसी एक स्रोत को देखकर तुरंत अंतिम निष्कर्ष निकालना सही नहीं है।
+इतिहासकार स्रोत के समय, स्थान, उद्देश्य और संदर्भ को देखते हैं।
+फिर दूसरे स्रोतों से तुलना करते हैं।
+</p>
+
+<div class="analysis">
+
+<strong>🧠 मुख्य बात:</strong>
+
+<p>
+इतिहास में केवल “क्या मिला?” महत्वपूर्ण नहीं है।
+यह भी महत्वपूर्ण है कि “वह कहाँ मिला, किस संदर्भ में मिला और उससे
+हम क्या निष्कर्ष निकाल सकते हैं?”
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- HINDI AUDIO -->
+
+<section class="section">
+
+<h2 class="section-title">
+16. 🔊 हिन्दी Audio
+</h2>
+
+<div class="card">
+
+<button class="audio-btn" onclick="speakHindi()">
+▶️ हिन्दी में सुनें
+</button>
+
+<button class="audio-btn stop" onclick="stopSpeech()">
+⏹ Stop
+</button>
+
+</div>
+
+</section>
+
+
+<!-- VISUAL SUMMARY -->
+
+<section class="section">
+
+<h2 class="section-title">
+17. 🧠 Concept Map — पूरा Chapter एक नजर में
+</h2>
+
+<div class="card">
+
+<div class="flow">
+
+<div class="flow-box">
+🕰️ Time
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">
+📅 Timeline
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">
+🔎 Sources
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">
+⚖️ Comparison
+</div>
+
+<div class="flow-arrow">→</div>
+
+<div class="flow-box">
+🧠 Interpretation
+</div>
+
+</div>
+
+<p style="text-align:center;">
+<strong>
+Past → Evidence → Analysis → Historical Understanding
+</strong>
+</p>
+
+</div>
 
 </section>
 
 
 <!-- UPSC -->
 
-<section class="section" id="upsc">
+<section class="section">
 
-<h2>14. ⭐ UPSC Important Points</h2>
+<h2 class="section-title">
+18. 🎯 UPSC Important Points
+</h2>
 
-<div class="concept-grid">
+<div class="card">
 
-<div class="concept-card">
-<strong>1. History</strong>
-Study of the human past using evidence and interpretation.
+<div class="points">
+
+<div class="point">
+<strong>1.</strong>
+Chronology means arranging events according to time.
 </div>
 
-<div class="concept-card">
-<strong>2. Timeline</strong>
-Shows events in chronological order.
+<div class="point">
+<strong>2.</strong>
+A timeline helps understand sequence and historical change.
 </div>
 
-<div class="concept-card">
-<strong>3. BCE</strong>
-Used for dates before the Common Era.
+<div class="point">
+<strong>3.</strong>
+BCE dates move backward as numerical values increase.
 </div>
 
-<div class="concept-card">
-<strong>4. CE</strong>
-Used for dates of the Common Era.
+<div class="point">
+<strong>4.</strong>
+Archaeological sources provide material evidence.
 </div>
 
-<div class="concept-card">
-<strong>5. Archaeology</strong>
-Studies material remains of past human activity.
+<div class="point">
+<strong>5.</strong>
+Inscriptions can preserve written information on durable materials.
 </div>
 
-<div class="concept-card">
-<strong>6. Inscriptions</strong>
-Engraved or recorded writings are important historical evidence.
+<div class="point">
+<strong>6.</strong>
+Coins can provide clues about rulers, symbols and economic activity.
 </div>
 
-<div class="concept-card">
-<strong>7. Coins</strong>
-Can provide evidence about rulers, economy and political authority.
+<div class="point">
+<strong>7.</strong>
+Literary sources need contextual and critical reading.
 </div>
 
-<div class="concept-card">
-<strong>8. Multiple Sources</strong>
-Historians compare different evidence to develop interpretations.
+<div class="point">
+<strong>8.</strong>
+Historical interpretation is stronger when multiple sources are compared.
+</div>
+
+<div class="point">
+<strong>9.</strong>
+Context is important when interpreting archaeological evidence.
+</div>
+
+<div class="point">
+<strong>10.</strong>
+History often uses interdisciplinary evidence.
+</div>
+
 </div>
 
 </div>
@@ -1503,130 +2073,1025 @@ Historians compare different evidence to develop interpretations.
 
 <!-- MAINS -->
 
-<section class="section" id="mains">
+<section class="section">
 
-<h2>15. ✍️ Mains Practice</h2>
+<h2 class="section-title">
+19. ✍️ Mains Practice
+</h2>
 
-<div class="mains-box">
-<strong>Q1.</strong>
-Why is a timeline useful for studying history? Explain with an example.
-</div>
+<div class="card">
 
-<div class="mains-box">
-<strong>Q2.</strong>
-Explain the importance of archaeological sources in reconstructing the past.
-</div>
+<ol>
 
-<div class="mains-box">
-<strong>Q3.</strong>
-Why should historians compare different types of historical sources?
-</div>
+<li>
+Why is a timeline important for understanding history?
+</li>
 
-<div class="mains-box">
-<strong>Q4.</strong>
-Differentiate between archaeological and literary sources of history.
-</div>
+<li>
+Explain why historians need different types of historical sources.
+</li>
 
-<div class="mains-box">
-<strong>Q5.</strong>
-How can the study of early human remains help us understand the lives
-of ancient communities?
-</div>
+<li>
+How can archaeological evidence help reconstruct the life of ancient people?
+</li>
 
-</section>
+<li>
+Why should historians critically examine written sources?
+</li>
 
+<li>
+“Historical knowledge is based on interpretation of evidence.”
+Explain with suitable examples.
+</li>
 
-<!-- REVISION -->
-
-<section class="section" id="revision">
-
-<h2>16. 🔄 Quick Revision</h2>
-
-<div class="revision-list">
-
-<div class="revision-item">
-📅 <strong>Timeline</strong> — events arranged chronologically.
-</div>
-
-<div class="revision-item">
-⏳ <strong>BCE/CE</strong> — systems used for historical dating.
-</div>
-
-<div class="revision-item">
-🏺 <strong>Archaeology</strong> — study of material remains.
-</div>
-
-<div class="revision-item">
-📜 <strong>Literary Sources</strong> — written evidence.
-</div>
-
-<div class="revision-item">
-🗿 <strong>Inscriptions</strong> — recorded/engraved evidence.
-</div>
-
-<div class="revision-item">
-🪙 <strong>Coins</strong> — evidence for political and economic history.
-</div>
-
-<div class="revision-item">
-🧩 <strong>Comparison</strong> — multiple sources strengthen historical analysis.
-</div>
-
-<div class="revision-item">
-👣 <strong>Early Humans</strong> — studied through archaeological and other evidence.
-</div>
+</ol>
 
 </div>
 
 </section>
 
 
-<!-- TESTS -->
+<!-- QUICK REVISION -->
 
-<section class="section" id="tests">
+<section class="section">
 
-<h2>17. 📝 Chapter Tests</h2>
+<h2 class="section-title">
+20. ⚡ Quick Revision
+</h2>
+
+<div class="card">
+
+<ul>
+
+<li>Timeline = chronological arrangement of events.</li>
+
+<li>Decade = 10 years.</li>
+
+<li>Century = 100 years.</li>
+
+<li>Millennium = 1,000 years.</li>
+
+<li>BCE and CE help organise historical dates.</li>
+
+<li>Sources are evidence used to understand the past.</li>
+
+<li>Archaeological sources include material remains.</li>
+
+<li>Inscriptions preserve written information.</li>
+
+<li>Coins provide clues about political and economic life.</li>
+
+<li>Literary sources reveal ideas, beliefs and narratives.</li>
+
+<li>Sources must be interpreted in context.</li>
+
+<li>Multiple sources make historical interpretation stronger.</li>
+
+</ul>
+
+</div>
+
+</section>
+
+
+<!-- MCQs -->
+
+<section class="section">
+
+<h2 class="section-title">
+21. 📝 Chapter Test — 20 MCQs
+</h2>
 
 <p>
 <strong>4 Tests × 5 Questions = 20 Questions</strong>
 </p>
 
-<div id="questions"></div>
+<p>
+पहले answer select करें और फिर <strong>Check Answer</strong> दबाएँ।
+Explanation उसके बाद दिखाई देगा।
+</p>
+
+
+<!-- TEST 1 -->
+
+<div class="test">
+
+<h3 class="test-title">
+Test 1 — Time and Chronology
+</h3>
+
+
+<div class="question">
+
+<p>
+<strong>Q1.</strong>
+What is the main purpose of a historical timeline?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q1" value="a">
+A. To arrange events according to their time
+</label>
+
+<label>
+<input type="radio" name="q1" value="b">
+B. To prove that every event has only one cause
+</label>
+
+<label>
+<input type="radio" name="q1" value="c">
+C. To replace all historical sources
+</label>
+
+<label>
+<input type="radio" name="q1" value="d">
+D. To show only political events
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(1,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f1">
+A timeline arranges events in chronological order and helps us understand their sequence.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q2.</strong>
+Which period is the longest?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q2" value="a">
+A. Decade
+</label>
+
+<label>
+<input type="radio" name="q2" value="b">
+B. Year
+</label>
+
+<label>
+<input type="radio" name="q2" value="c">
+C. Millennium
+</label>
+
+<label>
+<input type="radio" name="q2" value="d">
+D. Century
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(2,'c')">
+Check Answer
+</button>
+
+<div class="feedback" id="f2">
+A millennium is a period of 1,000 years, longer than a century, decade or year.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q3.</strong>
+Which statement about BCE chronology is correct?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q3" value="a">
+A. 800 BCE is earlier than 500 BCE
+</label>
+
+<label>
+<input type="radio" name="q3" value="b">
+B. 500 BCE is earlier than 800 BCE
+</label>
+
+<label>
+<input type="radio" name="q3" value="c">
+C. BCE dates cannot be arranged chronologically
+</label>
+
+<label>
+<input type="radio" name="q3" value="d">
+D. BCE means a period after CE
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(3,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f3">
+In BCE chronology, larger numerical values are farther back in time. Therefore 800 BCE is earlier than 500 BCE.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q4.</strong>
+A decade contains:
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q4" value="a">
+A. 100 years
+</label>
+
+<label>
+<input type="radio" name="q4" value="b">
+B. 10 years
+</label>
+
+<label>
+<input type="radio" name="q4" value="c">
+C. 1,000 years
+</label>
+
+<label>
+<input type="radio" name="q4" value="d">
+D. 50 years
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(4,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f4">
+A decade is a period of 10 years.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q5.</strong>
+Which sequence is correctly arranged from earlier to later?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q5" value="a">
+A. 800 BCE → 500 BCE → 200 BCE
+</label>
+
+<label>
+<input type="radio" name="q5" value="b">
+B. 200 BCE → 500 BCE → 800 BCE
+</label>
+
+<label>
+<input type="radio" name="q5" value="c">
+C. 500 BCE → 200 BCE → 800 BCE
+</label>
+
+<label>
+<input type="radio" name="q5" value="d">
+D. 200 BCE → 800 BCE → 500 BCE
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(5,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f5">
+In BCE dates, the larger number is earlier. Therefore 800 BCE comes before 500 BCE and 200 BCE.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEST 2 -->
+
+<div class="test">
+
+<h3 class="test-title">
+Test 2 — Historical Sources
+</h3>
+
+
+<div class="question">
+
+<p>
+<strong>Q6.</strong>
+Which is an archaeological source?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q6" value="a">
+A. A modern newspaper
+</label>
+
+<label>
+<input type="radio" name="q6" value="b">
+B. An ancient pottery fragment
+</label>
+
+<label>
+<input type="radio" name="q6" value="c">
+C. A modern school timetable
+</label>
+
+<label>
+<input type="radio" name="q6" value="d">
+D. A contemporary advertisement
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(6,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f6">
+Ancient pottery is a material remain and can provide archaeological evidence.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q7.</strong>
+Why can coins be useful to historians?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q7" value="a">
+A. They always describe every aspect of society
+</label>
+
+<label>
+<input type="radio" name="q7" value="b">
+B. They can provide clues about rulers, symbols and economic activity
+</label>
+
+<label>
+<input type="radio" name="q7" value="c">
+C. They eliminate the need for archaeology
+</label>
+
+<label>
+<input type="radio" name="q7" value="d">
+D. They only tell us about climate
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(7,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f7">
+Coins can contain names, symbols and designs that provide clues about political and economic life.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q8.</strong>
+What is an inscription?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q8" value="a">
+A. A type of fossil
+</label>
+
+<label>
+<input type="radio" name="q8" value="b">
+B. A written record engraved on a durable surface
+</label>
+
+<label>
+<input type="radio" name="q8" value="c">
+C. A type of archaeological excavation
+</label>
+
+<label>
+<input type="radio" name="q8" value="d">
+D. A modern oral story
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(8,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f8">
+An inscription is writing engraved or inscribed on materials such as stone or metal.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q9.</strong>
+Why should historians compare different sources?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q9" value="a">
+A. Every source contains exactly the same information
+</label>
+
+<label>
+<input type="radio" name="q9" value="b">
+B. One source can never contain useful information
+</label>
+
+<label>
+<input type="radio" name="q9" value="c">
+C. Different sources can provide complementary evidence
+</label>
+
+<label>
+<input type="radio" name="q9" value="d">
+D. Comparison makes dates unnecessary
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(9,'c')">
+Check Answer
+</button>
+
+<div class="feedback" id="f9">
+Different sources may reveal different aspects of the past and can strengthen or challenge an interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q10.</strong>
+Which source can provide information about written claims or messages of a ruler?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q10" value="a">
+A. An inscription
+</label>
+
+<label>
+<input type="radio" name="q10" value="b">
+C. An unrelated rock sample
+</label>
+
+<label>
+<input type="radio" name="q10" value="c">
+B. A modern traffic signal
+</label>
+
+<label>
+<input type="radio" name="q10" value="d">
+D. A weather forecast
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(10,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f10">
+An inscription can preserve written messages, claims, orders or records associated with rulers and institutions.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEST 3 -->
+
+<div class="test">
+
+<h3 class="test-title">
+Test 3 — Evidence and Analysis
+</h3>
+
+
+<div class="question">
+
+<p>
+<strong>Q11.</strong>
+Why is the archaeological context of an object important?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q11" value="a">
+A. Context can help determine how the object should be interpreted
+</label>
+
+<label>
+<input type="radio" name="q11" value="b">
+B. Context makes all objects identical
+</label>
+
+<label>
+<input type="radio" name="q11" value="c">
+C. Context removes the need for dating
+</label>
+
+<label>
+<input type="radio" name="q11" value="d">
+D. Context proves every historical theory
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(11,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f11">
+The location and association of an object with other remains can significantly affect its interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q12.</strong>
+Which approach is most suitable for historical analysis?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q12" value="a">
+A. Accepting every source without examination
+</label>
+
+<label>
+<input type="radio" name="q12" value="b">
+B. Examining, comparing and interpreting evidence
+</label>
+
+<label>
+<input type="radio" name="q12" value="c">
+C. Ignoring archaeological evidence
+</label>
+
+<label>
+<input type="radio" name="q12" value="d">
+D. Using only one source for every question
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(12,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f12">
+Historical reasoning involves examining evidence, considering context, comparing sources and developing an interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q13.</strong>
+A royal inscription praises a ruler's achievements. What should a historian do?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q13" value="a">
+A. Accept every statement as complete truth
+</label>
+
+<label>
+<input type="radio" name="q13" value="b">
+B. Ignore the inscription completely
+</label>
+
+<label>
+<input type="radio" name="q13" value="c">
+C. Consider its purpose and compare it with other evidence
+</label>
+
+<label>
+<input type="radio" name="q13" value="d">
+D. Assume the inscription has no historical value
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(13,'c')">
+Check Answer
+</button>
+
+<div class="feedback" id="f13">
+A source can be valuable while still reflecting the perspective and purpose of its creator. Comparison helps build a stronger interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q14.</strong>
+Which statement best explains historical interpretation?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q14" value="a">
+A. It means memorising every date
+</label>
+
+<label>
+<input type="radio" name="q14" value="b">
+B. It means creating conclusions without evidence
+</label>
+
+<label>
+<input type="radio" name="q14" value="c">
+C. It means examining evidence and developing a reasoned understanding
+</label>
+
+<label>
+<input type="radio" name="q14" value="d">
+D. It means choosing the most interesting story
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(14,'c')">
+Check Answer
+</button>
+
+<div class="feedback" id="f14">
+Historical interpretation is based on examining evidence and constructing a reasoned understanding of the past.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q15.</strong>
+Why can one coin not usually explain the entire life of an ancient society?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q15" value="a">
+A. Coins contain no information at all
+</label>
+
+<label>
+<input type="radio" name="q15" value="b">
+B. A coin provides only one type of evidence
+</label>
+
+<label>
+<input type="radio" name="q15" value="c">
+C. Coins cannot be archaeological sources
+</label>
+
+<label>
+<input type="radio" name="q15" value="d">
+D. Ancient societies did not use objects
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(15,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f15">
+A coin can provide useful clues, but it represents only one kind of evidence. Other sources are needed for a broader reconstruction.
+</div>
+
+</div>
+
+</div>
+
+
+<!-- TEST 4 -->
+
+<div class="test">
+
+<h3 class="test-title">
+Test 4 — Application and UPSC Thinking
+</h3>
+
+
+<div class="question">
+
+<p>
+<strong>Q16.</strong>
+Archaeologists find pottery, animal bones and house foundations at a site. What is the best approach?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q16" value="a">
+A. Study all the evidence together and examine its context
+</label>
+
+<label>
+<input type="radio" name="q16" value="b">
+C. Study only the pottery
+</label>
+
+<label>
+<input type="radio" name="q16" value="c">
+B. Ignore the location of the objects
+</label>
+
+<label>
+<input type="radio" name="q16" value="d">
+D. Assume the site has only one possible interpretation
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(16,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f16">
+Combining different remains and examining their archaeological context provides a stronger basis for interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q17.</strong>
+Which statement best reflects evidence-based historical reasoning?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q17" value="a">
+A. A conclusion should be based on evidence and careful interpretation
+</label>
+
+<label>
+<input type="radio" name="q17" value="b">
+B. A conclusion should depend only on a popular story
+</label>
+
+<label>
+<input type="radio" name="q17" value="c">
+C. Evidence is unnecessary when a date is known
+</label>
+
+<label>
+<input type="radio" name="q17" value="d">
+D. Every source must give the same information
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(17,'a')">
+Check Answer
+</button>
+
+<div class="feedback" id="f17">
+Historical conclusions should be supported by evidence and developed through careful analysis and interpretation.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q18.</strong>
+Imagine a future historian finds a smartphone from the 21st century. What is the strongest conclusion?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q18" value="a">
+A. The smartphone alone explains every part of modern society
+</label>
+
+<label>
+<input type="radio" name="q18" value="b">
+B. The smartphone can provide clues about technology but not the complete society
+</label>
+
+<label>
+<input type="radio" name="q18" value="c">
+C. The smartphone cannot provide any historical information
+</label>
+
+<label>
+<input type="radio" name="q18" value="d">
+D. The smartphone proves exactly how every person lived
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(18,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f18">
+A single artefact can reveal useful information but cannot normally explain every dimension of a complex society.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q19.</strong>
+Which statement is most appropriate for UPSC-style historical analysis?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q19" value="a">
+A. Historical sources should be accepted without criticism
+</label>
+
+<label>
+<input type="radio" name="q19" value="b">
+B. Historical interpretation should consider evidence, context and comparison
+</label>
+
+<label>
+<input type="radio" name="q19" value="c">
+C. Only political sources are useful
+</label>
+
+<label>
+<input type="radio" name="q19" value="d">
+D. Archaeology and history are unrelated
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(19,'b')">
+Check Answer
+</button>
+
+<div class="feedback" id="f19">
+UPSC-style analysis benefits from evaluating evidence, context, limitations and relationships among different sources.
+</div>
+
+</div>
+
+
+<div class="question">
+
+<p>
+<strong>Q20.</strong>
+What is the central lesson of this chapter?
+</p>
+
+<div class="options">
+
+<label>
+<input type="radio" name="q20" value="a">
+A. History is only the memorisation of dates
+</label>
+
+<label>
+<input type="radio" name="q20" value="b">
+B. History is mainly about famous rulers
+</label>
+
+<label>
+<input type="radio" name="q20" value="c">
+C. Understanding the past requires chronology, evidence and analysis
+</label>
+
+<label>
+<input type="radio" name="q20" value="d">
+D. One historical source is enough for every question
+</label>
+
+</div>
+
+<button class="check-btn" onclick="checkAnswer(20,'c')">
+Check Answer
+</button>
+
+<div class="feedback" id="f20">
+The chapter connects historical time with sources and evidence-based analysis to understand the past.
+</div>
+
+</div>
+
+</div>
 
 </section>
 
 
-<!-- COMPLETE -->
+<!-- COMPLETION -->
 
-<section class="section complete">
+<section class="complete-box">
 
-<h2>18. 🏁 Complete Chapter</h2>
+<h2>🎉 Chapter Completed?</h2>
 
 <p>
-पहले सभी 20 questions को check करो। उसके बाद chapter complete mark कर सकते हो।
+Read the chapter, listen to the audio and attempt all 20 questions.
 </p>
 
 <button class="complete-btn" onclick="completeChapter()">
-✅ Complete Chapter
+✅ Mark Chapter Complete
 </button>
 
-<div class="status" id="completeStatus"></div>
+<p id="completionMessage" style="margin-top:12px;"></p>
 
 </section>
+
 
 </main>
 
 
 <footer>
 
-<p><strong>🇮🇳 UPSC Shiksha</strong></p>
-
 <p>
-Current NCERT 2026–27 • Class 6 • History Foundation
+🇮🇳 <strong>UPSC Shiksha</strong>
 </p>
 
 <p>
-Original educational learning material
+Class 6 History • Timeline and Sources of History
+</p>
+
+<p>
+Original educational explanations • Current NCERT-aligned learning
 </p>
 
 </footer>
@@ -1634,441 +3099,145 @@ Original educational learning material
 
 <script>
 
-/* HOME */
-
-function goHome(){
-
-  window.location.href="history.html";
-
-}
-
-
-/* THEME */
+/* =========================
+   THEME
+========================= */
 
 function toggleTheme(){
 
   document.body.classList.toggle("dark");
 
+  const isDark =
+    document.body.classList.contains("dark");
+
   localStorage.setItem(
     "class6history1theme",
-    document.body.classList.contains("dark") ? "dark" : "light"
+    isDark ? "dark" : "light"
   );
-
 }
+
 
 function loadTheme(){
 
-  const theme=localStorage.getItem("class6history1theme");
+  const saved =
+    localStorage.getItem("class6history1theme");
 
-  if(theme==="dark"){
+  if(saved === "dark"){
     document.body.classList.add("dark");
   }
 
 }
 
-loadTheme();
 
+/* =========================
+   AUDIO
+========================= */
 
-/* AUDIO */
-
-let speech=null;
+let speech;
 
 function speakText(text,lang){
 
   stopSpeech();
 
-  speech=new SpeechSynthesisUtterance(text);
-  speech.lang=lang;
-  speech.rate=.95;
+  if(!("speechSynthesis" in window)){
+    alert("Audio is not supported on this browser.");
+    return;
+  }
+
+  speech =
+    new SpeechSynthesisUtterance(text);
+
+  speech.lang = lang;
+  speech.rate = 0.9;
+  speech.pitch = 1;
 
   window.speechSynthesis.speak(speech);
-
 }
+
 
 function speakEnglish(){
 
-  speakText(
-  "History is the study of the human past. Historians use timelines and different sources such as archaeological remains, inscriptions, coins, monuments, manuscripts and oral traditions. By comparing evidence and studying its context, historians develop an understanding of the past.",
-  "en-IN"
-  );
+  const text = `
+  Timeline and Sources of History.
+  A timeline arranges historical events in chronological order.
+  Historians use many sources to understand the past.
+  These include archaeological remains, coins, inscriptions,
+  monuments, literary sources and oral traditions.
+  A source must be examined in its context.
+  Historians compare different sources and develop interpretations
+  based on evidence.
+  One source rarely explains the complete history of a society.
+  `;
 
+  speakText(text,"en-IN");
 }
+
 
 function speakHindi(){
 
-  speakText(
-  "इतिहास मानव अतीत का अध्ययन है। इतिहासकार अतीत को समझने के लिए समय रेखा और अलग-अलग स्रोतों का उपयोग करते हैं। इनमें पुरातात्विक अवशेष, अभिलेख, सिक्के, स्मारक, पांडुलिपियां और मौखिक परंपराएं शामिल हैं। अलग-अलग प्रमाणों की तुलना करके इतिहासकार अतीत की बेहतर समझ विकसित करते हैं।",
-  "hi-IN"
-  );
+  const text = `
+  समयरेखा और इतिहास के स्रोत।
+  समयरेखा ऐतिहासिक घटनाओं को कालक्रम में व्यवस्थित करती है।
+  इतिहासकार अतीत को समझने के लिए अनेक प्रकार के स्रोतों का उपयोग करते हैं।
+  इनमें पुरातात्विक अवशेष, सिक्के, अभिलेख, भवन, साहित्यिक स्रोत
+  और मौखिक परंपराएं शामिल हो सकती हैं।
+  किसी स्रोत को उसके संदर्भ में समझना आवश्यक है।
+  इतिहासकार अलग-अलग स्रोतों की तुलना करके साक्ष्यों के आधार पर
+  ऐतिहासिक निष्कर्ष विकसित करते हैं।
+  एक स्रोत किसी पूरे समाज का संपूर्ण इतिहास नहीं बता सकता।
+  `;
 
+  speakText(text,"hi-IN");
 }
+
 
 function stopSpeech(){
 
-  if(window.speechSynthesis){
+  if("speechSynthesis" in window){
     window.speechSynthesis.cancel();
   }
 
 }
 
 
-/* QUESTIONS */
+/* =========================
+   MCQ CHECKING
+========================= */
 
-const questions=[
+function checkAnswer(questionNumber,correctAnswer){
 
-{
-q:"A timeline is mainly used to:",
-o:[
-"Arrange events in chronological order",
-"Show only geographical boundaries",
-"Measure rainfall",
-"Classify languages"
-],
-a:"A",
-e:"A timeline places events in chronological order, helping us understand what happened earlier and later."
-},
+  const selected =
+    document.querySelector(
+      'input[name="q'+questionNumber+'"]:checked'
+    );
 
-{
-q:"Which unit represents 100 years?",
-o:[
-"Century",
-"Decade",
-"Millennium",
-"Year"
-],
-a:"A",
-e:"A century is a period of 100 years."
-},
-
-{
-q:"Which date is earlier?",
-o:[
-"500 BCE",
-"200 BCE",
-"100 CE",
-"500 CE"
-],
-a:"A",
-e:"Among these dates, 500 BCE is the earliest because BCE dates become later as the number approaches 1 BCE."
-},
-
-{
-q:"Which specialist studies fossils?",
-o:[
-"Palaeontologist",
-"Archaeologist",
-"Geologist",
-"Anthropologist"
-],
-a:"A",
-e:"Palaeontologists study fossils and remains of ancient plants and animals."
-},
-
-{
-q:"Archaeologists mainly study:",
-o:[
-"Material remains of past human activity",
-"Only modern elections",
-"Only weather forecasts",
-"Only astronomical equations"
-],
-a:"A",
-e:"Archaeology studies material remains such as tools, pottery, buildings, burials and other archaeological evidence."
-},
-
-{
-q:"Which can be a literary source?",
-o:[
-"Manuscript",
-"Stone tool",
-"Pottery fragment",
-"Coin"
-],
-a:"A",
-e:"Manuscripts are written sources and can preserve information about ideas, traditions and societies."
-},
-
-{
-q:"Why do historians compare different sources?",
-o:[
-"To develop a more reliable interpretation of the past",
-"To remove all archaeological evidence",
-"To avoid studying context",
-"To replace evidence with guesses"
-],
-a:"A",
-e:"Comparing sources can reveal different perspectives, agreements and gaps and helps historians build stronger interpretations."
-},
-
-{
-q:"What can coins sometimes tell historians?",
-o:[
-"Information about rulers and economic life",
-"Exact weather for every year",
-"Only the names of rivers",
-"Only the age of mountains"
-],
-a:"A",
-e:"Coins may provide clues about rulers, political authority, symbols, economy and trade."
-},
-
-{
-q:"What does BCE mean?",
-o:[
-"Before Common Era",
-"British Cultural Era",
-"Beginning of Common Economy",
-"Before Colonial Empire"
-],
-a:"A",
-e:"BCE stands for Before Common Era."
-},
-
-{
-q:"Which is a material source?",
-o:[
-"Pottery",
-"Modern opinion",
-"Future prediction",
-"Unrecorded guess"
-],
-a:"A",
-e:"Pottery is a material archaeological source that can provide clues about past communities."
-},
-
-{
-q:"A millennium contains:",
-o:[
-"1,000 years",
-"100 years",
-"10 years",
-"50 years"
-],
-a:"A",
-e:"A millennium is a period of 1,000 years."
-},
-
-{
-q:"Which source may contain engraved historical information?",
-o:[
-"Inscription",
-"Weather forecast",
-"Modern advertisement",
-"Digital game"
-],
-a:"A",
-e:"Inscriptions are writings recorded or engraved on materials such as stone or metal."
-},
-
-{
-q:"Why is context important when studying a historical source?",
-o:[
-"It helps us understand the source's purpose and background",
-"It makes evidence unnecessary",
-"It changes every date automatically",
-"It prevents comparison"
-],
-a:"A",
-e:"Context helps historians understand when, where, why and for whom a source was created."
-},
-
-{
-q:"Which group studies human societies and cultures?",
-o:[
-"Anthropologists",
-"Palaeontologists",
-"Geologists",
-"Engineers"
-],
-a:"A",
-e:"Anthropologists study human societies, cultures and aspects of human development."
-},
-
-{
-q:"What is one major purpose of historical evidence?",
-o:[
-"To help reconstruct and understand the past",
-"To predict every future event",
-"To eliminate all uncertainty",
-"To replace research"
-],
-a:"A",
-e:"Evidence allows historians to investigate and reconstruct aspects of the past."
-},
-
-{
-q:"Which source can provide information about ancient settlement patterns?",
-o:[
-"Buildings and habitation remains",
-"Modern advertisements",
-"Today's weather app",
-"Traffic signals"
-],
-a:"A",
-e:"Buildings and habitation remains can reveal information about settlements, construction and social organisation."
-},
-
-{
-q:"Which statement about early human history is most appropriate?",
-o:[
-"It often depends heavily on archaeological and environmental evidence",
-"Written records exist for every early period",
-"Only coins can reveal early human life",
-"Early humans left no evidence at all"
-],
-a:"A",
-e:"For very early periods, archaeology, environmental evidence and biological evidence are especially important."
-},
-
-{
-q:"What does chronology mean?",
-o:[
-"Arrangement of events according to time",
-"Study of only monuments",
-"Study of only coins",
-"Measurement of temperature"
-],
-a:"A",
-e:"Chronology refers to arranging events according to their time sequence."
-},
-
-{
-q:"Which approach gives a stronger historical interpretation?",
-o:[
-"Comparing multiple sources and considering context",
-"Using only one source without questions",
-"Ignoring archaeological evidence",
-"Accepting every claim without examination"
-],
-a:"A",
-e:"Historical interpretation becomes stronger when different evidence is compared and its context is examined."
-},
-
-{
-q:"Which is the best description of history?",
-o:[
-"The study and interpretation of the human past using evidence",
-"A list of future predictions",
-"Only the study of kings",
-"Only the study of maps"
-],
-a:"A",
-e:"History studies and interprets the human past using available evidence from many sources."
-}
-
-];
-
-
-/* RENDER QUESTIONS */
-
-function renderQuestions(){
-
-  const box=document.getElementById("questions");
-
-  box.innerHTML="";
-
-  questions.forEach((item,index)=>{
-
-    const qNum=index+1;
-
-    const testNumber=Math.ceil(qNum/5);
-
-    const div=document.createElement("div");
-
-    div.className="test";
-
-    let html="";
-
-    html+=`
-      <div class="question">
-        Test ${testNumber} • Q${qNum}. ${item.q}
-      </div>
-    `;
-
-    item.o.forEach((option,optionIndex)=>{
-
-      const letter=String.fromCharCode(65+optionIndex);
-
-      html+=`
-        <label class="option">
-          <input type="radio"
-                 name="q${qNum}"
-                 value="${letter}">
-          <strong>${letter}.</strong> ${option}
-        </label>
-      `;
-
-    });
-
-    html+=`
-      <button class="check-btn"
-              onclick="checkAnswer(${qNum})">
-        ✅ Check Answer
-      </button>
-
-      <div class="answer-box" id="answer${qNum}"></div>
-    `;
-
-    div.innerHTML=html;
-
-    box.appendChild(div);
-
-  });
-
-  updateProgress();
-
-}
-
-
-/* CHECK ANSWER */
-
-function checkAnswer(number){
-
-  const selected=document.querySelector(
-    `input[name="q${number}"]:checked`
-  );
-
-  const answerBox=document.getElementById(
-    "answer"+number
-  );
+  const feedback =
+    document.getElementById("f"+questionNumber);
 
   if(!selected){
 
-    answerBox.style.display="block";
-
-    answerBox.innerHTML=
-    "⚠️ Please select an option first.";
-
+    alert("Please select an answer first.");
     return;
-
   }
 
-  const item=questions[number-1];
+  feedback.style.display="block";
 
-  const correct=selected.value===item.a;
+  if(selected.value === correctAnswer){
 
-  answerBox.style.display="block";
-
-  if(correct){
-
-    answerBox.innerHTML=`
-      <strong>✅ Correct!</strong><br>
-      Correct Answer: ${item.a}<br><br>
-      ${item.e}
-    `;
+    feedback.innerHTML =
+      "✅ <strong>Correct!</strong><br><br>" +
+      feedback.innerHTML;
 
   }else{
 
-    answerBox.innerHTML=`
-      <strong>❌ Incorrect</strong><br>
-      Correct Answer: ${item.a}<br><br>
-      ${item.e}
-    `;
+    feedback.innerHTML =
+      "❌ <strong>Not correct.</strong><br><br>" +
+      feedback.innerHTML;
 
   }
 
   localStorage.setItem(
-    "class6history1q"+number,
+    "class6history1q"+questionNumber,
     "checked"
   );
 
@@ -2077,87 +3246,122 @@ function checkAnswer(number){
 }
 
 
-/* PROGRESS */
+/* =========================
+   PROGRESS
+========================= */
 
 function updateProgress(){
 
-  let checked=0;
+  let completed = 0;
 
   for(let i=1;i<=20;i++){
 
     if(
       localStorage.getItem(
         "class6history1q"+i
-      )==="checked"
+      ) === "checked"
     ){
-
-      checked++;
-
+      completed++;
     }
 
   }
 
-  const percentage=(checked/20)*100;
+  const percentage =
+    Math.round((completed/20)*100);
 
-  document.getElementById("progressFill")
-  .style.width=percentage+"%";
+  document.getElementById(
+    "progressFill"
+  ).style.width = percentage+"%";
 
-  document.getElementById("progressText")
-  .innerText=
-  checked+" / 20 questions checked";
+  document.getElementById(
+    "progressText"
+  ).textContent =
+    percentage+"% completed — "+
+    completed+" of 20 questions checked";
 
 }
 
 
-/* COMPLETE */
+/* =========================
+   COMPLETE CHAPTER
+========================= */
 
 function completeChapter(){
 
-  let checked=0;
+  localStorage.setItem(
+    "class6history1done",
+    "completed"
+  );
+
+  document.getElementById(
+    "completionMessage"
+  ).textContent =
+    "🎉 Chapter 1 completed successfully! Your progress has been saved.";
+
+  updateProgress();
+
+}
+
+
+/* =========================
+   RESTORE PROGRESS
+========================= */
+
+function restoreProgress(){
 
   for(let i=1;i<=20;i++){
 
-    if(
+    const saved =
       localStorage.getItem(
         "class6history1q"+i
-      )==="checked"
-    ){
+      );
 
-      checked++;
+    if(saved === "checked"){
+
+      const feedback =
+        document.getElementById("f"+i);
+
+      if(feedback){
+        feedback.style.display="block";
+      }
 
     }
 
   }
 
-  const status=document.getElementById(
-    "completeStatus"
-  );
+  if(
+    localStorage.getItem(
+      "class6history1done"
+    ) === "completed"
+  ){
 
-  if(checked<20){
-
-    status.innerText=
-    "⚠️ पहले सभी 20 questions check करो. अभी "+
-    checked+
-    "/20 completed हैं.";
-
-    return;
+    document.getElementById(
+      "completionMessage"
+    ).textContent =
+      "🎉 This chapter is already marked as completed.";
 
   }
 
-  localStorage.setItem(
-    "class6history1done",
-    "yes"
-  );
-
-  status.innerText=
-  "🎉 Chapter completed successfully!";
+  updateProgress();
 
 }
 
 
-/* START */
+/* =========================
+   INITIALIZE
+========================= */
 
-renderQuestions();
+loadTheme();
+
+window.addEventListener(
+  "load",
+  restoreProgress
+);
+
+window.addEventListener(
+  "beforeunload",
+  stopSpeech
+);
 
 </script>
 
