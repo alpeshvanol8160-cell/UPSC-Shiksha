@@ -1,84 +1,19 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 6 History Chapter 2 | UPSC Shiksha</title>
+<title>India, That Is Bharat | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Shiksha Premium NCERT Class 6 History Chapter 2 - On the Trail of the Earliest People.">
+content="UPSC Shiksha Current NCERT 2026-27 Class 6 History Chapter 2 - India, That Is Bharat. Detailed English and Hindi explanations, examples, analysis, maps, charts, animations, UPSC points, Mains questions and MCQs.">
 
 <style>
-
-/* =========================
-   THEME VARIABLES
-========================= */
-
-:root{
-  --bg:#f4f7fb;
-  --card:#ffffff;
-  --card2:#eef3f9;
-  --text:#172033;
-  --muted:#5d6978;
-  --primary:#245fd6;
-  --secondary:#7042d8;
-  --border:#d7e0ec;
-  --shadow:0 10px 28px rgba(20,35,60,.09);
-
-  --highlight-bg:#fff7d6;
-  --highlight-text:#4d3c00;
-  --highlight-border:#e0ad17;
-
-  --example-bg:#eaf3ff;
-  --example-text:#183b72;
-  --example-border:#4c83e8;
-
-  --upsc-bg:#e9f8ef;
-  --upsc-text:#145b32;
-  --upsc-border:#29a65c;
-
-  --warning-bg:#fff0f1;
-  --warning-text:#70222c;
-  --warning-border:#d84b5a;
-}
-
-body.dark{
-
-  --bg:#091221;
-  --card:#131f31;
-  --card2:#1b2a40;
-  --text:#eef4ff;
-  --muted:#aebbcf;
-  --primary:#70a8ff;
-  --secondary:#a47cff;
-  --border:#2c405d;
-  --shadow:0 12px 35px rgba(0,0,0,.32);
-
-  --highlight-bg:#3c3215;
-  --highlight-text:#fff2a8;
-  --highlight-border:#f0c44c;
-
-  --example-bg:#172d52;
-  --example-text:#d8e7ff;
-  --example-border:#6da2ff;
-
-  --upsc-bg:#123b28;
-  --upsc-text:#bff4d4;
-  --upsc-border:#42d687;
-
-  --warning-bg:#461d27;
-  --warning-text:#ffd7dc;
-  --warning-border:#ff6b7d;
-}
-
-
-/* =========================
-   BASIC
-========================= */
-
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
@@ -86,3297 +21,2534 @@ html{
 }
 
 body{
-  margin:0;
-  font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
-  line-height:1.75;
-  transition:.25s;
+  font-family:Arial, Helvetica, sans-serif;
+  line-height:1.7;
+  background:#f7f9fc;
+  color:#172033;
+  transition:0.3s;
 }
-
-a{
-  color:var(--primary);
-}
-
-button,
-.btn{
-  border:0;
-  border-radius:10px;
-  padding:10px 14px;
-  background:var(--primary);
-  color:white;
-  font-weight:800;
-  cursor:pointer;
-  text-decoration:none;
-}
-
-button:hover,
-.btn:hover{
-  opacity:.9;
-}
-
-
-/* =========================
-   HEADER
-========================= */
 
 header{
+  background:linear-gradient(135deg,#0f172a,#1d4ed8);
+  color:white;
+  padding:18px 14px;
   position:sticky;
   top:0;
-  z-index:100;
-  background:var(--card);
-  border-bottom:1px solid var(--border);
-  box-shadow:0 3px 15px rgba(0,0,0,.05);
+  z-index:1000;
+  box-shadow:0 4px 15px rgba(0,0,0,.15);
 }
 
-.nav{
+.header-inner{
   max-width:1100px;
   margin:auto;
-  padding:11px 15px;
-
   display:flex;
   justify-content:space-between;
   align-items:center;
-
   gap:10px;
 }
 
-.brand{
-  font-size:17px;
-  font-weight:900;
+.logo{
+  font-size:21px;
+  font-weight:bold;
 }
 
-.controls{
+.header-buttons{
   display:flex;
-  gap:7px;
+  gap:8px;
   flex-wrap:wrap;
+  justify-content:flex-end;
 }
 
-.secondary{
-  background:var(--card2);
-  color:var(--text);
-  border:1px solid var(--border);
+button,
+.nav-btn{
+  border:none;
+  border-radius:10px;
+  padding:9px 13px;
+  cursor:pointer;
+  font-weight:bold;
+  text-decoration:none;
+  display:inline-block;
 }
 
+.home-btn{
+  background:#fff;
+  color:#1d4ed8;
+}
 
-/* =========================
-   MAIN
-========================= */
+.dark-btn{
+  background:#111827;
+  color:#fff;
+  border:1px solid rgba(255,255,255,.25);
+}
 
-.wrap{
-  max-width:1050px;
+.container{
+  max-width:1100px;
   margin:auto;
-  padding:15px;
+  padding:20px 14px 50px;
 }
-
-
-/* =========================
-   HERO
-========================= */
 
 .hero{
-  position:relative;
-  overflow:hidden;
-
-  padding:32px 22px;
-  border-radius:23px;
-
-  background:
-  linear-gradient(
-    125deg,
-    #1557d7,
-    #713bd7
-  );
-
-  color:white;
-
-  box-shadow:
-  0 18px 45px rgba(41,67,150,.25);
-}
-
-.hero h1{
-  margin:0 0 7px;
-
-  font-size:
-  clamp(25px,6vw,43px);
-
-  line-height:1.15;
-}
-
-.hero p{
-  margin:7px 0;
-}
-
-.hero::before,
-.hero::after{
-  content:"";
-  position:absolute;
-  border-radius:50%;
-  background:rgba(255,255,255,.12);
-  animation:float 6s ease-in-out infinite;
-}
-
-.hero::before{
-  width:190px;
-  height:190px;
-  right:-55px;
-  top:-95px;
-}
-
-.hero::after{
-  width:90px;
-  height:90px;
-  right:120px;
-  bottom:-45px;
-  animation-delay:1s;
-}
-
-.badges{
-  display:flex;
-  gap:7px;
-  flex-wrap:wrap;
-  margin-top:15px;
+  background:linear-gradient(135deg,#dbeafe,#eff6ff);
+  border-radius:20px;
+  padding:30px 20px;
+  margin-bottom:22px;
+  border:1px solid #bfdbfe;
 }
 
 .badge{
-  padding:5px 10px;
-
-  border:1px solid rgba(255,255,255,.25);
+  display:inline-block;
+  background:#1d4ed8;
+  color:white;
+  padding:6px 11px;
   border-radius:20px;
-
-  background:rgba(255,255,255,.12);
-
-  font-size:12px;
-  font-weight:900;
-}
-
-
-/* =========================
-   CARDS
-========================= */
-
-.card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:17px;
-
-  padding:20px;
-  margin:16px 0;
-
-  box-shadow:var(--shadow);
-}
-
-.card h2{
-  color:var(--primary);
-  margin-top:0;
-}
-
-.card h3{
-  color:var(--primary);
-}
-
-
-/* =========================
-   PROGRESS
-========================= */
-
-.progress{
-  height:13px;
-
-  background:var(--card2);
-
-  border-radius:30px;
-  overflow:hidden;
-
-  border:1px solid var(--border);
-}
-
-.progress span{
-  display:block;
-  width:0;
-  height:100%;
-
-  background:
-  linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  transition:.5s;
-}
-
-.small{
   font-size:13px;
-  color:var(--muted);
+  font-weight:bold;
+  margin-bottom:10px;
 }
 
-
-/* =========================
-   QUICK NAV
-========================= */
-
-.quick{
-  display:grid;
-  grid-template-columns:repeat(4,1fr);
-  gap:9px;
-
-  margin-top:14px;
+.hero h1{
+  font-size:32px;
+  line-height:1.25;
+  margin-bottom:12px;
 }
 
-.quick a{
-  padding:10px;
-
-  text-align:center;
-
-  border-radius:11px;
-
-  background:var(--card2);
-  border:1px solid var(--border);
-
-  color:var(--text);
-
-  text-decoration:none;
-
-  font-weight:800;
-  font-size:13px;
+.hero p{
+  max-width:900px;
+  color:#334155;
 }
 
+.notice{
+  background:#fff7ed;
+  border-left:5px solid #f97316;
+  padding:15px;
+  border-radius:10px;
+  margin:18px 0;
+}
 
-/* =========================
-   HIGHLIGHTS
-========================= */
+.section{
+  background:white;
+  border-radius:18px;
+  padding:24px 20px;
+  margin:22px 0;
+  box-shadow:0 5px 18px rgba(15,23,42,.07);
+  border:1px solid #e5e7eb;
+}
+
+.section h2{
+  color:#1d4ed8;
+  margin-bottom:14px;
+  font-size:25px;
+}
+
+.section h3{
+  color:#0f766e;
+  margin:20px 0 8px;
+  font-size:20px;
+}
+
+.section h4{
+  margin:16px 0 6px;
+  color:#334155;
+}
+
+p{
+  margin:8px 0 12px;
+}
+
+ul,
+ol{
+  padding-left:25px;
+  margin:10px 0 15px;
+}
+
+li{
+  margin:6px 0;
+}
 
 .highlight{
-  background:var(--highlight-bg);
-  color:var(--highlight-text);
-
-  border-left:5px solid var(--highlight-border);
-
-  padding:15px;
-
-  border-radius:12px;
-
+  background:#eff6ff;
+  border-left:5px solid #2563eb;
+  padding:14px 16px;
+  border-radius:10px;
   margin:14px 0;
 }
 
-.example{
-  background:var(--example-bg);
-  color:var(--example-text);
-
-  border-left:5px solid var(--example-border);
-
-  padding:15px;
-
-  border-radius:12px;
-
-  margin:14px 0;
-}
-
-.upsc{
-  background:var(--upsc-bg);
-  color:var(--upsc-text);
-
-  border-left:5px solid var(--upsc-border);
-
-  padding:15px;
-
-  border-radius:12px;
-
+.analysis{
+  background:#f0fdf4;
+  border-left:5px solid #16a34a;
+  padding:14px 16px;
+  border-radius:10px;
   margin:14px 0;
 }
 
 .warning{
-  background:var(--warning-bg);
-  color:var(--warning-text);
-
-  border-left:5px solid var(--warning-border);
-
-  padding:15px;
-
-  border-radius:12px;
-
+  background:#fff7ed;
+  border-left:5px solid #ea580c;
+  padding:14px 16px;
+  border-radius:10px;
   margin:14px 0;
 }
 
-
-/* =========================
-   TAGS
-========================= */
-
-.tag{
-  display:inline-block;
-
-  padding:4px 9px;
-
-  border-radius:20px;
-
-  background:var(--card2);
-
-  border:1px solid var(--border);
-
-  font-size:11px;
-  font-weight:900;
+.example{
+  background:#faf5ff;
+  border-left:5px solid #9333ea;
+  padding:14px 16px;
+  border-radius:10px;
+  margin:14px 0;
 }
 
-
-/* =========================
-   VISUAL BOX
-========================= */
-
-.visual{
-  background:var(--card2);
-
-  border:1px solid var(--border);
-
-  border-radius:16px;
-
-  padding:16px;
-
-  margin:17px 0;
-
-  overflow:hidden;
+.quote{
+  background:#f8fafc;
+  border:1px solid #cbd5e1;
+  border-radius:12px;
+  padding:18px;
+  font-style:italic;
+  margin:15px 0;
 }
-
-.visual-title{
-  color:var(--primary);
-
-  font-size:18px;
-  font-weight:900;
-
-  margin-bottom:12px;
-}
-
-
-/* =========================
-   ANIMATED CONCEPT FLOW
-========================= */
-
-.diagram{
-  display:grid;
-
-  grid-template-columns:
-  repeat(5,1fr);
-
-  gap:8px;
-
-  align-items:center;
-}
-
-.node{
-  padding:14px 8px;
-
-  text-align:center;
-
-  border-radius:14px;
-
-  background:var(--card);
-
-  border:2px solid var(--border);
-
-  font-weight:900;
-
-  animation:
-  nodeFloat
-  1.7s
-  ease-in-out
-  infinite
-  alternate;
-}
-
-.node:nth-child(1){
-  animation-delay:0s;
-}
-
-.node:nth-child(3){
-  animation-delay:.25s;
-}
-
-.node:nth-child(5){
-  animation-delay:.5s;
-}
-
-.node:nth-child(7){
-  animation-delay:.75s;
-}
-
-.node:nth-child(9){
-  animation-delay:1s;
-}
-
-.arrow{
-  color:var(--primary);
-
-  text-align:center;
-
-  font-size:24px;
-
-  font-weight:900;
-
-  animation:
-  arrowPulse
-  1.2s
-  infinite;
-}
-
-
-/* =========================
-   FLOW BOX
-========================= */
-
-.flowline{
-  display:grid;
-
-  grid-template-columns:
-  repeat(4,1fr);
-
-  gap:10px;
-}
-
-.flowbox{
-  position:relative;
-  overflow:hidden;
-
-  padding:15px;
-
-  border-radius:14px;
-
-  background:var(--card);
-
-  border:1px solid var(--border);
-}
-
-.flowbox b{
-  display:block;
-
-  color:var(--primary);
-
-  margin-bottom:5px;
-}
-
-.flowbox::after{
-  content:"";
-
-  position:absolute;
-
-  left:-50%;
-
-  right:100%;
-
-  bottom:0;
-
-  height:3px;
-
-  background:
-  linear-gradient(
-    90deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  animation:
-  scanLine
-  2.8s
-  linear
-  infinite;
-}
-
-
-/* =========================
-   TWO COLUMN
-========================= */
-
-.two{
-  display:grid;
-
-  grid-template-columns:
-  1fr 1fr;
-
-  gap:14px;
-}
-
-
-/* =========================
-   TABLE
-========================= */
 
 table{
   width:100%;
-
   border-collapse:collapse;
-
-  margin:14px 0;
-
-  background:var(--card);
-
-  border-radius:12px;
-
+  margin:15px 0;
   overflow:hidden;
 }
 
 th,
 td{
-  padding:10px;
-
-  border:1px solid var(--border);
-
+  border:1px solid #cbd5e1;
+  padding:11px;
   text-align:left;
+  vertical-align:top;
 }
 
 th{
-  background:var(--card2);
+  background:#dbeafe;
+  color:#172033;
 }
 
-
-/* =========================
-   REVISION
-========================= */
-
-.revision{
-  display:grid;
-
-  grid-template-columns:
-  repeat(3,1fr);
-
-  gap:10px;
+.map-box{
+  background:linear-gradient(135deg,#ecfeff,#eff6ff);
+  border:2px solid #60a5fa;
+  border-radius:18px;
+  padding:20px;
+  text-align:center;
+  margin:18px 0;
 }
 
-.rev{
-  padding:14px;
-
-  border-radius:12px;
-
-  background:var(--card2);
-
-  border:1px solid var(--border);
-}
-
-
-/* =========================
-   TEST
-========================= */
-
-.test{
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:17px;
-
-  padding:18px;
-
-  margin:17px 0;
-
-  box-shadow:var(--shadow);
-}
-
-.test-head{
+.india-map{
+  max-width:480px;
+  margin:20px auto;
+  position:relative;
+  min-height:300px;
+  background:#dbeafe;
+  border-radius:50% 45% 55% 40%;
+  border:5px solid #2563eb;
+  padding:25px;
   display:flex;
-
-  justify-content:space-between;
-
   align-items:center;
+  justify-content:center;
+  overflow:hidden;
+}
 
+.map-center{
+  background:white;
+  padding:15px;
+  border-radius:15px;
+  font-weight:bold;
+  box-shadow:0 4px 12px rgba(0,0,0,.12);
+}
+
+.map-label{
+  position:absolute;
+  font-size:13px;
+  font-weight:bold;
+  background:white;
+  padding:5px 8px;
+  border-radius:8px;
+  box-shadow:0 2px 7px rgba(0,0,0,.1);
+}
+
+.north{top:15px;left:50%;transform:translateX(-50%);}
+.west{left:12px;top:48%;}
+.east{right:12px;top:48%;}
+.south{bottom:15px;left:50%;transform:translateX(-50%);}
+
+.flow{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content:center;
+  align-items:center;
   gap:10px;
+  margin:20px 0;
+}
 
+.flow-item{
+  background:#eff6ff;
+  border:2px solid #60a5fa;
+  border-radius:14px;
+  padding:12px 15px;
+  font-weight:bold;
+  text-align:center;
+  min-width:130px;
+}
+
+.arrow{
+  font-size:25px;
+  color:#2563eb;
+  font-weight:bold;
+}
+
+.timeline{
+  position:relative;
+  margin:25px 0;
+  padding-left:28px;
+  border-left:4px solid #2563eb;
+}
+
+.timeline-item{
+  position:relative;
+  margin-bottom:22px;
+  background:#f8fafc;
+  padding:14px;
+  border-radius:12px;
+}
+
+.timeline-item::before{
+  content:"";
+  position:absolute;
+  left:-39px;
+  top:17px;
+  width:18px;
+  height:18px;
+  border-radius:50%;
+  background:#2563eb;
+  border:4px solid white;
+  box-shadow:0 0 0 2px #2563eb;
+}
+
+.animation-box{
+  background:#0f172a;
+  color:white;
+  border-radius:18px;
+  padding:22px;
+  overflow:hidden;
+  margin:20px 0;
+}
+
+.animation-title{
+  text-align:center;
+  margin-bottom:18px;
+  color:#93c5fd;
+}
+
+.animation-track{
+  display:flex;
+  justify-content:space-around;
+  align-items:center;
+  gap:8px;
   flex-wrap:wrap;
 }
 
-.test-head h2{
-  margin:0;
-
-  color:var(--primary);
+.anim-node{
+  background:#1d4ed8;
+  padding:12px;
+  border-radius:12px;
+  min-width:120px;
+  text-align:center;
+  animation:pulseNode 2.5s infinite;
 }
 
-.q{
-  background:var(--card2);
-
-  border:1px solid var(--border);
-
-  border-radius:13px;
-
-  padding:15px;
-
-  margin:14px 0;
+.anim-node:nth-child(2){
+  animation-delay:.5s;
 }
 
-.opts{
+.anim-node:nth-child(3){
+  animation-delay:1s;
+}
+
+.anim-node:nth-child(4){
+  animation-delay:1.5s;
+}
+
+@keyframes pulseNode{
+  0%,100%{
+    transform:scale(1);
+    opacity:.7;
+  }
+  50%{
+    transform:scale(1.08);
+    opacity:1;
+  }
+}
+
+.chart{
+  background:#f8fafc;
+  border-radius:16px;
+  padding:18px;
+  margin:18px 0;
+  border:1px solid #cbd5e1;
+}
+
+.bar-row{
   display:grid;
-
-  gap:8px;
-
-  margin:11px 0;
+  grid-template-columns:140px 1fr;
+  gap:10px;
+  align-items:center;
+  margin:12px 0;
 }
 
-.opt{
-  display:flex;
+.bar{
+  height:28px;
+  border-radius:8px;
+  background:linear-gradient(90deg,#2563eb,#60a5fa);
+  animation:growBar 1.5s ease;
+}
 
-  gap:8px;
+.bar-90{width:90%;}
+.bar-80{width:80%;}
+.bar-70{width:70%;}
+.bar-60{width:60%;}
+.bar-50{width:50%;}
 
-  align-items:flex-start;
+@keyframes growBar{
+  from{width:0;}
+}
 
-  padding:11px;
+.name-card-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+  margin-top:15px;
+}
 
+.name-card{
+  padding:18px;
+  border-radius:15px;
+  background:#f8fafc;
+  border:1px solid #cbd5e1;
+}
+
+.name-card h4{
+  color:#1d4ed8;
+  font-size:19px;
+}
+
+.upsc-box{
+  background:linear-gradient(135deg,#fff7ed,#ffedd5);
+  border:2px solid #fb923c;
+  border-radius:16px;
+  padding:20px;
+}
+
+.mains-box{
+  background:#f0fdfa;
+  border-left:5px solid #0f766e;
+  padding:16px;
+  margin:12px 0;
   border-radius:10px;
+}
 
-  background:var(--card);
+.revision-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
 
-  border:1px solid var(--border);
+.revision-card{
+  background:#f8fafc;
+  padding:15px;
+  border-radius:12px;
+  border:1px solid #cbd5e1;
+}
 
+.quiz{
+  background:#f8fafc;
+  padding:18px;
+  border-radius:14px;
+  border:1px solid #cbd5e1;
+  margin:16px 0;
+}
+
+.quiz h4{
+  color:#1d4ed8;
+}
+
+.option{
+  margin:8px 0;
+  padding:9px 10px;
+  border-radius:8px;
+  background:white;
+  border:1px solid #d1d5db;
+}
+
+.option label{
+  display:block;
   cursor:pointer;
 }
 
-.opt:hover{
-  border-color:var(--primary);
+.check-btn{
+  background:#2563eb;
+  color:white;
+  margin-top:10px;
 }
 
-.result{
+.explanation{
   display:none;
-
-  margin-top:11px;
-
-  padding:13px;
-
-  border-radius:11px;
+  margin-top:12px;
+  background:#ecfdf5;
+  border-left:4px solid #16a34a;
+  padding:12px;
+  border-radius:8px;
 }
 
-.result.ok{
-  display:block;
-
-  background:var(--upsc-bg);
-
-  color:var(--upsc-text);
-
-  border:1px solid var(--upsc-border);
+.correct{
+  color:#15803d;
+  font-weight:bold;
 }
 
-.result.bad{
-  display:block;
-
-  background:var(--warning-bg);
-
-  color:var(--warning-text);
-
-  border:1px solid var(--warning-border);
+.wrong{
+  color:#b91c1c;
+  font-weight:bold;
 }
 
-
-/* =========================
-   CHART
-========================= */
-
-.chart{
-  height:230px;
-
-  display:flex;
-
-  align-items:flex-end;
-
-  gap:12px;
-
-  padding:
-  15px
-  12px
-  42px;
-
-  background:var(--card);
-
-  border:1px solid var(--border);
-
-  border-radius:14px;
+.progress-box{
+  background:white;
+  border-radius:16px;
+  padding:18px;
+  margin:20px 0;
+  border:1px solid #cbd5e1;
 }
 
-.chartbar{
-  flex:1;
-
-  height:var(--h);
-
-  min-width:35px;
-
-  background:
-  linear-gradient(
-    180deg,
-    var(--primary),
-    var(--secondary)
-  );
-
-  border-radius:
-  9px
-  9px
-  3px
-  3px;
-
-  animation:
-  growBar
-  1.3s
-  ease-out;
-  
-  position:relative;
+.progress-track{
+  width:100%;
+  height:14px;
+  background:#e5e7eb;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:10px;
 }
 
-.chartbar span{
-  position:absolute;
+.progress-fill{
+  width:0%;
+  height:100%;
+  background:linear-gradient(90deg,#2563eb,#22c55e);
+  transition:.4s;
+}
 
-  left:0;
-  right:0;
-
-  bottom:-31px;
-
+footer{
+  background:#0f172a;
+  color:white;
   text-align:center;
-
-  font-size:11px;
-
-  font-weight:900;
+  padding:25px 15px;
+  margin-top:30px;
 }
 
-
-/* =========================
-   TOP BUTTON
-========================= */
-
-.top{
+.top-btn{
   position:fixed;
-
-  right:14px;
-  bottom:14px;
-
+  right:15px;
+  bottom:15px;
+  background:#2563eb;
+  color:white;
   width:45px;
   height:45px;
-
-  padding:0;
-
   border-radius:50%;
-
-  font-size:20px;
-
-  display:none;
-
-  z-index:90;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-weight:bold;
+  z-index:999;
 }
 
-
-/* =========================
-   FOOTER
-========================= */
-
-.footer{
-  text-align:center;
-
-  color:var(--muted);
-
-  padding:30px 10px;
+.dark{
+  background:#0b1120;
+  color:#e5e7eb;
 }
 
-
-/* =========================
-   ANIMATIONS
-========================= */
-
-@keyframes nodeFloat{
-
-  from{
-    transform:translateY(0);
-  }
-
-  to{
-    transform:translateY(-7px);
-  }
-
+.dark header{
+  background:linear-gradient(135deg,#020617,#172554);
 }
 
-@keyframes arrowPulse{
-
-  50%{
-    transform:scale(1.18);
-
-    opacity:.65;
-  }
-
+.dark .hero{
+  background:linear-gradient(135deg,#172554,#1e293b);
+  border-color:#334155;
 }
 
-@keyframes float{
-
-  50%{
-    transform:translateY(18px);
-  }
-
+.dark .hero p{
+  color:#cbd5e1;
 }
 
-@keyframes scanLine{
-
-  0%{
-    left:-50%;
-    right:100%;
-  }
-
-  50%{
-    left:100%;
-    right:-50%;
-  }
-
-  100%{
-    left:100%;
-    right:-50%;
-  }
-
+.dark .section,
+.dark .progress-box{
+  background:#111827;
+  border-color:#374151;
+  box-shadow:none;
 }
 
-@keyframes growBar{
-
-  from{
-    transform:
-    scaleY(0);
-
-    transform-origin:
-    bottom;
-  }
-
-  to{
-    transform:
-    scaleY(1);
-  }
-
+.dark .section h2{
+  color:#93c5fd;
 }
 
+.dark .section h3{
+  color:#5eead4;
+}
 
-/* =========================
-   MOBILE
-========================= */
+.dark .highlight{
+  background:#172554;
+  border-color:#60a5fa;
+}
 
-@media(max-width:720px){
+.dark .analysis{
+  background:#052e16;
+  border-color:#4ade80;
+}
 
-  .wrap{
-    padding:10px;
+.dark .warning{
+  background:#431407;
+  border-color:#fb923c;
+}
+
+.dark .example{
+  background:#3b0764;
+  border-color:#c084fc;
+}
+
+.dark .quote{
+  background:#1f2937;
+  border-color:#4b5563;
+}
+
+.dark th{
+  background:#1e3a8a;
+  color:white;
+}
+
+.dark td{
+  border-color:#4b5563;
+}
+
+.dark .map-box{
+  background:#172554;
+  border-color:#60a5fa;
+}
+
+.dark .india-map{
+  background:#1e3a8a;
+}
+
+.dark .map-center,
+.dark .map-label{
+  background:#111827;
+  color:#e5e7eb;
+}
+
+.dark .flow-item{
+  background:#172554;
+  border-color:#60a5fa;
+}
+
+.dark .timeline-item{
+  background:#1f2937;
+}
+
+.dark .chart,
+.dark .name-card,
+.dark .revision-card,
+.dark .quiz{
+  background:#1f2937;
+  border-color:#4b5563;
+}
+
+.dark .option{
+  background:#111827;
+  border-color:#4b5563;
+}
+
+.dark .explanation{
+  background:#052e16;
+}
+
+.dark .progress-track{
+  background:#374151;
+}
+
+.dark .upsc-box{
+  background:#431407;
+  border-color:#fb923c;
+}
+
+.dark .mains-box{
+  background:#042f2e;
+}
+
+@media(max-width:700px){
+
+  .header-inner{
+    align-items:flex-start;
   }
 
-  .hero{
-    padding:26px 16px;
+  .logo{
+    font-size:18px;
   }
 
-  .card,
-  .test{
-    padding:15px;
+  .header-buttons{
+    max-width:190px;
   }
 
-  .quick{
-    grid-template-columns:
-    repeat(2,1fr);
+  .hero h1{
+    font-size:25px;
   }
 
-  .diagram{
+  .section{
+    padding:18px 14px;
+  }
+
+  .section h2{
+    font-size:22px;
+  }
+
+  .name-card-grid,
+  .revision-grid{
     grid-template-columns:1fr;
+  }
+
+  .bar-row{
+    grid-template-columns:95px 1fr;
+  }
+
+  .flow{
+    flex-direction:column;
   }
 
   .arrow{
     transform:rotate(90deg);
   }
 
-  .flowline,
-  .two,
-  .revision{
-    grid-template-columns:1fr;
+  table{
+    display:block;
+    overflow-x:auto;
+    white-space:normal;
   }
 
-  .chart{
-    height:210px;
-
-    gap:7px;
+  .india-map{
+    min-height:240px;
   }
-
-  .chartbar{
-    min-width:24px;
-  }
-
 }
-
 </style>
 </head>
 
-
-<body>
-
-
-<!-- =========================
-     HEADER
-========================= -->
+<body id="top">
 
 <header>
+  <div class="header-inner">
 
-<div class="nav">
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-<div class="brand">
-🇮🇳 UPSC Shiksha
-</div>
+    <div class="header-buttons">
+      <a href="history.html" class="nav-btn home-btn">🏠 History</a>
+      <button class="dark-btn" onclick="toggleTheme()">🌙 Dark</button>
+    </div>
 
-<div class="controls">
-
-<a
-class="btn secondary"
-href="ncert-history.html">
-🏠 Home
-</a>
-
-<button onclick="toggleTheme()">
-☀️ / 🌙
-</button>
-
-</div>
-
-</div>
-
+  </div>
 </header>
 
+<main class="container">
 
-
-<main class="wrap">
-
-
-<!-- =========================
-     HERO
-========================= -->
-
+<!-- HERO -->
 <section class="hero">
 
-<h1>
-📚 Chapter 2:
-<br>
-On the Trail of the Earliest People
-</h1>
+  <span class="badge">CURRENT NCERT 2026–27</span>
 
-<p>
-Premium NCERT • Class 6 History • UPSC Foundation
-</p>
+  <h1>India, That Is Bharat</h1>
 
-<div class="badges">
+  <p>
+    Class 6 History Section — Chapter 2
+  </p>
 
-<span class="badge">
-PRELIMS
-</span>
+  <p>
+    This UPSC Shiksha chapter is based on the current Class 6 NCERT
+    integrated Social Science textbook
+    <b>Exploring Society: India and Beyond</b>,
+    where this topic appears as official Chapter 5.
+  </p>
 
-<span class="badge">
-ANCIENT INDIA
-</span>
-
-<span class="badge">
-4 TESTS
-</span>
-
-<span class="badge">
-20 QUESTIONS
-</span>
-
-</div>
+  <div class="notice">
+    <b>📌 Website numbering:</b>
+    Official NCERT Chapter 5 is presented here as
+    <b>History Section Chapter 2</b> so that the UPSC Shiksha History
+    section can keep its own subject-wise chapter numbering.
+  </div>
 
 </section>
 
+<!-- PROGRESS -->
+<section class="progress-box">
 
+  <h3>📈 Chapter Learning Progress</h3>
 
-<!-- =========================
-     PROGRESS
-========================= -->
+  <p>
+    MCQ progress:
+    <b><span id="progressText">0%</span></b>
+  </p>
 
-<section class="card">
-
-<h3>
-📊 Chapter Progress
-</h3>
-
-<div class="progress">
-
-<span id="progressBar"></span>
-
-</div>
-
-<p
-id="progressText"
-class="small">
-0% completed • 0/20 questions checked
-</p>
-
-
-<div class="quick">
-
-<a href="#english">
-🇬🇧 English
-</a>
-
-<a href="#hindi">
-🇮🇳 Hindi
-</a>
-
-<a href="#tests">
-🧪 Tests
-</a>
-
-<a href="#revision">
-⚡ Revision
-</a>
-
-</div>
+  <div class="progress-track">
+    <div class="progress-fill" id="progressFill"></div>
+  </div>
 
 </section>
 
+<!-- BIG QUESTIONS -->
+<section class="section">
 
+  <h2>1. The Big Questions</h2>
 
-<!-- ==================================================
-     ENGLISH SECTION
-================================================== -->
+  <div class="highlight">
+    <b>Question 1:</b> How do we define India?
+  </div>
 
-<section
-class="card"
-id="english">
+  <div class="highlight">
+    <b>Question 2:</b> What were the ancient names for India?
+  </div>
 
-<h2>
-🇬🇧 English — Detailed Learning
-</h2>
+  <p>
+    India is not only a modern political territory. Its geographical
+    space, peoples, cultures and names have changed and developed over
+    thousands of years.
+  </p>
 
+  <p>
+    Therefore, when we study the history of India, we should distinguish
+    between the <b>modern nation-state</b> and the much older
+    <b>historical-cultural region</b>.
+  </p>
 
-<p>
+  <div class="analysis">
 
-This chapter explains how early human communities
-lived before the widespread development of cities
-and written records.
+    <b>🔎 Analysis:</b>
 
-Their lives were closely connected with:
+    A modern political map tells us about present-day borders.
+    Historical sources can tell us how people in earlier periods
+    understood and described the land.
 
-<b>
-water, animals, plants, stone, fire, climate and landscape.
-</b>
+    Therefore:
 
-</p>
+    <br><br>
 
+    <b>Modern India ≠ exactly the same political territory in every
+    historical period.</b>
 
-<div class="highlight">
+    <br><br>
 
-<b>
-⭐ Core Idea:
-</b>
+    But historical names and descriptions can show how people imagined,
+    described and connected different parts of the subcontinent.
 
-Early human history can be understood by connecting:
-
-<b>
-Environment → Food → Movement → Tools → Shelter → Fire → Food Production
-</b>
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 1
-========================= -->
-
-<h3>
-1. Who Were Hunter-Gatherers?
-</h3>
-
-<p>
-
-Many early communities obtained food by hunting
-animals and birds and by gathering fruits, roots,
-seeds, leaves and other useful plants.
-
-Because food resources changed with seasons and
-locations, movement was often an important part
-of life.
-
-</p>
-
-
-<div class="example">
-
-<b>
-💡 Example:
-</b>
-
-Imagine a group that has no permanent farm
-or market.
-
-If a water source dries up or a food plant becomes
-unavailable, the group may need to move toward
-another suitable area.
-
-</div>
-
-
-
-<!-- =========================
-     ANIMATION 1
-========================= -->
-
-<div class="visual">
-
-<div class="visual-title">
-
-🧩 Animated Concept Map
-
-</div>
-
-<div class="diagram">
-
-<div class="node">
-🌿 Resources
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🍖 Food
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🚶 Movement
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🏕️ Shelter
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🪨 Tools
-</div>
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 2
-========================= -->
-
-<h3>
-2. Why Did Early People Move?
-</h3>
-
-<ul>
-
-<li>
-Animals moved from one region to another.
-</li>
-
-<li>
-Plants and fruits were available in different seasons.
-</li>
-
-<li>
-Water sources were not equally available everywhere.
-</li>
-
-<li>
-People needed suitable and safe places for shelter.
-</li>
-
-</ul>
-
-
-<div class="upsc">
-
-<b>
-🎯 UPSC Angle:
-</b>
-
-Mobility was not simply random wandering.
-
-It could be a practical response to:
-
-<b>
-changing resources + seasons + water availability + animal movement.
-</b>
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 3
-========================= -->
-
-<h3>
-3. Stone Tools
-</h3>
-
-<p>
-
-Stone was useful because it could be shaped into
-sharp or strong edges.
-
-Different tools could be used for:
-
-</p>
-
-<div class="two">
-
-<div class="example">
-
-<b>
-🪨 Cutting
-</b>
-
-<br>
-
-Sharp edges could help cut plants,
-meat or other materials.
-
-</div>
-
-
-<div class="example">
-
-<b>
-🪵 Processing
-</b>
-
-<br>
-
-Tools could help process wood,
-animal products and other resources.
-
-</div>
-
-</div>
-
-
-<div class="highlight">
-
-<b>
-📌 Important:
-</b>
-
-Archaeologists study the:
-
-<b>
-shape + material + location + wear
-</b>
-
-of tools to understand their possible uses.
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 4
-========================= -->
-
-<h3>
-4. Fire and Its Importance
-</h3>
-
-<p>
-
-Controlled fire could provide warmth and light,
-help provide protection in some situations,
-and make cooking possible.
-
-Archaeological traces may include:
-
-<b>
-ash, charcoal and burnt material.
-</b>
-
-</p>
-
-
-<div class="highlight">
-
-<b>
-🔥 Remember:
-</b>
-
-Fire can be remembered through four major ideas:
-
-<br>
-
-<b>
-Warmth + Light + Protection + Cooking
-</b>
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 5
-========================= -->
-
-<h3>
-5. Caves and Rock Shelters
-</h3>
-
-<p>
-
-Natural shelters could protect people from
-weather and other environmental conditions.
-
-Some prehistoric sites also preserve paintings
-and other traces of human activity.
-
-These remains help researchers reconstruct
-aspects of early human life.
-
-</p>
-
-
-
-<!-- =========================
-     TOPIC 6
-========================= -->
-
-<h3>
-6. How Do We Know About Early People?
-</h3>
-
-<p>
-
-For many prehistoric periods, written records are
-limited or absent.
-
-Therefore archaeologists study material evidence.
-
-Examples include:
-
-</p>
-
-<ul>
-
-<li>
-Stone tools
-</li>
-
-<li>
-Animal bones
-</li>
-
-<li>
-Plant remains
-</li>
-
-<li>
-Ash and charcoal
-</li>
-
-<li>
-Fireplaces or hearth-like remains
-</li>
-
-<li>
-Rock paintings
-</li>
-
-</ul>
-
-
-<div class="warning">
-
-<b>
-⚠️ Evidence Matters:
-</b>
-
-A single object rarely tells the complete story.
-
-Researchers also consider:
-
-<b>
-where it was found
-</b>
-
-and
-
-<b>
-what other objects were found with it.
-</b>
-
-</div>
-
-
-
-<!-- =========================
-     EVIDENCE FLOW
-========================= -->
-
-<div class="visual">
-
-<div class="visual-title">
-
-📊 Evidence → Interpretation
-
-</div>
-
-
-<div class="flowline">
-
-
-<div class="flowbox">
-
-<b>
-1. Find
-</b>
-
-Tool, bone, ash,
-painting or plant remains.
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-2. Context
-</b>
-
-Location and association
-with other evidence.
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-3. Analysis
-</b>
-
-Shape, material, wear
-and scientific study.
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-4. Interpretation
-</b>
-
-A cautious reconstruction
-of past life.
-
-</div>
-
-
-</div>
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 7
-========================= -->
-
-<h3>
-7. Important Indian Sites
-</h3>
-
-
-<table>
-
-<tr>
-
-<th>
-Site
-</th>
-
-<th>
-What it helps us study
-</th>
-
-</tr>
-
-
-<tr>
-
-<td>
-<b>
-Bhimbetka
-</b>
-
-</td>
-
-<td>
-
-Rock shelters and prehistoric
-paintings in present-day Madhya Pradesh.
-
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-<b>
-Hunsgi
-</b>
-
-</td>
-
-<td>
-
-Prehistoric stone-tool evidence
-in the Deccan region.
-
-</td>
-
-</tr>
-
-
-<tr>
-
-<td>
-<b>
-Kurnool Caves
-</b>
-
-</td>
-
-<td>
-
-Cave evidence associated with
-prehistoric human activity in southern India.
-
-</td>
-
-</tr>
-
-</table>
-
-
-<div class="upsc">
-
-<b>
-🎯 UPSC Important:
-</b>
-
-Bhimbetka is especially important for understanding
-prehistoric rock shelters and paintings in India.
-
-</div>
-
-
-
-<!-- =========================
-     TOPIC 8
-========================= -->
-
-<h3>
-8. From Food Gathering to Food Production
-</h3>
-
-<p>
-
-Over long periods, some communities began
-cultivating plants and keeping animals.
-
-Food production could support more settled
-patterns of life in some regions.
-
-However, this transition was:
-
-<b>
-gradual and different across regions.
-</b>
-
-</p>
-
-
-
-<!-- =========================
-     ANIMATED FINAL FLOW
-========================= -->
-
-<div class="visual">
-
-<div class="visual-title">
-
-🌱 Conceptual Transition — Animated Flow
-
-</div>
-
-
-<div class="diagram">
-
-<div class="node">
-🌿 Gathering
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🧠 Knowledge
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🌾 Cultivation
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-🏡 Settlement
-</div>
-
-<div class="arrow">
-→
-</div>
-
-<div class="node">
-👥 Communities
-</div>
-
-</div>
-
-
-<p class="small">
-
-This is a simplified conceptual flow.
-Different communities followed different
-paths and timelines.
-
-</p>
-
-</div>
-
-
-<div class="highlight">
-
-<b>
-📌 One-line Revision:
-</b>
-
-Changes in resources, technology and food
-production gradually influenced mobility,
-shelter and settlement patterns.
-
-</div>
+  </div>
 
 </section>
 
+<!-- NATURAL GEOGRAPHY -->
+<section class="section">
 
+  <h2>2. Understanding the Indian Subcontinent</h2>
 
-<!-- ==================================================
-     HINDI SECTION
-================================================== -->
+  <p>
+    Before studying the names of India, it is useful to understand the
+    geographical setting of the Indian subcontinent.
+  </p>
 
-<section
-class="card"
-id="hindi">
+  <p>
+    Mountains, seas, rivers, plains and other physical features influenced
+    travel, settlement, agriculture, trade and cultural interaction.
+  </p>
 
-<h2>
-🇮🇳 Hindi — विस्तृत अध्ययन
-</h2>
+  <div class="map-box">
 
+    <h3>🗺️ Conceptual Map: Natural Setting</h3>
 
-<h3>
-1. शिकारी-संग्राहक कौन थे?
-</h3>
+    <div class="india-map">
 
-<p>
+      <span class="map-label north">
+        🏔️ Himalayas / Northern Mountains
+      </span>
 
-प्रारम्भिक मानव समुदाय अपने भोजन के लिए
-आसपास के पर्यावरण पर निर्भर रहते थे।
+      <span class="map-label west">
+        🌊 Arabian Sea
+      </span>
 
-वे पशुओं और पक्षियों का शिकार करते तथा
-फल, जड़ें, बीज, पत्तियाँ और अन्य उपयोगी
-वनस्पतियाँ एकत्र करते थे।
+      <span class="map-label east">
+        🌊 Bay of Bengal
+      </span>
 
-मौसम और स्थान के अनुसार भोजन की उपलब्धता
-बदलती थी।
+      <span class="map-label south">
+        🌊 Indian Ocean
+      </span>
 
-</p>
+      <div class="map-center">
+        🇮🇳 Indian Subcontinent
+      </div>
 
+    </div>
 
-<div class="example">
+    <p>
+      <b>Important:</b> This is a conceptual educational graphic,
+      not a political or administrative map.
+    </p>
 
-<b>
-💡 उदाहरण:
-</b>
+  </div>
 
-यदि किसी स्थान पर पानी कम हो जाए या
-किसी मौसम में भोजन उपलब्ध न हो,
-तो समूह किसी दूसरे उपयुक्त स्थान की
-ओर जा सकता था।
+  <div class="analysis">
 
-</div>
+    <b>🧠 Analysis:</b>
 
+    Geography can influence how people understand a region.
+    Large mountain systems and surrounding seas create a distinctive
+    geographical setting, while rivers and plains provide routes for
+    settlement and movement.
 
-
-<h3>
-2. लोग एक स्थान से दूसरे स्थान क्यों जाते थे?
-</h3>
-
-<ul>
-
-<li>
-पशु अलग-अलग क्षेत्रों में जाते थे।
-</li>
-
-<li>
-वनस्पतियाँ और फल अलग मौसम में उपलब्ध होते थे।
-</li>
-
-<li>
-पानी हर जगह समान रूप से उपलब्ध नहीं था।
-</li>
-
-<li>
-सुरक्षित आश्रय की आवश्यकता होती थी।
-</li>
-
-</ul>
-
-
-<div class="highlight">
-
-<b>
-⭐ मुख्य विचार:
-</b>
-
-प्रारम्भिक मानवों की गतिशीलता को
-पर्यावरण, भोजन, पानी और मौसम से
-जोड़कर समझना चाहिए।
-
-</div>
-
-
-
-<h3>
-3. पत्थर के औजार
-</h3>
-
-<p>
-
-पत्थर से काटने, खुरचने और अन्य कार्यों
-के लिए उपयोगी औजार बनाए जा सकते थे।
-
-पुरातत्वविद औजार की:
-
-<b>
-आकृति + सामग्री + घिसाव + मिलने का स्थान
-</b>
-
-अध्ययन करते हैं।
-
-</p>
-
-
-
-<h3>
-4. आग का महत्व
-</h3>
-
-<p>
-
-नियंत्रित आग से गर्मी और प्रकाश मिल सकता था।
-
-इससे भोजन पकाना और कुछ परिस्थितियों में
-सुरक्षा प्राप्त करना भी संभव हुआ।
-
-राख, कोयला और जली हुई सामग्री आग के
-उपयोग के संकेत दे सकते हैं।
-
-</p>
-
-
-<div class="upsc">
-
-<b>
-🎯 याद रखें:
-</b>
-
-आग =
-
-<b>
-गर्मी + प्रकाश + सुरक्षा + भोजन पकाना
-</b>
-
-</div>
-
-
-
-<h3>
-5. गुफाएँ और शैलाश्रय
-</h3>
-
-<p>
-
-गुफाएँ और शैलाश्रय मौसम से बचाव के लिए
-उपयोगी हो सकते थे।
-
-कुछ स्थलों पर चित्र और अन्य मानव गतिविधियों
-के प्रमाण भी मिले हैं।
-
-</p>
-
-
-
-<h3>
-6. प्रारम्भिक मानवों के बारे में जानकारी
-कैसे मिलती है?
-</h3>
-
-<p>
-
-कई प्रागैतिहासिक कालों के लिखित स्रोत
-उपलब्ध नहीं हैं।
-
-इसलिए पत्थर के औजार, हड्डियाँ,
-पौधों के अवशेष, राख, आग के अवशेष
-और शैलचित्र महत्वपूर्ण प्रमाण बनते हैं।
-
-</p>
-
-
-<div class="warning">
-
-<b>
-⚠️ महत्वपूर्ण:
-</b>
-
-किसी वस्तु को अकेले देखकर निष्कर्ष
-निकालना उचित नहीं होता।
-
-वह कहाँ और किन अन्य वस्तुओं के साथ
-मिली, यह भी महत्वपूर्ण है।
-
-</div>
-
-
-
-<h3>
-7. भारत के महत्वपूर्ण स्थल
-</h3>
-
-<ul>
-
-<li>
-
-<b>
-भीमबेटका:
-</b>
-
-वर्तमान मध्य प्रदेश में शैलाश्रय
-और प्रागैतिहासिक चित्रों के लिए प्रसिद्ध।
-
-</li>
-
-
-<li>
-
-<b>
-हुनसगी:
-</b>
-
-दक्कन क्षेत्र में प्रागैतिहासिक
-पत्थर के औजारों के अध्ययन के लिए महत्वपूर्ण।
-
-</li>
-
-
-<li>
-
-<b>
-कुरनूल गुफाएँ:
-</b>
-
-दक्षिण भारत में प्रागैतिहासिक मानव
-गतिविधियों से जुड़े गुफा-साक्ष्य।
-
-</li>
-
-</ul>
-
-
-
-<h3>
-8. भोजन संग्रह से भोजन उत्पादन तक
-</h3>
-
-<p>
-
-लंबे समय में कुछ समुदायों ने पौधों की
-खेती और पशुओं को पालना शुरू किया।
-
-इससे कुछ क्षेत्रों में अधिक स्थायी जीवन
-और बस्तियों के विकास को सहायता मिली।
-
-यह परिवर्तन धीरे-धीरे हुआ और सभी
-क्षेत्रों में एक जैसा नहीं था।
-
-</p>
-
-
-
-<div class="visual">
-
-<div class="visual-title">
-
-🌱 सरल अवधारणा-प्रवाह
-
-</div>
-
-
-<div class="flowline">
-
-
-<div class="flowbox">
-
-<b>
-संग्रह
-</b>
-
-प्राकृतिक भोजन पर निर्भरता।
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-ज्ञान
-</b>
-
-पौधों और पशुओं की समझ।
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-उत्पादन
-</b>
-
-खेती और पशुपालन।
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-बसावट
-</b>
-
-कुछ क्षेत्रों में अधिक स्थायी जीवन।
-
-</div>
-
-
-</div>
-
-</div>
-
-
-<div class="highlight">
-
-<b>
-📌 एक पंक्ति में:
-</b>
-
-पर्यावरण, तकनीक और भोजन प्राप्त करने
-के तरीकों में बदलाव ने प्रारम्भिक मानव
-जीवन की गतिशीलता और बसावट को प्रभावित किया।
-
-</div>
+  </div>
 
 </section>
 
+<!-- HISTORICAL CHANGE -->
+<section class="section">
 
+  <h2>3. India Has Not Always Had the Same Boundaries</h2>
 
-<!-- ==================================================
-     AUDIO
-================================================== -->
+  <p>
+    The modern Republic of India has clearly defined political boundaries.
+    Ancient and medieval descriptions of the Indian subcontinent, however,
+    did not necessarily use today's state boundaries.
+  </p>
 
-<section class="card">
+  <p>
+    Historical sources sometimes describe large regions, kingdoms,
+    peoples and geographical areas that extend beyond present-day
+    political borders.
+  </p>
 
-<h2>
-🔊 Audio Learning
-</h2>
+  <div class="example">
 
-<p class="small">
+    <b>📌 Example:</b>
 
-आप English या Hindi explanation सुन सकते हैं।
-यह आपके browser की Speech Synthesis सुविधा
-पर निर्भर करता है।
+    A historical text may mention Kashmir, Kutch, Kerala or other regions.
+    These names can help historians understand the geographical awareness
+    of people in earlier times.
 
-</p>
+  </div>
 
+  <div class="warning">
 
-<button onclick="speakEnglish()">
-▶️ Listen English
-</button>
+    <b>⚠️ Common mistake:</b>
 
+    Do not automatically assume that an ancient geographical name had
+    exactly the same political boundary as a modern Indian state.
 
-<button onclick="speakHindi()">
-▶️ हिंदी सुनें
-</button>
-
-
-<button
-class="secondary"
-onclick="stopSpeech()">
-
-⏹ Stop
-
-</button>
+  </div>
 
 </section>
 
+<!-- INDIAN NAMES -->
+<section class="section">
 
+  <h2>4. How Indians Named India</h2>
 
-<!-- ==================================================
-     UPSC POINTS
-================================================== -->
+  <p>
+    Ancient Indian sources used several names for the land or parts of it.
+    Two especially important names discussed in this chapter are
+    <b>Bhārata/Bhāratavarṣha</b> and <b>Jambudvīpa</b>.
+  </p>
 
-<section
-class="card"
-id="revision">
+  <div class="name-card-grid">
 
-<h2>
-🎯 UPSC Important Points
-</h2>
+    <div class="name-card">
 
+      <h4>🇮🇳 Bhārata / Bhāratavarṣha</h4>
 
-<div class="revision">
+      <p>
+        The term is associated with the Bharatas, a major Vedic group
+        mentioned in the Ṛig Veda.
+      </p>
 
+      <p>
+        Later Indian literature also contains references to kings named
+        Bharata.
+      </p>
 
-<div class="rev">
+    </div>
 
-<b>
-1. Hunter-Gatherers
-</b>
+    <div class="name-card">
 
-<br>
+      <h4>🌳 Jambudvīpa</h4>
 
-Hunting + gathering + mobility.
+      <p>
+        The term is associated with the jamun tree and came to be used
+        for the Indian subcontinent in ancient sources.
+      </p>
 
-</div>
+      <p>
+        Emperor Aśhoka used the term Jambudvīpa in an inscription.
+      </p>
 
+    </div>
 
-<div class="rev">
-
-<b>
-2. Stone Tools
-</b>
-
-<br>
-
-Shape, material and wear
-help interpretation.
-
-</div>
-
-
-<div class="rev">
-
-<b>
-3. Fire
-</b>
-
-<br>
-
-Warmth, light, protection
-and cooking.
-
-</div>
-
-
-<div class="rev">
-
-<b>
-4. Archaeological Context
-</b>
-
-<br>
-
-Location and association matter.
-
-</div>
-
-
-<div class="rev">
-
-<b>
-5. Bhimbetka
-</b>
-
-<br>
-
-Rock shelters and
-prehistoric paintings.
-
-</div>
-
-
-<div class="rev">
-
-<b>
-6. Food Production
-</b>
-
-<br>
-
-Cultivation and animal keeping
-supported new settlement patterns.
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
+<!-- BHARAT -->
+<section class="section">
 
+  <h2>5. Bhārata — A Name Connected With the Bharatas</h2>
 
-<!-- ==================================================
-     MAINS
-================================================== -->
+  <p>
+    The word <b>Bharata</b> appears in the Ṛig Veda in reference to a
+    Vedic group of people known as the Bharatas.
+  </p>
 
-<section class="card">
+  <p>
+    In later literature, the term became associated with the land
+    called <b>Bhārata</b> or <b>Bhāratavarṣha</b>.
+  </p>
 
-<h2>
-✍️ Mains Practice
-</h2>
+  <div class="analysis">
 
+    <b>🔎 Why is this historically important?</b>
 
-<div class="highlight">
+    A geographical name can sometimes preserve information about the
+    people, cultures or traditions associated with a region.
 
-<b>
-Q1.
-</b>
+    <br><br>
 
-Explain how environment and availability
-of resources influenced the life of
-hunter-gatherer communities.
+    So when historians study the word <b>Bhārata</b>, they also investigate
+    the historical sources in which the term appears and the changing
+    meanings attached to it.
 
-</div>
+  </div>
 
+  <div class="example">
 
-<div class="highlight">
+    <b>Example for students:</b>
 
-<b>
-Q2.
-</b>
+    Imagine a village being called “Land of the Farmers”.
+    Even without knowing the complete history of that village, the name
+    may give you a clue about an important community associated with it.
 
-Discuss the importance of archaeological
-evidence in reconstructing prehistoric
-human life.
+    <br><br>
 
-</div>
+    Similarly, historians investigate what historical names can tell us,
+    while still checking the evidence carefully.
 
-
-<div class="highlight">
-
-<b>
-Q3.
-</b>
-
-Explain the significance of stone tools
-and fire in understanding early human
-adaptation.
-
-</div>
-
-
-<div class="highlight">
-
-<b>
-Q4.
-</b>
-
-How did the transition towards food
-production influence settlement patterns?
-
-Explain with suitable examples.
-
-</div>
+  </div>
 
 </section>
 
+<!-- JAMBUDVIPA -->
+<section class="section">
 
+  <h2>6. Jambudvīpa</h2>
 
-<!-- ==================================================
-     VISUAL SUMMARY CHART
-================================================== -->
+  <p>
+    Another important ancient name discussed in the chapter is
+    <b>Jambudvīpa</b>.
+  </p>
 
-<section class="card">
+  <p>
+    The word is traditionally explained through <b>jambu</b>,
+    associated with the jamun tree, and <b>dvīpa</b>.
+  </p>
 
-<h2>
-📈 Visual Summary — Chapter at a Glance
-</h2>
+  <p>
+    In the historical context discussed by the chapter,
+    Jambudvīpa came to refer to the Indian subcontinent.
+  </p>
 
+  <div class="highlight">
 
-<div class="chart">
+    <b>⭐ Important historical example:</b>
 
-<div
-class="chartbar"
-style="--h:45%">
+    Emperor <b>Aśhoka</b>, around the 3rd century BCE,
+    used the term Jambudvīpa in an inscription.
 
-<span>
-Resources
-</span>
+  </div>
 
-</div>
+  <div class="analysis">
 
+    <b>UPSC-style analysis:</b>
 
-<div
-class="chartbar"
-style="--h:58%">
+    An inscription is a primary historical source.
+    If a ruler uses a particular geographical term in an inscription,
+    historians can investigate what geographical area the term referred
+    to in that historical context.
 
-<span>
-Food
-</span>
-
-</div>
-
-
-<div
-class="chartbar"
-style="--h:70%">
-
-<span>
-Tools
-</span>
-
-</div>
-
-
-<div
-class="chartbar"
-style="--h:82%">
-
-<span>
-Fire
-</span>
-
-</div>
-
-
-<div
-class="chartbar"
-style="--h:94%">
-
-<span>
-Settlement
-</span>
-
-</div>
-
-</div>
-
-
-<p class="small">
-
-⚠️ This is a conceptual educational visual.
-Bar heights do not represent historical statistics.
-
-</p>
+  </div>
 
 </section>
 
+<!-- BHARATAVARSHA -->
+<section class="section">
 
+  <h2>7. Bhāratavarṣha and the Idea of the Land</h2>
 
-<!-- ==================================================
-     QUICK FLOW
-================================================== -->
+  <p>
+    The Mahābhārata uses terms such as <b>Bhāratavarṣha</b> and
+    <b>Jambudvīpa</b>.
+  </p>
 
-<section class="card">
+  <p>
+    The chapter also discusses a description found in the
+    <b>Viṣhṇu Purāṇa</b>, which describes Bhārata in relation to
+    the ocean and the snowy mountains.
+  </p>
 
-<h2>
-🧠 Quick Revision Flow
-</h2>
+  <div class="quote">
 
+    <b>Concept to remember:</b>
 
-<div class="flowline">
+    The description connects Bhārata with a large geographical space
+    situated between the ocean and the northern snowy mountains.
 
+  </div>
 
-<div class="flowbox">
+  <div class="analysis">
 
-<b>
-Environment
-</b>
+    <b>🧠 Think like a historian:</b>
 
-Water, plants,
-animals and shelter.
+    When a text gives a geographical description, ask:
 
-</div>
+    <ol>
+      <li>Which source gives the description?</li>
+      <li>When was the source composed?</li>
+      <li>What geographical features are mentioned?</li>
+      <li>Does the description match other historical evidence?</li>
+      <li>How did the meaning change over time?</li>
+    </ol>
 
-
-<div class="flowbox">
-
-<b>
-Adaptation
-</b>
-
-Movement, tools
-and use of fire.
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-Evidence
-</b>
-
-Tools, bones,
-ash and paintings.
-
-</div>
-
-
-<div class="flowbox">
-
-<b>
-Change
-</b>
-
-Food production
-and settlement patterns.
-
-</div>
-
-
-</div>
+  </div>
 
 </section>
 
+<!-- HISTORICAL NAMES FLOW -->
+<section class="section">
 
+  <h2>8. From Historical Names to Modern Understanding</h2>
 
-<!-- ==================================================
-     TESTS
-================================================== -->
+  <div class="flow">
 
-<section id="tests">
+    <div class="flow-item">
+      Ancient texts
+    </div>
 
-<h1
-style="color:var(--primary)">
+    <div class="arrow">→</div>
 
-🧪 Chapter Tests
+    <div class="flow-item">
+      Names & descriptions
+    </div>
 
-</h1>
+    <div class="arrow">→</div>
 
+    <div class="flow-item">
+      Historical evidence
+    </div>
 
-<p class="small">
+    <div class="arrow">→</div>
 
-4 Tests × 5 Questions = 20 Questions
+    <div class="flow-item">
+      Modern historical analysis
+    </div>
 
-</p>
+  </div>
 
+  <div class="analysis">
 
+    <b>Key idea:</b>
 
-<!-- TEST 1 -->
+    Historians do not study an ancient name in isolation.
+    They compare literary sources, inscriptions, archaeology,
+    geography and other evidence.
 
-<div class="test">
-
-<div class="test-head">
-
-<h2>
-Test 1 — Hunter-Gatherers
-</h2>
-
-<span class="tag">
-5 Questions
-</span>
-
-</div>
-
-
-<div id="q1" class="q"></div>
-
-<div id="q2" class="q"></div>
-
-<div id="q3" class="q"></div>
-
-<div id="q4" class="q"></div>
-
-<div id="q5" class="q"></div>
-
-</div>
-
-
-
-<!-- TEST 2 -->
-
-<div class="test">
-
-<div class="test-head">
-
-<h2>
-Test 2 — Tools, Fire & Evidence
-</h2>
-
-<span class="tag">
-5 Questions
-</span>
-
-</div>
-
-
-<div id="q6" class="q"></div>
-
-<div id="q7" class="q"></div>
-
-<div id="q8" class="q"></div>
-
-<div id="q9" class="q"></div>
-
-<div id="q10" class="q"></div>
-
-</div>
-
-
-
-<!-- TEST 3 -->
-
-<div class="test">
-
-<div class="test-head">
-
-<h2>
-Test 3 — Sites & Archaeology
-</h2>
-
-<span class="tag">
-5 Questions
-</span>
-
-</div>
-
-
-<div id="q11" class="q"></div>
-
-<div id="q12" class="q"></div>
-
-<div id="q13" class="q"></div>
-
-<div id="q14" class="q"></div>
-
-<div id="q15" class="q"></div>
-
-</div>
-
-
-
-<!-- TEST 4 -->
-
-<div class="test">
-
-<div class="test-head">
-
-<h2>
-Test 4 — UPSC Concept Test
-</h2>
-
-<span class="tag">
-5 Questions
-</span>
-
-</div>
-
-
-<div id="q16" class="q"></div>
-
-<div id="q17" class="q"></div>
-
-<div id="q18" class="q"></div>
-
-<div id="q19" class="q"></div>
-
-<div id="q20" class="q"></div>
-
-</div>
+  </div>
 
 </section>
 
+<!-- FOREIGN NAMES -->
+<section class="section">
 
+  <h2>9. How Foreigners Named India</h2>
 
-<!-- ==================================================
-     COMPLETE
-================================================== -->
+  <p>
+    The chapter also explains how different foreign peoples referred
+    to the land associated with the Indus/Sindhu region.
+  </p>
 
-<section class="card">
+  <p>
+    The history of the word <b>India</b> is closely connected with the
+    name <b>Sindhu</b>, the Sanskrit name associated with the Indus River.
+  </p>
 
-<h2>
-🎉 Chapter Complete
-</h2>
+  <div class="chart">
 
+    <h3>📊 Word Journey — Conceptual Chart</h3>
 
-<div class="highlight">
+    <div class="bar-row">
+      <b>Sindhu</b>
+      <div class="bar bar-90"></div>
+    </div>
 
-<b>
-Final Flow:
-</b>
+    <div class="bar-row">
+      <b>Hind / Hidu</b>
+      <div class="bar bar-80"></div>
+    </div>
 
-Environment →
+    <div class="bar-row">
+      <b>Indos / Indoi</b>
+      <div class="bar bar-70"></div>
+    </div>
 
-Food Resources →
+    <div class="bar-row">
+      <b>India</b>
+      <div class="bar bar-60"></div>
+    </div>
 
-Movement →
+    <p>
+      The bars are only a visual representation of the sequence,
+      not numerical data.
+    </p>
 
-Tools & Fire →
-
-Archaeological Evidence →
-
-Food Production →
-
-New Settlement Patterns.
-
-</div>
-
-
-<button onclick="completeChapter()">
-
-✅ Mark Chapter Complete
-
-</button>
-
-
-<p
-id="completeMsg"
-class="small">
-</p>
+  </div>
 
 </section>
 
+<!-- PERSIAN -->
+<section class="section">
 
+  <h2>10. Sindhu → Hind</h2>
+
+  <p>
+    Persian speakers adapted the word associated with
+    <b>Sindhu</b> into forms such as <b>Hind</b>, <b>Hidu</b>
+    or <b>Hindu</b>.
+  </p>
+
+  <div class="highlight">
+
+    <b>Important:</b>
+
+    In the ancient Persian geographical context discussed here,
+    “Hindu” referred to a geographical region or people associated
+    with the land beyond the Sindhu, not to the later religious meaning
+    of the word.
+
+  </div>
+
+  <div class="warning">
+
+    <b>⚠️ Exam trap:</b>
+
+    Do not automatically interpret every ancient occurrence of the word
+    “Hindu” as referring to the modern religious identity.
+
+    Context matters.
+
+  </div>
+
+</section>
+
+<!-- GREEKS -->
+<section class="section">
+
+  <h2>11. Greek References — Indoi / Indike</h2>
+
+  <p>
+    Greek writers used forms such as <b>Indoi</b> and
+    <b>Indike</b>, connected to the Persian form of the name
+    associated with Sindhu.
+  </p>
+
+  <div class="analysis">
+
+    <b>🔎 Historical reasoning:</b>
+
+    Languages change words when they borrow them from other languages.
+    Pronunciation, writing systems and sound patterns can alter a word
+    as it moves from one language to another.
+
+  </div>
+
+</section>
+
+<!-- CHINESE -->
+<section class="section">
+
+  <h2>12. Chinese Names for India</h2>
+
+  <p>
+    Ancient Chinese sources used forms such as <b>Yintu</b> or
+    <b>Yindu</b> for India.
+  </p>
+
+  <p>
+    The chapter also discusses <b>Tianzhu</b>, another historical Chinese
+    term associated with India.
+  </p>
+
+  <div class="example">
+
+    <b>Example:</b>
+
+    When travellers, scholars and pilgrims move between civilizations,
+    they often record foreign places using the pronunciation or meaning
+    available in their own language.
+
+  </div>
+
+  <div class="analysis">
+
+    <b>UPSC connection:</b>
+
+    Foreign accounts are valuable historical sources because they can
+    provide information about how India was perceived by visitors from
+    other regions.
+
+  </div>
+
+</section>
+
+<!-- XUANZANG -->
+<section class="section">
+
+  <h2>13. Travellers and Historical Accounts</h2>
+
+  <p>
+    Chinese Buddhist scholars and travellers visited India and recorded
+    information about places, institutions, religions and society.
+  </p>
+
+  <p>
+    Such accounts become useful when historians compare them with
+    inscriptions, archaeological remains and Indian literary sources.
+  </p>
+
+  <div class="highlight">
+
+    <b>Source-analysis rule:</b>
+
+    A traveller's account is evidence, but it should be studied in its
+    historical context. A historian should ask who wrote it, when,
+    why and what the writer actually observed.
+
+  </div>
+
+</section>
+
+<!-- HINDUSTAN -->
+<section class="section">
+
+  <h2>14. Hindustān</h2>
+
+  <p>
+    The term <b>Hindustān</b> is a later historical term connected with
+    the Persian geographical naming tradition.
+  </p>
+
+  <p>
+    The meaning and geographical extent associated with Hindustān
+    changed in different periods.
+  </p>
+
+  <div class="warning">
+
+    <b>Remember:</b>
+
+    Historical terms can change their meaning and geographical reference
+    over time. Never assume that one historical word had one fixed
+    meaning throughout all periods.
+
+  </div>
+
+</section>
+
+<!-- ANIMATION -->
+<section class="section">
+
+  <h2>15. 🎬 Explanation Animation — How the Names Changed</h2>
+
+  <div class="animation-box">
+
+    <div class="animation-title">
+      <h3>From River Name to International Name</h3>
+    </div>
+
+    <div class="animation-track">
+
+      <div class="anim-node">
+        🌊<br>
+        Sindhu
+      </div>
+
+      <div class="anim-node">
+        🏺<br>
+        Hind / Hidu
+      </div>
+
+      <div class="anim-node">
+        📜<br>
+        Indos / Indoi
+      </div>
+
+      <div class="anim-node">
+        🌍<br>
+        India
+      </div>
+
+    </div>
+
+  </div>
+
+  <div class="analysis">
+
+    <b>🎯 Animation explanation:</b>
+
+    This animation represents the broad historical process by which
+    a geographical name associated with the Sindhu/Indus region was
+    adapted across languages.
+
+    <br><br>
+
+    The important lesson is not simply to memorise a word chain.
+    Understand that <b>language contact + pronunciation + historical
+    transmission</b> can change names.
+
+  </div>
+
+</section>
+
+<!-- CONCEPTUAL TIMELINE -->
+<section class="section">
+
+  <h2>16. 🕰️ Conceptual Timeline</h2>
+
+  <div class="timeline">
+
+    <div class="timeline-item">
+
+      <b>Early Vedic tradition</b>
+
+      <p>
+        The name Bharata appears in connection with a Vedic group.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <b>Ancient Indian literary traditions</b>
+
+      <p>
+        Terms such as Bhāratavarṣha and Jambudvīpa are used in
+        historical and literary traditions.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <b>c. 3rd century BCE</b>
+
+      <p>
+        Aśhoka's inscriptions provide important evidence for the use
+        of the term Jambudvīpa.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <b>Persian and Greek traditions</b>
+
+      <p>
+        Forms derived from Sindhu appear through linguistic contact.
+      </p>
+
+    </div>
+
+    <div class="timeline-item">
+
+      <b>Modern constitutional India</b>
+
+      <p>
+        The Constitution formally uses the expression
+        <b>“India, that is Bharat”</b>.
+      </p>
+
+    </div>
+
+  </div>
+
+</section>
+
+<!-- CONSTITUTION -->
+<section class="section">
+
+  <h2>17. 🇮🇳 “India, That Is Bharat” and the Constitution</h2>
+
+  <p>
+    The chapter connects the historical discussion of names with the
+    modern Indian Constitution.
+  </p>
+
+  <div class="highlight">
+
+    <b>Article 1 of the Constitution:</b>
+
+    India, that is Bharat, shall be a Union of States.
+
+  </div>
+
+  <p>
+    This is important because both <b>India</b> and <b>Bharat</b>
+    are recognised in the constitutional identity of the country.
+  </p>
+
+  <div class="analysis">
+
+    <b>UPSC connection:</b>
+
+    This topic connects ancient history with Indian Polity.
+
+    <br><br>
+
+    <b>History → Historical names</b><br>
+    ↓<br>
+    <b>Culture → Civilisational continuity</b><br>
+    ↓<br>
+    <b>Polity → Constitutional identity</b>
+
+  </div>
+
+</section>
+
+<!-- COMPARISON TABLE -->
+<section class="section">
+
+  <h2>18. 📊 Important Names — Quick Comparison</h2>
+
+  <table>
+
+    <tr>
+      <th>Name</th>
+      <th>Basic association</th>
+      <th>Historical context</th>
+    </tr>
+
+    <tr>
+      <td><b>Bhārata</b></td>
+      <td>Bharatas</td>
+      <td>Vedic and later Indian traditions</td>
+    </tr>
+
+    <tr>
+      <td><b>Bhāratavarṣha</b></td>
+      <td>Land of Bhārata</td>
+      <td>Ancient Indian literary tradition</td>
+    </tr>
+
+    <tr>
+      <td><b>Jambudvīpa</b></td>
+      <td>Associated with the jamun tree</td>
+      <td>Indian literary tradition and Aśhoka's inscription</td>
+    </tr>
+
+    <tr>
+      <td><b>Hind / Hidu / Hindu</b></td>
+      <td>Adaptation connected with Sindhu</td>
+      <td>Ancient Persian usage</td>
+    </tr>
+
+    <tr>
+      <td><b>Indoi / Indike</b></td>
+      <td>Derived through linguistic transmission</td>
+      <td>Ancient Greek usage</td>
+    </tr>
+
+    <tr>
+      <td><b>Yintu / Yindu</b></td>
+      <td>Historical Chinese forms</td>
+      <td>Ancient Chinese usage</td>
+    </tr>
+
+    <tr>
+      <td><b>India</b></td>
+      <td>Historical linguistic development from Sindhu-related forms</td>
+      <td>Later international usage</td>
+    </tr>
+
+    <tr>
+      <td><b>Hindustān</b></td>
+      <td>Historical Persian geographical term</td>
+      <td>Later historical periods</td>
+    </tr>
+
+  </table>
+
+</section>
+
+<!-- NAME SOURCES -->
+<section class="section">
+
+  <h2>19. 🧠 Three Sources Behind Three Names</h2>
+
+  <div class="flow">
+
+    <div class="flow-item">
+      <b>Bhārata</b><br>
+      People
+    </div>
+
+    <div class="arrow">+</div>
+
+    <div class="flow-item">
+      <b>Jambudvīpa</b><br>
+      Jamun tree
+    </div>
+
+    <div class="arrow">+</div>
+
+    <div class="flow-item">
+      <b>India</b><br>
+      Sindhu/Indus
+    </div>
+
+  </div>
+
+  <div class="analysis">
+
+    <b>Memory trick:</b>
+
+    <br><br>
+
+    <b>Bhārata → People</b><br>
+    <b>Jambudvīpa → Tree</b><br>
+    <b>India → River</b>
+
+  </div>
+
+</section>
+
+<!-- DEEP ANALYSIS -->
+<section class="section">
+
+  <h2>20. 🔎 Deep Analysis — What Does This Chapter Actually Teach?</h2>
+
+  <h3>Point 1: Names are historical evidence</h3>
+
+  <p>
+    A place-name can preserve information about language, geography,
+    communities and historical contact.
+  </p>
+
+  <h3>Point 2: Names can change</h3>
+
+  <p>
+    A word can change pronunciation and spelling when it passes from
+    one language to another.
+  </p>
+
+  <h3>Point 3: Historical boundaries change</h3>
+
+  <p>
+    The geographical meaning of a term may not match today's political
+    boundaries.
+  </p>
+
+  <h3>Point 4: Sources must be compared</h3>
+
+  <p>
+    One source is rarely enough to reconstruct the complete past.
+    Historians compare inscriptions, texts, archaeology, coins,
+    travellers' accounts and geographical evidence.
+  </p>
+
+  <h3>Point 5: History connects with polity</h3>
+
+  <p>
+    The discussion eventually reaches the modern Constitution and
+    the expression “India, that is Bharat”.
+  </p>
+
+</section>
+
+<!-- REAL LIFE EXAMPLE -->
+<section class="section">
+
+  <h2>21. 📱 Real-Life Example</h2>
+
+  <p>
+    Imagine that a smartphone model has one name in India, another
+    pronunciation in Japan and another shortened name among users
+    in another country.
+  </p>
+
+  <p>
+    The object remains the same, but the word used to identify it
+    changes according to language and usage.
+  </p>
+
+  <div class="analysis">
+
+    Historical names work in a more complicated way because meanings,
+    geographical boundaries and political contexts can also change.
+
+    Therefore historians study:
+
+    <ul>
+      <li>Who used the name?</li>
+      <li>Which language was used?</li>
+      <li>When was it used?</li>
+      <li>What region did it describe?</li>
+      <li>What other evidence supports it?</li>
+    </ul>
+
+  </div>
+
+</section>
+
+<!-- HINDI -->
+<section class="section">
+
+  <h2>22. 🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
+
+  <h3>भारत को कैसे समझें?</h3>
+
+  <p>
+    भारत केवल आज की राजनीतिक सीमाओं का नाम नहीं है। भारतीय उपमहाद्वीप
+    का इतिहास हजारों वर्षों में विकसित हुआ है। अलग-अलग समय में इस
+    क्षेत्र को अलग-अलग नामों से जाना गया।
+  </p>
+
+  <h3>भारत / भारतवर्ष</h3>
+
+  <p>
+    ‘भारत’ नाम का संबंध वैदिक परंपरा में उल्लिखित ‘भरत’ नामक समूह
+    से जोड़ा जाता है। बाद के साहित्य में भी ‘भारत’ नाम से जुड़े
+    संदर्भ मिलते हैं।
+  </p>
+
+  <div class="highlight">
+
+    <b>याद रखें:</b>
+
+    भारत नाम को समझने के लिए केवल आधुनिक अर्थ नहीं, बल्कि उस समय के
+    ऐतिहासिक स्रोत और उनका संदर्भ देखना आवश्यक है।
+
+  </div>
+
+  <h3>जम्बूद्वीप</h3>
+
+  <p>
+    ‘जम्बूद्वीप’ नाम जम्बु अर्थात जामुन के वृक्ष से जुड़ा हुआ है।
+    प्राचीन परंपराओं में इसका प्रयोग भारतीय उपमहाद्वीप के लिए किया गया।
+  </p>
+
+  <p>
+    सम्राट अशोक के एक अभिलेख में भी ‘जम्बूद्वीप’ शब्द का प्रयोग मिलता है।
+  </p>
+
+  <h3>सिंधु से हिन्द और इंडिया</h3>
+
+  <p>
+    सिंधु नदी का नाम अलग-अलग भाषाओं में बदलते हुए अलग रूपों में
+    दिखाई देता है। प्राचीन फारसी परंपरा में इससे जुड़े रूप ‘हिन्द’
+    आदि मिलते हैं। यूनानी परंपरा में इससे जुड़े रूप ‘इंडोई’ आदि
+    दिखाई देते हैं और आगे चलकर ‘India’ नाम प्रचलित हुआ।
+  </p>
+
+  <h3>संविधान में भारत</h3>
+
+  <p>
+    आधुनिक भारत के संविधान के अनुच्छेद 1 में देश की पहचान के लिए
+    “India, that is Bharat” का प्रयोग किया गया है।
+  </p>
+
+  <div class="analysis">
+
+    <b>हिंदी में पूरा विचार:</b>
+
+    प्राचीन नाम → ऐतिहासिक स्रोत → भाषाई परिवर्तन → आधुनिक पहचान
+
+  </div>
+
+</section>
+
+<!-- AUDIO -->
+<section class="section">
+
+  <h2>23. 🔊 Audio Learning</h2>
+
+  <p>
+    नीचे दिए buttons से इस chapter के selected explanations को
+    आपके phone/browser की built-in speech system से सुना जा सकता है।
+  </p>
+
+  <button class="check-btn" onclick="speakEnglish()">
+    🔊 Listen English
+  </button>
+
+  <button class="check-btn" onclick="speakHindi()">
+    🔊 हिंदी सुनें
+  </button>
+
+  <button class="dark-btn" onclick="stopSpeech()">
+    ⏹ Stop
+  </button>
+
+</section>
+
+<!-- UPSC -->
+<section class="section">
+
+  <h2>24. 🎯 UPSC Important Points</h2>
+
+  <div class="upsc-box">
+
+    <ol>
+
+      <li>
+        Current Class 6 NCERT Social Science textbook is
+        <b>Exploring Society: India and Beyond</b>.
+      </li>
+
+      <li>
+        “India, That Is Bharat” is official Chapter 5.
+      </li>
+
+      <li>
+        Bhārata is connected with the Bharatas in Vedic tradition.
+      </li>
+
+      <li>
+        Jambudvīpa is associated with the jamun tree and was used
+        for the Indian subcontinent.
+      </li>
+
+      <li>
+        Aśhoka used Jambudvīpa in an inscription.
+      </li>
+
+      <li>
+        Sindhu is important for understanding later geographical names
+        such as Hind and India.
+      </li>
+
+      <li>
+        Ancient Persian usage of “Hindu” was geographical in this context.
+      </li>
+
+      <li>
+        Greek forms included Indoi / Indike.
+      </li>
+
+      <li>
+        Chinese historical forms included Yintu / Yindu and Tianzhu.
+      </li>
+
+      <li>
+        Historical names can change in meaning and geographical extent.
+      </li>
+
+      <li>
+        Article 1 of the Constitution uses “India, that is Bharat”.
+      </li>
+
+    </ol>
+
+  </div>
+
+</section>
+
+<!-- MAINS -->
+<section class="section">
+
+  <h2>25. ✍️ Mains Practice</h2>
+
+  <div class="mains-box">
+
+    <b>Q1.</b>
+    Explain why historical names are important sources for understanding
+    the history of a region.
+
+  </div>
+
+  <div class="mains-box">
+
+    <b>Q2.</b>
+    Discuss the historical significance of the terms Bhārata and
+    Jambudvīpa.
+
+  </div>
+
+  <div class="mains-box">
+
+    <b>Q3.</b>
+    Explain how the name India is connected with the Sindhu/Indus River.
+
+  </div>
+
+  <div class="mains-box">
+
+    <b>Q4.</b>
+    Why should historians examine the context in which a historical
+    geographical name was used?
+
+  </div>
+
+  <div class="mains-box">
+
+    <b>Q5.</b>
+    Explain the significance of the expression “India, that is Bharat”
+    in the Constitution.
+
+  </div>
+
+</section>
+
+<!-- QUICK REVISION -->
+<section class="section">
+
+  <h2>26. 🔄 Quick Revision</h2>
+
+  <div class="revision-grid">
+
+    <div class="revision-card">
+      <b>Bhārata</b>
+      <p>Connected with the Bharatas.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Jambudvīpa</b>
+      <p>Associated with the jamun tree.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Sindhu</b>
+      <p>Indus River; important in the history of the name India.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Hind</b>
+      <p>Historical Persian form connected with Sindhu.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Indoi</b>
+      <p>Greek historical form.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Yindu</b>
+      <p>Historical Chinese form.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Hindustān</b>
+      <p>Later Persian geographical term.</p>
+    </div>
+
+    <div class="revision-card">
+      <b>Constitution</b>
+      <p>Uses “India, that is Bharat”.</p>
+    </div>
+
+  </div>
+
+</section>
+
+<!-- MCQ TEST -->
+<section class="section">
+
+  <h2>27. 📝 Chapter Test — 20 MCQs</h2>
+
+  <p>
+    <b>4 Tests × 5 Questions = 20 Questions</b>
+  </p>
+
+  <p>
+    पहले answer select करें और फिर <b>Check Answer</b> दबाएँ।
+    Explanation उसके बाद दिखाई देगा।
+  </p>
+
+  <!-- Q1 -->
+  <div class="quiz">
+    <h4>Test 1 — Q1. “India, That Is Bharat” current Class 6 NCERT में किस official chapter number पर है?</h4>
+
+    <div class="option"><label><input type="radio" name="q1" value="A"> A. Chapter 3</label></div>
+    <div class="option"><label><input type="radio" name="q1" value="B"> B. Chapter 4</label></div>
+    <div class="option"><label><input type="radio" name="q1" value="C"> C. Chapter 5</label></div>
+    <div class="option"><label><input type="radio" name="q1" value="D"> D. Chapter 6</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(1,'C','Official NCERT Chapter 5 is titled “India, That Is Bharat”.')">
+      Check Answer
+    </button>
+
+    <div id="e1" class="explanation"></div>
+  </div>
+
+  <!-- Q2 -->
+  <div class="quiz">
+    <h4>Q2. Bhārata नाम किससे जुड़ा है?</h4>
+
+    <div class="option"><label><input type="radio" name="q2" value="A"> A. एक पर्वत</label></div>
+    <div class="option"><label><input type="radio" name="q2" value="B"> B. भरत नामक वैदिक समूह</label></div>
+    <div class="option"><label><input type="radio" name="q2" value="C"> C. एक समुद्र</label></div>
+    <div class="option"><label><input type="radio" name="q2" value="D"> D. एक विदेशी यात्री</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(2,'B','Bhārata is associated with the Bharatas, a major Vedic group mentioned in the Ṛig Veda.')">
+      Check Answer
+    </button>
+
+    <div id="e2" class="explanation"></div>
+  </div>
+
+  <!-- Q3 -->
+  <div class="quiz">
+    <h4>Q3. Jambudvīpa किससे associated है?</h4>
+
+    <div class="option"><label><input type="radio" name="q3" value="A"> A. नीम के पेड़ से</label></div>
+    <div class="option"><label><input type="radio" name="q3" value="B"> B. जामुन के पेड़ से</label></div>
+    <div class="option"><label><input type="radio" name="q3" value="C"> C. नारियल के पेड़ से</label></div>
+    <div class="option"><label><input type="radio" name="q3" value="D"> D. पीपल के पेड़ से</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(3,'B','Jambudvīpa is associated with the jambu or jamun tree.')">
+      Check Answer
+    </button>
+
+    <div id="e3" class="explanation"></div>
+  </div>
+
+  <!-- Q4 -->
+  <div class="quiz">
+    <h4>Q4. Aśhoka के किस प्रकार के स्रोत से Jambudvīpa का evidence मिलता है?</h4>
+
+    <div class="option"><label><input type="radio" name="q4" value="A"> A. सिक्के</label></div>
+    <div class="option"><label><input type="radio" name="q4" value="B"> B. अभिलेख</label></div>
+    <div class="option"><label><input type="radio" name="q4" value="C"> C. लोकगीत</label></div>
+    <div class="option"><label><input type="radio" name="q4" value="D"> D. आधुनिक संविधान</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(4,'B','Aśhoka used Jambudvīpa in an inscription, making the inscription an important primary source.')">
+      Check Answer
+    </button>
+
+    <div id="e4" class="explanation"></div>
+  </div>
+
+  <!-- Q5 -->
+  <div class="quiz">
+    <h4>Q5. Sindhu किस नदी से संबंधित है?</h4>
+
+    <div class="option"><label><input type="radio" name="q5" value="A"> A. गंगा</label></div>
+    <div class="option"><label><input type="radio" name="q5" value="B"> B. यमुना</label></div>
+    <div class="option"><label><input type="radio" name="q5" value="C"> C. Indus</label></div>
+    <div class="option"><label><input type="radio" name="q5" value="D"> D. नर्मदा</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(5,'C','Sindhu is the Sanskrit name associated with the Indus River.')">
+      Check Answer
+    </button>
+
+    <div id="e5" class="explanation"></div>
+  </div>
+
+  <!-- Q6 -->
+  <div class="quiz">
+    <h4>Test 2 — Q6. Ancient Persian usage में Hindu/Hind किससे related था?</h4>
+
+    <div class="option"><label><input type="radio" name="q6" value="A"> A. केवल एक modern religion</label></div>
+    <div class="option"><label><input type="radio" name="q6" value="B"> B. एक geographical usage</label></div>
+    <div class="option"><label><input type="radio" name="q6" value="C"> C. एक modern political party</label></div>
+    <div class="option"><label><input type="radio" name="q6" value="D"> D. एक modern state</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(6,'B','In the historical Persian context discussed here, the term had a geographical meaning connected with the Sindhu region.')">
+      Check Answer
+    </button>
+
+    <div id="e6" class="explanation"></div>
+  </div>
+
+  <!-- Q7 -->
+  <div class="quiz">
+    <h4>Q7. Ancient Greeks ने India के लिए कौन-सा form इस्तेमाल किया?</h4>
+
+    <div class="option"><label><input type="radio" name="q7" value="A"> A. Indoi / Indike</label></div>
+    <div class="option"><label><input type="radio" name="q7" value="B"> B. Bharatvarsha</label></div>
+    <div class="option"><label><input type="radio" name="q7" value="C"> C. Jambudvipa</label></div>
+    <div class="option"><label><input type="radio" name="q7" value="D"> D. Aryavarta</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(7,'A','Indoi and Indike are Greek forms discussed in the chapter.')">
+      Check Answer
+    </button>
+
+    <div id="e7" class="explanation"></div>
+  </div>
+
+  <!-- Q8 -->
+  <div class="quiz">
+    <h4>Q8. Ancient Chinese sources में India के लिए कौन-सा form मिलता है?</h4>
+
+    <div class="option"><label><input type="radio" name="q8" value="A"> A. Yindu / Yintu</label></div>
+    <div class="option"><label><input type="radio" name="q8" value="B"> B. Indike only</label></div>
+    <div class="option"><label><input type="radio" name="q8" value="C"> C. Hindustan only</label></div>
+    <div class="option"><label><input type="radio" name="q8" value="D"> D. Bharat only</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(8,'A','Yintu and Yindu are historical Chinese forms associated with India.')">
+      Check Answer
+    </button>
+
+    <div id="e8" class="explanation"></div>
+  </div>
+
+  <!-- Q9 -->
+  <div class="quiz">
+    <h4>Q9. Historical names को समझते समय सबसे जरूरी क्या है?</h4>
+
+    <div class="option"><label><input type="radio" name="q9" value="A"> A. केवल modern meaning देखना</label></div>
+    <div class="option"><label><input type="radio" name="q9" value="B"> B. context और evidence देखना</label></div>
+    <div class="option"><label><input type="radio" name="q9" value="C"> C. केवल pronunciation देखना</label></div>
+    <div class="option"><label><input type="radio" name="q9" value="D"> D. केवल map देखना</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(9,'B','Historical terms must be studied in their linguistic, geographical and historical context and compared with evidence.')">
+      Check Answer
+    </button>
+
+    <div id="e9" class="explanation"></div>
+  </div>
+
+  <!-- Q10 -->
+  <div class="quiz">
+    <h4>Q10. “India, that is Bharat” किससे जुड़ा है?</h4>
+
+    <div class="option"><label><input type="radio" name="q10" value="A"> A. Indian Constitution</label></div>
+    <div class="option"><label><input type="radio" name="q10" value="B"> B. Rig Veda only</label></div>
+    <div class="option"><label><input type="radio" name="q10" value="C"> C. Mahabharata only</label></div>
+    <div class="option"><label><input type="radio" name="q10" value="D"> D. Greek records only</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(10,'A','Article 1 of the Constitution uses the expression “India, that is Bharat”.')">
+      Check Answer
+    </button>
+
+    <div id="e10" class="explanation"></div>
+  </div>
+
+  <!-- Q11 -->
+  <div class="quiz">
+    <h4>Test 3 — Q11. Historical source के रूप में inscription क्या है?</h4>
+
+    <div class="option"><label><input type="radio" name="q11" value="A"> A. लिखित/उकेरा गया historical record</label></div>
+    <div class="option"><label><input type="radio" name="q11" value="B"> B. केवल modern newspaper</label></div>
+    <div class="option"><label><input type="radio" name="q11" value="C"> C. केवल oral story</label></div>
+    <div class="option"><label><input type="radio" name="q11" value="D"> D. केवल map</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(11,'A','An inscription is a historical record written or engraved on a durable surface.')">
+      Check Answer
+    </button>
+
+    <div id="e11" class="explanation"></div>
+  </div>
+
+  <!-- Q12 -->
+  <div class="quiz">
+    <h4>Q12. Historical geographical term को modern state boundary के बराबर मानना क्यों गलत हो सकता है?</h4>
+
+    <div class="option"><label><input type="radio" name="q12" value="A"> A. क्योंकि historical regions की boundaries बदल सकती थीं</label></div>
+    <div class="option"><label><input type="radio" name="q12" value="B"> B. क्योंकि पुराने लोग maps नहीं जानते थे</label></div>
+    <div class="option"><label><input type="radio" name="q12" value="C"> C. क्योंकि सभी names गलत थे</label></div>
+    <div class="option"><label><input type="radio" name="q12" value="D"> D. क्योंकि history में geography नहीं होती</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(12,'A','Historical regions and political boundaries can change, so ancient terms must be interpreted in their own context.')">
+      Check Answer
+    </button>
+
+    <div id="e12" class="explanation"></div>
+  </div>
+
+  <!-- Q13 -->
+  <div class="quiz">
+    <h4>Q13. Historians एक ही source पर निर्भर क्यों नहीं रहते?</h4>
+
+    <div class="option"><label><input type="radio" name="q13" value="A"> A. Sources को compare करने से evidence मजबूत होता है</label></div>
+    <div class="option"><label><input type="radio" name="q13" value="B"> B. क्योंकि sources हमेशा गलत होते हैं</label></div>
+    <div class="option"><label><input type="radio" name="q13" value="C"> C. क्योंकि केवल archaeology useful है</label></div>
+    <div class="option"><label><input type="radio" name="q13" value="D"> D. क्योंकि books बेकार हैं</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(13,'A','Comparing different sources helps historians test and interpret evidence more carefully.')">
+      Check Answer
+    </button>
+
+    <div id="e13" class="explanation"></div>
+  </div>
+
+  <!-- Q14 -->
+  <div class="quiz">
+    <h4>Q14. India नाम की historical linguistic story किस river-name से closely connected है?</h4>
+
+    <div class="option"><label><input type="radio" name="q14" value="A"> A. Ganga</label></div>
+    <div class="option"><label><input type="radio" name="q14" value="B"> B. Sindhu</label></div>
+    <div class="option"><label><input type="radio" name="q14" value="C"> C. Yamuna</label></div>
+    <div class="option"><label><input type="radio" name="q14" value="D"> D. Narmada</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(14,'B','The historical development of the name India is connected with the name Sindhu for the Indus River.')">
+      Check Answer
+    </button>
+
+    <div id="e14" class="explanation"></div>
+  </div>
+
+  <!-- Q15 -->
+  <div class="quiz">
+    <h4>Q15. Jambudvīpa का historical evidence किस ruler से विशेष रूप से जुड़ा है?</h4>
+
+    <div class="option"><label><input type="radio" name="q15" value="A"> A. Aśhoka</label></div>
+    <div class="option"><label><input type="radio" name="q15" value="B"> B. Akbar</label></div>
+    <div class="option"><label><input type="radio" name="q15" value="C"> C. Harsha</label></div>
+    <div class="option"><label><input type="radio" name="q15" value="D"> D. Shivaji</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(15,'A','Aśhoka used Jambudvīpa in an inscription.')">
+      Check Answer
+    </button>
+
+    <div id="e15" class="explanation"></div>
+  </div>
+
+  <!-- Q16 -->
+  <div class="quiz">
+    <h4>Test 4 — Q16. “Bharata” का सबसे उपयुक्त association क्या है?</h4>
+
+    <div class="option"><label><input type="radio" name="q16" value="A"> A. Bharatas</label></div>
+    <div class="option"><label><input type="radio" name="q16" value="B"> B. Indus River only</label></div>
+    <div class="option"><label><input type="radio" name="q16" value="C"> C. Jamun tree only</label></div>
+    <div class="option"><label><input type="radio" name="q16" value="D"> D. Persian traveller only</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(16,'A','Bharata is associated with the Bharatas, a Vedic group.')">
+      Check Answer
+    </button>
+
+    <div id="e16" class="explanation"></div>
+  </div>
+
+  <!-- Q17 -->
+  <div class="quiz">
+    <h4>Q17. Which is the best historian-style question when studying an old name?</h4>
+
+    <div class="option"><label><input type="radio" name="q17" value="A"> A. Who used it and in what context?</label></div>
+    <div class="option"><label><input type="radio" name="q17" value="B"> B. Is the spelling attractive?</label></div>
+    <div class="option"><label><input type="radio" name="q17" value="C"> C. Does it sound modern?</label></div>
+    <div class="option"><label><input type="radio" name="q17" value="D"> D. Can it fit today's state list?</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(17,'A','Historians examine who used a term, when, why and what geographical or cultural context it had.')">
+      Check Answer
+    </button>
+
+    <div id="e17" class="explanation"></div>
+  </div>
+
+  <!-- Q18 -->
+  <div class="quiz">
+    <h4>Q18. Ancient Persian usage में “Hindu” को समझने का सही तरीका क्या है?</h4>
+
+    <div class="option"><label><input type="radio" name="q18" value="A"> A. हमेशा modern religious meaning मानना</label></div>
+    <div class="option"><label><input type="radio" name="q18" value="B"> B. historical context में geographical meaning को देखना</label></div>
+    <div class="option"><label><input type="radio" name="q18" value="C"> C. इसे केवल modern political term मानना</label></div>
+    <div class="option"><label><input type="radio" name="q18" value="D"> D. इसे river का नाम मानना</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(18,'B','The chapter explains that ancient Persian usage was geographical in this historical context, rather than automatically carrying the modern religious meaning.')">
+      Check Answer
+    </button>
+
+    <div id="e18" class="explanation"></div>
+  </div>
+
+  <!-- Q19 -->
+  <div class="quiz">
+    <h4>Q19. Constitution में “India, that is Bharat” किस Article से जुड़ा है?</h4>
+
+    <div class="option"><label><input type="radio" name="q19" value="A"> A. Article 1</label></div>
+    <div class="option"><label><input type="radio" name="q19" value="B"> B. Article 14</label></div>
+    <div class="option"><label><input type="radio" name="q19" value="C"> C. Article 21</label></div>
+    <div class="option"><label><input type="radio" name="q19" value="D"> D. Article 32</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(19,'A','Article 1 states the constitutional identity using the expression “India, that is Bharat”.')">
+      Check Answer
+    </button>
+
+    <div id="e19" class="explanation"></div>
+  </div>
+
+  <!-- Q20 -->
+  <div class="quiz">
+    <h4>Q20. इस chapter का सबसे important analytical lesson क्या है?</h4>
+
+    <div class="option"><label><input type="radio" name="q20" value="A"> A. केवल names याद करना</label></div>
+    <div class="option"><label><input type="radio" name="q20" value="B"> B. names को evidence, language, geography और context से समझना</label></div>
+    <div class="option"><label><input type="radio" name="q20" value="C"> C. केवल modern map याद करना</label></div>
+    <div class="option"><label><input type="radio" name="q20" value="D"> D. केवल dates याद करना</label></div>
+
+    <button class="check-btn" onclick="checkAnswer(20,'B','The chapter teaches students to understand historical names through evidence, language, geography and historical context.')">
+      Check Answer
+    </button>
+
+    <div id="e20" class="explanation"></div>
+  </div>
+
+</section>
+
+<!-- FINAL SUMMARY -->
+<section class="section">
+
+  <h2>28. 🧠 One-Minute Final Revision</h2>
+
+  <div class="highlight">
+
+    <b>Bhārata</b> → Bharatas → Vedic tradition
+
+    <br><br>
+
+    <b>Jambudvīpa</b> → Jambu/Jamun → ancient Indian usage
+
+    <br><br>
+
+    <b>Sindhu</b> → Indus River
+
+    <br><br>
+
+    <b>Hind / Hidu / Hindu</b> → Persian adaptation
+
+    <br><br>
+
+    <b>Indoi / Indike</b> → Greek forms
+
+    <br><br>
+
+    <b>Yindu / Yintu</b> → Chinese forms
+
+    <br><br>
+
+    <b>India</b> → historical linguistic development connected with Sindhu
+
+    <br><br>
+
+    <b>India, that is Bharat</b> → Article 1 of the Constitution
+
+  </div>
+
+</section>
+
+<!-- COMPLETE -->
+<section class="section">
+
+  <h2>✅ Chapter Completion</h2>
+
+  <p>
+    जब आप 20 MCQs complete कर लें, नीचे button दबाकर chapter complete
+    mark कर सकते हैं।
+  </p>
+
+  <button class="check-btn" onclick="completeChapter()">
+    ✅ Mark Chapter Complete
+  </button>
+
+  <p id="completeMessage"></p>
+
+</section>
 
 </main>
 
+<footer>
 
+  <p>
+    🇮🇳 <b>UPSC Shiksha</b>
+  </p>
 
-<footer class="footer">
+  <p>
+    Current NCERT 2026–27 • Class 6 History
+  </p>
 
-🇮🇳 <b>UPSC Shiksha</b>
-
-<br>
-
-Premium NCERT Learning • English + Hindi
+  <p>
+    Original educational explanations for learning and exam preparation.
+  </p>
 
 </footer>
 
-
-
-<button
-id="topBtn"
-class="top"
-onclick="window.scrollTo({top:0,behavior:'smooth'})">
-
-↑
-
-</button>
-
-
+<a href="#top" class="top-btn">↑</a>
 
 <script>
 
-/* ==================================================
-   QUESTION BANK
-================================================== */
-
-const questions=[
-
-[
-"Why might hunter-gatherer communities move from one place to another?",
-"किस कारण शिकारी-संग्राहक एक स्थान से दूसरे स्थान जा सकते थे?",
-[
-"Changing availability of food and water",
-"Because they had railway tickets",
-"Only for writing books",
-"Only to build cities"
-],
-0,
-"Food, water, seasons and animal movement could influence mobility.",
-"भोजन, पानी, मौसम और पशुओं की गतिविधि गतिशीलता को प्रभावित कर सकती थी।"
-],
-
-
-[
-"Which activity best describes gathering?",
-"संग्रहण का सबसे अच्छा उदाहरण कौन-सा है?",
-[
-"Collecting fruits, roots and seeds",
-"Building a modern factory",
-"Minting coins",
-"Writing inscriptions"
-],
-0,
-"Gathering involved collecting naturally available plant foods and other useful resources.",
-"संग्रहण में प्राकृतिक रूप से उपलब्ध फल, जड़ें, बीज आदि एकत्र करना शामिल था।"
-],
-
-
-[
-"Why is water important when studying early human movement?",
-"प्रारम्भिक मानवों की गतिशीलता में पानी क्यों महत्वपूर्ण था?",
-[
-"Water is essential for life and is unevenly available",
-"Water was used only for decoration",
-"Water had no relation to settlement",
-"Water was available equally everywhere"
-],
-0,
-"Reliable water sources could influence where people lived or travelled.",
-"विश्वसनीय जल स्रोत लोगों के रहने या जाने के स्थान को प्रभावित कर सकते थे।"
-],
-
-
-[
-"Which statement about hunter-gatherers is most accurate?",
-"शिकारी-संग्राहकों के बारे में कौन-सा कथन अधिक सही है?",
-[
-"They depended substantially on natural resources",
-"They always lived in large cities",
-"They used only written records",
-"They never moved"
-],
-0,
-"Hunter-gatherer life was closely connected with naturally available resources.",
-"शिकारी-संग्राहक जीवन प्राकृतिक संसाधनों से गहराई से जुड़ा था।"
-],
-
-
-[
-"A seasonal food source disappears. What is a plausible response for a mobile group?",
-"मौसमी भोजन स्रोत समाप्त होने पर गतिशील समूह की संभावित प्रतिक्रिया क्या हो सकती है?",
-[
-"Move towards another suitable resource area",
-"Stop needing food",
-"Immediately construct a modern town",
-"Start using printed books"
-],
-0,
-"Movement could be a practical adaptation to seasonal resource changes.",
-"मौसमी संसाधनों में बदलाव के अनुसार दूसरे उपयुक्त क्षेत्र की ओर जाना अनुकूलन हो सकता था।"
-],
-
-
-[
-"Why were stone tools useful to early humans?",
-"प्रारम्भिक मानवों के लिए पत्थर के औजार उपयोगी क्यों थे?",
-[
-"They could provide sharp or strong working edges",
-"They were used only as ornaments",
-"They were always made of metal",
-"They were used only for writing"
-],
-0,
-"Stone could be shaped into useful edges for cutting, scraping and other tasks.",
-"पत्थर को काटने, खुरचने आदि के लिए उपयोगी धारों में बदला जा सकता था।"
-],
-
-
-[
-"Which evidence can indicate past use of fire at an archaeological site?",
-"पुरातात्विक स्थल पर आग के पुराने उपयोग का संकेत क्या दे सकता है?",
-[
-"Ash and charcoal",
-"Plastic bottles",
-"Printed newspapers",
-"Modern batteries"
-],
-0,
-"Ash, charcoal and burnt material can be archaeological traces of fire.",
-"राख, कोयला और जली हुई सामग्री आग के पुरातात्विक संकेत हो सकते हैं।"
-],
-
-
-[
-"Which is NOT a major function commonly associated with controlled fire?",
-"नियंत्रित आग से सामान्यतः कौन-सा प्रमुख कार्य संबंधित नहीं है?",
-[
-"Printing newspapers",
-"Warmth",
-"Light",
-"Cooking"
-],
-0,
-"Printing newspapers is a modern activity, unlike warmth, light and cooking.",
-"समाचार पत्र छापना आधुनिक गतिविधि है; गर्मी, प्रकाश और भोजन पकाना आग के उपयोग से जुड़े हैं।"
-],
-
-
-[
-"Why does archaeological context matter?",
-"पुरातात्विक संदर्भ क्यों महत्वपूर्ण है?",
-[
-"It shows where and with what other evidence an object was found",
-"It tells only the object's colour",
-"It gives only its market price",
-"It makes every interpretation certain"
-],
-0,
-"Location and association help researchers interpret how evidence may relate to past activities.",
-"स्थान और साथ मिले अन्य प्रमाण वस्तु के संभावित उपयोग को समझने में मदद करते हैं।"
-],
-
-
-[
-"Which approach is more reliable when interpreting a prehistoric tool?",
-"प्रागैतिहासिक औजार की व्याख्या में कौन-सा तरीका अधिक विश्वसनीय है?",
-[
-"Study its shape, material, wear and archaeological context",
-"Guess from its colour alone",
-"Use its modern shop price",
-"Ignore where it was found"
-],
-0,
-"Multiple kinds of evidence provide a stronger basis for interpretation.",
-"आकृति, सामग्री, घिसाव और पुरातात्विक संदर्भ को साथ देखने से बेहतर व्याख्या होती है।"
-],
-
-
-[
-"Bhimbetka is located in which present-day Indian state?",
-"भीमबेटका वर्तमान भारत के किस राज्य में स्थित है?",
-[
-"Madhya Pradesh",
-"Kerala",
-"Assam",
-"Punjab"
-],
-0,
-"Bhimbetka is in present-day Madhya Pradesh and is known for rock shelters and prehistoric paintings.",
-"भीमबेटका वर्तमान मध्य प्रदेश में स्थित है और शैलाश्रयों व प्रागैतिहासिक चित्रों के लिए प्रसिद्ध है।"
-],
-
-
-[
-"What type of evidence is especially associated with Bhimbetka?",
-"भीमबेटका किस प्रकार के प्रमाण के लिए विशेष रूप से जाना जाता है?",
-[
-"Rock shelters and prehistoric paintings",
-"Medieval coins only",
-"Modern factories",
-"Ocean ports"
-],
-0,
-"The site is well known for rock shelters and prehistoric paintings.",
-"यह स्थल शैलाश्रयों और प्रागैतिहासिक चित्रों के लिए प्रसिद्ध है।"
-],
-
-
-[
-"Which is a material archaeological source?",
-"निम्न में से कौन भौतिक पुरातात्विक स्रोत का उदाहरण है?",
-[
-"A stone tool",
-"A modern social-media post",
-"A current newspaper editorial",
-"A television advertisement"
-],
-0,
-"A stone tool is a material object that can be studied archaeologically.",
-"पत्थर का औजार एक भौतिक वस्तु है जिसका पुरातात्विक अध्ययन किया जा सकता है।"
-],
-
-
-[
-"Why should archaeologists be cautious while interpreting prehistoric evidence?",
-"प्रागैतिहासिक प्रमाणों की व्याख्या में सावधानी क्यों आवश्यक है?",
-[
-"Evidence is often incomplete and context matters",
-"Every object has a written label",
-"All evidence survives perfectly",
-"Every site gives the same information"
-],
-0,
-"Many materials do not survive, so interpretations must be based on available evidence and context.",
-"कई सामग्री समय के साथ नष्ट हो जाती हैं, इसलिए उपलब्ध प्रमाण और संदर्भ के आधार पर सावधानी से निष्कर्ष निकालना चाहिए।"
-],
-
-
-[
-"What can the study of bones and plant remains help researchers understand?",
-"हड्डियों और पौधों के अवशेषों का अध्ययन किसमें मदद कर सकता है?",
-[
-"Past diet and environment",
-"Modern election results",
-"Internet speed",
-"Current stock prices"
-],
-0,
-"Biological and plant remains can provide clues about diet, animals and environmental conditions.",
-"जैविक और वनस्पति अवशेष भोजन, पशुओं और पर्यावरण की जानकारी दे सकते हैं।"
-],
-
-
-[
-"Which sequence best represents a simplified chapter concept?",
-"कौन-सा क्रम अध्याय की सरल अवधारणा को सबसे अच्छी तरह दिखाता है?",
-[
-"Resources → Food → Movement → Adaptation",
-"Cars → Airports → Internet → Space stations",
-"Coins → Banks → ATMs → Apps",
-"Factories → Robots → Satellites → Trains"
-],
-0,
-"The chapter connects natural resources and food with movement and adaptation.",
-"अध्याय प्राकृतिक संसाधनों और भोजन को गतिशीलता तथा अनुकूलन से जोड़ता है।"
-],
-
-
-[
-"Why can food production be linked with settlement patterns?",
-"भोजन उत्पादन को बसावट के पैटर्न से क्यों जोड़ा जा सकता है?",
-[
-"Cultivation and animal keeping could support more settled life in some regions",
-"Farming always created cities immediately",
-"Food production eliminated all movement",
-"Food production required no environment"
-],
-0,
-"Cultivation and animal keeping could support more stable settlement patterns, though change was gradual and varied.",
-"खेती और पशुपालन कुछ क्षेत्रों में अधिक स्थायी बसावट को सहारा दे सकते थे, लेकिन परिवर्तन धीरे-धीरे और अलग-अलग क्षेत्रों में अलग रहा।"
-],
-
-
-[
-"Which statement best explains adaptation in early human history?",
-"प्रारम्भिक मानव इतिहास में अनुकूलन का सबसे अच्छा अर्थ क्या है?",
-[
-"Adjusting practices and technology to environmental conditions",
-"Ignoring all environmental changes",
-"Using only written records",
-"Living in exactly the same way everywhere"
-],
-0,
-"Adaptation includes changing movement, technology and practices in response to surroundings.",
-"अनुकूलन में परिवेश के अनुसार गतिशीलता, तकनीक और जीवन-प्रथाओं में बदलाव शामिल हो सकते हैं।"
-],
-
-
-[
-"A researcher finds a tool, animal bones and charcoal together. What is the best next step?",
-"यदि शोधकर्ता को औजार, पशु हड्डियाँ और कोयला साथ मिलें तो अगला उचित कदम क्या होगा?",
-[
-"Study their context and relationship before drawing conclusions",
-"Assume the exact activity immediately",
-"Ignore the location",
-"Treat each item as unrelated automatically"
-],
-0,
-"The association of different finds can help reconstruct possible activities, but conclusions should remain evidence-based.",
-"विभिन्न वस्तुओं का साथ मिलना संभावित गतिविधियों को समझने में मदद कर सकता है, लेकिन निष्कर्ष प्रमाण-आधारित होने चाहिए।"
-],
-
-
-[
-"Which statement would be most useful for UPSC revision?",
-"UPSC पुनरावृत्ति के लिए कौन-सा कथन अधिक उपयोगी है?",
-[
-"Environment, technology, food and evidence are interconnected themes",
-"Prehistory can be understood from one object alone",
-"All early communities followed one identical path",
-"Archaeology does not use material evidence"
-],
-0,
-"The chapter is best remembered through connections among environment, technology, food, mobility, evidence and settlement.",
-"अध्याय को पर्यावरण, तकनीक, भोजन, गतिशीलता, प्रमाण और बसावट के आपसी संबंध से याद करना उपयोगी है।"
-]
-
-];
-
-
-
-/* ==================================================
-   PROGRESS
-================================================== */
-
-let checked=
-JSON.parse(
-localStorage.getItem("ch2_checked") || "[]"
-)
-.filter(n => n>=1 && n<=20);
-
-
-
-/* ==================================================
-   RENDER QUESTIONS
-================================================== */
-
-function renderQuestions(){
-
-questions.forEach((q,index)=>{
-
-const number=index+1;
-
-const box=
-document.getElementById(
-"q"+number
-);
-
-box.innerHTML=`
-
-<b>
-Q${number}. ${q[0]}
-</b>
-
-<p class="small">
-हिंदी: ${q[1]}
-</p>
-
-<div class="opts">
-
-${q[2].map((option,i)=>`
-
-<label class="opt">
-
-<input
-type="radio"
-name="q${number}"
-value="${i}"
->
-
-<span>
-${String.fromCharCode(65+i)}.
-${option}
-</span>
-
-</label>
-
-`).join("")}
-
-</div>
-
-
-<button
-onclick="checkAnswer(${number})">
-
-Check Answer
-
-</button>
-
-
-<div
-id="result${number}"
-class="result">
-
-</div>
-
-`;
-
-});
-
-updateProgress();
-
-}
-
-
-
-/* ==================================================
-   CHECK ANSWER
-================================================== */
-
-function checkAnswer(number){
-
-const q=
-questions[number-1];
-
-const selected=
-document.querySelector(
-`input[name="q${number}"]:checked`
-);
-
-const result=
-document.getElementById(
-"result"+number
-);
-
-
-if(!selected){
-
-result.className=
-"result bad";
-
-result.style.display=
-"block";
-
-result.innerHTML=
-"⚠️ Please select an option first.";
-
-return;
-
-}
-
-
-const correct=
-Number(selected.value)
-===
-q[3];
-
-
-result.className=
-"result "
-+
-(correct ? "ok" : "bad");
-
-result.style.display=
-"block";
-
-
-result.innerHTML=
-
-(correct
-? "✅ Correct!"
-: "❌ Incorrect."
-)
-
-+
-
-"<br><br>"
-
-+
-
-"<b>Correct Answer:</b> "
-+
-q[2][q[3]]
-
-+
-
-"<br><br>"
-
-+
-
-"<b>Explanation:</b> "
-+
-q[4]
-
-+
-
-"<br><br>"
-
-+
-
-"<b>हिंदी व्याख्या:</b> "
-+
-q[5];
-
-
-
-if(!checked.includes(number)){
-
-checked.push(number);
-
-localStorage.setItem(
-"ch2_checked",
-JSON.stringify(checked)
-);
-
-updateProgress();
-
-}
-
-}
-
-
-
-/* ==================================================
-   UPDATE PROGRESS
-================================================== */
-
-function updateProgress(){
-
-const percent=
-Math.round(
-checked.length/20*100
-);
-
-document.getElementById(
-"progressBar"
-).style.width=
-percent+"%";
-
-
-document.getElementById(
-"progressText"
-).textContent=
-
-percent+
-"% completed • "+
-checked.length+
-"/20 questions checked";
-
-}
-
-
-
-/* ==================================================
-   DARK MODE
-================================================== */
+const themeKey = "class6history2theme";
+const doneKey = "class6history2done";
 
 function toggleTheme(){
 
-document.body.classList.toggle(
-"dark"
-);
+  document.body.classList.toggle("dark");
 
-localStorage.setItem(
-"ch2_theme",
-document.body.classList.contains("dark")
-? "dark"
-: "light"
-);
+  const isDark = document.body.classList.contains("dark");
 
+  localStorage.setItem(themeKey, isDark ? "dark" : "light");
 }
 
+function restoreTheme(){
 
-if(
-localStorage.getItem("ch2_theme")
-===
-"dark"
-){
+  const saved = localStorage.getItem(themeKey);
 
-document.body.classList.add(
-"dark"
-);
-
+  if(saved === "dark"){
+    document.body.classList.add("dark");
+  }
 }
 
+function speakText(text, lang){
 
+  if(!("speechSynthesis" in window)){
+    alert("Speech synthesis is not supported on this browser.");
+    return;
+  }
 
-/* ==================================================
-   AUDIO
-================================================== */
+  window.speechSynthesis.cancel();
+
+  const speech = new SpeechSynthesisUtterance(text);
+
+  speech.lang = lang;
+  speech.rate = 0.9;
+  speech.pitch = 1;
+
+  window.speechSynthesis.speak(speech);
+}
 
 function speakEnglish(){
 
-speechSynthesis.cancel();
+  const text =
+  "India, That Is Bharat. This chapter explains how India was described through different historical names. Bharata is associated with the Bharatas. Jambudvipa is associated with the jamun tree. The name India is historically connected with Sindhu, the Indus River. Persian, Greek and Chinese traditions used different forms of the name. The Constitution uses the expression India, that is Bharat.";
 
-const text=
-
-"Chapter 2 explains hunter gatherers, movement, stone tools, fire, caves and rock shelters, archaeological evidence, important Indian sites, and the gradual transition towards food production.";
-
-const speech=
-new SpeechSynthesisUtterance(text);
-
-speech.lang=
-"en-IN";
-
-speech.rate=
-0.95;
-
-speechSynthesis.speak(
-speech
-);
-
+  speakText(text,"en-IN");
 }
-
 
 function speakHindi(){
 
-speechSynthesis.cancel();
+  const text =
+  "भारत, अर्थात् भारत। इस अध्याय में भारत के अलग-अलग ऐतिहासिक नामों को समझाया गया है। भारत नाम का संबंध भरत नामक वैदिक समूह से जोड़ा जाता है। जम्बूद्वीप नाम जामुन के वृक्ष से जुड़ा है। इंडिया नाम की ऐतिहासिक कहानी सिंधु नदी से जुड़ी है। अलग-अलग भाषाओं में इन नामों के रूप बदलते गए। भारतीय संविधान में इंडिया, दैट इज़ भारत का प्रयोग किया गया है।";
 
-const text=
-
-"यह अध्याय शिकारी संग्राहक, प्रारम्भिक मानवों की गतिशीलता, पत्थर के औजार, आग, गुफाएँ और शैलाश्रय, पुरातात्विक प्रमाण, महत्वपूर्ण भारतीय स्थलों तथा भोजन उत्पादन की ओर परिवर्तन को समझाता है।";
-
-const speech=
-new SpeechSynthesisUtterance(text);
-
-speech.lang=
-"hi-IN";
-
-speech.rate=
-0.95;
-
-speechSynthesis.speak(
-speech
-);
-
+  speakText(text,"hi-IN");
 }
-
 
 function stopSpeech(){
 
-speechSynthesis.cancel();
+  if("speechSynthesis" in window){
+    window.speechSynthesis.cancel();
+  }
 
 }
 
+function checkAnswer(number, correct, explanation){
 
+  const options =
+    document.querySelectorAll('input[name="q' + number + '"]');
 
-/* ==================================================
-   COMPLETE CHAPTER
-================================================== */
+  let selected = null;
+
+  options.forEach(function(option){
+
+    if(option.checked){
+      selected = option.value;
+    }
+
+  });
+
+  const result = document.getElementById("e" + number);
+
+  if(!selected){
+
+    result.style.display = "block";
+
+    result.innerHTML =
+      '<span class="wrong">⚠️ Please select an answer first.</span>';
+
+    return;
+  }
+
+  const key = "class6history2q" + number;
+
+  localStorage.setItem(key,"checked");
+
+  if(selected === correct){
+
+    result.innerHTML =
+      '<span class="correct">✅ Correct!</span><br>' +
+      explanation;
+
+  }else{
+
+    result.innerHTML =
+      '<span class="wrong">❌ Not correct.</span><br>' +
+      explanation;
+
+  }
+
+  result.style.display = "block";
+
+  updateProgress();
+
+}
+
+function updateProgress(){
+
+  let completed = 0;
+
+  for(let i=1;i<=20;i++){
+
+    if(localStorage.getItem("class6history2q" + i) === "checked"){
+      completed++;
+    }
+
+  }
+
+  const percentage = Math.round((completed / 20) * 100);
+
+  document.getElementById("progressFill").style.width =
+    percentage + "%";
+
+  document.getElementById("progressText").textContent =
+    percentage + "%";
+
+}
 
 function completeChapter(){
 
-localStorage.setItem(
-"ch2_done",
-"yes"
-);
+  let completed = 0;
 
-document.getElementById(
-"completeMsg"
-).textContent=
-"🎉 Chapter 2 marked complete!";
+  for(let i=1;i<=20;i++){
 
-}
+    if(localStorage.getItem("class6history2q" + i) === "checked"){
+      completed++;
+    }
 
+  }
 
+  const message =
+    document.getElementById("completeMessage");
 
-/* ==================================================
-   TOP BUTTON
-================================================== */
+  if(completed < 20){
 
-window.addEventListener(
-"scroll",
-function(){
+    message.innerHTML =
+      '<span class="wrong">⚠️ पहले सभी 20 MCQs check करें। अभी ' +
+      completed +
+      '/20 complete हैं.</span>';
 
-const button=
-document.getElementById(
-"topBtn"
-);
+    return;
+  }
 
-if(window.scrollY>350){
+  localStorage.setItem(doneKey,"yes");
 
-button.style.display=
-"block";
-
-}else{
-
-button.style.display=
-"none";
+  message.innerHTML =
+    '<span class="correct">🎉 Chapter 2 completed successfully!</span>';
 
 }
 
-}
-);
-
-
-
-/* ==================================================
-   START
-================================================== */
-
-renderQuestions();
+restoreTheme();
+updateProgress();
 
 </script>
 
