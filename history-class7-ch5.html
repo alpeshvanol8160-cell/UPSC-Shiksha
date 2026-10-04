@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Tribes, Nomads and Settled Communities | UPSC Shiksha</title>
+<title>How the Land Becomes Sacred | UPSC Shiksha</title>
 
 <meta name="description"
-content="UPSC Shiksha supplementary history notes on Tribes, Nomads and Settled Communities with English, Hindi, audio, UPSC points, Mains practice and MCQs.">
+content="Class 7 History Chapter 5 - How the Land Becomes Sacred. Current NCERT 2026-27 based original UPSC learning notes.">
 
 <style>
 *{
@@ -16,237 +16,205 @@ content="UPSC Shiksha supplementary history notes on Tribes, Nomads and Settled 
   padding:0;
 }
 
-html{
-  scroll-behavior:smooth;
+:root{
+  --bg:#f5f7fb;
+  --card:#ffffff;
+  --text:#18212f;
+  --muted:#64748b;
+  --primary:#7c3aed;
+  --secondary:#ec4899;
+  --accent:#f59e0b;
+  --border:#e2e8f0;
+  --soft:#f3e8ff;
+  --success:#16a34a;
+}
+
+body.dark{
+  --bg:#0f172a;
+  --card:#172033;
+  --text:#f1f5f9;
+  --muted:#cbd5e1;
+  --border:#334155;
+  --soft:#312e81;
 }
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  background:#f7f9fc;
-  color:#222;
-  line-height:1.7;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.75;
   transition:.3s;
 }
 
-body.dark{
-  background:#121212;
-  color:#eee;
-}
-
 header{
-  background:linear-gradient(135deg,#8e44ad,#6c3483);
+  background:linear-gradient(135deg,#581c87,#7c3aed,#db2777);
   color:white;
-  padding:16px;
+  padding:18px 15px;
   position:sticky;
   top:0;
-  z-index:1000;
-  box-shadow:0 3px 12px rgba(0,0,0,.2);
+  z-index:100;
+  box-shadow:0 4px 15px #0003;
 }
 
 .header-inner{
   max-width:1100px;
   margin:auto;
   display:flex;
-  align-items:center;
   justify-content:space-between;
+  align-items:center;
   gap:10px;
 }
 
 .logo{
-  font-size:21px;
+  font-size:20px;
   font-weight:bold;
 }
 
-.header-buttons{
+.actions{
   display:flex;
   gap:8px;
-  flex-wrap:wrap;
 }
 
 button,
 .nav-btn{
-  border:none;
+  border:0;
   border-radius:10px;
-  padding:10px 14px;
+  padding:9px 13px;
   cursor:pointer;
   font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
 }
 
-.home-btn{
-  background:white;
-  color:#6c3483;
-}
-
-.dark-btn{
-  background:#222;
+.nav-btn{
+  background:#ffffff22;
   color:white;
-}
-
-.container{
-  max-width:1100px;
-  margin:auto;
-  padding:20px;
 }
 
 .hero{
-  background:linear-gradient(135deg,#8e44ad,#bb8fce);
-  color:white;
-  border-radius:20px;
-  padding:32px 24px;
-  margin:20px 0;
-  box-shadow:0 8px 25px rgba(0,0,0,.15);
+  background:linear-gradient(135deg,#f5d0fe,#ddd6fe,#fbcfe8);
+  padding:45px 18px;
+  text-align:center;
+}
+
+.dark .hero{
+  background:linear-gradient(135deg,#312e81,#581c87,#701a75);
 }
 
 .hero h1{
-  font-size:32px;
+  font-size:clamp(28px,6vw,48px);
   margin-bottom:10px;
 }
 
 .hero p{
-  font-size:17px;
+  max-width:850px;
+  margin:auto;
+  color:#374151;
+}
+
+.dark .hero p{
+  color:#f1f5f9;
+}
+
+.badge{
+  display:inline-block;
+  background:#16a34a;
+  color:white;
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:13px;
+  margin-bottom:15px;
 }
 
 .notice{
-  background:#fff3cd;
-  color:#664d03;
-  border-left:6px solid #ffc107;
+  max-width:1000px;
+  margin:20px auto;
   padding:16px;
-  border-radius:10px;
-  margin:20px 0;
+  border-left:5px solid var(--accent);
+  background:var(--card);
+  border-radius:12px;
+  box-shadow:0 4px 15px #00000010;
 }
 
-body.dark .notice{
-  background:#3a321d;
-  color:#ffe69c;
-}
-
-.progress-box{
-  background:white;
-  padding:18px;
-  border-radius:15px;
-  margin:20px 0;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-body.dark .progress-box{
-  background:#1e1e1e;
-}
-
-.progress{
-  height:14px;
-  background:#ddd;
-  border-radius:20px;
-  overflow:hidden;
-  margin-top:10px;
-}
-
-.progress-bar{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,#8e44ad,#e8daef);
-  transition:.4s;
-}
-
-.quick-nav{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-  margin:20px 0;
-}
-
-.quick-nav a{
-  background:#eee;
-  color:#333;
-  text-decoration:none;
-  padding:8px 12px;
-  border-radius:20px;
-  font-size:14px;
-}
-
-body.dark .quick-nav a{
-  background:#2b2b2b;
-  color:#eee;
+.container{
+  max-width:1050px;
+  margin:auto;
+  padding:20px 15px 60px;
 }
 
 .section{
-  background:white;
+  background:var(--card);
+  border:1px solid var(--border);
   border-radius:16px;
-  padding:24px;
+  padding:25px;
   margin:22px 0;
-  box-shadow:0 3px 15px rgba(0,0,0,.07);
-}
-
-body.dark .section{
-  background:#1c1c1c;
+  box-shadow:0 5px 18px #0000000c;
 }
 
 .section h2{
-  color:#6c3483;
-  margin-bottom:14px;
-  border-bottom:2px solid #d7bde2;
-  padding-bottom:8px;
-}
-
-body.dark .section h2{
-  color:#d7bde2;
+  color:var(--primary);
+  margin-bottom:15px;
+  font-size:26px;
 }
 
 .section h3{
-  color:#8e44ad;
-  margin:18px 0 8px;
+  margin-top:20px;
+  margin-bottom:8px;
+  color:var(--secondary);
 }
 
-body.dark .section h3{
-  color:#d7bde2;
+.section p{
+  margin:9px 0;
 }
 
 .highlight{
-  background:#f5eef8;
-  border-left:5px solid #8e44ad;
+  background:var(--soft);
+  border-left:5px solid var(--primary);
   padding:15px;
   border-radius:10px;
   margin:15px 0;
 }
 
-body.dark .highlight{
-  background:#29202d;
-  color:#f7eafa;
-  border-left-color:#c084fc;
+.example{
+  border-left:5px solid var(--accent);
+  background:#fff7ed;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
 }
 
-.highlight strong{
-  color:#6c3483;
+.dark .example{
+  background:#3b2814;
 }
 
-body.dark .highlight strong{
-  color:#ffffff;
+.analysis{
+  border-left:5px solid var(--success);
+  background:#f0fdf4;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
 }
 
-.card-grid{
+.dark .analysis{
+  background:#123321;
+}
+
+.grid{
   display:grid;
-  grid-template-columns:repeat(2,1fr);
-  gap:16px;
-  margin:18px 0;
+  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
+  gap:15px;
+  margin-top:15px;
 }
 
-.info-card{
-  background:#faf7fc;
-  border:1px solid #eadcf0;
+.card{
+  background:var(--bg);
+  border:1px solid var(--border);
   padding:18px;
   border-radius:14px;
-  transition:.25s;
 }
 
-.info-card:hover{
-  transform:translateY(-3px);
-  box-shadow:0 8px 20px rgba(0,0,0,.1);
-}
-
-body.dark .info-card{
-  background:#252025;
-  border-color:#49394d;
+.card strong{
+  display:block;
+  color:var(--primary);
+  margin-bottom:6px;
 }
 
 .flow{
@@ -258,269 +226,276 @@ body.dark .info-card{
   margin:25px 0;
 }
 
-.flow-box{
-  background:linear-gradient(135deg,#8e44ad,#bb8fce);
+.flow-item{
+  background:linear-gradient(135deg,#7c3aed,#db2777);
   color:white;
-  padding:14px 18px;
-  border-radius:12px;
+  padding:14px 17px;
+  border-radius:13px;
   font-weight:bold;
   text-align:center;
-  min-width:150px;
-  animation:floatBox 2.5s infinite alternate;
+  min-width:140px;
 }
 
 .arrow{
   font-size:25px;
   font-weight:bold;
-  color:#8e44ad;
-}
-
-@keyframes floatBox{
-  from{transform:translateY(0);}
-  to{transform:translateY(-5px);}
 }
 
 .timeline{
-  border-left:4px solid #8e44ad;
-  padding-left:20px;
-  margin:20px 0;
+  position:relative;
+  margin:25px 0;
+  padding-left:25px;
+  border-left:4px solid var(--primary);
 }
 
 .timeline-item{
-  background:#faf7fc;
-  margin:15px 0;
+  margin:20px 0;
   padding:15px;
-  border-radius:10px;
+  background:var(--bg);
+  border-radius:12px;
+  position:relative;
 }
 
-body.dark .timeline-item{
-  background:#292329;
+.timeline-item::before{
+  content:"";
+  width:14px;
+  height:14px;
+  background:var(--secondary);
+  border-radius:50%;
+  position:absolute;
+  left:-34px;
+  top:22px;
+}
+
+.visual{
+  padding:20px;
+  border-radius:15px;
+  background:linear-gradient(135deg,#ede9fe,#fce7f3);
+  margin:20px 0;
+  overflow:hidden;
+}
+
+.dark .visual{
+  background:linear-gradient(135deg,#312e81,#4c1d35);
+}
+
+.land{
+  height:170px;
+  position:relative;
+  overflow:hidden;
+  border-radius:14px;
+  background:linear-gradient(#bae6fd 0 48%,#86efac 48% 100%);
+}
+
+.mountain{
+  position:absolute;
+  bottom:45px;
+  width:0;
+  height:0;
+  border-left:80px solid transparent;
+  border-right:80px solid transparent;
+  border-bottom:130px solid #64748b;
+}
+
+.m1{left:5%;}
+.m2{left:38%;transform:scale(1.2);}
+.m3{right:4%;}
+
+.river{
+  position:absolute;
+  bottom:0;
+  left:45%;
+  width:100px;
+  height:100%;
+  background:#38bdf8;
+  transform:skewX(-18deg);
+  opacity:.9;
+}
+
+.temple{
+  position:absolute;
+  bottom:30px;
+  left:50%;
+  transform:translateX(-50%);
+  width:90px;
+  height:65px;
+  background:#f59e0b;
+  border-radius:5px;
+}
+
+.temple:before{
+  content:"";
+  position:absolute;
+  top:-45px;
+  left:10px;
+  border-left:35px solid transparent;
+  border-right:35px solid transparent;
+  border-bottom:45px solid #dc2626;
+}
+
+.temple:after{
+  content:"";
+  position:absolute;
+  left:37px;
+  top:20px;
+  width:18px;
+  height:45px;
+  background:#78350f;
+}
+
+.animate-flow{
+  display:flex;
+  justify-content:center;
+  gap:10px;
+  flex-wrap:wrap;
+}
+
+.animate-box{
+  opacity:.25;
+  transform:translateY(20px);
+  transition:.6s;
+  padding:15px;
+  background:var(--card);
+  border:2px solid var(--primary);
+  border-radius:12px;
+  min-width:150px;
+  text-align:center;
+}
+
+.animate-box.show{
+  opacity:1;
+  transform:translateY(0);
 }
 
 table{
   width:100%;
   border-collapse:collapse;
-  margin:20px 0;
+  margin:18px 0;
+  overflow:hidden;
 }
 
 th,td{
-  border:1px solid #ddd;
+  border:1px solid var(--border);
   padding:12px;
   text-align:left;
 }
 
 th{
-  background:#8e44ad;
+  background:var(--primary);
   color:white;
 }
 
-body.dark table{
-  color:#eee;
-}
-
-body.dark th,
-body.dark td{
-  border-color:#555;
-}
-
-body.dark td{
-  background:#202020;
+tr:nth-child(even){
+  background:var(--bg);
 }
 
 .audio-box{
-  background:#f4ecf7;
-  padding:20px;
-  border-radius:15px;
-  margin:20px 0;
-  text-align:center;
-}
-
-body.dark .audio-box{
-  background:#29202d;
+  display:flex;
+  flex-wrap:wrap;
+  gap:10px;
+  margin-top:15px;
 }
 
 .audio-box button{
-  background:#8e44ad;
+  background:var(--primary);
   color:white;
-  margin:5px;
 }
 
-.mains-box{
-  background:#f4ecf7;
-  color:#3b2144;
-  border-left:5px solid #8e44ad;
-  padding:18px;
-  border-radius:10px;
-  margin:12px 0;
-}
-
-body.dark .mains-box{
-  background:#29213a;
-  color:#f3e8ff;
-  border-left:5px solid #c084fc;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
-}
-
-body.dark .mains-box strong{
-  color:#ffffff;
-}
-
-.revision{
-  background:#eef7ee;
-  border-left:5px solid #27ae60;
-  padding:18px;
-  border-radius:10px;
-}
-
-body.dark .revision{
-  background:#1d3023;
-  color:#e6ffe9;
-}
-
-.test{
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  margin:20px 0;
-  box-shadow:0 3px 12px rgba(0,0,0,.08);
-}
-
-body.dark .test{
-  background:#1d1d1d;
+.upsc{
+  border:2px solid #f59e0b;
+  background:var(--card);
 }
 
 .question{
-  border:1px solid #ddd;
-  border-radius:12px;
-  padding:16px;
+  background:var(--bg);
+  padding:18px;
+  border-radius:13px;
   margin:15px 0;
+  border:1px solid var(--border);
 }
 
-body.dark .question{
-  border-color:#555;
-}
-
-.question label{
+.options label{
   display:block;
-  background:#f6f6f6;
   padding:10px;
   margin:7px 0;
-  border-radius:8px;
+  background:var(--card);
+  border:1px solid var(--border);
+  border-radius:9px;
   cursor:pointer;
 }
 
-body.dark .question label{
-  background:#292929;
+.options label:hover{
+  border-color:var(--primary);
 }
 
-.question label:hover{
-  background:#eee;
-}
-
-body.dark .question label:hover{
-  background:#383838;
-}
-
-.check-btn{
-  background:#8e44ad;
-  color:white;
-  margin-top:10px;
-}
-
-.answer{
+.explanation{
   display:none;
-  margin-top:12px;
-  padding:14px;
+  margin-top:10px;
+  padding:12px;
   border-radius:10px;
-  background:#eaf7ea;
-  border-left:5px solid #27ae60;
+  background:#dcfce7;
+  color:#14532d;
 }
 
-body.dark .answer{
-  background:#1d3522;
-  color:#e8ffe9;
+.dark .explanation{
+  background:#123321;
+  color:#dcfce7;
 }
 
-.answer.wrong{
-  background:#fff0f0;
-  border-left-color:#e74c3c;
+.progress-wrap{
+  max-width:850px;
+  margin:20px auto;
+  background:#ffffff44;
+  border-radius:20px;
+  overflow:hidden;
+  height:18px;
 }
 
-body.dark .answer.wrong{
-  background:#3a2020;
-  color:#ffeaea;
+.progress{
+  height:100%;
+  width:0%;
+  background:#22c55e;
+  transition:.5s;
 }
 
 .complete-btn{
-  background:#27ae60;
+  display:block;
+  margin:25px auto;
+  background:#16a34a;
   color:white;
-  font-size:17px;
-  padding:13px 20px;
+  padding:13px 22px;
 }
 
 footer{
   text-align:center;
   padding:30px 15px;
-  background:#24102b;
-  color:white;
-  margin-top:30px;
+  background:#111827;
+  color:#cbd5e1;
 }
 
-.top-btn{
-  position:fixed;
-  right:18px;
-  bottom:18px;
-  width:45px;
-  height:45px;
-  border-radius:50%;
-  background:#8e44ad;
-  color:white;
-  font-size:20px;
-}
-
-@media(max-width:700px){
-
+@media(max-width:650px){
   .header-inner{
-    align-items:flex-start;
     flex-direction:column;
-  }
-
-  .header-buttons{
-    width:100%;
-  }
-
-  .hero h1{
-    font-size:25px;
-  }
-
-  .container{
-    padding:12px;
   }
 
   .section{
-    padding:17px;
+    padding:18px;
   }
 
-  .card-grid{
-    grid-template-columns:1fr;
+  .section h2{
+    font-size:22px;
   }
 
-  .flow{
-    flex-direction:column;
+  table{
+    font-size:14px;
+  }
+
+  .flow-item{
+    width:100%;
   }
 
   .arrow{
     transform:rotate(90deg);
-  }
-
-  table{
-    display:block;
-    overflow-x:auto;
-    white-space:nowrap;
-  }
-
-  .quick-nav a{
-    font-size:13px;
   }
 }
 </style>
@@ -530,1413 +505,1171 @@ footer{
 
 <header>
   <div class="header-inner">
-
     <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-    <div class="header-buttons">
-      <a href="ncert-history.html" class="nav-btn home-btn">🏠 History</a>
-      <button class="dark-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+    <div class="actions">
+      <a href="ncert-history.html">
+        <button class="nav-btn">🏠 History</button>
+      </a>
+      <button class="nav-btn" onclick="toggleTheme()">🌙 Dark</button>
     </div>
-
   </div>
 </header>
 
-<div class="container">
-
 <section class="hero">
-  <h1>🌿 Tribes, Nomads and Settled Communities</h1>
+  <span class="badge">CURRENT NCERT 2026–27</span>
+
+  <h1>How the Land Becomes Sacred</h1>
+
   <p>
-    Class 7 History — Legacy / Supplementary UPSC Study Material
+    Class 7 History • UPSC Shiksha History Chapter 5
   </p>
-  <p>
-    Detailed English + Hindi notes • Audio • UPSC Points • Mains • MCQs
-  </p>
+
+  <div class="progress-wrap">
+    <div class="progress" id="progressBar"></div>
+  </div>
+
+  <p id="progressText">Quiz progress: 0 / 20</p>
 </section>
 
 <div class="notice">
-  <strong>📌 Important Note:</strong><br>
-  This page is an original supplementary explanation based on the older
-  NCERT Class 7 History chapter sequence. It is not a reproduction of the
-  textbook. The current Class 7 NCERT Social Science structure has been
-  revised, so this chapter is kept here as supplementary UPSC study material.
+  <strong>📌 NCERT Mapping:</strong>
+  The official integrated Social Science book places this topic as
+  <strong>Chapter 8 — “How the Land Becomes Sacred”</strong>.
+  UPSC Shiksha presents it inside the History section as
+  <strong>Class 7 History Chapter 5</strong>.
 </div>
 
-<div class="progress-box">
-  <strong>📊 Chapter Progress</strong>
-  <div id="progressText">0% completed</div>
+<main class="container">
 
-  <div class="progress">
-    <div class="progress-bar" id="progressBar"></div>
-  </div>
-</div>
-
-<div class="quick-nav">
-  <a href="#english">English</a>
-  <a href="#tribes">Tribal Societies</a>
-  <a href="#nomads">Nomads</a>
-  <a href="#gonds">Gonds</a>
-  <a href="#ahoms">Ahoms</a>
-  <a href="#settled">Settled Communities</a>
-  <a href="#hindi">Hindi</a>
-  <a href="#upsc">UPSC Points</a>
-  <a href="#mains">Mains</a>
-  <a href="#tests">Tests</a>
-  <a href="#revision">Revision</a>
-</div>
-
-<!-- ENGLISH -->
-
-<section class="section" id="english">
-
-<h2>📘 English Explanation</h2>
-
-<p>
-Between the medieval and early modern periods, many different communities
-lived across the Indian subcontinent. Their economic activities, social
-organisation and political structures were not the same.
-</p>
-
-<p>
-Some communities depended heavily on forests and pastoralism, while others
-practised agriculture, craft production and trade. Some groups moved from one
-place to another, whereas settled communities lived in villages and towns.
-</p>
-
-<div class="highlight">
-<strong>UPSC Idea:</strong>
-The study of tribes, nomadic groups and settled communities helps us
-understand the diversity of Indian society and the relationship between
-environment, economy, social organisation and political power.
-</div>
-
-<h3>1. Diversity of Communities</h3>
-
-<p>
-Medieval Indian society included farmers, artisans, traders, pastoralists,
-forest communities, hunters and many other groups.
-</p>
-
-<p>
-These communities were connected through exchange. A forest community could
-supply forest products, pastoralists could provide animals and animal products,
-while settled agricultural communities could produce food grains.
-</p>
-
-<div class="card-grid">
-
-<div class="info-card">
-<h3>🌲 Forest Communities</h3>
-<p>
-Often depended on forests for food, fuel, medicines, hunting and other
-resources.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🐄 Pastoral Communities</h3>
-<p>
-Moved with cattle, sheep, goats or other animals according to the availability
-of pasture and water.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🌾 Agricultural Communities</h3>
-<p>
-Practised cultivation and usually lived in relatively settled villages.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🛍️ Trading Communities</h3>
-<p>
-Connected villages, markets and towns through the movement of goods.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="tribes">
-
-<h2>🌲 2. Tribal Societies</h2>
-
-<p>
-Tribal societies were often organised around kinship. Members of a tribe
-could be connected through family relationships, clans and common traditions.
-</p>
-
-<p>
-Many tribal groups lived in forests, hills, deserts and other regions where
-agriculture or large settled states were less dominant.
-</p>
-
-<h3>Important Features</h3>
-
-<ul>
-<li>Kinship and clan relationships were important.</li>
-<li>Many communities depended on forests and pastoralism.</li>
-<li>Some practised shifting cultivation.</li>
-<li>Some groups became settled agricultural communities.</li>
-<li>Some tribal chiefs established political kingdoms.</li>
-<li>Tribal groups were connected to neighbouring settled societies through trade.</li>
-</ul>
-
-<div class="highlight">
-<strong>Remember:</strong>
-“Tribal” does not mean that all tribal communities had exactly the same
-economic or political system. Their organisation varied greatly from region
-to region.
-</div>
-
-<h3>Kinship and Clans</h3>
-
-<p>
-A clan can be understood as a group of families claiming a common ancestry or
-connection. Several clans could form a larger tribal community.
-</p>
-
-</section>
-
-<section class="section" id="nomads">
-
-<h2>🐪 3. Nomadic Communities</h2>
-
-<p>
-Nomadic communities moved from one region to another rather than living
-permanently in one place. Movement was often connected to pastoralism,
-seasonal resources and trade.
-</p>
-
-<h3>Pastoral Nomads</h3>
-
-<p>
-Pastoral nomads depended substantially on animals. Their movement allowed them
-to find fresh pasture and water.
-</p>
-
-<p>
-Animals could provide milk, wool, meat, hides and transportation.
-</p>
-
-<h3>Nomadic Traders</h3>
-
-<p>
-Some mobile groups participated in trade. They carried goods between
-different settlements and markets.
-</p>
-
-<div class="highlight">
-<strong>Economic connection:</strong><br>
-Nomadic groups were not necessarily isolated from settled society. Trade
-created strong links between mobile and settled communities.
-</div>
-
-</section>
+<!-- INTRODUCTION -->
 
 <section class="section">
-
-<h2>🔄 4. Shifting Cultivation</h2>
+<h2>1. Chapter Introduction</h2>
 
 <p>
-Shifting cultivation involves cultivating a piece of land for a period and
-then moving to another area when soil fertility declines or other conditions
-make movement useful.
+Land is not only a physical space. In many societies, particular rivers,
+mountains, forests, temples, pilgrimage centres and landscapes acquire
+special cultural and spiritual meaning.
 </p>
 
 <p>
-The practice was especially associated with forested and hilly regions.
-Different communities used different local methods.
+The central idea of this chapter is that a landscape can become
+<strong>sacred through stories, beliefs, traditions, journeys, communities
+and repeated cultural practices.</strong>
 </p>
-
-<div class="flow">
-
-<div class="flow-box">🌳 Forest</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🌱 Clearing</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🌾 Cultivation</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🔄 Movement</div>
-
-</div>
-
-<p>
-The relationship between shifting cultivation and the environment should be
-understood in its local historical context rather than applying one
-generalisation to every community.
-</p>
-
-</section>
-
-<section class="section" id="gonds">
-
-<h2>🛡️ 5. The Gonds</h2>
-
-<p>
-The Gonds were an important tribal community associated with central India.
-Over time, some Gond groups developed larger political structures and
-kingdoms.
-</p>
-
-<h3>Gond Political Organisation</h3>
-
-<p>
-The growth of agriculture and political power enabled some chiefs to control
-larger territories.
-</p>
-
-<p>
-Gond rulers developed systems of administration and maintained relations with
-neighbouring states and communities.
-</p>
-
-<h3>Gond Kingdoms</h3>
-
-<p>
-Gond kingdoms are an important example of how tribal political organisations
-could develop into more complex states.
-</p>
-
-<div class="card-grid">
-
-<div class="info-card">
-<h3>👑 Political Power</h3>
-<p>
-Some tribal chiefs became powerful rulers and controlled territories.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🌾 Agriculture</h3>
-<p>
-Expansion of cultivation supported larger and more settled populations.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🏰 Forts</h3>
-<p>
-Political centres and fortified settlements could become symbols of authority.
-</p>
-</div>
-
-<div class="info-card">
-<h3>🤝 Interaction</h3>
-<p>
-Gond rulers interacted with neighbouring kingdoms and wider political
-networks.
-</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section" id="ahoms">
-
-<h2>🐘 6. The Ahoms</h2>
-
-<p>
-The Ahoms established a powerful state in the Brahmaputra valley. Their
-history demonstrates how a community could transform its political and
-economic organisation over time.
-</p>
-
-<h3>Ahom State</h3>
-
-<p>
-The Ahom kingdom developed administrative institutions and military
-organisation. Agriculture was important for supporting the state.
-</p>
-
-<h3>Paik System</h3>
-
-<p>
-The Ahom state organised labour and military service through systems involving
-the paik population.
-</p>
-
-<p>
-People could be required to provide labour or military service to the state.
-This helped the rulers mobilise resources.
-</p>
-
-<div class="highlight">
-<strong>UPSC Connection:</strong>
-The Ahom example illustrates the relationship between state formation,
-agriculture, labour organisation and military power.
-</div>
-
-</section>
-
-<section class="section" id="settled">
-
-<h2>🌾 7. Settled Agricultural Communities</h2>
-
-<p>
-Settled agricultural communities generally lived in villages where farming
-formed the economic foundation.
-</p>
-
-<p>
-Agriculture produced food and sometimes a surplus that could support artisans,
-traders, rulers and other groups.
-</p>
-
-<div class="flow">
-
-<div class="flow-box">🌾 Agriculture</div>
-<div class="arrow">➡</div>
-<div class="flow-box">📦 Surplus</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🛠️ Crafts</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🛒 Trade</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🏙️ Markets</div>
-
-</div>
-
-<h3>Village Economy</h3>
-
-<p>
-Villages included farmers as well as artisans and service providers. Their
-activities were connected through exchange and local economic relationships.
-</p>
-
-</section>
-
-<section class="section">
-
-<h2>⚔️ 8. Tribes and States</h2>
-
-<p>
-The relationship between tribal communities and states was complex.
-Sometimes tribal groups resisted state expansion. In other situations,
-tribal chiefs entered political alliances or established their own states.
-</p>
-
-<table>
-
-<tr>
-<th>Community / Structure</th>
-<th>Possible Economic Base</th>
-<th>Political Relationship</th>
-</tr>
-
-<tr>
-<td>Forest communities</td>
-<td>Forest resources, hunting, cultivation</td>
-<td>Independent or connected with states</td>
-</tr>
-
-<tr>
-<td>Pastoral groups</td>
-<td>Livestock</td>
-<td>Trade, migration and political interaction</td>
-</tr>
-
-<tr>
-<td>Settled farmers</td>
-<td>Agriculture</td>
-<td>Village and state structures</td>
-</tr>
-
-<tr>
-<td>Tribal kingdoms</td>
-<td>Agriculture, resources and trade</td>
-<td>Organised political authority</td>
-</tr>
-
-</table>
-
-</section>
-
-<section class="section">
-
-<h2>🏷️ 9. Caste and Tribal Society</h2>
-
-<p>
-Tribal communities interacted with caste-based settled societies in many
-regions. These interactions could involve trade, migration, political
-alliances and cultural exchange.
-</p>
-
-<p>
-Over long periods, social boundaries could change. Some tribal groups became
-part of wider political and social structures, while others retained distinct
-identities and institutions.
-</p>
-
-<div class="highlight">
-<strong>Key point:</strong>
-Indian society was not static. Social identities and political structures
-changed over time through migration, economic change, state formation and
-interaction between communities.
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>🧭 10. Regional Diversity</h2>
-
-<p>
-Different geographical environments produced different patterns of life.
-Forests, mountains, river valleys, deserts and fertile plains supported
-different economic strategies.
-</p>
-
-<table>
-
-<tr>
-<th>Region / Environment</th>
-<th>Possible Economic Activities</th>
-</tr>
-
-<tr>
-<td>Forests</td>
-<td>Forest products, hunting, shifting cultivation</td>
-</tr>
-
-<tr>
-<td>Grasslands</td>
-<td>Pastoralism and animal rearing</td>
-</tr>
-
-<tr>
-<td>River valleys</td>
-<td>Agriculture, irrigation and trade</td>
-</tr>
-
-<tr>
-<td>Hilly regions</td>
-<td>Mixed farming, pastoralism and forest activities</td>
-</tr>
-
-<tr>
-<td>Trade routes</td>
-<td>Transport, exchange and commercial activities</td>
-</tr>
-
-</table>
-
-</section>
-
-<!-- TIMELINE -->
-
-<section class="section">
-
-<h2>⏳ Historical Development Flow</h2>
-
-<div class="timeline">
-
-<div class="timeline-item">
-<strong>Stage 1:</strong>
-Communities developed different economic practices according to their
-environment.
-</div>
-
-<div class="timeline-item">
-<strong>Stage 2:</strong>
-Agriculture, pastoralism, hunting, forest activities and trade created
-interdependence.
-</div>
-
-<div class="timeline-item">
-<strong>Stage 3:</strong>
-Some tribal chiefs gained greater political authority.
-</div>
-
-<div class="timeline-item">
-<strong>Stage 4:</strong>
-Some groups developed larger political structures and kingdoms.
-</div>
-
-<div class="timeline-item">
-<strong>Stage 5:</strong>
-Interaction between tribes, settled communities and states transformed
-society over time.
-</div>
-
-</div>
-
-</section>
-
-<!-- AUDIO -->
-
-<section class="section audio-box">
-
-<h2>🎧 Audio Learning</h2>
-
-<p>
-Listen to the English or Hindi study explanation using your device's
-built-in speech system.
-</p>
-
-<button onclick="speakEnglish()">▶️ English Audio</button>
-<button onclick="speakHindi()">▶️ Hindi Audio</button>
-<button onclick="stopSpeech()">⏹️ Stop</button>
-
-</section>
-
-<!-- HINDI -->
-
-<section class="section" id="hindi">
-
-<h2>🇮🇳 हिंदी में विस्तृत अध्ययन</h2>
-
-<h3>1. जनजातीय समाज</h3>
-
-<p>
-मध्यकालीन भारत में अनेक प्रकार के समुदाय रहते थे। कुछ समुदाय जंगलों,
-पहाड़ी क्षेत्रों और अन्य प्राकृतिक क्षेत्रों पर निर्भर थे, जबकि कुछ समुदाय
-स्थायी कृषि करते थे।
-</p>
-
-<p>
-जनजातीय समाज में रिश्तेदारी, परिवार और कबीलाई संबंधों का महत्वपूर्ण स्थान
-था। अलग-अलग जनजातियों की आर्थिक और राजनीतिक व्यवस्था एक जैसी नहीं थी।
-</p>
-
-<h3>2. खानाबदोश समुदाय</h3>
-
-<p>
-खानाबदोश समुदाय एक स्थान पर स्थायी रूप से नहीं रहते थे। कई पशुपालक समुदाय
-अपने पशुओं के लिए चारे और पानी की उपलब्धता के अनुसार स्थान बदलते थे।
-</p>
-
-<p>
-कुछ घुमंतू समूह व्यापार से भी जुड़े हुए थे। वे अलग-अलग क्षेत्रों के बीच
-वस्तुओं को ले जाने में महत्वपूर्ण भूमिका निभा सकते थे।
-</p>
-
-<h3>3. स्थानांतरित कृषि</h3>
-
-<p>
-स्थानांतरित कृषि में किसी क्षेत्र में कुछ समय के लिए खेती की जाती है और
-परिस्थितियों के अनुसार दूसरे क्षेत्र की ओर चला जाता है।
-</p>
-
-<p>
-यह व्यवस्था विशेष रूप से जंगलों और पहाड़ी क्षेत्रों के कुछ समुदायों से
-जुड़ी रही है।
-</p>
-
-<h3>4. गोंड</h3>
-
-<p>
-गोंड मध्य भारत का एक महत्वपूर्ण जनजातीय समुदाय था। समय के साथ कुछ गोंड
-समूहों ने बड़े राजनीतिक संगठन और राज्य विकसित किए।
-</p>
-
-<p>
-कृषि के विस्तार, राजनीतिक शक्ति और पड़ोसी राज्यों के साथ संबंधों ने इनके
-राजनीतिक विकास को प्रभावित किया।
-</p>
-
-<h3>5. अहोम</h3>
-
-<p>
-अहोमों ने ब्रह्मपुत्र घाटी में एक शक्तिशाली राज्य का निर्माण किया।
-उनकी प्रशासनिक और सैन्य व्यवस्था राज्य निर्माण के अध्ययन के लिए महत्वपूर्ण
-है।
-</p>
-
-<p>
-अहोम राज्य में कृषि और श्रम संगठन का महत्वपूर्ण स्थान था। paik व्यवस्था के
-माध्यम से लोगों से श्रम या सैन्य सेवा ली जा सकती थी।
-</p>
-
-<h3>6. स्थायी कृषि समाज</h3>
-
-<p>
-स्थायी कृषि करने वाले समुदाय गांवों में रहते थे। कृषि से प्राप्त उत्पादन
-गांव की अर्थव्यवस्था का आधार था।
-</p>
-
-<p>
-अतिरिक्त उत्पादन से कारीगरों, व्यापारियों और अन्य समूहों को भी सहायता मिल
-सकती थी।
-</p>
-
-<h3>7. जनजाति और राज्य</h3>
-
-<p>
-जनजातीय समुदाय और राज्यों के संबंध हमेशा एक जैसे नहीं थे। कहीं संघर्ष हुआ,
-कहीं राजनीतिक सहयोग हुआ और कहीं जनजातीय प्रमुखों ने स्वयं राज्य स्थापित
-किए।
-</p>
-
-<div class="highlight">
-<strong>याद रखें:</strong>
-भारतीय समाज समय के साथ बदलता रहा। आर्थिक गतिविधियों, प्रवास, व्यापार,
-राजनीतिक शक्ति और अलग-अलग समुदायों के संपर्क से सामाजिक परिवर्तन हुए।
-</div>
-
-</section>
-
-<!-- UPSC -->
-
-<section class="section" id="upsc">
-
-<h2>🎯 UPSC Important Points</h2>
-
-<div class="card-grid">
-
-<div class="info-card">
-<h3>📌 Tribal Society</h3>
-<p>
-Kinship, clans and local institutions were important features of many tribal
-communities.
-</p>
-</div>
-
-<div class="info-card">
-<h3>📌 Nomads</h3>
-<p>
-Mobility was often connected with pastoralism, seasonal resources and trade.
-</p>
-</div>
-
-<div class="info-card">
-<h3>📌 Gonds</h3>
-<p>
-Some Gond groups developed larger political structures and kingdoms.
-</p>
-</div>
-
-<div class="info-card">
-<h3>📌 Ahoms</h3>
-<p>
-The Ahom state developed in the Brahmaputra valley with organised labour and
-military systems.
-</p>
-</div>
-
-<div class="info-card">
-<h3>📌 Shifting Cultivation</h3>
-<p>
-A cultivation practice associated with movement between cultivated areas in
-certain ecological regions.
-</p>
-</div>
-
-<div class="info-card">
-<h3>📌 State Formation</h3>
-<p>
-Some tribal chiefs became powerful rulers and established organised political
-structures.
-</p>
-</div>
-
-</div>
-
-<div class="highlight">
-<strong>UPSC Prelims Focus:</strong>
-Tribes • Nomadic pastoralism • Shifting cultivation • Gonds • Ahoms • Paik
-system • State formation • Regional diversity
-</div>
-
-</section>
-
-<!-- MAINS -->
-
-<section class="section" id="mains">
-
-<h2>✍️ Mains Practice</h2>
-
-<div class="mains-box">
-<strong>Q1.</strong>
-Explain the major features of tribal societies in medieval India.
-</div>
-
-<div class="mains-box">
-<strong>Q2.</strong>
-Discuss the economic importance of nomadic and pastoral communities.
-</div>
-
-<div class="mains-box">
-<strong>Q3.</strong>
-How did some tribal groups develop organised political structures?
-</div>
-
-<div class="mains-box">
-<strong>Q4.</strong>
-Discuss the importance of the Gonds and Ahoms in understanding tribal state
-formation.
-</div>
-
-<div class="mains-box">
-<strong>Q5.</strong>
-Explain how geography influenced the economic and social organisation of
-different communities in medieval India.
-</div>
-
-</section>
-
-<!-- FINAL FLOW -->
-
-<section class="section">
-
-<h2>🔄 Chapter Conceptual Flow</h2>
-
-<div class="flow">
-
-<div class="flow-box">🌍 Environment</div>
-<div class="arrow">➡</div>
-<div class="flow-box">👥 Community</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🌾 Economy</div>
-<div class="arrow">➡</div>
-<div class="flow-box">🤝 Interaction</div>
-<div class="arrow">➡</div>
-<div class="flow-box">👑 State Formation</div>
-
-</div>
 
 <div class="highlight">
 <strong>Core Idea:</strong>
-Environment influenced economic activities → economic activities shaped
-community organisation → interaction created wider networks → some groups
-developed stronger political structures.
+A geographical place can become a cultural place when generations of
+people attach memories, stories, values and practices to it.
 </div>
 
+<div class="flow">
+<div class="flow-item">Natural Place</div>
+<div class="arrow">→</div>
+<div class="flow-item">Story / Memory</div>
+<div class="arrow">→</div>
+<div class="flow-item">Community Practice</div>
+<div class="arrow">→</div>
+<div class="flow-item">Sacred Meaning</div>
+</div>
+
+<div class="analysis">
+<strong>Analysis:</strong>
+This shows the relationship between geography and history. A river may
+begin as a natural feature, but over centuries people may associate it
+with stories, settlements, rituals, pilgrimage and cultural identity.
+</div>
 </section>
+
+
+<!-- LANDSCAPE VISUAL -->
+
+<section class="section">
+<h2>2. How Does a Landscape Become Sacred?</h2>
+
+<div class="visual">
+<div class="land">
+  <div class="mountain m1"></div>
+  <div class="mountain m2"></div>
+  <div class="mountain m3"></div>
+  <div class="river"></div>
+  <div class="temple"></div>
+</div>
+</div>
+
+<div class="flow">
+<div class="flow-item">River</div>
+<div class="flow-item">Mountain</div>
+<div class="flow-item">Forest</div>
+<div class="flow-item">Temple</div>
+<div class="flow-item">Pilgrimage</div>
+</div>
+
+<p>
+The visual represents a simple landscape containing natural and
+human-created features. Different communities can attach different
+meanings to these places.
+</p>
+
+<div class="example">
+<strong>Example:</strong>
+A river can provide water, support agriculture and transport people.
+At the same time, communities may consider the same river culturally
+important and develop pilgrimage traditions around it.
+</div>
+</section>
+
+
+<!-- SACRED GEOGRAPHY -->
+
+<section class="section">
+<h2>3. Sacred Geography</h2>
+
+<p>
+<strong>Sacred geography</strong> means the cultural understanding of
+space in which certain places are regarded as especially meaningful or
+sacred.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<strong>🌊 Rivers</strong>
+Rivers can become centres of settlement, agriculture, pilgrimage and
+cultural memory.
+</div>
+
+<div class="card">
+<strong>⛰️ Mountains</strong>
+Mountains may be associated with spiritual traditions, stories and
+pilgrimage.
+</div>
+
+<div class="🌳 card">
+<strong>🌳 Forests</strong>
+Forests can be connected with hermitages, sages, traditions and
+community memories.
+</div>
+
+<div class="card">
+<strong>🛕 Temples</strong>
+Temples can become cultural centres connecting architecture, worship,
+festivals and local communities.
+</div>
+
+</div>
+
+<div class="analysis">
+<strong>UPSC Connection:</strong>
+Sacred geography is useful for understanding the interaction between
+<strong>geography, society, culture and history.</strong>
+</div>
+</section>
+
+
+<!-- PILGRIMAGE -->
+
+<section class="section">
+<h2>4. Pilgrimage and Cultural Connections</h2>
+
+<p>
+When people travel to places considered sacred, the journey itself can
+create connections between different regions.
+</p>
+
+<div class="flow">
+<div class="flow-item">Home Region</div>
+<div class="arrow">→</div>
+<div class="flow-item">Journey</div>
+<div class="arrow">→</div>
+<div class="flow-item">Sacred Place</div>
+<div class="arrow">→</div>
+<div class="flow-item">Interaction</div>
+<div class="arrow">→</div>
+<div class="flow-item">Cultural Exchange</div>
+</div>
+
+<h3>What could travel carry?</h3>
+
+<ul>
+<li>Ideas</li>
+<li>Stories</li>
+<li>Languages and expressions</li>
+<li>Food traditions</li>
+<li>Artistic styles</li>
+<li>Religious practices</li>
+<li>Local customs</li>
+<li>Knowledge about distant regions</li>
+</ul>
+
+<div class="example">
+<strong>Example:</strong>
+Imagine a traveller moving from one region to another for pilgrimage.
+The traveller may encounter different foods, languages, architecture
+and customs. Some ideas may travel back with that person.
+</div>
+
+<div class="analysis">
+<strong>Analysis:</strong>
+Pilgrimage therefore has a geographical dimension and a social
+dimension. It can connect distant communities without requiring them to
+be culturally identical.
+</div>
+</section>
+
+
+<!-- RIVERS -->
+
+<section class="section">
+<h2>5. Rivers and Sacred Landscapes</h2>
+
+<p>
+Rivers have historically influenced where people live and how societies
+develop. Their importance can therefore be simultaneously
+<strong>economic, ecological, social and cultural.</strong>
+</p>
+
+<table>
+<tr>
+<th>River-related role</th>
+<th>Importance</th>
+</tr>
+
+<tr>
+<td>Water</td>
+<td>Supports human life and agriculture.</td>
+</tr>
+
+<tr>
+<td>Settlement</td>
+<td>Communities often develop around accessible water sources.</td>
+</tr>
+
+<tr>
+<td>Transport</td>
+<td>Rivers can connect different areas.</td>
+</tr>
+
+<tr>
+<td>Cultural memory</td>
+<td>Stories and traditions may develop around rivers.</td>
+</tr>
+
+<tr>
+<td>Pilgrimage</td>
+<td>Certain river locations can become pilgrimage centres.</td>
+</tr>
+</table>
+
+<div class="highlight">
+<strong>Important:</strong>
+The same geographical feature can have multiple meanings at the same
+time. Geography does not operate separately from culture and society.
+</div>
+</section>
+
+
+<!-- MOUNTAINS -->
+
+<section class="section">
+<h2>6. Mountains, Forests and Sacred Places</h2>
+
+<p>
+Mountains and forests have often been represented in Indian traditions
+as spaces connected with spiritual practice, sages, pilgrimage and
+stories.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<strong>Mountains</strong>
+Difficult terrain can create distinctive landscapes and may become
+associated with pilgrimage traditions.
+</div>
+
+<div class="card">
+<strong>Forests</strong>
+Forests appear in many traditional narratives as places of residence,
+learning, meditation or exile.
+</div>
+
+<div class="card">
+<strong>Caves</strong>
+Natural caves can acquire cultural importance when connected with
+religious or historical traditions.
+</div>
+
+<div class="card">
+<strong>Water bodies</strong>
+Lakes, ponds and springs can become important to local communities.
+</div>
+
+</div>
+
+<div class="analysis">
+<strong>Analytical Point:</strong>
+The sacred meaning of a place is not determined only by its physical
+appearance. Human memory, narratives and community practices also
+matter.
+</div>
+</section>
+
+
+<!-- STORIES -->
+
+<section class="section">
+<h2>7. Stories, Memory and Place</h2>
+
+<p>
+Stories help communities connect the present with the past. When stories
+are repeatedly told about a particular place, that place can become an
+important part of collective memory.
+</p>
+
+<div class="flow">
+<div class="flow-item">Story</div>
+<div class="arrow">→</div>
+<div class="flow-item">Memory</div>
+<div class="arrow">→</div>
+<div class="flow-item">Tradition</div>
+<div class="arrow">→</div>
+<div class="flow-item">Place Identity</div>
+</div>
+
+<h3>Why is this important for historians?</h3>
+
+<p>
+Historians do not simply accept every traditional story as literal
+historical evidence. Instead, they can study stories as evidence of
+what communities remembered, valued and believed.
+</p>
+
+<div class="analysis">
+<strong>Source Analysis:</strong>
+A traditional story may not always establish that every event happened
+exactly as narrated. However, the story itself can be valuable for
+understanding cultural memory and social values.
+</div>
+</section>
+
+
+<!-- TEMPLES -->
+
+<section class="section">
+<h2>8. Temples as Cultural Centres</h2>
+
+<p>
+Temples can be studied not only as religious structures but also as
+historical spaces connected with architecture, art, donations,
+communities and local economies.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<strong>Architecture</strong>
+Building styles provide evidence about artistic and technological
+traditions.
+</div>
+
+<div class="card">
+<strong>Sculpture</strong>
+Images and decorative elements reveal artistic ideas.
+</div>
+
+<div class="card">
+<strong>Community</strong>
+Temples can become spaces where communities gather.
+</div>
+
+<div class="card">
+<strong>Economy</strong>
+Land, donations, craftsmen and visitors can connect religious centres
+with economic activity.
+</div>
+
+</div>
+
+<div class="example">
+<strong>Example:</strong>
+A historical temple can therefore be studied from several perspectives:
+history, art, architecture, economy, society and geography.
+</div>
+</section>
+
+
+<!-- ANIMATION -->
+
+<section class="section">
+<h2>9. Concept Animation — From Land to Sacred Landscape</h2>
+
+<div class="animate-flow">
+<div class="animate-box">🌍 Physical Landscape</div>
+<div class="animate-box">📖 Stories & Memories</div>
+<div class="animate-box">👥 Community Practices</div>
+<div class="animate-box">🛕 Sacred Meaning</div>
+<div class="animate-box">🧭 Pilgrimage & Connections</div>
+</div>
+
+<button class="complete-btn" onclick="animateConcept()">
+▶ Play Concept Animation
+</button>
+
+<div class="analysis">
+<strong>What this animation explains:</strong>
+A place does not become culturally meaningful through geography alone.
+Human interaction with that place over generations can create memory,
+tradition and sacred meaning.
+</div>
+</section>
+
+
+<!-- UNITY -->
+
+<section class="section">
+<h2>10. Sacred Places and Cultural Unity</h2>
+
+<p>
+Pilgrimage networks and shared cultural traditions can connect people
+from different regions.
+</p>
+
+<div class="flow">
+<div class="flow-item">Different Regions</div>
+<div class="arrow">→</div>
+<div class="flow-item">Shared Places</div>
+<div class="arrow">→</div>
+<div class="flow-item">Travel</div>
+<div class="arrow">→</div>
+<div class="flow-item">Interaction</div>
+<div class="arrow">→</div>
+<div class="flow-item">Cultural Connections</div>
+</div>
+
+<div class="highlight">
+<strong>Unity does not require uniformity.</strong>
+Different communities can preserve their own languages, food,
+customs and traditions while participating in wider cultural networks.
+</div>
+</section>
+
+
+<!-- REAL LIFE -->
+
+<section class="section">
+<h2>11. Real-Life Example: Smartphone Map</h2>
+
+<p>
+Imagine opening a map application on your phone.
+It shows a physical location using geographical coordinates.
+</p>
+
+<p>
+Now imagine that the same location also has stories, festivals,
+historical memories and community traditions.
+</p>
+
+<div class="grid">
+
+<div class="card">
+<strong>Map</strong>
+Shows where the place is.
+</div>
+
+<div class="card">
+<strong>History</strong>
+Explains how people interacted with it over time.
+</div>
+
+<div class="card">
+<strong>Culture</strong>
+Explains meanings attached to the place.
+</div>
+
+<div class="card">
+<strong>Society</strong>
+Shows how communities use and remember it.
+</div>
+
+</div>
+
+<div class="analysis">
+This is why historians often need both geographical and cultural
+perspectives to understand a place.
+</div>
+</section>
+
+
+<!-- ENGLISH REVISION -->
+
+<section class="section">
+<h2>12. English Quick Explanation</h2>
+
+<p>
+Sacred landscapes are places whose physical features become connected
+with cultural meanings through stories, memories, traditions and
+community practices.
+</p>
+
+<p>
+Rivers, mountains, forests, temples and pilgrimage centres can all form
+part of such landscapes.
+</p>
+
+<p>
+The study of sacred geography helps us understand how geography and
+human society influence one another.
+</p>
+</section>
+
+
+<!-- HINDI -->
+
+<section class="section">
+<h2>13. हिंदी में विस्तृत समझ</h2>
+
+<h3>पवित्र भूमि या Sacred Landscape क्या है?</h3>
+
+<p>
+किसी स्थान का महत्व केवल उसकी भौगोलिक स्थिति से निर्धारित नहीं होता।
+समय के साथ उस स्थान से जुड़ी कहानियाँ, परंपराएँ, यात्राएँ और सामुदायिक
+स्मृतियाँ उसे विशेष सांस्कृतिक या धार्मिक महत्व दे सकती हैं।
+</p>
+
+<h3>नदियों का महत्व</h3>
+
+<p>
+नदियाँ जीवन, कृषि और बस्तियों के लिए महत्वपूर्ण रही हैं। इनके साथ
+अनेक सांस्कृतिक परंपराएँ भी विकसित हो सकती हैं।
+</p>
+
+<h3>तीर्थयात्रा</h3>
+
+<p>
+तीर्थयात्रा अलग-अलग क्षेत्रों के लोगों को एक-दूसरे से जोड़ सकती है।
+यात्रा के दौरान विचार, भोजन, भाषा, कला और परंपराओं का आदान-प्रदान हो
+सकता है।
+</p>
+
+<h3>कहानियाँ और स्मृति</h3>
+
+<p>
+किसी स्थान से जुड़ी कहानी पीढ़ी-दर-पीढ़ी सुनाई जाए तो वह कहानी उस
+समुदाय की सामूहिक स्मृति का हिस्सा बन सकती है।
+</p>
+
+<div class="highlight">
+<strong>सरल सूत्र:</strong><br>
+स्थान → कहानी → स्मृति → परंपरा → सामुदायिक पहचान
+</div>
+</section>
+
+
+<!-- AUDIO -->
+
+<section class="section">
+<h2>14. 🎧 Audio Learning</h2>
+
+<p>
+नीचे दिए buttons से chapter का selected summary सुन सकते हो।
+</p>
+
+<div class="audio-box">
+<button onclick="speakEnglish()">🔊 English</button>
+<button onclick="speakHindi()">🔊 Hindi</button>
+<button onclick="stopSpeech()">⏹ Stop</button>
+</div>
+</section>
+
+
+<!-- UPSC -->
+
+<section class="section upsc">
+<h2>15. 🎯 UPSC Important Points</h2>
+
+<ul>
+<li>Sacred geography connects physical geography with culture.</li>
+<li>Rivers can have ecological, economic and cultural importance.</li>
+<li>Pilgrimage can create inter-regional cultural connections.</li>
+<li>Stories can be studied as evidence of cultural memory.</li>
+<li>Temples can be studied through architecture, art, society and economy.</li>
+<li>Different communities can participate in shared cultural networks while maintaining diversity.</li>
+<li>Geography and history often need to be studied together.</li>
+</ul>
+</section>
+
+
+<!-- MAINS -->
+
+<section class="section">
+<h2>16. ✍️ Mains Practice</h2>
+
+<div class="question">
+<strong>Q1.</strong>
+Explain how a physical landscape can acquire cultural and sacred
+significance over time.
+</div>
+
+<div class="question">
+<strong>Q2.</strong>
+Discuss the relationship between rivers, settlements and cultural
+traditions.
+</div>
+
+<div class="question">
+<strong>Q3.</strong>
+How can pilgrimage contribute to cultural interaction between different
+regions?
+</div>
+
+<div class="question">
+<strong>Q4.</strong>
+Why should historians distinguish between a traditional story and
+historical evidence?
+</div>
+
+<div class="question">
+<strong>Q5.</strong>
+Explain how sacred geography can help us understand India's cultural
+diversity and unity.
+</div>
+</section>
+
 
 <!-- QUICK REVISION -->
 
-<section class="section" id="revision">
+<section class="section">
+<h2>17. 🔄 Quick Revision</h2>
 
-<h2>⚡ Quick Revision</h2>
+<div class="grid">
 
-<div class="revision">
-
-<ul>
-<li>Tribal societies were diverse and often organised through kinship.</li>
-<li>Many communities depended on forests, pastoralism or agriculture.</li>
-<li>Nomadic groups moved for pasture, resources or trade.</li>
-<li>Shifting cultivation was practised in certain ecological regions.</li>
-<li>Some Gond groups developed kingdoms.</li>
-<li>The Ahoms established a powerful state in the Brahmaputra valley.</li>
-<li>Settled agricultural villages formed an important economic base.</li>
-<li>Tribes and states interacted through conflict, cooperation and exchange.</li>
-<li>Social identities could change through long-term interaction.</li>
-<li>Regional geography strongly influenced community life.</li>
-</ul>
-
+<div class="card">
+<strong>1</strong>
+Land can have physical as well as cultural meaning.
 </div>
 
+<div class="card">
+<strong>2</strong>
+Sacred geography studies culturally meaningful places.
+</div>
+
+<div class="card">
+<strong>3</strong>
+Rivers can have multiple roles.
+</div>
+
+<div class="card">
+<strong>4</strong>
+Pilgrimage creates connections.
+</div>
+
+<div class="card">
+<strong>5</strong>
+Stories contribute to collective memory.
+</div>
+
+<div class="card">
+<strong>6</strong>
+Temples can be studied from multiple historical perspectives.
+</div>
+
+</div>
 </section>
 
-<!-- TESTS -->
 
-<section class="section" id="tests">
+<!-- QUIZ -->
 
-<h2>📝 Chapter Tests — 20 MCQs</h2>
-
-<p>
-<strong>Pattern:</strong> 4 Tests × 5 Questions = 20 Questions
-</p>
-
-<div id="quizContainer"></div>
-
-</section>
-
-<section class="section" style="text-align:center;">
-
-<h2>🏆 Chapter Completion</h2>
+<section class="section">
+<h2>18. 📝 Test Series — 20 MCQs</h2>
 
 <p>
-20 MCQs attempt karne aur revision complete karne ke baad chapter ko complete
-mark karein.
+<strong>4 Tests × 5 Questions = 20 Questions</strong>
 </p>
 
-<br>
+<div id="quiz"></div>
 
 <button class="complete-btn" onclick="completeChapter()">
-✅ Mark Chapter Complete
+✅ Complete Chapter
 </button>
-
-<p id="completeMessage" style="margin-top:15px;font-weight:bold;"></p>
 
 </section>
 
-</div>
-
-<button class="top-btn" onclick="window.scrollTo({top:0,behavior:'smooth'})">
-↑
-</button>
+</main>
 
 <footer>
-  <p>🇮🇳 UPSC Shiksha</p>
-  <p>Free UPSC Learning • Original Study Material • Learn Smart</p>
+<p>🇮🇳 UPSC Shiksha</p>
+<p>Class 7 History • Current NCERT 2026–27</p>
+<p>Original educational explanations for UPSC-oriented learning.</p>
 </footer>
+
 
 <script>
 
 const questions = [
 
-/* TEST 1 */
-
 {
-q:"1. What was an important feature of many tribal societies?",
-options:[
-"Kinship and clan relationships",
-"Only urban administration",
-"Only maritime trade",
-"Modern industrial organisation"
+q:"Sacred geography mainly studies the relationship between:",
+o:[
+"Geography and cultural meaning",
+"Only climate and rainfall",
+"Only political boundaries",
+"Only agricultural production"
 ],
-answer:"A",
-exp:"Kinship and clan relationships were important organising principles in many tribal societies."
+a:0,
+e:"Sacred geography examines how particular physical places acquire cultural, religious or symbolic significance."
 },
 
 {
-q:"2. Nomadic pastoralists mainly depended on:",
-options:[
-"Factory production",
-"Livestock",
-"Large urban industries",
-"Printing presses"
+q:"Which of the following can contribute to a place becoming culturally sacred?",
+o:[
+"Stories and traditions",
+"Only its altitude",
+"Only its population",
+"Only its distance from a city"
 ],
-answer:"B",
-exp:"Pastoral nomadic communities depended substantially on livestock and moved according to pasture and water availability."
+a:0,
+e:"Stories, traditions, memories and community practices can give a place cultural significance."
 },
 
 {
-q:"3. Shifting cultivation is associated with:",
-options:[
-"Permanent industrial farming everywhere",
-"Movement between cultivated areas in certain regions",
-"Only urban agriculture",
-"Only plantation agriculture"
+q:"Why have rivers often been important to human societies?",
+o:[
+"They provide water and support settlements",
+"They prevent all migration",
+"They cannot support agriculture",
+"They have no connection with settlements"
 ],
-answer:"B",
-exp:"Shifting cultivation involves cultivating an area for a period and moving to another area according to local ecological conditions."
+a:0,
+e:"Rivers provide water and can support agriculture, settlements, transport and cultural activity."
 },
 
 {
-q:"4. The Gonds were historically associated particularly with:",
-options:[
-"Central India",
-"Only coastal Kerala",
-"Only Bengal delta",
-"Only Kashmir"
+q:"Pilgrimage can contribute to:",
+o:[
+"Cultural interaction",
+"Complete isolation",
+"Elimination of all diversity",
+"Stopping movement between regions"
 ],
-answer:"A",
-exp:"The Gonds were an important tribal community associated with central India."
+a:0,
+e:"Pilgrimage involves movement and interaction and can therefore connect different communities."
 },
 
 {
-q:"5. The Ahom state developed prominently in:",
-options:[
-"The Brahmaputra valley",
-"The Thar Desert",
-"Southern Gujarat",
-"Western Rajasthan"
+q:"A traditional story about a place can be useful to historians because it can reveal:",
+o:[
+"Cultural memory and values",
+"The exact weather of every year",
+"Every historical event with certainty",
+"Only population statistics"
 ],
-answer:"A",
-exp:"The Ahom state developed in the Brahmaputra valley."
-},
-
-/* TEST 2 */
-
-{
-q:"6. Which factor was important for pastoral nomadic movement?",
-options:[
-"Pasture and water",
-"Printing technology",
-"Factory locations",
-"Parliamentary elections"
-],
-answer:"A",
-exp:"Pastoral communities often moved according to the availability of pasture and water."
+a:0,
+e:"Traditional stories can reveal what communities remembered, valued and believed, even when they cannot independently prove every event."
 },
 
 {
-q:"7. Tribal communities could interact with settled societies through:",
-options:[
-"Trade and political relations",
-"Only warfare",
-"Only isolation",
-"Only religious festivals"
+q:"Which is an example of sacred geography?",
+o:[
+"A culturally significant river or mountain",
+"Only a railway timetable",
+"Only a modern shopping mall",
+"Only a political party office"
 ],
-answer:"A",
-exp:"Trade, political alliances, migration and cultural exchange created interaction between tribal and settled communities."
+a:0,
+e:"Rivers and mountains can acquire sacred or culturally significant meanings."
 },
 
 {
-q:"8. Some tribal chiefs became powerful because of:",
-options:[
-"Political and economic changes",
-"Modern elections",
-"Industrialisation",
-"Colonial railways"
+q:"Why should a historian not automatically treat every traditional story as literal historical fact?",
+o:[
+"Stories may contain cultural memory rather than independently verified events",
+"Stories are always meaningless",
+"Stories can never be studied",
+"Stories are always modern inventions"
 ],
-answer:"A",
-exp:"Economic growth, agriculture, control of resources and political organisation could enable chiefs to gain greater authority."
+a:0,
+e:"Traditional narratives can be valuable sources for cultural memory but require critical examination as historical evidence."
 },
 
 {
-q:"9. Agriculture could support state formation by providing:",
-options:[
-"Food and revenue resources",
-"Only entertainment",
-"Only weapons",
-"Only religious texts"
+q:"Temples can be studied by historians through:",
+o:[
+"Architecture, art, society and economy",
+"Only their colour",
+"Only their height",
+"Only their location"
 ],
-answer:"A",
-exp:"Agricultural production could support populations and provide resources for political authorities."
+a:0,
+e:"Temples can provide evidence about architecture, sculpture, social organisation and economic activity."
 },
 
 {
-q:"10. The Ahom example helps historians understand:",
-options:[
-"State formation and labour organisation",
-"Only ocean navigation",
-"Modern banking",
-"Industrial capitalism"
+q:"What does the phrase 'unity does not require uniformity' mean?",
+o:[
+"Different communities can remain diverse while sharing wider connections",
+"Everyone must have identical customs",
+"Diversity must disappear",
+"Communities cannot interact"
 ],
-answer:"A",
-exp:"The Ahom state demonstrates links between agriculture, labour organisation, administration and military power."
-},
-
-/* TEST 3 */
-
-{
-q:"11. Which community is associated with pastoralism?",
-options:[
-"Nomadic pastoralists",
-"Only temple priests",
-"Only merchants",
-"Only scribes"
-],
-answer:"A",
-exp:"Nomadic pastoralists depended substantially on animals and moved in search of pasture and water."
+a:0,
+e:"Unity can exist even when communities retain different languages, customs, foods and traditions."
 },
 
 {
-q:"12. What does kinship refer to?",
-options:[
-"Relationships based on family and ancestry",
-"Only commercial contracts",
-"Only military service",
-"Only taxation"
+q:"Which sequence best represents the development of cultural meaning around a place?",
+o:[
+"Place → Story → Memory → Tradition",
+"Money → War → Election → Tax",
+"Machine → Factory → Road → Market",
+"Rain → Exam → School → Sport"
 ],
-answer:"A",
-exp:"Kinship refers to relationships based on family, ancestry and related social connections."
+a:0,
+e:"A place can become culturally meaningful through stories, memories and traditions built around it."
 },
 
 {
-q:"13. Tribal societies were:",
-options:[
-"Completely identical everywhere",
-"Diverse across regions",
-"Only urban",
-"Only agricultural"
+q:"Sacred landscapes demonstrate the connection between:",
+o:[
+"Human society and geography",
+"Only mathematics and physics",
+"Only taxation and elections",
+"Only technology and industry"
 ],
-answer:"B",
-exp:"Tribal societies varied greatly according to region, environment, economy and political organisation."
+a:0,
+e:"Sacred landscapes show how people interact with and give meaning to geographical spaces."
 },
 
 {
-q:"14. What could forest communities obtain from forests?",
-options:[
-"Forest products and resources",
-"Only coins",
-"Only books",
-"Only imported goods"
+q:"Which natural feature may become connected with pilgrimage traditions?",
+o:[
+"Mountains",
+"Only highways",
+"Only factories",
+"Only airports"
 ],
-answer:"A",
-exp:"Forest communities could depend on forests for food, fuel, medicines, hunting and other resources."
+a:0,
+e:"Mountains and other natural features can become culturally significant pilgrimage locations."
 },
 
 {
-q:"15. Settled villages generally depended heavily on:",
-options:[
-"Agriculture",
-"Only long-distance migration",
-"Only hunting",
-"Only sea trade"
+q:"What can travellers carry from one region to another?",
+o:[
+"Ideas and cultural practices",
+"Only physical rocks",
+"Only rainfall",
+"Only geographical coordinates"
 ],
-answer:"A",
-exp:"Agriculture was a major economic foundation of settled village communities."
-},
-
-/* TEST 4 */
-
-{
-q:"16. Which statement about tribal-state relations is correct?",
-options:[
-"They could involve conflict as well as cooperation",
-"They were always peaceful",
-"They were always hostile",
-"They never existed"
-],
-answer:"A",
-exp:"Relations between tribes and states varied and could include conflict, cooperation, alliances and political integration."
+a:0,
+e:"Travel can spread ideas, stories, foods, artistic forms, languages and practices."
 },
 
 {
-q:"17. Why is regional geography important in studying communities?",
-options:[
-"It influenced available resources and economic activities",
-"It had no effect",
-"It only influenced language",
-"It only influenced architecture"
+q:"Why is geography useful when studying sacred places?",
+o:[
+"It helps explain the physical setting of the place",
+"It replaces all historical evidence",
+"It proves every traditional story",
+"It removes cultural differences"
 ],
-answer:"A",
-exp:"Forests, mountains, river valleys, grasslands and other environments influenced economic choices and settlement patterns."
+a:0,
+e:"Geography helps us understand the physical landscape in which human cultural practices develop."
 },
 
 {
-q:"18. What helped connect nomadic and settled communities?",
-options:[
-"Trade and exchange",
-"Only warfare",
-"Only isolation",
-"Only taxation"
+q:"Which statement about a river is most accurate?",
+o:[
+"It can have economic, ecological and cultural importance at the same time",
+"It can have only religious importance",
+"It can have only economic importance",
+"It has no effect on settlement"
 ],
-answer:"A",
-exp:"Trade and exchange created important connections between mobile and settled communities."
+a:0,
+e:"A river may simultaneously support life, agriculture, settlements, transport and cultural traditions."
 },
 
 {
-q:"19. Which is an example of tribal state formation?",
-options:[
-"Some Gond and Ahom political developments",
-"Modern parliamentary states",
-"Industrial cities",
-"European factories"
+q:"Collective memory refers to:",
+o:[
+"Shared memories and narratives within a community",
+"Only an individual's private diary",
+"Only government statistics",
+"Only physical monuments"
 ],
-answer:"A",
-exp:"Gond and Ahom political developments illustrate how some tribal communities developed organised states."
+a:0,
+e:"Collective memory consists of shared memories, narratives and interpretations maintained within communities."
 },
 
 {
-q:"20. What is the central theme of this chapter?",
-options:[
-"Interaction between environment, communities, economy and political power",
-"Only temple architecture",
-"Only foreign invasions",
-"Only maritime history"
+q:"Why can pilgrimage create regional connections?",
+o:[
+"People travel and interact across geographical areas",
+"Pilgrimage always prevents travel",
+"It removes all local traditions",
+"It makes geography irrelevant"
 ],
-answer:"A",
-exp:"The chapter helps us understand how environment, economic practices, community organisation and political power interacted over time."
+a:0,
+e:"Movement of pilgrims creates opportunities for interaction between people from different regions."
+},
+
+{
+q:"A sacred place can be studied as:",
+o:[
+"A geographical, historical and cultural space",
+"Only a natural object",
+"Only a political boundary",
+"Only an economic statistic"
+],
+a:0,
+e:"Sacred places can be examined through several interconnected perspectives."
+},
+
+{
+q:"Which concept best explains why the same place can have several meanings?",
+o:[
+"Different groups can interact with and interpret the same landscape in different ways",
+"Places always have exactly one meaning",
+"Geography has no relationship with society",
+"Culture cannot change"
+],
+a:0,
+e:"Physical places can acquire different meanings through human experiences, traditions and interpretations."
+},
+
+{
+q:"The main lesson of this chapter is that:",
+o:[
+"Landscapes can acquire cultural meaning through human interaction over time",
+"Only physical geography matters",
+"Culture has no geographical dimension",
+"Historical places have no connection with communities"
+],
+a:0,
+e:"The chapter explains how geography, memory, traditions and community practices can transform physical places into culturally meaningful landscapes."
 }
 
 ];
 
-let checked = JSON.parse(localStorage.getItem("class7ch5_checked") || "{}");
 
-function renderQuestions(){
+function buildQuiz(){
 
-  const container = document.getElementById("quizContainer");
-
-  let html = "";
+  const quiz=document.getElementById("quiz");
 
   questions.forEach((item,index)=>{
 
-    const number = index + 1;
+    const box=document.createElement("div");
+    box.className="question";
 
-    html += `
-      <div class="test">
+    let html=
+      `<p><strong>Q${index+1}. ${item.q}</strong></p>
+       <div class="options">`;
 
-        <div class="question">
+    item.o.forEach((option,i)=>{
 
-          <h3>Q${number}. ${item.q}</h3>
+      html+=`
+      <label>
+        <input type="radio"
+               name="q${index}"
+               value="${i}">
+        ${String.fromCharCode(65+i)}. ${option}
+      </label>`;
+    });
 
-          ${item.options.map((option,i)=>{
-
-            const letter = String.fromCharCode(65+i);
-
-            return `
-              <label>
-                <input
-                  type="radio"
-                  name="q${number}"
-                  value="${letter}">
-                <strong>${letter}.</strong> ${option}
-              </label>
-            `;
-
-          }).join("")}
-
-          <button
-            class="check-btn"
-            onclick="checkAnswer(${number})">
-            ✅ Check Answer
-          </button>
-
-          <div
-            class="answer"
-            id="answer${number}">
-          </div>
-
-        </div>
-
+    html+=`
       </div>
-    `;
+      <button onclick="checkAnswer(${index})">
+        Check Answer
+      </button>
 
-  });
+      <div class="explanation" id="exp${index}">
+        ${item.e}
+      </div>`;
 
-  container.innerHTML = html;
+    box.innerHTML=html;
 
-  Object.keys(checked).forEach(key=>{
-
-    const number = Number(key);
-
-    if(checked[key]){
-      const answerBox = document.getElementById("answer"+number);
-
-      if(answerBox){
-        const q = questions[number-1];
-
-        answerBox.style.display="block";
-
-        answerBox.innerHTML =
-          "✅ <strong>Correct Answer:</strong> " +
-          q.answer +
-          "<br><br>" +
-          q.exp;
-      }
-    }
-
+    quiz.appendChild(box);
   });
 
   updateProgress();
 }
 
-function checkAnswer(number){
 
-  const q = questions[number-1];
+function checkAnswer(index){
 
-  const selected =
+  const selected=
     document.querySelector(
-      `input[name="q${number}"]:checked`
+      `input[name="q${index}"]:checked`
     );
 
-  const box =
-    document.getElementById("answer"+number);
-
   if(!selected){
-
-    box.style.display="block";
-
-    box.className="answer wrong";
-
-    box.innerHTML =
-      "⚠️ Please select an option first.";
-
+    alert("Please select an answer first.");
     return;
   }
 
-  const value = selected.value;
+  const correct=
+    Number(selected.value)===questions[index].a;
 
-  box.style.display="block";
+  const exp=
+    document.getElementById("exp"+index);
 
-  if(value === q.answer){
+  exp.style.display="block";
 
-    box.className="answer";
-
-    box.innerHTML =
-      "🎉 <strong>Correct!</strong><br><br>" +
-      "✅ Correct Answer: " +
-      q.answer +
-      "<br><br>" +
-      "📖 Explanation: " +
-      q.exp;
-
+  if(correct){
+    exp.innerHTML=
+      "✅ Correct! "+questions[index].e;
   }else{
-
-    box.className="answer wrong";
-
-    box.innerHTML =
-      "❌ <strong>Incorrect.</strong><br><br>" +
-      "✅ Correct Answer: " +
-      q.answer +
-      "<br><br>" +
-      "📖 Explanation: " +
-      q.exp;
-
+    exp.innerHTML=
+      "❌ Not correct. "+questions[index].e;
   }
 
-  checked[number]=true;
-
   localStorage.setItem(
-    "class7ch5_checked",
-    JSON.stringify(checked)
+    "class7history5q"+(index+1),
+    "checked"
   );
 
   updateProgress();
 }
+
 
 function updateProgress(){
 
-  const total = questions.length;
+  let completed=0;
 
-  const completed =
-    Object.keys(checked).length;
+  for(let i=1;i<=20;i++){
 
-  const percentage =
-    Math.round((completed/total)*100);
-
-  document.getElementById("progressBar")
-    .style.width = percentage + "%";
-
-  document.getElementById("progressText")
-    .innerText = percentage + "% completed";
-
-}
-
-function completeChapter(){
-
-  const total = questions.length;
-
-  const completed =
-    Object.keys(checked).length;
-
-  if(completed < total){
-
-    document.getElementById("completeMessage").innerText =
-      "⚠️ Pehle sabhi 20 questions ko Check Answer karein.";
-
-    return;
+    if(
+      localStorage.getItem(
+        "class7history5q"+i
+      )==="checked"
+    ){
+      completed++;
+    }
   }
 
-  localStorage.setItem(
-    "class7ch5_done",
-    "true"
-  );
+  const percent=(completed/20)*100;
 
-  document.getElementById("completeMessage").innerText =
-    "🎉 Chapter 5 Completed Successfully!";
+  document.getElementById("progressBar")
+    .style.width=percent+"%";
 
-  updateProgress();
+  document.getElementById("progressText")
+    .innerText=
+    "Quiz progress: "+completed+" / 20";
 }
+
 
 function toggleTheme(){
 
   document.body.classList.toggle("dark");
 
-  const dark =
-    document.body.classList.contains("dark");
-
   localStorage.setItem(
-    "class7ch5_theme",
-    dark ? "dark" : "light"
+    "class7history5theme",
+    document.body.classList.contains("dark")
+      ? "dark"
+      : "light"
   );
-
 }
 
-function loadTheme(){
 
-  const theme =
-    localStorage.getItem("class7ch5_theme");
+function restoreTheme(){
 
-  if(theme === "dark"){
+  if(
+    localStorage.getItem(
+      "class7history5theme"
+    )==="dark"
+  ){
     document.body.classList.add("dark");
   }
-
 }
 
-function speakText(text, lang){
 
-  if("speechSynthesis" in window){
+function completeChapter(){
 
-    speechSynthesis.cancel();
+  localStorage.setItem(
+    "class7history5done",
+    "yes"
+  );
 
-    const speech =
-      new SpeechSynthesisUtterance(text);
-
-    speech.lang = lang;
-
-    speech.rate = 0.9;
-
-    speech.pitch = 1;
-
-    speechSynthesis.speak(speech);
-
-  }else{
-
-    alert("Audio speech is not supported on this device/browser.");
-
-  }
-
+  alert(
+    "🎉 Class 7 History Chapter 5 completed!"
+  );
 }
+
+
+function animateConcept(){
+
+  const boxes=
+    document.querySelectorAll(".animate-box");
+
+  boxes.forEach((box,index)=>{
+
+    setTimeout(()=>{
+      box.classList.add("show");
+    },index*700);
+
+  });
+}
+
+
+const englishText=
+`How the Land Becomes Sacred.
+
+A landscape is not only physical geography.
+Places can acquire cultural meaning through stories,
+memories, traditions, community practices and pilgrimage.
+Rivers, mountains, forests and temples may therefore have
+both geographical and cultural importance.
+Pilgrimage can connect people from different regions and
+encourage cultural exchange.
+Historians can study traditional stories as evidence of
+cultural memory, while critically examining them as historical evidence.`;
+
+
+const hindiText=
+`भूमि कैसे पवित्र बनती है।
+
+किसी स्थान का महत्व केवल उसकी भौगोलिक स्थिति से निर्धारित नहीं होता।
+कहानियाँ, स्मृतियाँ, परंपराएँ और सामुदायिक गतिविधियाँ किसी स्थान को
+सांस्कृतिक महत्व दे सकती हैं।
+नदियाँ, पर्वत, वन और मंदिर ऐसे सांस्कृतिक स्थान बन सकते हैं।
+तीर्थयात्रा अलग-अलग क्षेत्रों के लोगों को जोड़ सकती है।
+इतिहासकार पारंपरिक कहानियों का अध्ययन सांस्कृतिक स्मृति को समझने
+के लिए कर सकते हैं, लेकिन उन्हें ऐतिहासिक प्रमाण के रूप में
+सावधानी से परखना आवश्यक है।`;
+
+
+function speakText(text,lang){
+
+  stopSpeech();
+
+  const utterance=
+    new SpeechSynthesisUtterance(text);
+
+  utterance.lang=lang;
+  utterance.rate=.9;
+
+  speechSynthesis.speak(utterance);
+}
+
 
 function speakEnglish(){
-
-  const text = `
-  Tribes, Nomads and Settled Communities.
-
-  Tribal societies were diverse and were often organised around kinship and
-  clan relationships.
-
-  Many communities depended on forests, pastoralism, agriculture and trade.
-
-  Nomadic pastoralists moved according to pasture and water availability.
-
-  Some tribal groups developed larger political structures.
-
-  The Gonds were an important tribal community of central India.
-
-  The Ahoms established a powerful state in the Brahmaputra valley.
-
-  Settled agricultural communities depended heavily on farming.
-
-  Tribes and states interacted through trade, conflict, cooperation and
-  political alliances.
-
-  Regional geography influenced the economic and social organisation of
-  communities.
-  `;
-
-  speakText(text,"en-IN");
-
+  speakText(englishText,"en-IN");
 }
+
 
 function speakHindi(){
-
-  const text = `
-  जनजाति, खानाबदोश और स्थायी समुदाय।
-
-  जनजातीय समाज विविध थे और उनमें रिश्तेदारी तथा कबीलाई संबंधों का महत्वपूर्ण
-  स्थान था।
-
-  कई समुदाय जंगलों, पशुपालन, कृषि और व्यापार पर निर्भर थे।
-
-  खानाबदोश पशुपालक चारे और पानी की उपलब्धता के अनुसार स्थान बदलते थे।
-
-  कुछ जनजातीय समूहों ने बड़े राजनीतिक संगठन और राज्य विकसित किए।
-
-  गोंड मध्य भारत का एक महत्वपूर्ण जनजातीय समुदाय था।
-
-  अहोमों ने ब्रह्मपुत्र घाटी में एक शक्तिशाली राज्य स्थापित किया।
-
-  स्थायी कृषि समुदाय खेती पर निर्भर थे।
-
-  जनजातियों और राज्यों के बीच व्यापार, संघर्ष, सहयोग और राजनीतिक संबंध होते थे।
-
-  क्षेत्रीय भूगोल ने समुदायों की आर्थिक और सामाजिक व्यवस्था को प्रभावित किया।
-  `;
-
-  speakText(text,"hi-IN");
-
+  speakText(hindiText,"hi-IN");
 }
+
 
 function stopSpeech(){
-
-  if("speechSynthesis" in window){
-    speechSynthesis.cancel();
-  }
-
+  speechSynthesis.cancel();
 }
 
-loadTheme();
-renderQuestions();
+
+restoreTheme();
+buildQuiz();
 
 </script>
 
