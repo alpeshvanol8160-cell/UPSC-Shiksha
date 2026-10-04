@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>New Kings and Kingdoms | UPSC Shiksha</title>
+<title>The Rise of Empires | UPSC Shiksha</title>
 
 <meta name="description"
-content="Class 7 History Chapter 2 - New Kings and Kingdoms. Detailed English and Hindi UPSC learning notes, audio, visuals, MCQs, Mains practice and revision.">
+content="Class 7 History Chapter 2 - The Rise of Empires. Current NCERT 2026-27 based original notes with examples, analysis, Mauryas, Ashoka, Dhamma, administration, Hindi explanation, MCQs and UPSC preparation.">
 
 <style>
 *{
@@ -16,564 +16,605 @@ content="Class 7 History Chapter 2 - New Kings and Kingdoms. Detailed English an
   padding:0;
 }
 
+html{
+  scroll-behavior:smooth;
+}
+
 body{
-  font-family:Arial,sans-serif;
-  line-height:1.7;
+  font-family:Arial,Helvetica,sans-serif;
   background:#f4f7fb;
-  color:#172033;
+  color:#18202a;
+  line-height:1.75;
   transition:.3s;
 }
 
+body.dark{
+  background:#10151c;
+  color:#e8edf3;
+}
+
 header{
-  background:linear-gradient(135deg,#7b1e1e,#c0392b);
-  color:white;
-  padding:18px 14px;
-  text-align:center;
+  background:linear-gradient(135deg,#4a160d,#a33d20);
+  color:#fff;
+  padding:15px;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 3px 12px rgba(0,0,0,.2);
+  box-shadow:0 3px 15px rgba(0,0,0,.2);
 }
 
-header h1{
-  font-size:22px;
+.header-inner{
+  max-width:1100px;
+  margin:auto;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.logo{
+  font-size:21px;
+  font-weight:bold;
 }
 
 .header-buttons{
-  margin-top:10px;
   display:flex;
-  justify-content:center;
   gap:8px;
-  flex-wrap:wrap;
 }
 
-button,.btn{
+.home-btn,
+.theme-btn,
+button{
   border:none;
-  border-radius:10px;
-  padding:10px 15px;
+  border-radius:9px;
+  padding:9px 13px;
   cursor:pointer;
   font-weight:bold;
-  text-decoration:none;
-  display:inline-block;
 }
 
 .home-btn{
-  background:white;
-  color:#7b1e1e;
+  background:#fff;
+  color:#7b2918;
+  text-decoration:none;
 }
 
 .theme-btn{
   background:#222;
-  color:white;
+  color:#fff;
+}
+
+body.dark .theme-btn{
+  background:#fff;
+  color:#111;
 }
 
 .container{
-  max-width:1050px;
+  width:94%;
+  max-width:1100px;
   margin:auto;
-  padding:18px;
 }
 
 .hero{
-  background:linear-gradient(135deg,#fff4e6,#ffe0c2);
+  margin-top:25px;
+  background:linear-gradient(135deg,#fff,#fff3ed);
+  padding:30px 22px;
   border-radius:20px;
-  padding:28px 20px;
   text-align:center;
-  margin-bottom:20px;
-  box-shadow:0 4px 15px rgba(0,0,0,.08);
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
-.hero h2{
-  color:#8b2c1f;
-  font-size:30px;
+body.dark .hero{
+  background:linear-gradient(135deg,#1a2028,#2c1b17);
+}
+
+.hero h1{
+  font-size:32px;
+  color:#8b2d18;
   margin-bottom:8px;
 }
 
-.hero p{
-  max-width:850px;
-  margin:auto;
-}
-
-.badges{
-  margin-top:15px;
+body.dark .hero h1{
+  color:#ffab91;
 }
 
 .badge{
   display:inline-block;
-  background:#fff;
-  color:#8b2c1f;
-  padding:7px 11px;
+  background:#8b2d18;
+  color:white;
+  padding:6px 13px;
   border-radius:20px;
-  margin:4px;
   font-size:13px;
-  font-weight:bold;
+  margin-bottom:12px;
+}
+
+.notice{
+  margin-top:18px;
+  padding:15px;
+  border-left:5px solid #d47700;
+  background:#fff1d8;
+  border-radius:10px;
+  text-align:left;
+}
+
+body.dark .notice{
+  background:#332818;
+  color:#f6dfb3;
 }
 
 .progress-box{
-  background:white;
+  margin-top:18px;
+  background:#fff;
   padding:16px;
-  border-radius:15px;
-  margin-bottom:20px;
-  box-shadow:0 3px 10px rgba(0,0,0,.07);
+  border-radius:14px;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
-.progress-bar{
-  height:13px;
+body.dark .progress-box{
+  background:#181e26;
+}
+
+.progress-track{
+  height:12px;
   background:#ddd;
   border-radius:20px;
   overflow:hidden;
   margin-top:8px;
 }
 
-.progress-fill{
+.progress-bar{
   height:100%;
   width:0%;
-  background:linear-gradient(90deg,#e67e22,#c0392b);
+  background:linear-gradient(90deg,#8b2d18,#e06a45);
   transition:.4s;
 }
 
 .progress-text{
-  font-weight:bold;
   margin-top:6px;
-}
-
-.quick-nav{
-  background:white;
-  padding:15px;
-  border-radius:15px;
-  margin-bottom:20px;
-  box-shadow:0 3px 10px rgba(0,0,0,.07);
-}
-
-.quick-nav a{
-  display:inline-block;
-  background:#fff0e8;
-  color:#8b2c1f;
-  padding:7px 10px;
-  margin:4px;
-  border-radius:8px;
-  text-decoration:none;
-  font-size:13px;
+  font-size:14px;
   font-weight:bold;
 }
 
-.section{
-  background:white;
-  padding:22px;
-  border-radius:18px;
-  margin-bottom:20px;
-  box-shadow:0 3px 12px rgba(0,0,0,.07);
+section{
+  margin:28px 0;
 }
 
-.section h2{
-  color:#8b2c1f;
-  border-left:5px solid #e67e22;
-  padding-left:12px;
-  margin-bottom:14px;
+.card{
+  background:#fff;
+  padding:23px;
+  border-radius:16px;
+  margin:18px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,.07);
 }
 
-.section h3{
-  color:#a04000;
-  margin-top:18px;
-  margin-bottom:7px;
+body.dark .card{
+  background:#181e26;
+}
+
+h2{
+  color:#8b2d18;
+  font-size:25px;
+  margin-bottom:13px;
+}
+
+body.dark h2{
+  color:#ffab91;
+}
+
+h3{
+  color:#a13c24;
+  margin:18px 0 8px;
+}
+
+body.dark h3{
+  color:#ffb39d;
+}
+
+p{
+  margin:9px 0;
+}
+
+ul,ol{
+  padding-left:24px;
+  margin:10px 0;
+}
+
+li{
+  margin:6px 0;
 }
 
 .highlight{
-  background:#fff4cc;
-  color:#4a3500;
-  border-left:5px solid #f39c12;
-  padding:14px;
+  background:#fff0a8;
+  color:#382e00;
+  padding:2px 6px;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+body.dark .highlight{
+  background:#5b4d12;
+  color:#fff3a6;
+}
+
+.key-box{
+  background:#f9e8e2;
+  border-left:5px solid #8b2d18;
+  padding:15px;
   border-radius:10px;
   margin:15px 0;
+}
+
+body.dark .key-box{
+  background:#30201d;
 }
 
 .example{
-  background:#eaf7ee;
-  color:#174d2c;
-  border-left:5px solid #27ae60;
-  padding:14px;
+  background:#eaf4ff;
+  border-left:5px solid #2676b5;
+  padding:15px;
   border-radius:10px;
   margin:15px 0;
+}
+
+body.dark .example{
+  background:#172936;
+}
+
+.analysis{
+  background:#edf8ef;
+  border-left:5px solid #2f8b4c;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+body.dark .analysis{
+  background:#17291d;
 }
 
 .warning{
-  background:#fff0f0;
-  color:#5a1717;
-  border-left:5px solid #c0392b;
-  padding:14px;
+  background:#fff0ef;
+  border-left:5px solid #d14c4c;
+  padding:15px;
   border-radius:10px;
   margin:15px 0;
 }
 
-.visual-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(210px,1fr));
-  gap:15px;
-  margin-top:15px;
-}
-
-.visual-card{
-  padding:18px;
-  border-radius:15px;
-  background:linear-gradient(135deg,#fff8f2,#fce4ec);
-  text-align:center;
-  border:1px solid #f1c7b5;
-}
-
-.visual-card .icon{
-  font-size:35px;
+body.dark .warning{
+  background:#321c1c;
 }
 
 .flow{
   display:flex;
-  justify-content:center;
   align-items:center;
+  justify-content:center;
   flex-wrap:wrap;
-  gap:10px;
+  gap:8px;
   margin:20px 0;
 }
 
 .flow-box{
-  background:#8b2c1f;
+  background:#8b2d18;
   color:white;
-  padding:12px 16px;
+  padding:13px 16px;
   border-radius:12px;
   font-weight:bold;
-  animation:floatBox 2s infinite alternate;
+  text-align:center;
 }
 
 .arrow{
-  font-size:24px;
-  color:#c0392b;
-}
-
-@keyframes floatBox{
-  from{transform:translateY(0);}
-  to{transform:translateY(-5px);}
+  font-size:25px;
+  font-weight:bold;
 }
 
 .timeline{
-  border-left:4px solid #c0392b;
-  padding-left:20px;
-  margin:20px 0;
-}
-
-.timeline-item{
-  margin-bottom:18px;
-  position:relative;
-}
-
-.timeline-item::before{
-  content:"";
-  width:13px;
-  height:13px;
-  background:#c0392b;
-  border-radius:50%;
-  position:absolute;
-  left:-28px;
-  top:8px;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  margin:15px 0;
-}
-
-th,td{
-  border:1px solid #ddd;
-  padding:10px;
-  text-align:left;
-}
-
-th{
-  background:#8b2c1f;
-  color:white;
-}
-
-.audio-box{
-  background:#f0f4ff;
-  color:#172033;
-  padding:18px;
-  border-radius:15px;
-  margin:20px 0;
-}
-
-.audio-box button{
-  background:#34495e;
-  color:white;
-  margin:5px;
-}
-
-.upsc-list li,
-.revision-list li{
-  margin:8px 0 8px 20px;
-}
-
-.mains-box{
-  background:#f8f1ff;
-  color:#35184d;
-  border-left:5px solid #8e44ad;
-  padding:15px;
-  border-radius:10px;
-  margin:10px 0;
-  font-weight:500;
-}
-
-.mains-box strong{
-  color:#6c3483;
-}
-
-.test{
+  display:grid;
+  grid-template-columns:repeat(6,1fr);
+  gap:10px;
   margin-top:20px;
 }
 
-.question{
-  background:#f8fafc;
-  color:#172033;
-  border:1px solid #ddd;
-  border-radius:14px;
-  padding:17px;
-  margin:15px 0;
-}
-
-.question h4{
-  margin-bottom:10px;
-}
-
-.option{
-  display:block;
-  padding:9px;
-  margin:6px 0;
-  background:white;
-  color:#172033;
-  border:1px solid #ddd;
-  border-radius:8px;
-  cursor:pointer;
-}
-
-.option:hover{
-  background:#fff3eb;
-}
-
-.answer-box{
-  display:none;
-  margin-top:12px;
-  padding:13px;
-  border-radius:10px;
-  background:#eaf7ee;
-  color:#174d2c;
-}
-
-.check-btn{
-  background:#c0392b;
-  color:white;
-  margin-top:10px;
-}
-
-.final-flow{
+.timeline-item{
+  background:#f7e3dc;
+  padding:14px 8px;
+  border-radius:12px;
   text-align:center;
-  background:linear-gradient(135deg,#fff0e8,#f9e6ff);
-  padding:25px;
-  border-radius:18px;
 }
 
-.complete-btn{
-  background:#27ae60;
-  color:white;
-  font-size:16px;
+body.dark .timeline-item{
+  background:#35231f;
+}
+
+.timeline-item strong{
+  display:block;
+  color:#8b2d18;
+  font-size:14px;
+}
+
+body.dark .timeline-item strong{
+  color:#ffab91;
+}
+
+.empire-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.empire-box{
+  background:#f8ece8;
+  padding:16px;
+  border-radius:13px;
+  text-align:center;
+}
+
+body.dark .empire-box{
+  background:#29221f;
+}
+
+.empire-icon{
+  font-size:28px;
+  display:block;
+  margin-bottom:6px;
+}
+
+.compare{
+  width:100%;
+  border-collapse:collapse;
   margin-top:15px;
 }
 
-footer{
-  background:#222;
-  color:white;
-  text-align:center;
-  padding:25px 15px;
-  margin-top:30px;
+.compare th,
+.compare td{
+  border:1px solid #ccc;
+  padding:11px;
+  text-align:left;
 }
 
-/* =========================
-   DARK MODE
-========================= */
-
-body.dark{
-  background:#111827;
-  color:#e5e7eb;
+.compare th{
+  background:#8b2d18;
+  color:#fff;
 }
 
-body.dark header{
-  background:linear-gradient(135deg,#3a1111,#641b16);
+body.dark .compare td{
+  border-color:#444;
 }
 
-body.dark .hero,
-body.dark .progress-box,
-body.dark .quick-nav,
-body.dark .section{
-  background:#1f2937;
-  color:#e5e7eb;
+body.dark .compare th{
+  background:#672416;
 }
 
-body.dark .hero h2{
-  color:#ffb59f;
+.source-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
 }
 
-body.dark .section h2{
-  color:#ffb59f;
+.source{
+  border:1px solid #ddd;
+  border-radius:13px;
+  padding:16px;
 }
 
-body.dark .section h3{
-  color:#ffc1ad;
+body.dark .source{
+  border-color:#444;
 }
 
-body.dark .quick-nav a{
-  background:#3b2420;
-  color:#ffd5c8;
+.animation{
+  background:linear-gradient(135deg,#211712,#7c2b17);
+  color:#fff;
+  padding:22px;
+  border-radius:18px;
+  overflow:hidden;
 }
 
-body.dark .badge{
-  background:#342322;
-  color:#ffd5c8;
+.animation-road{
+  height:9px;
+  background:#655b56;
+  border-radius:20px;
+  margin:22px 0;
+  position:relative;
 }
 
-body.dark .highlight{
-  background:#4a3d16;
-  color:#fff4c2;
-  border-left-color:#f1c40f;
+.animation-dot{
+  width:19px;
+  height:19px;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+  top:-5px;
+  left:0;
+  animation:travel 5s linear infinite;
 }
 
-body.dark .example{
-  background:#163b27;
-  color:#d8ffe5;
-  border-left-color:#2ecc71;
+@keyframes travel{
+  0%{left:0%}
+  100%{left:97%}
 }
 
-body.dark .warning{
-  background:#451b1b;
-  color:#ffdede;
-}
-
-body.dark .visual-card{
-  background:#302426;
-  color:#f3e8e4;
-  border-color:#6d4a43;
+.audio-box{
+  background:#f2f4f8;
+  padding:18px;
+  border-radius:14px;
+  margin-top:15px;
 }
 
 body.dark .audio-box{
-  background:#202b42;
-  color:#f1f5f9;
+  background:#202730;
+}
+
+.audio-buttons{
+  display:flex;
+  gap:8px;
+  flex-wrap:wrap;
+  margin-top:10px;
+}
+
+.audio-buttons button{
+  background:#8b2d18;
+  color:#fff;
+}
+
+.revision{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.revision div{
+  background:#f7ece8;
+  padding:15px;
+  border-radius:11px;
+}
+
+body.dark .revision div{
+  background:#29221f;
+}
+
+.question{
+  border:1px solid #ddd;
+  padding:17px;
+  border-radius:13px;
+  margin:15px 0;
 }
 
 body.dark .question{
-  background:#1f2937;
-  color:#f3f4f6;
-  border-color:#4b5563;
+  border-color:#444;
 }
 
-body.dark .question h4{
-  color:#ffffff;
+.options label{
+  display:block;
+  background:#f5f6f8;
+  padding:10px;
+  border-radius:9px;
+  margin:7px 0;
+  cursor:pointer;
 }
 
-body.dark .option{
-  background:#273244;
-  color:#f9fafb;
-  border-color:#4b5563;
+body.dark .options label{
+  background:#222a33;
 }
 
-body.dark .option:hover{
-  background:#3a465b;
+.options input{
+  margin-right:8px;
 }
 
-body.dark .answer-box{
-  background:#163b27;
-  color:#d8ffe5;
+.check-btn{
+  background:#8b2d18;
+  color:#fff;
+  margin-top:8px;
 }
 
-body.dark .mains-box{
-  background:#29213a;
-  color:#f3e8ff;
-  border-left:5px solid #c084fc;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
+.answer{
+  display:none;
+  background:#e7f7eb;
+  border-left:4px solid #2f8b4c;
+  padding:13px;
+  border-radius:9px;
+  margin-top:12px;
 }
 
-body.dark .mains-box strong{
-  color:#ffffff;
+body.dark .answer{
+  background:#192c1e;
 }
 
-body.dark .final-flow{
-  background:linear-gradient(135deg,#30231f,#30253b);
-  color:#f3f4f6;
+.complete-btn{
+  width:100%;
+  background:#248647;
+  color:white;
+  padding:14px;
+  font-size:16px;
+  margin:25px 0;
 }
 
-body.dark table th{
-  background:#6f2118;
+.completed{
+  background:#dff4e4!important;
+  color:#14662e!important;
 }
 
-body.dark table td{
-  border-color:#4b5563;
-  color:#e5e7eb;
+body.dark .completed{
+  background:#183522!important;
+  color:#9ee0ad!important;
 }
 
-body.dark .progress-box h3{
-  color:#ffffff;
+footer{
+  margin-top:35px;
+  background:#181c22;
+  color:#ddd;
+  text-align:center;
+  padding:28px 15px;
 }
 
-body.dark .progress-text{
-  color:#f3f4f6;
+.small{
+  font-size:13px;
+  opacity:.85;
 }
 
-/* =========================
-   MOBILE
-========================= */
+@media(max-width:800px){
 
-@media(max-width:600px){
-
-  .container{
-    padding:10px;
+  .timeline{
+    grid-template-columns:repeat(3,1fr);
   }
 
-  .section{
-    padding:16px;
+  .empire-grid{
+    grid-template-columns:repeat(2,1fr);
   }
 
-  .hero{
-    padding:22px 14px;
+  .source-grid{
+    grid-template-columns:1fr;
   }
 
-  .hero h2{
-    font-size:24px;
+  .revision{
+    grid-template-columns:1fr;
   }
 
-  header h1{
-    font-size:18px;
+}
+
+@media(max-width:500px){
+
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
   }
 
-  table{
-    font-size:13px;
-    display:block;
-    overflow-x:auto;
+  .header-buttons{
+    width:100%;
   }
 
-  th,td{
-    padding:7px;
-    min-width:110px;
+  .home-btn,
+  .theme-btn{
+    flex:1;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:26px;
+  }
+
+  .card{
+    padding:17px;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  .timeline{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .empire-grid{
+    grid-template-columns:1fr 1fr;
   }
 
   .flow-box{
     width:100%;
-    text-align:center;
   }
 
   .arrow{
     transform:rotate(90deg);
   }
 
-  .mains-box{
-    padding:13px;
-  }
-
-  .option{
-    font-size:14px;
-  }
 }
 </style>
 </head>
@@ -582,12 +623,14 @@ body.dark .progress-text{
 
 <header>
 
-<h1>🇮🇳 UPSC Shiksha</h1>
+<div class="header-inner">
+
+<div class="logo">🇮🇳 UPSC Shiksha</div>
 
 <div class="header-buttons">
 
-<a class="btn home-btn" href="ncert-history.html">
-🏠 History
+<a href="ncert-history.html" class="home-btn">
+← History
 </a>
 
 <button class="theme-btn" onclick="toggleTheme()">
@@ -596,1317 +639,1863 @@ body.dark .progress-text{
 
 </div>
 
+</div>
+
 </header>
 
-<div class="container">
 
-<section class="hero">
+<main class="container">
 
-<h2>👑 New Kings and Kingdoms</h2>
+
+<div class="hero">
+
+<span class="badge">
+CURRENT NCERT 2026–27
+</span>
+
+<h1>
+The Rise of Empires
+</h1>
 
 <p>
-Class 7 History — Chapter 2
+<strong>
+Class 7 History — UPSC Shiksha Chapter 2
+</strong>
 </p>
 
-<p style="margin-top:10px;">
-A detailed learning chapter on the rise of regional kingdoms,
-samantas, warfare, administration, land grants and the Cholas.
+<p>
+Official NCERT Integrated Social Science Chapter 5
+from <em>Exploring Society: India and Beyond — Part 1</em>
 </p>
 
-<div class="badges">
+<div class="notice">
 
-<span class="badge">📖 Detailed Notes</span>
-<span class="badge">🇬🇧 English</span>
-<span class="badge">🇮🇳 Hindi</span>
-<span class="badge">🎧 Audio</span>
-<span class="badge">🎯 UPSC</span>
-<span class="badge">📝 20 MCQs</span>
-<span class="badge">✍️ Mains</span>
+<strong>📌 Website Mapping:</strong>
+
+<br>
+
+Official NCERT Chapter 5 is presented here as
+<strong>UPSC Shiksha History Chapter 2</strong>.
+
+<br><br>
+
+This page uses original explanatory notes, examples and analysis
+rather than reproducing the NCERT textbook word-for-word.
 
 </div>
 
-</section>
+</div>
 
-<section class="progress-box">
 
-<h3>📈 Chapter Progress</h3>
+<div class="progress-box">
 
-<div class="progress-bar">
-<div class="progress-fill" id="progressFill"></div>
+<strong>📊 Chapter Progress</strong>
+
+<div class="progress-track">
+
+<div class="progress-bar" id="progressBar"></div>
+
 </div>
 
 <div class="progress-text" id="progressText">
-0% completed
+0 / 20 MCQs checked
 </div>
-
-</section>
-
-<section class="quick-nav">
-
-<h3>⚡ Quick Navigation</h3>
-
-<a href="#emergence">New Dynasties</a>
-<a href="#samantas">Samantas</a>
-<a href="#rashtrakutas">Rashtrakutas</a>
-<a href="#prashastis">Prashastis</a>
-<a href="#warfare">Warfare</a>
-<a href="#cholas">Cholas</a>
-<a href="#administration">Administration</a>
-<a href="#irrigation">Irrigation</a>
-<a href="#hindi">Hindi</a>
-<a href="#upsc">UPSC</a>
-<a href="#mains">Mains</a>
-<a href="#tests">Tests</a>
-
-</section>
-
-<!-- ENGLISH -->
-
-<section class="section" id="emergence">
-
-<h2>1. The Emergence of New Dynasties</h2>
-
-<p>
-Between roughly the seventh and twelfth centuries, political power in
-the Indian subcontinent was spread across many regional kingdoms.
-Several new ruling families became powerful in different areas.
-</p>
-
-<p>
-These rulers did not always come from an already established royal
-family. In many cases, powerful chiefs, landlords and military leaders
-gradually increased their influence and established independent
-authority.
-</p>
-
-<div class="highlight">
-
-<strong>🔥 Key Idea:</strong>
-
-Political power was not fixed. A subordinate chief could become powerful,
-gain supporters, control territory and eventually establish a new dynasty.
 
 </div>
 
-<h3>How did a chief become a king?</h3>
+
+<section>
+
+<div class="card">
+
+<h2>🎯 Chapter Overview</h2>
 
 <p>
-A ruler needed more than military strength. He also needed recognition,
-resources, administrative support and a political claim to legitimacy.
-Royal titles, genealogies, rituals, inscriptions and patronage of
-religious institutions helped rulers present themselves as legitimate kings.
+An <strong>empire</strong> is a large political system in which a powerful
+ruler or ruling authority controls a wide territory containing multiple
+regions, peoples or kingdoms.
+</p>
+
+<p>
+This chapter explains how the political landscape of ancient India changed
+from mahājanapadas to larger imperial formations, especially the
+<strong>Mauryan Empire</strong>.
 </p>
 
 <div class="flow">
 
-<div class="flow-box">Local Chief</div>
+<div class="flow-box">
+Mahājanapadas
+</div>
+
 <div class="arrow">→</div>
 
-<div class="flow-box">Military Power</div>
+<div class="flow-box">
+Powerful Kingdoms
+</div>
+
 <div class="arrow">→</div>
 
-<div class="flow-box">Territory</div>
+<div class="flow-box">
+Magadha
+</div>
+
 <div class="arrow">→</div>
 
-<div class="flow-box">Royal Legitimacy</div>
-<div class="arrow">→</div>
+<div class="flow-box">
+Mauryan Empire
+</div>
 
-<div class="flow-box">Kingdom</div>
+</div>
+
+<div class="analysis">
+
+<strong>🔎 UPSC Analysis</strong>
+
+<p>
+The rise of an empire is not caused by military power alone.
+Geography, agricultural production, resources, trade routes,
+administration, taxation, diplomacy and military organisation can all
+contribute to imperial expansion.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="samantas">
 
-<h2>2. Samantas — From Subordinates to Powerful Rulers</h2>
+<section>
+
+<div class="card">
+
+<h2>1. What Makes a Kingdom an Empire?</h2>
 
 <p>
-The term <strong>samanta</strong> was used for subordinate chiefs or
-powerful local leaders who served a superior ruler.
+A kingdom may control a particular territory and population.
+An empire generally has a wider political reach and may control
+many different regions or previously independent political units.
+</p>
+
+<table class="compare">
+
+<tr>
+<th>Kingdom</th>
+<th>Empire</th>
+</tr>
+
+<tr>
+<td>Usually centred around a particular territorial state</td>
+<td>Controls a much larger and diverse territory</td>
+</tr>
+
+<tr>
+<td>May have a relatively limited political reach</td>
+<td>May incorporate several kingdoms or regions</td>
+</tr>
+
+<tr>
+<td>Administration may be comparatively localised</td>
+<td>Requires systems for governing distant areas</td>
+</tr>
+
+<tr>
+<td>Expansion may occur</td>
+<td>Expansion and integration are major characteristics</td>
+</tr>
+
+</table>
+
+<div class="example">
+
+<strong>💡 Simple Example</strong>
+
+<p>
+Imagine one city controlling only its immediate surrounding area.
+Now imagine the same political authority controlling several cities,
+villages, trade routes and different regions.
 </p>
 
 <p>
-A samanta could be expected to provide military assistance, attend the
-ruler's court and offer gifts or tribute. Over time, some samantas
-accumulated enough wealth and military power to challenge or replace
-their former overlords.
+The second system creates a much larger administrative challenge.
+That is why empire-building requires more than simply winning battles.
 </p>
 
-<div class="visual-grid">
-
-<div class="visual-card">
-<div class="icon">⚔️</div>
-<h3>Military Support</h3>
-<p>Provided soldiers and military assistance.</p>
 </div>
 
-<div class="visual-card">
-<div class="icon">💰</div>
-<h3>Resources</h3>
-<p>Controlled land, revenue and local resources.</p>
 </div>
 
-<div class="visual-card">
-<div class="icon">👑</div>
-<h3>Political Rise</h3>
-<p>Some eventually established independent kingdoms.</p>
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>2. Why Did Magadha Become Powerful?</h2>
+
+<p>
+Among the mahājanapadas, <strong>Magadha</strong> gradually became one of
+the most powerful states.
+</p>
+
+<div class="empire-grid">
+
+<div class="empire-box">
+
+<span class="empire-icon">🌾</span>
+
+<strong>Fertile Land</strong>
+
+<p>
+Agricultural production
+</p>
+
+</div>
+
+<div class="empire-box">
+
+<span class="empire-icon">⛏️</span>
+
+<strong>Iron</strong>
+
+<p>
+Important resources
+</p>
+
+</div>
+
+<div class="empire-box">
+
+<span class="empire-icon">🌳</span>
+
+<strong>Forests</strong>
+
+<p>
+Natural resources
+</p>
+
+</div>
+
+<div class="empire-box">
+
+<span class="empire-icon">🌊</span>
+
+<strong>Rivers</strong>
+
+<p>
+Transport & agriculture
+</p>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔎 Cause-and-Effect Analysis</strong>
+
+<p>
+Magadha's geographical position provided access to fertile agricultural
+areas and important resources.
+</p>
+
+<p>
+Agriculture generated food and revenue.
+Resources supported tools and other economic activities.
+Rivers facilitated communication and transport.
+</p>
+
+<p>
+These advantages could strengthen the state's ability to maintain armies
+and administration.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>3. The Nanda Dynasty</h2>
+
+<p>
+The <strong>Nandas</strong> ruled Magadha before the Mauryan rise.
+They are remembered as an important stage in the development of
+Magadha's political power.
+</p>
+
+<p>
+A strong state required revenue, administrative organisation and military
+capacity.
+</p>
+
+<div class="key-box">
+
+<strong>📌 Important Link</strong>
+
+<p>
+The political strength accumulated in Magadha created favourable
+conditions for the later rise of the Mauryas.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>4. Alexander's Campaign</h2>
+
+<p>
+In the late 4th century BCE, <strong>Alexander of Macedon</strong>
+advanced into northwestern parts of the Indian subcontinent after
+conquering large territories in the Persian world and Central Asia.
+</p>
+
+<p>
+His forces reached the region of the Indus and fought the famous
+<strong>Battle of Hydaspes</strong> against King Porus, known in
+Indian traditions as Puru.
+</p>
+
+<div class="timeline">
+
+<div class="timeline-item">
+<strong>c. 327 BCE</strong>
+Alexander enters northwest
+</div>
+
+<div class="timeline-item">
+<strong>326 BCE</strong>
+Battle of Hydaspes
+</div>
+
+<div class="timeline-item">
+<strong>Retreat</strong>
+Army refuses further advance
+</div>
+
+<div class="timeline-item">
+<strong>323 BCE</strong>
+Alexander dies
+</div>
+
+<div class="timeline-item">
+<strong>Aftermath</strong>
+Political changes in northwest
+</div>
+
+<div class="timeline-item">
+<strong>Later</strong>
+Mauryan expansion
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔎 Why is Alexander important here?</strong>
+
+<p>
+Alexander's campaign did not establish a lasting empire across the Indian
+subcontinent.
+</p>
+
+<p>
+Its historical importance lies partly in the contacts and political
+changes in the northwest and in the context in which the Mauryan state
+later expanded.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>5. Chandragupta Maurya</h2>
+
+<p>
+<strong>Chandragupta Maurya</strong> founded the Mauryan Empire around
+the end of the 4th century BCE.
+</p>
+
+<p>
+He is traditionally associated with the overthrow of the Nanda power
+in Magadha and the expansion of Mauryan authority.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+Magadha
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Chandragupta Maurya
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Expansion
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Mauryan Empire
 </div>
 
 </div>
 
 <div class="example">
 
-<strong>Example:</strong>
+<strong>🏛️ Pāṭaliputra</strong>
 
-The rise of several regional ruling families illustrates how local
-political authority could gradually transform into independent kingship.
+<p>
+Pāṭaliputra became the major political centre of the Mauryan Empire.
+It was located near the Ganga and Son river systems and was strategically
+placed for communication and administration.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section" id="rashtrakutas">
 
-<h2>3. The Rashtrakutas</h2>
+<section>
 
-<p>
-The Rashtrakutas became a major political power in the Deccan.
-Their rise illustrates how a family that had earlier served a stronger
-authority could eventually establish its own kingdom.
-</p>
+<div class="card">
 
-<h3>Dantidurga</h3>
+<h2>6. Kautilya and the Arthashastra</h2>
 
 <p>
-Dantidurga is associated with the establishment of Rashtrakuta power.
-His political rise involved defeating powerful rivals and building an
-independent base of authority.
+<strong>Kautilya</strong>, also known as Chanakya in later traditions,
+is traditionally associated with the <strong>Arthashastra</strong>.
 </p>
 
-<div class="highlight">
+<p>
+The work discusses subjects such as governance, administration,
+economy, diplomacy, taxation, law and statecraft.
+</p>
 
-<strong>UPSC Connection:</strong>
+<div class="analysis">
 
-The Rashtrakutas are important for understanding early-medieval state
-formation and political competition among regional powers.
+<strong>🔎 UPSC Connection</strong>
+
+<p>
+The Arthashastra is important for understanding ancient Indian ideas
+about statecraft.
+</p>
+
+<p>
+It should not be treated as a simple description of how every Mauryan
+institution operated in practice. It is a major textual source on
+political thought and administration.
+</p>
 
 </div>
 
-<h3>The Tripartite Struggle</h3>
+<div class="key-box">
+
+<strong>Remember:</strong>
 
 <p>
-One major political contest centred on <strong>Kanauj</strong>.
-The Gurjara-Pratiharas, Rashtrakutas and Palas were important
-participants in the long struggle for influence over Kanauj and
-northern India.
+<strong>Arthashastra → Statecraft → Administration → Economy →
+Diplomacy → Security</strong>
 </p>
 
-<table>
+</div>
 
-<tr>
-<th>Power</th>
-<th>Broad Region</th>
-<th>Historical Importance</th>
-</tr>
-
-<tr>
-<td>Gurjara-Pratiharas</td>
-<td>Western and northern India</td>
-<td>Major power in north India</td>
-</tr>
-
-<tr>
-<td>Rashtrakutas</td>
-<td>Deccan</td>
-<td>Major Deccan power</td>
-</tr>
-
-<tr>
-<td>Palas</td>
-<td>Bengal and eastern India</td>
-<td>Important eastern Indian dynasty</td>
-</tr>
-
-</table>
+</div>
 
 </section>
 
-<section class="section" id="prashastis">
 
-<h2>4. Prashastis and Royal Legitimacy</h2>
+<section>
+
+<div class="card">
+
+<h2>7. How Was a Large Empire Governed?</h2>
 
 <p>
-Rulers often commissioned inscriptions and literary compositions that
-described their achievements. Such writings are known as
-<strong>prashastis</strong> when they function as eulogies praising rulers.
+An empire covering a large territory needs systems to connect the central
+authority with distant regions.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+Emperor
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Officials
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Provinces / Regions
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Local Communities
+</div>
+
+</div>
+
+<ul>
+
+<li>Collection of revenue</li>
+
+<li>Maintenance of roads and communication</li>
+
+<li>Military organisation</li>
+
+<li>Law and order</li>
+
+<li>Provincial administration</li>
+
+<li>Communication with distant territories</li>
+
+</ul>
+
+<div class="analysis">
+
+<strong>🧠 Administrative Analysis</strong>
+
+<p>
+The larger the territory, the more difficult direct control becomes.
+Therefore, empires depend on a combination of central authority,
+local administration, officials, communication and political cooperation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>8. Ashoka — The Most Famous Mauryan Ruler</h2>
+
+<p>
+<strong>Ashoka</strong>, grandson of Chandragupta Maurya, became one of
+the most famous rulers of ancient India.
 </p>
 
 <p>
-Prashastis can provide valuable historical information, but historians
-must read them critically because they were often written to glorify
-the ruler.
+His reign is particularly important because of his inscriptions and
+his transformation after the Kalinga War.
 </p>
 
-<div class="visual-grid">
+<div class="key-box">
 
-<div class="visual-card">
-<div class="icon">📜</div>
-<h3>Inscription</h3>
-<p>Records claims, grants or achievements.</p>
+<strong>📌 Ashoka in one line:</strong>
+
+<p>
+A powerful emperor whose experience of the Kalinga War influenced his
+approach to governance, ethics and public communication.
+</p>
+
 </div>
 
-<div class="visual-card">
-<div class="icon">👑</div>
-<h3>Royal Image</h3>
-<p>Shows how a ruler wanted to be remembered.</p>
 </div>
 
-<div class="visual-card">
-<div class="icon">🔍</div>
-<h3>Historical Analysis</h3>
-<p>Historians compare claims with other evidence.</p>
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>9. The Kalinga War</h2>
+
+<p>
+Ashoka fought the <strong>Kalinga War</strong>, generally dated to
+around <strong>261 BCE</strong>.
+</p>
+
+<p>
+Kalinga was located broadly in the region of present-day Odisha.
+</p>
+
+<p>
+The conflict caused extensive suffering and loss of life.
+Ashoka's later inscriptions express his deep remorse over the violence.
+</p>
+
+<div class="analysis">
+
+<strong>🔎 Historical Significance</strong>
+
+<p>
+The importance of Kalinga is not simply that it was another military
+victory.
+</p>
+
+<p>
+It became a turning point in Ashoka's public image and political
+message, as reflected in his inscriptions.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>10. Ashoka's Dhamma</h2>
+
+<p>
+After the Kalinga War, Ashoka promoted a policy and ethical teaching
+commonly called <strong>Dhamma</strong>.
+</p>
+
+<p>
+It emphasised values such as:
+</p>
+
+<div class="empire-grid">
+
+<div class="empire-box">
+<span class="empire-icon">🤝</span>
+<strong>Respect</strong>
+<p>Respect for others</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">❤️</span>
+<strong>Compassion</strong>
+<p>Concern for living beings</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">🕊️</span>
+<strong>Non-violence</strong>
+<p>Reducing unnecessary violence</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">👨‍👩‍👧</span>
+<strong>Social Conduct</strong>
+<p>Good behaviour & responsibility</p>
 </div>
 
 </div>
 
 <div class="warning">
 
-<strong>⚠️ Remember:</strong>
+<strong>⚠️ Important:</strong>
 
-A royal inscription is a historical source, but it should not
-automatically be treated as an unbiased description of reality.
+<p>
+Ashoka's Dhamma should not be reduced to a simple synonym for one
+religion. It functioned as a broad ethical and social policy promoted
+by the ruler.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
-<section class="section">
 
-<h2>5. Land Grants and Revenue</h2>
+<section>
+
+<div class="card">
+
+<h2>11. Ashoka's Edicts</h2>
 
 <p>
-Control over land was extremely important because agriculture generated
-a major share of the resources available to kingdoms.
+Ashoka communicated many of his messages through inscriptions carved on
+rocks and pillars.
 </p>
 
 <p>
-Rulers sometimes granted land to Brahmanas, religious institutions or
-other beneficiaries. Such grants could be recorded through inscriptions.
+These are known as <strong>edicts</strong>.
 </p>
 
-<h3>Why were land grants important?</h3>
+<div class="source-grid">
 
-<ul>
+<div class="source">
 
-<li>They could strengthen relations between rulers and influential groups.</li>
+<h3>🪨 Rock Edicts</h3>
 
-<li>They helped extend cultivation into new areas.</li>
+<p>
+Messages carved on natural rock surfaces.
+</p>
 
-<li>They created networks of political and social authority.</li>
+</div>
 
-<li>They provide historians with evidence about land, taxes and society.</li>
+<div class="source">
 
-</ul>
+<h3>🏛️ Pillar Edicts</h3>
+
+<p>
+Messages inscribed on stone pillars.
+</p>
+
+</div>
+
+<div class="source">
+
+<h3>🗣️ Public Communication</h3>
+
+<p>
+They allowed royal messages to reach people across different regions.
+</p>
+
+</div>
+
+<div class="source">
+
+<h3>📚 Historical Evidence</h3>
+
+<p>
+They are direct primary sources for studying Ashoka's rule and ideas.
+</p>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔎 Why are inscriptions so valuable?</strong>
+
+<p>
+An inscription produced during a ruler's lifetime can provide direct
+evidence about the ruler's public messages.
+</p>
+
+<p>
+Historians still need to interpret it carefully, because an official
+inscription represents the ruler's perspective and political purpose.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>12. Languages and Scripts</h2>
+
+<p>
+Ashoka's inscriptions were written in different languages and scripts
+depending on the region.
+</p>
+
+<p>
+<strong>Brahmi</strong> was one of the important scripts used in many
+of his inscriptions.
+</p>
+
+<p>
+In the northwest, inscriptions could also use <strong>Kharoshthi</strong>
+and other linguistic forms.
+</p>
+
+<div class="example">
+
+<strong>💡 Why does this matter?</strong>
+
+<p>
+A large empire contained people speaking different languages.
+Using regional forms of communication could help royal messages reach
+different populations.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>13. Mauryan Economy and Revenue</h2>
+
+<p>
+A large empire needed resources to maintain administration, armies,
+public works and other state activities.
+</p>
 
 <div class="flow">
 
-<div class="flow-box">Land</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Cultivation</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Produce</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Revenue</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">State Power</div>
-
+<div class="flow-box">
+Agriculture
 </div>
 
-</section>
+<div class="arrow">→</div>
 
-<section class="section" id="warfare">
+<div class="flow-box">
+Revenue
+</div>
 
-<h2>6. Warfare for Wealth and Power</h2>
+<div class="arrow">→</div>
+
+<div class="flow-box">
+State Resources
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Administration & Army
+</div>
+
+</div>
 
 <p>
-Early-medieval kingdoms competed for fertile land, strategic locations,
-trade routes, political prestige and wealthy cities.
+Trade and crafts also contributed to economic activity.
 </p>
+
+<div class="analysis">
+
+<strong>UPSC Analysis:</strong>
 
 <p>
-Military campaigns could bring territory and resources under a ruler's
-control. Important political centres such as Kanauj became objects of
-competition.
+Empire-building has an economic foundation.
+Military expansion requires resources, and maintaining a large
+administrative system requires regular revenue.
 </p>
 
-<div class="visual-grid">
-
-<div class="visual-card">
-<div class="icon">🌾</div>
-<h3>Fertile Land</h3>
-<p>Agricultural land generated revenue.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">🏙️</div>
-<h3>Cities</h3>
-<p>Urban centres could provide wealth and prestige.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">🛣️</div>
-<h3>Trade Routes</h3>
-<p>Strategic routes increased political and economic value.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">👑</div>
-<h3>Prestige</h3>
-<p>Military victories strengthened royal authority.</p>
 </div>
 
 </div>
 
 </section>
 
-<section class="section" id="cholas">
 
-<h2>7. The Cholas — A Detailed Case Study</h2>
+<section>
 
-<p>
-The Cholas became one of the most important powers of southern India.
-Their political history provides a useful example of state formation,
-agricultural expansion, temple patronage and local administration.
-</p>
+<div class="card">
 
-<h3>Vijayalaya</h3>
+<h2>14. Trade Routes and Guilds</h2>
 
 <p>
-Vijayalaya is associated with the revival of Chola power in the
-Kaveri region. Control over the fertile Kaveri delta provided an
-important economic base.
+Trade networks connected different parts of the subcontinent.
+Merchants, craftspeople and other economic groups contributed to
+economic life.
 </p>
-
-<h3>Rajaraja I</h3>
 
 <p>
-Rajaraja I expanded Chola power and is especially remembered for
-large-scale temple construction and administration.
+<strong>Guilds</strong> were organised associations of people involved
+in particular crafts or commercial activities.
 </p>
 
-<h3>Rajendra I</h3>
+<div class="flow">
+
+<div class="flow-box">
+Craft Production
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Guilds
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Markets
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Long-distance Trade
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>15. How Did the Mauryan Empire Hold Together?</h2>
 
 <p>
-Rajendra I continued expansion and extended Chola influence beyond the
-core Tamil region. Chola power also had important maritime dimensions.
+A large empire cannot depend on one factor.
+Its stability comes from several systems working together.
 </p>
+
+<div class="empire-grid">
+
+<div class="empire-box">
+<span class="empire-icon">👑</span>
+<strong>Central Authority</strong>
+<p>Ruler and court</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">🏛️</span>
+<strong>Administration</strong>
+<p>Officials and regions</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">⚔️</span>
+<strong>Military</strong>
+<p>Security & expansion</p>
+</div>
+
+<div class="empire-box">
+<span class="empire-icon">🛣️</span>
+<strong>Networks</strong>
+<p>Roads & communication</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>16. Why Do Empires Decline?</h2>
+
+<p>
+Empires are powerful, but they are not permanent.
+Several factors can weaken an empire.
+</p>
+
+<ul>
+
+<li>Weak rulers after a strong emperor</li>
+
+<li>Difficulty controlling distant territories</li>
+
+<li>Local rulers becoming independent</li>
+
+<li>Economic pressure</li>
+
+<li>Military and administrative costs</li>
+
+<li>Internal political conflicts</li>
+
+<li>Natural disasters or agricultural crises</li>
+
+</ul>
+
+<div class="analysis">
+
+<strong>🔎 The Core Principle</strong>
+
+<p>
+<strong>
+The larger the political system, the greater the challenge of maintaining
+communication, revenue, loyalty and administrative control.
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>17. Mauryan Empire — Historical Timeline</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
-<strong>Chola rise</strong>
-<p>Expansion of political control in the Kaveri region.</p>
+<strong>c. 322 BCE</strong>
+Chandragupta Maurya rises
 </div>
 
 <div class="timeline-item">
-<strong>Rajaraja I</strong>
-<p>Expansion, administration and major temple patronage.</p>
+<strong>c. 3rd century BCE</strong>
+Mauryan expansion
 </div>
 
 <div class="timeline-item">
-<strong>Rajendra I</strong>
-<p>Further expansion and overseas military activity.</p>
+<strong>c. 261 BCE</strong>
+Kalinga War
 </div>
+
+<div class="timeline-item">
+<strong>After Kalinga</strong>
+Dhamma emphasis
+</div>
+
+<div class="timeline-item">
+<strong>c. 232 BCE</strong>
+Ashoka dies
+</div>
+
+<div class="timeline-item">
+<strong>c. 185 BCE</strong>
+Mauryan rule ends
+</div>
+
+</div>
+
+<p class="small">
+Dates are approximate and simplified for school-level historical revision.
+</p>
 
 </div>
 
 </section>
 
-<section class="section" id="irrigation">
 
-<h2>8. Agriculture and Irrigation in the Kaveri Region</h2>
+<section>
+
+<div class="card">
+
+<h2>🎬 Concept Animation: From Kingdom to Empire</h2>
+
+<div class="animation">
 
 <p>
-The Kaveri delta was highly suitable for agriculture. Expansion of
-cultivation required management of water and improvement of irrigation.
+<strong>
+Watch the moving point as a simplified model of imperial expansion.
+</strong>
 </p>
 
-<p>
-People developed channels, embankments, wells and tanks to manage
-water for cultivation.
-</p>
+<div class="animation-road">
+<div class="animation-dot"></div>
+</div>
 
 <div class="flow">
 
-<div class="flow-box">Kaveri Water</div>
-<div class="arrow">→</div>
+<div class="flow-box">Resources</div>
 
-<div class="flow-box">Irrigation</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Cultivation</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Surplus</div>
 <div class="arrow">→</div>
 
 <div class="flow-box">Revenue</div>
 
-</div>
-
-<div class="highlight">
-
-<strong>Concept:</strong>
-
-Agricultural expansion was closely connected with political power.
-A ruler who controlled productive agricultural areas could obtain
-resources needed for administration and warfare.
-
-</div>
-
-</section>
-
-<section class="section" id="administration">
-
-<h2>9. Chola Administration</h2>
-
-<p>
-Chola inscriptions provide evidence about different levels of local
-administration and village institutions.
-</p>
-
-<h3>Ur</h3>
-
-<p>
-An <strong>ur</strong> was an assembly associated with ordinary villages.
-</p>
-
-<h3>Sabha</h3>
-
-<p>
-A <strong>sabha</strong> was an assembly associated especially with
-Brahmana settlements. Inscriptions from Uttaramerur provide information
-about committees and qualifications for membership.
-</p>
-
-<h3>Nadu</h3>
-
-<p>
-A <strong>nadu</strong> represented a larger territorial unit containing
-groups of villages.
-</p>
-
-<table>
-
-<tr>
-<th>Institution</th>
-<th>Meaning / Role</th>
-</tr>
-
-<tr>
-<td>Ur</td>
-<td>Village assembly</td>
-</tr>
-
-<tr>
-<td>Sabha</td>
-<td>Assembly associated with Brahmana settlements</td>
-</tr>
-
-<tr>
-<td>Nadu</td>
-<td>Larger territorial organisation</td>
-</tr>
-
-</table>
-
-<div class="example">
-
-<strong>Important:</strong>
-
-These institutions should not simply be equated with modern democratic
-institutions. Their membership and functioning were shaped by the social
-conditions of their time.
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>10. Chola Temples</h2>
-
-<p>
-Temples were not only religious spaces. Large temples could also
-function as important economic, social and cultural centres.
-</p>
-
-<ul>
-
-<li>They received land and other resources.</li>
-
-<li>They employed specialists and craftspeople.</li>
-
-<li>They supported artistic production.</li>
-
-<li>They became centres of social activity.</li>
-
-<li>They reflected royal patronage and political authority.</li>
-
-</ul>
-
-<div class="visual-grid">
-
-<div class="visual-card">
-<div class="icon">🛕</div>
-<h3>Religion</h3>
-<p>Centre of worship and ritual.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">💰</div>
-<h3>Economy</h3>
-<p>Land, resources and specialised workers.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">🎨</div>
-<h3>Culture</h3>
-<p>Art, architecture and bronze sculpture.</p>
-</div>
-
-<div class="visual-card">
-<div class="icon">👥</div>
-<h3>Society</h3>
-<p>Connected different groups and occupations.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<h2>11. How Historians Study This Period</h2>
-
-<p>
-Historians use several types of evidence to reconstruct the history of
-new kingdoms.
-</p>
-
-<table>
-
-<tr>
-<th>Source</th>
-<th>What it can tell us</th>
-<th>Caution</th>
-</tr>
-
-<tr>
-<td>Inscriptions</td>
-<td>Land grants, titles, achievements, administration</td>
-<td>May present a ruler positively</td>
-</tr>
-
-<tr>
-<td>Coins</td>
-<td>Rulers, economy and political authority</td>
-<td>Interpretation requires context</td>
-</tr>
-
-<tr>
-<td>Temples</td>
-<td>Architecture, patronage and social economy</td>
-<td>Do not tell the complete story alone</td>
-</tr>
-
-<tr>
-<td>Literature</td>
-<td>Ideas, political culture and society</td>
-<td>Authors had their own perspectives</td>
-</tr>
-
-<tr>
-<td>Archaeology</td>
-<td>Material remains and settlement patterns</td>
-<td>Evidence may be incomplete</td>
-</tr>
-
-</table>
-
-<div class="highlight">
-
-<strong>UPSC Skill:</strong>
-
-Do not only ask “What does the source say?”
-Also ask: “Who produced it?”, “Why?”, “For whom?”, and
-“What other evidence can confirm or challenge it?”
-
-</div>
-
-</section>
-
-<!-- AUDIO -->
-
-<section class="section">
-
-<h2>🎧 Audio Learning</h2>
-
-<div class="audio-box">
-
-<p>
-Listen to the chapter using your phone's built-in speech system.
-</p>
-
-<button onclick="speakEnglish()">▶️ English Audio</button>
-<button onclick="speakHindi()">▶️ Hindi Audio</button>
-<button onclick="stopSpeech()">⏹️ Stop</button>
-
-</div>
-
-</section>
-
-<!-- HINDI -->
-
-<section class="section" id="hindi">
-
-<h2>🇮🇳 हिंदी में विस्तृत अध्ययन</h2>
-
-<h3>1. नए राजवंशों का उदय</h3>
-
-<p>
-लगभग सातवीं से बारहवीं शताब्दी के बीच भारतीय उपमहाद्वीप के अलग-अलग
-क्षेत्रों में कई नए राजवंश शक्तिशाली बने। राजनीतिक सत्ता किसी एक
-राजवंश के पास स्थायी रूप से नहीं रहती थी।
-</p>
-
-<p>
-कई स्थानीय प्रमुख, बड़े भूमिधर और योद्धा धीरे-धीरे अपनी शक्ति बढ़ाकर
-स्वतंत्र शासक बन गए। सत्ता प्राप्त करने के लिए केवल सेना ही पर्याप्त
-नहीं थी। शासकों को प्रशासन, संसाधन, सहयोगी समूह और वैधता की भी
-आवश्यकता थी।
-</p>
-
-<h3>2. सामंत</h3>
-
-<p>
-सामंत ऐसे अधीनस्थ प्रमुख या शक्तिशाली स्थानीय नेता थे जो किसी बड़े
-शासक के अधीन रहते थे। उनसे सैन्य सहायता, उपहार या कर जैसी सेवाओं की
-अपेक्षा की जा सकती थी।
-</p>
-
-<p>
-कुछ सामंत समय के साथ इतने शक्तिशाली हो गए कि उन्होंने अपने पुराने
-अधिपतियों से स्वतंत्र होकर स्वयं नए राज्य स्थापित किए।
-</p>
-
-<div class="highlight">
-
-<strong>याद रखें:</strong>
-
-सामंत → शक्ति और संसाधनों का संचय → स्वतंत्रता की संभावना → नया राजवंश
-
-</div>
-
-<h3>3. राष्ट्रकूट</h3>
-
-<p>
-राष्ट्रकूट दक्कन की एक प्रमुख शक्ति बने। दंतिदुर्ग को राष्ट्रकूट शक्ति
-के उदय से जोड़ा जाता है। यह उदाहरण दिखाता है कि अधीनस्थ राजनीतिक
-शक्ति कैसे स्वतंत्र सत्ता में बदल सकती थी।
-</p>
-
-<h3>4. त्रिपक्षीय संघर्ष</h3>
-
-<p>
-कन्नौज पर प्रभाव और नियंत्रण के लिए गुर्जर-प्रतिहार, राष्ट्रकूट और पाल
-जैसी शक्तियों के बीच लंबे समय तक संघर्ष हुआ। इसे सामान्यतः
-<strong>त्रिपक्षीय संघर्ष</strong> कहा जाता है।
-</p>
-
-<h3>5. प्रशस्ति</h3>
-
-<p>
-प्रशस्ति ऐसे लेख या रचनाएँ थीं जिनमें शासकों की उपलब्धियों और
-महानता का वर्णन किया जाता था। ये इतिहास के महत्वपूर्ण स्रोत हैं,
-लेकिन इन्हें आलोचनात्मक रूप से पढ़ना आवश्यक है क्योंकि इनमें शासक की
-प्रशंसा हो सकती है।
-</p>
-
-<h3>6. भूमि अनुदान</h3>
-
-<p>
-भूमि कृषि और राजस्व का महत्वपूर्ण आधार थी। शासक ब्राह्मणों या धार्मिक
-संस्थाओं को भूमि प्रदान कर सकते थे। ऐसे अनुदानों की जानकारी हमें
-अभिलेखों से मिलती है।
-</p>
-
-<h3>7. चोल</h3>
-
-<p>
-दक्षिण भारत में चोल एक शक्तिशाली राजवंश के रूप में उभरे। कावेरी क्षेत्र
-की कृषि और सिंचाई ने उनके राजनीतिक और आर्थिक आधार को मजबूत किया।
-</p>
-
-<h3>8. राजराज प्रथम और राजेंद्र प्रथम</h3>
-
-<p>
-राजराज प्रथम ने चोल शक्ति के विस्तार और प्रशासन में महत्वपूर्ण भूमिका
-निभाई। राजेंद्र प्रथम ने भी चोल प्रभाव को आगे बढ़ाया और समुद्री शक्ति
-का उपयोग किया।
-</p>
-
-<h3>9. सिंचाई</h3>
-
-<p>
-कावेरी क्षेत्र में कृषि को बढ़ाने के लिए जल प्रबंधन महत्वपूर्ण था।
-नहरें, तटबंध, कुएँ और तालाब जैसे साधनों से सिंचाई को बढ़ावा मिला।
-</p>
-
-<h3>10. चोल स्थानीय प्रशासन</h3>
-
-<p>
-चोल अभिलेखों से <strong>उर, सभा और नाडु</strong> जैसी संस्थाओं के बारे
-में जानकारी मिलती है।
-</p>
-
-<ul>
-
-<li><strong>उर:</strong> सामान्य गाँव से जुड़ी सभा</li>
-
-<li><strong>सभा:</strong> ब्राह्मण बस्तियों से जुड़ी सभा</li>
-
-<li><strong>नाडु:</strong> गाँवों से बनी बड़ी क्षेत्रीय इकाई</li>
-
-</ul>
-
-<h3>11. चोल मंदिर</h3>
-
-<p>
-बड़े मंदिर केवल पूजा के स्थान नहीं थे। वे आर्थिक, सामाजिक और सांस्कृतिक
-गतिविधियों के भी महत्वपूर्ण केन्द्र हो सकते थे।
-</p>
-
-<h3>12. इतिहास से UPSC सीख</h3>
-
-<p>
-इस chapter की सबसे महत्वपूर्ण बात यह है कि राज्य केवल युद्ध से नहीं
-बनता। कृषि, भूमि, कर, सेना, प्रशासन, धार्मिक संस्थाओं का संरक्षण,
-स्थानीय संस्थाएँ और राजनीतिक वैधता—इन सभी का संबंध राज्य निर्माण से
-था।
-</p>
-
-</section>
-
-<!-- UPSC -->
-
-<section class="section" id="upsc">
-
-<h2>🎯 UPSC Important Points</h2>
-
-<ul class="upsc-list">
-
-<li>सातवीं–बारहवीं शताब्दी में कई क्षेत्रीय राजवंशों का उदय हुआ।</li>
-
-<li>Samanta व्यवस्था ने राजनीतिक शक्ति के विकेंद्रीकरण और नए शासकों के
-उदय को समझने में मदद की।</li>
-
-<li>राष्ट्रकूट दक्कन की प्रमुख शक्ति थे।</li>
-
-<li>गुर्जर-प्रतिहार, राष्ट्रकूट और पाल कन्नौज के लिए संघर्ष से जुड़े थे।</li>
-
-<li>प्रशस्तियाँ शासकों की उपलब्धियों को प्रस्तुत करने वाले महत्वपूर्ण
-स्रोत हैं।</li>
-
-<li>भूमि अनुदान राज्य, कृषि और सामाजिक समूहों के बीच संबंध समझने में
-महत्वपूर्ण हैं।</li>
-
-<li>कावेरी क्षेत्र में सिंचाई और कृषि विस्तार चोल शक्ति से जुड़े थे।</li>
-
-<li>चोल प्रशासन को समझने में उर, सभा और नाडु महत्वपूर्ण हैं।</li>
-
-<li>चोल मंदिर धार्मिक होने के साथ-साथ आर्थिक और सांस्कृतिक केन्द्र भी
-हो सकते थे।</li>
-
-<li>इतिहासकार किसी एक स्रोत पर निर्भर नहीं रहते; वे अलग-अलग स्रोतों की
-तुलना करते हैं।</li>
-
-</ul>
-
-</section>
-
-<!-- MAINS -->
-
-<section class="section" id="mains">
-
-<h2>✍️ Mains Practice</h2>
-
-<div class="mains-box">
-<strong>Q1.</strong>
-सामंतों की भूमिका ने प्रारंभिक मध्यकालीन भारत में नए राजवंशों के उदय को
-कैसे प्रभावित किया?
-</div>
-
-<div class="mains-box">
-<strong>Q2.</strong>
-त्रिपक्षीय संघर्ष के कारणों और इसके राजनीतिक महत्व की व्याख्या कीजिए।
-</div>
-
-<div class="mains-box">
-<strong>Q3.</strong>
-चोल राज्य की शक्ति में कृषि और सिंचाई की भूमिका समझाइए।
-</div>
-
-<div class="mains-box">
-<strong>Q4.</strong>
-चोल स्थानीय प्रशासन में उर, सभा और नाडु की भूमिका का वर्णन कीजिए।
-</div>
-
-<div class="mains-box">
-<strong>Q5.</strong>
-“मंदिर मध्यकालीन समाज में केवल धार्मिक संस्थाएँ नहीं थे।” उदाहरण सहित
-समझाइए।
-</div>
-
-</section>
-
-<!-- REVISION -->
-
-<section class="section">
-
-<h2>⚡ Quick Revision</h2>
-
-<ul class="revision-list">
-
-<li>New dynasties → 7th–12th centuries</li>
-
-<li>Samanta → subordinate/local powerful chief</li>
-
-<li>Rashtrakutas → important Deccan power</li>
-
-<li>Tripartite struggle → Palas, Rashtrakutas, Gurjara-Pratiharas</li>
-
-<li>Kanauj → major political centre</li>
-
-<li>Prashasti → ruler's praise/achievement record</li>
-
-<li>Land grants → important source for state and society</li>
-
-<li>Cholas → major southern Indian power</li>
-
-<li>Kaveri delta → important agricultural region</li>
-
-<li>Ur → village assembly</li>
-
-<li>Sabha → assembly associated with Brahmana settlements</li>
-
-<li>Nadu → larger territorial organisation</li>
-
-<li>Temples → religious + economic + social + cultural roles</li>
-
-</ul>
-
-</section>
-
-<!-- FINAL FLOW -->
-
-<section class="section">
-
-<h2>🎬 Chapter Concept Flow</h2>
-
-<div class="final-flow">
-
-<div class="flow">
-
-<div class="flow-box">Local Chiefs</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Samantas</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Military & Land</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">New Dynasties</div>
-
-</div>
-
-<div class="flow">
-
-<div class="flow-box">Agriculture</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Revenue</div>
 <div class="arrow">→</div>
 
 <div class="flow-box">Army</div>
+
 <div class="arrow">→</div>
 
-<div class="flow-box">Political Power</div>
+<div class="flow-box">Expansion</div>
 
-</div>
-
-<div class="flow">
-
-<div class="flow-box">Cholas</div>
-<div class="arrow">→</div>
-
-<div class="flow-box">Kaveri Agriculture</div>
 <div class="arrow">→</div>
 
 <div class="flow-box">Administration</div>
+
 <div class="arrow">→</div>
 
-<div class="flow-box">Temples & Culture</div>
+<div class="flow-box">Empire</div>
 
 </div>
 
-<p style="margin-top:15px;">
+</div>
 
-<strong>Core Idea:</strong>
+<div class="analysis">
 
-Early-medieval state formation involved the interaction of land,
-agriculture, revenue, military power, administration, social groups
-and political legitimacy.
+<strong>🧠 What this animation explains</strong>
 
+<p>
+This is a conceptual model, not a claim that every empire followed
+exactly the same sequence.
+</p>
+
+<p>
+Imperial expansion normally required a combination of resources,
+political organisation, military capability, communication and
+administrative capacity.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📱 Real-Life Example: Managing a Large Online Platform</h2>
+
+<p>
+Imagine a website that starts with 100 users.
+The owner can personally handle most activities.
+</p>
+
+<p>
+Now imagine the platform grows to 10 million users across many countries.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">Small Platform</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">More Users</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Regional Teams</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Rules</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Central Management</div>
+
+</div>
+
+<p>
+The platform needs rules, communication systems, regional management,
+security and resource management.
+</p>
+
+<div class="key-box">
+
+<strong>Historical connection:</strong>
+
+<p>
+An expanding empire faced a similar basic administrative problem:
+<strong>how to maintain coordination across a large and diverse territory.</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
+
+<h3>1. साम्राज्य क्या होता है?</h3>
+
+<p>
+साम्राज्य एक ऐसी बड़ी राजनीतिक व्यवस्था होती है जिसमें एक शक्तिशाली
+शासक या केंद्रीय सत्ता बड़े भू-भाग और कई क्षेत्रों या राज्यों पर
+नियंत्रण रखती है।
+</p>
+
+<h3>2. मगध का उदय</h3>
+
+<p>
+मगध महाजनपदों में एक शक्तिशाली राज्य बना। इसकी भौगोलिक स्थिति,
+उपजाऊ भूमि, संसाधन, नदियाँ और व्यापारिक संपर्क इसके विकास के लिए
+महत्वपूर्ण थे।
+</p>
+
+<h3>3. नंद वंश</h3>
+
+<p>
+मौर्यों से पहले नंदों ने मगध की राजनीतिक शक्ति को मजबूत किया।
+बाद में इसी क्षेत्र से मौर्य साम्राज्य का उदय हुआ।
+</p>
+
+<h3>4. सिकंदर</h3>
+
+<p>
+चौथी शताब्दी ईसा पूर्व में सिकंदर ने उत्तर-पश्चिमी भारतीय क्षेत्र की
+ओर अभियान किया और पोरस से हाइडेस्पीज के युद्ध में संघर्ष किया।
+उसका अभियान भारतीय उपमहाद्वीप में स्थायी साम्राज्य स्थापित नहीं कर सका।
+</p>
+
+<h3>5. चंद्रगुप्त मौर्य</h3>
+
+<p>
+चंद्रगुप्त मौर्य ने लगभग चौथी शताब्दी ईसा पूर्व के अंत में मौर्य
+साम्राज्य की स्थापना की। पाटलिपुत्र इसका प्रमुख राजनीतिक केंद्र बना।
+</p>
+
+<h3>6. कौटिल्य और अर्थशास्त्र</h3>
+
+<p>
+कौटिल्य का नाम अर्थशास्त्र से जुड़ा है। इसमें शासन, प्रशासन,
+अर्थव्यवस्था, कूटनीति और राज्य संचालन जैसे विषयों पर विचार मिलते हैं।
+</p>
+
+<h3>7. अशोक</h3>
+
+<p>
+अशोक मौर्य साम्राज्य के सबसे प्रसिद्ध शासकों में से एक थे।
+कलिंग युद्ध के बाद उनके शासन और सार्वजनिक संदेशों में महत्वपूर्ण
+परिवर्तन दिखाई देता है।
+</p>
+
+<h3>8. कलिंग युद्ध</h3>
+
+<p>
+लगभग 261 ईसा पूर्व कलिंग युद्ध हुआ। युद्ध में भारी जनहानि और पीड़ा
+हुई। इसके बाद अशोक ने हिंसा के प्रति पश्चाताप व्यक्त किया।
+</p>
+
+<h3>9. धम्म</h3>
+
+<p>
+अशोक ने धम्म के माध्यम से नैतिक आचरण, सहिष्णुता, दया, सम्मान और
+सामाजिक जिम्मेदारी जैसे मूल्यों पर जोर दिया।
+</p>
+
+<h3>10. शिलालेख</h3>
+
+<p>
+अशोक ने अपने संदेश चट्टानों और स्तंभों पर खुदवाए। ये शिलालेख
+प्राचीन भारतीय इतिहास के महत्वपूर्ण प्राथमिक स्रोत हैं।
+</p>
+
+<h3>11. मौर्य प्रशासन</h3>
+
+<p>
+इतने बड़े साम्राज्य को चलाने के लिए केंद्रीय सत्ता, अधिकारी,
+प्रांतीय व्यवस्था, राजस्व, सेना और संचार व्यवस्था आवश्यक थी।
 </p>
 
 </div>
 
 </section>
 
-<!-- TESTS -->
 
-<section class="section" id="tests">
+<section>
 
-<h2>📝 Chapter Tests — 4 × 5 = 20 MCQs</h2>
+<div class="card">
 
-<p>
-पहले अपना answer चुनें। फिर <strong>Check Answer</strong> दबाएँ।
-Correct answer और explanation उसके बाद ही दिखाई जाएगी।
-</p>
-
-<div id="questions"></div>
-
-</section>
-
-<section class="section" style="text-align:center;">
-
-<h2>🏆 Chapter Complete</h2>
+<h2>🎧 Audio Learning</h2>
 
 <p>
-20 MCQs attempt करने के बाद chapter complete mark करें।
+English और Hindi summary सुनने के लिए नीचे buttons दबाएँ।
 </p>
 
-<button class="complete-btn" onclick="completeChapter()">
-✅ Mark Chapter Complete
+<div class="audio-box">
+
+<div class="audio-buttons">
+
+<button onclick="speakEnglish()">
+▶ English Audio
 </button>
 
-<p id="completeMessage" style="margin-top:12px;font-weight:bold;"></p>
+<button onclick="speakHindi()">
+▶ Hindi Audio
+</button>
+
+<button onclick="stopSpeech()">
+⏹ Stop
+</button>
+
+</div>
+
+</div>
+
+</div>
 
 </section>
 
+
+<section>
+
+<div class="card">
+
+<h2>🎯 UPSC Important Points</h2>
+
+<ol>
+
+<li>Empire means a large political system controlling extensive territory.</li>
+
+<li>Magadha became one of the most powerful mahājanapadas.</li>
+
+<li>Fertile land, rivers, iron and other resources supported Magadha's growth.</li>
+
+<li>The Nandas ruled Magadha before the Mauryan rise.</li>
+
+<li>Alexander entered northwestern India in the late 4th century BCE.</li>
+
+<li>Chandragupta Maurya established the Mauryan Empire.</li>
+
+<li>Pāṭaliputra was a major Mauryan political centre.</li>
+
+<li>Kautilya is traditionally associated with the Arthashastra.</li>
+
+<li>Ashoka is famous for his inscriptions and Dhamma.</li>
+
+<li>The Kalinga War is generally dated to around 261 BCE.</li>
+
+<li>Ashoka's edicts are important primary historical sources.</li>
+
+<li>Brahmi was one of the major scripts used in Ashokan inscriptions.</li>
+
+<li>Ashoka's Dhamma emphasised ethical and social values.</li>
+
+<li>Large empires require revenue, administration, communication and military organisation.</li>
+
+<li>Empires can weaken because of political, economic, military and administrative pressures.</li>
+
+</ol>
+
 </div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>✍️ UPSC Mains Practice</h2>
+
+<ol>
+
+<li>
+Explain the geographical and economic factors behind the rise of Magadha.
+</li>
+
+<li>
+How did Chandragupta Maurya contribute to the emergence of the Mauryan Empire?
+</li>
+
+<li>
+Discuss the importance of Kautilya's Arthashastra for understanding ancient
+Indian ideas of statecraft.
+</li>
+
+<li>
+Why is the Kalinga War considered a turning point in Ashoka's reign?
+</li>
+
+<li>
+Explain the role of Ashokan inscriptions in reconstructing the history
+of the Mauryan Empire.
+</li>
+
+</ol>
+
+<div class="analysis">
+
+<strong>📝 Answer Writing Formula</strong>
+
+<p>
+For a 10-mark answer:
+<strong>
+Introduction → Causes/Events → Examples → Analysis → Conclusion
+</strong>
+</p>
+
+<p>
+For example, while answering Magadha's rise, do not only write
+“fertile land”. Explain how fertile land supported agriculture,
+surplus, revenue and ultimately political power.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>⚡ Quick Revision</h2>
+
+<div class="revision">
+
+<div>
+<strong>Empire</strong>
+<p>Large political system controlling extensive territory.</p>
+</div>
+
+<div>
+<strong>Magadha</strong>
+<p>One of the strongest mahājanapadas.</p>
+</div>
+
+<div>
+<strong>Nandas</strong>
+<p>Important dynasty before the Mauryas.</p>
+</div>
+
+<div>
+<strong>Chandragupta Maurya</strong>
+<p>Founder of the Mauryan Empire.</p>
+</div>
+
+<div>
+<strong>Kautilya</strong>
+<p>Traditionally associated with Arthashastra.</p>
+</div>
+
+<div>
+<strong>Ashoka</strong>
+<p>Famous Mauryan ruler associated with Dhamma and edicts.</p>
+</div>
+
+<div>
+<strong>Kalinga War</strong>
+<p>Major turning point in Ashoka's reign.</p>
+</div>
+
+<div>
+<strong>Edicts</strong>
+<p>Rock and pillar inscriptions containing royal messages.</p>
+</div>
+
+<div>
+<strong>Dhamma</strong>
+<p>Ashoka's broad ethical and social policy.</p>
+</div>
+
+<div>
+<strong>Pāṭaliputra</strong>
+<p>Major Mauryan political centre.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>🧠 MCQ Test — 20 Questions</h2>
+
+<p>
+<strong>4 Tests × 5 Questions = 20 Questions</strong>
+</p>
+
+<p>
+Explanation केवल <strong>Check Answer</strong> दबाने के बाद दिखाई देगा।
+</p>
+
+<div id="quizContainer"></div>
+
+</div>
+
+</section>
+
+
+<button
+class="complete-btn"
+id="completeBtn"
+onclick="completeChapter()">
+
+✅ Mark Chapter as Completed
+
+</button>
+
+
+<div class="card">
+
+<h2>📚 Chapter Concept Map</h2>
+
+<div class="flow">
+
+<div class="flow-box">Mahājanapadas</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Magadha</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Nandas</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Chandragupta</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Mauryan Empire</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Ashoka</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Dhamma & Edicts</div>
+
+</div>
+
+</div>
+
+
+</main>
+
 
 <footer>
 
-<p>🇮🇳 UPSC Shiksha</p>
-<p>Class 7 History • Chapter 2</p>
-<p>Learn • Revise • Practice • Improve</p>
+<p>
+<strong>🇮🇳 UPSC Shiksha</strong>
+</p>
+
+<p>
+Class 7 History • Current NCERT 2026–27
+</p>
+
+<p class="small">
+Original educational explanations for UPSC-oriented learning.
+</p>
 
 </footer>
 
+
 <script>
 
-const questions=[
+const quizData=[
 
 {
-q:"Who were samantas?",
+q:"What is the best description of an empire?",
 options:[
-"Subordinate chiefs or powerful local leaders",
-"Foreign traders",
-"Temple sculptors",
-"Village farmers only"
+"A large political system controlling an extensive territory",
+"A small village council",
+"A single marketplace",
+"A religious festival"
 ],
-answer:"A",
-exp:"Samantas were subordinate chiefs or powerful local leaders who could provide military support and other services to superior rulers."
+answer:0,
+explain:"An empire is a large political system that exercises authority over an extensive territory containing multiple regions or peoples."
 },
 
 {
-q:"Which three powers are associated with the Tripartite Struggle for Kanauj?",
+q:"Which mahājanapada became especially powerful before the Mauryan rise?",
 options:[
-"Cholas, Cheras and Pandyas",
-"Palas, Rashtrakutas and Gurjara-Pratiharas",
-"Mughals, Marathas and Sikhs",
-"Chalukyas, Pallavas and Hoysalas"
+"Magadha",
+"Matsya",
+"Kuru",
+"Vajji"
 ],
-answer:"B",
-exp:"The Tripartite Struggle involved the Palas, Rashtrakutas and Gurjara-Pratiharas and was connected with competition for Kanauj."
+answer:0,
+explain:"Magadha became one of the strongest mahājanapadas and later provided the political base for the Mauryan Empire."
 },
 
 {
-q:"Dantidurga is associated with the rise of which dynasty?",
+q:"Which combination helped Magadha become powerful?",
 options:[
-"Chola",
-"Rashtrakuta",
-"Pala",
-"Chahamanas"
+"Fertile land, resources, rivers and strategic location",
+"Complete isolation from rivers",
+"Absence of agriculture",
+"Lack of natural resources"
 ],
-answer:"B",
-exp:"Dantidurga is associated with the establishment and rise of Rashtrakuta power in the Deccan."
+answer:0,
+explain:"Magadha benefited from fertile agricultural regions, rivers, resources and a strategic geographical position."
 },
 
 {
-q:"What is a prashasti?",
+q:"Which dynasty ruled Magadha before the Mauryan rise?",
 options:[
-"A type of irrigation tank",
-"A royal coin",
-"A composition or inscription praising a ruler",
-"A village tax"
+"Nanda dynasty",
+"Gupta dynasty",
+"Pallava dynasty",
+"Chola dynasty"
 ],
-answer:"C",
-exp:"A prashasti was a eulogy or praise text that described a ruler's achievements and qualities."
+answer:0,
+explain:"The Nandas ruled Magadha before the Mauryan dynasty rose to power."
 },
 
 {
-q:"Why should historians read royal prashastis critically?",
+q:"Who founded the Mauryan Empire?",
 options:[
-"They contain no historical information",
-"They were always written by farmers",
-"They may exaggerate or glorify the ruler",
-"They are modern newspapers"
+"Chandragupta Maurya",
+"Ashoka",
+"Samudragupta",
+"Harshavardhana"
 ],
-answer:"C",
-exp:"Prashastis are valuable historical sources, but their purpose of praising rulers means that their claims must be evaluated carefully."
+answer:0,
+explain:"Chandragupta Maurya established the Mauryan Empire around the end of the 4th century BCE."
 },
 
 {
-q:"Which region was especially important for Chola agriculture?",
+q:"Which city became the major political centre of the Mauryan Empire?",
 options:[
-"Kaveri region",
-"Thar Desert",
-"Punjab hills",
-"Northwest frontier"
+"Pāṭaliputra",
+"Madurai",
+"Kanchipuram",
+"Ujjain"
 ],
-answer:"A",
-exp:"The Kaveri delta and surrounding region provided a strong agricultural base for Chola power."
+answer:0,
+explain:"Pāṭaliputra was the major political centre of the Mauryan Empire."
 },
 
 {
-q:"Who is associated with major expansion of Chola power and temple patronage?",
+q:"Kautilya is traditionally associated with which work?",
 options:[
-"Rajaraja I",
-"Dantidurga",
-"Dharmapala",
-"Prithviraja"
+"Arthashastra",
+"Indica",
+"Rajatarangini",
+"Natya Shastra"
 ],
-answer:"A",
-exp:"Rajaraja I was a major Chola ruler associated with expansion, administration and temple patronage."
+answer:0,
+explain:"Kautilya is traditionally associated with the Arthashastra, a major text on statecraft and administration."
 },
 
 {
-q:"What was an ur in the Chola context?",
+q:"What does the Arthashastra broadly discuss?",
 options:[
-"A military weapon",
-"A village assembly",
-"A royal title",
-"A trade route"
-],
-answer:"B",
-exp:"Ur referred to a village assembly associated with ordinary villages."
-},
-
-{
-q:"What was a sabha?",
-options:[
-"An assembly associated with Brahmana settlements",
-"A foreign army",
-"A type of coin",
-"A royal palace"
-],
-answer:"A",
-exp:"Sabha was an assembly associated particularly with Brahmana settlements."
-},
-
-{
-q:"What does nadu refer to?",
-options:[
-"A single temple",
-"A larger territorial organisation",
-"A royal crown",
-"A type of sculpture"
-],
-answer:"B",
-exp:"Nadu was a larger territorial organisation consisting of groups of villages."
-},
-
-{
-q:"Why was irrigation important to the Chola economy?",
-options:[
-"It reduced all agriculture",
-"It helped expand and support cultivation",
-"It was used only for warfare",
-"It replaced farming"
-],
-answer:"B",
-exp:"Irrigation helped support agricultural production and cultivation in the Kaveri region."
-},
-
-{
-q:"Which could be an important reason for medieval warfare?",
-options:[
-"Control over fertile land and resources",
+"Statecraft, administration, economy and diplomacy",
 "Only religious festivals",
-"Only entertainment",
-"Only writing books"
+"Only astronomical observations",
+"Only agricultural songs"
 ],
-answer:"A",
-exp:"Control over fertile land, cities, trade routes and resources could increase political and economic power."
+answer:0,
+explain:"The Arthashastra discusses subjects such as governance, administration, economy, diplomacy and statecraft."
 },
 
 {
-q:"Which dynasty was a major power in Bengal and eastern India?",
+q:"Which ruler is most closely associated with the Kalinga War and Dhamma?",
 options:[
-"Palas",
-"Cholas",
-"Rashtrakutas",
-"Chahamanas"
+"Ashoka",
+"Chandragupta Maurya",
+"Bindusara",
+"Porus"
 ],
-answer:"A",
-exp:"The Palas were an important political power in Bengal and eastern India."
+answer:0,
+explain:"Ashoka fought the Kalinga War and later promoted Dhamma through his public messages and inscriptions."
 },
 
 {
-q:"Which region was the core area of Rashtrakuta power?",
+q:"Around which date is the Kalinga War generally placed?",
 options:[
-"Deccan",
-"Kashmir",
-"Kerala coast only",
-"Punjab"
+"261 BCE",
+"1066 CE",
+"1526 CE",
+"1857 CE"
 ],
-answer:"A",
-exp:"The Rashtrakutas were a major power in the Deccan."
+answer:0,
+explain:"The Kalinga War is generally dated to around 261 BCE."
 },
 
 {
-q:"Why were land grants historically important?",
+q:"Why is the Kalinga War important in Ashoka's history?",
 options:[
-"They provide evidence about land, revenue and social relations",
-"They contain only weather information",
-"They were modern legal documents",
-"They had no connection with agriculture"
+"It was followed by a major change in Ashoka's public ethical message",
+"It established the Gupta Empire",
+"It ended the Harappan civilisation",
+"It created the Delhi Sultanate"
 ],
-answer:"A",
-exp:"Land-grant records can provide evidence about land rights, cultivation, beneficiaries, taxes and social relationships."
+answer:0,
+explain:"The suffering caused by the Kalinga War influenced Ashoka's later emphasis on Dhamma and ethical conduct."
 },
 
 {
-q:"What was one important function of large Chola temples?",
+q:"What were Ashoka's edicts?",
 options:[
-"Only military training",
-"Only storing weapons",
-"Religious, economic and cultural activities",
-"Only collecting foreign passports"
+"Messages inscribed on rocks and pillars",
+"Coins issued by modern governments",
+"Modern legal codes",
+"Village songs"
 ],
-answer:"C",
-exp:"Large temples could function as centres of worship as well as economic, social and cultural activity."
+answer:0,
+explain:"Ashoka's edicts are royal messages inscribed on rocks and pillars across different regions."
 },
 
 {
-q:"Which ruler continued Chola expansion after Rajaraja I?",
+q:"Why are Ashokan inscriptions important to historians?",
 options:[
-"Rajendra I",
-"Dantidurga",
-"Harsha",
-"Samudragupta"
+"They provide direct evidence about Ashoka's public messages",
+"They were written by modern historians",
+"They contain only modern political information",
+"They eliminate the need for archaeology"
 ],
-answer:"A",
-exp:"Rajendra I continued the expansion of Chola influence after Rajaraja I."
+answer:0,
+explain:"Ashokan inscriptions are primary sources that provide direct evidence about the ruler's public messages, policies and ideas."
 },
 
 {
-q:"Why do historians compare different sources?",
+q:"Which script was widely used in many Ashokan inscriptions?",
 options:[
-"To avoid studying history",
-"To check claims and build a more balanced interpretation",
-"Because inscriptions are always false",
-"Because archaeology is useless"
+"Brahmi",
+"Devanagari",
+"Roman",
+"Persian"
 ],
-answer:"B",
-exp:"Different sources have different strengths and limitations. Comparing them helps historians evaluate claims."
+answer:0,
+explain:"Brahmi was one of the major scripts used for Ashokan inscriptions."
 },
 
 {
-q:"Which statement best describes early-medieval state formation?",
+q:"What was a major feature of Ashoka's Dhamma?",
 options:[
-"It depended only on religion",
-"It involved land, agriculture, revenue, military power and political legitimacy",
-"It depended only on coins",
-"It had no connection with local society"
+"Emphasis on ethical conduct, respect and social responsibility",
+"Promotion of constant warfare",
+"Rejection of all moral behaviour",
+"Complete isolation of communities"
 ],
-answer:"B",
-exp:"State formation involved territory, agriculture, revenue, military strength, administration and legitimacy."
+answer:0,
+explain:"Ashoka's Dhamma emphasised ethical conduct, respect, compassion and social responsibility."
 },
 
 {
-q:"Which source can provide information about Chola local administration?",
+q:"Why did a large empire need an administrative system?",
 options:[
-"Uttaramerur inscriptions",
-"Modern newspapers",
-"Satellite television",
-"Modern election reports"
+"To manage distant territories, revenue, communication and officials",
+"Because empires had no territory",
+"To eliminate all trade",
+"To stop communication"
 ],
-answer:"A",
-exp:"Uttaramerur inscriptions provide important evidence about Chola local assemblies and their organisation."
+answer:0,
+explain:"Large empires needed administrative systems to manage distant regions, revenue, officials, communication and security."
+},
+
+{
+q:"What was one economic foundation of imperial power?",
+options:[
+"Revenue generated from economic activity",
+"Complete absence of agriculture",
+"Ending all trade",
+"Eliminating production"
+],
+answer:0,
+explain:"Revenue from agriculture, trade and other economic activity provided resources for administration and military organisation."
+},
+
+{
+q:"Why were trade routes important for empires?",
+options:[
+"They connected regions and supported movement of goods and people",
+"They prevented communication",
+"They existed only inside one village",
+"They eliminated markets"
+],
+answer:0,
+explain:"Trade routes connected regions and supported the movement of goods, people and ideas."
+},
+
+{
+q:"Which statement best explains why empires can decline?",
+options:[
+"Large territories can become difficult to control, especially with weak central authority",
+"Large territories never face administrative problems",
+"Empires automatically become stronger forever",
+"Trade always destroys empires"
+],
+answer:0,
+explain:"Distant territories, weak rulers, economic pressure, local resistance and administrative difficulties can weaken large empires."
+},
+
+{
+q:"Which is the best UPSC approach to studying the rise of empires?",
+options:[
+"Connect geography, resources, economy, military power and administration",
+"Memorise only ruler names",
+"Study only battles",
+"Ignore economic factors"
+],
+answer:0,
+explain:"A strong historical analysis connects geography, resources, agriculture, trade, revenue, military power and administration."
 }
 
 ];
 
-function renderQuestions(){
+
+function buildQuiz(){
+
+const container=document.getElementById("quizContainer");
 
 let html="";
 
-questions.forEach((item,index)=>{
+quizData.forEach((item,index)=>{
 
-let number=index+1;
+const saved=localStorage.getItem(
+"class7history2q"+(index+1)
+);
 
 html+=`
 
 <div class="question">
 
-<h4>Q${number}. ${item.q}</h4>
+<h3>
+Q${index+1}. ${item.q}
+</h3>
 
-<label class="option">
-<input type="radio" name="q${number}" value="A">
-A. ${item.options[0]}
+<div class="options">
+
+${item.options.map((opt,i)=>`
+
+<label>
+
+<input
+type="radio"
+name="q${index+1}"
+value="${i}"
+${saved==i ? "checked":""}
+>
+
+${String.fromCharCode(65+i)}. ${opt}
+
 </label>
 
-<label class="option">
-<input type="radio" name="q${number}" value="B">
-B. ${item.options[1]}
-</label>
+`).join("")}
 
-<label class="option">
-<input type="radio" name="q${number}" value="C">
-C. ${item.options[2]}
-</label>
+</div>
 
-<label class="option">
-<input type="radio" name="q${number}" value="D">
-D. ${item.options[3]}
-</label>
+<button
+class="check-btn"
+onclick="checkAnswer(${index})">
 
-<button class="check-btn"
-onclick="checkAnswer(${number})">
 Check Answer
+
 </button>
 
-<div class="answer-box" id="answer${number}"></div>
+<div
+class="answer"
+id="answer${index}">
+</div>
 
 </div>
 
@@ -1914,136 +2503,120 @@ Check Answer
 
 });
 
-document.getElementById("questions").innerHTML=html;
+container.innerHTML=html;
 
 updateProgress();
 
 }
 
-function checkAnswer(number){
 
-let selected=document.querySelector(
-`input[name="q${number}"]:checked`
+function checkAnswer(index){
+
+const selected=document.querySelector(
+`input[name="q${index+1}"]:checked`
 );
 
-let box=document.getElementById(`answer${number}`);
+const box=document.getElementById(
+"answer"+index
+);
 
 if(!selected){
 
 box.style.display="block";
 
 box.innerHTML=
-"⚠️ Please select an option first.";
+"⚠️ Please select an answer first.";
 
 return;
 
 }
 
-let data=questions[number-1];
+const value=Number(selected.value);
 
-let isCorrect=
-selected.value===data.answer;
+localStorage.setItem(
+"class7history2q"+(index+1),
+value
+);
 
-box.style.display="block";
+if(value===quizData[index].answer){
 
-if(isCorrect){
-
-box.innerHTML=`
-
-<strong>✅ Correct!</strong>
-<br>
-Correct Answer: ${data.answer}
-<br>
-${data.exp}
-
-`;
+box.innerHTML=
+"✅ Correct!<br><br>"+
+quizData[index].explain;
 
 }else{
 
-box.innerHTML=`
-
-<strong>❌ Incorrect.</strong>
-<br>
-Correct Answer: ${data.answer}
-<br>
-${data.exp}
-
-`;
+box.innerHTML=
+"❌ Not correct.<br><br>"+
+"Correct answer: "+
+String.fromCharCode(65+quizData[index].answer)+
+". "+
+quizData[index].options[quizData[index].answer]+
+"<br><br>"+
+quizData[index].explain;
 
 }
 
-localStorage.setItem(
-"class7ch2q"+number,
-"checked"
-);
+box.style.display="block";
 
 updateProgress();
 
 }
 
+
 function updateProgress(){
 
 let checked=0;
 
-questions.forEach((_,index)=>{
+for(let i=1;i<=20;i++){
 
-if(localStorage.getItem(
-"class7ch2q"+(index+1)
-)==="checked"){
+if(
+localStorage.getItem(
+"class7history2q"+i
+)!==null
+){
 
 checked++;
 
 }
 
-});
+}
 
-let percent=Math.round(
-(checked/questions.length)*100
-);
+const percent=(checked/20)*100;
 
 document.getElementById(
-"progressFill"
+"progressBar"
 ).style.width=percent+"%";
 
 document.getElementById(
 "progressText"
 ).innerText=
-percent+"% completed • "+
-checked+"/20 questions checked";
+checked+" / 20 MCQs checked";
 
 }
 
-function completeChapter(){
-
-localStorage.setItem(
-"class7ch2done",
-"true"
-);
-
-document.getElementById(
-"completeMessage"
-).innerText=
-"🎉 Chapter 2 completed! Great work.";
-
-}
 
 function toggleTheme(){
 
 document.body.classList.toggle("dark");
 
 localStorage.setItem(
-"class7ch2theme",
+"class7history2theme",
 document.body.classList.contains("dark")
-?"dark":"light"
+?"dark"
+:"light"
 );
 
 }
 
-function loadTheme(){
 
-if(localStorage.getItem(
-"class7ch2theme"
-)==="dark"){
+function restoreTheme(){
+
+if(
+localStorage.getItem(
+"class7history2theme"
+)==="dark"
+){
 
 document.body.classList.add("dark");
 
@@ -2051,12 +2624,54 @@ document.body.classList.add("dark");
 
 }
 
-function speakText(text,language){
+
+function completeChapter(){
+
+localStorage.setItem(
+"class7history2done",
+"yes"
+);
+
+const btn=document.getElementById(
+"completeBtn"
+);
+
+btn.innerHTML=
+"✅ Chapter Completed";
+
+btn.classList.add("completed");
+
+}
+
+
+function restoreCompletion(){
+
+if(
+localStorage.getItem(
+"class7history2done"
+)==="yes"
+){
+
+const btn=document.getElementById(
+"completeBtn"
+);
+
+btn.innerHTML=
+"✅ Chapter Completed";
+
+btn.classList.add("completed");
+
+}
+
+}
+
+
+function speakText(text,lang){
 
 if(!("speechSynthesis" in window)){
 
 alert(
-"Audio is not supported on this browser."
+"Audio speech is not supported on this browser."
 );
 
 return;
@@ -2065,48 +2680,58 @@ return;
 
 speechSynthesis.cancel();
 
-let speech=
+const speech=
 new SpeechSynthesisUtterance(text);
 
-speech.lang=language;
+speech.lang=lang;
+
 speech.rate=.9;
+
 speech.pitch=1;
 
 speechSynthesis.speak(speech);
 
 }
 
+
 function speakEnglish(){
 
-let text=`
+const text=`
 
-New Kings and Kingdoms.
+The Rise of Empires.
 
-Between the seventh and twelfth centuries,
-many new dynasties emerged in different regions
-of the Indian subcontinent.
+This chapter explains the emergence of large
+political systems in ancient India.
 
-Powerful chiefs and samantas could become
-independent rulers.
+Magadha became one of the most powerful
+mahajanapadas because of its fertile land,
+rivers, resources and strategic location.
 
-The Rashtrakutas became an important power
-in the Deccan.
+The Nandas ruled Magadha before the rise
+of the Mauryas.
 
-The Palas, Rashtrakutas and Gurjara Pratiharas
-were involved in the Tripartite Struggle for Kanauj.
+Chandragupta Maurya established the Mauryan
+Empire around the end of the fourth century BCE.
 
-The Cholas became a major power in southern India.
-Agriculture in the Kaveri region and irrigation
-supported their economic base.
+Kautilya is traditionally associated with
+the Arthashastra, which discusses statecraft,
+administration, economy and diplomacy.
 
-Chola inscriptions provide information about
-ur, sabha and nadu.
+Ashoka became famous for his inscriptions
+and his Dhamma.
 
-Large temples were religious, economic,
-social and cultural centres.
+The Kalinga War around 261 BCE became an
+important turning point in Ashoka's reign.
 
-Historians use inscriptions, coins, temples,
-literature and archaeology to understand this period.
+Ashoka communicated many messages through
+rock and pillar edicts.
+
+A large empire required administration,
+revenue, communication and military organisation.
+
+Empires can decline when distant territories
+become difficult to control and political,
+economic or administrative problems increase.
 
 `;
 
@@ -2114,41 +2739,52 @@ speakText(text,"en-IN");
 
 }
 
+
 function speakHindi(){
 
-let text=`
+const text=`
 
-नए राजवंशों और राज्यों के इस अध्याय में
-हम सातवीं से बारहवीं शताब्दी के राजनीतिक
-परिवर्तनों को समझते हैं।
+साम्राज्यों का उदय।
 
-कई स्थानीय प्रमुख और सामंत धीरे धीरे
-शक्तिशाली होकर स्वतंत्र शासक बने।
+यह अध्याय प्राचीन भारत में बड़े राजनीतिक
+साम्राज्यों के विकास के बारे में बताता है।
 
-राष्ट्रकूट दक्कन की एक प्रमुख शक्ति बने।
+मगध अपनी उपजाऊ भूमि, नदियों, संसाधनों
+और रणनीतिक स्थिति के कारण शक्तिशाली बना।
 
-पाल, राष्ट्रकूट और गुर्जर प्रतिहार
-कन्नौज के लिए त्रिपक्षीय संघर्ष से जुड़े थे।
+मौर्यों से पहले नंदों ने मगध पर शासन किया।
 
-दक्षिण भारत में चोल शक्ति का विकास हुआ।
-कावेरी क्षेत्र की कृषि और सिंचाई
-उनकी शक्ति के महत्वपूर्ण आधार थे।
+चंद्रगुप्त मौर्य ने लगभग चौथी शताब्दी
+ईसा पूर्व के अंत में मौर्य साम्राज्य
+की स्थापना की।
 
-चोल अभिलेखों से उर, सभा और नाडु
-जैसी स्थानीय संस्थाओं की जानकारी मिलती है।
+कौटिल्य का संबंध अर्थशास्त्र से माना जाता है,
+जिसमें शासन, प्रशासन, अर्थव्यवस्था और
+कूटनीति जैसे विषयों पर विचार मिलते हैं।
 
-बड़े मंदिर धार्मिक होने के साथ-साथ
-आर्थिक, सामाजिक और सांस्कृतिक केन्द्र भी थे।
+अशोक अपने शिलालेखों और धम्म के लिए
+प्रसिद्ध हुए।
 
-इतिहासकार अभिलेख, सिक्के, मंदिर,
-साहित्य और पुरातात्विक प्रमाणों की मदद से
-इस काल का अध्ययन करते हैं।
+लगभग 261 ईसा पूर्व का कलिंग युद्ध
+अशोक के शासन का महत्वपूर्ण मोड़ बना।
+
+अशोक ने चट्टानों और स्तंभों पर अपने
+संदेश खुदवाए।
+
+बड़े साम्राज्य को चलाने के लिए प्रशासन,
+राजस्व, संचार और सेना की आवश्यकता थी।
+
+समय के साथ कमजोर केंद्रीय सत्ता,
+दूरस्थ क्षेत्रों को नियंत्रित करने की
+कठिनाई और आर्थिक या राजनीतिक समस्याएँ
+साम्राज्य को कमजोर कर सकती हैं।
 
 `;
 
 speakText(text,"hi-IN");
 
 }
+
 
 function stopSpeech(){
 
@@ -2160,8 +2796,12 @@ speechSynthesis.cancel();
 
 }
 
-loadTheme();
-renderQuestions();
+
+restoreTheme();
+
+restoreCompletion();
+
+buildQuiz();
 
 </script>
 
