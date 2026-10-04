@@ -1,13 +1,13 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>The Mughals | UPSC Shiksha</title>
+<title>The Gupta Era: An Age of Tireless Creativity | UPSC Shiksha</title>
 
 <meta name="description"
-content="Class 7 History Chapter 4 - The Mughals. Detailed English and Hindi supplementary study material with audio, UPSC points, Mains practice, MCQs and revision.">
+content="Class 7 History Chapter 4 - The Gupta Era: An Age of Tireless Creativity. Current NCERT 2026-27 based original notes with Gupta rulers, administration, society, science, mathematics, astronomy, literature, art, trade, decline, Hindi explanation, audio, UPSC points and MCQs.">
 
 <style>
 *{
@@ -22,30 +22,29 @@ html{
 
 body{
   font-family:Arial,Helvetica,sans-serif;
-  line-height:1.7;
-  background:#f5f7fb;
-  color:#202124;
+  background:#f4f7fb;
+  color:#17202a;
+  line-height:1.75;
   transition:.3s;
 }
 
 body.dark{
-  background:#10131a;
-  color:#e8edf5;
+  background:#10151c;
+  color:#e8edf3;
 }
 
-/* HEADER */
 header{
-  background:linear-gradient(135deg,#581c87,#7e22ce,#9333ea);
-  color:white;
-  padding:17px 15px;
+  background:linear-gradient(135deg,#3a1f55,#6c3c8c);
+  color:#fff;
+  padding:15px;
   position:sticky;
   top:0;
   z-index:1000;
-  box-shadow:0 3px 15px rgba(0,0,0,.2);
+  box-shadow:0 3px 15px rgba(0,0,0,.22);
 }
 
 .header-inner{
-  max-width:1150px;
+  max-width:1100px;
   margin:auto;
   display:flex;
   justify-content:space-between;
@@ -54,618 +53,673 @@ header{
 }
 
 .logo{
-  font-size:20px;
+  font-size:21px;
   font-weight:bold;
 }
 
 .header-buttons{
   display:flex;
   gap:8px;
-  flex-wrap:wrap;
 }
 
-.header-buttons a,
-.header-buttons button{
+.home-btn,
+.theme-btn,
+button{
   border:none;
+  border-radius:9px;
   padding:9px 13px;
-  border-radius:8px;
   cursor:pointer;
-  text-decoration:none;
   font-weight:bold;
-  font-size:13px;
 }
 
 .home-btn{
-  background:white;
-  color:#6b21a8;
+  background:#fff;
+  color:#5b3475;
+  text-decoration:none;
 }
 
-.dark-btn{
-  background:#111827;
-  color:white;
+.theme-btn{
+  background:#222;
+  color:#fff;
 }
 
-/* HERO */
+body.dark .theme-btn{
+  background:#fff;
+  color:#111;
+}
+
+.container{
+  width:94%;
+  max-width:1100px;
+  margin:auto;
+}
+
 .hero{
-  max-width:1150px;
-  margin:25px auto;
-  padding:35px 20px;
-  text-align:center;
-  background:linear-gradient(135deg,#faf5ff,#f3e8ff);
+  margin-top:25px;
+  background:linear-gradient(135deg,#fff,#f1e9f7);
+  padding:30px 22px;
   border-radius:20px;
-  border:1px solid #e9d5ff;
+  text-align:center;
+  box-shadow:0 5px 20px rgba(0,0,0,.08);
 }
 
 body.dark .hero{
-  background:linear-gradient(135deg,#211329,#2b143e);
-  border-color:#6b21a8;
+  background:linear-gradient(135deg,#211a29,#30203c);
 }
 
 .hero h1{
-  color:#6b21a8;
-  font-size:34px;
-  margin-bottom:10px;
+  font-size:31px;
+  color:#663884;
+  margin-bottom:8px;
 }
 
 body.dark .hero h1{
-  color:#d8b4fe;
-}
-
-.hero p{
-  max-width:850px;
-  margin:10px auto;
-}
-
-.badges{
-  display:flex;
-  justify-content:center;
-  gap:8px;
-  flex-wrap:wrap;
-  margin-top:18px;
+  color:#d7adf2;
 }
 
 .badge{
-  background:#7e22ce;
-  color:white;
-  padding:6px 12px;
+  display:inline-block;
+  background:#673b85;
+  color:#fff;
+  padding:6px 13px;
   border-radius:20px;
   font-size:13px;
-  font-weight:bold;
+  margin-bottom:12px;
 }
 
-/* NOTICE */
 .notice{
-  max-width:1150px;
-  margin:20px auto;
-  padding:16px 18px;
-  background:#fff7ed;
-  border-left:5px solid #f97316;
+  margin-top:18px;
+  padding:15px;
+  border-left:5px solid #c17b00;
+  background:#fff4d8;
   border-radius:10px;
-}
-
-body.dark .notice{
-  background:#2b1b12;
-  color:#fed7aa;
-}
-
-/* PROGRESS */
-.progress-box{
-  max-width:1150px;
-  margin:20px auto;
-  padding:18px;
-  background:white;
-  border-radius:15px;
-  box-shadow:0 2px 10px rgba(0,0,0,.08);
-}
-
-body.dark .progress-box{
-  background:#181d27;
-}
-
-.progress-title{
-  display:flex;
-  justify-content:space-between;
-  margin-bottom:8px;
-  font-weight:bold;
-}
-
-.progress{
-  width:100%;
-  height:13px;
-  background:#e5e7eb;
-  border-radius:20px;
-  overflow:hidden;
-}
-
-body.dark .progress{
-  background:#303744;
-}
-
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:linear-gradient(90deg,#9333ea,#7e22ce);
-  transition:.4s;
-}
-
-/* NAV */
-.quick-nav{
-  max-width:1150px;
-  margin:20px auto;
-  padding:15px;
-  background:white;
-  border-radius:15px;
-  box-shadow:0 2px 10px rgba(0,0,0,.06);
-}
-
-body.dark .quick-nav{
-  background:#181d27;
-}
-
-.quick-nav h3{
-  margin-bottom:10px;
-  color:#7e22ce;
-}
-
-body.dark .quick-nav h3{
-  color:#d8b4fe;
-}
-
-.quick-links{
-  display:flex;
-  flex-wrap:wrap;
-  gap:8px;
-}
-
-.quick-links a{
-  text-decoration:none;
-  padding:7px 11px;
-  border-radius:8px;
-  background:#f3e8ff;
-  color:#6b21a8;
-  font-size:13px;
-  font-weight:bold;
-}
-
-body.dark .quick-links a{
-  background:#321847;
-  color:#e9d5ff;
-}
-
-/* MAIN */
-.container{
-  max-width:1150px;
-  margin:auto;
-  padding:0 15px 40px;
-}
-
-.section{
-  background:white;
-  margin:20px 0;
-  padding:25px;
-  border-radius:18px;
-  box-shadow:0 2px 12px rgba(0,0,0,.07);
-}
-
-body.dark .section{
-  background:#181d27;
-  box-shadow:0 2px 12px rgba(0,0,0,.3);
-}
-
-.section h2{
-  color:#6b21a8;
-  margin-bottom:15px;
-  font-size:25px;
-}
-
-body.dark .section h2{
-  color:#d8b4fe;
-}
-
-.section h3{
-  color:#7e22ce;
-  margin:18px 0 8px;
-}
-
-body.dark .section h3{
-  color:#c084fc;
-}
-
-.section p{
-  margin:9px 0;
-}
-
-.section ul{
-  margin:10px 0 10px 22px;
-}
-
-.section li{
-  margin:5px 0;
-}
-
-/* HIGHLIGHT */
-.highlight{
-  background:#faf5ff;
-  border-left:5px solid #9333ea;
-  padding:15px;
-  margin:15px 0;
-  border-radius:8px;
-  color:#581c87;
-}
-
-body.dark .highlight{
-  background:#2a1738;
-  border-left-color:#c084fc;
-  color:#f3e8ff;
-}
-
-/* IMPORTANT */
-.important{
-  background:#ecfdf5;
-  border-left:5px solid #10b981;
-  padding:15px;
-  margin:15px 0;
-  border-radius:8px;
-}
-
-body.dark .important{
-  background:#10251f;
-  color:#d1fae5;
-}
-
-/* CARDS */
-.cards{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
-  gap:15px;
-  margin-top:15px;
-}
-
-.card{
-  padding:18px;
-  border-radius:14px;
-  background:#faf5ff;
-  border:1px solid #e9d5ff;
-  transition:.25s;
-}
-
-.card:hover{
-  transform:translateY(-3px);
-}
-
-body.dark .card{
-  background:#251631;
-  border-color:#6b21a8;
-}
-
-/* TIMELINE */
-.timeline{
-  position:relative;
-  margin:25px 0;
-  padding-left:25px;
-  border-left:4px solid #9333ea;
-}
-
-.timeline-item{
-  margin-bottom:20px;
-  position:relative;
-}
-
-.timeline-item:before{
-  content:"";
-  position:absolute;
-  left:-35px;
-  top:5px;
-  width:13px;
-  height:13px;
-  border-radius:50%;
-  background:#9333ea;
-  border:3px solid white;
-}
-
-body.dark .timeline-item:before{
-  border-color:#181d27;
-}
-
-.timeline-item strong{
-  color:#7e22ce;
-}
-
-body.dark .timeline-item strong{
-  color:#c084fc;
-}
-
-/* FLOW */
-.flow{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  flex-wrap:wrap;
-  gap:10px;
-  margin:25px 0;
-}
-
-.flow-box{
-  background:#faf5ff;
-  border:2px solid #9333ea;
-  padding:14px;
-  border-radius:12px;
-  text-align:center;
-  min-width:145px;
-  font-weight:bold;
-}
-
-body.dark .flow-box{
-  background:#291737;
-  color:#f3e8ff;
-}
-
-.arrow{
-  font-size:25px;
-  color:#9333ea;
-}
-
-/* TABLE */
-.table-wrap{
-  overflow-x:auto;
-  margin:15px 0;
-}
-
-table{
-  width:100%;
-  border-collapse:collapse;
-  min-width:650px;
-}
-
-th,td{
-  border:1px solid #e9d5ff;
-  padding:10px;
   text-align:left;
 }
 
-th{
-  background:#f3e8ff;
-  color:#6b21a8;
+body.dark .notice{
+  background:#302817;
+  color:#f4dfaa;
 }
 
-body.dark th{
-  background:#321847;
-  color:#e9d5ff;
+.progress-box{
+  margin-top:18px;
+  background:#fff;
+  padding:16px;
+  border-radius:14px;
+  box-shadow:0 3px 12px rgba(0,0,0,.07);
 }
 
-body.dark td{
-  border-color:#4b5563;
+body.dark .progress-box{
+  background:#181e26;
 }
 
-/* AUDIO */
-.audio-box{
-  background:#eff6ff;
-  border-left:5px solid #2563eb;
-  padding:18px;
+.progress-track{
+  height:12px;
+  background:#ddd;
+  border-radius:20px;
+  overflow:hidden;
+  margin-top:8px;
+}
+
+.progress-bar{
+  height:100%;
+  width:0%;
+  background:linear-gradient(90deg,#673b85,#b77bd5);
+  transition:.4s;
+}
+
+.progress-text{
+  margin-top:6px;
+  font-size:14px;
+  font-weight:bold;
+}
+
+section{
+  margin:28px 0;
+}
+
+.card{
+  background:#fff;
+  padding:23px;
+  border-radius:16px;
+  margin:18px 0;
+  box-shadow:0 4px 18px rgba(0,0,0,.07);
+}
+
+body.dark .card{
+  background:#181e26;
+}
+
+h2{
+  color:#673b85;
+  font-size:25px;
+  margin-bottom:13px;
+}
+
+body.dark h2{
+  color:#d4a7ef;
+}
+
+h3{
+  color:#81529b;
+  margin:18px 0 8px;
+}
+
+body.dark h3{
+  color:#cda4e8;
+}
+
+p{
+  margin:9px 0;
+}
+
+ul,ol{
+  padding-left:24px;
+  margin:10px 0;
+}
+
+li{
+  margin:6px 0;
+}
+
+.highlight{
+  background:#fff0a8;
+  color:#382e00;
+  padding:2px 6px;
+  border-radius:5px;
+  font-weight:bold;
+}
+
+body.dark .highlight{
+  background:#5a4d12;
+  color:#fff2a1;
+}
+
+.key-box{
+  background:#f1eafa;
+  border-left:5px solid #673b85;
+  padding:15px;
   border-radius:10px;
   margin:15px 0;
 }
 
+body.dark .key-box{
+  background:#2b2034;
+}
+
+.example{
+  background:#eef8ff;
+  border-left:5px solid #337da9;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+body.dark .example{
+  background:#192b36;
+}
+
+.analysis{
+  background:#edf8ef;
+  border-left:5px solid #32844a;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+body.dark .analysis{
+  background:#17291d;
+}
+
+.warning{
+  background:#fff0ef;
+  border-left:5px solid #d34e4e;
+  padding:15px;
+  border-radius:10px;
+  margin:15px 0;
+}
+
+body.dark .warning{
+  background:#321c1c;
+}
+
+.flow{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap:8px;
+  margin:20px 0;
+}
+
+.flow-box{
+  background:#673b85;
+  color:#fff;
+  padding:13px 16px;
+  border-radius:12px;
+  font-weight:bold;
+  text-align:center;
+}
+
+.arrow{
+  font-size:24px;
+  font-weight:bold;
+}
+
+.timeline{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:10px;
+  margin-top:20px;
+}
+
+.timeline-item{
+  background:#eee5f5;
+  padding:14px 8px;
+  border-radius:12px;
+  text-align:center;
+}
+
+body.dark .timeline-item{
+  background:#292136;
+}
+
+.timeline-item strong{
+  display:block;
+  color:#673b85;
+  font-size:14px;
+}
+
+body.dark .timeline-item strong{
+  color:#d4a7ef;
+}
+
+.ruler-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.ruler{
+  background:#f0eafa;
+  border:1px solid #ddd0e8;
+  padding:17px;
+  border-radius:13px;
+  text-align:center;
+}
+
+body.dark .ruler{
+  background:#292137;
+  border-color:#463852;
+}
+
+.ruler-icon{
+  font-size:30px;
+  display:block;
+  margin-bottom:5px;
+}
+
+.source-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:15px;
+}
+
+.source{
+  border:1px solid #ddd;
+  border-radius:13px;
+  padding:16px;
+}
+
+body.dark .source{
+  border-color:#444;
+}
+
+.achievement-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
+  margin-top:18px;
+}
+
+.achievement{
+  background:#f2ebf7;
+  padding:17px;
+  border-radius:13px;
+  text-align:center;
+}
+
+body.dark .achievement{
+  background:#292137;
+}
+
+.achievement-icon{
+  font-size:31px;
+  display:block;
+  margin-bottom:6px;
+}
+
+.compare{
+  width:100%;
+  border-collapse:collapse;
+  margin-top:15px;
+}
+
+.compare th,
+.compare td{
+  border:1px solid #ccc;
+  padding:11px;
+  text-align:left;
+}
+
+.compare th{
+  background:#673b85;
+  color:#fff;
+}
+
+body.dark .compare td{
+  border-color:#444;
+}
+
+body.dark .compare th{
+  background:#4f2d67;
+}
+
+.animation{
+  background:linear-gradient(135deg,#20162b,#663b85);
+  color:#fff;
+  padding:22px;
+  border-radius:18px;
+  overflow:hidden;
+}
+
+.animation-road{
+  height:9px;
+  background:#756c7e;
+  border-radius:20px;
+  margin:22px 0;
+  position:relative;
+}
+
+.animation-dot{
+  width:20px;
+  height:20px;
+  border-radius:50%;
+  background:#fff;
+  position:absolute;
+  top:-5px;
+  left:0;
+  animation:travel 7s linear infinite;
+}
+
+@keyframes travel{
+  0%{left:0%}
+  100%{left:97%}
+}
+
+.pillar{
+  height:170px;
+  width:55px;
+  background:linear-gradient(to right,#c9c9c9,#f0f0f0,#aaa);
+  border-radius:7px 7px 2px 2px;
+  margin:15px auto;
+  position:relative;
+  box-shadow:4px 5px 10px rgba(0,0,0,.2);
+}
+
+.pillar:before{
+  content:"";
+  position:absolute;
+  top:-12px;
+  left:-10px;
+  width:75px;
+  height:15px;
+  background:#aaa;
+  border-radius:5px;
+}
+
+.pillar:after{
+  content:"";
+  position:absolute;
+  bottom:-12px;
+  left:-8px;
+  width:71px;
+  height:13px;
+  background:#aaa;
+  border-radius:4px;
+}
+
+.idea-wheel{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  margin:20px auto;
+  width:180px;
+  height:180px;
+  border-radius:50%;
+  background:radial-gradient(circle,#fff 0 30%,#d6b7e7 31% 55%,#75458f 56% 100%);
+  color:#351743;
+  text-align:center;
+  font-weight:bold;
+  animation:rotateWheel 8s linear infinite;
+}
+
+@keyframes rotateWheel{
+  from{transform:rotate(0deg)}
+  to{transform:rotate(360deg)}
+}
+
+.map-box{
+  background:linear-gradient(135deg,#eee8f7,#fff);
+  border:2px solid #c7a9d8;
+  border-radius:18px;
+  padding:22px;
+  text-align:center;
+}
+
+body.dark .map-box{
+  background:#201a2a;
+  border-color:#5a4370;
+}
+
+.map-region{
+  display:inline-block;
+  margin:7px;
+  padding:10px 14px;
+  border-radius:10px;
+  background:#e1d2ed;
+  color:#47225d;
+  font-weight:bold;
+}
+
+body.dark .map-region{
+  background:#3b2a4b;
+  color:#ead9f5;
+}
+
+.audio-box{
+  background:#f2f4f8;
+  padding:18px;
+  border-radius:14px;
+  margin-top:15px;
+}
+
 body.dark .audio-box{
-  background:#172033;
-  color:#dbeafe;
+  background:#202730;
 }
 
 .audio-buttons{
   display:flex;
   gap:8px;
   flex-wrap:wrap;
-  margin-top:12px;
+  margin-top:10px;
 }
 
 .audio-buttons button{
-  border:none;
-  padding:10px 14px;
-  border-radius:8px;
-  background:#2563eb;
-  color:white;
-  cursor:pointer;
-  font-weight:bold;
+  background:#673b85;
+  color:#fff;
 }
 
-/* MAINS */
-.mains-box{
-  background:#f5f3ff;
-  color:#312e81;
-  border-left:5px solid #7c3aed;
-  padding:18px;
-  border-radius:10px;
-  margin:15px 0;
+.revision{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
 }
 
-body.dark .mains-box{
-  background:#29213a;
-  color:#f3e8ff;
-  border-left:5px solid #c084fc;
-  box-shadow:0 2px 8px rgba(0,0,0,.25);
+.revision div{
+  background:#f0eafa;
+  padding:15px;
+  border-radius:11px;
 }
 
-body.dark .mains-box strong{
-  color:#ffffff;
-}
-
-/* MCQ */
-.test{
-  background:#f9fafb;
-  padding:20px;
-  border-radius:15px;
-  margin:20px 0;
-  border:1px solid #e5e7eb;
-}
-
-body.dark .test{
-  background:#151a22;
-  border-color:#374151;
+body.dark .revision div{
+  background:#292137;
 }
 
 .question{
-  padding:15px;
-  margin:12px 0;
-  border-radius:10px;
-  background:white;
-  border:1px solid #e5e7eb;
+  border:1px solid #ddd;
+  padding:17px;
+  border-radius:13px;
+  margin:15px 0;
 }
 
 body.dark .question{
-  background:#1d2430;
-  border-color:#374151;
+  border-color:#444;
 }
 
-.question p{
-  font-weight:bold;
-}
-
-.option{
+.options label{
   display:block;
-  padding:8px;
-  margin:5px 0;
-  border-radius:7px;
+  background:#f5f6f8;
+  padding:10px;
+  border-radius:9px;
+  margin:7px 0;
   cursor:pointer;
 }
 
-.option:hover{
-  background:#faf5ff;
+body.dark .options label{
+  background:#222a33;
 }
 
-body.dark .option:hover{
-  background:#2a1738;
+.options input{
+  margin-right:8px;
 }
 
-.option input{
-  margin-right:7px;
+.check-btn{
+  background:#673b85;
+  color:#fff;
+  margin-top:8px;
 }
 
 .answer{
   display:none;
-  margin-top:10px;
-  padding:12px;
-  border-radius:8px;
-  background:#ecfdf5;
-  border-left:4px solid #10b981;
+  background:#e7f7eb;
+  border-left:4px solid #32844a;
+  padding:13px;
+  border-radius:9px;
+  margin-top:12px;
 }
 
 body.dark .answer{
-  background:#10251f;
-  color:#d1fae5;
-}
-
-.check-btn{
-  border:none;
-  background:#7e22ce;
-  color:white;
-  padding:9px 14px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:bold;
-  margin-top:8px;
-}
-
-/* REVISION */
-.revision{
-  background:#ecfeff;
-  border-left:5px solid #0891b2;
-  padding:18px;
-  border-radius:10px;
-}
-
-body.dark .revision{
-  background:#10272c;
-  color:#cffafe;
-}
-
-/* COMPLETE */
-.complete-box{
-  text-align:center;
-  padding:25px;
-  background:linear-gradient(135deg,#ecfdf5,#d1fae5);
-  border-radius:18px;
-  margin-top:25px;
-}
-
-body.dark .complete-box{
-  background:#10251f;
+  background:#192c1e;
 }
 
 .complete-btn{
-  margin-top:12px;
-  border:none;
-  background:#059669;
+  width:100%;
+  background:#248647;
   color:white;
-  padding:12px 20px;
-  border-radius:10px;
+  padding:14px;
   font-size:16px;
-  font-weight:bold;
-  cursor:pointer;
+  margin:25px 0;
 }
 
-/* FOOTER */
+.completed{
+  background:#dff4e4!important;
+  color:#14662e!important;
+}
+
+body.dark .completed{
+  background:#183522!important;
+  color:#9ee0ad!important;
+}
+
 footer{
+  margin-top:35px;
+  background:#181c22;
+  color:#ddd;
   text-align:center;
-  background:#111827;
-  color:white;
-  padding:25px 15px;
-  margin-top:30px;
+  padding:28px 15px;
 }
 
-/* MOBILE */
+.small{
+  font-size:13px;
+  opacity:.85;
+}
+
 @media(max-width:800px){
 
-  .cards{
+  .timeline{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .ruler-grid,
+  .achievement-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .source-grid{
     grid-template-columns:1fr;
   }
 
-  .hero h1{
-    font-size:27px;
-  }
-
-  .section{
-    padding:18px;
-  }
-
-  .section h2{
-    font-size:22px;
-  }
-
-  .header-inner{
-    flex-direction:column;
-  }
-
-  .flow-box{
-    min-width:120px;
+  .revision{
+    grid-template-columns:1fr;
   }
 }
 
 @media(max-width:500px){
 
-  body{
-    font-size:15px;
-  }
-
-  .hero{
-    padding:25px 15px;
-  }
-
-  .hero h1{
-    font-size:24px;
-  }
-
-  .section{
-    padding:15px;
+  .header-inner{
+    flex-direction:column;
+    align-items:flex-start;
   }
 
   .header-buttons{
-    justify-content:center;
+    width:100%;
   }
 
-  .header-buttons a,
-  .header-buttons button{
-    font-size:12px;
-    padding:8px 10px;
+  .home-btn,
+  .theme-btn{
+    flex:1;
+    text-align:center;
+  }
+
+  .hero h1{
+    font-size:25px;
+  }
+
+  .card{
+    padding:17px;
+  }
+
+  h2{
+    font-size:22px;
+  }
+
+  .timeline{
+    grid-template-columns:1fr 1fr;
+  }
+
+  .ruler-grid,
+  .achievement-grid{
+    grid-template-columns:1fr;
+  }
+
+  .flow-box{
+    width:100%;
+  }
+
+  .arrow{
+    transform:rotate(90deg);
   }
 }
 </style>
@@ -677,17 +731,15 @@ footer{
 
 <div class="header-inner">
 
-<div class="logo">
-🇮🇳 UPSC Shiksha
-</div>
+<div class="logo">🇮🇳 UPSC Shiksha</div>
 
 <div class="header-buttons">
 
-<a class="home-btn" href="ncert-history.html">
-📚 History
+<a href="ncert-history.html" class="home-btn">
+← History
 </a>
 
-<button class="dark-btn" onclick="toggleTheme()">
+<button class="theme-btn" onclick="toggleTheme()">
 🌙 Dark Mode
 </button>
 
@@ -698,265 +750,125 @@ footer{
 </header>
 
 
-<section class="hero">
+<main class="container">
 
-<h1>👑 The Mughals</h1>
+
+<div class="hero">
+
+<span class="badge">
+CURRENT NCERT 2026–27
+</span>
+
+<h1>
+The Gupta Era: An Age of Tireless Creativity
+</h1>
 
 <p>
-Class 7 History — The Mughals (16th to 17th Century)
+<strong>
+Class 7 History — UPSC Shiksha Chapter 4
+</strong>
 </p>
 
 <p>
-Detailed supplementary learning page covering Mughal rulers,
-expansion, administration, mansabdars, jagirdars, revenue,
-culture and historical sources.
+Official NCERT Integrated Social Science Chapter 7
 </p>
-
-<div class="badges">
-
-<span class="badge">CLASS 7</span>
-<span class="badge">HISTORY</span>
-<span class="badge">UPSC</span>
-<span class="badge">ENGLISH + HINDI</span>
-<span class="badge">20 MCQs</span>
-
-</div>
-
-</section>
-
 
 <div class="notice">
 
-<strong>📌 Study Note:</strong>
-This page is an original supplementary explanation based on the
-older NCERT Class 7 History chapter sequence. It is not a reproduction
-of the textbook.
+<strong>📌 Website Mapping:</strong>
+
+<br>
+
+Official NCERT Chapter 7 is presented here as
+<strong>UPSC Shiksha History Chapter 4</strong>.
+
+<br><br>
+
+This page uses original explanatory notes and analysis.
+The NCERT textbook is not reproduced word-for-word.
+
+</div>
 
 </div>
 
 
 <div class="progress-box">
 
-<div class="progress-title">
+<strong>📊 Chapter Progress</strong>
 
-<span>📈 Chapter Progress</span>
+<div class="progress-track">
 
-<span id="progressText">0%</span>
+<div class="progress-bar" id="progressBar"></div>
 
 </div>
 
-<div class="progress">
-
-<div
-class="progress-fill"
-id="progressFill">
-</div>
-
+<div class="progress-text" id="progressText">
+0 / 20 MCQs checked
 </div>
 
 </div>
 
 
-<div class="quick-nav">
+<section>
 
-<h3>⚡ Quick Navigation</h3>
+<div class="card">
 
-<div class="quick-links">
-
-<a href="#english">English</a>
-<a href="#babur">Babur</a>
-<a href="#akbar">Akbar</a>
-<a href="#administration">Administration</a>
-<a href="#mansabdars">Mansabdars</a>
-<a href="#revenue">Revenue</a>
-<a href="#sources">Sources</a>
-<a href="#hindi">Hindi</a>
-<a href="#audio">Audio</a>
-<a href="#upsc">UPSC</a>
-<a href="#mains">Mains</a>
-<a href="#revision">Revision</a>
-<a href="#tests">Tests</a>
-
-</div>
-
-</div>
-
-
-<main class="container">
-
-
-<!-- ENGLISH -->
-
-<section class="section" id="english">
-
-<h2>📖 1. Detailed English Explanation</h2>
-
-<h3>Who Were the Mughals?</h3>
+<h2>🎯 Chapter Overview</h2>
 
 <p>
-The Mughals established one of the most important imperial states
-in the Indian subcontinent. Their political history is especially
-important from the 16th to the 17th centuries.
+The Gupta period is one of the important phases of ancient Indian
+history. The Gupta rulers created a powerful political centre in
+northern India while many other kingdoms continued to exist elsewhere
+in the subcontinent.
 </p>
 
 <p>
-The Mughal Empire developed through military expansion, political
-alliances, administrative organisation, revenue collection and
-relationships with regional rulers.
+The period is especially remembered for developments in
+<strong>literature, mathematics, astronomy, art, architecture,
+administration and intellectual life.</strong>
 </p>
-
-<div class="highlight">
-
-<strong>Key Idea:</strong>
-The Mughal Empire was not created in a single event. It expanded
-gradually through conquest, alliances, administration and integration
-of different regions.
-
-</div>
-
-</section>
-
-
-<!-- BABUR -->
-
-<section class="section" id="babur">
-
-<h2>⚔️ 2. Babur and the Beginning of Mughal Rule</h2>
-
-<h3>Babur</h3>
-
-<p>
-Zahiruddin Muhammad Babur was a ruler from Central Asia who established
-Mughal rule in northern India after defeating Ibrahim Lodi in the
-First Battle of Panipat in 1526.
-</p>
-
-<p>
-Babur's victory at Panipat was an important turning point because it
-allowed him to establish political authority in northern India.
-</p>
-
-<h3>Battle of Panipat</h3>
-
-<p>
-The First Battle of Panipat was fought in 1526 between Babur and
-Ibrahim Lodi.
-</p>
-
-<div class="important">
-
-<strong>UPSC Point:</strong>
-The Battle of Panipat in 1526 is traditionally associated with the
-beginning of Mughal political rule in India.
-
-</div>
 
 <div class="flow">
 
-<div class="flow-box">Babur</div>
+<div class="flow-box">
+Political Consolidation
+</div>
 
-<div class="arrow">➡️</div>
+<div class="arrow">→</div>
 
-<div class="flow-box">1526</div>
+<div class="flow-box">
+Stability & Networks
+</div>
 
-<div class="arrow">➡️</div>
+<div class="arrow">→</div>
 
-<div class="flow-box">Panipat</div>
+<div class="flow-box">
+Learning
+</div>
 
-<div class="arrow">➡️</div>
+<div class="arrow">→</div>
 
-<div class="flow-box">Mughal Rule</div>
+<div class="flow-box">
+Art & Literature
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Scientific Ideas
+</div>
 
 </div>
 
-</section>
+<div class="analysis">
 
-
-<!-- HUMAYUN -->
-
-<section class="section">
-
-<h2>👑 3. Humayun</h2>
+<strong>🔎 Important Historical Caution</strong>
 
 <p>
-Humayun succeeded Babur. His reign was marked by political difficulties
-and conflict with powerful opponents.
-</p>
-
-<p>
-Sher Shah Sur defeated Humayun and established the Sur Empire for a
-period. Humayun later returned and recovered his position in northern
-India.
-</p>
-
-<div class="highlight">
-
-<strong>Historical Lesson:</strong>
-The Mughal Empire was not continuously stable. Political authority
-could be challenged by powerful regional and Afghan rulers.
-
-</div>
-
-</section>
-
-
-<!-- AKBAR -->
-
-<section class="section" id="akbar">
-
-<h2>⭐ 4. Akbar and Imperial Expansion</h2>
-
-<h3>Akbar</h3>
-
-<p>
-Akbar became ruler at a young age and gradually expanded Mughal
-territories. His reign is important for understanding Mughal
-administration, military organisation and political alliances.
-</p>
-
-<h3>Expansion</h3>
-
-<p>
-The Mughal Empire expanded into large parts of the subcontinent.
-Expansion involved warfare as well as alliances with regional rulers.
-</p>
-
-<h3>Rajput Relations</h3>
-
-<p>
-Akbar developed political relationships with several Rajput rulers
-and ruling families. Matrimonial alliances and political cooperation
-were among the methods used to strengthen imperial relationships.
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>⚔️ Conquest</h3>
-
-<p>
-Military campaigns helped expand Mughal territory.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🤝 Alliances</h3>
-
-<p>
-Political alliances helped integrate different ruling groups.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🏛️ Administration</h3>
-
-<p>
-Administrative institutions helped manage the growing empire.
+The Gupta period is sometimes called a “Golden Age” or “Classical Age”.
+For exam preparation, however, it is better to understand
+<strong>why</strong> historians use such labels rather than treating the
+whole period as equally prosperous for every person and every region.
 </p>
 
 </div>
@@ -966,80 +878,144 @@ Administrative institutions helped manage the growing empire.
 </section>
 
 
-<!-- TIMELINE -->
+<section>
 
-<section class="section">
+<div class="card">
 
-<h2>⏳ 5. Important Mughal Timeline</h2>
+<h2>1. Who Were the Guptas?</h2>
+
+<p>
+The Guptas emerged as an important power in northern India around the
+early centuries of the Common Era.
+</p>
+
+<p>
+From a regional base, Gupta rulers gradually expanded their influence
+through a combination of military campaigns, alliances, political
+relationships and administration.
+</p>
+
+<div class="example">
+
+<strong>💡 Think of empire-building as a system</strong>
+
+<p>
+A ruler could not control a large territory through battles alone.
+A durable empire also required:
+</p>
+
+<ul>
+<li>Revenue</li>
+<li>Administrative organisation</li>
+<li>Political alliances</li>
+<li>Local cooperation</li>
+<li>Military strength</li>
+<li>Communication and trade routes</li>
+</ul>
+
+</div>
+
+<div class="analysis">
+
+<strong>UPSC Analysis:</strong>
+
+<p>
+This is an important distinction between
+<strong>conquest</strong> and <strong>consolidation</strong>.
+Winning territory is one stage; maintaining political influence over
+that territory is another.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>2. The Gupta Political Timeline</h2>
 
 <div class="timeline">
 
 <div class="timeline-item">
+<strong>Early Gupta Phase</strong>
+Regional power begins to grow
+</div>
 
-<strong>1526</strong>
+<div class="timeline-item">
+<strong>Chandragupta I</strong>
+Political expansion
+</div>
 
-<p>
-Babur defeated Ibrahim Lodi at the First Battle of Panipat.
+<div class="timeline-item">
+<strong>Samudragupta</strong>
+Major campaigns & expansion
+</div>
+
+<div class="timeline-item">
+<strong>Chandragupta II</strong>
+Expansion, culture & trade
+</div>
+
+<div class="timeline-item">
+<strong>Later Guptas</strong>
+Changing political conditions
+</div>
+
+<div class="timeline-item">
+<strong>6th century CE</strong>
+Gupta political power weakens
+</div>
+
+</div>
+
+<p class="small">
+Dates are simplified for revision. Ancient chronology can vary in
+precision depending on the evidence and interpretation.
 </p>
 
 </div>
 
-<div class="timeline-item">
+</section>
 
-<strong>1530</strong>
+
+<section>
+
+<div class="card">
+
+<h2>3. Chandragupta I</h2>
 
 <p>
-Humayun succeeded Babur.
+Chandragupta I was an important early Gupta ruler who helped transform
+the dynasty into a stronger regional power.
+</p>
+
+<p>
+His reign is associated with political consolidation and alliances.
+</p>
+
+<div class="key-box">
+
+<strong>📌 Key Concept — Marriage Alliances</strong>
+
+<p>
+In ancient politics, marriage could also be a diplomatic instrument.
+A royal marriage could strengthen relations between ruling families.
 </p>
 
 </div>
 
-<div class="timeline-item">
+<div class="analysis">
 
-<strong>1556</strong>
-
-<p>
-Akbar became emperor after the Second Battle of Panipat.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<strong>1605</strong>
+<strong>Why does this matter?</strong>
 
 <p>
-Jahangir succeeded Akbar.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<strong>1628</strong>
-
-<p>
-Shah Jahan became emperor.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<strong>1658</strong>
-
-<p>
-Aurangzeb became emperor after a succession struggle.
-</p>
-
-</div>
-
-<div class="timeline-item">
-
-<strong>1707</strong>
-
-<p>
-Aurangzeb died, marking an important transition in Mughal history.
+History is not only about battles. Diplomacy and family alliances
+could also help rulers build political influence.
 </p>
 
 </div>
@@ -1049,84 +1025,885 @@ Aurangzeb died, marking an important transition in Mughal history.
 </section>
 
 
-<!-- MUGHAL RULERS -->
+<section>
 
-<section class="section">
+<div class="card">
 
-<h2>👑 6. Major Mughal Rulers</h2>
+<h2>4. Samudragupta — Expansion and Political Strategy</h2>
 
-<div class="table-wrap">
+<p>
+Samudragupta is one of the most prominent Gupta rulers.
+His achievements are known from inscriptions and other historical
+evidence.
+</p>
 
-<table>
+<p>
+His campaigns extended Gupta influence over a wide area, but not every
+region was necessarily governed in exactly the same way.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">
+Military Campaigns
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Political Submission
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Alliances / Relationships
+</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">
+Wider Influence
+</div>
+
+</div>
+
+<div class="example">
+
+<strong>📜 The Allahabad Pillar Inscription</strong>
+
+<p>
+The inscription associated with Samudragupta is an important source
+for understanding his campaigns and political relationships.
+</p>
+
+<p>
+It is traditionally associated with his court poet Harishena.
+</p>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔎 Source-based Thinking</strong>
+
+<p>
+An inscription created under a ruler's authority can strongly highlight
+the ruler's achievements. Historians therefore compare such evidence
+with other sources rather than accepting every royal claim without
+analysis.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>5. Chandragupta II</h2>
+
+<p>
+Chandragupta II was another major Gupta ruler.
+He is traditionally associated with the title
+<strong>Vikramaditya</strong>.
+</p>
+
+<p>
+During his reign, Gupta influence expanded further and western regions
+became important to the empire's economic and strategic position.
+</p>
+
+<div class="key-box">
+
+<strong>🌐 Why was the western region important?</strong>
+
+<p>
+Western India had important land and maritime connections. Control or
+influence in such areas could improve access to trade networks.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>6. The Gupta Empire — Conceptual Map</h2>
+
+<div class="map-box">
+
+<h3>🗺️ Learning Map</h3>
+
+<p>
+This is a conceptual study diagram, not a precise modern political
+map.
+</p>
+
+<div>
+
+<span class="map-region">Pāṭaliputra</span>
+
+<span class="map-region">North India</span>
+
+<span class="map-region">Ganga Valley</span>
+
+<span class="map-region">Western Regions</span>
+
+<span class="map-region">Deccan Connections</span>
+
+<span class="map-region">Eastern Regions</span>
+
+</div>
+
+</div>
+
+<div class="warning">
+
+<strong>⚠️ Remember:</strong>
+
+<p>
+Ancient empires did not always have fixed borders like modern nation
+states. Influence could range from direct administration to alliances
+and political submission.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>7. How Did the Guptas Govern?</h2>
+
+<p>
+A large empire required systems for collecting revenue, maintaining
+order and managing relationships with local powers.
+</p>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<span class="achievement-icon">🏛️</span>
+<strong>Administration</strong>
+<p>Officials and local structures helped manage territories.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🌾</span>
+<strong>Revenue</strong>
+<p>Agricultural production was an important economic base.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🪙</span>
+<strong>Coins</strong>
+<p>Coins provide valuable evidence about rulers and economy.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🤝</span>
+<strong>Alliances</strong>
+<p>Political relationships helped maintain influence.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">⚔️</span>
+<strong>Military</strong>
+<p>Armies supported expansion and political security.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🛣️</span>
+<strong>Trade</strong>
+<p>Networks connected different economic regions.</p>
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>UPSC Concept:</strong>
+
+<p>
+<strong>Empire = Territory + Administration + Revenue + Military +
+Political Relationships.</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>8. Sources of Gupta History</h2>
+
+<p>
+Historians reconstruct Gupta history using different categories of
+evidence.
+</p>
+
+<div class="source-grid">
+
+<div class="source">
+
+<h3>📜 Inscriptions</h3>
+
+<p>
+Inscriptions record royal achievements, donations, administrative
+information and religious activities.
+</p>
+
+</div>
+
+<div class="source">
+
+<h3>🪙 Coins</h3>
+
+<p>
+Coins provide clues about rulers, symbols, economy, political power and
+religious imagery.
+</p>
+
+</div>
+
+<div class="source">
+
+<h3>📚 Literary Sources</h3>
+
+<p>
+Literary works can reveal ideas, language, society and intellectual
+life, although they require careful interpretation.
+</p>
+
+</div>
+
+<div class="source">
+
+<h3>🌏 Traveller Accounts</h3>
+
+<p>
+Accounts of travellers can provide observations about society,
+religion, cities and administration.
+</p>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🧠 Historian's Method</strong>
+
+<div class="flow">
+
+<div class="flow-box">Source</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Cross-check</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Compare</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Interpret</div>
+
+</div>
+
+<p>
+No single source should automatically be treated as the complete
+picture of the past.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>9. Faxian's Account</h2>
+
+<p>
+The Chinese Buddhist traveller <strong>Faxian</strong> travelled to
+India during the Gupta period.
+</p>
+
+<p>
+His account provides observations about places, Buddhist institutions,
+society and religious life.
+</p>
+
+<div class="example">
+
+<strong>📖 Why traveller accounts matter</strong>
+
+<p>
+A traveller can notice things that royal inscriptions may not discuss,
+such as everyday observations, religious institutions and social
+conditions.
+</p>
+
+</div>
+
+<div class="warning">
+
+<strong>Historical caution:</strong>
+
+<p>
+A traveller's account represents that traveller's observations and
+purpose. It should be compared with other evidence.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>10. Society and Economy</h2>
+
+<p>
+Agriculture remained a major foundation of economic life.
+At the same time, towns, crafts and trade networks continued to matter.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">Agriculture</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Surplus</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Markets</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Trade</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Urban Activity</div>
+
+</div>
+
+<p>
+Land grants also became an important feature of the period.
+</p>
+
+<div class="analysis">
+
+<strong>🔎 Analysis</strong>
+
+<p>
+Economic systems were connected. Agricultural production could support
+taxation and trade, while trade connected producers, craftsmen,
+merchants and consumers.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>11. The Classical Age — Why Is It Called That?</h2>
+
+<p>
+The Gupta period is often described as a
+<strong>Classical Age</strong> because several forms of intellectual
+and cultural achievement had long-lasting influence.
+</p>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<span class="achievement-icon">📚</span>
+<strong>Literature</strong>
+<p>Sanskrit literary culture developed strongly.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🔢</span>
+<strong>Mathematics</strong>
+<p>Important mathematical ideas developed.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🌌</span>
+<strong>Astronomy</strong>
+<p>Systematic astronomical thinking advanced.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🎨</span>
+<strong>Art</strong>
+<p>Sculpture and visual traditions flourished.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🏛️</span>
+<strong>Architecture</strong>
+<p>Temple and structural traditions developed.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🎭</span>
+<strong>Culture</strong>
+<p>Ideas, language and artistic traditions grew.</p>
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>⚠️ “Golden Age” — Critical Analysis</strong>
+
+<p>
+Calling the Gupta period a “Golden Age” highlights important
+achievements, but historians must also ask:
+<strong>Golden for whom, where and in which field?</strong>
+</p>
+
+<p>
+Different social groups and regions could experience the same period
+differently. Therefore, use the label as a historical description of
+major achievements, not as a claim that everyone experienced equal
+prosperity.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>12. Āryabhaṭa — Mathematics and Astronomy</h2>
+
+<p>
+<strong>Āryabhaṭa</strong> was one of the great mathematicians and
+astronomers associated with the Gupta-era intellectual tradition.
+</p>
+
+<p>
+His work <em>Āryabhaṭīya</em> is an important milestone in the history
+of Indian mathematical and astronomical thought.
+</p>
+
+<div class="ruler-grid">
+
+<div class="ruler">
+<span class="ruler-icon">🔢</span>
+<strong>Mathematics</strong>
+<p>Work involving calculation and mathematical methods.</p>
+</div>
+
+<div class="ruler">
+<span class="ruler-icon">🌙</span>
+<strong>Astronomy</strong>
+<p>Systematic study of celestial phenomena.</p>
+</div>
+
+<div class="ruler">
+<span class="ruler-icon">🧠</span>
+<strong>Reasoning</strong>
+<p>Mathematical models helped explain observations.</p>
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🎯 Exam Analysis</strong>
+
+<p>
+Āryabhaṭa is important because the Gupta-era intellectual environment
+was not limited to literature and art. Mathematical and astronomical
+knowledge was also being systematically developed.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>13. Varāhamihira</h2>
+
+<p>
+<strong>Varāhamihira</strong> was an important scholar associated with
+astronomy and related fields in early India.
+</p>
+
+<p>
+His writings demonstrate the wider intellectual culture of the period,
+where observations of nature and celestial phenomena were studied
+systematically.
+</p>
+
+<div class="key-box">
+
+<strong>Remember:</strong>
+
+<p>
+Gupta-era creativity included not only one famous individual.
+It was part of a wider scholarly and artistic environment.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>14. Kālidāsa and Literature</h2>
+
+<p>
+<strong>Kālidāsa</strong> is one of the most celebrated Sanskrit
+literary figures traditionally associated with the Gupta period.
+</p>
+
+<p>
+His works are remembered for their poetry, drama, imagery and
+sensitivity to nature and human emotions.
+</p>
+
+<div class="achievement-grid">
+
+<div class="achievement">
+<span class="achievement-icon">🎭</span>
+<strong>Drama</strong>
+<p>Rich dramatic storytelling.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">📝</span>
+<strong>Poetry</strong>
+<p>Highly developed poetic expression.</p>
+</div>
+
+<div class="achievement">
+<span class="achievement-icon">🌳</span>
+<strong>Nature</strong>
+<p>Strong use of natural imagery.</p>
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>Why is Kālidāsa important today?</strong>
+
+<p>
+His works continue to influence Indian literary studies, theatre,
+translation and cultural interpretation.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>15. Art and Sculpture</h2>
+
+<p>
+Gupta-period art is especially remembered for refined sculpture and
+religious imagery.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">Ideas & Beliefs</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Patronage</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Artists</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Sculpture</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Cultural Legacy</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🔎 Art as Historical Evidence</strong>
+
+<p>
+A sculpture is not merely decoration. Its material, posture, symbols,
+style and location can provide clues about religious ideas, artistic
+skills, patronage and social history.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>16. The Iron Pillar of Delhi</h2>
+
+<div class="pillar"></div>
+
+<p style="text-align:center;">
+<strong>Conceptual Iron Pillar Illustration</strong>
+</p>
+
+<p>
+The Iron Pillar at Mehrauli in Delhi is famous for its remarkable
+resistance to corrosion and is an important example of ancient Indian
+metallurgical skill.
+</p>
+
+<div class="analysis">
+
+<strong>🧪 Science + History Connection</strong>
+
+<p>
+The pillar shows that historical achievements in technology can be
+studied through physical objects.
+</p>
+
+<p>
+It also demonstrates why archaeology and material evidence are
+important for understanding ancient science and craftsmanship.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>17. Temple Architecture</h2>
+
+<p>
+The Gupta period witnessed important developments in structural temple
+architecture.
+</p>
+
+<p>
+Temples increasingly became important spaces for worship and artistic
+expression.
+</p>
+
+<div class="flow">
+
+<div class="flow-box">Religious Ideas</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Temple Space</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Sculpture</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Architecture</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Cultural Legacy</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>18. 🎬 Creativity Engine — Concept Animation</h2>
+
+<div class="animation">
+
+<p>
+<strong>
+Watch the moving point as a symbolic “idea” travelling through
+different fields.
+</strong>
+</p>
+
+<div class="animation-road">
+<div class="animation-dot"></div>
+</div>
+
+<div class="flow">
+
+<div class="flow-box">Stable Networks</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Learning</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Ideas</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Experiment</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Creation</div>
+
+</div>
+
+</div>
+
+<div class="analysis">
+
+<strong>🧠 What does this animation explain?</strong>
+
+<p>
+The animation is a conceptual model, not a literal historical sequence.
+It explains how a society with institutions, resources, scholars,
+artists and networks can create conditions for innovation.
+</p>
+
+<p>
+For example:
+<strong>mathematics → astronomy</strong>,
+<strong>literature → language development</strong>,
+and
+<strong>religious ideas → art and architecture</strong>.
+</p>
+
+</div>
+
+</div>
+
+
+<div class="card">
+
+<h2>📊 Gupta Creativity — Field-by-Field Analysis</h2>
+
+<table class="compare">
 
 <tr>
-
-<th>Ruler</th>
-
-<th>Period</th>
-
-<th>Important Historical Themes</th>
-
+<th>Field</th>
+<th>Important Example</th>
+<th>Why It Matters</th>
 </tr>
 
 <tr>
-
-<td>Babur</td>
-
-<td>1526–1530</td>
-
-<td>Establishment of Mughal rule</td>
-
+<td>Mathematics</td>
+<td>Āryabhaṭa and mathematical traditions</td>
+<td>Development of systematic calculation and mathematical thinking</td>
 </tr>
 
 <tr>
-
-<td>Humayun</td>
-
-<td>1530–1540 and 1555–1556</td>
-
-<td>Political struggle and restoration</td>
-
+<td>Astronomy</td>
+<td>Āryabhaṭa and Varāhamihira</td>
+<td>Study of celestial phenomena</td>
 </tr>
 
 <tr>
-
-<td>Akbar</td>
-
-<td>1556–1605</td>
-
-<td>Expansion and administrative consolidation</td>
-
+<td>Literature</td>
+<td>Kālidāsa</td>
+<td>Long-lasting Sanskrit literary influence</td>
 </tr>
 
 <tr>
-
-<td>Jahangir</td>
-
-<td>1605–1627</td>
-
-<td>Continuation of Mughal rule</td>
-
+<td>Art</td>
+<td>Gupta sculpture traditions</td>
+<td>Refined visual representation and religious imagery</td>
 </tr>
 
 <tr>
-
-<td>Shah Jahan</td>
-
-<td>1628–1658</td>
-
-<td>Architecture and imperial power</td>
-
+<td>Architecture</td>
+<td>Early structural temples</td>
+<td>Development of temple-building traditions</td>
 </tr>
 
 <tr>
-
-<td>Aurangzeb</td>
-
-<td>1658–1707</td>
-
-<td>Large territorial expansion and political challenges</td>
-
+<td>Metallurgy</td>
+<td>Iron Pillar</td>
+<td>Evidence of advanced metal-working skills</td>
 </tr>
 
 </table>
@@ -1136,332 +1913,177 @@ Aurangzeb died, marking an important transition in Mughal history.
 </section>
 
 
-<!-- ADMINISTRATION -->
+<section>
 
-<section class="section" id="administration">
+<div class="card">
 
-<h2>🏛️ 7. Mughal Administration</h2>
+<h2>19. What Was Happening Outside the Gupta Core?</h2>
 
 <p>
-The Mughal Empire required an organised administrative system because
-the emperor controlled a very large and diverse territory.
+The Gupta period should not be understood as the history of one empire
+alone.
 </p>
 
-<h3>Central Authority</h3>
-
 <p>
-The emperor was the highest political authority. Important officials
-assisted in administration, military organisation and revenue
-collection.
+Other political powers existed in different parts of the subcontinent.
+The Vākaṭakas, Pallavas and kingdoms in the north-east are examples of
+contemporary political developments.
 </p>
 
-<h3>Provincial Administration</h3>
+<div class="key-box">
+
+<strong>📌 Historical Principle</strong>
 
 <p>
-The empire was divided into administrative units. Officials helped
-implement imperial policies in different regions.
+An empire can be powerful without controlling every part of a
+subcontinent.
+Different kingdoms can exist at the same time and interact through
+warfare, diplomacy, trade and culture.
 </p>
 
-<h3>Local Power</h3>
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>20. Women and Political Networks — Prabhāvatī Gupta</h2>
 
 <p>
-Local rulers, zamindars and other influential groups remained important
-in rural society and administration.
+<strong>Prabhāvatī Gupta</strong>, a daughter of Chandragupta II,
+became an important political figure through her marriage into the
+Vākāṭaka ruling family.
+</p>
+
+<p>
+Her inscriptions provide valuable evidence about royal family
+connections, land grants and political relationships.
+</p>
+
+<div class="analysis">
+
+<strong>🔎 Why is this important?</strong>
+
+<p>
+It reminds us that women in royal families could be important parts of
+political and diplomatic networks.
+</p>
+
+<p>
+It also shows why inscriptions are valuable sources for studying
+individual historical figures.
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>21. Decline of Gupta Political Power</h2>
+
+<p>
+Gupta political power gradually weakened in the later period.
+There was no single event that explains every aspect of this change.
+</p>
+
+<p>
+Factors included changing political conditions, pressure from outside
+groups and the rise of regional powers.
 </p>
 
 <div class="flow">
 
-<div class="flow-box">Emperor</div>
+<div class="flow-box">Changing Political Conditions</div>
 
-<div class="arrow">⬇️</div>
+<div class="arrow">+</div>
 
-<div class="flow-box">Officials</div>
+<div class="flow-box">Regional Powers</div>
 
-<div class="arrow">⬇️</div>
+<div class="arrow">+</div>
 
-<div class="flow-box">Provinces</div>
+<div class="flow-box">External Pressure</div>
 
-<div class="arrow">⬇️</div>
+<div class="arrow">→</div>
 
-<div class="flow-box">Local Authorities</div>
+<div class="flow-box">Reduced Gupta Control</div>
 
-<div class="arrow">⬇️</div>
+</div>
 
-<div class="flow-box">Villages</div>
+<div class="warning">
+
+<strong>⚠️ Important:</strong>
+
+<p>
+Do not write “the Gupta Empire suddenly ended” as if there was one
+single event. Political influence declined gradually and different
+regions developed their own powers.
+</p>
+
+</div>
 
 </div>
 
 </section>
 
 
-<!-- MANSABDARS -->
+<section>
 
-<section class="section" id="mansabdars">
+<div class="card">
 
-<h2>⭐ 8. Mansabdars</h2>
-
-<p>
-The mansabdari system was an important feature of Mughal
-administration.
-</p>
-
-<p>
-The word <strong>mansab</strong> referred to a rank or position.
-Mansabdars were officials who held ranks and served the Mughal state.
-</p>
-
-<h3>Zat</h3>
-
-<p>
-The zat rank indicated the personal status and position of a mansabdar.
-</p>
-
-<h3>Sawar</h3>
-
-<p>
-The sawar rank was associated with the number of cavalrymen a mansabdar
-was expected to maintain.
-</p>
-
-<div class="important">
-
-<strong>UPSC Memory Trick:</strong>
-
-<br>
-
-<strong>Zat → Personal rank/status</strong>
-
-<br>
-
-<strong>Sawar → Cavalry responsibility</strong>
-
-</div>
-
-</section>
-
-
-<!-- JAGIRDARS -->
-
-<section class="section">
-
-<h2>💰 9. Jagirdars</h2>
-
-<p>
-Mansabdars were often assigned revenue rights from particular areas
-instead of receiving a simple cash salary for all their services.
-Such assignments were known as jagirs.
-</p>
-
-<p>
-A jagirdar was expected to collect revenue according to the terms of
-the assignment and maintain the required military responsibilities.
-</p>
-
-<div class="highlight">
-
-<strong>Important distinction:</strong>
-A jagir was generally a revenue assignment, not simply private
-ownership of land.
-
-</div>
-
-</section>
-
-
-<!-- REVENUE -->
-
-<section class="section" id="revenue">
-
-<h2>🌾 10. Land Revenue</h2>
-
-<p>
-Agriculture was the main economic foundation of the Mughal Empire.
-Therefore, land revenue was extremely important for the state.
-</p>
-
-<h3>Revenue Assessment</h3>
-
-<p>
-The Mughal state developed systems to assess agricultural production
-and determine the amount of revenue expected from cultivators.
-</p>
-
-<h3>Akbar and Revenue Administration</h3>
-
-<p>
-During Akbar's reign, Raja Todar Mal is associated with important
-revenue reforms and systematic assessment.
-</p>
+<h2>22. Gupta Era — Cause → Creativity → Legacy</h2>
 
 <div class="flow">
 
-<div class="flow-box">Agriculture</div>
-
-<div class="arrow">➡️</div>
-
-<div class="flow-box">Production</div>
-
-<div class="arrow">➡️</div>
-
-<div class="flow-box">Revenue Assessment</div>
-
-<div class="arrow">➡️</div>
-
-<div class="flow-box">State Revenue</div>
-
-<div class="arrow">➡️</div>
-
-<div class="flow-box">Army & Administration</div>
-
+<div class="flow-box">
+Political Consolidation
 </div>
 
-</section>
+<div class="arrow">→</div>
 
-
-<!-- AKBARNAMA -->
-
-<section class="section" id="sources">
-
-<h2>📜 11. Historical Sources</h2>
-
-<p>
-Historians reconstruct Mughal history through many different sources.
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>📚 Chronicles</h3>
-
-<p>
-Court histories and chronicles provide information about rulers,
-administration and important events.
-</p>
-
+<div class="flow-box">
+Institutions & Networks
 </div>
 
-<div class="card">
+<div class="arrow">→</div>
 
-<h3>🪙 Coins</h3>
-
-<p>
-Coins provide evidence about rulers, titles, economy and political
-authority.
-</p>
-
+<div class="flow-box">
+Scholars & Artists
 </div>
 
-<div class="card">
+<div class="arrow">→</div>
 
-<h3>🏛️ Buildings</h3>
+<div class="flow-box">
+New Ideas
+</div>
 
-<p>
-Architecture provides evidence about imperial patronage, technology,
-art and political power.
-</p>
+<div class="arrow">→</div>
 
+<div class="flow-box">
+Long-term Cultural Legacy
 </div>
 
 </div>
 
-<h3>Akbar Nama and Ain-i Akbari</h3>
+<div class="analysis">
+
+<strong>🧠 Final Analysis</strong>
 
 <p>
-Abu'l Fazl wrote the Akbar Nama and Ain-i Akbari. These works are
-important sources for understanding Akbar's reign and Mughal
-administration.
-</p>
-
-<div class="highlight">
-
-<strong>Historical Method:</strong>
-Court chronicles are valuable sources, but historians must also
-consider their purpose, audience and point of view.
-
-</div>
-
-</section>
-
-
-<!-- CULTURE -->
-
-<section class="section">
-
-<h2>🎨 12. Mughal Art and Architecture</h2>
-
-<p>
-Mughal rulers were important patrons of architecture, painting,
-gardens and literature.
-</p>
-
-<h3>Architecture</h3>
-
-<p>
-Mughal architecture combined different artistic and architectural
-traditions. Large imperial buildings demonstrated political authority
-and royal patronage.
-</p>
-
-<h3>Painting</h3>
-
-<p>
-Mughal miniature painting developed as an important artistic tradition.
-Paintings can provide information about court life, clothing, people,
-animals and important events.
-</p>
-
-<h3>Gardens</h3>
-
-<p>
-Mughal gardens reflected ideas of beauty, symmetry and controlled
-landscape design.
-</p>
-
-</section>
-
-
-<!-- SHAH JAHAN -->
-
-<section class="section">
-
-<h2>🏛️ 13. Shah Jahan and Architecture</h2>
-
-<p>
-Shah Jahan's reign is strongly associated with monumental architecture.
-The Taj Mahal, Red Fort and Jama Masjid are among the best-known
-monuments associated with the Mughal architectural tradition.
-</p>
-
-<div class="cards">
-
-<div class="card">
-
-<h3>🏰 Red Fort</h3>
-
-<p>
-A major imperial architectural complex associated with Shah Jahan's
-reign.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🕌 Jama Masjid</h3>
-
-<p>
-A major mosque associated with Shah Jahan's architectural patronage.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🤍 Taj Mahal</h3>
-
-<p>
-A famous Mughal monument associated with Shah Jahan and Mumtaz Mahal.
+The importance of the Gupta era is not simply that rulers became
+powerful. Its larger historical significance lies in the interaction
+between political structures, economic networks, learning, literature,
+science, art and religious culture.
 </p>
 
 </div>
@@ -1471,456 +2093,327 @@ A famous Mughal monument associated with Shah Jahan and Mumtaz Mahal.
 </section>
 
 
-<!-- AKBAR POLICY -->
-
-<section class="section">
-
-<h2>🤝 14. Political Integration</h2>
-
-<p>
-The Mughal Empire could not be maintained only through military
-conquest. Political cooperation with regional elites was also
-important.
-</p>
-
-<p>
-Akbar developed relationships with Rajputs and other influential
-groups. Many local elites were incorporated into the imperial
-administrative system.
-</p>
-
-<div class="important">
-
-<strong>UPSC Concept:</strong>
-Large empires often combine military power with alliances,
-administrative integration and cooperation with local elites.
-
-</div>
-
-</section>
-
-
-<!-- AURANGZEB -->
-
-<section class="section">
-
-<h2>⚔️ 15. Aurangzeb and the Expanding Empire</h2>
-
-<p>
-Aurangzeb ruled from 1658 to 1707. During his reign the Mughal Empire
-reached a very large territorial extent.
-</p>
-
-<p>
-However, maintaining such a large empire created major political,
-military and administrative challenges.
-</p>
-
-<h3>Deccan</h3>
-
-<p>
-Long military campaigns in the Deccan required substantial resources
-and contributed to the growing pressures on the imperial system.
-</p>
-
-<div class="highlight">
-
-<strong>Historical Analysis:</strong>
-Territorial expansion can increase an empire's resources but can also
-increase the cost and difficulty of administration.
-
-</div>
-
-</section>
-
-
-<!-- DECLINE / CHALLENGES -->
-
-<section class="section">
-
-<h2>📉 16. Challenges to Mughal Power</h2>
-
-<p>
-After Aurangzeb's death, Mughal political authority weakened gradually.
-Several regional powers became increasingly independent or powerful.
-</p>
-
-<div class="cards">
+<section>
 
 <div class="card">
 
-<h3>🏛️ Administrative Pressure</h3>
+<h2>🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
+
+<h3>1. गुप्त कौन थे?</h3>
 
 <p>
-Managing a huge empire became increasingly difficult.
+गुप्त वंश प्राचीन भारत की महत्वपूर्ण राजनीतिक शक्तियों में से एक था।
+उन्होंने उत्तर भारत में अपनी शक्ति का विस्तार किया और एक प्रभावशाली
+राजनीतिक व्यवस्था विकसित की।
+</p>
+
+<h3>2. चंद्रगुप्त प्रथम</h3>
+
+<p>
+चंद्रगुप्त प्रथम ने गुप्त शक्ति को मजबूत करने में महत्वपूर्ण भूमिका
+निभाई। राजनीतिक संबंधों और गठबंधनों ने भी इसमें योगदान दिया।
+</p>
+
+<h3>3. समुद्रगुप्त</h3>
+
+<p>
+समुद्रगुप्त एक प्रमुख गुप्त शासक था। उसके अभियानों और राजनीतिक
+उपलब्धियों की जानकारी अभिलेखों से मिलती है।
+</p>
+
+<h3>4. चंद्रगुप्त द्वितीय</h3>
+
+<p>
+चंद्रगुप्त द्वितीय गुप्त शक्ति के प्रमुख शासकों में था और उसे
+परंपरागत रूप से विक्रमादित्य से जोड़ा जाता है।
+</p>
+
+<h3>5. प्रशासन</h3>
+
+<p>
+बड़े राज्य को चलाने के लिए राजस्व, प्रशासन, सेना, स्थानीय शक्तियों
+के साथ संबंध और व्यापारिक नेटवर्क महत्वपूर्ण थे।
+</p>
+
+<h3>6. फाह्यान</h3>
+
+<p>
+चीनी बौद्ध यात्री फाह्यान ने भारत की यात्रा की। उसके विवरण से उस समय
+के धार्मिक और सामाजिक जीवन के बारे में जानकारी मिलती है।
+</p>
+
+<h3>7. विज्ञान और गणित</h3>
+
+<p>
+आर्यभट जैसे विद्वानों ने गणित और खगोल विज्ञान के क्षेत्र में महत्वपूर्ण
+कार्य किया। यह इस काल की बौद्धिक रचनात्मकता को दिखाता है।
+</p>
+
+<h3>8. साहित्य</h3>
+
+<p>
+कालिदास संस्कृत साहित्य के महान साहित्यकारों में गिने जाते हैं। उनकी
+रचनाएँ कविता, नाटक, प्रकृति और मानवीय भावनाओं की सुंदर अभिव्यक्ति के
+लिए प्रसिद्ध हैं।
+</p>
+
+<h3>9. कला और वास्तुकला</h3>
+
+<p>
+गुप्त काल में मूर्तिकला और मंदिर वास्तुकला की महत्वपूर्ण परंपराएँ
+विकसित हुईं।
+</p>
+
+<h3>10. लौह स्तंभ</h3>
+
+<p>
+दिल्ली का लौह स्तंभ प्राचीन भारतीय धातुकर्म की क्षमता का महत्वपूर्ण
+उदाहरण है और इतिहास तथा विज्ञान को जोड़कर समझने में मदद करता है।
+</p>
+
+<h3>11. स्वर्ण युग?</h3>
+
+<p>
+गुप्त काल को कई बार स्वर्ण युग या Classical Age कहा जाता है क्योंकि
+साहित्य, कला, विज्ञान और गणित में महत्वपूर्ण उपलब्धियाँ हुईं।
+लेकिन इतिहास में यह पूछना भी जरूरी है कि यह समृद्धि किन क्षेत्रों और
+किन सामाजिक समूहों तक कितनी पहुँची।
+</p>
+
+<div class="analysis">
+
+<strong>🎯 परीक्षा की मुख्य लाइन:</strong>
+
+<p>
+गुप्त काल की विशेषता केवल राजनीतिक शक्ति नहीं थी; राजनीति,
+अर्थव्यवस्था, शिक्षा, विज्ञान, साहित्य, कला और संस्कृति के बीच
+अंतःसंबंध इसकी बड़ी विशेषता थी।
 </p>
 
 </div>
-
-<div class="card">
-
-<h3>⚔️ Military Pressure</h3>
-
-<p>
-Long wars required large financial and military resources.
-</p>
-
-</div>
-
-<div class="card">
-
-<h3>🌍 Regional Powers</h3>
-
-<p>
-Regional political groups increasingly challenged central authority.
-</p>
-
-</div>
-
-</div>
-
-</section>
-
-
-<!-- HINDI -->
-
-<section class="section" id="hindi">
-
-<h2>🇮🇳 17. विस्तृत हिन्दी व्याख्या</h2>
-
-<h3>मुगल कौन थे?</h3>
-
-<p>
-मुगलों ने भारतीय उपमहाद्वीप में एक विशाल साम्राज्य स्थापित किया।
-16वीं और 17वीं शताब्दी में उनका राजनीतिक प्रभाव बहुत महत्वपूर्ण रहा।
-</p>
-
-<h3>बाबर</h3>
-
-<p>
-ज़हीरुद्दीन मुहम्मद बाबर ने 1526 में पानीपत के प्रथम युद्ध में
-इब्राहिम लोदी को हराकर उत्तर भारत में मुगल सत्ता की स्थापना की।
-</p>
-
-<div class="highlight">
-
-<strong>मुख्य तथ्य:</strong>
-1526 का प्रथम पानीपत युद्ध मुगल शासन की स्थापना से जुड़ा महत्वपूर्ण
-ऐतिहासिक मोड़ था।
-
-</div>
-
-<h3>हुमायूँ</h3>
-
-<p>
-बाबर के बाद हुमायूँ शासक बना। उसके शासनकाल में उसे कई राजनीतिक
-चुनौतियों का सामना करना पड़ा। शेर शाह सूरी ने उसे पराजित किया,
-लेकिन बाद में हुमायूँ ने अपना शासन पुनः प्राप्त किया।
-</p>
-
-<h3>अकबर</h3>
-
-<p>
-अकबर मुगल साम्राज्य के सबसे महत्वपूर्ण शासकों में से एक था।
-उसके शासन में साम्राज्य का विस्तार हुआ और प्रशासन को अधिक व्यवस्थित
-रूप दिया गया।
-</p>
-
-<h3>राजपूतों के साथ संबंध</h3>
-
-<p>
-अकबर ने कई राजपूत शासकों और परिवारों के साथ राजनीतिक संबंध बनाए।
-युद्ध के साथ-साथ राजनीतिक सहयोग और वैवाहिक संबंध भी साम्राज्य के
-विस्तार में उपयोगी रहे।
-</p>
-
-<h3>मनसबदारी व्यवस्था</h3>
-
-<p>
-मनसब का अर्थ पद या रैंक से था। मनसबदार मुगल प्रशासन और सेना में
-महत्वपूर्ण अधिकारी होते थे।
-</p>
-
-<p>
-<strong>जात:</strong> मनसबदार की व्यक्तिगत स्थिति और पद से संबंधित।
-
-</p>
-
-<p>
-<strong>सवार:</strong> घुड़सवार सैनिकों से संबंधित जिम्मेदारी को
-दर्शाता था।
-</p>
-
-<h3>जागीर</h3>
-
-<p>
-कई मनसबदारों को वेतन के बदले किसी क्षेत्र से राजस्व प्राप्त करने का
-अधिकार दिया जाता था। ऐसे राजस्व assignments को जागीर कहा जाता था।
-</p>
-
-<h3>भूमि राजस्व</h3>
-
-<p>
-कृषि मुगल अर्थव्यवस्था का महत्वपूर्ण आधार थी। इसलिए भूमि से मिलने
-वाला राजस्व राज्य के लिए बहुत महत्वपूर्ण था।
-</p>
-
-<h3>टोडर मल</h3>
-
-<p>
-अकबर के शासनकाल में राजा टोडर मल का नाम राजस्व व्यवस्था में सुधार
-और व्यवस्थित भूमि-मूल्यांकन से जुड़ा है।
-</p>
-
-<h3>मुगल कला और वास्तुकला</h3>
-
-<p>
-मुगल शासकों ने वास्तुकला, चित्रकला, उद्यान और साहित्य को संरक्षण
-दिया। शाहजहाँ के शासनकाल में कई प्रसिद्ध स्थापत्य परियोजनाएँ हुईं।
-</p>
-
-<h3>ऐतिहासिक स्रोत</h3>
-
-<p>
-मुगल इतिहास को समझने के लिए इतिहासकार दरबारी ग्रंथों, सिक्कों,
-इमारतों, चित्रों और अन्य स्रोतों का उपयोग करते हैं।
-</p>
-
-<div class="important">
-
-<strong>UPSC दृष्टिकोण:</strong>
-किसी भी दरबारी स्रोत को बिना आलोचनात्मक अध्ययन के पूरी तरह निष्पक्ष
-नहीं मानना चाहिए। स्रोत के उद्देश्य और संदर्भ को समझना आवश्यक है।
 
 </div>
 
 </section>
 
 
-<!-- AUDIO -->
+<section>
 
-<section class="section" id="audio">
+<div class="card">
 
-<h2>🎧 18. Audio Learning</h2>
+<h2>🎧 Audio Learning</h2>
+
+<p>
+English और Hindi summary सुनने के लिए buttons दबाएँ।
+</p>
 
 <div class="audio-box">
-
-<p>
-English या Hindi में chapter का short revision सुन सकते हो।
-</p>
 
 <div class="audio-buttons">
 
 <button onclick="speakEnglish()">
-▶️ English Audio
+▶ English Audio
 </button>
 
 <button onclick="speakHindi()">
-▶️ Hindi Audio
+▶ Hindi Audio
 </button>
 
 <button onclick="stopSpeech()">
-⏹️ Stop
+⏹ Stop
 </button>
 
 </div>
 
 </div>
 
-</section>
-
-
-<!-- UPSC -->
-
-<section class="section" id="upsc">
-
-<h2>🎯 19. UPSC Important Points</h2>
-
-<div class="important">
-
-<ul>
-
-<li>1526 → First Battle of Panipat.</li>
-
-<li>Babur → establishment of Mughal rule.</li>
-
-<li>Humayun → political struggle and restoration.</li>
-
-<li>Akbar → expansion and administrative consolidation.</li>
-
-<li>Mansab → rank/position.</li>
-
-<li>Zat → personal rank/status.</li>
-
-<li>Sawar → cavalry responsibility.</li>
-
-<li>Jagir → revenue assignment.</li>
-
-<li>Agriculture → important economic foundation.</li>
-
-<li>Raja Todar Mal → associated with revenue reforms.</li>
-
-<li>Abu'l Fazl → Akbar Nama and Ain-i Akbari.</li>
-
-<li>Shah Jahan → major architectural patronage.</li>
-
-<li>Aurangzeb → large territorial expansion and major military challenges.</li>
-
-</ul>
-
 </div>
 
 </section>
 
 
-<!-- MAINS -->
+<section>
 
-<section class="section" id="mains">
+<div class="card">
 
-<h2>✍️ 20. Mains Practice</h2>
+<h2>🎯 UPSC Important Points</h2>
 
-<div class="mains-box">
+<ol>
 
-<p>
-<strong>Q1.</strong>
-Explain the major factors that helped the Mughals establish and
-expand their empire in India.
-</p>
+<li>Gupta power emerged as an important force in northern India.</li>
 
-</div>
+<li>Chandragupta I helped consolidate early Gupta power.</li>
 
-<div class="mains-box">
+<li>Samudragupta was a major expansionist ruler.</li>
 
-<p>
-<strong>Q2.</strong>
-Discuss the importance of the mansabdari system in Mughal
-administration.
-</p>
+<li>The Allahabad Pillar inscription is an important source for Samudragupta.</li>
 
-</div>
+<li>Chandragupta II was another major Gupta ruler.</li>
 
-<div class="mains-box">
+<li>Political alliances were important in empire-building.</li>
 
-<p>
-<strong>Q3.</strong>
-Explain the importance of land revenue in maintaining the Mughal
-administrative and military system.
-</p>
+<li>Agriculture was a major economic foundation.</li>
 
-</div>
+<li>Coins and inscriptions are important archaeological/historical sources.</li>
 
-<div class="mains-box">
+<li>Faxian provides an external traveller's perspective.</li>
 
-<p>
-<strong>Q4.</strong>
-How did Akbar use political alliances and administrative integration
-to strengthen the Mughal Empire?
-</p>
+<li>Āryabhaṭa is associated with mathematics and astronomy.</li>
 
-</div>
+<li>Varāhamihira was an important scholar of the period.</li>
 
-<div class="mains-box">
+<li>Kālidāsa is one of the most celebrated Sanskrit literary figures.</li>
 
-<p>
-<strong>Q5.</strong>
-Why are court chronicles, coins and monuments important for studying
-Mughal history?
-</p>
+<li>Gupta art and sculpture had a lasting influence.</li>
+
+<li>The Iron Pillar demonstrates advanced metallurgical skill.</li>
+
+<li>Temple architecture developed important structural traditions.</li>
+
+<li>Other kingdoms continued to exist outside the Gupta political core.</li>
+
+<li>Prabhāvatī Gupta provides evidence of royal family and political networks.</li>
+
+<li>Gupta political power weakened gradually rather than ending in one single event.</li>
+
+</ol>
 
 </div>
 
 </section>
 
 
-<!-- REVISION -->
+<section>
 
-<section class="section" id="revision">
+<div class="card">
 
-<h2>⚡ 21. Quick Revision</h2>
+<h2>✍️ UPSC Mains Practice</h2>
+
+<ol>
+
+<li>
+Why is the Gupta period sometimes described as a Classical or Golden
+Age? Explain with suitable examples.
+</li>
+
+<li>
+Discuss the role of inscriptions, coins and traveller accounts in
+reconstructing Gupta history.
+</li>
+
+<li>
+Explain the contributions of Āryabhaṭa and Kālidāsa to the intellectual
+and cultural history of India.
+</li>
+
+<li>
+How did political consolidation, economic networks and cultural
+institutions contribute to creativity during the Gupta period?
+</li>
+
+<li>
+“Calling the Gupta period a Golden Age requires a critical approach.”
+Discuss.
+</li>
+
+</ol>
+
+<div class="analysis">
+
+<strong>📝 Mains Answer Formula</strong>
+
+<p>
+<strong>
+Introduction → Gupta Political Background → Administration/Economy →
+Science/Literature/Art → Critical Analysis → Conclusion
+</strong>
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+
+<section>
+
+<div class="card">
+
+<h2>⚡ Quick Revision</h2>
 
 <div class="revision">
 
-<ul>
-
-<li>⚔️ 1526 → Babur and First Battle of Panipat</li>
-
-<li>👑 Humayun → struggle and restoration</li>
-
-<li>⭐ Akbar → expansion + administration</li>
-
-<li>📊 Mansab → rank</li>
-
-<li>🐎 Sawar → cavalry responsibility</li>
-
-<li>💰 Jagir → revenue assignment</li>
-
-<li>🌾 Agriculture → revenue foundation</li>
-
-<li>📚 Abu'l Fazl → Akbar Nama + Ain-i Akbari</li>
-
-<li>🏛️ Shah Jahan → architecture</li>
-
-<li>⚔️ Aurangzeb → extensive expansion + Deccan campaigns</li>
-
-</ul>
-
+<div>
+<strong>Guptas</strong>
+<p>Important political power in northern India.</p>
 </div>
 
-</section>
-
-
-<!-- FINAL FLOW -->
-
-<section class="section">
-
-<h2>🎬 22. Final Chapter Concept Flow</h2>
-
-<div class="flow">
-
-<div class="flow-box">
-Babur
+<div>
+<strong>Chandragupta I</strong>
+<p>Early consolidation of Gupta power.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Mughal Establishment
+<div>
+<strong>Samudragupta</strong>
+<p>Major campaigns and expansion.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Akbar
+<div>
+<strong>Chandragupta II</strong>
+<p>Important ruler associated with further expansion.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Expansion
+<div>
+<strong>Harishena</strong>
+<p>Associated with the Allahabad Pillar inscription.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Administration
+<div>
+<strong>Faxian</strong>
+<p>Chinese Buddhist traveller and historical source.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Revenue
+<div>
+<strong>Āryabhaṭa</strong>
+<p>Mathematics and astronomy.</p>
 </div>
 
-<div class="arrow">➡️</div>
-
-<div class="flow-box">
-Imperial Power
+<div>
+<strong>Varāhamihira</strong>
+<p>Scholar associated with astronomy and related learning.</p>
 </div>
 
-<div class="arrow">➡️</div>
+<div>
+<strong>Kālidāsa</strong>
+<p>Major Sanskrit literary figure.</p>
+</div>
 
-<div class="flow-box">
-Regional Challenges
+<div>
+<strong>Iron Pillar</strong>
+<p>Important example of ancient metallurgical skill.</p>
+</div>
+
+<div>
+<strong>Gupta Art</strong>
+<p>Important sculpture and visual traditions.</p>
+</div>
+
+<div>
+<strong>Temple Architecture</strong>
+<p>Important structural developments.</p>
+</div>
+
+<div>
+<strong>Prabhāvatī Gupta</strong>
+<p>Evidence of royal family and political networks.</p>
+</div>
+
+<div>
+<strong>Classical Age</strong>
+<p>Label connected with lasting achievements of the period.</p>
+</div>
+
 </div>
 
 </div>
@@ -1928,486 +2421,461 @@ Regional Challenges
 </section>
 
 
-<!-- TESTS -->
+<section>
 
-<section class="section" id="tests">
+<div class="card">
 
-<h2>📝 23. Chapter Tests — 20 MCQs</h2>
+<h2>🧠 MCQ Test — 20 Questions</h2>
 
 <p>
-<strong>Rule:</strong>
-पहले option select करो। उसके बाद
-<strong>Check Answer</strong> दबाओ।
-Correct answer और explanation तभी दिखाई देगा।
+<strong>4 Tests × 5 Questions = 20 Questions</strong>
+</p>
+
+<p>
+Explanation केवल <strong>Check Answer</strong> दबाने के बाद दिखाई देगा।
 </p>
 
 <div id="quizContainer"></div>
 
+</div>
+
 </section>
 
-
-<!-- COMPLETE -->
-
-<section class="complete-box">
-
-<h2>🎉 Chapter Completed?</h2>
-
-<p>
-सभी sections पढ़ने और tests attempt करने के बाद नीचे button दबाओ।
-</p>
 
 <button
 class="complete-btn"
+id="completeBtn"
 onclick="completeChapter()">
-✅ Mark Chapter Complete
+
+✅ Mark Chapter as Completed
+
 </button>
 
-<p id="completionMessage"></p>
 
-</section>
+<div class="card">
+
+<h2>🧠 Final Concept Map</h2>
+
+<div class="flow">
+
+<div class="flow-box">Gupta Rise</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Political Consolidation</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Administration & Economy</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Learning</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Science & Literature</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Art & Architecture</div>
+
+<div class="arrow">→</div>
+
+<div class="flow-box">Long-term Legacy</div>
+
+</div>
+
+</div>
+
 
 </main>
 
 
 <footer>
 
-<p>🇮🇳 UPSC Shiksha</p>
+<p>
+<strong>🇮🇳 UPSC Shiksha</strong>
+</p>
 
-<p>Class 7 History • Chapter 4 • The Mughals</p>
+<p>
+Class 7 History • Current NCERT 2026–27
+</p>
 
-<p>Original supplementary study material</p>
+<p class="small">
+Original educational explanations for UPSC-oriented learning.
+</p>
 
 </footer>
 
 
 <script>
 
-/* =========================
-   THEME
-========================= */
-
-function toggleTheme(){
-
-document.body.classList.toggle("dark");
-
-localStorage.setItem(
-"class7ch4theme",
-document.body.classList.contains("dark")
-?"dark"
-:"light"
-);
-
-}
-
-function loadTheme(){
-
-const theme=
-localStorage.getItem("class7ch4theme");
-
-if(theme==="dark"){
-document.body.classList.add("dark");
-}
-
-}
-
-loadTheme();
-
-
-/* =========================
-   QUESTIONS
-========================= */
-
-const questions=[
+const quizData=[
 
 {
-q:"Who established Mughal rule in northern India after the First Battle of Panipat?",
+q:"Which ruler is associated with the early consolidation of Gupta power?",
 options:[
-"Babur",
-"Akbar",
-"Humayun",
-"Jahangir"
+"Chandragupta I",
+"Samudragupta",
+"Kanishka",
+"Harshavardhana"
 ],
-answer:"A",
-exp:"Babur defeated Ibrahim Lodi at the First Battle of Panipat in 1526 and established Mughal political authority in northern India."
+answer:0,
+explain:"Chandragupta I played an important role in establishing and consolidating early Gupta power."
 },
 
 {
-q:"The First Battle of Panipat was fought in:",
+q:"Which Gupta ruler is especially known for extensive military campaigns?",
 options:[
-"1526",
-"1556",
-"1605",
-"1707"
+"Samudragupta",
+"Chandragupta I",
+"Kumaragupta",
+"Skandagupta"
 ],
-answer:"A",
-exp:"The First Battle of Panipat was fought in 1526."
+answer:0,
+explain:"Samudragupta is especially known for his campaigns and expansion of Gupta political influence."
 },
 
 {
-q:"Who succeeded Babur?",
+q:"Which inscription is an important source for Samudragupta's achievements?",
 options:[
-"Humayun",
-"Akbar",
-"Jahangir",
-"Shah Jahan"
+"Allahabad Pillar inscription",
+"Hathigumpha inscription",
+"Junagadh inscription",
+"Aihole inscription"
 ],
-answer:"A",
-exp:"Humayun succeeded Babur as Mughal emperor."
+answer:0,
+explain:"The Allahabad Pillar inscription, composed by Harishena, is an important source for Samudragupta's campaigns and political relationships."
 },
 
 {
-q:"Who defeated Humayun and established the Sur Empire?",
+q:"Who was Harishena?",
 options:[
-"Sher Shah Sur",
-"Ibrahim Lodi",
-"Rana Sanga",
-"Alauddin Khalji"
+"A court poet associated with Samudragupta's inscription",
+"A Chinese traveller",
+"A Gupta astronomer",
+"A Pallava king"
 ],
-answer:"A",
-exp:"Sher Shah Sur defeated Humayun and established the Sur Empire for a period."
+answer:0,
+explain:"Harishena is traditionally associated with the composition of the inscription praising Samudragupta."
 },
 
 {
-q:"Which Mughal ruler is particularly associated with administrative consolidation and expansion?",
+q:"Which Gupta ruler is traditionally associated with the title Vikramaditya?",
 options:[
-"Akbar",
-"Babur",
-"Humayun",
-"Bahadur Shah"
+"Chandragupta II",
+"Chandragupta I",
+"Samudragupta",
+"Kumaragupta"
 ],
-answer:"A",
-exp:"Akbar expanded the empire and developed important administrative institutions."
+answer:0,
+explain:"Chandragupta II is traditionally associated with the title Vikramaditya."
 },
 
 {
-q:"What did the term mansab broadly refer to?",
+q:"Why were political alliances important for ancient empires?",
 options:[
-"Rank or position",
-"Village market",
-"Religious tax",
-"Type of crop"
+"They could strengthen political relationships",
+"They completely eliminated agriculture",
+"They stopped all trade",
+"They made armies unnecessary"
 ],
-answer:"A",
-exp:"Mansab referred to a rank or position in the Mughal administrative system."
+answer:0,
+explain:"Political alliances, including marriage alliances, could strengthen relationships between ruling families and support political consolidation."
 },
 
 {
-q:"The zat rank was related mainly to:",
+q:"Which traveller visited India during the Gupta period?",
 options:[
-"Personal rank and status",
-"Number of villages",
-"Land measurement only",
-"Trade routes"
+"Faxian",
+"Ibn Battuta",
+"Al-Biruni",
+"Marco Polo"
 ],
-answer:"A",
-exp:"Zat indicated the personal rank and status of a mansabdar."
+answer:0,
+explain:"Faxian was a Chinese Buddhist traveller who visited India during the Gupta period."
 },
 
 {
-q:"The sawar rank was associated with:",
+q:"Why are traveller accounts useful to historians?",
 options:[
-"Cavalry responsibility",
-"Land measurement",
-"Architecture",
-"Trade taxation"
+"They provide observations that can be compared with other sources",
+"They are always completely objective",
+"They contain only military information",
+"They replace archaeological evidence"
 ],
-answer:"A",
-exp:"Sawar was associated with the cavalry responsibility of a mansabdar."
+answer:0,
+explain:"Traveller accounts provide observations about places, society and religious life, but historians compare them with other evidence."
 },
 
 {
-q:"What was a jagir?",
+q:"Who was Āryabhaṭa?",
 options:[
-"A revenue assignment",
-"A permanent private kingdom",
-"A religious text",
-"A military weapon"
+"A mathematician and astronomer",
+"A Gupta military commander",
+"A Tamil king",
+"A Chinese traveller"
 ],
-answer:"A",
-exp:"A jagir was generally a revenue assignment given to an official."
+answer:0,
+explain:"Āryabhaṭa was a major mathematician and astronomer associated with the intellectual tradition of early India."
 },
 
 {
-q:"Agriculture was important to the Mughal state because:",
+q:"Which field was strongly associated with Āryabhaṭa?",
 options:[
-"It provided an important revenue base",
-"It ended all political conflicts",
-"It eliminated the need for cities",
-"It replaced the army"
+"Mathematics and astronomy",
+"Temple administration only",
+"Maritime warfare only",
+"Political diplomacy only"
 ],
-answer:"A",
-exp:"Agriculture provided an important economic base for land revenue."
+answer:0,
+explain:"Āryabhaṭa is especially remembered for contributions to mathematics and astronomy."
 },
 
 {
-q:"Who is associated with Mughal revenue reforms under Akbar?",
+q:"Who is one of the most celebrated Sanskrit literary figures associated with the Gupta period?",
 options:[
-"Raja Todar Mal",
-"Birbal",
-"Man Singh",
-"Abu'l Fazl"
+"Kālidāsa",
+"Harishena",
+"Faxian",
+"Kanishka"
 ],
-answer:"A",
-exp:"Raja Todar Mal is associated with systematic revenue assessment and reforms during Akbar's reign."
+answer:0,
+explain:"Kālidāsa is one of the most celebrated Sanskrit literary figures traditionally associated with the Gupta period."
 },
 
 {
-q:"Who wrote the Akbar Nama?",
+q:"What does the Iron Pillar of Delhi demonstrate?",
 options:[
-"Abu'l Fazl",
-"Babur",
-"Jahangir",
-"Raja Todar Mal"
+"Important ancient metallurgical skill",
+"Only military power",
+"Only agricultural development",
+"Modern industrial technology"
 ],
-answer:"A",
-exp:"Abu'l Fazl wrote the Akbar Nama and Ain-i Akbari."
+answer:0,
+explain:"The Iron Pillar is a notable example of ancient Indian metal-working and resistance to corrosion."
 },
 
 {
-q:"Why should historians critically examine court chronicles?",
+q:"Why are coins useful historical sources?",
 options:[
-"They may reflect the purpose and viewpoint of their authors",
-"They contain no information",
-"They are always false",
-"They are modern newspapers"
+"They can provide clues about rulers, symbols and economy",
+"They only show modern borders",
+"They contain no historical information",
+"They replace every written source"
 ],
-answer:"A",
-exp:"Court chronicles are valuable but may reflect the interests, purpose and viewpoint of their authors."
+answer:0,
+explain:"Coins can provide information about rulers, symbols, political authority, religious imagery and economic activity."
 },
 
 {
-q:"Which Mughal ruler is strongly associated with monumental architecture?",
+q:"Which was an important economic foundation during the Gupta period?",
 options:[
-"Shah Jahan",
-"Babur",
-"Humayun",
-"Bahadur Shah"
+"Agriculture",
+"Only hunting",
+"Only overseas trade",
+"Only coin production"
 ],
-answer:"A",
-exp:"Shah Jahan's reign is strongly associated with major Mughal architectural projects."
+answer:0,
+explain:"Agriculture remained a major foundation of economic life, while crafts, markets and trade also contributed."
 },
 
 {
-q:"The Taj Mahal is associated with:",
+q:"What is one reason the Gupta period is called a Classical Age?",
 options:[
-"Shah Jahan",
-"Akbar",
-"Babur",
-"Humayun"
+"Important long-lasting achievements in culture and knowledge",
+"Every region had identical living conditions",
+"All wars ended permanently",
+"Only one language existed"
 ],
-answer:"A",
-exp:"The Taj Mahal is associated with Shah Jahan and his architectural patronage."
+answer:0,
+explain:"The label highlights significant and long-lasting achievements in literature, science, mathematics, art and related fields."
 },
 
 {
-q:"Akbar strengthened the empire partly through:",
+q:"Why should the term 'Golden Age' be used carefully?",
 options:[
-"Political alliances and administrative integration",
-"Abandoning administration",
-"Ending all regional relationships",
-"Stopping agriculture"
+"Different regions and social groups may have experienced the period differently",
+"It means nothing happened during the period",
+"It proves there was no political power",
+"It means every person was equally wealthy"
 ],
-answer:"A",
-exp:"Akbar used both military expansion and political alliances and administrative integration."
+answer:0,
+explain:"The term highlights major achievements but should not be interpreted as proof that every region or social group experienced equal prosperity."
 },
 
 {
-q:"Aurangzeb ruled from:",
+q:"Who was Prabhāvatī Gupta?",
 options:[
-"1658 to 1707",
-"1556 to 1605",
-"1526 to 1530",
-"1605 to 1627"
+"A Gupta royal woman connected with the Vākāṭaka ruling family",
+"A Chinese traveller",
+"A Gupta astronomer",
+"A Greek ruler"
 ],
-answer:"A",
-exp:"Aurangzeb ruled the Mughal Empire from 1658 to 1707."
+answer:0,
+explain:"Prabhāvatī Gupta was a daughter of Chandragupta II and became connected with the Vākāṭaka ruling family through marriage."
 },
 
 {
-q:"One major challenge of a very large empire is:",
+q:"What is an important lesson from Prabhāvatī Gupta's evidence?",
 options:[
-"Managing territories and resources",
-"Having no need for officials",
-"Having no military expenses",
-"Having no political competition"
+"Royal women could be part of political and diplomatic networks",
+"Women never appeared in historical sources",
+"Only kings mattered in ancient history",
+"Marriage had no political role"
 ],
-answer:"A",
-exp:"Large empires require substantial administrative, military and financial resources."
+answer:0,
+explain:"Her inscriptions show that women of royal families could be connected to political relationships, land grants and dynastic networks."
 },
 
 {
-q:"Which source can provide evidence about Mughal rulers and political authority?",
+q:"Which statement best describes Gupta political decline?",
 options:[
-"Coins",
-"Only modern textbooks",
-"Only rumours",
-"Only photographs"
+"It was a gradual process involving changing political conditions",
+"It happened in one single battle everywhere",
+"All kingdoms disappeared immediately",
+"Trade stopped instantly"
 ],
-answer:"A",
-exp:"Coins can provide evidence about rulers, titles, economy and political authority."
+answer:0,
+explain:"Gupta political power weakened gradually as political conditions changed and regional and external pressures increased."
 },
 
 {
-q:"Which statement best describes Mughal expansion?",
+q:"Which sequence best represents the chapter's central idea?",
 options:[
-"It involved conquest, alliances and administrative integration",
-"It happened in one single battle",
-"It depended only on trade",
-"It involved no regional rulers"
+"Political consolidation → learning → creativity → cultural legacy",
+"Trade stops → learning disappears → empire expands",
+"War only → no administration → no culture",
+"Isolation → no exchange → creativity disappears"
 ],
-answer:"A",
-exp:"Mughal expansion involved military conquest as well as alliances and administrative integration."
+answer:0,
+explain:"The chapter connects political and economic structures with institutions of learning and the development of literature, science, art and architecture."
 }
 
 ];
 
 
-/* =========================
-   RENDER
-========================= */
+function buildQuiz(){
 
-function renderQuestions(){
+const container=document.getElementById("quizContainer");
 
-const container=
-document.getElementById("quizContainer");
+let html="";
 
-container.innerHTML="";
+quizData.forEach((item,index)=>{
 
-questions.forEach((item,index)=>{
+const saved=localStorage.getItem(
+"class7history4q"+(index+1)
+);
 
-const number=index+1;
-
-let html=`
-
-<div class="test">
+html+=`
 
 <div class="question">
 
-<p>
-Q${number}. ${item.q}
-</p>
-`;
+<h3>
+Q${index+1}. ${item.q}
+</h3>
 
-item.options.forEach((option,i)=>{
+<div class="options">
 
-const letter=
-String.fromCharCode(65+i);
+${item.options.map((opt,i)=>`
 
-html+=`
-
-<label class="option">
+<label>
 
 <input
 type="radio"
-name="q${number}"
-value="${letter}"
+name="q${index+1}"
+value="${i}"
+${saved==i ? "checked":""}
 >
 
-${letter}. ${option}
+${String.fromCharCode(65+i)}. ${opt}
 
 </label>
 
-`;
+`).join("")}
 
-});
-
-html+=`
+</div>
 
 <button
 class="check-btn"
-onclick="checkAnswer(${number})">
+onclick="checkAnswer(${index})">
 
-✅ Check Answer
+Check Answer
 
 </button>
 
 <div
 class="answer"
-id="answer${number}">
-</div>
-
+id="answer${index}">
 </div>
 
 </div>
 
 `;
-
-container.innerHTML+=html;
 
 });
 
-}
-
-
-/* =========================
-   CHECK
-========================= */
-
-function checkAnswer(number){
-
-const question=
-questions[number-1];
-
-const selected=
-document.querySelector(
-`input[name="q${number}"]:checked`
-);
-
-const answerBox=
-document.getElementById(
-`answer${number}`
-);
-
-if(!selected){
-
-answerBox.style.display="block";
-
-answerBox.innerHTML=
-"⚠️ Please select an option first.";
-
-return;
-
-}
-
-if(selected.value===question.answer){
-
-answerBox.innerHTML=
-`
-<strong>✅ Correct Answer!</strong>
-<br><br>
-Correct Answer: ${question.answer}
-<br><br>
-${question.exp}
-`;
-
-}else{
-
-answerBox.innerHTML=
-`
-<strong>❌ Incorrect Answer</strong>
-<br><br>
-Correct Answer: ${question.answer}
-<br><br>
-${question.exp}
-`;
-
-}
-
-answerBox.style.display="block";
-
-localStorage.setItem(
-`class7ch4q${number}`,
-selected.value
-);
+container.innerHTML=html;
 
 updateProgress();
 
 }
 
 
-/* =========================
-   PROGRESS
-========================= */
+function checkAnswer(index){
+
+const selected=document.querySelector(
+`input[name="q${index+1}"]:checked`
+);
+
+const box=document.getElementById(
+"answer"+index
+);
+
+if(!selected){
+
+box.style.display="block";
+
+box.innerHTML=
+"⚠️ Please select an answer first.";
+
+return;
+
+}
+
+const value=Number(selected.value);
+
+localStorage.setItem(
+"class7history4q"+(index+1),
+value
+);
+
+if(value===quizData[index].answer){
+
+box.innerHTML=
+"✅ Correct!<br><br>"+
+quizData[index].explain;
+
+}else{
+
+box.innerHTML=
+"❌ Not correct.<br><br>"+
+"Correct answer: "+
+String.fromCharCode(65+quizData[index].answer)+
+". "+
+quizData[index].options[quizData[index].answer]+
+"<br><br>"+
+quizData[index].explain;
+
+}
+
+box.style.display="block";
+
+updateProgress();
+
+}
+
 
 function updateProgress(){
 
@@ -2415,9 +2883,11 @@ let checked=0;
 
 for(let i=1;i<=20;i++){
 
-if(localStorage.getItem(
-`class7ch4q${i}`
-)){
+if(
+localStorage.getItem(
+"class7history4q"+i
+)!==null
+){
 
 checked++;
 
@@ -2425,53 +2895,96 @@ checked++;
 
 }
 
-const percent=
-Math.round((checked/20)*100);
+const percent=(checked/20)*100;
 
 document.getElementById(
-"progressFill"
-).style.width=
-percent+"%";
+"progressBar"
+).style.width=percent+"%";
 
 document.getElementById(
 "progressText"
 ).innerText=
-percent+"%";
+checked+" / 20 MCQs checked";
 
 }
 
 
-/* =========================
-   COMPLETE
-========================= */
+function toggleTheme(){
+
+document.body.classList.toggle("dark");
+
+localStorage.setItem(
+"class7history4theme",
+document.body.classList.contains("dark")
+?"dark"
+:"light"
+);
+
+}
+
+
+function restoreTheme(){
+
+if(
+localStorage.getItem(
+"class7history4theme"
+)==="dark"
+){
+
+document.body.classList.add("dark");
+
+}
+
+}
+
 
 function completeChapter(){
 
 localStorage.setItem(
-"class7ch4done",
-"true"
+"class7history4done",
+"yes"
 );
 
-document.getElementById(
-"completionMessage"
-).innerHTML=
-"<br>🎉 Chapter 4 marked as completed! 🇮🇳";
+const btn=document.getElementById(
+"completeBtn"
+);
 
-updateProgress();
+btn.innerHTML=
+"✅ Chapter Completed";
+
+btn.classList.add("completed");
 
 }
 
 
-/* =========================
-   AUDIO
-========================= */
+function restoreCompletion(){
 
-function speakText(text,language){
+if(
+localStorage.getItem(
+"class7history4done"
+)==="yes"
+){
+
+const btn=document.getElementById(
+"completeBtn"
+);
+
+btn.innerHTML=
+"✅ Chapter Completed";
+
+btn.classList.add("completed");
+
+}
+
+}
+
+
+function speakText(text,lang){
 
 if(!("speechSynthesis" in window)){
 
 alert(
-"Audio is not supported on this browser."
+"Audio speech is not supported on this browser."
 );
 
 return;
@@ -2483,7 +2996,7 @@ speechSynthesis.cancel();
 const speech=
 new SpeechSynthesisUtterance(text);
 
-speech.lang=language;
+speech.lang=lang;
 
 speech.rate=.9;
 
@@ -2498,34 +3011,45 @@ function speakEnglish(){
 
 const text=`
 
-The Mughals.
+The Gupta Era: An Age of Tireless Creativity.
 
-Babur established Mughal political authority in northern India
-after defeating Ibrahim Lodi at the First Battle of Panipat in 1526.
+The Gupta dynasty became an important political power
+in northern India during the early centuries of the Common Era.
 
-Humayun succeeded Babur but faced major political challenges.
+Chandragupta the First helped consolidate Gupta power.
 
-Akbar expanded the Mughal Empire and developed important
-administrative institutions.
+Samudragupta was a major ruler known for military campaigns
+and political expansion.
 
-The mansabdari system organised officials according to ranks.
-Zat represented personal rank and status.
-Sawar was connected with cavalry responsibility.
+The Allahabad Pillar inscription is an important source
+for understanding Samudragupta.
 
-Jagirs were revenue assignments.
+Chandragupta the Second expanded Gupta influence further.
 
-Agriculture was an important economic foundation of the Mughal state.
-Raja Todar Mal is associated with revenue reforms under Akbar.
+The Gupta period is remembered for literature,
+mathematics, astronomy, art, architecture and metallurgy.
 
-Abu'l Fazl wrote the Akbar Nama and Ain-i Akbari.
+Aryabhata was a major mathematician and astronomer.
 
-Shah Jahan is associated with major Mughal architectural projects.
+Varahamihira was an important scholar associated with
+astronomy and related learning.
 
-Aurangzeb ruled from 1658 to 1707 and the empire reached a very
-large territorial extent during his reign.
+Kalidasa is one of the greatest Sanskrit literary figures
+associated with the period.
 
-Historians use chronicles, coins, buildings and other sources
-to reconstruct Mughal history.
+The Iron Pillar of Delhi is an important example
+of ancient metallurgical skill.
+
+Faxian, a Chinese Buddhist traveller, provides
+an external account of India.
+
+The Gupta period is sometimes called a Classical or Golden Age,
+but this label should be used critically.
+
+The period was important because political,
+economic, intellectual and cultural developments
+interacted with one another.
+
 `;
 
 speakText(text,"en-IN");
@@ -2537,35 +3061,46 @@ function speakHindi(){
 
 const text=`
 
-मुगल।
+गुप्त युग: निरंतर रचनात्मकता का युग।
 
-1526 में बाबर ने पानीपत के प्रथम युद्ध में इब्राहिम लोदी को
-हराकर उत्तर भारत में मुगल सत्ता की स्थापना की।
+गुप्त वंश प्रारंभिक ईस्वी शताब्दियों में
+उत्तर भारत की एक महत्वपूर्ण राजनीतिक शक्ति बना।
 
-हुमायूँ बाबर के बाद शासक बना और उसे कई राजनीतिक चुनौतियों का
-सामना करना पड़ा।
+चंद्रगुप्त प्रथम ने गुप्त शक्ति को मजबूत किया।
 
-अकबर ने मुगल साम्राज्य का विस्तार किया और प्रशासन को व्यवस्थित
-करने में महत्वपूर्ण भूमिका निभाई।
+समुद्रगुप्त अपने अभियानों और राजनीतिक विस्तार
+के लिए प्रसिद्ध था।
 
-मनसबदारी व्यवस्था में अधिकारियों को अलग-अलग पद और रैंक दिए जाते थे।
-जात व्यक्तिगत पद और स्थिति से संबंधित था।
-सवार घुड़सवार सैनिकों की जिम्मेदारी से संबंधित था।
+प्रयाग या इलाहाबाद स्तंभ अभिलेख समुद्रगुप्त
+के इतिहास का महत्वपूर्ण स्रोत है।
 
-जागीर राजस्व प्राप्त करने का assignment था।
+चंद्रगुप्त द्वितीय ने गुप्त प्रभाव को आगे बढ़ाया।
 
-कृषि मुगल राज्य की अर्थव्यवस्था का महत्वपूर्ण आधार थी।
-राजा टोडर मल का नाम अकबर की राजस्व व्यवस्था से जुड़ा है।
+गुप्त काल साहित्य, गणित, खगोल विज्ञान,
+कला, वास्तुकला और धातुकर्म के विकास के लिए
+महत्वपूर्ण माना जाता है।
 
-अबुल फ़ज़ल ने अकबरनामा और आइने-अकबरी लिखी।
+आर्यभट महान गणितज्ञ और खगोलशास्त्री थे।
 
-शाहजहाँ का शासन मुगल वास्तुकला के लिए प्रसिद्ध है।
+वराहमिहिर महत्वपूर्ण विद्वान थे।
 
-औरंगज़ेब ने 1658 से 1707 तक शासन किया और उसके समय साम्राज्य
-बहुत बड़े क्षेत्र तक फैला।
+कालिदास संस्कृत साहित्य के महान साहित्यकारों में
+गिने जाते हैं।
 
-इतिहासकार मुगल इतिहास को समझने के लिए ग्रंथों, सिक्कों,
-इमारतों और अन्य स्रोतों का उपयोग करते हैं।
+दिल्ली का लौह स्तंभ प्राचीन धातुकर्म की
+महत्वपूर्ण उपलब्धि है।
+
+चीनी बौद्ध यात्री फाह्यान ने भारत की यात्रा की
+और उसके विवरण ऐतिहासिक स्रोत हैं।
+
+गुप्त काल को कई बार स्वर्ण युग या Classical Age
+कहा जाता है, लेकिन इस शब्द का प्रयोग
+आलोचनात्मक तरीके से करना चाहिए।
+
+इस काल की बड़ी विशेषता राजनीति, अर्थव्यवस्था,
+शिक्षा, विज्ञान, साहित्य और कला के बीच
+अंतःसंबंध था।
+
 `;
 
 speakText(text,"hi-IN");
@@ -2584,13 +3119,11 @@ speechSynthesis.cancel();
 }
 
 
-/* =========================
-   START
-========================= */
+restoreTheme();
 
-renderQuestions();
+restoreCompletion();
 
-updateProgress();
+buildQuiz();
 
 </script>
 
