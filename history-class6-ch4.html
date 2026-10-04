@@ -1,55 +1,19 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Class 6 History Chapter 4 | UPSC Shiksha</title>
+<title>India's Cultural Roots | Class 6 History | UPSC Shiksha</title>
 
 <meta name="description"
-content="Class 6 History Chapter 4 - What Books and Burials Tell Us. English and Hindi explanations, audio, visuals, UPSC points, Mains practice and tests.">
+content="UPSC Shiksha Class 6 History Chapter 4 - India's Cultural Roots. Original explanations, Vedas, Upanishads, Buddhism, Jainism, Charvaka, folk traditions, cultural continuity, Hindi notes, audio, UPSC points, mains practice and MCQs.">
 
 <style>
-:root{
-  --bg:#f5f7fb;
-  --card:#ffffff;
-  --text:#172033;
-  --muted:#5f6b7a;
-  --primary:#173b73;
-  --secondary:#2563eb;
-  --border:#dbe2ea;
-  --highlight-bg:#fff8cc;
-  --highlight-text:#684f00;
-  --highlight-border:#e8c84a;
-  --example-bg:#eaf5ff;
-  --example-border:#62aaf5;
-  --upsc-bg:#eaf8ef;
-  --upsc-border:#49a56a;
-  --warning-bg:#fff0f0;
-  --warning-border:#e06b6b;
-}
-
-body.dark{
-  --bg:#0f172a;
-  --card:#172033;
-  --text:#f1f5f9;
-  --muted:#c1cad6;
-  --primary:#93c5fd;
-  --secondary:#60a5fa;
-  --border:#334155;
-  --highlight-bg:#40370c;
-  --highlight-text:#ffe88a;
-  --highlight-border:#a88919;
-  --example-bg:#102f49;
-  --example-border:#378bd1;
-  --upsc-bg:#123522;
-  --upsc-border:#3f9d62;
-  --warning-bg:#421c1c;
-  --warning-border:#c55b5b;
-}
-
 *{
   box-sizing:border-box;
+  margin:0;
+  padding:0;
 }
 
 html{
@@ -57,427 +21,704 @@ html{
 }
 
 body{
-  margin:0;
   font-family:Arial,Helvetica,sans-serif;
-  background:var(--bg);
-  color:var(--text);
   line-height:1.7;
-  transition:.3s;
+  background:#f7f8fc;
+  color:#20242b;
+  transition:0.3s;
+}
+
+body.dark{
+  background:#10141b;
+  color:#e9edf3;
 }
 
 header{
+  background:linear-gradient(135deg,#7b1fa2,#512da8);
+  color:white;
+  padding:18px 15px;
   position:sticky;
   top:0;
   z-index:1000;
-  background:var(--card);
-  border-bottom:1px solid var(--border);
-  padding:12px 16px;
+  box-shadow:0 4px 15px rgba(0,0,0,.18);
+}
+
+.header-inner{
+  max-width:1100px;
+  margin:auto;
   display:flex;
-  justify-content:space-between;
   align-items:center;
+  justify-content:space-between;
   gap:10px;
 }
 
 .logo{
   font-size:20px;
-  font-weight:800;
-  color:var(--primary);
+  font-weight:bold;
 }
 
 .header-buttons{
   display:flex;
   gap:8px;
+  flex-wrap:wrap;
 }
 
-button{
+button,
+.nav-btn{
   border:none;
-  border-radius:9px;
-  padding:10px 14px;
+  border-radius:10px;
+  padding:9px 13px;
   cursor:pointer;
-  font-weight:700;
+  font-weight:bold;
 }
 
-.home-btn{
-  background:#2563eb;
-  color:white;
+.nav-btn{
+  text-decoration:none;
+  background:white;
+  color:#512da8;
+  display:inline-block;
 }
 
 .theme-btn{
-  background:#111827;
+  background:#222;
   color:white;
 }
 
 body.dark .theme-btn{
-  background:#f8fafc;
-  color:#111827;
-}
-
-.hero{
-  padding:40px 18px;
-  text-align:center;
-  background:linear-gradient(135deg,#173b73,#2563eb);
-  color:white;
-}
-
-.hero h1{
-  margin:0 0 10px;
-  font-size:32px;
-}
-
-.hero p{
-  margin:6px auto;
-  max-width:850px;
+  background:#f5f5f5;
+  color:#222;
 }
 
 .container{
-  max-width:1050px;
+  max-width:1100px;
   margin:auto;
-  padding:20px 15px 50px;
+  padding:20px;
 }
 
-.progress-box{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
-  padding:15px;
+.hero{
+  background:linear-gradient(135deg,#ede7f6,#f3e5f5);
+  border-radius:20px;
+  padding:32px 22px;
   margin:20px 0;
+  text-align:center;
+  border:1px solid #d1c4e9;
 }
 
-.progress-bar{
-  height:12px;
-  background:#dbe2ea;
-  border-radius:20px;
-  overflow:hidden;
+body.dark .hero{
+  background:linear-gradient(135deg,#21172b,#181b29);
+  border-color:#51356c;
 }
 
-.progress-fill{
-  height:100%;
-  width:0%;
-  background:#22c55e;
-  transition:.4s;
+.hero h1{
+  color:#6a1b9a;
+  font-size:32px;
+  margin-bottom:10px;
 }
 
-.progress-text{
-  margin-top:8px;
-  font-weight:bold;
+body.dark .hero h1{
+  color:#ce93d8;
 }
 
-.quick-nav{
-  background:var(--card);
-  border:1px solid var(--border);
-  padding:15px;
-  border-radius:14px;
-  margin-bottom:25px;
-}
-
-.quick-nav a{
+.badge{
   display:inline-block;
-  margin:5px;
-  padding:7px 10px;
+  background:#6a1b9a;
+  color:white;
+  padding:6px 12px;
   border-radius:20px;
-  background:#e8f0ff;
-  color:#174b9b;
-  text-decoration:none;
-  font-size:14px;
-  font-weight:bold;
+  font-size:13px;
+  margin-bottom:12px;
 }
 
-body.dark .quick-nav a{
-  background:#243653;
-  color:#bfdbfe;
+.notice{
+  margin-top:15px;
+  padding:13px;
+  background:#fff8e1;
+  border-left:5px solid #ffb300;
+  border-radius:8px;
+  text-align:left;
+}
+
+body.dark .notice{
+  background:#302817;
 }
 
 .section{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
-  padding:24px;
-  margin:24px 0;
-  box-shadow:0 5px 18px rgba(0,0,0,.05);
+  background:white;
+  margin:20px 0;
+  padding:25px;
+  border-radius:18px;
+  box-shadow:0 3px 15px rgba(0,0,0,.07);
+}
+
+body.dark .section{
+  background:#181d25;
+  box-shadow:0 3px 15px rgba(0,0,0,.25);
 }
 
 .section h2{
-  color:var(--primary);
-  border-bottom:2px solid var(--border);
+  color:#6a1b9a;
+  margin-bottom:14px;
+  border-bottom:2px solid #e1bee7;
   padding-bottom:8px;
 }
 
+body.dark .section h2{
+  color:#ce93d8;
+}
+
 .section h3{
-  color:var(--secondary);
+  color:#7b1fa2;
+  margin:18px 0 8px;
+}
+
+body.dark .section h3{
+  color:#ba68c8;
+}
+
+p{
+  margin:9px 0;
+}
+
+ul,ol{
+  padding-left:25px;
+  margin:10px 0;
+}
+
+li{
+  margin:6px 0;
 }
 
 .highlight{
-  background:var(--highlight-bg);
-  color:var(--highlight-text);
-  border-left:5px solid var(--highlight-border);
+  background:#f3e5f5;
+  border-left:5px solid #8e24aa;
   padding:15px;
   border-radius:10px;
   margin:15px 0;
+}
+
+body.dark .highlight{
+  background:#291c30;
 }
 
 .example{
-  background:var(--example-bg);
-  border-left:5px solid var(--example-border);
+  background:#e8f5e9;
+  border-left:5px solid #43a047;
   padding:15px;
   border-radius:10px;
   margin:15px 0;
 }
 
-.upsc{
-  background:var(--upsc-bg);
-  border-left:5px solid var(--upsc-border);
+body.dark .example{
+  background:#17281b;
+}
+
+.analysis{
+  background:#e3f2fd;
+  border-left:5px solid #1976d2;
   padding:15px;
   border-radius:10px;
   margin:15px 0;
+}
+
+body.dark .analysis{
+  background:#172431;
 }
 
 .warning{
-  background:var(--warning-bg);
-  border-left:5px solid var(--warning-border);
+  background:#fff3e0;
+  border-left:5px solid #fb8c00;
   padding:15px;
   border-radius:10px;
   margin:15px 0;
 }
 
-.visual-grid{
+body.dark .warning{
+  background:#302418;
+}
+
+/* CULTURE TREE */
+
+.tree{
+  margin:25px auto;
+  max-width:850px;
+  text-align:center;
+}
+
+.tree-root{
+  display:inline-block;
+  padding:15px 25px;
+  background:#6a1b9a;
+  color:white;
+  border-radius:50px;
+  font-weight:bold;
+  box-shadow:0 6px 18px rgba(106,27,154,.3);
+}
+
+.tree-line{
+  width:4px;
+  height:45px;
+  background:#8e24aa;
+  margin:auto;
+}
+
+.tree-branches{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:12px;
+  position:relative;
+}
+
+.tree-card{
+  background:#fafafa;
+  border:2px solid #ce93d8;
+  border-radius:14px;
+  padding:15px 10px;
+  transition:.3s;
+}
+
+.tree-card:hover{
+  transform:translateY(-5px);
+}
+
+body.dark .tree-card{
+  background:#20252e;
+}
+
+.tree-card strong{
+  display:block;
+  color:#7b1fa2;
+  margin-bottom:6px;
+}
+
+body.dark .tree-card strong{
+  color:#ce93d8;
+}
+
+/* VEDA CARDS */
+
+.veda-grid{
   display:grid;
   grid-template-columns:repeat(4,1fr);
   gap:15px;
-  margin:20px 0;
+  margin-top:15px;
 }
 
-.visual-card{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:14px;
+.veda{
   padding:18px;
-  text-align:center;
-  animation:floatCard 3s ease-in-out infinite;
+  border-radius:15px;
+  background:linear-gradient(145deg,#fff3e0,#fce4ec);
+  border:1px solid #ffccbc;
 }
 
-.visual-card:nth-child(2){
-  animation-delay:.3s;
+body.dark .veda{
+  background:#29211f;
+  border-color:#70463b;
 }
 
-.visual-card:nth-child(3){
-  animation-delay:.6s;
+.veda h4{
+  color:#8e24aa;
+  margin-bottom:7px;
 }
 
-.visual-card:nth-child(4){
-  animation-delay:.9s;
-}
-
-.visual-icon{
-  font-size:42px;
-  display:block;
-  margin-bottom:8px;
-}
-
-@keyframes floatCard{
-  0%,100%{transform:translateY(0)}
-  50%{transform:translateY(-7px)}
-}
+/* FLOW */
 
 .flow{
   display:flex;
   align-items:center;
   justify-content:center;
-  gap:8px;
   flex-wrap:wrap;
+  gap:10px;
   margin:25px 0;
 }
 
-.flow-item{
-  min-width:140px;
+.flow-box{
+  min-width:150px;
   padding:15px;
-  border-radius:14px;
-  background:#eaf2ff;
-  color:#173b73;
+  background:#ede7f6;
+  border:2px solid #9575cd;
+  border-radius:12px;
   text-align:center;
   font-weight:bold;
-  animation:flowPop 2.5s infinite;
 }
 
-body.dark .flow-item{
-  background:#223653;
-  color:#bfdbfe;
+body.dark .flow-box{
+  background:#251d30;
 }
 
-.flow-item:nth-child(2){animation-delay:.4s}
-.flow-item:nth-child(3){animation-delay:.8s}
-.flow-item:nth-child(4){animation-delay:1.2s}
-.flow-item:nth-child(5){animation-delay:1.6s}
-
-.flow-arrow{
-  font-size:24px;
-  animation:arrowMove 1.5s infinite;
+.arrow{
+  font-size:25px;
+  color:#7b1fa2;
+  font-weight:bold;
 }
 
-@keyframes flowPop{
-  0%,100%{transform:scale(1)}
-  50%{transform:scale(1.06)}
+/* THOUGHT CARDS */
+
+.thought-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
 }
 
-@keyframes arrowMove{
-  0%,100%{transform:translateX(0)}
-  50%{transform:translateX(5px)}
+.thought{
+  padding:20px;
+  border-radius:15px;
+  border:1px solid #ddd;
+  background:#fafafa;
+}
+
+body.dark .thought{
+  background:#20252d;
+  border-color:#3d444f;
+}
+
+.thought h3{
+  margin-top:0;
+}
+
+/* COMPARISON TABLE */
+
+.table-wrap{
+  overflow-x:auto;
+  margin:15px 0;
 }
 
 table{
   width:100%;
   border-collapse:collapse;
-  margin:18px 0;
+  min-width:650px;
 }
 
 th,td{
-  border:1px solid var(--border);
+  border:1px solid #d6d6d6;
   padding:11px;
   text-align:left;
 }
 
 th{
-  background:#eaf0fa;
-}
-
-body.dark th{
-  background:#26344b;
-}
-
-.audio-box{
-  text-align:center;
-  background:var(--example-bg);
-  border-radius:14px;
-  padding:20px;
-}
-
-.audio-box button{
-  margin:5px;
-  background:#2563eb;
+  background:#6a1b9a;
   color:white;
 }
 
-.mains{
-  background:var(--card);
-  border:1px solid var(--border);
+body.dark th{
+  background:#512da8;
+}
+
+body.dark td{
+  border-color:#3d444f;
+}
+
+/* ANIMATION */
+
+.animation-box{
+  background:#111827;
+  color:white;
+  border-radius:18px;
+  padding:25px;
+  overflow:hidden;
+  margin-top:20px;
+}
+
+.animation-title{
+  text-align:center;
+  color:#e1bee7;
+  margin-bottom:20px;
+}
+
+.animated-flow{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:8px;
+  flex-wrap:wrap;
+}
+
+.anim-item{
+  padding:12px 16px;
+  background:#4a148c;
+  border-radius:10px;
+  opacity:.25;
+  transform:scale(.9);
+}
+
+.anim-item.active{
+  opacity:1;
+  transform:scale(1.05);
+  box-shadow:0 0 20px rgba(206,147,216,.6);
+}
+
+.animation-explanation{
+  margin-top:20px;
+  background:#1f2937;
   padding:15px;
-  border-radius:12px;
-  margin:12px 0;
+  border-radius:10px;
+  text-align:center;
 }
 
-.test{
-  background:var(--card);
-  border:1px solid var(--border);
-  border-radius:16px;
+/* UPSC */
+
+.upsc{
+  background:linear-gradient(135deg,#fff8e1,#fff3e0);
+  border-left:6px solid #ff9800;
   padding:20px;
-  margin:25px 0;
+  border-radius:12px;
 }
 
-.test h3{
-  color:var(--primary);
+body.dark .upsc{
+  background:#30271a;
 }
 
-.question{
-  border-top:1px solid var(--border);
-  padding:20px 0;
+/* MAINS */
+
+.mains{
+  background:#f1f8e9;
+  padding:18px;
+  border-radius:12px;
+  border-left:5px solid #689f38;
 }
 
-.question:first-child{
-  border-top:none;
+body.dark .mains{
+  background:#1d291b;
 }
 
-.options label{
+/* REVISION */
+
+.revision{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:12px;
+}
+
+.revision div{
+  background:#f5f5f5;
+  padding:15px;
+  border-radius:10px;
+}
+
+body.dark .revision div{
+  background:#232830;
+}
+
+/* AUDIO */
+
+.audio-buttons{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin:15px 0;
+}
+
+.audio-buttons button{
+  background:#6a1b9a;
+  color:white;
+}
+
+/* QUIZ */
+
+.quiz-section{
+  margin-top:20px;
+}
+
+.quiz-card{
+  border:1px solid #ddd;
+  border-radius:14px;
+  padding:18px;
+  margin:15px 0;
+}
+
+body.dark .quiz-card{
+  border-color:#3d444f;
+}
+
+.option{
   display:block;
-  padding:11px;
   margin:8px 0;
-  border:1px solid var(--border);
-  border-radius:9px;
+  padding:10px;
+  background:#f5f5f5;
+  border-radius:8px;
   cursor:pointer;
 }
 
-.options label:hover{
-  background:var(--example-bg);
+body.dark .option{
+  background:#252b34;
+}
+
+.option:hover{
+  background:#ede7f6;
+}
+
+body.dark .option:hover{
+  background:#30233a;
 }
 
 .check-btn{
-  background:#16a34a;
+  background:#6a1b9a;
   color:white;
   margin-top:10px;
 }
 
 .result{
+  margin-top:10px;
+  padding:10px;
+  border-radius:8px;
   display:none;
-  margin-top:12px;
-  padding:15px;
-  border-radius:10px;
-  background:var(--example-bg);
 }
 
 .correct{
-  border-left:5px solid #16a34a;
+  background:#c8e6c9;
+  color:#1b5e20;
 }
 
-.incorrect{
-  border-left:5px solid #dc2626;
+.wrong{
+  background:#ffcdd2;
+  color:#b71c1c;
+}
+
+body.dark .correct{
+  background:#18351c;
+  color:#a5d6a7;
+}
+
+body.dark .wrong{
+  background:#351b1d;
+  color:#ef9a9a;
+}
+
+.progress-container{
+  background:#ddd;
+  border-radius:20px;
+  height:14px;
+  overflow:hidden;
+  margin:15px 0;
+}
+
+.progress-bar{
+  width:0%;
+  height:100%;
+  background:linear-gradient(90deg,#6a1b9a,#ab47bc);
+  transition:.4s;
 }
 
 .complete-btn{
-  display:block;
-  margin:25px auto;
-  background:#7c3aed;
+  background:#2e7d32;
   color:white;
-  padding:13px 20px;
+  padding:13px 18px;
+}
+
+.completed{
+  color:#43a047;
+  font-weight:bold;
+  margin-left:10px;
 }
 
 footer{
   text-align:center;
-  padding:30px 15px;
-  background:var(--card);
-  border-top:1px solid var(--border);
-  color:var(--muted);
+  background:#311b92;
+  color:white;
+  padding:25px;
+  margin-top:30px;
 }
+
+.back-top{
+  position:fixed;
+  right:15px;
+  bottom:15px;
+  width:45px;
+  height:45px;
+  border-radius:50%;
+  background:#6a1b9a;
+  color:white;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  text-decoration:none;
+  font-size:20px;
+  box-shadow:0 4px 12px rgba(0,0,0,.3);
+}
+
+/* MOBILE */
 
 @media(max-width:800px){
-  .visual-grid{
-    grid-template-columns:repeat(2,1fr);
-  }
-}
-
-@media(max-width:600px){
-  header{
-    flex-direction:column;
-    align-items:stretch;
-  }
-
-  .header-buttons{
-    justify-content:center;
-  }
 
   .hero h1{
     font-size:25px;
   }
 
-  .section{
-    padding:17px;
+  .container{
+    padding:12px;
   }
 
-  .visual-grid{
-    grid-template-columns:1fr 1fr;
+  .section{
+    padding:18px;
+  }
+
+  .tree-branches{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .veda-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .thought-grid{
+    grid-template-columns:1fr;
+  }
+
+  .revision{
+    grid-template-columns:1fr;
+  }
+
+  .header-inner{
+    align-items:flex-start;
+  }
+
+  .logo{
+    font-size:17px;
+  }
+
+}
+
+@media(max-width:500px){
+
+  header{
+    padding:12px 10px;
+  }
+
+  .header-inner{
+    flex-direction:column;
+  }
+
+  .header-buttons{
+    width:100%;
+  }
+
+  .header-buttons a,
+  .header-buttons button{
+    flex:1;
+    text-align:center;
+  }
+
+  .tree-branches{
+    grid-template-columns:1fr;
+  }
+
+  .veda-grid{
+    grid-template-columns:1fr;
   }
 
   .flow{
     flex-direction:column;
   }
 
-  .flow-arrow{
+  .arrow{
     transform:rotate(90deg);
   }
 
-  .flow-item{
-    width:90%;
+  .hero{
+    padding:24px 15px;
   }
 
-  table{
-    font-size:14px;
+  .section{
+    border-radius:14px;
   }
 }
 </style>
@@ -486,1552 +727,954 @@ footer{
 <body>
 
 <header>
+  <div class="header-inner">
 
-<div class="logo">🇮🇳 UPSC Shiksha</div>
+    <div class="logo">🇮🇳 UPSC Shiksha</div>
 
-<div class="header-buttons">
+    <div class="header-buttons">
+      <a class="nav-btn" href="history.html">🏠 History</a>
+      <button class="theme-btn" onclick="toggleTheme()">🌙 Dark Mode</button>
+    </div>
 
-<button class="home-btn"
-onclick="location.href='ncert-history.html'">
-🏠 Home
-</button>
-
-<button class="theme-btn"
-onclick="toggleTheme()">
-🌙 Dark Mode
-</button>
-
-</div>
-
+  </div>
 </header>
 
+<main class="container">
 
 <section class="hero">
 
-<h1>📖 Chapter 4: What Books and Burials Tell Us</h1>
+  <span class="badge">CURRENT NCERT 2026–27</span>
 
-<p>Class 6 History | Premium NCERT Learning</p>
+  <h1>India's Cultural Roots</h1>
 
-<p>
-Explore ancient books, the Vedas, archaeological evidence,
-burials, megaliths and what these sources tell us about early societies.
-</p>
+  <p>
+    Class 6 History — UPSC Shiksha History Section Chapter 4
+  </p>
+
+  <div class="notice">
+    <strong>NCERT Mapping:</strong>
+    This is based on the current integrated Class 6 Social Science
+    book <strong>Exploring Society: India and Beyond</strong>.
+    Official NCERT Chapter 7 is presented here as
+    <strong>History Section Chapter 4</strong>.
+  </div>
 
 </section>
 
 
-<div class="container">
+<section class="section">
 
-
-<div class="progress-box">
-
-<strong>📈 Chapter Progress</strong>
-
-<div class="progress-bar">
-<div class="progress-fill" id="progressFill"></div>
-</div>
-
-<div class="progress-text" id="progressText">
-0% completed
-</div>
-
-</div>
-
-
-<div class="quick-nav">
-
-<strong>⚡ Quick Navigation</strong><br>
-
-<a href="#english">English</a>
-<a href="#visuals">Visual Learning</a>
-<a href="#hindi">Hindi</a>
-<a href="#audio">Audio</a>
-<a href="#upsc">UPSC Points</a>
-<a href="#mains">Mains</a>
-<a href="#tests">Tests</a>
-<a href="#flow">Chapter Flow</a>
-
-</div>
-
-
-<!-- ENGLISH -->
-
-<section class="section" id="english">
-
-<h2>🇬🇧 English Explanation</h2>
-
-
-<h3>1. Why do historians use different sources?</h3>
+<h2>📚 Chapter Overview</h2>
 
 <p>
-Historians try to understand the past by studying many different kinds
-of evidence. These include manuscripts, inscriptions, tools, pottery,
-buildings, bones, burials and other archaeological remains.
+India's cultural history is not the story of only one community,
+one language, one religious tradition or one period.
+It is a long process in which ideas, practices, knowledge systems,
+philosophies, stories, rituals, art forms and local traditions
+developed, interacted and continued across generations.
 </p>
 
 <p>
-No single source can usually tell us everything about an ancient society.
-Historians therefore compare different types of evidence.
+This chapter helps us understand some important roots of Indian
+cultural traditions, including the Vedic tradition, Upanishadic
+ideas, Buddhism, Jainism, other schools of thought and folk and
+tribal traditions.
 </p>
 
 <div class="highlight">
+<strong>Core Idea:</strong>
+Indian culture can be understood as a large tree.
+Different traditions are its branches, while many shared ideas,
+values, practices and historical experiences form interconnected
+roots and a common cultural landscape.
+</div>
 
-<strong>⭐ Key Idea:</strong>
+</section>
 
-Ancient history is reconstructed by combining literary evidence with
-archaeological evidence.
+
+<section class="section">
+
+<h2>🌳 1. Culture as a Living Tree</h2>
+
+<p>
+Imagine a large tree. It has roots, a trunk and many branches.
+The branches may look different, but they are connected to the
+same living system.
+</p>
+
+<p>
+Culture can similarly contain many traditions while still having
+connections between them.
+</p>
+
+<div class="tree">
+
+  <div class="tree-root">
+    INDIAN CULTURAL DEVELOPMENT
+  </div>
+
+  <div class="tree-line"></div>
+
+  <div class="tree-branches">
+
+    <div class="tree-card">
+      <strong>Vedic Traditions</strong>
+      Knowledge, rituals, hymns and oral learning
+    </div>
+
+    <div class="tree-card">
+      <strong>Philosophical Thought</strong>
+      Questions about self, reality, action and knowledge
+    </div>
+
+    <div class="tree-card">
+      <strong>Buddhist & Jain Traditions</strong>
+      Ethics, discipline, non-violence and spiritual paths
+    </div>
+
+    <div class="tree-card">
+      <strong>Folk & Tribal Traditions</strong>
+      Local knowledge, stories, customs and practices
+    </div>
+
+  </div>
 
 </div>
 
+<div class="analysis">
+<strong>Analysis:</strong>
+The tree analogy does not mean that all traditions are identical.
+It means that different traditions can exist within a wider
+historical and cultural environment while retaining their own
+features.
+</div>
 
-<h3>2. The Vedas</h3>
+</section>
+
+
+<section class="section">
+
+<h2>🕉️ 2. The Vedas</h2>
 
 <p>
-The Vedas are among the important ancient Sanskrit texts used by
-historians to understand aspects of early Indian society.
+The Vedas are among the oldest surviving bodies of sacred and
+intellectual literature associated with ancient India.
+They were preserved for a very long time through oral transmission.
 </p>
 
 <p>
-The four Vedas are traditionally known as the Rigveda, Samaveda,
-Yajurveda and Atharvaveda.
+The four commonly recognised Vedas are:
 </p>
+
+<div class="veda-grid">
+
+  <div class="veda">
+    <h4>Rigveda</h4>
+    <p>
+      Contains many hymns composed in praise of various deities
+      and natural forces.
+    </p>
+  </div>
+
+  <div class="veda">
+    <h4>Yajurveda</h4>
+    <p>
+      Contains formulas and material associated with ritual
+      performance.
+    </p>
+  </div>
+
+  <div class="veda">
+    <h4>Samaveda</h4>
+    <p>
+      Closely associated with musical chanting of Vedic verses.
+    </p>
+  </div>
+
+  <div class="veda">
+    <h4>Atharvaveda</h4>
+    <p>
+      Contains a broad collection of verses, prayers and
+      traditions connected with everyday life and ritual.
+    </p>
+  </div>
+
+</div>
 
 <div class="example">
-
-<strong>💡 Example:</strong>
-
-The Rigveda contains hymns composed in an early form of Sanskrit.
-It provides information about ideas, rituals, people, animals,
-geographical references and social life of its period.
-
-</div>
-
-
-<h3>3. How were the Vedas preserved?</h3>
-
-<p>
-For a long time, the Vedic texts were preserved through oral traditions.
-People memorised and recited the texts with great attention to sound
-and pronunciation.
-</p>
-
-<p>
-This oral transmission was important because writing was not the only
-method through which knowledge was preserved.
-</p>
-
-<div class="highlight">
-
-<strong>Remember:</strong>
-
-Oral tradition can itself be an important historical source,
-but historians must consider its context and limitations.
-
-</div>
-
-
-<h3>4. What does the Rigveda tell us?</h3>
-
-<p>
-The Rigveda contains hymns dedicated to various deities and refers to
-different aspects of life.
-</p>
-
-<p>
-It mentions cattle, horses, chariots, rivers, warriors, chiefs and
-different groups of people.
-</p>
-
-<p>
-Historians use such references carefully to reconstruct aspects of
-early society.
-</p>
-
-
-<h3>5. Social differences</h3>
-
-<p>
-Ancient texts sometimes provide clues about differences between people.
-References to different occupations, groups and forms of social
-organisation help historians investigate social structure.
-</p>
-
-<p>
-However, historians do not simply assume that every statement in a
-text describes the entire society exactly as it existed.
-</p>
-
-
-<h3>6. Archaeology and burials</h3>
-
-<p>
-Burials are another important source of information about ancient
-communities.
-Archaeologists study graves, burial objects, skeletal remains and the
-arrangement of burials.
-</p>
-
-<p>
-Objects placed inside graves can sometimes provide clues about beliefs,
-social differences, occupations or relationships with the deceased.
-</p>
-
-
-<h3>7. Why were objects buried with the dead?</h3>
-
-<p>
-In some ancient societies, objects were placed with the dead.
-These objects could include pottery, ornaments, tools or weapons.
-</p>
-
-<div class="warning">
-
-<strong>⚠️ Important:</strong>
-
-The presence of an object in a grave does not automatically tell us
-exactly why it was placed there. Archaeologists interpret such evidence
-by comparing many graves and other sources.
-
-</div>
-
-
-<h3>8. Megaliths</h3>
-
-<p>
-Megaliths are large stones that were used to mark burial sites or for
-other ceremonial purposes in several ancient communities.
-</p>
-
-<p>
-They are found in different parts of the Indian subcontinent and are
-particularly important in the study of Iron Age communities in several
-regions.
-</p>
-
-
-<h3>9. Iron tools and weapons</h3>
-
-<p>
-Iron objects such as tools and weapons have been found at several
-archaeological sites.
-</p>
-
-<p>
-Iron technology affected agriculture, crafts and warfare in different
-regions at different times.
-</p>
-
-
-<h3>10. What can burials tell us?</h3>
-
-<p>
-Burials can provide clues about social differences, material culture,
-beliefs and practices concerning death.
-</p>
-
-<p>
-If some graves contain more objects than others, historians may
-investigate whether this reflects differences in status or other
-factors.
-</p>
-
-<div class="highlight">
-
-<strong>🧠 Historical Method:</strong>
-
-A grave is evidence, not a complete story. Historians combine burial
-evidence with settlement remains, artefacts and texts.
-
-</div>
-
-
-<h3>11. Inscriptions and manuscripts</h3>
-
-<p>
-Manuscripts were written on materials such as palm leaves and birch
-bark in different regions.
-Inscriptions were engraved or written on durable surfaces such as
-stone and metal.
-</p>
-
-<p>
-Both sources can help historians understand language, administration,
-religious ideas and social life.
-</p>
-
-
-<h3>12. Limits of historical sources</h3>
-
-<p>
-Historical sources have limitations.
-A text may represent the ideas of particular groups rather than the
-whole population.
-Archaeological remains may also be incomplete.
-</p>
-
-<div class="upsc">
-
-<strong>UPSC Approach:</strong>
-
-Always ask:
-
-<ul>
-<li>Who produced the source?</li>
-<li>When was it produced?</li>
-<li>What information does it provide?</li>
-<li>What information might be missing?</li>
-<li>Can another source confirm or challenge it?</li>
-</ul>
-
+<strong>Example:</strong>
+A student today may read a printed book and later listen to its
+audio version. Ancient Vedic learning relied much more strongly
+on carefully trained oral transmission, where sound and sequence
+were important.
 </div>
 
 </section>
 
 
-<!-- VISUALS -->
+<section class="section">
 
-<section class="section" id="visuals">
+<h2>🎙️ 3. Oral Tradition and Vedic Chanting</h2>
 
-<h2>🎨 Visual Learning</h2>
+<p>
+One of the remarkable features of Vedic learning was the
+importance given to accurate oral transmission.
+</p>
 
-<div class="visual-grid">
-
-<div class="visual-card">
-<span class="visual-icon">📜</span>
-<strong>Texts</strong>
-<p>Manuscripts and ancient literature.</p>
-</div>
-
-<div class="visual-card">
-<span class="visual-icon">🪦</span>
-<strong>Burials</strong>
-<p>Graves and burial practices.</p>
-</div>
-
-<div class="visual-card">
-<span class="visual-icon">🪨</span>
-<strong>Megaliths</strong>
-<p>Large stones associated with burials.</p>
-</div>
-
-<div class="visual-card">
-<span class="visual-icon">⚔️</span>
-<strong>Artefacts</strong>
-<p>Tools, weapons and ornaments.</p>
-</div>
-
-</div>
-
-
-<h3>🔎 How historians reconstruct the past</h3>
+<p>
+Students learned verses by listening to teachers and repeatedly
+reciting them. Particular attention was paid to pronunciation,
+sequence and sound.
+</p>
 
 <div class="flow">
 
-<div class="flow-item">
-📜<br>
-Texts
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🪨<br>
-Archaeology
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🪦<br>
-Burials
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🔍<br>
-Comparison
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🧠<br>
-Historical Interpretation
-</div>
+  <div class="flow-box">Teacher</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Listening</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Repeated Recitation</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Memorisation</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Transmission</div>
 
 </div>
 
+<div class="analysis">
+<strong>Why is this historically important?</strong>
+Before modern printing, oral transmission was an important way
+of preserving knowledge. It shows that historical knowledge is
+not preserved only through books or inscriptions; people and
+communities can also act as carriers of tradition.
+</div>
 
-<h3>📊 Sources and Information</h3>
+</section>
+
+
+<section class="section">
+
+<h2>📖 4. From Ritual Questions to Philosophical Questions</h2>
+
+<p>
+Indian intellectual traditions did not remain limited to questions
+about rituals. Over time, thinkers also explored deeper questions
+about reality, the self, knowledge and the consequences of action.
+</p>
+
+<p>
+The Upanishadic tradition is especially important in this
+development of philosophical enquiry.
+</p>
+
+<h3>Important Ideas</h3>
+
+<ul>
+  <li><strong>Ātman:</strong> the self or inner self in many philosophical discussions.</li>
+  <li><strong>Brahman:</strong> a concept concerning ultimate reality in several Upanishadic traditions.</li>
+  <li><strong>Karma:</strong> the idea that actions have consequences.</li>
+  <li><strong>Rebirth:</strong> the idea that existence may involve repeated births in traditions that accept it.</li>
+</ul>
+
+<div class="analysis">
+<strong>Important distinction:</strong>
+These concepts developed within specific philosophical traditions.
+They should not be treated as if every Indian community at every
+point in history understood them in exactly the same way.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧠 5. Philosophy and the Search for Knowledge</h2>
+
+<p>
+Philosophical traditions often begin with questions rather than
+simple answers.
+</p>
+
+<div class="flow">
+
+  <div class="flow-box">Question</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Reflection</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Discussion</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Different Views</div>
+
+</div>
+
+<p>
+For example, thinkers could ask:
+</p>
+
+<ul>
+  <li>What is the nature of reality?</li>
+  <li>What is the self?</li>
+  <li>What makes an action good or harmful?</li>
+  <li>How can a person gain knowledge?</li>
+  <li>What causes suffering?</li>
+</ul>
+
+<div class="example">
+<strong>Modern analogy:</strong>
+Suppose ten students observe the same event but ask different
+questions about it. Their explanations may differ because they
+are focusing on different aspects. Historical philosophy can
+similarly contain multiple approaches to fundamental questions.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>☸️ 6. Buddhism</h2>
+
+<p>
+Buddhism developed around the teachings associated with
+Siddhartha Gautama, who came to be known as the Buddha,
+meaning an awakened or enlightened one.
+</p>
+
+<p>
+Buddhist teachings placed strong emphasis on understanding
+suffering, ethical conduct, mental discipline and the path
+towards liberation.
+</p>
+
+<h3>Important Themes</h3>
+
+<ul>
+  <li>Understanding suffering and its causes</li>
+  <li>Ethical behaviour</li>
+  <li>Mental discipline</li>
+  <li>Compassion</li>
+  <li>Non-violence and restraint</li>
+  <li>The importance of disciplined practice</li>
+</ul>
+
+<div class="highlight">
+<strong>Key Idea:</strong>
+Buddhist traditions encouraged people to examine their conduct
+and mental habits rather than simply depending on social status
+or external appearance.
+</div>
+
+<h3>🏛️ The Sangha</h3>
+
+<p>
+The Buddhist monastic community, known as the Sangha, became an
+important institution for preserving and spreading Buddhist
+teachings.
+</p>
+
+</section>
+
+
+<section class="section">
+
+<h2>🪷 7. Jainism</h2>
+
+<p>
+Jain traditions are associated particularly with the
+Tirthankaras, with Mahavira being recognised as the 24th
+Tirthankara in Jain tradition.
+</p>
+
+<p>
+Jain thought places especially strong emphasis on disciplined
+conduct and non-violence.
+</p>
+
+<h3>Major Concepts</h3>
+
+<ul>
+  <li><strong>Ahimsa:</strong> avoiding harm to living beings.</li>
+  <li><strong>Aparigraha:</strong> limiting attachment to possessions.</li>
+  <li><strong>Anekantavada:</strong> recognition of the complexity and multiple aspects of reality.</li>
+</ul>
+
+<div class="example">
+<strong>Example of Anekantavada:</strong>
+Imagine several people describing a large building from different
+sides. Each description may capture one aspect, while none alone
+necessarily describes every aspect.
+</div>
+
+<div class="analysis">
+<strong>UPSC-style understanding:</strong>
+Anekantavada is important because it illustrates a philosophical
+approach that recognises complexity and multiple viewpoints.
+It should not be reduced simply to “everyone is always correct.”
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧘 8. Yoga, Discipline and Dharma</h2>
+
+<p>
+Yoga developed through multiple traditions and over long periods.
+It includes ideas and practices concerned with discipline,
+meditation, control of the mind and physical and mental
+well-being.
+</p>
+
+<p>
+The term <strong>dharma</strong> has also had different meanings
+in different contexts. Depending on context, it can refer to
+duty, ethical conduct, moral order or a way of living.
+</p>
+
+<div class="warning">
+<strong>Exam Tip:</strong>
+Do not assume that a complex historical term always has only
+one English translation. Context matters.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>⚖️ 9. Different Schools of Thought</h2>
+
+<p>
+Ancient India contained a rich environment of intellectual
+debate. Different schools asked different questions and sometimes
+disagreed strongly with one another.
+</p>
+
+<div class="thought-grid">
+
+  <div class="thought">
+    <h3>Vedantic Traditions</h3>
+    <p>
+      Developed philosophical discussions around the Vedas and
+      especially the Upanishadic tradition.
+    </p>
+  </div>
+
+  <div class="thought">
+    <h3>Yoga Tradition</h3>
+    <p>
+      Associated with disciplined practice, concentration and
+      methods concerning the mind and self.
+    </p>
+  </div>
+
+  <div class="thought">
+    <h3>Buddhist Thought</h3>
+    <p>
+      Focused strongly on suffering, ethical conduct, mental
+      discipline and liberation.
+    </p>
+  </div>
+
+  <div class="thought">
+    <h3>Jain Thought</h3>
+    <p>
+      Strongly emphasised ahimsa, self-discipline, restraint and
+      multiple aspects of reality.
+    </p>
+  </div>
+
+  <div class="thought">
+    <h3>Charvaka / Lokayata</h3>
+    <p>
+      Represented a materialist and sceptical strand of Indian
+      intellectual history, traditionally associated with emphasis
+      on direct perception and rejection of some supernatural
+      claims.
+    </p>
+  </div>
+
+  <div class="thought">
+    <h3>Folk & Local Traditions</h3>
+    <p>
+      Communities preserved local stories, customs, ecological
+      knowledge, rituals, songs and practices.
+    </p>
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>📊 10. Comparison of Major Traditions</h2>
+
+<div class="table-wrap">
 
 <table>
 
 <tr>
-<th>Source</th>
-<th>What it can help us understand</th>
+  <th>Tradition</th>
+  <th>Important Focus</th>
+  <th>Key Theme</th>
 </tr>
 
 <tr>
-<td>Vedic texts</td>
-<td>Ideas, rituals, language and aspects of society</td>
+  <td>Vedic</td>
+  <td>Hymns, rituals, oral learning</td>
+  <td>Vedic knowledge and tradition</td>
 </tr>
 
 <tr>
-<td>Burials</td>
-<td>Funerary practices and material differences</td>
+  <td>Upanishadic</td>
+  <td>Philosophical enquiry</td>
+  <td>Self, reality and knowledge</td>
 </tr>
 
 <tr>
-<td>Megaliths</td>
-<td>Burial and ceremonial practices</td>
+  <td>Buddhist</td>
+  <td>Ethics and mental discipline</td>
+  <td>Suffering and liberation</td>
 </tr>
 
 <tr>
-<td>Tools</td>
-<td>Technology and occupations</td>
+  <td>Jain</td>
+  <td>Strict ethical discipline</td>
+  <td>Ahimsa and restraint</td>
 </tr>
 
 <tr>
-<td>Inscriptions</td>
-<td>Language, administration and public records</td>
+  <td>Charvaka</td>
+  <td>Materialist/sceptical reasoning</td>
+  <td>Direct perception</td>
 </tr>
 
 <tr>
-<td>Manuscripts</td>
-<td>Literary and intellectual traditions</td>
+  <td>Folk/Tribal</td>
+  <td>Local practices and knowledge</td>
+  <td>Community-based traditions</td>
 </tr>
 
 </table>
 
+</div>
+
 </section>
 
 
-<!-- HINDI -->
+<section class="section">
 
-<section class="section" id="hindi">
-
-<h2>🇮🇳 हिंदी में विस्तृत व्याख्या</h2>
-
-
-<h3>1. इतिहासकार अलग-अलग स्रोतों का उपयोग क्यों करते हैं?</h3>
+<h2>🧩 11. Folk and Tribal Traditions</h2>
 
 <p>
-इतिहासकार अतीत को समझने के लिए विभिन्न प्रकार के प्रमाणों का अध्ययन
-करते हैं। इनमें पांडुलिपियाँ, अभिलेख, औजार, मिट्टी के बर्तन, इमारतें,
-हड्डियाँ, कब्रें और अन्य पुरातात्विक अवशेष शामिल हैं।
+Indian cultural history cannot be understood only through major
+written philosophical traditions.
+Many communities preserved knowledge through oral stories,
+songs, dances, rituals, crafts, festivals and ecological
+practices.
 </p>
 
+<h3>Examples of Cultural Knowledge</h3>
+
+<ul>
+  <li>Local stories and legends</li>
+  <li>Traditional songs and dances</li>
+  <li>Knowledge of plants and animals</li>
+  <li>Seasonal festivals</li>
+  <li>Traditional crafts</li>
+  <li>Community rituals</li>
+  <li>Knowledge of local landscapes and resources</li>
+</ul>
+
+<div class="analysis">
+<strong>Historical Analysis:</strong>
+Written records are only one kind of historical evidence.
+Oral traditions and material culture can also help historians
+understand how communities lived and what they valued.
+However, oral traditions should also be examined critically,
+because stories can change when transmitted across generations.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🔄 12. Cultural Continuity and Change</h2>
+
 <p>
-किसी एक स्रोत से सामान्यतः पूरे प्राचीन समाज की जानकारी नहीं मिलती।
-इसलिए इतिहासकार अलग-अलग स्रोतों की तुलना करते हैं।
+Culture does not remain completely frozen.
+A tradition can continue while also changing with time.
+</p>
+
+<div class="flow">
+
+  <div class="flow-box">Old Idea</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Transmission</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">New Context</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Adaptation</div>
+  <div class="arrow">→</div>
+  <div class="flow-box">Continuity</div>
+
+</div>
+
+<div class="example">
+<strong>Simple example:</strong>
+A traditional story may remain known for centuries, but the way
+it is performed, illustrated, translated or taught can change.
+The existence of change does not automatically mean that the
+tradition has disappeared.
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🎬 Concept Animation: Ideas → Traditions → Continuity</h2>
+
+<div class="animation-box">
+
+  <h3 class="animation-title">
+    How Culture Travels Across Generations
+  </h3>
+
+  <div class="animated-flow">
+
+    <div class="anim-item" id="a1">IDEAS</div>
+
+    <div class="arrow">→</div>
+
+    <div class="anim-item" id="a2">TEACHING</div>
+
+    <div class="arrow">→</div>
+
+    <div class="anim-item" id="a3">PRACTICES</div>
+
+    <div class="arrow">→</div>
+
+    <div class="anim-item" id="a4">COMMUNITY</div>
+
+    <div class="arrow">→</div>
+
+    <div class="anim-item" id="a5">CONTINUITY</div>
+
+  </div>
+
+  <div class="animation-explanation" id="animationText">
+    Culture begins with ideas and knowledge that are transmitted
+    through people and communities.
+  </div>
+
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🧠 Deep Analysis: What Makes Indian Cultural History Important?</h2>
+
+<h3>1. Diversity</h3>
+
+<p>
+Different philosophical, religious, regional and community
+traditions existed together.
+</p>
+
+<h3>2. Debate</h3>
+
+<p>
+Indian intellectual history includes disagreement, discussion
+and alternative viewpoints.
+</p>
+
+<h3>3. Continuity</h3>
+
+<p>
+Many traditions survived through repeated transmission across
+generations.
+</p>
+
+<h3>4. Adaptation</h3>
+
+<p>
+Traditions could change when they entered new social, regional
+or historical contexts.
+</p>
+
+<h3>5. Local Knowledge</h3>
+
+<p>
+Cultural knowledge was not restricted to major texts.
+Communities also preserved practical knowledge about their
+environment, occupations and social life.
 </p>
 
 <div class="highlight">
-
-<strong>⭐ मुख्य बात:</strong>
-
-प्राचीन इतिहास को समझने के लिए साहित्यिक और पुरातात्विक दोनों प्रकार
-के प्रमाणों को साथ में देखना आवश्यक है।
-
-</div>
-
-
-<h3>2. वेद</h3>
-
-<p>
-वेद प्राचीन संस्कृत ग्रंथों का एक महत्वपूर्ण समूह हैं।
-इतिहासकार प्रारंभिक भारतीय समाज के विभिन्न पहलुओं को समझने के लिए
-इनका अध्ययन करते हैं।
-</p>
-
-<p>
-चार वेदों के नाम ऋग्वेद, सामवेद, यजुर्वेद और अथर्ववेद हैं।
-</p>
-
-
-<h3>3. वेदों का संरक्षण</h3>
-
-<p>
-लंबे समय तक वैदिक ग्रंथों को मौखिक परंपरा के माध्यम से सुरक्षित रखा
-गया।
-लोग इन्हें याद करके विशेष उच्चारण और लय के साथ सुनाते थे।
-</p>
-
-<div class="example">
-
-<strong>💡 उदाहरण:</strong>
-
-मौखिक परंपरा यह दिखाती है कि ज्ञान का संरक्षण केवल लिखित पुस्तकों
-के माध्यम से ही नहीं होता था।
-
-</div>
-
-
-<h3>4. ऋग्वेद से क्या जानकारी मिलती है?</h3>
-
-<p>
-ऋग्वेद में विभिन्न देवताओं की स्तुतियाँ और उस समय के जीवन से संबंधित
-कई संदर्भ मिलते हैं।
-</p>
-
-<p>
-इसमें गाय, घोड़े, रथ, नदियाँ, योद्धाओं और प्रमुख लोगों के संदर्भ
-मिलते हैं।
-</p>
-
-
-<h3>5. सामाजिक अंतर</h3>
-
-<p>
-प्राचीन ग्रंथों में विभिन्न समूहों और व्यवसायों के संदर्भ मिल सकते हैं।
-इनसे इतिहासकार सामाजिक संगठन और सामाजिक अंतर के बारे में अध्ययन करते
-हैं।
-</p>
-
-<p>
-लेकिन किसी ग्रंथ में लिखी प्रत्येक बात को पूरे समाज का बिल्कुल सटीक
-विवरण नहीं माना जा सकता।
-</p>
-
-
-<h3>6. पुरातत्व और कब्रें</h3>
-
-<p>
-कब्रें भी प्राचीन समाजों को समझने का महत्वपूर्ण स्रोत हैं।
-पुरातत्वविद कब्रों की संरचना, उनमें रखी वस्तुओं और मानव अवशेषों का
-अध्ययन करते हैं।
-</p>
-
-
-<h3>7. कब्रों में वस्तुएँ क्यों रखी जाती थीं?</h3>
-
-<p>
-कुछ प्राचीन समाजों में मृतकों के साथ मिट्टी के बर्तन, आभूषण,
-औजार या हथियार जैसी वस्तुएँ रखी जाती थीं।
-</p>
-
-<div class="warning">
-
-<strong>⚠️ सावधानी:</strong>
-
-कब्र में किसी वस्तु के मिलने से उसका उद्देश्य निश्चित रूप से पता नहीं
-चल जाता। इतिहासकार कई कब्रों और अन्य प्रमाणों की तुलना करके निष्कर्ष
-निकालते हैं।
-
-</div>
-
-
-<h3>8. मेगालिथ</h3>
-
-<p>
-मेगालिथ बड़े पत्थरों से बने ऐसे स्मारक या संरचनाएँ हैं जो कई क्षेत्रों
-में कब्रों को चिह्नित करने या अन्य अनुष्ठानों से जुड़े हुए थे।
-</p>
-
-<p>
-भारतीय उपमहाद्वीप के कई हिस्सों में इनके प्रमाण मिले हैं।
-</p>
-
-
-<h3>9. लोहे के औजार और हथियार</h3>
-
-<p>
-कई पुरातात्विक स्थलों से लोहे के औजार और हथियार मिले हैं।
-</p>
-
-<p>
-विभिन्न क्षेत्रों में लौह तकनीक ने कृषि, शिल्प और युद्ध के तरीकों को
-अलग-अलग प्रकार से प्रभावित किया।
-</p>
-
-
-<h3>10. कब्रों से क्या पता चलता है?</h3>
-
-<p>
-कब्रों से मृत्यु संबंधी परंपराओं, भौतिक संस्कृति और संभावित सामाजिक
-अंतर के बारे में जानकारी मिल सकती है।
-</p>
-
-<p>
-यदि कुछ कब्रों में अधिक वस्तुएँ और कुछ में कम वस्तुएँ मिलती हैं,
-तो इतिहासकार यह जाँच सकते हैं कि क्या इसका संबंध सामाजिक स्थिति या
-अन्य कारणों से था।
-</p>
-
-
-<h3>11. अभिलेख और पांडुलिपियाँ</h3>
-
-<p>
-पांडुलिपियाँ विभिन्न क्षेत्रों में ताड़ के पत्तों और भोजपत्र जैसी
-सामग्रियों पर लिखी जाती थीं।
-</p>
-
-<p>
-अभिलेख पत्थर और धातु जैसी टिकाऊ सतहों पर लिखे या उकेरे जाते थे।
-</p>
-
-<p>
-इनसे भाषा, प्रशासन, धार्मिक विचार और सामाजिक जीवन के बारे में
-जानकारी मिल सकती है।
-</p>
-
-
-<h3>12. ऐतिहासिक स्रोतों की सीमाएँ</h3>
-
-<p>
-हर ऐतिहासिक स्रोत की कुछ सीमाएँ होती हैं।
-कोई ग्रंथ किसी विशेष समूह के विचारों को अधिक महत्व दे सकता है।
-इसी तरह पुरातात्विक प्रमाण भी हमेशा पूर्ण नहीं होते।
-</p>
-
-<div class="upsc">
-
-<strong>🎯 UPSC तरीका:</strong>
-
-किसी भी स्रोत को पढ़ते समय पूछें:
-
-<ul>
-<li>इसे किसने बनाया?</li>
-<li>यह कब बनाया गया?</li>
-<li>इससे हमें क्या जानकारी मिलती है?</li>
-<li>इसमें कौन-सी जानकारी नहीं मिलती?</li>
-<li>क्या दूसरे स्रोत से इसकी पुष्टि होती है?</li>
-</ul>
-
+<strong>Big Picture:</strong>
+The history of Indian culture is better understood as a network
+of interacting traditions rather than as a single straight line.
 </div>
 
 </section>
 
 
-<!-- AUDIO -->
+<section class="section">
 
-<section class="section" id="audio">
-
-<h2>🔊 Audio Learning</h2>
-
-<div class="audio-box">
+<h2>📱 Real-Life Example: Smartphone Analogy</h2>
 
 <p>
-You can listen to the content in the selected language using the
-buttons below.
+Think about a smartphone operating system.
+The basic platform may remain recognisable, but different users
+install different apps, change settings and use it for different
+purposes.
 </p>
 
-<button onclick="speakEnglish()">
-▶️ English Audio
-</button>
+<p>
+Similarly, a broad cultural environment can contain many
+different practices and interpretations.
+</p>
 
-<button onclick="speakHindi()">
-▶️ Hindi Audio
-</button>
-
-<button onclick="stopSpeech()">
-⏹️ Stop
-</button>
-
+<div class="analysis">
+<strong>But remember:</strong>
+Culture is much more complex than software. This analogy is only
+a learning tool to understand the relationship between continuity
+and diversity.
 </div>
 
 </section>
 
 
-<!-- UPSC -->
+<section class="section">
 
-<section class="section" id="upsc">
+<h2>🇮🇳 Hindi Explanation</h2>
+
+<h3>भारत की सांस्कृतिक जड़ें</h3>
+
+<p>
+भारत की संस्कृति किसी एक परंपरा या एक समय की देन नहीं है।
+यह अनेक विचारों, ज्ञान-परंपराओं, दर्शन, भाषाओं, लोक परंपराओं,
+रीति-रिवाजों और समुदायों के लंबे ऐतिहासिक विकास से बनी है।
+</p>
+
+<h3>वेद</h3>
+
+<p>
+चार प्रमुख वेद माने जाते हैं — ऋग्वेद, यजुर्वेद, सामवेद और
+अथर्ववेद। वैदिक ज्ञान के संरक्षण में मौखिक परंपरा की महत्वपूर्ण
+भूमिका रही।
+</p>
+
+<h3>उपनिषद और दर्शन</h3>
+
+<p>
+उपनिषदों से जुड़े विचारों में आत्मा, ब्रह्म, कर्म और पुनर्जन्म
+जैसे विषयों पर दार्शनिक चिंतन मिलता है। इन विषयों को अलग-अलग
+परंपराओं और संदर्भों में अलग प्रकार से समझा गया।
+</p>
+
+<h3>बौद्ध परंपरा</h3>
+
+<p>
+गौतम बुद्ध से जुड़ी बौद्ध परंपरा ने दुःख, उसके कारण, नैतिक
+आचरण, मानसिक अनुशासन और मुक्ति जैसे विषयों पर जोर दिया।
+बौद्ध संघ ने परंपरा के संरक्षण और प्रसार में भूमिका निभाई।
+</p>
+
+<h3>जैन परंपरा</h3>
+
+<p>
+जैन परंपरा में महावीर को 24वें तीर्थंकर के रूप में माना जाता है।
+अहिंसा, अपरिग्रह और अनेकांतवाद इसके महत्वपूर्ण विचारों में
+शामिल हैं।
+</p>
+
+<h3>विचारों की विविधता</h3>
+
+<p>
+भारतीय बौद्धिक परंपरा में केवल एक प्रकार के विचार नहीं थे।
+चार्वाक जैसी भौतिकवादी परंपराएँ भी भारतीय बौद्धिक इतिहास का
+हिस्सा रही हैं।
+</p>
+
+<h3>लोक और जनजातीय परंपराएँ</h3>
+
+<p>
+कई समुदायों ने लोककथाओं, गीतों, नृत्यों, त्योहारों, हस्तशिल्प,
+पर्यावरणीय ज्ञान और स्थानीय रीति-रिवाजों के माध्यम से संस्कृति
+को आगे बढ़ाया।
+</p>
+
+<div class="highlight">
+<strong>याद रखें:</strong>
+भारतीय संस्कृति में विविधता और निरंतरता दोनों साथ दिखाई देती हैं।
+परंपराएँ समय के साथ बदल सकती हैं और फिर भी उनके कुछ तत्व
+आगे की पीढ़ियों तक पहुँच सकते हैं।
+</div>
+
+</section>
+
+
+<section class="section">
+
+<h2>🎧 Audio Learning</h2>
+
+<p>
+नीचे दिए गए buttons से इस chapter के English या Hindi explanation
+को सुन सकते हैं।
+</p>
+
+<div class="audio-buttons">
+  <button onclick="speakEnglish()">🔊 Listen English</button>
+  <button onclick="speakHindi()">🔊 सुनें Hindi</button>
+  <button onclick="stopSpeech()">⏹ Stop</button>
+</div>
+
+</section>
+
+
+<section class="section">
 
 <h2>🎯 UPSC Important Points</h2>
 
 <div class="upsc">
 
-<ol>
+<ul>
 
-<li>Historians use both literary and archaeological sources.</li>
+<li>Current Class 6 Social Science book is integrated and includes History, Geography, Polity and Economy-related themes.</li>
 
-<li>The Vedas are important ancient Sanskrit texts.</li>
+<li>India's Cultural Roots is Chapter 7 of the current integrated book and is presented here as History Section Chapter 4.</li>
 
-<li>The four Vedas are Rigveda, Samaveda, Yajurveda and Atharvaveda.</li>
+<li>The four Vedas are Rigveda, Yajurveda, Samaveda and Atharvaveda.</li>
 
-<li>The Rigveda contains hymns and references to aspects of early society.</li>
+<li>Oral transmission played an important role in preserving Vedic knowledge.</li>
 
-<li>Vedic traditions were preserved through oral transmission.</li>
+<li>Upanishadic traditions include philosophical enquiry concerning self, reality, action and knowledge.</li>
 
-<li>Burials provide archaeological evidence about ancient communities.</li>
+<li>Buddhism is associated with the teachings of Siddhartha Gautama, the Buddha.</li>
 
-<li>Objects found in graves may provide clues about social practices.</li>
+<li>The Buddhist Sangha became an important institution for Buddhist monastic life.</li>
 
-<li>Megaliths are large stone structures associated with burial or ceremonial practices in several regions.</li>
+<li>Mahavira is recognised in Jain tradition as the 24th Tirthankara.</li>
 
-<li>Iron tools and weapons provide evidence of technological change.</li>
+<li>Ahimsa is a central ethical principle in Jain traditions.</li>
 
-<li>Manuscripts and inscriptions are important historical sources.</li>
+<li>Anekantavada is associated with the idea that reality can have multiple aspects or viewpoints.</li>
 
-<li>No single source gives a complete picture of an ancient society.</li>
+<li>Charvaka/Lokayata represents an important materialist/sceptical strand in Indian intellectual history.</li>
 
-<li>Historians compare multiple sources before drawing conclusions.</li>
+<li>Folk and tribal traditions preserve local knowledge, stories, customs, art and ecological practices.</li>
 
-</ol>
+<li>Cultural continuity does not mean complete absence of change.</li>
 
-</div>
+<li>Indian cultural history should be studied through diversity, debate, continuity and adaptation.</li>
 
-
-<h3>🧠 Quick Revision</h3>
-
-<div class="highlight">
-
-<strong>Texts + Burials + Artefacts + Inscriptions</strong>
-
-<p>
-Together, these sources help historians reconstruct different aspects
-of ancient societies.
-</p>
+</ul>
 
 </div>
 
 </section>
 
 
-<!-- MAINS -->
-
-<section class="section" id="mains">
+<section class="section">
 
 <h2>✍️ Mains Practice</h2>
 
 <div class="mains">
 
-<strong>Q1.</strong>
-Explain the importance of literary and archaeological sources in
-reconstructing ancient Indian history.
-</div>
+<ol>
 
-<div class="mains">
+<li>
+Explain why oral traditions are important for understanding
+ancient Indian cultural history.
+</li>
 
-<strong>Q2.</strong>
-Discuss what burial practices can reveal about ancient societies.
-</div>
+<li>
+Discuss the importance of philosophical debate in the development
+of Indian intellectual traditions.
+</li>
 
-<div class="mains">
+<li>
+Explain the major ethical ideas associated with Buddhism and
+Jainism.
+</li>
 
-<strong>Q3.</strong>
-What are megaliths? Explain their importance as archaeological evidence.
-</div>
+<li>
+How do folk and tribal traditions contribute to the understanding
+of Indian cultural history?
+</li>
 
-<div class="mains">
+<li>
+“Cultural continuity does not mean that culture never changes.”
+Explain with suitable examples.
+</li>
 
-<strong>Q4.</strong>
-Why should historians compare multiple sources while reconstructing
-the history of ancient societies?
+</ol>
+
 </div>
 
 </section>
 
 
-<!-- TESTS -->
+<section class="section">
 
-<section class="section" id="tests">
+<h2>⚡ Quick Revision</h2>
 
-<h2>📝 Chapter Tests</h2>
+<div class="revision">
 
-<p class="highlight">
-
-<strong>20 Questions:</strong>
-4 Tests × 5 Questions.
-
-Select an option and press <strong>Check Answer</strong>.
-The solution will appear only after checking.
-
-</p>
-
-
-<!-- TEST 1 -->
-
-<div class="test">
-
-<h3>📝 Test 1 — Sources of History</h3>
-
-
-<div class="question">
-
-<p>
-<strong>1. Which of the following is a literary source?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q1" value="A">
-A. Manuscript
-</label>
-
-<label><input type="radio" name="q1" value="B">
-B. Stone tool
-</label>
-
-<label><input type="radio" name="q1" value="C">
-C. Burial
-</label>
-
-<label><input type="radio" name="q1" value="D">
-D. Pottery fragment
-</label>
-
+<div>
+<strong>Vedas</strong>
+<br>
+Rigveda, Yajurveda, Samaveda, Atharvaveda
 </div>
 
-<button class="check-btn"
-onclick="checkAnswer(1,'A',
-'A manuscript is a written literary source.',
-'पांडुलिपि एक लिखित साहित्यिक स्रोत है।')">
-Check Answer
-</button>
-
-<div class="result" id="r1"></div>
-
+<div>
+<strong>Oral Tradition</strong>
+<br>
+Learning and transmission through memorisation and recitation
 </div>
 
-
-<div class="question">
-
-<p>
-<strong>2. Which are the four Vedas?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q2" value="A">
-A. Rigveda, Samaveda, Yajurveda and Atharvaveda
-</label>
-
-<label><input type="radio" name="q2" value="B">
-B. Ramayana, Mahabharata, Puranas and Vedas
-</label>
-
-<label><input type="radio" name="q2" value="C">
-C. Arthashastra, Vedas, Tripitaka and Sangam
-</label>
-
-<label><input type="radio" name="q2" value="D">
-D. None of these
-</label>
-
+<div>
+<strong>Upanishadic Thought</strong>
+<br>
+Self, reality, action, knowledge
 </div>
 
-<button class="check-btn"
-onclick="checkAnswer(2,'A',
-'The four Vedas are Rigveda, Samaveda, Yajurveda and Atharvaveda.',
-'चार वेद ऋग्वेद, सामवेद, यजुर्वेद और अथर्ववेद हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r2"></div>
-
+<div>
+<strong>Buddhism</strong>
+<br>
+Buddha, ethics, mental discipline, liberation
 </div>
 
-
-<div class="question">
-
-<p>
-<strong>3. How were Vedic texts traditionally preserved for a long time?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q3" value="A">
-A. Oral transmission
-</label>
-
-<label><input type="radio" name="q3" value="B">
-B. Printing presses
-</label>
-
-<label><input type="radio" name="q3" value="C">
-C. Digital storage
-</label>
-
-<label><input type="radio" name="q3" value="D">
-D. Newspapers
-</label>
-
+<div>
+<strong>Jainism</strong>
+<br>
+Mahavira, ahimsa, aparigraha, anekantavada
 </div>
 
-<button class="check-btn"
-onclick="checkAnswer(3,'A',
-'Vedic traditions were preserved through careful oral recitation and memorisation.',
-'वैदिक परंपराएँ लंबे समय तक सावधानीपूर्वक मौखिक पाठ और स्मरण के माध्यम से संरक्षित रहीं।')">
-Check Answer
-</button>
-
-<div class="result" id="r3"></div>
-
+<div>
+<strong>Charvaka</strong>
+<br>
+Materialist and sceptical intellectual tradition
 </div>
 
-
-<div class="question">
-
-<p>
-<strong>4. Why do historians compare different sources?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q4" value="A">
-A. To build a more complete understanding
-</label>
-
-<label><input type="radio" name="q4" value="B">
-B. Because every source is identical
-</label>
-
-<label><input type="radio" name="q4" value="C">
-C. To avoid evidence
-</label>
-
-<label><input type="radio" name="q4" value="D">
-D. Because archaeology is useless
-</label>
-
+<div>
+<strong>Folk Traditions</strong>
+<br>
+Local stories, customs, songs, crafts and knowledge
 </div>
 
-<button class="check-btn"
-onclick="checkAnswer(4,'A',
-'Comparing sources helps historians identify different perspectives and limitations.',
-'विभिन्न स्रोतों की तुलना करने से इतिहासकार अलग-अलग दृष्टिकोण और सीमाओं को समझ सकते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r4"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>5. Which source is directly associated with burial archaeology?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q5" value="A">
-A. Graves
-</label>
-
-<label><input type="radio" name="q5" value="B">
-B. Newspapers
-</label>
-
-<label><input type="radio" name="q5" value="C">
-C. Modern websites
-</label>
-
-<label><input type="radio" name="q5" value="D">
-D. Television
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(5,'A',
-'Graves are important archaeological evidence for studying burial practices.',
-'कब्रें दफनाने की प्रथाओं के अध्ययन का महत्वपूर्ण पुरातात्विक प्रमाण हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r5"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 2 -->
-
-<div class="test">
-
-<h3>📝 Test 2 — Burials & Megaliths</h3>
-
-
-<div class="question">
-
-<p>
-<strong>6. What are megaliths?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q6" value="A">
-A. Large stone structures associated with burials or ceremonies in several regions
-</label>
-
-<label><input type="radio" name="q6" value="B">
-B. Modern railway stations
-</label>
-
-<label><input type="radio" name="q6" value="C">
-C. Written manuscripts
-</label>
-
-<label><input type="radio" name="q6" value="D">
-D. Coins
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(6,'A',
-'Megaliths are large stone structures found in several ancient contexts, including burials.',
-'मेगालिथ बड़े पत्थरों से बनी संरचनाएँ हैं जो कई क्षेत्रों में कब्रों और अनुष्ठानों से जुड़ी थीं।')">
-Check Answer
-</button>
-
-<div class="result" id="r6"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>7. What can objects in graves potentially indicate?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q7" value="A">
-A. Aspects of burial practices and social differences
-</label>
-
-<label><input type="radio" name="q7" value="B">
-B. Exact modern population
-</label>
-
-<label><input type="radio" name="q7" value="C">
-C. Modern elections
-</label>
-
-<label><input type="radio" name="q7" value="D">
-D. Modern technology
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(7,'A',
-'Burial objects can provide clues about practices, beliefs and possible social differences.',
-'कब्रों में मिली वस्तुएँ परंपराओं, विश्वासों और संभावित सामाजिक अंतर के बारे में संकेत दे सकती हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r7"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>8. Why must burial evidence be interpreted carefully?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q8" value="A">
-A. One object does not automatically reveal its exact meaning
-</label>
-
-<label><input type="radio" name="q8" value="B">
-B. Burials contain no evidence
-</label>
-
-<label><input type="radio" name="q8" value="C">
-C. Archaeology cannot study graves
-</label>
-
-<label><input type="radio" name="q8" value="D">
-D. All graves are identical
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(8,'A',
-'Objects must be interpreted in context and compared with other evidence.',
-'वस्तुओं का अर्थ उनके संदर्भ में और अन्य प्रमाणों की तुलना करके समझना चाहिए।')">
-Check Answer
-</button>
-
-<div class="result" id="r8"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>9. Iron objects found at archaeological sites can provide evidence about:</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q9" value="A">
-A. Technology and occupations
-</label>
-
-<label><input type="radio" name="q9" value="B">
-B. Modern internet use
-</label>
-
-<label><input type="radio" name="q9" value="C">
-C. Modern aviation
-</label>
-
-<label><input type="radio" name="q9" value="D">
-D. Digital communication
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(9,'A',
-'Iron tools and weapons provide evidence about technology and activities in ancient societies.',
-'लोहे के औजार और हथियार प्राचीन समाजों की तकनीक और गतिविधियों के बारे में प्रमाण देते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r9"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>10. Which is an archaeological source?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q10" value="A">
-A. Burial remains
-</label>
-
-<label><input type="radio" name="q10" value="B">
-B. Modern newspaper
-</label>
-
-<label><input type="radio" name="q10" value="C">
-C. Television news
-</label>
-
-<label><input type="radio" name="q10" value="D">
-D. Social media post
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(10,'A',
-'Burial remains are archaeological evidence.',
-'कब्रों के अवशेष पुरातात्विक प्रमाण होते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r10"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 3 -->
-
-<div class="test">
-
-<h3>📝 Test 3 — Texts & Historical Method</h3>
-
-
-<div class="question">
-
-<p>
-<strong>11. Which text is associated with early Sanskrit hymns?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q11" value="A">
-A. Rigveda
-</label>
-
-<label><input type="radio" name="q11" value="B">
-B. Arthashastra
-</label>
-
-<label><input type="radio" name="q11" value="C">
-C. Ain-i-Akbari
-</label>
-
-<label><input type="radio" name="q11" value="D">
-D. Rajatarangini
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(11,'A',
-'The Rigveda contains hymns composed in an early form of Sanskrit.',
-'ऋग्वेद में प्रारंभिक संस्कृत रूप में रचित स्तुतियाँ मिलती हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r11"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>12. What is an inscription?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q12" value="A">
-A. Writing engraved or recorded on a durable surface
-</label>
-
-<label><input type="radio" name="q12" value="B">
-B. A modern website
-</label>
-
-<label><input type="radio" name="q12" value="C">
-C. A television programme
-</label>
-
-<label><input type="radio" name="q12" value="D">
-D. A digital photograph
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(12,'A',
-'Inscriptions are writings recorded on durable surfaces such as stone or metal.',
-'अभिलेख पत्थर या धातु जैसी टिकाऊ सतहों पर लिखे या उकेरे गए लेख होते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r12"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>13. What is one limitation of a historical text?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q13" value="A">
-A. It may represent the perspective of particular groups
-</label>
-
-<label><input type="radio" name="q13" value="B">
-B. It always contains every fact
-</label>
-
-<label><input type="radio" name="q13" value="C">
-C. It can never be studied
-</label>
-
-<label><input type="radio" name="q13" value="D">
-D. It has no historical value
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(13,'A',
-'A text may reflect the views or concerns of particular groups rather than the entire population.',
-'कोई ग्रंथ किसी विशेष समूह के विचारों को अधिक दर्शा सकता है, पूरे समाज को नहीं।')">
-Check Answer
-</button>
-
-<div class="result" id="r13"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>14. Which question is useful when analysing a historical source?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q14" value="A">
-A. Who produced it?
-</label>
-
-<label><input type="radio" name="q14" value="B">
-C. Can we ignore its context?
-</label>
-
-<label><input type="radio" name="q14" value="C">
-C. Is every source perfect?
-</label>
-
-<label><input type="radio" name="q14" value="D">
-D. Should evidence be avoided?
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(14,'A',
-'Asking who produced a source helps historians understand its context and perspective.',
-'स्रोत किसने बनाया, यह पूछने से उसके संदर्भ और दृष्टिकोण को समझने में मदद मिलती है।')">
-Check Answer
-</button>
-
-<div class="result" id="r14"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>15. Why is archaeological evidence important?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q15" value="A">
-A. It provides material evidence about past societies
-</label>
-
-<label><input type="radio" name="q15" value="B">
-B. It only studies the present
-</label>
-
-<label><input type="radio" name="q15" value="C">
-C. It is always complete
-</label>
-
-<label><input type="radio" name="q15" value="D">
-D. It replaces every other source
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(15,'A',
-'Archaeology provides material evidence that helps reconstruct past societies.',
-'पुरातत्व भौतिक प्रमाण देता है, जिससे प्राचीन समाजों को समझने में मदद मिलती है।')">
-Check Answer
-</button>
-
-<div class="result" id="r15"></div>
-
-</div>
-
-</div>
-
-
-<!-- TEST 4 -->
-
-<div class="test">
-
-<h3>📝 Test 4 — UPSC Revision</h3>
-
-
-<div class="question">
-
-<p>
-<strong>16. Which pair is correctly matched?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q16" value="A">
-A. Rigveda — Ancient Sanskrit hymns
-</label>
-
-<label><input type="radio" name="q16" value="B">
-B. Megalith — Modern computer
-</label>
-
-<label><input type="radio" name="q16" value="C">
-C. Manuscript — Railway track
-</label>
-
-<label><input type="radio" name="q16" value="D">
-D. Burial — Digital archive
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(16,'A',
-'The Rigveda contains ancient Sanskrit hymns.',
-'ऋग्वेद में प्राचीन संस्कृत स्तुतियाँ मिलती हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r16"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>17. What can a comparison of several graves help historians investigate?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q17" value="A">
-A. Patterns in burial practices and possible social differences
-</label>
-
-<label><input type="radio" name="q17" value="B">
-B. Modern election results
-</label>
-
-<label><input type="radio" name="q17" value="C">
-C. Internet speed
-</label>
-
-<label><input type="radio" name="q17" value="D">
-D. Modern weather
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(17,'A',
-'Comparing graves can reveal patterns in burial practices and possible differences between groups.',
-'कई कब्रों की तुलना से दफनाने की प्रथाओं और संभावित सामाजिक अंतर के पैटर्न समझे जा सकते हैं।')">
-Check Answer
-</button>
-
-<div class="result" id="r17"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>18. Which approach is most useful for studying ancient history?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q18" value="A">
-A. Compare different types of evidence
-</label>
-
-<label><input type="radio" name="q18" value="B">
-B. Use only one source
-</label>
-
-<label><input type="radio" name="q18" value="C">
-C. Ignore archaeology
-</label>
-
-<label><input type="radio" name="q18" value="D">
-D. Ignore texts
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(18,'A',
-'Comparing multiple sources provides a broader and more critical understanding.',
-'कई स्रोतों की तुलना करने से अधिक व्यापक और आलोचनात्मक समझ विकसित होती है।')">
-Check Answer
-</button>
-
-<div class="result" id="r18"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>19. Which is an example of material evidence?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q19" value="A">
-A. Tool
-</label>
-
-<label><input type="radio" name="q19" value="B">
-B. Modern social media post
-</label>
-
-<label><input type="radio" name="q19" value="C">
-C. Television advertisement
-</label>
-
-<label><input type="radio" name="q19" value="D">
-D. Modern email
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(19,'A',
-'A tool is a material archaeological object.',
-'औजार एक भौतिक पुरातात्विक वस्तु है।')">
-Check Answer
-</button>
-
-<div class="result" id="r19"></div>
-
-</div>
-
-
-<div class="question">
-
-<p>
-<strong>20. Which statement best describes historical evidence?</strong>
-</p>
-
-<div class="options">
-
-<label><input type="radio" name="q20" value="A">
-A. It should be examined critically and in context
-</label>
-
-<label><input type="radio" name="q20" value="B">
-B. It is always complete
-</label>
-
-<label><input type="radio" name="q20" value="C">
-C. It never has limitations
-</label>
-
-<label><input type="radio" name="q20" value="D">
-D. Only written evidence matters
-</label>
-
-</div>
-
-<button class="check-btn"
-onclick="checkAnswer(20,'A',
-'Historical evidence needs to be examined critically, considering its context, creator and limitations.',
-'ऐतिहासिक प्रमाणों को उनके संदर्भ, निर्माता और सीमाओं को ध्यान में रखते हुए आलोचनात्मक रूप से देखना चाहिए।')">
-Check Answer
-</button>
-
-<div class="result" id="r20"></div>
-
+<div>
+<strong>Cultural Continuity</strong>
+<br>
+Transmission + adaptation + preservation
 </div>
 
 </div>
@@ -2039,80 +1682,61 @@ Check Answer
 </section>
 
 
-<!-- FINAL FLOW -->
+<section class="section quiz-section">
 
-<section class="section" id="flow">
+<h2>📝 Test Series — 4 Tests × 5 Questions</h2>
 
-<h2>🔄 Chapter 4 — Complete Conceptual Flow</h2>
+<p>
+Total: <strong>20 MCQs</strong>. Answer select karke
+<strong>Check Answer</strong> dabayein. Explanation uske baad
+show hoga.
+</p>
 
-<div class="flow">
-
-<div class="flow-item">
-📜<br>
-Texts
+<div class="progress-container">
+  <div class="progress-bar" id="progressBar"></div>
 </div>
 
-<div class="flow-arrow">➡️</div>
+<p id="progressText">Progress: 0 / 20</p>
 
-<div class="flow-item">
-🪨<br>
-Archaeology
-</div>
 
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🪦<br>
-Burials
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🔍<br>
-Compare Evidence
-</div>
-
-<div class="flow-arrow">➡️</div>
-
-<div class="flow-item">
-🧠<br>
-Understand Society
-</div>
-
-</div>
-
-<div class="highlight">
-
-<strong>🧠 One-Line Revision:</strong>
-
-Texts and archaeological remains such as burials, tools and inscriptions
-provide different clues that historians compare to reconstruct the past.
-
-</div>
+<div id="quiz"></div>
 
 </section>
 
 
-<button class="complete-btn"
-onclick="completeChapter()">
-✅ Mark Chapter Complete
+<section class="section">
+
+<h2>🏆 Chapter Completion</h2>
+
+<p>
+20 questions attempt karne ke baad chapter ko complete mark kar
+sakte hain.
+</p>
+
+<button class="complete-btn" onclick="completeChapter()">
+  ✅ Mark Chapter Complete
 </button>
 
+<span id="completedMessage"></span>
 
-</div>
+</section>
+
+</main>
+
+
+<a href="#" class="back-top">↑</a>
 
 
 <footer>
 
-<p>🇮🇳 <strong>UPSC Shiksha</strong></p>
+<p><strong>🇮🇳 UPSC Shiksha</strong></p>
 
 <p>
-Premium NCERT Learning • English + Hindi • UPSC Focus
+Current NCERT 2026–27 • Class 6 History • Chapter 4
 </p>
 
 <p>
-© 2026 UPSC Shiksha
+Original educational explanation for UPSC-oriented learning.
 </p>
 
 </footer>
@@ -2120,225 +1744,584 @@ Premium NCERT Learning • English + Hindi • UPSC Focus
 
 <script>
 
-let checked = JSON.parse(
-localStorage.getItem("ch4_checked") || "[]"
-);
-
-
-function updateProgress(){
-
-const total = 20;
-const done = checked.length;
-
-const percent =
-Math.round((done / total) * 100);
-
-document.getElementById("progressFill").style.width =
-percent + "%";
-
-document.getElementById("progressText").textContent =
-percent + "% completed (" +
-done + "/" +
-total +
-" questions checked)";
-
-}
-
-
-function checkAnswer(
-number,
-correct,
-explanation,
-hindiExplanation
-){
-
-const selected =
-document.querySelector(
-'input[name="q' + number + '"]:checked'
-);
-
-const result =
-document.getElementById("r" + number);
-
-
-if(!selected){
-
-result.style.display = "block";
-result.className = "result incorrect";
-
-result.innerHTML =
-"⚠️ Please select an option first.";
-
-return;
-
-}
-
-
-const answer = selected.value;
-
-
-if(!checked.includes(number)){
-
-checked.push(number);
-
-localStorage.setItem(
-"ch4_checked",
-JSON.stringify(checked)
-);
-
-}
-
-
-result.style.display = "block";
-
-
-if(answer === correct){
-
-result.className = "result correct";
-
-result.innerHTML =
-"<strong>✅ Correct!</strong><br><br>" +
-
-"<strong>Explanation:</strong> " +
-explanation +
-
-"<br><br>" +
-
-"<strong>हिंदी व्याख्या:</strong> " +
-hindiExplanation;
-
-}else{
-
-result.className = "result incorrect";
-
-result.innerHTML =
-"<strong>❌ Incorrect.</strong><br><br>" +
-
-"<strong>Correct Answer:</strong> " +
-correct +
-
-"<br><br>" +
-
-"<strong>Explanation:</strong> " +
-explanation +
-
-"<br><br>" +
-
-"<strong>हिंदी व्याख्या:</strong> " +
-hindiExplanation;
-
-}
-
-
-updateProgress();
-
-}
-
+/* =========================
+   DARK MODE
+========================= */
 
 function toggleTheme(){
 
-document.body.classList.toggle("dark");
+  document.body.classList.toggle("dark");
 
-const dark =
-document.body.classList.contains("dark");
+  localStorage.setItem(
+    "class6history4theme",
+    document.body.classList.contains("dark") ? "dark" : "light"
+  );
+}
 
-localStorage.setItem(
-"ch4_theme",
-dark ? "dark" : "light"
-);
+function restoreTheme(){
+
+  if(localStorage.getItem("class6history4theme")==="dark"){
+    document.body.classList.add("dark");
+  }
 
 }
 
 
-function loadTheme(){
+/* =========================
+   AUDIO
+========================= */
 
-const theme =
-localStorage.getItem("ch4_theme");
+function speakText(text,lang){
 
-if(theme === "dark"){
+  window.speechSynthesis.cancel();
 
-document.body.classList.add("dark");
+  const speech = new SpeechSynthesisUtterance(text);
 
+  speech.lang = lang;
+  speech.rate = 0.9;
+  speech.pitch = 1;
+
+  window.speechSynthesis.speak(speech);
 }
-
-}
-
-
-function speak(text,lang){
-
-window.speechSynthesis.cancel();
-
-const speech =
-new SpeechSynthesisUtterance(text);
-
-speech.lang = lang;
-speech.rate = .9;
-speech.pitch = 1;
-
-window.speechSynthesis.speak(speech);
-
-}
-
 
 function speakEnglish(){
 
-const text = `
-Chapter 4: What Books and Burials Tell Us.
-Historians use different sources to understand the past.
-The Vedas are important ancient Sanskrit texts.
-The Rigveda contains hymns and references to aspects of early society.
-Burials, megaliths, tools and other archaeological remains provide
-material evidence about ancient communities.
-Historians compare different sources because no single source provides
-a complete picture of the past.
-`;
+  const text = `
+  India's Cultural Roots.
+  Indian culture developed through many traditions, ideas,
+  philosophies and community practices.
+  The four Vedas are Rigveda, Yajurveda, Samaveda and Atharvaveda.
+  Oral transmission played an important role in preserving Vedic knowledge.
+  Upanishadic traditions explored questions about the self,
+  reality, action and knowledge.
+  Buddhism developed around the teachings of the Buddha and
+  emphasised ethical conduct, mental discipline and liberation.
+  Jain traditions, associated with Mahavira and the Tirthankaras,
+  strongly emphasised ahimsa, aparigraha and anekantavada.
+  Indian intellectual history also included materialist and
+  sceptical traditions such as Charvaka.
+  Folk and tribal communities preserved local stories, customs,
+  ecological knowledge, crafts and cultural practices.
+  Cultural continuity can exist together with change and adaptation.
+  `;
 
-speak(text,"en-IN");
-
+  speakText(text,"en-IN");
 }
-
 
 function speakHindi(){
 
-const text = `
-अध्याय चार: किताबें और कब्रें हमें क्या बताती हैं।
-इतिहासकार अतीत को समझने के लिए विभिन्न स्रोतों का उपयोग करते हैं।
-वेद प्राचीन संस्कृत ग्रंथों का महत्वपूर्ण समूह हैं।
-ऋग्वेद में प्रारंभिक समाज के विभिन्न पहलुओं से संबंधित संदर्भ मिलते हैं।
-कब्रें, मेगालिथ, औजार और अन्य पुरातात्विक अवशेष प्राचीन समाजों के
-बारे में भौतिक प्रमाण देते हैं।
-इतिहासकार कई स्रोतों की तुलना करते हैं क्योंकि कोई एक स्रोत अतीत की
-पूरी तस्वीर नहीं देता।
-`;
+  const text = `
+  भारत की सांस्कृतिक जड़ें।
+  भारत की संस्कृति अनेक परंपराओं, विचारों, दर्शन और समुदायों
+  के लंबे ऐतिहासिक विकास से बनी है।
+  चार प्रमुख वेद ऋग्वेद, यजुर्वेद, सामवेद और अथर्ववेद हैं।
+  वैदिक ज्ञान के संरक्षण में मौखिक परंपरा की महत्वपूर्ण भूमिका रही।
+  उपनिषदों से जुड़ी परंपराओं में आत्मा, ब्रह्म, कर्म और ज्ञान
+  जैसे विषयों पर दार्शनिक चिंतन मिलता है।
+  बौद्ध परंपरा बुद्ध के उपदेशों से जुड़ी है और नैतिक आचरण,
+  मानसिक अनुशासन और मुक्ति पर जोर देती है।
+  जैन परंपरा में अहिंसा, अपरिग्रह और अनेकांतवाद महत्वपूर्ण हैं।
+  चार्वाक जैसी भौतिकवादी और संशयवादी परंपराएँ भी भारतीय
+  बौद्धिक इतिहास का हिस्सा रही हैं।
+  लोक और जनजातीय समुदायों ने लोककथाओं, गीतों, त्योहारों,
+  हस्तशिल्प और स्थानीय ज्ञान को आगे बढ़ाया।
+  सांस्कृतिक निरंतरता के साथ परिवर्तन भी संभव है।
+  `;
 
-speak(text,"hi-IN");
-
+  speakText(text,"hi-IN");
 }
-
 
 function stopSpeech(){
+  window.speechSynthesis.cancel();
+}
 
-window.speechSynthesis.cancel();
+
+/* =========================
+   CULTURAL ANIMATION
+========================= */
+
+const animationMessages = [
+
+  "Ideas are created, questioned and developed.",
+  "Knowledge is transmitted through teachers, families and communities.",
+  "Ideas become practices, rituals, stories and social habits.",
+  "Communities preserve and adapt these practices.",
+  "Some traditions continue across generations while changing with time."
+
+];
+
+let animationStep = 0;
+
+function animateCulture(){
+
+  const items = [
+    document.getElementById("a1"),
+    document.getElementById("a2"),
+    document.getElementById("a3"),
+    document.getElementById("a4"),
+    document.getElementById("a5")
+  ];
+
+  items.forEach(item=>{
+    item.classList.remove("active");
+  });
+
+  items[animationStep].classList.add("active");
+
+  document.getElementById("animationText").textContent =
+    animationMessages[animationStep];
+
+  animationStep++;
+
+  if(animationStep >= items.length){
+    animationStep=0;
+  }
+}
+
+setInterval(animateCulture,1400);
+
+
+/* =========================
+   QUIZ DATA
+========================= */
+
+const questions = [
+
+{
+ q:"Which list correctly identifies the four Vedas?",
+ options:[
+  "Rigveda, Yajurveda, Samaveda and Atharvaveda",
+  "Rigveda, Ramayana, Samaveda and Arthashastra",
+  "Yajurveda, Upanishad, Tripitaka and Atharvaveda",
+  "Samaveda, Mahabharata, Rigveda and Puranas"
+ ],
+ answer:0,
+ explanation:"The four commonly recognised Vedas are Rigveda, Yajurveda, Samaveda and Atharvaveda."
+},
+
+{
+ q:"What was especially important in preserving Vedic knowledge for long periods?",
+ options:[
+  "Only stone inscriptions",
+  "Oral transmission and memorisation",
+  "Only printed books",
+  "Only foreign travellers"
+ ],
+ answer:1,
+ explanation:"Careful oral transmission, recitation and memorisation played an important role in preserving Vedic knowledge."
+},
+
+{
+ q:"Which topic is strongly associated with Upanishadic philosophical enquiry?",
+ options:[
+  "Modern industrialisation",
+  "Self and ultimate reality",
+  "Railway administration",
+  "Modern constitutional law"
+ ],
+ answer:1,
+ explanation:"Upanishadic traditions include philosophical enquiry concerning the self, reality, knowledge and related questions."
+},
+
+{
+ q:"Who is traditionally associated with the origin of Buddhism?",
+ options:[
+  "Mahavira",
+  "Siddhartha Gautama",
+  "Ashoka",
+  "Chanakya"
+ ],
+ answer:1,
+ explanation:"Buddhism developed around the teachings of Siddhartha Gautama, known as the Buddha."
+},
+
+{
+ q:"What was the Sangha in Buddhist tradition?",
+ options:[
+  "A Buddhist monastic community",
+  "A Vedic sacrifice",
+  "A Jain text",
+  "A type of coin"
+ ],
+ answer:0,
+ explanation:"The Sangha refers to the Buddhist monastic community and became important in preserving and spreading Buddhist teachings."
+},
+
+{
+ q:"Mahavira is recognised in Jain tradition as which Tirthankara?",
+ options:[
+  "The 12th",
+  "The 18th",
+  "The 24th",
+  "The 30th"
+ ],
+ answer:2,
+ explanation:"Mahavira is recognised in Jain tradition as the 24th Tirthankara."
+},
+
+{
+ q:"Which principle is especially central to Jain ethical thought?",
+ options:[
+  "Ahimsa",
+  "Imperial expansion",
+  "Industrialisation",
+  "Colonial administration"
+ ],
+ answer:0,
+ explanation:"Ahimsa, or non-violence/non-harming, is a central ethical principle in Jain traditions."
+},
+
+{
+ q:"Anekantavada is associated with which tradition?",
+ options:[
+  "Jain",
+  "Roman",
+  "Greek",
+  "Modern European"
+ ],
+ answer:0,
+ explanation:"Anekantavada is a concept associated with Jain philosophical thought."
+},
+
+{
+ q:"Which idea best describes aparigraha?",
+ options:[
+  "Limiting attachment to possessions",
+  "Expanding an empire",
+  "Building roads",
+  "Writing inscriptions"
+ ],
+ answer:0,
+ explanation:"Aparigraha refers to limiting attachment to possessions and excessive accumulation."
+},
+
+{
+ q:"Which tradition is associated with a materialist and sceptical strand of Indian thought?",
+ options:[
+  "Charvaka or Lokayata",
+  "Samaveda",
+  "Sangha",
+  "Jain Sangha"
+ ],
+ answer:0,
+ explanation:"Charvaka or Lokayata is traditionally associated with materialist and sceptical approaches in Indian intellectual history."
+},
+
+{
+ q:"Which statement best describes folk and tribal traditions?",
+ options:[
+  "They can preserve local stories, customs and knowledge",
+  "They exist only in written Sanskrit texts",
+  "They are always identical across India",
+  "They have no historical value"
+ ],
+ answer:0,
+ explanation:"Folk and tribal communities can preserve local stories, customs, ecological knowledge, crafts and other cultural practices."
+},
+
+{
+ q:"Why is oral tradition historically important?",
+ options:[
+  "It can transmit knowledge across generations",
+  "It always produces identical versions of every story",
+  "It replaces all archaeological evidence",
+  "It can only exist in modern cities"
+ ],
+ answer:0,
+ explanation:"Oral traditions can transmit knowledge, stories and practices across generations, although historians must examine them critically."
+},
+
+{
+ q:"Which sequence best represents cultural continuity?",
+ options:[
+  "Ideas → transmission → practices → adaptation → continuity",
+  "War → empire → railway → internet → continuity",
+  "Printing → factory → parliament → taxation → continuity",
+  "Coins → ships → roads → machines → continuity"
+ ],
+ answer:0,
+ explanation:"Cultural traditions can move from ideas to transmission and practice, followed by adaptation and continued transmission."
+},
+
+{
+ q:"Which statement about cultural continuity is most accurate?",
+ options:[
+  "Continuity means culture never changes",
+  "A tradition can continue while also changing",
+  "Only written traditions can continue",
+  "Only religious traditions can continue"
+ ],
+ answer:1,
+ explanation:"Traditions can remain recognisable while changing according to new social and historical contexts."
+},
+
+{
+ q:"Which is the best example of historical evidence from community traditions?",
+ options:[
+  "A local oral story passed through generations",
+  "A modern advertisement only",
+  "A random internet comment",
+  "A fictional video game character"
+ ],
+ answer:0,
+ explanation:"Oral traditions can provide historical clues, although they should be critically examined and compared with other evidence."
+},
+
+{
+ q:"Why should different philosophical traditions be studied separately?",
+ options:[
+  "Because every tradition had exactly the same ideas",
+  "Because they could have different questions and answers",
+  "Because only one tradition existed",
+  "Because philosophy had no debates"
+ ],
+ answer:1,
+ explanation:"Different schools could ask different questions and provide different explanations, making intellectual diversity an important historical feature."
+},
+
+{
+ q:"Which pair is correctly matched?",
+ options:[
+  "Buddhism — Buddha",
+  "Jainism — Samaveda",
+  "Charvaka — Sangha",
+  "Vedic tradition — Mahavira"
+ ],
+ answer:0,
+ explanation:"Buddhism is associated with the teachings of the Buddha."
+},
+
+{
+ q:"Which pair is correctly matched?",
+ options:[
+  "Jainism — Anekantavada",
+  "Buddhism — Atharvaveda",
+  "Charvaka — Sangha",
+  "Vedic tradition — Mahavira"
+ ],
+ answer:0,
+ explanation:"Anekantavada is associated with Jain philosophical thought."
+},
+
+{
+ q:"What is the most useful way to understand India's cultural history?",
+ options:[
+  "As a single unchanging tradition",
+  "As a network of diverse and interacting traditions",
+  "As a history containing only written texts",
+  "As a history without intellectual debate"
+ ],
+ answer:1,
+ explanation:"India's cultural history is better understood as a diverse and interconnected network of traditions that developed, interacted and changed over time."
+},
+
+{
+ q:"Which statement best summarises this chapter?",
+ options:[
+  "Indian culture developed through only one tradition",
+  "Indian cultural history combines diversity, continuity, debate and adaptation",
+  "Indian culture remained completely unchanged",
+  "Only political rulers shaped Indian culture"
+ ],
+ answer:1,
+ explanation:"The chapter highlights diversity, philosophical debate, cultural transmission, local traditions, continuity and adaptation."
+}
+
+];
+
+
+/* =========================
+   BUILD QUIZ
+========================= */
+
+function buildQuiz(){
+
+  const quiz = document.getElementById("quiz");
+
+  quiz.innerHTML="";
+
+  questions.forEach((item,index)=>{
+
+    const saved =
+      localStorage.getItem("class6history4q"+(index+1));
+
+    const card=document.createElement("div");
+
+    card.className="quiz-card";
+
+    let html=`
+      <h3>Q${index+1}. ${item.q}</h3>
+    `;
+
+    item.options.forEach((option,optIndex)=>{
+
+      html += `
+        <label class="option">
+          <input type="radio"
+                 name="q${index}"
+                 value="${optIndex}">
+          ${String.fromCharCode(65+optIndex)}. ${option}
+        </label>
+      `;
+
+    });
+
+    html += `
+      <button class="check-btn"
+              onclick="checkAnswer(${index})">
+        Check Answer
+      </button>
+
+      <div id="result${index}" class="result"></div>
+    `;
+
+    card.innerHTML=html;
+
+    quiz.appendChild(card);
+
+    if(saved==="checked"){
+      const result=document.getElementById("result"+index);
+
+      result.style.display="block";
+      result.className="result correct";
+      result.innerHTML=
+        "✓ This question was already checked. Explanation: "
+        + item.explanation;
+    }
+
+  });
+
+  updateProgress();
 
 }
 
+
+/* =========================
+   CHECK ANSWER
+========================= */
+
+function checkAnswer(index){
+
+  const selected =
+    document.querySelector(
+      `input[name="q${index}"]:checked`
+    );
+
+  const result =
+    document.getElementById("result"+index);
+
+  if(!selected){
+
+    result.style.display="block";
+    result.className="result wrong";
+    result.textContent=
+      "Please select an answer first.";
+
+    return;
+  }
+
+  const answer=parseInt(selected.value);
+
+  result.style.display="block";
+
+  if(answer===questions[index].answer){
+
+    result.className="result correct";
+
+    result.innerHTML=
+      "✓ Correct!<br><br><strong>Explanation:</strong> "
+      + questions[index].explanation;
+
+  }else{
+
+    result.className="result wrong";
+
+    result.innerHTML=
+      "✗ Not correct.<br><br><strong>Explanation:</strong> "
+      + questions[index].explanation;
+  }
+
+  localStorage.setItem(
+    "class6history4q"+(index+1),
+    "checked"
+  );
+
+  updateProgress();
+}
+
+
+/* =========================
+   PROGRESS
+========================= */
+
+function updateProgress(){
+
+  let completed=0;
+
+  for(let i=1;i<=20;i++){
+
+    if(
+      localStorage.getItem(
+        "class6history4q"+i
+      )==="checked"
+    ){
+      completed++;
+    }
+
+  }
+
+  const percentage=(completed/20)*100;
+
+  document.getElementById("progressBar").style.width=
+    percentage+"%";
+
+  document.getElementById("progressText").textContent=
+    "Progress: "+completed+" / 20 ("+
+    Math.round(percentage)+"%)";
+}
+
+
+/* =========================
+   COMPLETE CHAPTER
+========================= */
 
 function completeChapter(){
 
-localStorage.setItem(
-"ch4_done",
-"true"
-);
+  localStorage.setItem(
+    "class6history4done",
+    "yes"
+  );
 
-alert(
-"🎉 Chapter 4 completed! Great work."
-);
+  document.getElementById(
+    "completedMessage"
+  ).textContent=
+    " 🎉 Chapter completed!";
+}
 
+function restoreCompletion(){
+
+  if(
+    localStorage.getItem(
+      "class6history4done"
+    )==="yes"
+  ){
+
+    document.getElementById(
+      "completedMessage"
+    ).textContent=
+      " 🎉 Chapter completed!";
+  }
 }
 
 
-loadTheme();
-updateProgress();
+/* =========================
+   START
+========================= */
+
+restoreTheme();
+buildQuiz();
+restoreCompletion();
+animateCulture();
 
 </script>
 
