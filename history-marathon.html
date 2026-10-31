@@ -1,230 +1,287 @@
-
+ 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="hi">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>UPSC Shiksha | Animated History Class</title>
+<title>UPSC Shiksha | Class 6 History</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#101827;color:#fff;font-family:Arial,sans-serif}
-header{padding:15px;background:#17243a;display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
-header h2{margin:0;color:#65d9ff;font-size:20px}
-select,button{padding:10px;border:0;border-radius:8px;font-size:14px}
-select{background:#fff;color:#111}
-main{max-width:1000px;margin:auto;padding:15px}
-h3{margin-top:5px}
-.stage{background:#d9edff;border-radius:15px;overflow:hidden;position:relative;min-height:300px;color:#17243a}
-.scene-title{text-align:center;padding:10px;font-weight:bold}
-.classroom{height:250px;position:relative;background:linear-gradient(#d9edff 0 65%,#b8a17e 65%)}
-.board{position:absolute;right:4%;top:28px;width:43%;height:145px;background:#174b3a;border:9px solid #704a2c;border-radius:5px;color:white;padding:14px;font-size:14px}
-.teacher{position:absolute;left:12%;bottom:20px;width:105px;height:190px;animation:bob 2s infinite ease-in-out}
-.head{position:absolute;top:0;left:25px;width:60px;height:65px;background:#f1bd91;border-radius:48%}
-.hair{position:absolute;top:-3px;left:23px;width:64px;height:30px;background:#29252b;border-radius:50% 50% 20% 20%}
-.eye{position:absolute;top:28px;width:5px;height:6px;background:#222;border-radius:50%}
-.eye.one{left:17px}.eye.two{right:17px}
-.mouth{position:absolute;top:44px;left:25px;width:12px;height:4px;background:#6c2929;border-radius:50%;transition:.1s}
-.bodyman{position:absolute;top:63px;left:13px;width:84px;height:100px;background:#2878bb;border-radius:18px 18px 8px 8px}
-.arm{position:absolute;top:78px;width:18px;height:75px;background:#f1bd91;border-radius:20px;transform-origin:top}
-.arm.left{left:5px;transform:rotate(20deg)}
-.arm.right{right:0;animation:gesture 1.3s infinite alternate}
-.legs{position:absolute;top:155px;left:28px;width:20px;height:35px;background:#28354a}
-.legs:after{content:"";position:absolute;left:28px;width:20px;height:35px;background:#28354a}
-.talk .mouth{height:13px;width:15px;top:40px}
-@keyframes bob{50%{transform:translateY(-5px)}}
-@keyframes gesture{to{transform:rotate(-65deg)}}
-.scene{position:absolute;bottom:10px;left:52%;width:40%;height:85px;display:flex;justify-content:space-around;align-items:end}
-.stick{position:relative;width:25px;height:75px;animation:walk 1s infinite alternate}
-.stick:before{content:"";position:absolute;top:0;left:5px;width:17px;height:17px;border:4px solid #222;border-radius:50%}
-.stick:after{content:"";position:absolute;top:22px;left:12px;width:4px;height:35px;background:#222}
-.stick i,.stick b{position:absolute;top:48px;left:12px;width:4px;height:27px;background:#222;transform-origin:top}
-.stick i{transform:rotate(35deg);animation:walk 0.4s infinite alternate}
-.stick b{transform:rotate(-35deg);animation:walk 0.4s infinite alternate-reverse}
-@keyframes walk{to{transform:rotate(35deg)}}
-.controls{display:flex;gap:8px;flex-wrap:wrap;margin:14px 0}
-button{background:#1678d3;color:white;font-weight:bold;cursor:pointer}
-button.secondary{background:#34445d}
-button:active{transform:scale(.97)}
-.panel{background:#1a2940;padding:16px;border-radius:12px;margin-top:14px}
-#lectureText{font-size:17px;line-height:1.7;min-height:100px}
-.progress{height:7px;background:#40506a;border-radius:8px;overflow:hidden}
-#bar{height:100%;width:0;background:#48d8ff}
-.small{color:#b9c9df;font-size:13px}
-@media(max-width:500px){
- .stage{min-height:270px}
- .classroom{height:230px}
- .teacher{transform:scale(.85);transform-origin:bottom left;left:5%}
- .board{right:3%;width:52%;font-size:12px;height:135px}
- .scene{left:48%;width:45%}
+body{margin:0;background:#0b0b0d;color:white;font-family:Arial,sans-serif}
+header{
+ background:#151515;padding:13px 16px;
+ display:flex;justify-content:space-between;align-items:center;
+ position:sticky;top:0;z-index:10;
+}
+.logo{font-size:20px;font-weight:bold}
+.logo span{color:#e3bd72}
+.tag{font-size:11px;color:#aaa}
+.player{background:#000}
+#screen{
+ aspect-ratio:16/9;display:flex;align-items:center;
+ justify-content:center;text-align:center;padding:20px;
+ background:linear-gradient(135deg,#382819,#b99b68,#30251c);
+ position:relative;overflow:hidden;
+}
+#screen:before{
+ content:"";position:absolute;inset:0;
+ background:radial-gradient(ellipse at center,#f4dba366,transparent 65%);
+}
+.slide{position:relative;z-index:1;animation:fade .5s}
+@keyframes fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+.badge{background:#9c1717;padding:6px 12px;border-radius:5px;font-size:12px}
+#slideTitle{font-family:Georgia;font-size:clamp(26px,6vw,44px);color:#fff0c9;text-shadow:2px 3px 5px #21160b}
+#slideSub{font-size:17px;color:#fff5dc}
+.controls{
+ background:#151515;padding:10px;display:flex;
+ align-items:center;gap:12px;
+}
+button,select{
+ background:#292929;color:white;border:0;
+ padding:10px 13px;border-radius:8px;font-size:14px;
+}
+button:active{opacity:.7}
+#progress{height:4px;background:#555;flex:1}
+#bar{height:4px;background:#e33;width:0}
+.details{padding:16px}
+.details h2{font-size:19px;margin:0 0 7px}
+.muted{font-size:13px;color:#aaa}
+.actions{display:flex;gap:8px;flex-wrap:wrap;margin-top:14px}
+.primary{background:white;color:#111;font-weight:bold}
+.layout{display:grid;grid-template-columns:1fr 1fr;gap:14px;padding:10px 16px 25px}
+.card{background:#191919;padding:14px;border-radius:12px}
+.card h3{margin:0 0 12px}
+.chapter{
+ display:flex;gap:10px;padding:10px 0;
+ border-bottom:1px solid #333;cursor:pointer;
+}
+.thumb{
+ width:42%;min-width:42%;aspect-ratio:16/9;
+ border-radius:7px;background:linear-gradient(135deg,#5d4228,#d4b77c);
+ display:flex;align-items:center;justify-content:center;
+ text-align:center;color:#fff1d0;font-size:12px;
+ font-weight:bold;padding:5px;
+}
+.chapter.active .thumb{outline:2px solid #e0bd76}
+.chtext{font-size:13px;line-height:1.4;align-self:center}
+.duration{display:inline-block;background:#153c60;color:#76baff;padding:3px 6px;margin-top:6px;border-radius:4px}
+#caption{line-height:1.6;color:#f0d69e}
+footer{text-align:center;color:#777;padding:18px;font-size:12px}
+@media(max-width:650px){
+ .layout{grid-template-columns:1fr;padding:10px}
+ .details{padding:14px}
 }
 </style>
 </head>
 <body>
+
 <header>
-<h2>🇮🇳 UPSC Shiksha</h2>
-<select id="language" aria-label="Lecture language">
-<option value="hi-IN">हिन्दी</option>
-<option value="en-IN">English</option>
-</select>
+ <div>
+  <div class="logo">🇮🇳 UPSC <span>Shiksha</span></div>
+  <div class="tag">NCERT HISTORY • CLASS 6</div>
+ </div>
+ <div class="tag">FREE COURSE</div>
 </header>
 
-<main>
-<h3 id="chapter">Class 6 History – Introduction</h3>
-<p class="small">Animated Marathon Lecture • Demo Chapter</p>
-
-<div class="stage">
-<div class="scene-title" id="sceneTitle">Welcome to History Class</div>
-<div class="classroom">
-<div class="board">
-<b id="boardTitle">HISTORY</b>
-<p id="boardText">Our Past</p>
-<p>↓</p>
-<p id="boardBottom">Understanding History</p>
-</div>
-<div class="teacher" id="teacher">
-<div class="hair"></div>
-<div class="head">
-<div class="eye one"></div><div class="eye two"></div>
-<div class="mouth"></div>
-</div>
-<div class="bodyman"></div>
-<div class="arm left"></div><div class="arm right"></div>
-<div class="legs"></div>
-</div>
-<div class="scene">
-<div class="stick"><i></i><b></b></div>
-<div class="stick"><i></i><b></b></div>
-<div class="stick"><i></i><b></b></div>
-</div>
-</div>
+<div class="player">
+ <div id="screen">
+  <div class="slide">
+   <span class="badge">ALL COMPETITIVE EXAMS</span>
+   <h1 id="slideTitle">क्या, कब, कहाँ और कैसे?</h1>
+   <p id="slideSub">इतिहास को समझने की शुरुआत</p>
+  </div>
+ </div>
+ <div class="controls">
+  <button id="play">▶</button>
+  <button id="stop">■</button>
+  <div id="progress"><div id="bar"></div></div>
+  <span id="time" class="muted">00:00 / 00:30</span>
+  <button id="full">⛶</button>
+ </div>
 </div>
 
-<div class="controls">
-<button id="play">▶ Play Lecture</button>
-<button class="secondary" id="pause">Ⅱ Pause</button>
-<button class="secondary" id="restart">↻ Restart</button>
-<select id="speed" aria-label="Speech speed">
-<option value="0.8">0.8x</option>
-<option value="1" selected>1x Speed</option>
-<option value="1.2">1.2x</option>
-</select>
+<section class="details">
+ <h2 id="lectureTitle">Chapter 1: क्या, कब, कहाँ और कैसे?</h2>
+ <div class="muted">UPSC Shiksha • Class 6 History • Hindi</div>
+ <div class="actions">
+  <button class="primary" id="voice">🔊 आवाज़ चलाएँ</button>
+  <button id="cc">CC Subtitles: ON</button>
+  <select id="language">
+   <option value="hi-IN">हिन्दी</option>
+   <option value="en-IN">English</option>
+  </select>
+ </div>
+</section>
+
+<div class="layout">
+ <section class="card">
+  <h3>📚 Chapters</h3>
+  <div id="chapters"></div>
+ </section>
+
+ <section class="card">
+  <h3>इस दृश्य में समझें</h3>
+  <p id="caption"></p>
+  <p class="muted">
+   यह UPSC Shiksha का demo है। इसमें आगे original
+   lecture videos, animations और notes जोड़े जा सकते हैं।
+  </p>
+ </section>
 </div>
 
-<div class="progress"><div id="bar"></div></div>
-<p class="small" id="status">Ready to start</p>
-
-<div class="panel">
-<h3 id="topic">Topic 1: What is History?</h3>
-<div id="lectureText">Press Play Lecture to start your class.</div>
-</div>
-<div class="panel">
-<h3 id="nextTitle">Lecture topics</h3>
-<p id="topicList">1. What is History?<br>2. Sources of History<br>3. Timeline and Dates<br>4. Life in the Past</p>
-</div>
-</main>
+<footer>UPSC Shiksha • Original Educational Platform Demo</footer>
 
 <script>
-const lessons = {
-"hi-IN":[
-{title:"इतिहास क्या है?",scene:"हमारा अतीत",board:"इतिहास",text:"इतिहास हमें हमारे अतीत के बारे में बताता है। यह समझने में मदद करता है कि पहले लोग कैसे रहते थे, क्या खाते थे और उनका समाज कैसा था। इतिहास केवल राजाओं और युद्धों की कहानी नहीं है, बल्कि आम लोगों के जीवन का अध्ययन भी है।"},
-{title:"इतिहास के स्रोत",scene:"अतीत के प्रमाण",board:"ऐतिहासिक स्रोत",text:"इतिहासकार अतीत को जानने के लिए कई स्रोतों का अध्ययन करते हैं। इनमें पुरानी पांडुलिपियाँ, शिलालेख, सिक्के, औजार, इमारतें और पुरातात्विक अवशेष शामिल हैं। इन प्रमाणों की जाँच करके इतिहासकार अतीत की जानकारी प्राप्त करते हैं।"},
-{title:"समय और तारीखें",scene:"समय की यात्रा",board:"समयरेखा",text:"इतिहास में घटनाओं का क्रम समझना बहुत जरूरी है। समयरेखा की मदद से हम जान सकते हैं कि कौन सी घटना पहले हुई और कौन सी बाद में। ईसा पूर्व और ईस्वी जैसी शब्दावली का प्रयोग तारीखें समझने में किया जाता है।"},
-{title:"अतीत में जीवन",scene:"पुराने समय का जीवन",board:"जीवन और समाज",text:"अतीत में लोगों के रहने, खाने, काम करने और यात्रा करने के तरीके अलग-अलग थे। समय के साथ खेती, व्यापार, तकनीक और समाज में बदलाव आए। इतिहास हमें इन बदलावों को समझने में मदद करता है।"}
-],
-"en-IN":[
-{title:"What is History?",scene:"Our Past",board:"HISTORY",text:"History tells us about the past. It helps us understand how people lived, what they ate and how their societies worked. History is not only about kings and wars. It also studies the lives of ordinary people."},
-{title:"Sources of History",scene:"Evidence from the Past",board:"HISTORICAL SOURCES",text:"Historians study many sources to learn about the past. These include manuscripts, inscriptions, coins, tools, buildings and archaeological remains. By examining this evidence, historians build an understanding of earlier times."},
-{title:"Time and Dates",scene:"A Journey Through Time",board:"TIMELINE",text:"Understanding the order of events is important in history. A timeline helps us see which event happened first and which came later. Terms such as BCE and CE are used to describe historical dates."},
-{title:"Life in the Past",scene:"Life Long Ago",board:"LIFE AND SOCIETY",text:"People in the past had different ways of living, eating, working and travelling. Over time, farming, trade, technology and societies changed. History helps us understand these changes."}
-]
-};
+const lessons=[
+{
+name:"क्या, कब, कहाँ और कैसे?",
+duration:"0:30",
+title:"क्या, कब, कहाँ और कैसे?",
+sub:"इतिहास को समझने की शुरुआत",
+text:"इतिहास हमें अतीत के बारे में जानकारी देता है। इससे हम समझते हैं कि लोग पहले कैसे रहते थे और समाज में क्या बदलाव आए।"
+},
+{
+name:"आखेट-खाद्य संग्रहक से भोजन उत्पादन तक",
+duration:"13:40",
+title:"भोजन की खोज से खेती तक",
+sub:"शिकारी-संग्रहकर्ता और शुरुआती किसान",
+text:"शुरुआती मनुष्य भोजन के लिए शिकार करते और फल बीज इकट्ठा करते थे। समय के साथ उन्होंने खेती और पशुपालन सीखना शुरू किया।"
+},
+{
+name:"आरंभिक नगर",
+duration:"24:40",
+title:"आरंभिक नगर",
+sub:"नगरों का विकास और कारीगर",
+text:"कुछ बस्तियाँ बड़े नगरों में बदल गईं। वहाँ कारीगर, व्यापारी और किसान अलग-अलग काम करते थे।"
+},
+{
+name:"क्या बताती हैं हमें किताबें और कब्रें?",
+duration:"37:30",
+title:"किताबें और पुरातात्विक प्रमाण",
+sub:"अतीत को जानने के स्रोत",
+text:"पुरानी किताबें, औज़ार, इमारतें और कब्रें हमें अतीत के जीवन के बारे में संकेत देती हैं।"
+},
+{
+name:"राज्य, राजा और एक प्राचीन गणराज्य",
+duration:"42:10",
+title:"राज्य और प्राचीन गणराज्य",
+sub:"शासन व्यवस्था की शुरुआत",
+text:"समय के साथ जनपद और महाजनपद विकसित हुए। कुछ क्षेत्रों में राजा शासन करते थे और कुछ में समूह निर्णय लेते थे।"
+},
+{
+name:"नए प्रश्न और विचार",
+duration:"49:20",
+title:"नए प्रश्न और विचार",
+sub:"विचारों और शिक्षाओं का विकास",
+text:"प्राचीन भारत में अनेक विचारक जीवन, समाज और सही आचरण पर चर्चा करते थे।"
+},
+{
+name:"पहले साम्राज्य",
+duration:"58:15",
+title:"पहले साम्राज्य",
+sub:"मौर्य साम्राज्य का परिचय",
+text:"मौर्य शासकों ने बड़े क्षेत्र पर शासन किया। अशोक के अभिलेख हमें उनके विचारों और शासन के बारे में बताते हैं।"
+}
+];
 
-let index=0;
+let current=0;
 let playing=false;
-let utterance=null;
+let elapsed=0;
 let timer=null;
+let showCC=true;
+
 const $=id=>document.getElementById(id);
 
-function currentLessons(){return lessons[$("language").value]}
-function render(){
- const item=currentLessons()[index];
- $("topic").textContent=item.title;
- $("sceneTitle").textContent=item.scene;
- $("boardTitle").textContent=item.board;
- $("boardText").textContent=item.title;
- $("boardBottom").textContent=$("language").value==="hi-IN"?"अतीत को समझें":"Explore the Past";
- $("lectureText").textContent=item.text;
- $("bar").style.width=((index+1)/currentLessons().length*100)+"%";
- $("status").textContent="Topic "+(index+1)+" of "+currentLessons().length;
- $("chapter").textContent=$("language").value==="hi-IN"?"कक्षा 6 इतिहास – परिचय":"Class 6 History – Introduction";
+function drawChapters(){
+ $("chapters").innerHTML=lessons.map((lesson,i)=>`
+ <div class="chapter ${i===current?'active':''}" data-id="${i}">
+  <div class="thumb">
+   NCERT HISTORY<br>CLASS 6<br>${lesson.title}
+  </div>
+  <div class="chtext">
+   Chapter ${i+1}: ${lesson.name}
+   <br><span class="duration">${lesson.duration}</span>
+  </div>
+ </div>
+ `).join("");
+
+ document.querySelectorAll(".chapter").forEach(el=>{
+  el.onclick=()=>selectChapter(Number(el.dataset.id));
+ });
 }
 
-function stopSpeech(){
- if("speechSynthesis" in window) speechSynthesis.cancel();
- if(timer) clearTimeout(timer);
- timer=null;
- utterance=null;
- $("teacher").classList.remove("talk");
- playing=false;
+function update(){
+ const lesson=lessons[current];
+ $("lectureTitle").textContent="Chapter "+(current+1)+": "+lesson.name;
+ $("slideTitle").textContent=lesson.title;
+ $("slideSub").textContent=lesson.sub;
+ $("caption").textContent=lesson.text;
+ $("caption").style.display=showCC?"block":"none";
+ $("time").textContent="00:"+String(elapsed).padStart(2,"0")+" / 00:30";
+ $("bar").style.width=(elapsed/30*100)+"%";
 }
-function speak(){
+
+function selectChapter(i){
+ pause();
+ current=i;
+ elapsed=0;
+ update();
+ drawChapters();
+}
+
+function play(){
+ if(playing)return;
+ playing=true;
+ $("play").textContent="Ⅱ";
+ timer=setInterval(()=>{
+  elapsed++;
+  if(elapsed>=30){
+   pause();
+   elapsed=30;
+  }
+  update();
+ },1000);
+}
+
+function pause(){
+ playing=false;
+ clearInterval(timer);
+ $("play").textContent="▶";
+}
+
+$("play").onclick=()=>playing?pause():play();
+
+$("stop").onclick=()=>{
+ pause();
+ elapsed=0;
+ update();
+};
+
+$("voice").onclick=()=>{
  if(!("speechSynthesis" in window)){
-  $("status").textContent="Speech is not supported in this browser.";
+  alert("इस browser में voice उपलब्ध नहीं है।");
   return;
  }
- stopSpeech();
- const item=currentLessons()[index];
- utterance=new SpeechSynthesisUtterance(item.text);
+ speechSynthesis.cancel();
+ const utterance=new SpeechSynthesisUtterance(lessons[current].text);
  utterance.lang=$("language").value;
- utterance.rate=Number($("speed").value);
- utterance.onstart=()=>{
-  playing=true;
-  $("teacher").classList.add("talk");
-  $("status").textContent="Playing topic "+(index+1);
-  animateMouth();
- };
- utterance.onend=()=>{
-  $("teacher").classList.remove("talk");
-  playing=false;
-  if(index<currentLessons().length-1){
-   index++;
-   render();
-   timer=setTimeout(speak,700);
-  }else{
-   $("status").textContent="Lecture completed!";
-  }
- };
- utterance.onerror=()=>{
-  $("teacher").classList.remove("talk");
-  playing=false;
-  $("status").textContent="Voice playback stopped.";
- };
+ utterance.rate=.9;
  speechSynthesis.speak(utterance);
-}
-function animateMouth(){
- if(!playing)return;
- const mouth=document.querySelector(".mouth");
- mouth.style.height=(4+Math.random()*12)+"px";
- setTimeout(animateMouth,120);
-}
-$("play").onclick=()=>{if(!playing)speak()};
-$("pause").onclick=()=>{
- if("speechSynthesis" in window)speechSynthesis.pause();
- playing=false;
- $("teacher").classList.remove("talk");
- $("status").textContent="Paused";
 };
-$("restart").onclick=()=>{
- stopSpeech();index=0;render();speak();
+
+$("cc").onclick=()=>{
+ showCC=!showCC;
+ $("cc").textContent="CC Subtitles: "+(showCC?"ON":"OFF");
+ update();
 };
-$("language").onchange=()=>{
- stopSpeech();index=0;render();
- $("status").textContent="Language changed. Press Play Lecture.";
+
+$("full").onclick=()=>{
+ const screen=$("screen");
+ if(screen.requestFullscreen)screen.requestFullscreen();
 };
-$("speed").onchange=()=>{
- if(playing){speechSynthesis.cancel();playing=false;speak()}
-};
-render();
+
+drawChapters();
+update();
 </script>
 </body>
 </html>
