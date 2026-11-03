@@ -1,0 +1,264 @@
+ 
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#10131c">
+<title>UPSC Shiksha | Class 6 History Marathon Ch. 4–7</title>
+<style>
+:root{--bg:#0b0e14;--panel:#151b27;--panel2:#1d2635;--gold:#e7c47d;--muted:#aab4c4;--line:#303b4d;--blue:#76baff;--green:#7bd6a4}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:#f4f6fa;font-family:system-ui,Arial,sans-serif;line-height:1.55}
+header{position:sticky;top:0;z-index:20;background:#111722ed;backdrop-filter:blur(10px);border-bottom:1px solid var(--line);padding:11px 15px;display:flex;justify-content:space-between;align-items:center;gap:10px}
+.logo{font-weight:800;font-size:19px}.logo span{color:var(--gold)}.tag{font-size:11px;color:var(--muted)}
+main{max-width:1100px;margin:auto;padding:14px}
+.hero{background:linear-gradient(130deg,#252f43,#503d2b);border:1px solid #6e6048;border-radius:16px;padding:18px;margin-bottom:14px}
+.hero h1{font-size:clamp(22px,5vw,34px);line-height:1.2;margin:7px 0;color:#fff0cf}
+.hero p{margin:5px 0;color:#f1dfbd}
+.grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(270px,.8fr);gap:14px}
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:15px;margin-bottom:14px}
+.screen{min-height:300px;border-radius:12px;background:radial-gradient(circle at 50% 25%,#5a4b37,#1a2230 72%);display:flex;align-items:center;justify-content:center;text-align:center;padding:22px;position:relative;overflow:hidden}
+.screen:after{content:"";position:absolute;width:220px;height:220px;border:1px solid #ffffff20;border-radius:50%;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}
+.slidecontent{position:relative;z-index:1;max-width:720px}
+.kicker{display:inline-block;background:#7f2929;padding:5px 10px;border-radius:20px;font-size:12px}
+#slideTitle{font-family:Georgia,serif;color:#ffedc5;font-size:clamp(25px,5vw,39px);line-height:1.2;margin:14px 0 8px}
+#slideSub{color:#f2d9aa;font-size:16px}
+.controls{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+button,select{background:var(--panel2);color:white;border:1px solid #43516a;border-radius:9px;padding:10px 12px;font-size:14px}
+button{cursor:pointer}button:active{transform:scale(.98)}
+button.primary{background:var(--gold);color:#1b1b1b;border-color:var(--gold);font-weight:700}
+button:disabled{opacity:.45;cursor:not-allowed}
+.progress{height:7px;background:#394456;border-radius:9px;overflow:hidden;flex:1;min-width:90px}
+.bar{height:100%;width:0;background:var(--gold);transition:width .25s}
+.small{font-size:12px;color:var(--muted)}
+h2{font-size:19px;margin:0 0 10px}
+h3{font-size:16px;margin:0 0 8px;color:var(--gold)}
+#explain{font-size:15px;white-space:pre-line;line-height:1.75}
+.chart{width:100%;border-collapse:collapse;margin:12px 0;font-size:13px}
+.chart th,.chart td{border:1px solid var(--line);padding:9px;text-align:left;vertical-align:top}
+.chart th{background:#222e40;color:#f4d99e}
+.pill{display:inline-block;background:#25364a;color:#a9d5ff;padding:3px 8px;border-radius:20px;font-size:11px;margin:2px}
+.chapter{padding:11px;border:1px solid var(--line);border-radius:10px;margin:8px 0;cursor:pointer;background:#111722}
+.chapter.active{border-color:var(--gold);background:#29271f}
+.chapter strong{display:block;font-size:14px}
+.chapter span{font-size:12px;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.quizq{padding:12px;background:#111722;border:1px solid var(--line);border-radius:10px;margin:10px 0}
+.quizq label{display:block;padding:6px 0;font-size:14px}
+.result{color:var(--green);font-weight:700}
+footer{text-align:center;color:#7f8a9b;padding:20px;font-size:12px}
+@media(max-width:760px){.grid{grid-template-columns:1fr}.screen{min-height:250px}.two{grid-template-columns:1fr}header{align-items:flex-start}}
+.scene{height:190px;position:relative;overflow:hidden;border:1px solid #43516a;border-radius:12px;margin:12px 0;background:linear-gradient(#26374b 0 65%,#725b3d 65%);isolation:isolate}
+.scene .sun{position:absolute;width:52px;height:52px;border-radius:50%;background:#f2d28c;top:18px;right:12%;box-shadow:0 0 35px #f2d28c88;animation:pulse 3s infinite alternate}
+.scene .hill{position:absolute;bottom:35px;width:70%;height:80px;background:#354d43;border-radius:50% 50% 0 0}
+.scene .hill.one{left:-10%;transform:rotate(-8deg)}
+.scene .hill.two{right:-20%;height:105px;background:#293f38}
+.scene .ground{position:absolute;bottom:0;height:38px;width:100%;background:#59432f}
+.scene .label{position:absolute;z-index:5;left:10px;top:9px;background:#101722cc;border:1px solid #ffffff33;border-radius:20px;padding:4px 9px;font-size:11px;color:#ffedc5}
+.scene .book{position:absolute;bottom:35px;left:calc(50% - 43px);width:86px;height:59px;transform-origin:bottom;animation:bookFloat 3s ease-in-out infinite}
+.scene .book:before,.scene .book:after{content:"";position:absolute;bottom:0;width:42px;height:55px;background:#b98548;border:3px solid #e8c98b;box-shadow:inset 0 0 0 4px #8b5d35}
+.scene .book:before{left:0;transform:skewY(8deg);border-radius:5px 2px 0 4px}
+.scene .book:after{right:0;transform:skewY(-8deg);border-radius:2px 5px 4px 0}
+.scene .pillar{position:absolute;bottom:35px;left:calc(50% - 13px);width:26px;height:116px;background:linear-gradient(90deg,#9a8059,#f0d7a0,#9a8059);border-radius:8px 8px 2px 2px;box-shadow:0 0 15px #e8ca8a44}
+.scene .pillar:before{content:"";position:absolute;top:-12px;left:-10px;width:46px;height:15px;background:#d7bd89;border-radius:8px}
+.scene .wheel{position:absolute;left:calc(50% - 29px);top:36px;width:58px;height:58px;border:5px solid #e7c47d;border-radius:50%;animation:spin 12s linear infinite}
+.scene .wheel:before,.scene .wheel:after{content:"";position:absolute;background:#e7c47d;left:50%;top:0;width:3px;height:48px;transform:translateX(-50%)}
+.scene .wheel:after{transform:translateX(-50%) rotate(60deg)}
+.scene .fort{position:absolute;bottom:35px;left:calc(50% - 85px);width:170px;height:75px;background:#a98a61;border:4px solid #e1c18b;border-bottom:0}
+.scene .fort:before{content:"";position:absolute;left:-12px;right:-12px;top:-20px;height:22px;background:repeating-linear-gradient(90deg,#d8b982 0 20px,transparent 20px 29px)}
+.scene .gate{position:absolute;bottom:35px;left:calc(50% - 19px);width:38px;height:47px;background:#30251e;border-radius:25px 25px 0 0}
+.scene .person{position:absolute;bottom:35px;left:calc(50% - 8px);width:16px;height:35px;background:#202b35;border-radius:8px 8px 2px 2px;animation:walk 2.5s ease-in-out infinite}
+.scene .person:before{content:"";position:absolute;top:-17px;left:1px;width:14px;height:14px;border-radius:50%;background:#d9ad80}
+.scene .tree{position:absolute;bottom:34px;left:calc(50% - 8px);width:16px;height:75px;background:#62452e}
+.scene .tree:before{content:"";position:absolute;left:-45px;top:-38px;width:105px;height:75px;border-radius:50%;background:#477b55;box-shadow:22px 10px 0 -10px #5c9564,-25px 15px 0 -10px #376b48}
+.scene .scroll{position:absolute;bottom:43px;left:calc(50% - 52px);width:104px;height:65px;background:#e8d19a;border:5px solid #9c7548;border-radius:8px;animation:bookFloat 3s ease-in-out infinite}
+.scene .scroll:after{content:"≋  ≋  ≋";display:block;color:#795637;text-align:center;font-size:22px;line-height:48px}
+.scene .dig{position:absolute;bottom:35px;left:calc(50% - 65px);width:130px;height:45px;border:5px solid #b58c5a;border-top:0;border-radius:0 0 50% 50%;background:#3d3027}
+.scene .pot{position:absolute;bottom:38px;left:calc(50% - 16px);width:32px;height:35px;background:#b96e42;border-radius:7px 7px 13px 13px;animation:potBob 2s ease-in-out infinite}
+.scene .spark{position:absolute;width:6px;height:6px;background:#ffe7a9;border-radius:50%;animation:twinkle 2s infinite}
+@keyframes pulse{to{transform:scale(1.12);opacity:.8}}
+@keyframes bookFloat{50%{transform:translateY(-7px) rotate(2deg)}}
+@keyframes spin{to{transform:rotate(360deg)}}
+@keyframes walk{0%,100%{transform:translateX(-26px)}50%{transform:translateX(26px)}}
+@keyframes potBob{50%{transform:translateY(-6px)}}
+@keyframes twinkle{0%,100%{opacity:.2;transform:scale(.6)}50%{opacity:1;transform:scale(1.4)}}
+@media(prefers-reduced-motion:reduce){.scene *{animation:none!important}}
+</style>
+</head>
+ <body>
+<header>
+ <div><div class="logo">🇮🇳 UPSC <span>Shiksha</span></div><div class="tag">NCERT-BASED • CLASS 6 HISTORY</div></div>
+ <div class="tag">FREE MARATHON</div>
+</header>
+<main>
+<section class="hero">
+ <div class="pill">120-MINUTE STUDY SESSION</div>
+ <h1>Class 6 History Marathon</h1>
+ <p>अध्याय 4 से 7 • सरल हिंदी + English • Charts • Timeline • Revision • MCQ</p>
+ <p class="small">यह मौलिक शिक्षण सामग्री है। 120 मिनट का समय-विभाजन पढ़ाने, चार्ट समझने, नोट्स बनाने और अभ्यास के लिए है।</p>
+</section>
+
+<div class="grid">
+<div>
+ <section class="panel">
+  <div class="screen" id="screen"><div class="slidecontent">
+   <span class="kicker" id="chapterBadge">CHAPTER 4 • NCERT HISTORY</span>
+   <h1 id="slideTitle">किताबें और कब्रें हमें क्या बताती हैं?</h1>
+   <div id="slideSub">अतीत को जानने के स्रोत</div>
+  </div></div>
+  <div class="controls">
+   <button id="prev">◀ पिछला</button>
+   <button class="primary" id="play">▶ वीडियो + ऑडियो चलाएँ</button>
+   <button id="next">अगला ▶</button>
+   <button id="pauseAV">Ⅱ Pause</button>
+   <button id="stopAV">■ Stop</button>
+  </div>
+  <div class="controls">
+   <div class="progress"><div class="bar" id="bar"></div></div>
+   <span id="counter" class="small">1 / 20</span>
+   <span id="elapsed" class="small">सेशन: 00:00</span>
+  </div>
+  <p class="small" id="avStatus">वीडियो-जैसे animated दृश्य और narration एक साथ चलेंगे। आवाज़ शुरू करने के लिए Play दबाएँ।</p>
+  <div class="controls">
+   <label class="small">भाषा / Language</label>
+   <select id="language">
+    <option value="hi">हिंदी</option>
+    <option value="en">English</option>
+   </select>
+   <label class="small">आवाज़ / Voice</label>
+   <select id="voiceSelect"><option value="">Default voice</option></select>
+  </div>
+ </section>
+
+ <section class="panel">
+  <h2 id="lessonHeading">आज का पाठ</h2>
+  <div id="scene" class="scene">
+   <div class="label" id="sceneLabel">इतिहास की खोज</div>
+   <div class="sun"></div><div class="hill one"></div><div class="hill two"></div>
+   <div class="ground"></div><div class="pot"></div>
+  </div>
+  <h3>समझिए / Explanation</h3>
+  <div id="explain"></div>
+  <h3 style="margin-top:16px">Chart / चार्ट</h3>
+  <div id="chartArea"></div>
+  <p class="small" id="task"></p>
+ </section>
+</div>
+
+<aside>
+ <section class="panel">
+  <h2>अध्याय / Chapters</h2>
+  <div id="chapterList"></div>
+ </section>
+ <section class="panel">
+  <h2>120 मिनट का प्लान</h2>
+  <div class="small">अध्याय 4 — 25 मिनट</div>
+  <div class="small">अध्याय 5 — 25 मिनट</div>
+  <div class="small">अध्याय 6 — 30 मिनट</div>
+  <div class="small">अध्याय 7 — 25 मिनट</div>
+  <div class="small">Revision + MCQ — 15 मिनट</div>
+  <hr style="border-color:var(--line)">
+  <p class="small">हर स्लाइड पर रुककर चार्ट पढ़ें और दिए गए Study Task को अपनी कॉपी में हल करें।</p>
+ </section>
+</aside>
+</div>
+
+<section class="panel">
+ <h2>Quick Revision / त्वरित पुनरावृत्ति</h2>
+ <div id="revision"></div>
+</section>
+
+<section class="panel">
+ <h2>MCQ Practice</h2>
+ <p class="small">सही उत्तर चुनें और Check Answers दबाएँ।</p>
+ <div id="quiz"></div>
+ <button class="primary" id="checkQuiz">Check Answers</button>
+ <p id="quizResult" class="result"></p>
+</section>
+</main>
+<footer>UPSC Shiksha • Class 6 History • Learning demo</footer>
+
+<script>
+const lessons = [
+{ch:4,title:"किताबें और कब्रें हमें क्या बताती हैं?",sub:"अतीत को जानने के स्रोत",mins:5,
+hi:"इतिहासकार अतीत को समझने के लिए कई प्रकार के स्रोतों का अध्ययन करते हैं। लिखित ग्रंथ, शिलालेख, औजार, मिट्टी के बर्तन, मकान और कब्रें हमें पुराने समाजों के बारे में जानकारी देते हैं।\n\nकिसी एक स्रोत से पूरी कहानी नहीं मिलती। इसलिए इतिहासकार अलग-अलग प्रमाणों की तुलना करते हैं।",
+en:"Historians study many kinds of sources to understand the past. Written texts, inscriptions, tools, pottery, houses and burials provide clues about earlier societies.\n\nOne source rarely tells the whole story, so historians compare different kinds of evidence.",
+task:"Study task: इतिहास जानने के चार स्रोतों के नाम लिखें।"},
+{ch:4,title:"मेगालिथ और कब्रों का अध्ययन",sub:"Burials as historical evidence",mins:5,
+hi:"मेगालिथ बड़े पत्थरों से चिह्नित कब्रों या स्मारकों को कहा जाता है। कुछ कब्रों में मृत व्यक्ति के साथ बर्तन, औजार या अन्य वस्तुएँ रखी जाती थीं। इन वस्तुओं से इतिहासकार भोजन, काम, विश्वास और सामाजिक भिन्नताओं के बारे में अनुमान लगाते हैं।\n\nध्यान रखें: कब्र में मिली वस्तु किसी व्यक्ति के पूरे जीवन का सीधा प्रमाण नहीं होती; उसे दूसरे प्रमाणों के साथ समझना चाहिए।",
+en:"Megaliths are burial sites or monuments marked by large stones. Some burials contain pots, tools or other objects. These help historians investigate food, work, beliefs and social differences.\n\nObjects in a grave are clues, not a complete record of a person's life.",
+task:"Study task: कब्रों से मिलने वाली दो प्रकार की जानकारी लिखें।"},
+{ch:4,title:"इनामगाँव: एक प्राचीन बस्ती",sub:"An archaeological site",mins:5,
+hi:"इनामगाँव महाराष्ट्र में भीमा नदी के पास स्थित एक पुरातात्त्विक स्थल है। यहाँ घरों, अनाज रखने की जगहों, बर्तनों और कब्रों के अवशेष मिले हैं। इनसे पता चलता है कि लोग खेती, पशुपालन और अन्य गतिविधियों से जुड़े थे।\n\nपुरातत्त्वविद वस्तुओं को उनके स्थान और परतों के संदर्भ में देखते हैं। इससे बस्ती के जीवन को समझने में मदद मिलती है।",
+en:"Inamgaon is an archaeological site near the Bhima river in Maharashtra. Remains of houses, storage spaces, pottery and burials help us understand farming, animal keeping and other activities.\n\nArchaeologists study objects in their location and layers to understand settlement life.",
+task:"Study task: इनामगाँव से मिली तीन पुरातात्त्विक चीजें लिखें।"},
+{ch:4,title:"अध्याय 4: स्रोतों की तुलना",sub:"What can each source tell us?",mins:10,
+hi:"लिखित स्रोत विचारों और घटनाओं की जानकारी दे सकते हैं। औजार और बर्तन दैनिक जीवन तथा तकनीक के संकेत देते हैं। घरों के अवशेष बस्ती की बनावट बताते हैं। कब्रें मृत्यु-संस्कार और सामाजिक भिन्नताओं के बारे में प्रश्न उठाती हैं।\n\nइतिहासकार प्रमाणों की तुलना करते हैं और जहाँ जानकारी निश्चित नहीं होती, वहाँ सावधानी से निष्कर्ष लिखते हैं।",
+en:"Written sources can tell us about ideas and events. Tools and pottery offer clues about daily life and technology. House remains reveal settlement patterns. Burials raise questions about funerary practices and social differences.\n\nHistorians compare evidence and remain careful where conclusions are uncertain.",
+task:"Revision: लिखित स्रोत और पुरातात्त्विक स्रोत में अंतर बताइए।"},
+{ch:5,title:"जनपद से महाजनपद तक",sub:"The rise of larger states",mins:5,
+hi:"लगभग 2,500 वर्ष पहले गंगा घाटी और आसपास के क्षेत्रों में कई बड़े राजनीतिक क्षेत्र विकसित हुए। जनपद उस क्षेत्र को कहा जाता था जहाँ लोग बसते थे। कुछ जनपद समय के साथ बड़े और शक्तिशाली बने; उन्हें महाजनपद कहा गया। कई महाजनपदों की राजधानी किलेबंद थी।\n\nराज्य चलाने के लिए शासकों को सेना, अधिकारियों और करों की आवश्यकता होती थी। खेती से मिलने वाला अधिशेष शासन को सहारा देता था।",
+en:"Around 2,500 years ago, larger political territories developed in the Ganga valley and nearby regions. Janapadas were areas where people settled. Some grew larger and more powerful and came to be known as mahajanapadas. Many had fortified capitals.\n\nRulers needed armies, officials and taxes. Agricultural surplus supported the state.",
+task:"Study task: जनपद और महाजनपद में अंतर लिखें।"},
+{ch:5,title:"महाजनपद और उनकी राजधानियाँ",sub:"Fortifications and political power",mins:5,
+hi:"महाजनपदों की राजधानियों के चारों ओर मजबूत दीवारें बनाई जाती थीं। इनसे सुरक्षा मिलती थी और नगर की सीमा पहचानी जाती थी। दीवारें बनाने और सेना रखने के लिए संसाधन चाहिए थे। इसलिए शासक लोगों से कर और उपहार लेते थे।\n\nमगध एक शक्तिशाली महाजनपद बना। उपजाऊ भूमि, नदियों और लोहे के संसाधनों तक पहुँच तथा हाथियों जैसे सैन्य संसाधनों ने उसकी शक्ति बढ़ाने में मदद की।",
+en:"Capitals of mahajanapadas often had strong fortifications. Walls offered protection and marked the city boundary, but building them required resources. Rulers collected taxes and gifts.\n\nMagadha became powerful partly because of fertile land, river routes, access to iron resources and military advantages such as elephants.",
+task:"Study task: मगध की शक्ति बढ़ने के दो भौगोलिक और दो आर्थिक कारण लिखें।"},
+{ch:5,title:"कर, किसान और शिल्पकार",sub:"How states collected resources",mins:5,
+hi:"राज्य को सेना, किले, अधिकारियों और सार्वजनिक कार्यों के लिए संसाधन चाहिए थे। किसान अपनी उपज का एक हिस्सा कर के रूप में दे सकते थे। पशुपालकों, व्यापारियों और शिल्पकारों से भी अलग-अलग प्रकार के कर या योगदान लिए जा सकते थे।\n\nकर व्यवस्था हर जगह एक जैसी नहीं थी। हमें यह समझना चाहिए कि राज्य की शक्ति केवल राजा पर नहीं, बल्कि उत्पादन करने वाले लोगों और संसाधनों पर भी निर्भर थी।",
+en:"States needed resources for armies, forts, officials and public works. Farmers could pay a share of their produce as tax. Pastoralists, traders and craftspeople could also make different contributions.\n\nTax systems varied. A state's power depended not only on its ruler but also on producers and resources.",
+task:"Study task: राज्य को कर क्यों चाहिए थे? तीन उपयोग बताइए।"},
+{ch:5,title:"राजतंत्र और गण-संघ",sub:"Different forms of government",mins:5,
+hi:"कई महाजनपदों में राजा शासन करते थे। कुछ क्षेत्रों में शासन एक व्यक्ति के बजाय कुलों या प्रमुखों के समूह द्वारा चलाया जाता था। ऐसे राजनीतिक संगठनों को गण या संघ कहा जाता है। निर्णय सभा या समूह में लिए जा सकते थे, पर इसका अर्थ यह नहीं कि आधुनिक लोकतंत्र की तरह हर व्यक्ति को समान अधिकार था।\n\nइतिहास में शासन के रूप अलग-अलग थे; उन्हें आज की संस्थाओं के समान मानकर नहीं देखना चाहिए।",
+en:"Many mahajanapadas were ruled by kings. In some regions, groups of clan leaders shared political authority; such arrangements are described as ganas or sanghas. Decisions could be taken in assemblies, but this was not the same as modern democracy with equal rights for everyone.\n\nForms of government varied across time and place.",
+task:"Study task: राजतंत्र और गण-संघ में एक मुख्य अंतर लिखें।"},
+{ch:5,title:"अध्याय 5: तुलना और पुनरावृत्ति",sub:"राज्य कैसे शक्तिशाली बने?",mins:10,
+hi:"आज का सार: जनपद से महाजनपद का विकास; किलेबंद राजधानियाँ; कृषि और व्यापार से संसाधन; कर और सेना; राजतंत्र तथा गण-संघ जैसे अलग शासन रूप।\n\nकारण-परिणाम चार्ट बनाइए: उपजाऊ भूमि और संसाधन → अधिक उत्पादन और व्यापार → कर/संसाधन → सेना और किले → राज्य की बढ़ती शक्ति। यह एक सामान्य रूपरेखा है; हर राज्य का इतिहास अलग था।",
+en:"Summary: janapadas developed into larger mahajanapadas; capitals were fortified; agriculture and trade provided resources; taxes supported armies; and different political forms existed.\n\nMake a cause-and-effect chart: fertile land and resources → production and trade → revenue → armies and forts → stronger states. This is a broad model, not an identical story for every state.",
+task:"Revision: महाजनपदों की शक्ति के पाँच आधार याद करें।"},
+{ch:6,title:"नए प्रश्न और विचार",sub:"जीवन, दुख और सही आचरण पर चिंतन",mins:5,
+hi:"लगभग 2,500 वर्ष पहले अनेक विचारकों ने जीवन के बड़े प्रश्नों पर विचार किया। लोग पूछते थे: जीवन में दुख क्यों है? अच्छा जीवन कैसे जिया जाए? क्या केवल यज्ञ और महँगे अनुष्ठान ही आवश्यक हैं? इन प्रश्नों पर अलग-अलग परंपराओं ने उत्तर दिए।\n\nइस अध्याय में बौद्ध और जैन परंपराओं सहित कई विचारधाराओं का परिचय मिलता है। इन्हें उनके ऐतिहासिक संदर्भ में समझना चाहिए।",
+en:"Around 2,500 years ago, thinkers explored major questions: Why is there suffering? How should one live? Are expensive rituals the only path? Different traditions offered different answers.\n\nThe chapter introduces several traditions, including Buddhism and Jainism, in their historical context.",
+task:"Study task: उस समय के विचारकों ने किन दो प्रकार के प्रश्न उठाए?"},
+{ch:6,title:"उपनिषदों की परंपरा",sub:"आत्मा, ब्रह्म और ज्ञान पर विचार",mins:5,
+hi:"उपनिषद प्राचीन दार्शनिक ग्रंथ हैं। इनमें शिक्षक और विद्यार्थी के संवादों के माध्यम से आत्मा, ब्रह्म, जीवन और ज्ञान जैसे प्रश्नों पर चर्चा मिलती है। अलग-अलग उपनिषदों में विचारों की विविधता है।\n\nमहत्त्वपूर्ण बात: उपनिषद केवल पूजा-पद्धति का वर्णन नहीं करते; वे अस्तित्व और ज्ञान से जुड़े दार्शनिक प्रश्न भी उठाते हैं।",
+en:"The Upanishads are ancient philosophical texts. Through dialogues between teachers and students, they discuss questions about the self, ultimate reality, life and knowledge. Ideas vary across texts.\n\nThey are important for their philosophical questioning, not merely for descriptions of ritual.",
+task:"Study task: उपनिषदों में चर्चा किए जाने वाले दो दार्शनिक विषय लिखें।"},
+ {ch:6,title:"महावीर और जैन परंपरा",sub:"अहिंसा, संयम और अनेकांत",mins:5,
+hi:"जैन परंपरा में महावीर को 24वाँ तीर्थंकर माना जाता है। जैन शिक्षाओं में अहिंसा—किसी जीव को हानि न पहुँचाना—बहुत महत्त्वपूर्ण है। सत्य, अस्तेय, अपरिग्रह और संयम भी प्रमुख सिद्धांत हैं। जैन विचारधारा में अनेकांतवाद का विचार बताता है कि वास्तविकता को अलग-अलग दृष्टिकोणों से समझा जा सकता है।\n\nइन सिद्धांतों का संबंध व्यक्तिगत आचरण और सभी जीवों के प्रति जिम्मेदारी से है।",
+en:"In Jain tradition, Mahavira is regarded as the 24th tirthankara. Ahimsa, or avoiding harm to living beings, is central. Truth, non-stealing, non-possession and self-discipline are also important. Anekantavada encourages understanding reality from multiple viewpoints.\n\nThese ideas connect personal conduct with responsibility toward living beings.",
+task:"Study task: अहिंसा और अपरिग्रह का सरल अर्थ लिखें।"},
+{ch:6,title:"बुद्ध और बौद्ध विचार",sub:"मध्यम मार्ग और चार आर्य सत्य",mins:5,
+hi:"सिद्धार्थ गौतम को बुद्ध कहा गया। बौद्ध परंपरा के अनुसार उन्होंने दुख और उससे मुक्ति के मार्ग पर शिक्षा दी। चार आर्य सत्य दुख, दुख के कारण, दुख के निरोध और निरोध तक पहुँचने वाले मार्ग की चर्चा करते हैं। अष्टांगिक मार्ग में सही समझ, संकल्प, वाणी, कर्म, आजीविका, प्रयास, स्मृति और समाधि शामिल हैं।\n\nबुद्ध ने संतुलित जीवन और मध्यम मार्ग पर बल दिया।",
+en:"Siddhartha Gautama came to be known as the Buddha. Buddhist teaching examines suffering and the way beyond it. The Four Noble Truths discuss suffering, its cause, its cessation and the path leading to cessation. The Eightfold Path includes right understanding, intention, speech, action, livelihood, effort, mindfulness and concentration.\n\nThe Middle Path emphasizes balance.",
+task:"Study task: चार आर्य सत्यों के चार विषय क्रम से लिखें।"},
+{ch:6,title:"संघ, प्रसार और विचारों की विविधता",sub:"Monks, nuns and learning communities",mins:5,
+hi:"बौद्ध और जैन परंपराओं में ऐसे समुदाय विकसित हुए जिनमें संन्यासी और संन्यासिनियाँ शामिल थीं। बौद्ध समुदाय को संघ कहा जाता है। भिक्षु और भिक्षुणियाँ नियमों के अनुसार जीवन बिताते, अध्ययन करते और शिक्षा का प्रसार करते थे। गृहस्थ लोग भी दान और सहयोग देते थे।\n\nविचारों का प्रसार यात्राओं, संवादों, शिक्षण केंद्रों और संरक्षण के माध्यम से हुआ। अलग-अलग क्षेत्रों में स्थानीय भाषाओं और परंपराओं का प्रभाव भी रहा।",
+en:"Buddhist and Jain traditions developed communities of monks and nuns. The Buddhist community was called the sangha. Members followed rules, studied and shared teachings. Lay people also supported them through donations.\n\nIdeas travelled through journeys, discussion, teaching centres and patronage, adapting to local languages and traditions.",
+task:"Study task: संघ की भूमिका के दो बिंदु लिखें।"},
+{ch:6,title:"अध्याय 6: विचारों की तुलना",sub:"एक ही प्रश्न, अलग-अलग उत्तर",mins:5,
+hi:"इस अध्याय का सार यह है कि प्राचीन भारत में विचारों की बहुलता थी। उपनिषदों में दार्शनिक संवाद, जैन परंपरा में अहिंसा और संयम, तथा बौद्ध परंपरा में चार आर्य सत्य और मध्यम मार्ग पर बल मिलता है।\n\nतुलना करते समय समानताओं और भिन्नताओं दोनों को पहचानें। सभी परंपराओं को एक जैसा बताना सही नहीं होगा।",
+en:"The chapter highlights intellectual diversity in ancient India. The Upanishads contain philosophical dialogues; Jain traditions emphasize non-violence and restraint; Buddhist teachings explain the Four Noble Truths and the Middle Path.\n\nA good comparison notes both similarities and differences rather than treating all traditions as identical.",
+task:"Revision: उपनिषद, जैन और बौद्ध परंपराओं की एक-एक विशेषता लिखें।"},
+{ch:7,title:"अशोक: युद्ध से धम्म तक",sub:"मौर्य साम्राज्य और कलिंग युद्ध",mins:5,
+hi:"मौर्य साम्राज्य प्राचीन भारत के सबसे बड़े शुरुआती साम्राज्यों में था। चंद्रगुप्त मौर्य ने इसकी स्थापना की और अशोक इसके प्रसिद्ध शासकों में से एक थे। अशोक के शासनकाल में कलिंग पर युद्ध हुआ। युद्ध के बाद हुई पीड़ा ने अशोक को गहराई से प्रभावित किया।\n\nअशोक के अभिलेख इस बदलाव को समझने के महत्त्वपूर्ण स्रोत हैं।",
+en:"The Mauryan Empire was one of the earliest large empires in the subcontinent. Chandragupta Maurya founded it, and Ashoka became one of its best-known rulers. After the Kalinga war, the suffering caused by war deeply affected Ashoka.\n\nAshoka's inscriptions are important sources for understanding this change.",
+task:"Study task: कलिंग युद्ध के बाद अशोक के विचारों में क्या बदलाव आया?"},
+{ch:7,title:"अशोक के अभिलेख",sub:"Inscriptions as public messages",mins:5,
+hi:"अशोक ने अपने संदेश चट्टानों और स्तंभों पर खुदवाए। इन्हें अभिलेख कहा जाता है। अभिलेखों से शासन, नैतिक विचारों और लोगों तक संदेश पहुँचाने के तरीकों की जानकारी मिलती है। कुछ अभिलेख प्राकृत भाषा और ब्राह्मी लिपि में हैं; अलग क्षेत्रों में दूसरी भाषाएँ और लिपियाँ भी मिलती हैं।\n\nअभिलेख इतिहास के प्रत्यक्ष स्रोत हैं, लेकिन उन्हें समझने के लिए भाषा, स्थान और संदर्भ का अध्ययन जरूरी है।",
+en:"Ashoka had messages inscribed on rocks and pillars. These inscriptions provide evidence about governance, ethical ideas and communication with people. Many used Prakrit and Brahmi, while other languages and scripts appeared in different regions.\n\nInscriptions are direct historical sources, but language, location and context matter when interpreting them.",
+task:"Study task: अभिलेखों से मिलने वाली दो जानकारियाँ लिखें।"},
+{ch:7,title:"धम्म का अर्थ",sub:"Ethical conduct and public welfare",mins:5,
+hi:"अशोक का धम्म किसी एक धार्मिक अनुष्ठान का नाम नहीं था। इसमें बड़ों का आदर, माता-पिता की सेवा, सभी संप्रदायों के प्रति सम्मान, जीवों के प्रति दया और संयम जैसे विचार शामिल थे। अशोक ने अधिकारियों के माध्यम से इन संदेशों को फैलाने का प्रयास किया।\n\nधम्म को नैतिक आचरण और सामाजिक सद्भाव से जोड़कर समझा जा सकता है।",
+en:"Ashoka's dhamma was not simply the name of a religious ritual. It included respect for elders, care for parents, respect for different traditions, compassion toward living beings and self-control. Officials helped communicate these messages.\n\nDhamma can be understood as an emphasis on ethical conduct and social harmony.",
+task:"Study task: अशोक के धम्म के तीन सिद्धांत लिखें।"},
+{ch:7,title:"मौर्य साम्राज्य का प्रशासन",sub:"How a large empire was governed",mins:5,
+hi:"इतने बड़े साम्राज्य को चलाने के लिए राजधानी, प्रांतीय केंद्र, अधिकारी और संचार के रास्ते महत्त्वपूर्ण थे। सड़कों और संदेशवाहकों से आदेश पहुँचाने में मदद मिलती थी। अलग-अलग क्षेत्रों में स्थानीय परिस्थितियों के अनुसार शासन का तरीका बदल सकता था।\n\nइतिहासकार अभिलेखों, पुरातात्त्विक प्रमाणों और साहित्यिक स्रोतों को मिलाकर प्रशासन का अध्ययन करते हैं।",
+en:"A large empire required a capital, provincial centres, officials and communication routes. Roads and messengers helped carry orders. Administration could vary according to local conditions.\n\nHistorians combine inscriptions, archaeological evidence and written sources to study how the empire was governed.",
+task:"Study task: बड़े साम्राज्य को चलाने के लिए जरूरी तीन व्यवस्थाएँ लिखें।"},
+{ch:7,title:"अध्याय 7: पुनरावृत्ति",sub:"Ashoka, inscriptions and dhamma",mins:5,
+hi:"अध्याय का सार: मौर्य साम्राज्य, अशोक, कलिंग युद्ध, अभिलेख और धम्म। कलिंग युद्ध के बाद अशोक ने नैतिक शासन और धम्म के संदेश पर अधिक जोर दिया। उसके अभिलेख हमें उसके विचारों और शासन के बारे में जानकारी देते हैं।\n\nयाद रखें: इतिहासकार किसी शासक के बारे में केवल एक स्रोत के आधार पर अंतिम निष्कर्ष नहीं निकालते।",
+en:"Summary: the Mauryan Empire, Ashoka, the Kalinga war, inscriptions and dhamma. After the Kalinga war, Ashoka placed greater emphasis on ethical rule and communicating dhamma. His inscriptions provide evidence about his ideas and government.\n\nRemember that historians do not rely on only one source to reach a final conclusion.",
+task:"Revision: अशोक के जीवन और शासन से जुड़े पाँच मुख्य शब्द लिखें।"}
+];
